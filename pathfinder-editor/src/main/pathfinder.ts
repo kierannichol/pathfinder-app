@@ -2,6 +2,7 @@ import * as path from "path";
 import * as fs from "fs";
 import {FeatureKey, FeatureRef} from "@shared/pathfinder";
 import YAML from 'yaml'
+import {SourceData} from "../shared/sources";
 
 
 const DatabaseBasePath = path.join(__dirname, "..", "..", "..", "pathfinder-generator", "src", "main", "resources", "db");
@@ -33,11 +34,22 @@ function read_yaml<T>(path: string): Promise<T> {
   });
 }
 
+function exclude_empty(_, value) {
+  if (value === null || value === undefined || value === '' ||
+      (value instanceof Array && value.length === 0)) {
+    return undefined;
+  }
+  return value;
+}
+
 function write_yaml<T>(path: string, dbo: T): Promise<void> {
   return new Promise((resolve, reject) => {
 
     try {
-      const yaml = YAML.stringify(dbo, null, 2);
+      const yaml = YAML.stringify(dbo, exclude_empty, {
+        defaultStringType: 'QUOTE_DOUBLE',
+        defaultKeyType: 'PLAIN'
+      });
       fs.writeFileSync(path, yaml);
       resolve();
     } catch (e) {
@@ -80,7 +92,12 @@ export const PathfinderProcess = {
 
   async save_feature(event: any, model: FeatureRef): Promise<void> {
     const filePath = path.join(DatabaseBasePath, model.segmentKey, model.featureKey) + ".yml";
-    await write_yaml(filePath, model);
+    const copy = {
+      ...model,
+      featureKey: undefined,
+      segmentKey: undefined
+    };
+    await write_yaml(filePath, copy);
   },
 
   async load_feature(event: any, featureKey: FeatureKey): Promise<FeatureRef> {
@@ -107,5 +124,10 @@ export const PathfinderProcess = {
   async list_segments(): Promise<string[]> {
     const files = await list_files(DatabaseBasePath);
     return files.filter(file => fs.lstatSync(path.join(DatabaseBasePath, file)).isDirectory());
+  },
+
+  async load_sources(): Promise<SourceData[]> {
+    const sources_file = path.join(DatabaseBasePath, "sources.yml");
+    return await read_yaml<SourceData[]>(sources_file);
   }
 }

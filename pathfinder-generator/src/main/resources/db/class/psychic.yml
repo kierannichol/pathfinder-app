@@ -1,7 +1,13 @@
 id: "class:psychic"
 name: "Psychic"
 category: "OCCULT"
-description: "Within the mind of any sentient being lies power to rival that of the greatest magical artifact or holy site. By accessing these staggering vaults of mental energy, the psychic can shape the world around her, the minds of others, and pathways across the planes. No place or idea is too secret or remote for a psychic to access, and she can pull from every type of psychic magic. Many methods allow psychics to tap into their mental abilities, and the disciplines they follow affect their abilities."
+description: "Within the mind of any sentient being lies power to rival that of
+  the greatest magical artifact or holy site. By accessing these staggering
+  vaults of mental energy, the psychic can shape the world around her, the minds
+  of others, and pathways across the planes. No place or idea is too secret or
+  remote for a psychic to access, and she can pull from every type of psychic
+  magic. Many methods allow psychics to tap into their mental abilities, and the
+  disciplines they follow affect their abilities."
 source: "Pathfinder Roleplaying Game Occult Adventures"
 hit_die: "D6"
 alignment: "Any"
@@ -79,13 +85,47 @@ class_features:
       - "SET proficiency:traveling_kettle 1"
       - "SET proficiency:stonebow 1"
       - "SET proficiency:longspear 1"
-  - id: "trait:phrenic_pool"
+  - id: "trait:phrenic_pool#psychic"
     name: "Phrenic Pool"
     type: "Su"
-    description: "A psychic has a pool of supernatural mental energy that she can draw upon to manipulate psychic spells as she casts them. The maximum number of points in a psychic’s phrenic pool is equal to 1/2 her psychic level + her Wisdom or Charisma modifier, as determined by her psychic discipline. The phrenic pool is replenished each morning after 8 hours of rest or meditation; these hours don’t need to be consecutive. The psychic might be able to recharge points in her phrenic pool in additional circumstances dictated by her psychic discipline. Points gained in excess of the pool’s maximum are lost."
-  - id: "ability:phrenic_amplification"
+    description: "A psychic has a pool of supernatural mental energy that she can
+      draw upon to manipulate psychic spells as she casts them. The maximum
+      number of points in a psychic’s phrenic pool is equal to 1/2 her psychic
+      level + her Wisdom or Charisma modifier, as determined by her psychic
+      discipline. The phrenic pool is replenished each morning after 8 hours of
+      rest or meditation; these hours don’t need to be consecutive. The psychic
+      might be able to recharge points in her phrenic pool in additional
+      circumstances dictated by her psychic discipline. Points gained in excess
+      of the pool’s maximum are lost."
+  - id: "ability:phrenic_amplification#psychic"
     name: "Phrenic Amplification"
     type: "Su"
-    description: "A psychic develops particular techniques to empower her spellcasting, called phrenic amplifications. The psychic can activate a phrenic amplification only while casting a spell using psychic magic, and the amplification modifies either the spell’s effects or the process of casting it. The spell being cast is called the linked spell. The psychic can activate only one amplification each time she casts a spell, and doing so is part of the action used to cast the spell. She can use any amplification she knows with any psychic spell, unless the amplification’s description states that it can be linked only to certain types of spells. A psychic learns one phrenic amplification at 1st level, selected from the list below. At 3rd level and every 4 levels thereafter, the psychic learns a new phrenic amplification."
-  - id: "spell:biokinetic_healing"
+    description: "A psychic develops particular techniques to empower her
+      spellcasting, called phrenic amplifications. The psychic can activate a
+      phrenic amplification only while casting a spell using psychic magic, and
+      the amplification modifies either the spell’s effects or the process of
+      casting it. The spell being cast is called the linked spell. The psychic
+      can activate only one amplification each time she casts a spell, and doing
+      so is part of the action used to cast the spell. She can use any
+      amplification she knows with any psychic spell, unless the amplification’s
+      description states that it can be linked only to certain types of spells.
+      A psychic learns one phrenic amplification at 1st level, selected from the
+      list below. At 3rd level and every 4 levels thereafter, the psychic learns
+      a new phrenic amplification."
+  - id: "ability:biokinetic_healing#psychic"
     name: "Biokinetic Healing"
+    description: "When the psychic casts a linked spell from the transmutation
+      school, she can spend 1 point from her phrenic pool to regain 2 hit points
+      per level of the linked spell."
+  - id: "ability:complex_countermeasure#psychic"
+    name: "Complex Countermeasure"
+    description: "The psychic can spend 1 point from her phrenic pool to increase by
+      2 the DCs of concentration checks or caster level checks the linked spell
+      requires enemies to attempt. For example, if the linked spell were
+      nondetection, the DC of the caster level check for using a divination on
+      the warded creature or item would increase. This increase also applies to
+      checks to dispel, counterspell, or identify the linked spell. The bonus
+      applies while the spell is cast and lasts for the spell’s duration (if
+      appropriate), to a maximum of 24 hours. The psychic can choose to spend 2
+      points from her phrenic pool to instead increase the linked spell’s DCs by
+      4."

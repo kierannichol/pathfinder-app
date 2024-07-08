@@ -1,28 +1,28 @@
 import {useState} from "react";
-import LoadingBlock from "../LoadingBlock";
 import {data} from "../../../../shared/compiled";
-import TagListEditor from "./TagListEditor";
-import styles from "./FeatureEditor.module.css";
 import {Button} from "react-bootstrap";
 import {FeatureRef} from "../../../../shared/pathfinder";
 import {IdField} from "./fields/IdField";
 import {NameField} from "./fields/NameField";
 import {DescriptionField} from "./fields/DescriptionField";
+import {CategoryField} from "./fields/characterclass/CategoryField";
 import {SourceField} from "./fields/SourceField";
+import {HitDieField} from "./fields/characterclass/HitDieField";
+import {ClassFeaturesField} from "./fields/characterclass/ClassFeaturesField";
 import DescriptionDbo = data.DescriptionDbo;
 
-interface FeatureEditorProps {
+interface CharacterClassEditorProps {
   feature: FeatureRef;
   onSave?: (changed: FeatureRef) => void;
 }
 
-export default function FeatureEditor({ feature, onSave }: FeatureEditorProps) {
+export default function CharacterClassEditor({ feature, onSave }: CharacterClassEditorProps) {
   const [ id, setId ] = useState(feature.id);
   const [ name, setName ] = useState(feature.name);
-  const [ label, setLabel ] = useState(feature.label ?? '');
-  const [ tags, setTags ] = useState(feature.tags);
   const [ description, setDescription ] = useState(feature.description ?? new DescriptionDbo());
-  const [ enabledFormula, setEnabledFormula ] = useState(feature.enabledFormula);
+  const [ category, setCategory ] = useState(feature.category);
+  const [ hitDie, setHitDie ] = useState(feature.hit_die);
+  const [ classFeatures, setClassFeatures ] = useState(feature.class_features);
   const [ source, setSource ] = useState(feature.source);
 
   function handleSave() {
@@ -30,20 +30,17 @@ export default function FeatureEditor({ feature, onSave }: FeatureEditorProps) {
       ...feature,
       id: id,
       name: name,
-      label: label === "" ? null : label,
-      tags: tags,
       description: description,
-      enabledFormula: enabledFormula
+      category: category,
+      hit_die: hitDie,
+      class_features: classFeatures,
+      source: source
     } as FeatureRef;
 
     modified.segmentKey = feature.segmentKey;
     modified.featureKey = feature.featureKey;
 
     onSave?.(modified);
-  }
-
-  if (!feature) {
-    return <LoadingBlock/>
   }
 
   return <div>
@@ -55,26 +52,10 @@ export default function FeatureEditor({ feature, onSave }: FeatureEditorProps) {
       <hr/>
       <IdField value={id} onChange={setId} />
       <NameField value={name} onChange={setName} />
-      <div className="inline-field">
-        <label htmlFor="featureLabel">Label</label>
-        <input id="featureLabel" value={label} onChange={event => setLabel(event.target.value)} />
-      </div>
-
-      <div>
-        <label>Tags</label>
-        <TagListEditor tags={tags} onChange={setTags} />
-      </div>
-
+      <CategoryField value={category} onChange={setCategory} />
       <DescriptionField value={description} onChange={setDescription} />
-
-      <div className="inline-field">
-        <label htmlFor="featureEnabledFormula">Enabled Formula</label>
-        <input id="featureEnabledFormula"
-               value={enabledFormula}
-               className={styles.enabledFormulaEdit}
-               onChange={event => setEnabledFormula(event.target.value)} />
-      </div>
-
+      <HitDieField value={hitDie} onChange={setHitDie} />
+      <ClassFeaturesField value={classFeatures} onChange={setClassFeatures} />
       <SourceField value={source} onChange={setSource} />
     </section>
   </div>

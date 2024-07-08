@@ -1,9 +1,10 @@
 import {useEffect, useState} from "react";
 import EntryNav from "./components/EntryNav";
 import "./App.css";
-import FeatureEditor from "./components/editors/FeatureEditor";
 import MultipleFeaturesEditor from "./components/editors/MultipleFeaturesEditor";
 import {FeatureKey, FeatureRef} from "../../shared/pathfinder";
+import {SegmentElementEditor} from "./components/editors/SegmentElementEditor";
+import {SourcesProvider} from "./SourcesContext";
 
 
 function App() {
@@ -23,7 +24,6 @@ function App() {
   useEffect(() => {
     (async function () {
       const loaded = (await Promise.all(selectedSegmentKeys.map(window.api.list_features))).flat();
-      console.log(loaded)
       setFeatureKeys(loaded);
     })();
   }, [selectedSegmentKeys]);
@@ -66,25 +66,27 @@ function App() {
   }
 
   return (
-    <div className="app-container">
-      <div className="entry-nav">
-        <EntryNav entries={segmentKeys}
-                  onSelect={handleSelectSegmentKey}
-                  keyToLabelFn={x => x} />
-      </div>
-      {selectedSegmentKeys.length > 0 && <div className="entry-nav entry-nav-item">
-        <EntryNav entries={featureKeys.map(featureKeyToString)}
-                  onSelect={selected => handleSelectFeatureKey(stringToFeatureKey(selected))}
-                  keyToLabelFn={key => key.split('/')[1]} />
-      </div>}
-      {feature && <div className="entry-view">
-        <main>
-          {feature instanceof Array && selectedFeatureKey !== null
-              ? <MultipleFeaturesEditor features={feature} onSave={fs => handleSaveMultiple(fs as FeatureRef[])} />
-              : <FeatureEditor feature={feature as FeatureRef} onSave={f => handleChange(f as FeatureRef)} />}
-        </main>
-      </div>}
-    </div>
+      <SourcesProvider>
+        <div className="app-container">
+          <div className="entry-nav">
+            <EntryNav entries={segmentKeys}
+                      onSelect={handleSelectSegmentKey}
+                      keyToLabelFn={x => x} />
+          </div>
+          {selectedSegmentKeys.length > 0 && <div className="entry-nav entry-nav-item">
+            <EntryNav entries={featureKeys.map(featureKeyToString)}
+                      onSelect={selected => handleSelectFeatureKey(stringToFeatureKey(selected))}
+                      keyToLabelFn={key => key.split('/')[1]} />
+          </div>}
+          {feature && <div className="entry-view">
+            <main>
+              {feature instanceof Array && selectedFeatureKey !== null
+                  ? <MultipleFeaturesEditor features={feature} onSave={fs => handleSaveMultiple(fs as FeatureRef[])} />
+                  : <SegmentElementEditor feature={feature as FeatureRef} onSave={f => handleChange(f as FeatureRef)} />}
+            </main>
+          </div>}
+        </div>
+      </SourcesProvider>
   )
 }
 

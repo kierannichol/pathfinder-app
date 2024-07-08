@@ -16,7 +16,7 @@ export default function TagListEditor({ tags, onChange }: TagListEditorProps) {
   }
 
   return <div className={styles.list}>
-    {tags.map((tag, index) => <TagEditor key={index}
+    {(tags ?? []).map((tag, index) => <TagEditor key={index}
                                          value={tag}
                                          onChange={value => handleChange(index, value)}
                                          onDelete={() => handleRemoved(index)} />)}

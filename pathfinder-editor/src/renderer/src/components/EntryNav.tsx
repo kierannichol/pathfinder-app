@@ -20,7 +20,7 @@ export default function EntryNav({ entries, onSelect, keyToLabelFn }: EntryNavPr
                  className={styles.control}
                  onChange={e => handleChange(toSelected(e.target.selectedOptions))}>
     {entries.map(entry =>
-      <option className={styles.item} value={entry}>{keyToLabelFn?.(entry)}</option>)}
+      <option key={entry} className={styles.item} value={entry}>{keyToLabelFn?.(entry)}</option>)}
   </select>
 }
 

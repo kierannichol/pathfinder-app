@@ -1,342 +1,324 @@
 id: "class:fighter"
 name: "Fighter"
 category: "CORE"
-description: "Some take up arms for glory, wealth, or revenge. Others do battle to\
-  \ prove themselves, to protect others, or because they know nothing else. Still\
-  \ others learn the ways of weaponcraft to hone their bodies in battle and prove\
-  \ their mettle in the forge of war. Lords of the battlefield, fighters are a disparate\
-  \ lot, training with many weapons or just one, perfecting the uses of armor, learning\
-  \ the fighting techniques of exotic masters, and studying the art of combat, all\
-  \ to shape themselves into living weapons. Far more than mere thugs, these skilled\
-  \ warriors reveal the true deadliness of their weapons, turning hunks of metal into\
-  \ arms capable of taming kingdoms, slaughtering monsters, and rousing the hearts\
-  \ of armies. Soldiers, knights, hunters, and artists of war, fighters are unparalleled\
-  \ champions, and woe to those who dare stand against them. Role: Fighters excel\
-  \ at combat--defeating their enemies, controlling the flow of battle, and surviving\
-  \ such sorties themselves. While their specific weapons and methods grant them a\
-  \ wide variety of tactics, few can match fighters for sheer battle prowess. Alignment:\
-  \ Any. Hit Die: d10. Starting Wealth: 5d6 x 10 gp (average 175 gp.) In addition,\
-  \ each character begins play with an outfit worth 10 gp or less."
+description: "Some take up arms for glory, wealth, or revenge. Others do battle
+  to prove themselves, to protect others, or because they know nothing else.
+  Still others learn the ways of weaponcraft to hone their bodies in battle and
+  prove their mettle in the forge of war. Lords of the battlefield, fighters are
+  a disparate lot, training with many weapons or just one, perfecting the uses
+  of armor, learning the fighting techniques of exotic masters, and studying the
+  art of combat, all to shape themselves into living weapons. Far more than mere
+  thugs, these skilled warriors reveal the true deadliness of their weapons,
+  turning hunks of metal into arms capable of taming kingdoms, slaughtering
+  monsters, and rousing the hearts of armies. Soldiers, knights, hunters, and
+  artists of war, fighters are unparalleled champions, and woe to those who dare
+  stand against them. Role: Fighters excel at combat--defeating their enemies,
+  controlling the flow of battle, and surviving such sorties themselves. While
+  their specific weapons and methods grant them a wide variety of tactics, few
+  can match fighters for sheer battle prowess. Alignment: Any. Hit Die: d10.
+  Starting Wealth: 5d6 x 10 gp (average 175 gp.) In addition, each character
+  begins play with an outfit worth 10 gp or less."
 source: " Pathfinder RPG Core Rulebook"
 hit_die: "D10"
 alignment: "Any"
 class_skills:
-- "skill:climb"
-- "skill:craft"
-- "skill:handle_animal"
-- "skill:intimidate"
-- "skill:knowledge"
-- "skill:profession"
-- "skill:ride"
-- "skill:survival"
-- "skill:swim"
+  - "skill:climb"
+  - "skill:craft"
+  - "skill:handle_animal"
+  - "skill:intimidate"
+  - "skill:knowledge"
+  - "skill:profession"
+  - "skill:ride"
+  - "skill:survival"
+  - "skill:swim"
 skill_ranks_per_level: "2"
 bab: "A"
 fort: "A"
 ref: "B"
 will: "B"
 levels:
-- class_feature_names:
-  - "trait:armor_proficiency#fighter"
-  - "trait:weapon_proficiency#fighter"
-  - "ability:bonus_feat#fighter"
-  level: 1
-- class_feature_names:
-  - "ability:bonus_feat#fighter"
-  - "ability:bravery#fighter"
-  level: 2
-- class_feature_names:
-  - "ability:armor_training#fighter"
-  level: 3
-- class_feature_names:
-  - "ability:bonus_feat#fighter"
-  level: 4
-- class_feature_names:
-  - "ability:weapon_training#fighter"
-  level: 5
-- class_feature_names:
-  - "ability:bonus_feat#fighter"
-  - "ability:bravery#fighter"
-  level: 6
-- class_feature_names:
-  - "ability:armor_training#fighter"
-  level: 7
-- class_feature_names:
-  - "ability:bonus_feat#fighter"
-  level: 8
-- class_feature_names:
-  - "ability:weapon_training#fighter"
-  - "ability:advanced_weapon_training#fighter"
-  level: 9
-- class_feature_names:
-  - "ability:bonus_feat#fighter"
-  - "ability:bravery#fighter"
-  level: 10
-- class_feature_names:
-  - "ability:armor_training#fighter"
-  level: 11
-- class_feature_names:
-  - "ability:bonus_feat#fighter"
-  level: 12
-- class_feature_names:
-  - "ability:weapon_training#fighter"
-  level: 13
-- class_feature_names:
-  - "ability:bonus_feat#fighter"
-  - "ability:bravery#fighter"
-  level: 14
-- class_feature_names:
-  - "ability:armor_training#fighter"
-  level: 15
-- class_feature_names:
-  - "ability:bonus_feat#fighter"
-  level: 16
-- class_feature_names:
-  - "ability:weapon_training#fighter"
-  level: 17
-- class_feature_names:
-  - "ability:bonus_feat#fighter"
-  - "ability:bravery#fighter"
-  level: 18
-- class_feature_names:
-  - "ability:armor_mastery#fighter"
-  level: 19
-- class_feature_names:
-  - "ability:bonus_feat#fighter"
-  - "ability:weapon_mastery#fighter"
-  level: 20
+  - class_feature_names:
+      - "trait:armor_proficiency#fighter"
+      - "trait:weapon_proficiency#fighter"
+      - "ability:bonus_feat#fighter"
+    level: 1
+  - class_feature_names:
+      - "ability:bonus_feat#fighter"
+      - "ability:bravery#fighter"
+    level: 2
+  - class_feature_names:
+      - "ability:armor_training#fighter"
+    level: 3
+  - class_feature_names:
+      - "ability:bonus_feat#fighter"
+    level: 4
+  - class_feature_names:
+      - "ability:weapon_training#fighter"
+    level: 5
+  - class_feature_names:
+      - "ability:bonus_feat#fighter"
+      - "ability:bravery#fighter"
+    level: 6
+  - class_feature_names:
+      - "ability:armor_training#fighter"
+    level: 7
+  - class_feature_names:
+      - "ability:bonus_feat#fighter"
+    level: 8
+  - class_feature_names:
+      - "ability:weapon_training#fighter"
+      - "ability:advanced_weapon_training#fighter"
+    level: 9
+  - class_feature_names:
+      - "ability:bonus_feat#fighter"
+      - "ability:bravery#fighter"
+    level: 10
+  - class_feature_names:
+      - "ability:armor_training#fighter"
+    level: 11
+  - class_feature_names:
+      - "ability:bonus_feat#fighter"
+    level: 12
+  - class_feature_names:
+      - "ability:weapon_training#fighter"
+    level: 13
+  - class_feature_names:
+      - "ability:bonus_feat#fighter"
+      - "ability:bravery#fighter"
+    level: 14
+  - class_feature_names:
+      - "ability:armor_training#fighter"
+    level: 15
+  - class_feature_names:
+      - "ability:bonus_feat#fighter"
+    level: 16
+  - class_feature_names:
+      - "ability:weapon_training#fighter"
+    level: 17
+  - class_feature_names:
+      - "ability:bonus_feat#fighter"
+      - "ability:bravery#fighter"
+    level: 18
+  - class_feature_names:
+      - "ability:armor_mastery#fighter"
+    level: 19
+  - class_feature_names:
+      - "ability:bonus_feat#fighter"
+      - "ability:weapon_mastery#fighter"
+    level: 20
 class_features:
-- id: "ability:advanced_weapon_training#fighter"
-  name: "Advanced Weapon Training"
-  label: null
-  type: ""
-  description: ""
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:armor_mastery#fighter"
-  name: "Armor Mastery"
-  label: null
-  type: "Ex"
-  description: "At 19th level, a fighter gains damage reduction 5/-- whenever he is\
-    \ wearing armor or using a shield."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:armor_training#fighter"
-  name: "Armor Training"
-  label: null
-  type: "Ex"
-  description: "Starting at 3rd level, a fighter learns to be more maneuverable while\
-    \ wearing armor. Whenever he is wearing armor, he reduces the armor check penalty\
-    \ by 1 (to a minimum of 0) and increases the maximum Dexterity bonus allowed by\
-    \ his armor by 1. Every four levels thereafter (7th, 11th, and 15th), these bonuses\
-    \ increase by +1 each time, to a maximum –4 reduction of the armor check penalty\
-    \ and a +4 increase of the maximum Dexterity bonus allowed.In addition, a fighter\
-    \ can also move at his normal speed while wearing medium armor. At 7th level,\
-    \ a fighter can move at his normal speed while wearing heavy armor.Advanced Armor\
-    \ Training: Beginning at 7th level, instead of increasing the benefits provided\
-    \ by armor training (reducing his armor's check penalty by 1 and increasing its\
-    \ maximum Dexterity bonus by 1), a fighter can choose an advanced armor training\
-    \ option (see Advanced Armor Training below) . If the fighter does so, he still\
-    \ gains the ability to move at his normal speed while wearing medium armor at\
-    \ 3rd level, and while wearing heavy armor at 7th level. Source: Pathfinder Player\
-    \ Companion: Armor Master's Handbook"
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:bonus_feat#fighter"
-  name: "Bonus Feat"
-  label: null
-  type: ""
-  description: "At 1st level, and at every even level thereafter, a fighter gains\
-    \ a bonus feat in addition to those gained from normal advancement (meaning that\
-    \ the fighter gains a feat at every level). These bonus feats must be selected\
-    \ from those listed as Combat Feats, sometimes also called \"fighter bonus feats.\"\
-    \ Upon reaching 4th level, and every four levels thereafter (8th, 12th, and so\
-    \ on), a fighter can choose to learn a new bonus feat in place of a bonus feat\
-    \ he has already learned. In effect, the fighter loses the bonus feat in exchange\
-    \ for the new one. The old feat cannot be one that was used as a prerequisite\
-    \ for another feat, prestige class, or other ability. A fighter can only change\
-    \ one feat at any given level and must choose whether or not to swap the feat\
-    \ at the time he gains a new bonus feat for the level."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:bravery#fighter"
-  name: "Bravery"
-  label: null
-  type: "Ex"
-  description: "Starting at 2nd level, a fighter gains a +1 bonus on Will saves against\
-    \ fear. This bonus increases by +1 for every four levels beyond 2nd."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:weapon_mastery#fighter"
-  name: "Weapon Mastery"
-  label: null
-  type: "Ex"
-  description: "At 20th level, a fighter chooses one weapon, such as the longsword,\
-    \ greataxe, or longbow. Any attacks made with that weapon automatically confirm\
-    \ all critical threats and have their damage multiplier increased by 1 (×2 becomes\
-    \ ×3, for example). In addition, he cannot be disarmed while wielding a weapon\
-    \ of this type."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:weapon_training#fighter"
-  name: "Weapon Training"
-  label: null
-  type: "Ex"
-  description: "Starting at 5th level, a fighter can select one group of weapons,\
-    \ as noted below. Whenever he attacks with a weapon from this group, he gains\
-    \ a +1 bonus on attack and damage rolls.Every four levels thereafter (9th*, 13th,\
-    \ and 17th), a fighter becomes further trained in another group of weapons. He\
-    \ gains a +1 bonus on attack and damage rolls when using a weapon from this group.\
-    \ In addition, the bonuses granted by previous weapon groups increase by +1 each.\
-    \ For example, when a fighter reaches 9th level, he receives a +1 bonus on attack\
-    \ and damage rolls with one weapon group and a +2 bonus on attack and damage rolls\
-    \ with the weapon group selected at 5th level. Bonuses granted from overlapping\
-    \ groups do not stack. Take the highest bonus granted for a weapon if it resides\
-    \ in two or more groups.A fighter also adds this bonus to any combat maneuver\
-    \ checks made with weapons from his group. This bonus also applies to the fighter's\
-    \ Combat Maneuver Defense when defending against disarm and sunder attempts made\
-    \ against weapons from this group.Advanced Weapon Training: Beginning at 9th level,\
-    \ instead of selecting an additional fighter weapon group, a fighter can choose\
-    \ an advanced weapon training option (see Advanced Weapon Training below) for\
-    \ one fighter weapon group that he previously selected with the weapon training\
-    \ class feature. Source: Pathfinder Player Companion: Weapon Master's HandbookWeapon\
-    \ groups are defined as follows (GMs may add other weapons to these groups, or\
-    \ add entirely new groups):"
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "trait:armor_proficiency#fighter"
-  name: "Armor Proficiency (Fighter)"
-  label: null
-  type: null
-  description: "A Fighter is proficient with all types of armor (light, medium, and\
-    \ heavy), plus all shields."
-  effects:
-  - "SET proficiency:light_shield 1"
-  - "SET proficiency:heavy_armor 1"
-  - "SET proficiency:light_armor 1"
-  - "SET proficiency:tower_shield 1"
-  - "SET proficiency:buckler 1"
-  - "SET proficiency:medium_armor 1"
-  - "SET proficiency:heavy_shield 1"
-  prerequisites: null
-  source: " Pathfinder RPG Core Rulebook"
-- id: "trait:weapon_proficiency#fighter"
-  name: "Weapon Proficiency (Fighter)"
-  label: null
-  type: null
-  description: "A Fighter is proficient with all simple and martial weapons."
-  effects:
-  - "SET proficiency:mere_club 1"
-  - "SET proficiency:blade_boot 1"
-  - "SET proficiency:spiked_gauntlet 1"
-  - "SET proficiency:spiked_armor 1"
-  - "SET proficiency:heavy_crossbow 1"
-  - "SET proficiency:unarmed 1"
-  - "SET proficiency:dogslicer 1"
-  - "SET proficiency:ogre_hook 1"
-  - "SET proficiency:handaxe 1"
-  - "SET proficiency:light_flail 1"
-  - "SET proficiency:dagger 1"
-  - "SET proficiency:pickaxe 1"
-  - "SET proficiency:whip 1"
-  - "SET proficiency:guisarme 1"
-  - "SET proficiency:shortspear 1"
-  - "SET proficiency:lantern_staff 1"
-  - "SET proficiency:gandasa 1"
-  - "SET proficiency:club 1"
-  - "SET proficiency:warhammer 1"
-  - "SET proficiency:jolting_dart 1"
-  - "SET proficiency:dart 1"
-  - "SET proficiency:chakram 1"
-  - "SET proficiency:light_pick 1"
-  - "SET proficiency:spear 1"
-  - "SET proficiency:ammentum 1"
-  - "SET proficiency:heavy_shield 1"
-  - "SET proficiency:halberd 1"
-  - "SET proficiency:light_shield 1"
-  - "SET proficiency:brass_knuckles 1"
-  - "SET proficiency:battle_aspergillum 1"
-  - "SET proficiency:sword_cane 1"
-  - "SET proficiency:falchion 1"
-  - "SET proficiency:heavy_mace 1"
-  - "SET proficiency:gauntlet 1"
-  - "SET proficiency:cestus 1"
-  - "SET proficiency:kukri 1"
-  - "SET proficiency:greatsword 1"
-  - "SET proficiency:bardiche 1"
-  - "SET proficiency:wooden_stake 1"
-  - "SET proficiency:rapier 1"
-  - "SET proficiency:dueling_dagger 1"
-  - "SET proficiency:axe 1"
-  - "SET proficiency:sickle 1"
-  - "SET proficiency:horsechopper 1"
-  - "SET proficiency:traveling_kettle 1"
-  - "SET proficiency:hook_hand 1"
-  - "SET proficiency:brass_knife 1"
-  - "SET proficiency:light_spiked_shield 1"
-  - "SET proficiency:handwraps 1"
-  - "SET proficiency:greatclub 1"
-  - "SET proficiency:blowgun 1"
-  - "SET proficiency:ranseur 1"
-  - "SET proficiency:manople 1"
-  - "SET proficiency:battleaxe 1"
-  - "SET proficiency:gladius 1"
-  - "SET proficiency:combat_scabbard 1"
-  - "SET proficiency:greataxe 1"
-  - "SET proficiency:bayonet 1"
-  - "SET proficiency:pilum 1"
-  - "SET proficiency:klar 1"
-  - "SET proficiency:boarding_pike 1"
-  - "SET proficiency:planson 1"
-  - "SET proficiency:glaive 1"
-  - "SET proficiency:collapsible_kumade 1"
-  - "SET proficiency:hunga_munga 1"
-  - "SET proficiency:shortbow 1"
-  - "SET proficiency:scythe 1"
-  - "SET proficiency:sling 1"
-  - "SET proficiency:spring_blade 1"
-  - "SET proficiency:light_hammer 1"
-  - "SET proficiency:light_mace 1"
-  - "SET proficiency:morningstar 1"
-  - "SET proficiency:longsword 1"
-  - "SET proficiency:scizore 1"
-  - "SET proficiency:terbutje 1"
-  - "SET proficiency:scimitar 1"
-  - "SET proficiency:earth_breaker 1"
-  - "SET proficiency:stingchuck 1"
-  - "SET proficiency:light_crossbow 1"
-  - "SET proficiency:hurlbat 1"
-  - "SET proficiency:sap 1"
-  - "SET proficiency:katar 1"
-  - "SET proficiency:machete 1"
-  - "SET proficiency:trident 1"
-  - "SET proficiency:ankus 1"
-  - "SET proficiency:starknife 1"
-  - "SET proficiency:javelin 1"
-  - "SET proficiency:heavy_spiked_shield 1"
-  - "SET proficiency:heavy_flail 1"
-  - "SET proficiency:war_razor 1"
-  - "SET proficiency:short_sword 1"
-  - "SET proficiency:kumade 1"
-  - "SET proficiency:longbow 1"
-  - "SET proficiency:lance 1"
-  - "SET proficiency:claw_blades 1"
-  - "SET proficiency:kunai 1"
-  - "SET proficiency:throwing_axe 1"
-  - "SET proficiency:bill 1"
-  - "SET proficiency:heavy_pick 1"
-  - "SET proficiency:quarterstaff 1"
-  - "SET proficiency:cutlass 1"
-  - "SET proficiency:punching_dagger 1"
-  - "SET proficiency:syringe_spear 1"
-  - "SET proficiency:stonebow 1"
-  - "SET proficiency:longspear 1"
-  prerequisites: null
-  source: " Pathfinder RPG Core Rulebook"
+  - id: "ability:advanced_weapon_training#fighter"
+    name: "Advanced Weapon Training"
+    effects: []
+    source: " Pathfinder RPG Core Rulebook"
+  - id: "ability:armor_mastery#fighter"
+    name: "Armor Mastery"
+    type: "Ex"
+    description: "At 19th level, a fighter gains damage reduction 5/-- whenever he
+      is wearing armor or using a shield."
+    effects: []
+    source: " Pathfinder RPG Core Rulebook"
+  - id: "ability:armor_training#fighter"
+    name: "Armor Training"
+    type: "Ex"
+    description: "Starting at 3rd level, a fighter learns to be more maneuverable
+      while wearing armor. Whenever he is wearing armor, he reduces the armor
+      check penalty by 1 (to a minimum of 0) and increases the maximum Dexterity
+      bonus allowed by his armor by 1. Every four levels thereafter (7th, 11th,
+      and 15th), these bonuses increase by +1 each time, to a maximum –4
+      reduction of the armor check penalty and a +4 increase of the maximum
+      Dexterity bonus allowed.In addition, a fighter can also move at his normal
+      speed while wearing medium armor. At 7th level, a fighter can move at his
+      normal speed while wearing heavy armor.Advanced Armor Training: Beginning
+      at 7th level, instead of increasing the benefits provided by armor
+      training (reducing his armor's check penalty by 1 and increasing its
+      maximum Dexterity bonus by 1), a fighter can choose an advanced armor
+      training option (see Advanced Armor Training below) . If the fighter does
+      so, he still gains the ability to move at his normal speed while wearing
+      medium armor at 3rd level, and while wearing heavy armor at 7th level.
+      Source: Pathfinder Player Companion: Armor Master's Handbook"
+    effects: []
+    source: " Pathfinder RPG Core Rulebook"
+  - id: "ability:bonus_feat#fighter"
+    name: "Bonus Feat"
+    description: "At 1st level, and at every even level thereafter, a fighter gains
+      a bonus feat in addition to those gained from normal advancement (meaning
+      that the fighter gains a feat at every level). These bonus feats must be
+      selected from those listed as Combat Feats, sometimes also called
+      \"fighter bonus feats.\" Upon reaching 4th level, and every four levels
+      thereafter (8th, 12th, and so on), a fighter can choose to learn a new
+      bonus feat in place of a bonus feat he has already learned. In effect, the
+      fighter loses the bonus feat in exchange for the new one. The old feat
+      cannot be one that was used as a prerequisite for another feat, prestige
+      class, or other ability. A fighter can only change one feat at any given
+      level and must choose whether or not to swap the feat at the time he gains
+      a new bonus feat for the level."
+    effects: []
+    source: " Pathfinder RPG Core Rulebook"
+  - id: "ability:bravery#fighter"
+    name: "Bravery"
+    type: "Ex"
+    description: "Starting at 2nd level, a fighter gains a +1 bonus on Will saves
+      against fear. This bonus increases by +1 for every four levels beyond
+      2nd."
+    effects: []
+    source: " Pathfinder RPG Core Rulebook"
+  - id: "ability:weapon_mastery#fighter"
+    name: "Weapon Mastery"
+    type: "Ex"
+    description: "At 20th level, a fighter chooses one weapon, such as the
+      longsword, greataxe, or longbow. Any attacks made with that weapon
+      automatically confirm all critical threats and have their damage
+      multiplier increased by 1 (×2 becomes ×3, for example). In addition, he
+      cannot be disarmed while wielding a weapon of this type."
+    effects: []
+    source: " Pathfinder RPG Core Rulebook"
+  - id: "ability:weapon_training#fighter"
+    name: "Weapon Training"
+    type: "Ex"
+    description: "Starting at 5th level, a fighter can select one group of weapons,
+      as noted below. Whenever he attacks with a weapon from this group, he
+      gains a +1 bonus on attack and damage rolls.Every four levels thereafter
+      (9th*, 13th, and 17th), a fighter becomes further trained in another group
+      of weapons. He gains a +1 bonus on attack and damage rolls when using a
+      weapon from this group. In addition, the bonuses granted by previous
+      weapon groups increase by +1 each. For example, when a fighter reaches 9th
+      level, he receives a +1 bonus on attack and damage rolls with one weapon
+      group and a +2 bonus on attack and damage rolls with the weapon group
+      selected at 5th level. Bonuses granted from overlapping groups do not
+      stack. Take the highest bonus granted for a weapon if it resides in two or
+      more groups.A fighter also adds this bonus to any combat maneuver checks
+      made with weapons from his group. This bonus also applies to the fighter's
+      Combat Maneuver Defense when defending against disarm and sunder attempts
+      made against weapons from this group.Advanced Weapon Training: Beginning
+      at 9th level, instead of selecting an additional fighter weapon group, a
+      fighter can choose an advanced weapon training option (see Advanced Weapon
+      Training below) for one fighter weapon group that he previously selected
+      with the weapon training class feature. Source: Pathfinder Player
+      Companion: Weapon Master's HandbookWeapon groups are defined as follows
+      (GMs may add other weapons to these groups, or add entirely new groups):"
+    effects: []
+    source: " Pathfinder RPG Core Rulebook"
+  - id: "trait:armor_proficiency#fighter"
+    name: "Armor Proficiency (Fighter)"
+    description: "A Fighter is proficient with all types of armor (light, medium,
+      and heavy), plus all shields."
+    effects:
+      - "SET proficiency:light_shield 1"
+      - "SET proficiency:heavy_armor 1"
+      - "SET proficiency:light_armor 1"
+      - "SET proficiency:tower_shield 1"
+      - "SET proficiency:buckler 1"
+      - "SET proficiency:medium_armor 1"
+      - "SET proficiency:heavy_shield 1"
+    source: " Pathfinder RPG Core Rulebook"
+  - id: "trait:weapon_proficiency#fighter"
+    name: "Weapon Proficiency (Fighter)"
+    description: "A Fighter is proficient with all simple and martial weapons."
+    effects:
+      - "SET proficiency:mere_club 1"
+      - "SET proficiency:blade_boot 1"
+      - "SET proficiency:spiked_gauntlet 1"
+      - "SET proficiency:spiked_armor 1"
+      - "SET proficiency:heavy_crossbow 1"
+      - "SET proficiency:unarmed 1"
+      - "SET proficiency:dogslicer 1"
+      - "SET proficiency:ogre_hook 1"
+      - "SET proficiency:handaxe 1"
+      - "SET proficiency:light_flail 1"
+      - "SET proficiency:dagger 1"
+      - "SET proficiency:pickaxe 1"
+      - "SET proficiency:whip 1"
+      - "SET proficiency:guisarme 1"
+      - "SET proficiency:shortspear 1"
+      - "SET proficiency:lantern_staff 1"
+      - "SET proficiency:gandasa 1"
+      - "SET proficiency:club 1"
+      - "SET proficiency:warhammer 1"
+      - "SET proficiency:jolting_dart 1"
+      - "SET proficiency:dart 1"
+      - "SET proficiency:chakram 1"
+      - "SET proficiency:light_pick 1"
+      - "SET proficiency:spear 1"
+      - "SET proficiency:ammentum 1"
+      - "SET proficiency:heavy_shield 1"
+      - "SET proficiency:halberd 1"
+      - "SET proficiency:light_shield 1"
+      - "SET proficiency:brass_knuckles 1"
+      - "SET proficiency:battle_aspergillum 1"
+      - "SET proficiency:sword_cane 1"
+      - "SET proficiency:falchion 1"
+      - "SET proficiency:heavy_mace 1"
+      - "SET proficiency:gauntlet 1"
+      - "SET proficiency:cestus 1"
+      - "SET proficiency:kukri 1"
+      - "SET proficiency:greatsword 1"
+      - "SET proficiency:bardiche 1"
+      - "SET proficiency:wooden_stake 1"
+      - "SET proficiency:rapier 1"
+      - "SET proficiency:dueling_dagger 1"
+      - "SET proficiency:axe 1"
+      - "SET proficiency:sickle 1"
+      - "SET proficiency:horsechopper 1"
+      - "SET proficiency:traveling_kettle 1"
+      - "SET proficiency:hook_hand 1"
+      - "SET proficiency:brass_knife 1"
+      - "SET proficiency:light_spiked_shield 1"
+      - "SET proficiency:handwraps 1"
+      - "SET proficiency:greatclub 1"
+      - "SET proficiency:blowgun 1"
+      - "SET proficiency:ranseur 1"
+      - "SET proficiency:manople 1"
+      - "SET proficiency:battleaxe 1"
+      - "SET proficiency:gladius 1"
+      - "SET proficiency:combat_scabbard 1"
+      - "SET proficiency:greataxe 1"
+      - "SET proficiency:bayonet 1"
+      - "SET proficiency:pilum 1"
+      - "SET proficiency:klar 1"
+      - "SET proficiency:boarding_pike 1"
+      - "SET proficiency:planson 1"
+      - "SET proficiency:glaive 1"
+      - "SET proficiency:collapsible_kumade 1"
+      - "SET proficiency:hunga_munga 1"
+      - "SET proficiency:shortbow 1"
+      - "SET proficiency:scythe 1"
+      - "SET proficiency:sling 1"
+      - "SET proficiency:spring_blade 1"
+      - "SET proficiency:light_hammer 1"
+      - "SET proficiency:light_mace 1"
+      - "SET proficiency:morningstar 1"
+      - "SET proficiency:longsword 1"
+      - "SET proficiency:scizore 1"
+      - "SET proficiency:terbutje 1"
+      - "SET proficiency:scimitar 1"
+      - "SET proficiency:earth_breaker 1"
+      - "SET proficiency:stingchuck 1"
+      - "SET proficiency:light_crossbow 1"
+      - "SET proficiency:hurlbat 1"
+      - "SET proficiency:sap 1"
+      - "SET proficiency:katar 1"
+      - "SET proficiency:machete 1"
+      - "SET proficiency:trident 1"
+      - "SET proficiency:ankus 1"
+      - "SET proficiency:starknife 1"
+      - "SET proficiency:javelin 1"
+      - "SET proficiency:heavy_spiked_shield 1"
+      - "SET proficiency:heavy_flail 1"
+      - "SET proficiency:war_razor 1"
+      - "SET proficiency:short_sword 1"
+      - "SET proficiency:kumade 1"
+      - "SET proficiency:longbow 1"
+      - "SET proficiency:lance 1"
+      - "SET proficiency:claw_blades 1"
+      - "SET proficiency:kunai 1"
+      - "SET proficiency:throwing_axe 1"
+      - "SET proficiency:bill 1"
+      - "SET proficiency:heavy_pick 1"
+      - "SET proficiency:quarterstaff 1"
+      - "SET proficiency:cutlass 1"
+      - "SET proficiency:punching_dagger 1"
+      - "SET proficiency:syringe_spear 1"
+      - "SET proficiency:stonebow 1"
+      - "SET proficiency:longspear 1"
+    source: " Pathfinder RPG Core Rulebook"

@@ -12,6 +12,10 @@ body, html {
 }
 
 body {
+  --bs-border-width: var(--pf-border-width);
+  --bs-border-color: var(--pf-text-color);
+  --bs-body-color: var(--pf-text-color);
+
   background-color: white;
   width: 100vw;
 
@@ -32,7 +36,10 @@ a {
 }
 
 section {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
+  gap: 0.5rem;
 }
 
 input {
@@ -69,6 +76,7 @@ textarea {
   letter-spacing: .04em;
   line-height: 16px;
   margin: 0;
+  padding: 9px 9px;
   text-align: left;
   text-decoration: none;
   user-select: none;
@@ -81,6 +89,42 @@ textarea {
   background-color: white;
   border: var(--pf-border-width) solid var(--pf-text-color);
   color: var(--pf-text-color);
+}
+
+select {
+  width: 100%;
+  display: flex;
+  border-radius: 0;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: left;
+  letter-spacing: .04em;
+  margin: 0;
+  padding: 0 18px;
+  text-align: left;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: center;
+  height: 56px;
+
+  background-color: white;
+  border: var(--pf-border-width) solid var(--pf-text-color);
+  color: var(--pf-text-color);
+
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
+
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+}
+
+select>option {
+  font-size: 18px;
 }
 
 .btn-link {
@@ -102,9 +146,10 @@ hr {
 }
 
 label {
+  display: inline-block;
+  min-width: 8rem;
   font-weight: bold;
-  margin-bottom: 0.25rem;
-  margin-top: 0.25rem;
+  padding-right: 0.5rem;
 }
 
 header {
@@ -131,4 +176,10 @@ header {
   text-align: left;
   font-size: 14pt;
   width: 100%;
+}
+
+.inline-field {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
 }

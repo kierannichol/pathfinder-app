@@ -1,689 +1,753 @@
 id: "class:medium"
 name: "Medium"
 category: "OCCULT"
-description: "Role: Mediums are very versatile, filling whatever role the party needs\
-  \ at the moment by channeling the right spirit."
+description: "Mediums channel spirits into themselves, using their own bodies as
+  vessels for astral entities spawned from myths and legends. A medium balances
+  his need for the spirits’ power with the danger of allowing such beings
+  influence over his mind."
 source: "PZO1132"
 hit_die: "D8"
 alignment: "Any"
 class_skills:
-- "skill:bluff"
-- "skill:craft"
-- "skill:diplomacy"
-- "skill:fly"
-- "skill:heal"
-- "skill:intimidate"
-- "skill:knowledge_arcana"
-- "skill:knowledge_planes"
-- "skill:knowledge_religion"
-- "skill:linguistics"
-- "skill:perception"
-- "skill:perform"
-- "skill:profession"
-- "skill:sense_motive"
-- "skill:spellcraft"
-- "skill:use_magic_device"
+  - "skill:bluff"
+  - "skill:craft"
+  - "skill:diplomacy"
+  - "skill:fly"
+  - "skill:heal"
+  - "skill:intimidate"
+  - "skill:knowledge_arcana"
+  - "skill:knowledge_planes"
+  - "skill:knowledge_religion"
+  - "skill:linguistics"
+  - "skill:perception"
+  - "skill:perform"
+  - "skill:profession"
+  - "skill:sense_motive"
+  - "skill:spellcraft"
+  - "skill:use_magic_device"
 skill_ranks_per_level: "4"
 bab: "B"
 fort: "B"
 ref: "B"
 will: "A"
 levels:
-- class_feature_names:
-  - "ability:knacks"
-  - "ability:spirit"
-  - "ability:spirit_bonus"
-  - "ability:spirit_power_lesser"
-  - "ability:spirit_surge"
-  level: 1
-- class_feature_names:
-  - "ability:shared_seance"
-  - "ability:taboo"
-  level: 2
-- class_feature_names:
-  - "ability:haunt_channeler"
-  level: 3
-- class_feature_names:
-  - "ability:spirit_bonus"
-  level: 4
-- class_feature_names:
-  - "ability:location_channel"
-  level: 5
-- class_feature_names:
-  - "ability:spirit_power_intermediate"
-  level: 6
-- class_feature_names:
-  - "ability:connection_channel"
-  level: 7
-- class_feature_names:
-  - "ability:spirit_bonus"
-  level: 8
-- class_feature_names:
-  - "ability:propitiation"
-  level: 9
-- class_feature_names:
-  - "ability:spirit_surge"
-  level: 10
-- class_feature_names:
-  - "ability:spirit_power_greater"
-  level: 11
-- class_feature_names:
-  - "ability:spirit_bonus"
-  level: 12
-- class_feature_names:
-  - "ability:ask_the_spirits"
-  level: 13
-- class_feature_names:
-  - "ability:astral_journey"
-  level: 14
-- class_feature_names:
-  - "ability:trance_of_three"
-  level: 15
-- class_feature_names:
-  - "ability:spirit_bonus"
-  level: 16
-- class_feature_names:
-  - "ability:spirit_power_supreme"
-  level: 17
-- class_feature_names:
-  - "ability:spacious_soul"
-  level: 18
-- class_feature_names:
-  - "ability:spirit_mastery"
-  level: 19
-- class_feature_names:
-  - "ability:astral_beacon"
-  - "ability:spirit_bonus"
-  - "ability:spirit_surge"
-  level: 20
+  - class_feature_names:
+      - "ability:knacks"
+      - "ability:spirit"
+      - "ability:spirit_bonus"
+      - "ability:spirit_power_lesser"
+      - "ability:spirit_surge"
+    level: 1
+  - class_feature_names:
+      - "ability:shared_seance"
+      - "ability:taboo"
+    level: 2
+  - class_feature_names:
+      - "ability:haunt_channeler"
+    level: 3
+  - class_feature_names:
+      - "ability:spirit_bonus"
+    level: 4
+  - class_feature_names:
+      - "ability:location_channel"
+    level: 5
+  - class_feature_names:
+      - "ability:spirit_power_intermediate"
+    level: 6
+  - class_feature_names:
+      - "ability:connection_channel"
+    level: 7
+  - class_feature_names:
+      - "ability:spirit_bonus"
+    level: 8
+  - class_feature_names:
+      - "ability:propitiation"
+    level: 9
+  - class_feature_names:
+      - "ability:spirit_surge"
+    level: 10
+  - class_feature_names:
+      - "ability:spirit_power_greater"
+    level: 11
+  - class_feature_names:
+      - "ability:spirit_bonus"
+    level: 12
+  - class_feature_names:
+      - "ability:ask_the_spirits"
+    level: 13
+  - class_feature_names:
+      - "ability:astral_journey"
+    level: 14
+  - class_feature_names:
+      - "ability:trance_of_three"
+    level: 15
+  - class_feature_names:
+      - "ability:spirit_bonus"
+    level: 16
+  - class_feature_names:
+      - "ability:spirit_power_supreme"
+    level: 17
+  - class_feature_names:
+      - "ability:spacious_soul"
+    level: 18
+  - class_feature_names:
+      - "ability:spirit_mastery"
+    level: 19
+  - class_feature_names:
+      - "ability:astral_beacon"
+      - "ability:spirit_bonus"
+      - "ability:spirit_surge"
+    level: 20
 class_features:
-- id: "ability:ask_the_spirits"
-  name: "Ask the Spirits"
-  label: null
-  type: "Sp"
-  description: "At 13th level, a medium can send his consciousness to the Astral Plane\
-    \ any number of times per day to ask the spirits for advice, as if using contact\
-    \ other plane to contact the Astral Plane. The medium automatically succeeds at\
-    \ the Intelligence check to avoid the possible decrease to his Intelligence and\
-    \ Charisma."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:astral_beacon"
-  name: "Astral Beacon"
-  label: null
-  type: "Su"
-  description: "At 20th level, a medium is an open connection to the Astral Plane\
-    \ and a shining beacon for spirits. As a free action, he can channel spirits of\
-    \ any of the five legends he did not contact via his seance. This ability lasts\
-    \ for 1 round and grants access to the intermediate, greater, and supreme spirit\
-    \ powers of the chosen spirits.\nUnlike trance of three, astral beacon allows\
-    \ spirits of the chosen legends (for instance, archmage) to gain influence over\
-    \ the medium until 24 hours from when the medium contacted his primary spirit.\
-    \ Also unlike trance of three, if the medium would incur influence by using one\
-    \ of the new spirits’ abilities, that influence is added to the medium’s total\
-    \ influence from that spirit rather than from his primary spirit."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:astral_journey"
-  name: "Astral Journey"
-  label: null
-  type: "Sp"
-  description: "At 14th level, a medium can enter a deep coma in order to project\
-    \ himself onto the Astral Plane as astral projection, except he can project only\
-    \ himself, he can’t enter other planes, and his projected gear has no magical\
-    \ properties."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:connection_channel"
-  name: "Connection Channel"
-  label: null
-  type: "Sp"
-  description: "At 7th level, a medium can use his location channel ability at any\
-    \ location, so long as he possesses some connection to the deceased. If another\
-    \ participant in the seance is more familiar with the deceased than the medium,\
-    \ the medium can substitute that participant’s familiarity in place of his own\
-    \ to determine the DC of the call spirit effect."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:hardened_soul"
-  name: "Hardened Soul"
-  label: null
-  type: "Su"
-  description: "At 20th level, the medium’s soul has calluses from all the times some\
-    \ spirit or another has tried to take over. The medium does not become an NPC\
-    \ until his influence with a spirit reaches 8, and his spirit surge dice increases\
-    \ to 2d8.\nSubpages Archetypes Medium Archetypes - Purple Duck Games Everyman\
-    \ (Medium Archetype) Paizo, Inc. - Medium Archetypes Spirit Eater Medium of the\
-    \ Master Voice of the Void Vessel of the Failed Storm Dreamer Fiend Keeper Medium\
-    \ Kami Medium Legend Channeler Outer Channeler Reanimated Medium Relic Channeler\
-    \ Spirit Channeler Spirit Dancer Storyteller Wendo Caller Spirits Spirits – Paizo,\
-    \ Inc.\nSection 15: Copyright Notice Pathfinder Roleplaying Game Occult Adventures\
-    \ © 2015, Paizo Inc.; Authors: John Bennett, Logan Bonner, Robert Brookes, Jason\
-    \ Bulmahn, Ross Byers, John Compton, Adam Daigle, Jim Groves, Thurston Hillman,\
-    \ Eric Hindley, Brandon Hodge, Ben McFarland, Erik Mona, Jason Nelson, Tom Phillips,\
-    \ Stephen Radney-MacFarland, Thomas M. Reid, Alex Riggs, Robert Schwalb, Mark\
-    \ Seifter, Russ Taylor, and Steve Townshend."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:haunt_channeler"
-  name: "Haunt Channeler"
-  label: null
-  type: "Su"
-  description: "At 3rd level, a medium can use his familiarity with spirits to assist\
-    \ him when dealing with haunts. He can always act on the surprise round against\
-    \ a haunt, and his touch funnels a portion of the haunt into himself, dealing\
-    \ 1d6 points of damage to the haunt per 2 medium levels he possesses as if via\
-    \ positive energy and allowing the medium to ask the haunt a single question.\
-    \ The haunt can answer the question however it chooses. Additionally, the medium\
-    \ can forgo his saving throw against a haunt’s effects to funnel the haunt entirely\
-    \ into himself. If he does so, the medium suffers the haunt’s full effect, but\
-    \ the haunt doesn’t affect anyone else (even if it normally would). The haunt\
-    \ then gains control of the medium’s body for 24 hours. Once per minute, the medium\
-    \ can attempt to end this possession early by succeeding at a Will save (DC =\
-    \ 20 + 1/2 the medium’s class level)."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:knacks"
-  name: "Knacks"
-  label: null
-  type: null
-  description: "Medium learn a number of knacks, or 0-level spells. These spells are\
-    \ cast like any other spell, but they don't consume slots and can be used again."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:location_channel"
-  name: "Location Channel"
-  label: null
-  type: "Sp"
-  description: "At 5th level, a medium can perform a special seance at the site of\
-    \ a person’s death—or a location that was precious to that person in life—to call\
-    \ forth that person’s spirit into the medium’s body so his allies can ask it questions.\
-    \ The effects are similar to the spell call spirit, except that the duration is\
-    \ 1 round per medium level and the spirit possesses the medium’s body instead\
-    \ of appearing in a wispy form. The other participants of the seance must ask\
-    \ the questions. Once the medium attempts to call a spirit, he cannot attempt\
-    \ to call the same spirit again for 24 hours. Once per round, the medium can attempt\
-    \ to end the seance early by succeeding at a Will save (DC = 20 + 1/2 the medium’\
-    s class level)."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:propitiation"
-  name: "Propitiation"
-  label: null
-  type: "Su"
-  description: "At 9th level, a medium has learned hidden techniques and rites that\
-    \ allow him to mollify his channeled spirit once per day, reducing its influence\
-    \ over him by 1 point (to a minimum of 1 point of influence). The details of the\
-    \ propitiation ritual vary based on the individual spirit, but the process always\
-    \ takes around 10 minutes to perform and it never requires any additional cost\
-    \ (such as an offering of wealth or a live sacrifice)."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:shared_seance"
-  name: "Shared Seance"
-  label: null
-  type: "Su"
-  description: "At 2nd level, a medium can share his channeled spirit’s aid with his\
-    \ allies. All allies who participate in the medium’s seance gain the channeled\
-    \ spirit’s seance boon for 24 hours."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:spacious_soul"
-  name: "Spacious Soul"
-  label: null
-  type: "Su"
-  description: "At 18th level, a medium’s soul is spacious enough to provide a foothold\
-    \ for his fallen allies, if he so chooses. If one of the allies who participated\
-    \ in the medium’s seance that day dies within line of effect and line of sight\
-    \ of the medium, the medium can spend an immediate action to accept that ally’\
-    s spirit within him. Since the ally inhabits the portion of the medium’s soul\
-    \ normally reserved for a spirit, this suppresses the medium’s spirit, spirit\
-    \ bonus, and spirit surge abilities as long as the medium maintains this ability.\
-    \ The ally’s spirit and the medium share the medium’s body and can decide each\
-    \ round on the medium’s turn which of them will take the medium’s actions for\
-    \ that round. If they don’t agree on who should act, they attempt opposed Charisma\
-    \ checks to determine who is dominant for the next hour, and the dominant character\
-    \ decides who acts on each round. The ally’s spirit has all the spells and limited\
-    \ use abilities (such as uses of channel energy, ki, and panache) that it possessed\
-    \ at the time of death, but it is incapable of regaining any abilities, points,\
-    \ spells, or uses of abilities it expends. When the ally’s spirit acts, it uses\
-    \ the ally’s base attack bonus, caster level, and special abilities (such as weapon\
-    \ proficiency), but uses the medium’s physical ability scores. If the ally returns\
-    \ to life, this ability immediately ends. Otherwise, the medium can maintain this\
-    \ ability indefinitely. The medium can end this effect as a standard action, though\
-    \ if the ally is unwilling to depart, the medium must succeed at a Will saving\
-    \ throw (DC = 10 + 1/2 the ally’s hit dice + the ally’s Charisma modifier) or\
-    \ the attempt fails and the ally becomes dominant for 24 hours."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:spell_casting"
-  name: "Spell Casting"
-  label: null
-  type: ""
-  description: "Table: Medium Spells Known Level Spells Known 0th 1st 2nd 3rd 4th\
-    \ 1st 2 — — — — 2nd 3 — — — — 3rd 4 — — — — 4th 4 2 — — — 5th 5 3 — — — 6th 5\
-    \ 4 — — — 7th 6 4 2 — — 8th 6 4 3 — — 9th 6 5 4 — — 10th 6 5 4 2 — 11th 6 5 4\
-    \ 3 — 12th 6 6 5 4 — 13th 6 6 5 4 2 14th 6 6 5 4 3 15th 6 6 6 5 4 16th 6 6 6 5\
-    \ 4 17th 6 6 6 5 4 18th 6 6 6 6 5 19th 6 6 6 6 5 20th 6 6 6 6 5\nA medium can\
-    \ cast a small number of psychic spells drawn from the medium spell list. To learn\
-    \ or cast a spell, a medium must have a Charisma score equal to at least 10 +\
-    \ the spell’s level. He can cast any spell he knows without preparing it ahead\
-    \ of time. The saving throw DC against a medium’s spell is equal to 10 + the spell\
-    \ level + the medium’s Charisma modifier.\nA medium can cast only a certain number\
-    \ of spells of each level per day. His base daily spell allotment is given on\
-    \ Table: Medium. In addition, he receives bonus spells per day if he has a high\
-    \ Charisma score.\nThe medium’s selection of spells is limited. At 1st level,\
-    \ a medium knows two 0-level spells of his choice. At each new level, the medium\
-    \ learns one or more new spells, as indicated on Table: Medium Spells Known. Unlike\
-    \ his spells per day, the number of spells a medium knows is not affected by his\
-    \ Charisma score; the numbers on the table are fixed. At 5th level and every 3\
-    \ levels thereafter, a medium can learn a single new spell in place of one he\
-    \ already knows. The new spell’s level must be the same as that of the spell being\
-    \ exchanged, and he must choose whether to swap the spell at the same time he\
-    \ gains new spells known for the level.\nThe medium casts all spells as psychic\
-    \ spells.\nKnacks: Mediums learn a number of knacks, or 0-level spells, as noted\
-    \ on Table: Medium Spells Known. These spells are cast like any other spell, but\
-    \ they don’t consume slots and can be used again."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:spirit"
-  name: "Spirit"
-  label: null
-  type: "Su"
-  description: "A medium serves as a vessel to channel spirits—astral echoes of powerful\
-    \ souls from ages past that live on in myth and legend. Each day, a medium can\
-    \ channel a spirit through a ritual known as a seance. Seances take 1 hour to\
-    \ perform and require the medium’s concentration. A full list of spirits can be\
-    \ found here.\nFAQ The medium class says that spirits can be channeled from any\
-    \ appropriate location, not just from the list of favored locations, but is that\
-    \ true, or can I only channel from one of the favored locations? As the class\
-    \ says, you can channel from any appropriate location, and the favored locations\
-    \ are just a place to start. There might be times where you don’t have access\
-    \ to all six legends, but a medium, either PC or NPC, should generally be able\
-    \ to access a legend if they can come up with a good conceptual tie between the\
-    \ legend and a location he can find or even set up himself. For instance, a medium\
-    \ could go hunt a deer and then use that location to channel a champion spirit\
-    \ of a legendary hunter. [Source]\nAt the end of a seance, the medium invites\
-    \ a local spirit to inhabit him and serve as his spirit for that day. Each spirit\
-    \ arises from one a legend. Though the medium can choose the legend to which the\
-    \ spirit he channels belongs, he must channel that spirit from an appropriate\
-    \ location. Each spirit has a favored location it usually inhabits, though spirits\
-    \ may also be present at other locations appropriate to their legends; such locations\
-    \ are listed in each legend’s Favored Locations entry [also, see FAQ at right].\
-    \ The medium gains the spirit’s listed seance boon and lesser spirit power for\
-    \ 24 hours. The medium also gains the spirit’s intermediate spirit power at 6th\
-    \ level, its greater spirit power at 11th level, and its supreme spirit power\
-    \ at 17th level. After 24 hours, the medium loses contact with the channeled spirit\
-    \ and can perform another seance.\nA medium can invite his allies to participate\
-    \ in his seance—shared seance and certain spirit powers affect other participants.\
-    \ A character counts as participating so long as she maintains physical contact\
-    \ with another participating character and willfully opens herself to the spirit;\
-    \ unlike the medium, other participating characters can take other actions during\
-    \ this time. Only creatures with an Intelligence score of at least 3 can participate\
-    \ in a seance.\nIn addition to granting power to the medium, a channeled spirit\
-    \ can influence the medium. By channeling a spirit, the medium allows the spirit\
-    \ to gain 1 point of influence over him. If the medium loses that 1 point of influence,\
-    \ he loses contact with the spirit, though he is still unable to perform a new\
-    \ seance until the normal 24 hour period has elapsed since his last seance. When\
-    \ the spirit leaves after the 24-hour duration and before the next seance, the\
-    \ spirit’s influence over the medium resets to 0. Certain abilities allow the\
-    \ medium to gain additional power in exchange for allowing the spirit more influence\
-    \ over him.\nWhen a spirit gains at least 3 points of influence over the medium,\
-    \ the dual impulses housed within the same body cause the medium to meld with\
-    \ his spirit’s consciousness.\nThe resulting muddled sense of self and struggle\
-    \ for control causes the medium to take a –2 penalty on initiative checks as well\
-    \ as a specific additional penalty listed in each spirit’s entry. However, the\
-    \ spirit’s mental presence grants the medium a +4 bonus against possession effects\
-    \ and a +2 bonus on saving throws against mind-affecting effects that are not\
-    \ related to possession.\nIf a spirit ever attains 5 or more points of influence\
-    \ over the medium, the medium completely loses control to the spirit. He effectively\
-    \ becomes an NPC under the GM’s control until after he awakens the next day with\
-    \ the spirit gone.\nDuring his seance, the medium can choose to channel a weaker\
-    \ spirit to gain its help without incurring as much of its influence. If he does\
-    \ so, he can forgo any number of spirit powers, starting with his most powerful\
-    \ spirit power. For each spirit power he forgoes, the medium can use his spirit\
-    \ surge ability twice without incurring influence."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:spirit_bonus"
-  name: "Spirit Bonus"
-  label: null
-  type: "Su"
-  description: "When a medium channels a spirit, he gains a bonus on certain checks\
-    \ and to certain statistics, depending on the spirit. A 1st-level medium’s spirit\
-    \ bonus is +1; it increases by 1 at 4th level and every 4 levels thereafter."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:spirit_mastery"
-  name: "Spirit Mastery"
-  label: null
-  type: "Ex"
-  description: "At 19th legend, the medium becomes a legend among spirits, particularly\
-    \ lesser spirits. He can use his spirit surge ability an additional two times\
-    \ per day without incurring influence, regardless of whether he accepts a taboo\
-    \ or channels a weaker spirit. When channeling a weaker spirit, he can use his\
-    \ spirit surge ability an additional four times per day for each power he forgoes,\
-    \ instead of an additional two times."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:spirit_power_greater"
-  name: "Spirit Power (Greater)"
-  label: null
-  type: "Su"
-  description: "A medium serves as a vessel to channel spirits—astral echoes of powerful\
-    \ souls from ages past that live on in myth and legend. Each day, a medium can\
-    \ channel a spirit through a ritual known as a seance. Seances take 1 hour to\
-    \ perform and require the medium’s concentration. A full list of spirits can be\
-    \ found here.\nFAQ The medium class says that spirits can be channeled from any\
-    \ appropriate location, not just from the list of favored locations, but is that\
-    \ true, or can I only channel from one of the favored locations? As the class\
-    \ says, you can channel from any appropriate location, and the favored locations\
-    \ are just a place to start. There might be times where you don’t have access\
-    \ to all six legends, but a medium, either PC or NPC, should generally be able\
-    \ to access a legend if they can come up with a good conceptual tie between the\
-    \ legend and a location he can find or even set up himself. For instance, a medium\
-    \ could go hunt a deer and then use that location to channel a champion spirit\
-    \ of a legendary hunter. [Source]\nAt the end of a seance, the medium invites\
-    \ a local spirit to inhabit him and serve as his spirit for that day. Each spirit\
-    \ arises from one a legend. Though the medium can choose the legend to which the\
-    \ spirit he channels belongs, he must channel that spirit from an appropriate\
-    \ location. Each spirit has a favored location it usually inhabits, though spirits\
-    \ may also be present at other locations appropriate to their legends; such locations\
-    \ are listed in each legend’s Favored Locations entry [also, see FAQ at right].\
-    \ The medium gains the spirit’s listed seance boon and lesser spirit power for\
-    \ 24 hours. The medium also gains the spirit’s intermediate spirit power at 6th\
-    \ level, its greater spirit power at 11th level, and its supreme spirit power\
-    \ at 17th level. After 24 hours, the medium loses contact with the channeled spirit\
-    \ and can perform another seance.\nA medium can invite his allies to participate\
-    \ in his seance—shared seance and certain spirit powers affect other participants.\
-    \ A character counts as participating so long as she maintains physical contact\
-    \ with another participating character and willfully opens herself to the spirit;\
-    \ unlike the medium, other participating characters can take other actions during\
-    \ this time. Only creatures with an Intelligence score of at least 3 can participate\
-    \ in a seance.\nIn addition to granting power to the medium, a channeled spirit\
-    \ can influence the medium. By channeling a spirit, the medium allows the spirit\
-    \ to gain 1 point of influence over him. If the medium loses that 1 point of influence,\
-    \ he loses contact with the spirit, though he is still unable to perform a new\
-    \ seance until the normal 24 hour period has elapsed since his last seance. When\
-    \ the spirit leaves after the 24-hour duration and before the next seance, the\
-    \ spirit’s influence over the medium resets to 0. Certain abilities allow the\
-    \ medium to gain additional power in exchange for allowing the spirit more influence\
-    \ over him.\nWhen a spirit gains at least 3 points of influence over the medium,\
-    \ the dual impulses housed within the same body cause the medium to meld with\
-    \ his spirit’s consciousness.\nThe resulting muddled sense of self and struggle\
-    \ for control causes the medium to take a –2 penalty on initiative checks as well\
-    \ as a specific additional penalty listed in each spirit’s entry. However, the\
-    \ spirit’s mental presence grants the medium a +4 bonus against possession effects\
-    \ and a +2 bonus on saving throws against mind-affecting effects that are not\
-    \ related to possession.\nIf a spirit ever attains 5 or more points of influence\
-    \ over the medium, the medium completely loses control to the spirit. He effectively\
-    \ becomes an NPC under the GM’s control until after he awakens the next day with\
-    \ the spirit gone.\nDuring his seance, the medium can choose to channel a weaker\
-    \ spirit to gain its help without incurring as much of its influence. If he does\
-    \ so, he can forgo any number of spirit powers, starting with his most powerful\
-    \ spirit power. For each spirit power he forgoes, the medium can use his spirit\
-    \ surge ability twice without incurring influence."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:spirit_power_intermediate"
-  name: "Spirit Power (Intermediate)"
-  label: null
-  type: "Su"
-  description: "A medium serves as a vessel to channel spirits—astral echoes of powerful\
-    \ souls from ages past that live on in myth and legend. Each day, a medium can\
-    \ channel a spirit through a ritual known as a seance. Seances take 1 hour to\
-    \ perform and require the medium’s concentration. A full list of spirits can be\
-    \ found here.\nFAQ The medium class says that spirits can be channeled from any\
-    \ appropriate location, not just from the list of favored locations, but is that\
-    \ true, or can I only channel from one of the favored locations? As the class\
-    \ says, you can channel from any appropriate location, and the favored locations\
-    \ are just a place to start. There might be times where you don’t have access\
-    \ to all six legends, but a medium, either PC or NPC, should generally be able\
-    \ to access a legend if they can come up with a good conceptual tie between the\
-    \ legend and a location he can find or even set up himself. For instance, a medium\
-    \ could go hunt a deer and then use that location to channel a champion spirit\
-    \ of a legendary hunter. [Source]\nAt the end of a seance, the medium invites\
-    \ a local spirit to inhabit him and serve as his spirit for that day. Each spirit\
-    \ arises from one a legend. Though the medium can choose the legend to which the\
-    \ spirit he channels belongs, he must channel that spirit from an appropriate\
-    \ location. Each spirit has a favored location it usually inhabits, though spirits\
-    \ may also be present at other locations appropriate to their legends; such locations\
-    \ are listed in each legend’s Favored Locations entry [also, see FAQ at right].\
-    \ The medium gains the spirit’s listed seance boon and lesser spirit power for\
-    \ 24 hours. The medium also gains the spirit’s intermediate spirit power at 6th\
-    \ level, its greater spirit power at 11th level, and its supreme spirit power\
-    \ at 17th level. After 24 hours, the medium loses contact with the channeled spirit\
-    \ and can perform another seance.\nA medium can invite his allies to participate\
-    \ in his seance—shared seance and certain spirit powers affect other participants.\
-    \ A character counts as participating so long as she maintains physical contact\
-    \ with another participating character and willfully opens herself to the spirit;\
-    \ unlike the medium, other participating characters can take other actions during\
-    \ this time. Only creatures with an Intelligence score of at least 3 can participate\
-    \ in a seance.\nIn addition to granting power to the medium, a channeled spirit\
-    \ can influence the medium. By channeling a spirit, the medium allows the spirit\
-    \ to gain 1 point of influence over him. If the medium loses that 1 point of influence,\
-    \ he loses contact with the spirit, though he is still unable to perform a new\
-    \ seance until the normal 24 hour period has elapsed since his last seance. When\
-    \ the spirit leaves after the 24-hour duration and before the next seance, the\
-    \ spirit’s influence over the medium resets to 0. Certain abilities allow the\
-    \ medium to gain additional power in exchange for allowing the spirit more influence\
-    \ over him.\nWhen a spirit gains at least 3 points of influence over the medium,\
-    \ the dual impulses housed within the same body cause the medium to meld with\
-    \ his spirit’s consciousness.\nThe resulting muddled sense of self and struggle\
-    \ for control causes the medium to take a –2 penalty on initiative checks as well\
-    \ as a specific additional penalty listed in each spirit’s entry. However, the\
-    \ spirit’s mental presence grants the medium a +4 bonus against possession effects\
-    \ and a +2 bonus on saving throws against mind-affecting effects that are not\
-    \ related to possession.\nIf a spirit ever attains 5 or more points of influence\
-    \ over the medium, the medium completely loses control to the spirit. He effectively\
-    \ becomes an NPC under the GM’s control until after he awakens the next day with\
-    \ the spirit gone.\nDuring his seance, the medium can choose to channel a weaker\
-    \ spirit to gain its help without incurring as much of its influence. If he does\
-    \ so, he can forgo any number of spirit powers, starting with his most powerful\
-    \ spirit power. For each spirit power he forgoes, the medium can use his spirit\
-    \ surge ability twice without incurring influence."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:spirit_power_lesser"
-  name: "Spirit Power (Lesser)"
-  label: null
-  type: "Su"
-  description: "A medium serves as a vessel to channel spirits—astral echoes of powerful\
-    \ souls from ages past that live on in myth and legend. Each day, a medium can\
-    \ channel a spirit through a ritual known as a seance. Seances take 1 hour to\
-    \ perform and require the medium’s concentration. A full list of spirits can be\
-    \ found here.\nFAQ The medium class says that spirits can be channeled from any\
-    \ appropriate location, not just from the list of favored locations, but is that\
-    \ true, or can I only channel from one of the favored locations? As the class\
-    \ says, you can channel from any appropriate location, and the favored locations\
-    \ are just a place to start. There might be times where you don’t have access\
-    \ to all six legends, but a medium, either PC or NPC, should generally be able\
-    \ to access a legend if they can come up with a good conceptual tie between the\
-    \ legend and a location he can find or even set up himself. For instance, a medium\
-    \ could go hunt a deer and then use that location to channel a champion spirit\
-    \ of a legendary hunter. [Source]\nAt the end of a seance, the medium invites\
-    \ a local spirit to inhabit him and serve as his spirit for that day. Each spirit\
-    \ arises from one a legend. Though the medium can choose the legend to which the\
-    \ spirit he channels belongs, he must channel that spirit from an appropriate\
-    \ location. Each spirit has a favored location it usually inhabits, though spirits\
-    \ may also be present at other locations appropriate to their legends; such locations\
-    \ are listed in each legend’s Favored Locations entry [also, see FAQ at right].\
-    \ The medium gains the spirit’s listed seance boon and lesser spirit power for\
-    \ 24 hours. The medium also gains the spirit’s intermediate spirit power at 6th\
-    \ level, its greater spirit power at 11th level, and its supreme spirit power\
-    \ at 17th level. After 24 hours, the medium loses contact with the channeled spirit\
-    \ and can perform another seance.\nA medium can invite his allies to participate\
-    \ in his seance—shared seance and certain spirit powers affect other participants.\
-    \ A character counts as participating so long as she maintains physical contact\
-    \ with another participating character and willfully opens herself to the spirit;\
-    \ unlike the medium, other participating characters can take other actions during\
-    \ this time. Only creatures with an Intelligence score of at least 3 can participate\
-    \ in a seance.\nIn addition to granting power to the medium, a channeled spirit\
-    \ can influence the medium. By channeling a spirit, the medium allows the spirit\
-    \ to gain 1 point of influence over him. If the medium loses that 1 point of influence,\
-    \ he loses contact with the spirit, though he is still unable to perform a new\
-    \ seance until the normal 24 hour period has elapsed since his last seance. When\
-    \ the spirit leaves after the 24-hour duration and before the next seance, the\
-    \ spirit’s influence over the medium resets to 0. Certain abilities allow the\
-    \ medium to gain additional power in exchange for allowing the spirit more influence\
-    \ over him.\nWhen a spirit gains at least 3 points of influence over the medium,\
-    \ the dual impulses housed within the same body cause the medium to meld with\
-    \ his spirit’s consciousness.\nThe resulting muddled sense of self and struggle\
-    \ for control causes the medium to take a –2 penalty on initiative checks as well\
-    \ as a specific additional penalty listed in each spirit’s entry. However, the\
-    \ spirit’s mental presence grants the medium a +4 bonus against possession effects\
-    \ and a +2 bonus on saving throws against mind-affecting effects that are not\
-    \ related to possession.\nIf a spirit ever attains 5 or more points of influence\
-    \ over the medium, the medium completely loses control to the spirit. He effectively\
-    \ becomes an NPC under the GM’s control until after he awakens the next day with\
-    \ the spirit gone.\nDuring his seance, the medium can choose to channel a weaker\
-    \ spirit to gain its help without incurring as much of its influence. If he does\
-    \ so, he can forgo any number of spirit powers, starting with his most powerful\
-    \ spirit power. For each spirit power he forgoes, the medium can use his spirit\
-    \ surge ability twice without incurring influence."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:spirit_power_supreme"
-  name: "Spirit Power (Supreme)"
-  label: null
-  type: "Su"
-  description: "A medium serves as a vessel to channel spirits—astral echoes of powerful\
-    \ souls from ages past that live on in myth and legend. Each day, a medium can\
-    \ channel a spirit through a ritual known as a seance. Seances take 1 hour to\
-    \ perform and require the medium’s concentration. A full list of spirits can be\
-    \ found here.\nFAQ The medium class says that spirits can be channeled from any\
-    \ appropriate location, not just from the list of favored locations, but is that\
-    \ true, or can I only channel from one of the favored locations? As the class\
-    \ says, you can channel from any appropriate location, and the favored locations\
-    \ are just a place to start. There might be times where you don’t have access\
-    \ to all six legends, but a medium, either PC or NPC, should generally be able\
-    \ to access a legend if they can come up with a good conceptual tie between the\
-    \ legend and a location he can find or even set up himself. For instance, a medium\
-    \ could go hunt a deer and then use that location to channel a champion spirit\
-    \ of a legendary hunter. [Source]\nAt the end of a seance, the medium invites\
-    \ a local spirit to inhabit him and serve as his spirit for that day. Each spirit\
-    \ arises from one a legend. Though the medium can choose the legend to which the\
-    \ spirit he channels belongs, he must channel that spirit from an appropriate\
-    \ location. Each spirit has a favored location it usually inhabits, though spirits\
-    \ may also be present at other locations appropriate to their legends; such locations\
-    \ are listed in each legend’s Favored Locations entry [also, see FAQ at right].\
-    \ The medium gains the spirit’s listed seance boon and lesser spirit power for\
-    \ 24 hours. The medium also gains the spirit’s intermediate spirit power at 6th\
-    \ level, its greater spirit power at 11th level, and its supreme spirit power\
-    \ at 17th level. After 24 hours, the medium loses contact with the channeled spirit\
-    \ and can perform another seance.\nA medium can invite his allies to participate\
-    \ in his seance—shared seance and certain spirit powers affect other participants.\
-    \ A character counts as participating so long as she maintains physical contact\
-    \ with another participating character and willfully opens herself to the spirit;\
-    \ unlike the medium, other participating characters can take other actions during\
-    \ this time. Only creatures with an Intelligence score of at least 3 can participate\
-    \ in a seance.\nIn addition to granting power to the medium, a channeled spirit\
-    \ can influence the medium. By channeling a spirit, the medium allows the spirit\
-    \ to gain 1 point of influence over him. If the medium loses that 1 point of influence,\
-    \ he loses contact with the spirit, though he is still unable to perform a new\
-    \ seance until the normal 24 hour period has elapsed since his last seance. When\
-    \ the spirit leaves after the 24-hour duration and before the next seance, the\
-    \ spirit’s influence over the medium resets to 0. Certain abilities allow the\
-    \ medium to gain additional power in exchange for allowing the spirit more influence\
-    \ over him.\nWhen a spirit gains at least 3 points of influence over the medium,\
-    \ the dual impulses housed within the same body cause the medium to meld with\
-    \ his spirit’s consciousness.\nThe resulting muddled sense of self and struggle\
-    \ for control causes the medium to take a –2 penalty on initiative checks as well\
-    \ as a specific additional penalty listed in each spirit’s entry. However, the\
-    \ spirit’s mental presence grants the medium a +4 bonus against possession effects\
-    \ and a +2 bonus on saving throws against mind-affecting effects that are not\
-    \ related to possession.\nIf a spirit ever attains 5 or more points of influence\
-    \ over the medium, the medium completely loses control to the spirit. He effectively\
-    \ becomes an NPC under the GM’s control until after he awakens the next day with\
-    \ the spirit gone.\nDuring his seance, the medium can choose to channel a weaker\
-    \ spirit to gain its help without incurring as much of its influence. If he does\
-    \ so, he can forgo any number of spirit powers, starting with his most powerful\
-    \ spirit power. For each spirit power he forgoes, the medium can use his spirit\
-    \ surge ability twice without incurring influence."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:spirit_surge"
-  name: "Spirit Surge"
-  label: null
-  type: "Su"
-  description: "After failing a d20 roll that was modified by his spirit bonus, a\
-    \ medium can allow his spirit to gain 1 additional point of influence over him\
-    \ in order to add 1d6 to the check’s result without taking an action.\nThis can\
-    \ cause the check to succeed instead of fail. The medium must be conscious and\
-    \ aware to use this ability, and he can use this ability at most once per round.\
-    \ At 10th level, the medium’s spirit surge die increases to 1d8, and at 20th level\
-    \ it increases to 1d10."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:taboo"
-  name: "Taboo"
-  label: null
-  type: "Ex"
-  description: "At 2nd level, during his daily seance, a medium can accept a taboo\
-    \ in order to appease his spirit. Each spirit lists example taboos, and the GM\
-    \ may allow additional taboos as well. Accepting a taboo allows the medium to\
-    \ use his spirit surge ability twice without incurring influence. The medium can\
-    \ select only a single taboo. The medium is not magically prevented from breaking\
-    \ his taboo, but if he breaks the taboo for any reason, he takes a –2 penalty\
-    \ on attack rolls, damage rolls, ability checks, skill checks, and saving throws\
-    \ for 1 hour and his spirit gains 1 point of influence over him. If the medium\
-    \ continues violating the taboo while taking the penalty, the duration of the\
-    \ penalty extends, but the spirit doesn’t gain additional influence over the medium.\
-    \ If a spirit attains 5 points of influence because of a violated taboo, instead\
-    \ of possessing the medium, the spirit leaves the medium’s body entirely, and\
-    \ the medium loses access to his spirit powers, spirit bonus, and spirit surge\
-    \ abilities until the next time he can perform a seance. Banishing a spirit in\
-    \ this way damages the medium’s connection to that spirit’s legend; the medium\
-    \ cannot channel spirits of that legend for 1 week, and the next time the medium\
-    \ channels a spirit of that legend, it starts with 2 points of influence over\
-    \ him instead of 1."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:trance_of_three"
-  name: "Trance of Three"
-  label: null
-  type: "Su"
-  description: "At 15th level, as a swift action, a medium can allow his spirit to\
-    \ gain 1 point of influence over him in order to allow a portion of a legendary\
-    \ spirit from another legend to enter him for 1 round per level, granting him\
-    \ the intermediate spirit power from another legend.\nIf that power has a limited\
-    \ number of uses per day, the medium must keep track of the remaining uses even\
-    \ after the secondary spirit is gone; if the medium calls the secondary spirit\
-    \ again that day, it can grant the remaining uses of that power. If the medium\
-    \ uses an ability that incurs influence, the medium’s primary spirit gains that\
-    \ amount of influence over him, not the secondary spirit. The medium doesn’t gain\
-    \ the benefits of his spirit bonus from the secondary spirit.\nThe medium can\
-    \ end the trance of three early as a free action."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:weapon_and_armor_proficiency"
-  name: "Weapon and Armor Proficiency"
-  label: null
-  type: ""
-  description: "Mediums are proficient with all simple weapons, light armor, and medium\
-    \ armor, but not with shields."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
+  - id: "ability:ask_the_spirits"
+    name: "Ask the Spirits"
+    type: "Sp"
+    description: "At 13th level, a medium can send his consciousness to the Astral
+      Plane any number of times per day to ask the spirits for advice, as if
+      using contact other plane to contact the Astral Plane. The medium
+      automatically succeeds at the Intelligence check to avoid the possible
+      decrease to his Intelligence and Charisma."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:astral_beacon"
+    name: "Astral Beacon"
+    type: "Su"
+    description: "At 20th level, a medium is an open connection to the Astral Plane
+      and a shining beacon for spirits. As a free action, he can channel spirits
+      of any of the five legends he did not contact via his seance. This ability
+      lasts for 1 round and grants access to the intermediate, greater, and
+      supreme spirit powers of the chosen spirits.
+
+      Unlike trance of three, astral beacon allows spirits of the chosen legends
+      (for instance, archmage) to gain influence over the medium until 24 hours
+      from when the medium contacted his primary spirit. Also unlike trance of
+      three, if the medium would incur influence by using one of the new
+      spirits’ abilities, that influence is added to the medium’s total
+      influence from that spirit rather than from his primary spirit."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:astral_journey"
+    name: "Astral Journey"
+    type: "Sp"
+    description: "At 14th level, a medium can enter a deep coma in order to project
+      himself onto the Astral Plane as astral projection, except he can project
+      only himself, he can’t enter other planes, and his projected gear has no
+      magical properties."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:connection_channel"
+    name: "Connection Channel"
+    type: "Sp"
+    description: "At 7th level, a medium can use his location channel ability at any
+      location, so long as he possesses some connection to the deceased. If
+      another participant in the seance is more familiar with the deceased than
+      the medium, the medium can substitute that participant’s familiarity in
+      place of his own to determine the DC of the call spirit effect."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:hardened_soul"
+    name: "Hardened Soul"
+    type: "Su"
+    description: "At 20th level, the medium’s soul has calluses from all the times
+      some spirit or another has tried to take over. The medium does not become
+      an NPC until his influence with a spirit reaches 8, and his spirit surge
+      dice increases to 2d8.
+
+      Subpages Archetypes Medium Archetypes - Purple Duck Games Everyman (Medium
+      Archetype) Paizo, Inc. - Medium Archetypes Spirit Eater Medium of the
+      Master Voice of the Void Vessel of the Failed Storm Dreamer Fiend Keeper
+      Medium Kami Medium Legend Channeler Outer Channeler Reanimated Medium
+      Relic Channeler Spirit Channeler Spirit Dancer Storyteller Wendo Caller
+      Spirits Spirits – Paizo, Inc.
+
+      Section 15: Copyright Notice Pathfinder Roleplaying Game Occult Adventures
+      © 2015, Paizo Inc.; Authors: John Bennett, Logan Bonner, Robert Brookes,
+      Jason Bulmahn, Ross Byers, John Compton, Adam Daigle, Jim Groves, Thurston
+      Hillman, Eric Hindley, Brandon Hodge, Ben McFarland, Erik Mona, Jason
+      Nelson, Tom Phillips, Stephen Radney-MacFarland, Thomas M. Reid, Alex
+      Riggs, Robert Schwalb, Mark Seifter, Russ Taylor, and Steve Townshend."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:haunt_channeler"
+    name: "Haunt Channeler"
+    type: "Su"
+    description: "At 3rd level, a medium can use his familiarity with spirits to
+      assist him when dealing with haunts. He can always act on the surprise
+      round against a haunt, and his touch funnels a portion of the haunt into
+      himself, dealing 1d6 points of damage to the haunt per 2 medium levels he
+      possesses as if via positive energy and allowing the medium to ask the
+      haunt a single question. The haunt can answer the question however it
+      chooses. Additionally, the medium can forgo his saving throw against a
+      haunt’s effects to funnel the haunt entirely into himself. If he does so,
+      the medium suffers the haunt’s full effect, but the haunt doesn’t affect
+      anyone else (even if it normally would). The haunt then gains control of
+      the medium’s body for 24 hours. Once per minute, the medium can attempt to
+      end this possession early by succeeding at a Will save (DC = 20 + 1/2 the
+      medium’s class level)."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:knacks"
+    name: "Knacks"
+    description: "Medium learn a number of knacks, or 0-level spells. These spells
+      are cast like any other spell, but they don't consume slots and can be
+      used again."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:location_channel"
+    name: "Location Channel"
+    type: "Sp"
+    description: "At 5th level, a medium can perform a special seance at the site of
+      a person’s death—or a location that was precious to that person in life—to
+      call forth that person’s spirit into the medium’s body so his allies can
+      ask it questions. The effects are similar to the spell call spirit, except
+      that the duration is 1 round per medium level and the spirit possesses the
+      medium’s body instead of appearing in a wispy form. The other participants
+      of the seance must ask the questions. Once the medium attempts to call a
+      spirit, he cannot attempt to call the same spirit again for 24 hours. Once
+      per round, the medium can attempt to end the seance early by succeeding at
+      a Will save (DC = 20 + 1/2 the medium’s class level)."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:propitiation"
+    name: "Propitiation"
+    type: "Su"
+    description: "At 9th level, a medium has learned hidden techniques and rites
+      that allow him to mollify his channeled spirit once per day, reducing its
+      influence over him by 1 point (to a minimum of 1 point of influence). The
+      details of the propitiation ritual vary based on the individual spirit,
+      but the process always takes around 10 minutes to perform and it never
+      requires any additional cost (such as an offering of wealth or a live
+      sacrifice)."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:shared_seance"
+    name: "Shared Seance"
+    type: "Su"
+    description: "At 2nd level, a medium can share his channeled spirit’s aid with
+      his allies. All allies who participate in the medium’s seance gain the
+      channeled spirit’s seance boon for 24 hours."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:spacious_soul"
+    name: "Spacious Soul"
+    type: "Su"
+    description: "At 18th level, a medium’s soul is spacious enough to provide a
+      foothold for his fallen allies, if he so chooses. If one of the allies who
+      participated in the medium’s seance that day dies within line of effect
+      and line of sight of the medium, the medium can spend an immediate action
+      to accept that ally’s spirit within him. Since the ally inhabits the
+      portion of the medium’s soul normally reserved for a spirit, this
+      suppresses the medium’s spirit, spirit bonus, and spirit surge abilities
+      as long as the medium maintains this ability. The ally’s spirit and the
+      medium share the medium’s body and can decide each round on the medium’s
+      turn which of them will take the medium’s actions for that round. If they
+      don’t agree on who should act, they attempt opposed Charisma checks to
+      determine who is dominant for the next hour, and the dominant character
+      decides who acts on each round. The ally’s spirit has all the spells and
+      limited use abilities (such as uses of channel energy, ki, and panache)
+      that it possessed at the time of death, but it is incapable of regaining
+      any abilities, points, spells, or uses of abilities it expends. When the
+      ally’s spirit acts, it uses the ally’s base attack bonus, caster level,
+      and special abilities (such as weapon proficiency), but uses the medium’s
+      physical ability scores. If the ally returns to life, this ability
+      immediately ends. Otherwise, the medium can maintain this ability
+      indefinitely. The medium can end this effect as a standard action, though
+      if the ally is unwilling to depart, the medium must succeed at a Will
+      saving throw (DC = 10 + 1/2 the ally’s hit dice + the ally’s Charisma
+      modifier) or the attempt fails and the ally becomes dominant for 24
+      hours."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:spell_casting"
+    name: "Spell Casting"
+    description: "Table: Medium Spells Known Level Spells Known 0th 1st 2nd 3rd 4th
+      1st 2 — — — — 2nd 3 — — — — 3rd 4 — — — — 4th 4 2 — — — 5th 5 3 — — — 6th
+      5 4 — — — 7th 6 4 2 — — 8th 6 4 3 — — 9th 6 5 4 — — 10th 6 5 4 2 — 11th 6
+      5 4 3 — 12th 6 6 5 4 — 13th 6 6 5 4 2 14th 6 6 5 4 3 15th 6 6 6 5 4 16th 6
+      6 6 5 4 17th 6 6 6 5 4 18th 6 6 6 6 5 19th 6 6 6 6 5 20th 6 6 6 6 5
+
+      A medium can cast a small number of psychic spells drawn from the medium
+      spell list. To learn or cast a spell, a medium must have a Charisma score
+      equal to at least 10 + the spell’s level. He can cast any spell he knows
+      without preparing it ahead of time. The saving throw DC against a medium’s
+      spell is equal to 10 + the spell level + the medium’s Charisma modifier.
+
+      A medium can cast only a certain number of spells of each level per day.
+      His base daily spell allotment is given on Table: Medium. In addition, he
+      receives bonus spells per day if he has a high Charisma score.
+
+      The medium’s selection of spells is limited. At 1st level, a medium knows
+      two 0-level spells of his choice. At each new level, the medium learns one
+      or more new spells, as indicated on Table: Medium Spells Known. Unlike his
+      spells per day, the number of spells a medium knows is not affected by his
+      Charisma score; the numbers on the table are fixed. At 5th level and every
+      3 levels thereafter, a medium can learn a single new spell in place of one
+      he already knows. The new spell’s level must be the same as that of the
+      spell being exchanged, and he must choose whether to swap the spell at the
+      same time he gains new spells known for the level.
+
+      The medium casts all spells as psychic spells.
+
+      Knacks: Mediums learn a number of knacks, or 0-level spells, as noted on
+      Table: Medium Spells Known. These spells are cast like any other spell,
+      but they don’t consume slots and can be used again."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:spirit"
+    name: "Spirit"
+    type: "Su"
+    description: "A medium serves as a vessel to channel spirits—astral echoes of
+      powerful souls from ages past that live on in myth and legend. Each day, a
+      medium can channel a spirit through a ritual known as a seance. Seances
+      take 1 hour to perform and require the medium’s concentration. A full list
+      of spirits can be found here.
+
+      FAQ The medium class says that spirits can be channeled from any
+      appropriate location, not just from the list of favored locations, but is
+      that true, or can I only channel from one of the favored locations? As the
+      class says, you can channel from any appropriate location, and the favored
+      locations are just a place to start. There might be times where you don’t
+      have access to all six legends, but a medium, either PC or NPC, should
+      generally be able to access a legend if they can come up with a good
+      conceptual tie between the legend and a location he can find or even set
+      up himself. For instance, a medium could go hunt a deer and then use that
+      location to channel a champion spirit of a legendary hunter. [Source]
+
+      At the end of a seance, the medium invites a local spirit to inhabit him
+      and serve as his spirit for that day. Each spirit arises from one a
+      legend. Though the medium can choose the legend to which the spirit he
+      channels belongs, he must channel that spirit from an appropriate
+      location. Each spirit has a favored location it usually inhabits, though
+      spirits may also be present at other locations appropriate to their
+      legends; such locations are listed in each legend’s Favored Locations
+      entry [also, see FAQ at right]. The medium gains the spirit’s listed
+      seance boon and lesser spirit power for 24 hours. The medium also gains
+      the spirit’s intermediate spirit power at 6th level, its greater spirit
+      power at 11th level, and its supreme spirit power at 17th level. After 24
+      hours, the medium loses contact with the channeled spirit and can perform
+      another seance.
+
+      A medium can invite his allies to participate in his seance—shared seance
+      and certain spirit powers affect other participants. A character counts as
+      participating so long as she maintains physical contact with another
+      participating character and willfully opens herself to the spirit; unlike
+      the medium, other participating characters can take other actions during
+      this time. Only creatures with an Intelligence score of at least 3 can
+      participate in a seance.
+
+      In addition to granting power to the medium, a channeled spirit can
+      influence the medium. By channeling a spirit, the medium allows the spirit
+      to gain 1 point of influence over him. If the medium loses that 1 point of
+      influence, he loses contact with the spirit, though he is still unable to
+      perform a new seance until the normal 24 hour period has elapsed since his
+      last seance. When the spirit leaves after the 24-hour duration and before
+      the next seance, the spirit’s influence over the medium resets to 0.
+      Certain abilities allow the medium to gain additional power in exchange
+      for allowing the spirit more influence over him.
+
+      When a spirit gains at least 3 points of influence over the medium, the
+      dual impulses housed within the same body cause the medium to meld with
+      his spirit’s consciousness.
+
+      The resulting muddled sense of self and struggle for control causes the
+      medium to take a –2 penalty on initiative checks as well as a specific
+      additional penalty listed in each spirit’s entry. However, the spirit’s
+      mental presence grants the medium a +4 bonus against possession effects
+      and a +2 bonus on saving throws against mind-affecting effects that are
+      not related to possession.
+
+      If a spirit ever attains 5 or more points of influence over the medium,
+      the medium completely loses control to the spirit. He effectively becomes
+      an NPC under the GM’s control until after he awakens the next day with the
+      spirit gone.
+
+      During his seance, the medium can choose to channel a weaker spirit to
+      gain its help without incurring as much of its influence. If he does so,
+      he can forgo any number of spirit powers, starting with his most powerful
+      spirit power. For each spirit power he forgoes, the medium can use his
+      spirit surge ability twice without incurring influence."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:spirit_bonus"
+    name: "Spirit Bonus"
+    type: "Su"
+    description: "When a medium channels a spirit, he gains a bonus on certain
+      checks and to certain statistics, depending on the spirit. A 1st-level
+      medium’s spirit bonus is +1; it increases by 1 at 4th level and every 4
+      levels thereafter."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:spirit_mastery"
+    name: "Spirit Mastery"
+    type: "Ex"
+    description: "At 19th legend, the medium becomes a legend among spirits,
+      particularly lesser spirits. He can use his spirit surge ability an
+      additional two times per day without incurring influence, regardless of
+      whether he accepts a taboo or channels a weaker spirit. When channeling a
+      weaker spirit, he can use his spirit surge ability an additional four
+      times per day for each power he forgoes, instead of an additional two
+      times."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:spirit_power_greater"
+    name: "Spirit Power (Greater)"
+    type: "Su"
+    description: "A medium serves as a vessel to channel spirits—astral echoes of
+      powerful souls from ages past that live on in myth and legend. Each day, a
+      medium can channel a spirit through a ritual known as a seance. Seances
+      take 1 hour to perform and require the medium’s concentration. A full list
+      of spirits can be found here.
+
+      FAQ The medium class says that spirits can be channeled from any
+      appropriate location, not just from the list of favored locations, but is
+      that true, or can I only channel from one of the favored locations? As the
+      class says, you can channel from any appropriate location, and the favored
+      locations are just a place to start. There might be times where you don’t
+      have access to all six legends, but a medium, either PC or NPC, should
+      generally be able to access a legend if they can come up with a good
+      conceptual tie between the legend and a location he can find or even set
+      up himself. For instance, a medium could go hunt a deer and then use that
+      location to channel a champion spirit of a legendary hunter. [Source]
+
+      At the end of a seance, the medium invites a local spirit to inhabit him
+      and serve as his spirit for that day. Each spirit arises from one a
+      legend. Though the medium can choose the legend to which the spirit he
+      channels belongs, he must channel that spirit from an appropriate
+      location. Each spirit has a favored location it usually inhabits, though
+      spirits may also be present at other locations appropriate to their
+      legends; such locations are listed in each legend’s Favored Locations
+      entry [also, see FAQ at right]. The medium gains the spirit’s listed
+      seance boon and lesser spirit power for 24 hours. The medium also gains
+      the spirit’s intermediate spirit power at 6th level, its greater spirit
+      power at 11th level, and its supreme spirit power at 17th level. After 24
+      hours, the medium loses contact with the channeled spirit and can perform
+      another seance.
+
+      A medium can invite his allies to participate in his seance—shared seance
+      and certain spirit powers affect other participants. A character counts as
+      participating so long as she maintains physical contact with another
+      participating character and willfully opens herself to the spirit; unlike
+      the medium, other participating characters can take other actions during
+      this time. Only creatures with an Intelligence score of at least 3 can
+      participate in a seance.
+
+      In addition to granting power to the medium, a channeled spirit can
+      influence the medium. By channeling a spirit, the medium allows the spirit
+      to gain 1 point of influence over him. If the medium loses that 1 point of
+      influence, he loses contact with the spirit, though he is still unable to
+      perform a new seance until the normal 24 hour period has elapsed since his
+      last seance. When the spirit leaves after the 24-hour duration and before
+      the next seance, the spirit’s influence over the medium resets to 0.
+      Certain abilities allow the medium to gain additional power in exchange
+      for allowing the spirit more influence over him.
+
+      When a spirit gains at least 3 points of influence over the medium, the
+      dual impulses housed within the same body cause the medium to meld with
+      his spirit’s consciousness.
+
+      The resulting muddled sense of self and struggle for control causes the
+      medium to take a –2 penalty on initiative checks as well as a specific
+      additional penalty listed in each spirit’s entry. However, the spirit’s
+      mental presence grants the medium a +4 bonus against possession effects
+      and a +2 bonus on saving throws against mind-affecting effects that are
+      not related to possession.
+
+      If a spirit ever attains 5 or more points of influence over the medium,
+      the medium completely loses control to the spirit. He effectively becomes
+      an NPC under the GM’s control until after he awakens the next day with the
+      spirit gone.
+
+      During his seance, the medium can choose to channel a weaker spirit to
+      gain its help without incurring as much of its influence. If he does so,
+      he can forgo any number of spirit powers, starting with his most powerful
+      spirit power. For each spirit power he forgoes, the medium can use his
+      spirit surge ability twice without incurring influence."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:spirit_power_intermediate"
+    name: "Spirit Power (Intermediate)"
+    type: "Su"
+    description: "A medium serves as a vessel to channel spirits—astral echoes of
+      powerful souls from ages past that live on in myth and legend. Each day, a
+      medium can channel a spirit through a ritual known as a seance. Seances
+      take 1 hour to perform and require the medium’s concentration. A full list
+      of spirits can be found here.
+
+      FAQ The medium class says that spirits can be channeled from any
+      appropriate location, not just from the list of favored locations, but is
+      that true, or can I only channel from one of the favored locations? As the
+      class says, you can channel from any appropriate location, and the favored
+      locations are just a place to start. There might be times where you don’t
+      have access to all six legends, but a medium, either PC or NPC, should
+      generally be able to access a legend if they can come up with a good
+      conceptual tie between the legend and a location he can find or even set
+      up himself. For instance, a medium could go hunt a deer and then use that
+      location to channel a champion spirit of a legendary hunter. [Source]
+
+      At the end of a seance, the medium invites a local spirit to inhabit him
+      and serve as his spirit for that day. Each spirit arises from one a
+      legend. Though the medium can choose the legend to which the spirit he
+      channels belongs, he must channel that spirit from an appropriate
+      location. Each spirit has a favored location it usually inhabits, though
+      spirits may also be present at other locations appropriate to their
+      legends; such locations are listed in each legend’s Favored Locations
+      entry [also, see FAQ at right]. The medium gains the spirit’s listed
+      seance boon and lesser spirit power for 24 hours. The medium also gains
+      the spirit’s intermediate spirit power at 6th level, its greater spirit
+      power at 11th level, and its supreme spirit power at 17th level. After 24
+      hours, the medium loses contact with the channeled spirit and can perform
+      another seance.
+
+      A medium can invite his allies to participate in his seance—shared seance
+      and certain spirit powers affect other participants. A character counts as
+      participating so long as she maintains physical contact with another
+      participating character and willfully opens herself to the spirit; unlike
+      the medium, other participating characters can take other actions during
+      this time. Only creatures with an Intelligence score of at least 3 can
+      participate in a seance.
+
+      In addition to granting power to the medium, a channeled spirit can
+      influence the medium. By channeling a spirit, the medium allows the spirit
+      to gain 1 point of influence over him. If the medium loses that 1 point of
+      influence, he loses contact with the spirit, though he is still unable to
+      perform a new seance until the normal 24 hour period has elapsed since his
+      last seance. When the spirit leaves after the 24-hour duration and before
+      the next seance, the spirit’s influence over the medium resets to 0.
+      Certain abilities allow the medium to gain additional power in exchange
+      for allowing the spirit more influence over him.
+
+      When a spirit gains at least 3 points of influence over the medium, the
+      dual impulses housed within the same body cause the medium to meld with
+      his spirit’s consciousness.
+
+      The resulting muddled sense of self and struggle for control causes the
+      medium to take a –2 penalty on initiative checks as well as a specific
+      additional penalty listed in each spirit’s entry. However, the spirit’s
+      mental presence grants the medium a +4 bonus against possession effects
+      and a +2 bonus on saving throws against mind-affecting effects that are
+      not related to possession.
+
+      If a spirit ever attains 5 or more points of influence over the medium,
+      the medium completely loses control to the spirit. He effectively becomes
+      an NPC under the GM’s control until after he awakens the next day with the
+      spirit gone.
+
+      During his seance, the medium can choose to channel a weaker spirit to
+      gain its help without incurring as much of its influence. If he does so,
+      he can forgo any number of spirit powers, starting with his most powerful
+      spirit power. For each spirit power he forgoes, the medium can use his
+      spirit surge ability twice without incurring influence."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:spirit_power_lesser"
+    name: "Spirit Power (Lesser)"
+    type: "Su"
+    description: "A medium serves as a vessel to channel spirits—astral echoes of
+      powerful souls from ages past that live on in myth and legend. Each day, a
+      medium can channel a spirit through a ritual known as a seance. Seances
+      take 1 hour to perform and require the medium’s concentration. A full list
+      of spirits can be found here.
+
+      FAQ The medium class says that spirits can be channeled from any
+      appropriate location, not just from the list of favored locations, but is
+      that true, or can I only channel from one of the favored locations? As the
+      class says, you can channel from any appropriate location, and the favored
+      locations are just a place to start. There might be times where you don’t
+      have access to all six legends, but a medium, either PC or NPC, should
+      generally be able to access a legend if they can come up with a good
+      conceptual tie between the legend and a location he can find or even set
+      up himself. For instance, a medium could go hunt a deer and then use that
+      location to channel a champion spirit of a legendary hunter. [Source]
+
+      At the end of a seance, the medium invites a local spirit to inhabit him
+      and serve as his spirit for that day. Each spirit arises from one a
+      legend. Though the medium can choose the legend to which the spirit he
+      channels belongs, he must channel that spirit from an appropriate
+      location. Each spirit has a favored location it usually inhabits, though
+      spirits may also be present at other locations appropriate to their
+      legends; such locations are listed in each legend’s Favored Locations
+      entry [also, see FAQ at right]. The medium gains the spirit’s listed
+      seance boon and lesser spirit power for 24 hours. The medium also gains
+      the spirit’s intermediate spirit power at 6th level, its greater spirit
+      power at 11th level, and its supreme spirit power at 17th level. After 24
+      hours, the medium loses contact with the channeled spirit and can perform
+      another seance.
+
+      A medium can invite his allies to participate in his seance—shared seance
+      and certain spirit powers affect other participants. A character counts as
+      participating so long as she maintains physical contact with another
+      participating character and willfully opens herself to the spirit; unlike
+      the medium, other participating characters can take other actions during
+      this time. Only creatures with an Intelligence score of at least 3 can
+      participate in a seance.
+
+      In addition to granting power to the medium, a channeled spirit can
+      influence the medium. By channeling a spirit, the medium allows the spirit
+      to gain 1 point of influence over him. If the medium loses that 1 point of
+      influence, he loses contact with the spirit, though he is still unable to
+      perform a new seance until the normal 24 hour period has elapsed since his
+      last seance. When the spirit leaves after the 24-hour duration and before
+      the next seance, the spirit’s influence over the medium resets to 0.
+      Certain abilities allow the medium to gain additional power in exchange
+      for allowing the spirit more influence over him.
+
+      When a spirit gains at least 3 points of influence over the medium, the
+      dual impulses housed within the same body cause the medium to meld with
+      his spirit’s consciousness.
+
+      The resulting muddled sense of self and struggle for control causes the
+      medium to take a –2 penalty on initiative checks as well as a specific
+      additional penalty listed in each spirit’s entry. However, the spirit’s
+      mental presence grants the medium a +4 bonus against possession effects
+      and a +2 bonus on saving throws against mind-affecting effects that are
+      not related to possession.
+
+      If a spirit ever attains 5 or more points of influence over the medium,
+      the medium completely loses control to the spirit. He effectively becomes
+      an NPC under the GM’s control until after he awakens the next day with the
+      spirit gone.
+
+      During his seance, the medium can choose to channel a weaker spirit to
+      gain its help without incurring as much of its influence. If he does so,
+      he can forgo any number of spirit powers, starting with his most powerful
+      spirit power. For each spirit power he forgoes, the medium can use his
+      spirit surge ability twice without incurring influence."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:spirit_power_supreme"
+    name: "Spirit Power (Supreme)"
+    type: "Su"
+    description: "A medium serves as a vessel to channel spirits—astral echoes of
+      powerful souls from ages past that live on in myth and legend. Each day, a
+      medium can channel a spirit through a ritual known as a seance. Seances
+      take 1 hour to perform and require the medium’s concentration. A full list
+      of spirits can be found here.
+
+      FAQ The medium class says that spirits can be channeled from any
+      appropriate location, not just from the list of favored locations, but is
+      that true, or can I only channel from one of the favored locations? As the
+      class says, you can channel from any appropriate location, and the favored
+      locations are just a place to start. There might be times where you don’t
+      have access to all six legends, but a medium, either PC or NPC, should
+      generally be able to access a legend if they can come up with a good
+      conceptual tie between the legend and a location he can find or even set
+      up himself. For instance, a medium could go hunt a deer and then use that
+      location to channel a champion spirit of a legendary hunter. [Source]
+
+      At the end of a seance, the medium invites a local spirit to inhabit him
+      and serve as his spirit for that day. Each spirit arises from one a
+      legend. Though the medium can choose the legend to which the spirit he
+      channels belongs, he must channel that spirit from an appropriate
+      location. Each spirit has a favored location it usually inhabits, though
+      spirits may also be present at other locations appropriate to their
+      legends; such locations are listed in each legend’s Favored Locations
+      entry [also, see FAQ at right]. The medium gains the spirit’s listed
+      seance boon and lesser spirit power for 24 hours. The medium also gains
+      the spirit’s intermediate spirit power at 6th level, its greater spirit
+      power at 11th level, and its supreme spirit power at 17th level. After 24
+      hours, the medium loses contact with the channeled spirit and can perform
+      another seance.
+
+      A medium can invite his allies to participate in his seance—shared seance
+      and certain spirit powers affect other participants. A character counts as
+      participating so long as she maintains physical contact with another
+      participating character and willfully opens herself to the spirit; unlike
+      the medium, other participating characters can take other actions during
+      this time. Only creatures with an Intelligence score of at least 3 can
+      participate in a seance.
+
+      In addition to granting power to the medium, a channeled spirit can
+      influence the medium. By channeling a spirit, the medium allows the spirit
+      to gain 1 point of influence over him. If the medium loses that 1 point of
+      influence, he loses contact with the spirit, though he is still unable to
+      perform a new seance until the normal 24 hour period has elapsed since his
+      last seance. When the spirit leaves after the 24-hour duration and before
+      the next seance, the spirit’s influence over the medium resets to 0.
+      Certain abilities allow the medium to gain additional power in exchange
+      for allowing the spirit more influence over him.
+
+      When a spirit gains at least 3 points of influence over the medium, the
+      dual impulses housed within the same body cause the medium to meld with
+      his spirit’s consciousness.
+
+      The resulting muddled sense of self and struggle for control causes the
+      medium to take a –2 penalty on initiative checks as well as a specific
+      additional penalty listed in each spirit’s entry. However, the spirit’s
+      mental presence grants the medium a +4 bonus against possession effects
+      and a +2 bonus on saving throws against mind-affecting effects that are
+      not related to possession.
+
+      If a spirit ever attains 5 or more points of influence over the medium,
+      the medium completely loses control to the spirit. He effectively becomes
+      an NPC under the GM’s control until after he awakens the next day with the
+      spirit gone.
+
+      During his seance, the medium can choose to channel a weaker spirit to
+      gain its help without incurring as much of its influence. If he does so,
+      he can forgo any number of spirit powers, starting with his most powerful
+      spirit power. For each spirit power he forgoes, the medium can use his
+      spirit surge ability twice without incurring influence."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:spirit_surge"
+    name: "Spirit Surge"
+    type: "Su"
+    description: "After failing a d20 roll that was modified by his spirit bonus, a
+      medium can allow his spirit to gain 1 additional point of influence over
+      him in order to add 1d6 to the check’s result without taking an action.
+
+      This can cause the check to succeed instead of fail. The medium must be
+      conscious and aware to use this ability, and he can use this ability at
+      most once per round. At 10th level, the medium’s spirit surge die
+      increases to 1d8, and at 20th level it increases to 1d10."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:taboo"
+    name: "Taboo"
+    type: "Ex"
+    description: "At 2nd level, during his daily seance, a medium can accept a taboo
+      in order to appease his spirit. Each spirit lists example taboos, and the
+      GM may allow additional taboos as well. Accepting a taboo allows the
+      medium to use his spirit surge ability twice without incurring influence.
+      The medium can select only a single taboo. The medium is not magically
+      prevented from breaking his taboo, but if he breaks the taboo for any
+      reason, he takes a –2 penalty on attack rolls, damage rolls, ability
+      checks, skill checks, and saving throws for 1 hour and his spirit gains 1
+      point of influence over him. If the medium continues violating the taboo
+      while taking the penalty, the duration of the penalty extends, but the
+      spirit doesn’t gain additional influence over the medium. If a spirit
+      attains 5 points of influence because of a violated taboo, instead of
+      possessing the medium, the spirit leaves the medium’s body entirely, and
+      the medium loses access to his spirit powers, spirit bonus, and spirit
+      surge abilities until the next time he can perform a seance. Banishing a
+      spirit in this way damages the medium’s connection to that spirit’s
+      legend; the medium cannot channel spirits of that legend for 1 week, and
+      the next time the medium channels a spirit of that legend, it starts with
+      2 points of influence over him instead of 1."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:trance_of_three"
+    name: "Trance of Three"
+    type: "Su"
+    description: "At 15th level, as a swift action, a medium can allow his spirit to
+      gain 1 point of influence over him in order to allow a portion of a
+      legendary spirit from another legend to enter him for 1 round per level,
+      granting him the intermediate spirit power from another legend.
+
+      If that power has a limited number of uses per day, the medium must keep
+      track of the remaining uses even after the secondary spirit is gone; if
+      the medium calls the secondary spirit again that day, it can grant the
+      remaining uses of that power. If the medium uses an ability that incurs
+      influence, the medium’s primary spirit gains that amount of influence over
+      him, not the secondary spirit. The medium doesn’t gain the benefits of his
+      spirit bonus from the secondary spirit.
+
+      The medium can end the trance of three early as a free action."
+    effects: []
+    source: "PZO1132"
+  - id: "ability:weapon_and_armor_proficiency"
+    name: "Weapon and Armor Proficiency"
+    description: "Mediums are proficient with all simple weapons, light armor, and
+      medium armor, but not with shields."
+    effects: []
+    source: "PZO1132"
