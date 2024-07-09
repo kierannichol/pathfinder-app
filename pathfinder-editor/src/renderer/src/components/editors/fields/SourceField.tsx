@@ -2,6 +2,7 @@ import {FieldProps} from "./FieldProps";
 import React, {useEffect, useId, useState} from "react";
 import {useSources} from "../../../SourcesContext";
 import LoadingBlock from "../../LoadingBlock";
+import {Form} from "react-bootstrap";
 
 export function SourceField({ value, onChange }: FieldProps<string>) {
   const sources = useSources();
@@ -30,10 +31,10 @@ export function SourceField({ value, onChange }: FieldProps<string>) {
 
   return <div className="inline-field">
     <label htmlFor={fieldId}>Source</label>
-    <select id={fieldId} value={selectedSource} onChange={handleSelectionChanged}>
+    <Form.Select id={fieldId} value={selectedSource} onChange={handleSelectionChanged}>
       <option value=''></option>
       {sources.all.map(sourceRef =>
         <option key={sourceRef.code} value={sourceRef.code}>{sourceRef.name}</option>)}
-    </select>
+    </Form.Select>
   </div>
 }

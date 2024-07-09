@@ -28,6 +28,9 @@ export interface RawFeatureData {
   category: string;
   hit_die: string;
   class_features: ClassFeatureData[];
+
+  // archetype
+  features: ClassFeatureData[];
 }
 
 export function idToKey(id: string): string {

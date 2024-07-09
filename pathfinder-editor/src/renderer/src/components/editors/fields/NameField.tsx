@@ -1,15 +1,12 @@
 import React, {useId} from "react";
+import {FieldProps} from "./FieldProps";
+import {Form} from "react-bootstrap";
 
-interface NameFieldProps {
-  value: string;
-  onChange: ((value: (((prevState: string) => string) | string)) => void);
-}
-
-export function NameField({ value, onChange }: NameFieldProps) {
+export function NameField({ value, onChange }: FieldProps<string>) {
   const fieldId = useId();
   return <div className="inline-field">
     <label htmlFor={fieldId}>Name</label>
-    <input id={fieldId}
+    <Form.Control id={fieldId}
            spellCheck={false}
            value={value}
            onChange={event => onChange(event.target.value)} />

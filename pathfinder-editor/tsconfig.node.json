@@ -3,6 +3,7 @@
   "include": ["electron.vite.config.*", "src/main/*", "src/preload/*", "src/shared/*"],
   "compilerOptions": {
     "composite": true,
+    "baseUrl": ".",
 
     /* Linting */
     "strict": true,
@@ -13,9 +14,8 @@
     "types": ["electron-vite/node"],
 
     "paths": {
-      "@shared/*": [
-        "src/shared/*"
-      ]
+      "@main/*": ["src/main/*"],
+      "@shared/*": ["src/shared/*"]
     }
   }
 }

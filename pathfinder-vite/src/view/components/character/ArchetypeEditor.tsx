@@ -1,10 +1,10 @@
 import {CharacterChoiceSelectHandler} from "./edit/CharacterEditor.tsx";
 import React, {useMemo} from "react";
 import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
-import {array} from "../../../app/pfutils.ts";
+import {array} from "@/app/pfutils.ts";
 import {ButtonBlockGroup} from "../controls/ButtonBlockGroup.tsx";
 import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
-import {SelectChoiceRef} from "../../../data/v8/Choice.ts";
+import {SelectChoiceRef} from "@/data/v8/Choice.ts";
 
 interface ArchetypeEditorProps {
   characterAtLevel: CharacterAtLevel;

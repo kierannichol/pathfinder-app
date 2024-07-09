@@ -1,6 +1,5 @@
 import {useState} from "react";
 import {data} from "../../../../shared/compiled";
-import {Button} from "react-bootstrap";
 import {FeatureRef} from "../../../../shared/pathfinder";
 import {IdField} from "./fields/IdField";
 import {NameField} from "./fields/NameField";
@@ -9,11 +8,12 @@ import {CategoryField} from "./fields/characterclass/CategoryField";
 import {SourceField} from "./fields/SourceField";
 import {HitDieField} from "./fields/characterclass/HitDieField";
 import {ClassFeaturesField} from "./fields/characterclass/ClassFeaturesField";
+import {SaveButton} from "../SaveButton";
 import DescriptionDbo = data.DescriptionDbo;
 
 interface CharacterClassEditorProps {
   feature: FeatureRef;
-  onSave?: (changed: FeatureRef) => void;
+  onSave?: (changed: FeatureRef) => Promise<void>;
 }
 
 export default function CharacterClassEditor({ feature, onSave }: CharacterClassEditorProps) {
@@ -25,7 +25,7 @@ export default function CharacterClassEditor({ feature, onSave }: CharacterClass
   const [ classFeatures, setClassFeatures ] = useState(feature.class_features);
   const [ source, setSource ] = useState(feature.source);
 
-  function handleSave() {
+  async function handleSave(): Promise<void> {
     const modified = {
       ...feature,
       id: id,
@@ -40,22 +40,22 @@ export default function CharacterClassEditor({ feature, onSave }: CharacterClass
     modified.segmentKey = feature.segmentKey;
     modified.featureKey = feature.featureKey;
 
-    onSave?.(modified);
+    return await onSave?.(modified);
   }
 
   return <div>
     <header>{name}</header>
     <section>
       <div>
-        <Button variant="primary" onClick={handleSave}>Save</Button>
+        <SaveButton saveFn={handleSave} />
       </div>
       <hr/>
-      <IdField value={id} onChange={setId} />
       <NameField value={name} onChange={setName} />
+      <IdField value={id} onChange={setId} />
       <CategoryField value={category} onChange={setCategory} />
       <DescriptionField value={description} onChange={setDescription} />
       <HitDieField value={hitDie} onChange={setHitDie} />
-      <ClassFeaturesField value={classFeatures} onChange={setClassFeatures} />
+      <ClassFeaturesField value={classFeatures} onChange={setClassFeatures} classId={id} />
       <SourceField value={source} onChange={setSource} />
     </section>
   </div>

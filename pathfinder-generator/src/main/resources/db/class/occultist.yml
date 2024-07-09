@@ -1,616 +1,458 @@
 id: "class:occultist"
 name: "Occultist"
 category: "OCCULT"
-description: "The occultist focuses on the world around him, grounded in the powers\
-  \ that flow throughout his environment. He studies the magic that infuses everything,\
-  \ from psychic resonances left in everyday items to powerful incantations that fuel\
-  \ the mightiest spells."
+description: "The occultist focuses on the world around him, grounded in the
+  powers that flow throughout his environment. He studies the magic that infuses
+  everything, from psychic resonances left in everyday items to powerful
+  incantations that fuel the mightiest spells."
 source: "PZO1132"
 hit_die: "D8"
 alignment: "Any"
 class_skills:
-- "skill:appraise"
-- "skill:craft"
-- "skill:diplomacy"
-- "skill:disable_device"
-- "skill:disguise"
-- "skill:fly"
-- "skill:knowledge_arcana"
-- "skill:knowledge_engineering"
-- "skill:knowledge_history"
-- "skill:knowledge_planes"
-- "skill:knowledge_religion"
-- "skill:linguistics"
-- "skill:perception"
-- "skill:profession"
-- "skill:sense_motive"
-- "skill:sleight_of_hand"
-- "skill:spellcraft"
-- "skill:use_magic_device"
+  - "skill:appraise"
+  - "skill:craft"
+  - "skill:diplomacy"
+  - "skill:disable_device"
+  - "skill:disguise"
+  - "skill:fly"
+  - "skill:knowledge_arcana"
+  - "skill:knowledge_engineering"
+  - "skill:knowledge_history"
+  - "skill:knowledge_planes"
+  - "skill:knowledge_religion"
+  - "skill:linguistics"
+  - "skill:perception"
+  - "skill:profession"
+  - "skill:sense_motive"
+  - "skill:sleight_of_hand"
+  - "skill:spellcraft"
+  - "skill:use_magic_device"
 skill_ranks_per_level: "4"
 bab: "B"
 fort: "A"
 ref: "B"
 will: "A"
 levels:
-- class_feature_names:
-  - "ability:focus_powers"
-  - "ability:implements"
-  - "ability:knacks"
-  - "ability:mental_focus"
-  level: 1
-- class_feature_names:
-  - "ability:implements"
-  - "ability:magic_item_skill"
-  - "ability:object_reading"
-  level: 2
-- class_feature_names:
-  - "ability:focus_powers"
-  level: 3
-- class_feature_names:
-  - "ability:shift_focus"
-  level: 4
-- class_feature_names:
-  - "ability:aura_sight"
-  - "ability:focus_powers"
-  level: 5
-- class_feature_names:
-  - "ability:implements"
-  level: 6
-- class_feature_names:
-  - "ability:focus_powers"
-  level: 7
-- class_feature_names:
-  - "ability:magic_circles"
-  - "ability:outside_contact"
-  level: 8
-- class_feature_names:
-  - "ability:focus_powers"
-  level: 9
-- class_feature_names:
-  - "ability:implements"
-  level: 10
-- class_feature_names:
-  - "ability:focus_powers"
-  level: 11
-- class_feature_names:
-  - "ability:binding_circles"
-  - "ability:outside_contact"
-  level: 12
-- class_feature_names:
-  - "ability:focus_powers"
-  level: 13
-- class_feature_names:
-  - "ability:implements"
-  level: 14
-- class_feature_names:
-  - "ability:focus_powers"
-  level: 15
-- class_feature_names:
-  - "ability:fast_circles"
-  - "ability:outside_contact"
-  level: 16
-- class_feature_names:
-  - "ability:focus_powers"
-  level: 17
-- class_feature_names:
-  - "ability:implements"
-  level: 18
-- class_feature_names:
-  - "ability:focus_powers"
-  level: 19
-- class_feature_names:
-  - "ability:implement_mastery"
-  - "ability:outside_contact"
-  level: 20
+  - class_feature_names:
+      - "ability:focus_powers"
+      - "ability:implements"
+      - "ability:knacks"
+      - "ability:mental_focus"
+    level: 1
+  - class_feature_names:
+      - "ability:implements"
+      - "ability:magic_item_skill"
+      - "ability:object_reading"
+    level: 2
+  - class_feature_names:
+      - "ability:focus_powers"
+    level: 3
+  - class_feature_names:
+      - "ability:shift_focus"
+    level: 4
+  - class_feature_names:
+      - "ability:aura_sight"
+      - "ability:focus_powers"
+    level: 5
+  - class_feature_names:
+      - "ability:implements"
+    level: 6
+  - class_feature_names:
+      - "ability:focus_powers"
+    level: 7
+  - class_feature_names:
+      - "ability:magic_circles"
+      - "ability:outside_contact"
+    level: 8
+  - class_feature_names:
+      - "ability:focus_powers"
+    level: 9
+  - class_feature_names:
+      - "ability:implements"
+    level: 10
+  - class_feature_names:
+      - "ability:focus_powers"
+    level: 11
+  - class_feature_names:
+      - "ability:binding_circles"
+      - "ability:outside_contact"
+    level: 12
+  - class_feature_names:
+      - "ability:focus_powers"
+    level: 13
+  - class_feature_names:
+      - "ability:implements"
+    level: 14
+  - class_feature_names:
+      - "ability:focus_powers"
+    level: 15
+  - class_feature_names:
+      - "ability:fast_circles"
+      - "ability:outside_contact"
+    level: 16
+  - class_feature_names:
+      - "ability:focus_powers"
+    level: 17
+  - class_feature_names:
+      - "ability:implements"
+    level: 18
+  - class_feature_names:
+      - "ability:focus_powers"
+    level: 19
+  - class_feature_names:
+      - "ability:implement_mastery"
+      - "ability:outside_contact"
+    level: 20
 class_features:
-- id: "ability:0_level_occultist_spells"
-  name: "0-Level Occultist Spells"
-  label: null
-  type: ""
-  description: "Abjuration: resistance. Conjuration: create water, stabilize. Divination:\
-    \ detect magic, detect poison, detect psychic significance*, guidance, know direction,\
-    \ read magic, sift. Enchantment: daze. Evocation: dancing lights, flare, light,\
-    \ spark, telekinetic projectile*. Illusion: ghost sound. Necromancy: bleed, grave\
-    \ words*, touch of fatigue. Transmutation: mage hand, mending, message, open/close,\
-    \ purify food and drink."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:1st_level_occultist_spells"
-  name: "1st-Level Occultist Spells"
-  label: null
-  type: ""
-  description: "Abjuration: abjuring step, alarm, hex ward, hold portal, peacebond,\
-    \ shield, shock shield, warding weapon. Conjuration: cure light wounds, icicle\
-    \ dagger, mage armor, mount, returning weapon, unseen servant. Divination: anticipate\
-    \ peril, comprehend languages, detect secret doors, detect snares and pits, diagnose\
-    \ disease, discern next of kin, heightened awareness, identify, mindlink*, object\
-    \ reading*, psychic reading*. Enchantment: charm person, command, forbid action,\
-    \ hypnotism, memorize page, memory lapse, murderous command, sleep. Evocation:\
-    \ burning hands, floating disk, shocking grasp. Illusion: alter musical instrument,\
-    \ blurred movement, decrepit disguise*, disguise self, disguise weapon, illusion\
-    \ of calm, magic aura, mask dweomer, quintessence*, shadow weapon, silent image,\
-    \ vanish. Necromancy: cause fear, decompose corpse, inflict light wounds, restore\
-    \ corpse, sculpt corpse. Transmutation: alter winds, ant haul, break, charge object*,\
-    \ crafter’s curse, crafter’s fortune, enlarge person, erase, expeditious retreat,\
-    \ feather fall, gravity bow, jury-rig, keen senses, lead blades, liberating command,\
-    \ longshot, magic weapon, mirror polish, negate aroma, pass without trace, reduce\
-    \ person, refine improvised weapon, reinforce armaments, sundering shards, vocal\
-    \ alteration, youthful appearance."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:2nd_level_occultist_spells"
-  name: "2nd-Level Occultist Spells"
-  label: null
-  type: ""
-  description: "Abjuration: arcane lock, bullet shield, crimson confession, node of\
-    \ blasting*, obscure object, resist energy. Conjuration: ablative barrier, apport\
-    \ object*, cure moderate wounds, delay poison, glitterdust, mount (communal),\
-    \ returning weapon (communal). Divination: analyze aura*, augury, blood biography,\
-    \ create treasure map, find traps, locate object, residual tracking, see invisibility,\
-    \ share language, share memory, status. Enchantment: aversion*, bestow weapon\
-    \ proficiency, calm emotions, daze monster, demand offering*, inflict pain*, investigative\
-    \ mind, tactical acumen. Evocation: burning gaze, campfire wall, continual flame,\
-    \ darkness, defensive shock, flaming sphere, frost fall, ghost whip*, gust of\
-    \ wind, pilfering hand, protective penumbra, shatter, sound burst. Illusion: blur,\
-    \ disguise other, ghostly disguise, implant false reading*, instigate psychic\
-    \ duel*, invisibility, magic mouth, mask dweomer (communal), minor image, mirror\
-    \ image, misdirection, phantom trap, symbol of mirroring. Necromancy: animate\
-    \ dead (lesser) , brow gasher, false life, inflict moderate wounds, object possession\
-    \ (lesser)*, pernicious poison, purge spirit*, scare, skinsend, spectral hand.\
-    \ Transmutation: accelerate poison, air step, ant haul (communal), badger’s ferocity,\
-    \ bowstaff , certain grip, chill metal, darkvision, disfiguring touch, effortless\
-    \ armor, enter image, feast of ashes, ghostbane dirge, glide, heat metal, knock,\
-    \ levitate, magic siege engine, make whole, masterwork transformation, mirror\
-    \ hideaway, perceive cues, reinforce armaments (communal), rope trick, silk to\
-    \ steel, spider climb, telekinetic assembly, unerring weapon, versatile weapon,\
-    \ warp wood, weapon of awe, wood shape."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:3rd_level_occultist_spells"
-  name: "3rd-Level Occultist Spells"
-  label: null
-  type: ""
-  description: "Abjuration: cloak of winds, dispel magic, erase impressions*, explosive\
-    \ runes, magic circle against chaos/evil/good/law, nondetection, protection from\
-    \ energy, resist energy (communal), thaumaturgic circle*. Conjuration: create\
-    \ food and water, cure serious wounds, minor creation, phantom driver, phantom\
-    \ steed, sepia snake sigil, symbol of healing. Divination: arcane sight, clairaudience/clairvoyance,\
-    \ follow aura, locate weakness, pierce disguise, retrocognition*, seek thoughts,\
-    \ share language (communal), symbol of revelation, witness. Enchantment: control\
-    \ summoned creature , deep slumber, hold person, suggestion, symbol of laughter.\
-    \ Evocation: agonize, call lightning, daybreak arrow, daylight, deeper darkness,\
-    \ fireball, invisibility purge, lightning bolt, talismanic implement*, tiny hut,\
-    \ twilight knife, wind wall. Illusion: adjustable disguise, aura alteration*,\
-    \ displacement, illusory script, invisibility sphere, major image, vision of Hell.\
-    \ Necromancy: animate dead, bestow curse, gentle repose, healing thief , inflict\
-    \ serious wounds, riding possession*, sands of time, sessile spirit*, toxic gift.\
-    \ Transmutation: age resistance (lesser), bloodhound, countless eyes, cup of dust\
-    \ , darkvision (communal), flame arrow, fly, gaseous form, haste, heart of the\
-    \ metal, hostile levitation, keen edge, magic vestment, magic weapon (greater),\
-    \ secret page, shrink item, slow, spider climb (communal), stone shape, symbol\
-    \ of slowing."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:4th_level_occultist_spells"
-  name: "4th-Level Occultist Spells"
-  label: null
-  type: ""
-  description: "Abjuration: break enchantment, curse of magic negation, dimensional\
-    \ anchor, dismissal, enchantment foil, fire trap, freedom of movement, globe of\
-    \ invulnerability (lesser), life bubble, nondetection (communal), soothe construct,\
-    \ spell immunity, stoneskin, symbol of sealing, true form, unbreakable construct,\
-    \ wreath of blades. Conjuration: cure critical wounds, dimension door, major creation,\
-    \ phantom chariot, phantom steed (communal). Divination: arcane eye, contact other\
-    \ plane, detect scrying, locate creature, mind probe*, scrying, symbol of scrying.\
-    \ Enchantment: charm monster, confusion, curse of disgust, daze (mass), hold monster,\
-    \ mind swap*, mindwipe*, planeslayer’s call, symbol of persuasion, symbol of sleep.\
-    \ Evocation: ball lightning, contingent scroll, etheric shards*, fire shield,\
-    \ flaming sphere (greater), ice storm, resilient sphere, river of wind, sending,\
-    \ shout, spirit-bound blade*, unbearable brightness, wall of fire, wall of ice.\
-    \ Illusion: illusory wall, invisibility (greater), shocking image, symbol of striking,\
-    \ wandering star motes. Necromancy: death ward, false life (greater), fear, inflict\
-    \ critical wounds, object possession*, poison, possession*, summoner conduit,\
-    \ symbol of fear, symbol of pain. Transmutation: age resistance, air walk, darkvision\
-    \ (greater), echolocation, magic siege engine (greater), malfunction, mirror transport,\
-    \ parchment swarm*, planar adaptation, rapid repair, rusting grasp, treasure stitching."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:5th_level_occultist_spells"
-  name: "5th-Level Occultist Spells"
-  label: null
-  type: ""
-  description: "Abjuration: dispel magic (greater), spell immunity (communal), spell\
-    \ resistance, stoneskin (communal). Conjuration: create demiplane (lesser), cure\
-    \ light wounds (mass), planar binding (lesser), secret chest, teleport, wall of\
-    \ stone. Divination: battlemind link, commune, find quarry, prying eyes, remote\
-    \ viewing*, true seeing. Enchantment: command (greater), dominate person, forbid\
-    \ action (greater), inflict pain (mass)*, mind fog, suggestion (mass), symbol\
-    \ of stunning. Evocation: call lightning storm, cone of cold, fire snake, interposing\
-    \ hand, wall of force. Illusion: false vision, mislead, persistent image, seeming.\
-    \ Necromancy: curse (major), entrap spirit*, inflict light wounds (mass), object\
-    \ possession (greater)*, suffocation, symbol of weakness, unwilling shield. Transmutation:\
-    \ age resistance (greater), air walk (communal), awaken construct*, control winds,\
-    \ energy siege shot, fabricate, ghostbane dirge (mass) , overland flight, telekinesis,\
-    \ transmute mud to rock, transmute rock to mud."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:6th_level_occultist_spells"
-  name: "6th-Level Occultist Spells"
-  label: null
-  type: ""
-  description: "Abjuration: antimagic field, forbiddance, globe of invulnerability,\
-    \ repulsion, symbol of vulnerability. Conjuration: call construct, create demiplane,\
-    \ cure moderate wounds (mass), getaway, heal, planar binding, wall of iron. Divination:\
-    \ analyze dweomer, find the path, legend lore, prediction of failure, scrying\
-    \ (greater). Enchantment: antipathy, charm monster (mass), cloak of dreams, symbol\
-    \ of insanity, symbol of strife, sympathy. Evocation: blade barrier, chain lightning,\
-    \ cold ice strike, contagious flame, contingency, forceful hand, freezing sphere,\
-    \ sirocco. Illusion: permanent image, project image. Necromancy: harm, inflict\
-    \ moderate wounds (mass), possession (greater)*, symbol of death, temporary resurrection.\
-    \ Transmutation: animate objects, control construct, disintegrate, enemy hammer,\
-    \ energy siege shot (greater), ironwood, planar adaptation (mass) , statue, transformation.\n\
-    Subpages Archetypes Occultist Archetypes - Michael Mars Prehistoric Occultist\
-    \ (Occultist Archetype) Paizo, Inc. - Occultist Archetypes Construct Collector\
-    \ (Occultist Archetype) Extemporaneous Channeler (Occultist Archetype) Planar\
-    \ Harmonizer Esoteric Initiate Geomancer Naturalist Occult Historian Psychodermist\
-    \ Curator Silksworn Secret Broker Sha'ir Ancestral Aspirant Battle Host Haunt\
-    \ Collector Necroccultist Panoply Savant Reliquarian Talisman Crafter Tome Eater\
-    \ Occultist Implements\nSection 15: Copyright Notice Pathfinder Roleplaying Game\
-    \ Occult Adventures © 2015, Paizo Inc.; Authors: John Bennett, Logan Bonner, Robert\
-    \ Brookes, Jason Bulmahn, Ross Byers, John Compton, Adam Daigle, Jim Groves, Thurston\
-    \ Hillman, Eric Hindley, Brandon Hodge, Ben McFarland, Erik Mona, Jason Nelson,\
-    \ Tom Phillips, Stephen Radney-MacFarland, Thomas M. Reid, Alex Riggs, Robert\
-    \ Schwalb, Mark Seifter, Russ Taylor, and Steve Townshend."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:aura_sight"
-  name: "Aura Sight"
-  label: null
-  type: "Su"
-  description: "At 5th level, the occultist can read the auras of creatures around\
-    \ him as a standard action. This functions as the aura sight spell with a duration\
-    \ of 1 round."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:binding_circles"
-  name: "Binding Circles"
-  label: null
-  type: "Su"
-  description: "At 12th level, whenever the occultist creates a magic circle he can\
-    \ expend 1 additional point of mental focus to make it a binding circle. A binding\
-    \ circle is invisible and counts as a trap. If a living creature of the corresponding\
-    \ alignment steps inside it, the trap triggers and binds the creature inside the\
-    \ circle. While it can move freely within the circle, it can’t leave the circle,\
-    \ make attacks against targets outside the circle, cast spells that cross the\
-    \ circle’s boundary (the circle blocks line of effect from the inside), or use\
-    \ any ability that would allow it to leave the circle or disturb the circle in\
-    \ any way. When the circle traps a creature in this way, the creature can attempt\
-    \ a Reflex save to dive out of the circle before the magic takes hold (DC = 10\
-    \ + 1/2 the occultist’s level + the occultist’s Intelligence modifier).\nA creature\
-    \ that can see the circle gains a +4 bonus on this save. If it fails its save,\
-    \ the creature must remain in the circle, although it can attempt a Will save\
-    \ at the same DC at the end of each hour of imprisonment to escape. A binding\
-    \ circle can be spotted with a successful Perception check (DC = 25 + 1/2 the\
-    \ occultist’s level). It can also be disarmed using Disable Device, with the same\
-    \ DC. Anything crossing the boundary of the circle from the outside, such as a\
-    \ weapon, spell effect, or special ability, immediately breaks the circle and\
-    \ frees the creature trapped inside."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:collector_of_the_strange"
-  name: "Collector of the Strange"
-  label: null
-  type: "Su"
-  description: "At 20th level, the occultist has no end of odd curios hanging about\
-    \ his body. The occultist gains two new focus powers and increases his mental\
-    \ focus pool by 6, but he can have no more than one-third of his points invested\
-    \ into any one implement school."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:fast_circles"
-  name: "Fast Circles"
-  label: null
-  type: "Su"
-  description: "At 16th level, the occultist learns to draw magic circles very quickly.\
-    \ He can draw a magic circle as a full-round action, but any circle drawn in this\
-    \ way has a duration of 1 minute per occultist level (unless it’s drawn in conjunction\
-    \ with the outside contact class feature, in which case it lasts for 10 minutes\
-    \ as normal). If he draws a binding circle in this way, its duration is 1 round\
-    \ per occultist level."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:focus_powers"
-  name: "Focus Powers"
-  label: null
-  type: "Su"
-  description: "At 1st level, an occultist learns the base focus power from both of\
-    \ his two implement schools (see Implements below) and can select one more focus\
-    \ power from the list of those available to him through those schools.\nWhenever\
-    \ the occultist learns a new implement school, he gains the base power of that\
-    \ school. In addition, at 3rd level and every 2 levels thereafter, he learns a\
-    \ new focus power selected from the options granted by all of the implement schools\
-    \ he knows. The occultist can use focus powers only by expending mental focus\
-    \ (see Mental Focus).\nUnless otherwise noted, the DC for any saving throw against\
-    \ a focus power equals 10 + 1/2 the occultist’s level + the occultist’s Intelligence\
-    \ modifier. The occultist can’t select a focus power more than once. Some focus\
-    \ powers require him to reach a specific occultist level before he can choose\
-    \ them."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:implement_mastery"
-  name: "Implement Mastery"
-  label: null
-  type: "Su"
-  description: "At 20th level, an occultist learns to master one of his implements.\
-    \ He selects one implement school. Whenever he uses a focus power from an implement\
-    \ of that school, the DC to resist any of the effects increases by 4 and he treats\
-    \ his occultist level as 4 higher when determining the effects and duration of\
-    \ that power. In addition, the occultist gains 4 extra points of mental focus,\
-    \ but these points must always be invested in implements of the mastered school.\
-    \ He can’t save these points or expend them for any ability other than the focus\
-    \ powers of those implements. The hardness of each of the occultist’s implements\
-    \ of the mastered school increases by an additional 20 as long as the item has\
-    \ at least 1 point of mental focus stored within."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:implements"
-  name: "Implements"
-  label: null
-  type: "Su"
-  description: "At 1st level, an occultist learns to use two implement schools. At\
-    \ 2nd level and every 4 occultist levels thereafter, the occultist learns to use\
-    \ one additional implement school, to a maximum of seven schools at 18th level.\
-    \ Each implement school adds one spell per spell level of that school of magic\
-    \ to the occultist’s spell list. No spells from any other school are considered\
-    \ to be on the occultist’s spell list until he selects the associated implement\
-    \ school. He can’t use spell trigger or spell completion magic items from unknown\
-    \ schools without succeeding at the appropriate Use Magic Device check. An occultist\
-    \ can select an implement schools more than once in order to learn additional\
-    \ spells from the associated school.\nEach implement schools is represented by\
-    \ a small list of objects. Every day, the occultist selects one item from that\
-    \ school’s list to be his implement for the day for each implement school he knows.\
-    \ The occultist needs only one such item to cast spells of the corresponding school,\
-    \ unless he selected that implement schools multiple times, in which case he needs\
-    \ one item for each set of spells gained from that school. Implements don’t need\
-    \ to be magic items, and non-magical implements don’t take up a magic item slot\
-    \ even if they’re worn. Implements that are not magic items are often of some\
-    \ historical value or of personal significance to the occultist, such as the finger\
-    \ bone of a saint, the broken scepter of a long-dead king, the skull of a mentor’\
-    s familiar, or the glass eye of an uncanny ancestor.\nWhenever an occultist casts\
-    \ a spell, he must have the corresponding implement in his possession and present\
-    \ the implement to the target or toward the area of effect.\nThis act is part\
-    \ of casting the spell and doesn’t require any additional action. If the occultist\
-    \ lacks the corresponding implement, he can attempt to cast the spell, but must\
-    \ succeed at a concentration check (DC = 20 + the spell’s level) to do so. Spells\
-    \ cast by an occultist without the appropriate implement are always treated as\
-    \ if they were cast at the minimum caster level for the spell in question (caster\
-    \ level 1st for a 1st-level spell, caster level 4th for a 2nd-level spell, and\
-    \ so on).\nEach implement schools also grants a base focus power. This power is\
-    \ added to the list of focus powers possessed by the occultist (see Mental Focus\
-    \ below). In addition, each implement schools grants access to a number of other\
-    \ focus powers that the occultist can select from using his mental focus class\
-    \ feature.\nSee implement schools for a complete list of implements associated\
-    \ with each school and their focus powers."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:knacks"
-  name: "Knacks"
-  label: null
-  type: ""
-  description: "An occultist learns one knack, or 0-level psychic spell, each time\
-    \ he selects an implement school (including when he again selects a school that\
-    \ he has already learned to use). These spells are cast like any other spell,\
-    \ but they can be cast any number of times per day. Knacks cast using any other\
-    \ spell slots because of metamagic feats applied to them, for example, consume\
-    \ spell slots as normal."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:magic_circles"
-  name: "Magic Circles"
-  label: null
-  type: "Su"
-  description: "At 8th level, an occultist learns how to draw magic circles. To draw\
-    \ a circle, he must have chalk, salt, blood, powdered silver, or some other appropriate\
-    \ substance at hand (although he can press a magic circle into a softer surface\
-    \ such as dirt or clay). Drawing a circle takes 1 minute and requires the occultist\
-    \ to expend 1 point of mental focus (either generic focus or focus from any one\
-    \ of his implements). Once completed, this circle functions as a permanent magic\
-    \ circle against any alignment of the occultist’s choosing. The circle can’t be\
-    \ against a component of the occultist’s alignment (if he is lawful good, for\
-    \ example, it can’t be a magic circle against good or law). The circle remains\
-    \ until its form is physically broken (for example, if the lines are smeared or\
-    \ the salt is scattered).\nOnly a living creature can break the circle; environmental\
-    \ effects can’t break it. An occultist can have only one circle created in this\
-    \ way at a time. If he creates a second circle, the first one loses all its magic\
-    \ powers. This type of magic circle can’t normally be focused inward to bind an\
-    \ outsider."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:magic_item_skill"
-  name: "Magic Item Skill"
-  label: null
-  type: "Ex"
-  description: "At 2nd level, an occultist’s knowledge of magic items grants him a\
-    \ bonus when attempting to use them. He gains a bonus on all Use Magic Device\
-    \ checks equal to 1/2 his occultist level."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:mental_focus"
-  name: "Mental Focus"
-  label: null
-  type: "Su"
-  description: "An occultist can invest a portion of his mental focus into his chosen\
-    \ implements for the day, allowing him to utilize a variety of abilities depending\
-    \ on the implements and the amount of mental focus invested in them.\nAn occultist\
-    \ has a number of points of mental focus equal to his occultist level + his Intelligence\
-    \ modifier; these points refresh each day. He can divide this mental focus between\
-    \ his implements in any way he desires. If an implement is lost or destroyed,\
-    \ the focus invested in it is lost as well, though the occultist still refreshes\
-    \ those points of focus normally.\nOnce mental focus is invested inside an implement,\
-    \ the implement gains the resonant power of its implement school, and the occultist\
-    \ can expend the mental focus stored in the implement to activate the associated\
-    \ focus powers he knows. If a resonant power grants a bonus that varies based\
-    \ on the amount of mental focus invested in the implement, the bonus is determined\
-    \ when the focus is invested, and is not reduced or altered by expending the mental\
-    \ focus invested in the item. Once all of the mental focus in an implement has\
-    \ been expended, it loses its resonant power until mental focus is once again\
-    \ invested in the implement.\nThe implement grants its resonant power to whoever\
-    \ possesses it; the occultist can lend the implement to an ally to assist that\
-    \ ally, but if he does so, he has difficulty casting that implement’s spells (see\
-    \ Implements) and can’t expend that implement’s focus on focus powers until he\
-    \ retrieves the implement or refreshes his focus.\nThe occultist refreshes his\
-    \ mental focus once each day after receiving at least 8 hours of sleep. After\
-    \ refreshing his mental focus, the occultist must spend 1 hour preparing his implements\
-    \ and investing them with this power. Mental focus that is not used before the\
-    \ next time the occultist refreshes his focus is lost.\nThe occultist can choose\
-    \ to save generic mental focus inside his own body instead of investing all of\
-    \ it, but expending this focus comes at a higher cost.\nAny focus power the occultist\
-    \ activates with generic focus costs twice as much mental focus to use (and to\
-    \ maintain, if applicable). The occultist can expend his generic focus through\
-    \ an appropriate implement on any focus power he knows, but an implement he didn’\
-    t invest any focus in at the start of the day grants no resonant power."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:object_reading"
-  name: "Object Reading"
-  label: null
-  type: "Su"
-  description: "At 2nd level, an occultist learns how to read information from items\
-    \ he examines.\nExamining an item in this way requires him to spend 1 minute handling\
-    \ the item. If the item is a magic item, the occultist learns its properties and\
-    \ command word as if he had successfully examined the item using detect magic\
-    \ and succeeded at a Spellcraft check. This ability does not reveal whether the\
-    \ item is cursed unless the occultist’s class level is equal to or greater than\
-    \ the caster level of the item. If the item has any historical significance, the\
-    \ occultist learns one piece of information about its past (as determined by the\
-    \ GM). Finally, if the item was last used no longer than 1 day ago per the occultist’\
-    s class level, the occultist learns one piece of information about the last creature\
-    \ to use the item. This information might be a glimpse of the creature’s appearance,\
-    \ a brief vision of what it saw while using the item, or perhaps its emotional\
-    \ state when it last used the item. The GM determines what information is gained\
-    \ in this way. This functions like the psychometry occult skill unlock, but doesn’\
-    t require a skill check and can be used at will."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:outside_contact"
-  name: "Outside Contact"
-  label: null
-  type: "Su"
-  description: "At 8th level, the occultist learns the true name of one particular\
-    \ outsider. This outsider can have no more than 3 Hit Dice. Whenever the occultist\
-    \ creates a magic circle, he can expend 1 additional point of mental focus to\
-    \ focus the circle inward and lure that outsider to the circle (similar to using\
-    \ lesser planar binding). The outsider is bound for up to 10 minutes. During this\
-    \ time, the occultist can bargain with the outsider for one piece of information.\n\
-    This requires a payment of at least 20 gp (or items of at least that value that\
-    \ are of interest to the outsider). The bargaining requires the occultist to attempt\
-    \ a Diplomacy or Intimidate check opposed by the outsider’s Sense Motive check.\
-    \ Succeeding at the check by 5 or more reduces this cost to 10 gp. Failure increases\
-    \ the price to 30 gp, whereas failure by 5 or more allows the outsider to escape\
-    \ without giving any information (or receiving payment). The information gained\
-    \ can be anything that might be learned through a divination spell. The information\
-    \ is always correct but is frequently cryptic. It typically takes the outsider\
-    \ 1d3 hours to gather the information, at which point it returns of its own accord\
-    \ to deliver the information as promised. The outsider always resents being used\
-    \ in this way, even if the occultist and the outsider share an alignment component.\
-    \ After the occultist bargains with the outsider, the magic circle loses all power\
-    \ and the outsider is sent back to its home plane.\nAt 12th level and every 4\
-    \ levels thereafter, the occultist learns to contact one additional outsider of\
-    \ the same type or a different type. Although he can call only one outsider in\
-    \ this way at a time, the occultist can ask such an outsider one additional question\
-    \ per calling for every 4 occultist levels he possesses beyond 8th (to a maximum\
-    \ of four questions at 20th level), all for the same bargaining price. The questions\
-    \ must be in some way related to one another.\nAt 16th level, in lieu of asking\
-    \ questions, the occultist can demand that the outsider deliver a message to any\
-    \ one friendly creature that the occultist knows personally. The occultist can\
-    \ also task the outsider to deliver one object weighing no more than 1 pound.\
-    \ Either of these demands requires an opposed check as described above. Delivery\
-    \ typically takes 1d4 hours, but this period is reduced to 1d6 minutes if the\
-    \ recipient is within 1 mile of the occultist (or even less if the recipient is\
-    \ within sight). The occultist must be able to accurately describe the recipient\
-    \ in both name and appearance. This ability can’t be used to deliver anything\
-    \ to a location, or to enemies or creatures that are unfriendly to the occultist."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:shift_focus"
-  name: "Shift Focus"
-  label: null
-  type: "Su"
-  description: "At 4th level, an occultist gains the ability to shift his mental focus\
-    \ from one implement to another, though some of the focus is lost along the way.\
-    \ Shifting mental focus removes a number of points of mental focus from one implement\
-    \ and adds the same number – 1 to another implement; this takes 1 minute of quiet\
-    \ contemplation while touching both implements. The occultist can shift his mental\
-    \ focus only from one implement to another implement; he can’t shift generic focus\
-    \ into an implement. Unlike expending focus normally, this shift can reduce the\
-    \ effect of a resonant power in the implement from which the mental focus was\
-    \ taken. It does not, however, add to the resonant power of the implement to which\
-    \ the focus is added."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:spell_casting"
-  name: "Spell Casting"
-  label: null
-  type: ""
-  description: "An occultist casts psychic spells drawn from the occultist spell list,\
-    \ limited by the implement groups he knows.\nHe can cast any spell he knows without\
-    \ preparing it ahead of time. Every occultist spell has an implement component\
-    \ (see Implements). To learn or cast a spell, an occultist must have an Intelligence\
-    \ score equal to at least 10 + the spell level. The Difficulty Class for a saving\
-    \ throw against an occultist’s spell equals 10 + the spell level + the occultist’\
-    s Intelligence modifier.\nAn occultist can cast only a certain number of spells\
-    \ of each spell level per day. His base daily spell allotment is given on Table:\
-    \ Occultist. In addition, he gains bonus spells per day if he has a high Intelligence\
-    \ score.\nThe occultist’s selection of spells is limited. For each implement school\
-    \ he learns to use, he can add one spell of each level he can cast to his list\
-    \ of spells known, chosen from that school’s spell list. If he selects the same\
-    \ implement school multiple times, he adds one spell of each level from that school’\
-    s list for each time he has selected that school.\nWhen the occultist learns to\
-    \ cast a new level of spells, he immediately adds one spell of that level to his\
-    \ list of spells known from each implement school he knows (plus any extra spells\
-    \ from schools he has selected multiple times).\nAt 5th level and every 3 occultist\
-    \ levels thereafter (8th, 11th, and so on), an occultist can choose to learn a\
-    \ new spell in place of one he already knows. In effect, the occultist loses the\
-    \ old spell in exchange for the new one. The new spell’s level must be the same\
-    \ as that of the spell being exchanged, and it must be at least one level lower\
-    \ than the highest-level occultist spell the occultist can cast. The spell learned\
-    \ must come from the same list of spells provided by the implement school of the\
-    \ spell lost. An occultist can swap only a single spell at any given level, and\
-    \ must choose whether or not to swap the spell at the same time that he gains\
-    \ new spells known for that level.\nAn occultist need not prepare his spells in\
-    \ advance. He can cast any spell he knows at any time, assuming he has not yet\
-    \ used up his allotment of spells per day for the spell’s level."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
-- id: "ability:weapon_and_armor_proficiency"
-  name: "Weapon and Armor Proficiency"
-  label: null
-  type: ""
-  description: "An occultist is proficient with all simple and martial weapons, light\
-    \ armor, medium armor, and shields (except tower shields)."
-  effects: []
-  prerequisites: ""
-  source: "PZO1132"
+  - id: "ability:aura_sight#occultist"
+    name: "Aura Sight"
+    type: "Su"
+    description: "At 5th level, the occultist can read the auras of creatures around
+      him as a standard action. This functions as the aura sight spell with a
+      duration of 1 round."
+    source: "PZO1132"
+  - id: "ability:binding_circles#occultist"
+    name: "Binding Circles"
+    type: "Su"
+    description: "At 12th level, whenever the occultist creates a magic circle he
+      can expend 1 additional point of mental focus to make it a binding circle.
+      A binding circle is invisible and counts as a trap. If a living creature
+      of the corresponding alignment steps inside it, the trap triggers and
+      binds the creature inside the circle. While it can move freely within the
+      circle, it can’t leave the circle, make attacks against targets outside
+      the circle, cast spells that cross the circle’s boundary (the circle
+      blocks line of effect from the inside), or use any ability that would
+      allow it to leave the circle or disturb the circle in any way. When the
+      circle traps a creature in this way, the creature can attempt a Reflex
+      save to dive out of the circle before the magic takes hold (DC = 10 + 1/2
+      the occultist’s level + the occultist’s Intelligence modifier).
+
+      A creature that can see the circle gains a +4 bonus on this save. If it
+      fails its save, the creature must remain in the circle, although it can
+      attempt a Will save at the same DC at the end of each hour of imprisonment
+      to escape. A binding circle can be spotted with a successful Perception
+      check (DC = 25 + 1/2 the occultist’s level). It can also be disarmed using
+      Disable Device, with the same DC. Anything crossing the boundary of the
+      circle from the outside, such as a weapon, spell effect, or special
+      ability, immediately breaks the circle and frees the creature trapped
+      inside."
+    source: "PZO1132"
+  - id: "ability:collector_of_the_strange#occultist"
+    name: "Collector of the Strange"
+    type: "Su"
+    description: "At 20th level, the occultist has no end of odd curios hanging
+      about his body. The occultist gains two new focus powers and increases his
+      mental focus pool by 6, but he can have no more than one-third of his
+      points invested into any one implement school."
+    source: "PZO1132"
+  - id: "ability:fast_circles#occultist"
+    name: "Fast Circles"
+    type: "Su"
+    description: "At 16th level, the occultist learns to draw magic circles very
+      quickly. He can draw a magic circle as a full-round action, but any circle
+      drawn in this way has a duration of 1 minute per occultist level (unless
+      it’s drawn in conjunction with the outside contact class feature, in which
+      case it lasts for 10 minutes as normal). If he draws a binding circle in
+      this way, its duration is 1 round per occultist level."
+    source: "PZO1132"
+  - id: "ability:focus_power#occultist"
+    name: "Focus Power"
+    type: "Su"
+    description: "At 1st level, an occultist learns the base focus power from both
+      of his two implement schools (see Implements below) and can select one
+      more focus power from the list of those available to him through those
+      schools.
+
+      Whenever the occultist learns a new implement school, he gains the base
+      power of that school. In addition, at 3rd level and every 2 levels
+      thereafter, he learns a new focus power selected from the options granted
+      by all of the implement schools he knows. The occultist can use focus
+      powers only by expending mental focus (see Mental Focus).
+
+      Unless otherwise noted, the DC for any saving throw against a focus power
+      equals 10 + 1/2 the occultist’s level + the occultist’s Intelligence
+      modifier. The occultist can’t select a focus power more than once. Some
+      focus powers require him to reach a specific occultist level before he can
+      choose them."
+    source: "PZO1132"
+  - id: "ability:implement_mastery#occultist"
+    name: "Implement Mastery"
+    type: "Su"
+    description: "At 20th level, an occultist learns to master one of his
+      implements. He selects one implement school. Whenever he uses a focus
+      power from an implement of that school, the DC to resist any of the
+      effects increases by 4 and he treats his occultist level as 4 higher when
+      determining the effects and duration of that power. In addition, the
+      occultist gains 4 extra points of mental focus, but these points must
+      always be invested in implements of the mastered school. He can’t save
+      these points or expend them for any ability other than the focus powers of
+      those implements. The hardness of each of the occultist’s implements of
+      the mastered school increases by an additional 20 as long as the item has
+      at least 1 point of mental focus stored within."
+    source: "PZO1132"
+  - id: "ability:implements#occultist"
+    name: "Implements"
+    type: "Su"
+    description: "At 1st level, an occultist learns to use two implement schools. At
+      2nd level and every 4 occultist levels thereafter, the occultist learns to
+      use one additional implement school, to a maximum of seven schools at 18th
+      level. Each implement school adds one spell per spell level of that school
+      of magic to the occultist’s spell list. No spells from any other school
+      are considered to be on the occultist’s spell list until he selects the
+      associated implement school. He can’t use spell trigger or spell
+      completion magic items from unknown schools without succeeding at the
+      appropriate Use Magic Device check. An occultist can select an implement
+      schools more than once in order to learn additional spells from the
+      associated school.
+
+      Each implement schools is represented by a small list of objects. Every
+      day, the occultist selects one item from that school’s list to be his
+      implement for the day for each implement school he knows. The occultist
+      needs only one such item to cast spells of the corresponding school,
+      unless he selected that implement schools multiple times, in which case he
+      needs one item for each set of spells gained from that school. Implements
+      don’t need to be magic items, and non-magical implements don’t take up a
+      magic item slot even if they’re worn. Implements that are not magic items
+      are often of some historical value or of personal significance to the
+      occultist, such as the finger bone of a saint, the broken scepter of a
+      long-dead king, the skull of a mentor’s familiar, or the glass eye of an
+      uncanny ancestor.
+
+      Whenever an occultist casts a spell, he must have the corresponding
+      implement in his possession and present the implement to the target or
+      toward the area of effect.
+
+      This act is part of casting the spell and doesn’t require any additional
+      action. If the occultist lacks the corresponding implement, he can attempt
+      to cast the spell, but must succeed at a concentration check (DC = 20 +
+      the spell’s level) to do so. Spells cast by an occultist without the
+      appropriate implement are always treated as if they were cast at the
+      minimum caster level for the spell in question (caster level 1st for a
+      1st-level spell, caster level 4th for a 2nd-level spell, and so on).
+
+      Each implement schools also grants a base focus power. This power is added
+      to the list of focus powers possessed by the occultist (see Mental Focus
+      below). In addition, each implement schools grants access to a number of
+      other focus powers that the occultist can select from using his mental
+      focus class feature.
+
+      See implement schools for a complete list of implements associated with
+      each school and their focus powers."
+    source: "PZO1132"
+  - id: "ability:knacks#occultist"
+    name: "Knacks (Occultist)"
+    description: "An occultist learns one knack, or 0-level psychic spell, each time
+      he selects an implement school (including when he again selects a school
+      that he has already learned to use). These spells are cast like any other
+      spell, but they can be cast any number of times per day. Knacks cast using
+      any other spell slots because of metamagic feats applied to them, for
+      example, consume spell slots as normal."
+    source: "PZO1132"
+  - id: "ability:magic_circles#occultist"
+    name: "Magic Circles"
+    type: "Su"
+    description: "At 8th level, an occultist learns how to draw magic circles. To
+      draw a circle, he must have chalk, salt, blood, powdered silver, or some
+      other appropriate substance at hand (although he can press a magic circle
+      into a softer surface such as dirt or clay). Drawing a circle takes 1
+      minute and requires the occultist to expend 1 point of mental focus
+      (either generic focus or focus from any one of his implements). Once
+      completed, this circle functions as a permanent magic circle against any
+      alignment of the occultist’s choosing. The circle can’t be against a
+      component of the occultist’s alignment (if he is lawful good, for example,
+      it can’t be a magic circle against good or law). The circle remains until
+      its form is physically broken (for example, if the lines are smeared or
+      the salt is scattered).
+
+      Only a living creature can break the circle; environmental effects can’t
+      break it. An occultist can have only one circle created in this way at a
+      time. If he creates a second circle, the first one loses all its magic
+      powers. This type of magic circle can’t normally be focused inward to bind
+      an outsider."
+    source: "PZO1132"
+  - id: "ability:magic_item_skill#occultist"
+    name: "Magic Item Skill"
+    type: "Ex"
+    description: "At 2nd level, an occultist’s knowledge of magic items grants him a
+      bonus when attempting to use them. He gains a bonus on all Use Magic
+      Device checks equal to 1/2 his occultist level."
+    source: "PZO1132"
+  - id: "ability:mental_focus#occultist"
+    name: "Mental Focus"
+    type: "Su"
+    description: "An occultist can invest a portion of his mental focus into his
+      chosen implements for the day, allowing him to utilize a variety of
+      abilities depending on the implements and the amount of mental focus
+      invested in them.
+
+      An occultist has a number of points of mental focus equal to his occultist
+      level + his Intelligence modifier; these points refresh each day. He can
+      divide this mental focus between his implements in any way he desires. If
+      an implement is lost or destroyed, the focus invested in it is lost as
+      well, though the occultist still refreshes those points of focus normally.
+
+      Once mental focus is invested inside an implement, the implement gains the
+      resonant power of its implement school, and the occultist can expend the
+      mental focus stored in the implement to activate the associated focus
+      powers he knows. If a resonant power grants a bonus that varies based on
+      the amount of mental focus invested in the implement, the bonus is
+      determined when the focus is invested, and is not reduced or altered by
+      expending the mental focus invested in the item. Once all of the mental
+      focus in an implement has been expended, it loses its resonant power until
+      mental focus is once again invested in the implement.
+
+      The implement grants its resonant power to whoever possesses it; the
+      occultist can lend the implement to an ally to assist that ally, but if he
+      does so, he has difficulty casting that implement’s spells (see
+      Implements) and can’t expend that implement’s focus on focus powers until
+      he retrieves the implement or refreshes his focus.
+
+      The occultist refreshes his mental focus once each day after receiving at
+      least 8 hours of sleep. After refreshing his mental focus, the occultist
+      must spend 1 hour preparing his implements and investing them with this
+      power. Mental focus that is not used before the next time the occultist
+      refreshes his focus is lost.
+
+      The occultist can choose to save generic mental focus inside his own body
+      instead of investing all of it, but expending this focus comes at a higher
+      cost.
+
+      Any focus power the occultist activates with generic focus costs twice as
+      much mental focus to use (and to maintain, if applicable). The occultist
+      can expend his generic focus through an appropriate implement on any focus
+      power he knows, but an implement he didn’t invest any focus in at the
+      start of the day grants no resonant power."
+    source: "PZO1132"
+  - id: "ability:object_reading#occultist"
+    name: "Object Reading"
+    type: "Su"
+    description: "At 2nd level, an occultist learns how to read information from
+      items he examines.
+
+      Examining an item in this way requires him to spend 1 minute handling the
+      item. If the item is a magic item, the occultist learns its properties and
+      command word as if he had successfully examined the item using detect
+      magic and succeeded at a Spellcraft check. This ability does not reveal
+      whether the item is cursed unless the occultist’s class level is equal to
+      or greater than the caster level of the item. If the item has any
+      historical significance, the occultist learns one piece of information
+      about its past (as determined by the GM). Finally, if the item was last
+      used no longer than 1 day ago per the occultist’s class level, the
+      occultist learns one piece of information about the last creature to use
+      the item. This information might be a glimpse of the creature’s
+      appearance, a brief vision of what it saw while using the item, or perhaps
+      its emotional state when it last used the item. The GM determines what
+      information is gained in this way. This functions like the psychometry
+      occult skill unlock, but doesn’t require a skill check and can be used at
+      will."
+    source: "PZO1132"
+  - id: "ability:outside_contact#occultist"
+    name: "Outside Contact"
+    type: "Su"
+    description: "At 8th level, the occultist learns the true name of one particular
+      outsider. This outsider can have no more than 3 Hit Dice. Whenever the
+      occultist creates a magic circle, he can expend 1 additional point of
+      mental focus to focus the circle inward and lure that outsider to the
+      circle (similar to using lesser planar binding). The outsider is bound for
+      up to 10 minutes. During this time, the occultist can bargain with the
+      outsider for one piece of information.
+
+      This requires a payment of at least 20 gp (or items of at least that value
+      that are of interest to the outsider). The bargaining requires the
+      occultist to attempt a Diplomacy or Intimidate check opposed by the
+      outsider’s Sense Motive check. Succeeding at the check by 5 or more
+      reduces this cost to 10 gp. Failure increases the price to 30 gp, whereas
+      failure by 5 or more allows the outsider to escape without giving any
+      information (or receiving payment). The information gained can be anything
+      that might be learned through a divination spell. The information is
+      always correct but is frequently cryptic. It typically takes the outsider
+      1d3 hours to gather the information, at which point it returns of its own
+      accord to deliver the information as promised. The outsider always resents
+      being used in this way, even if the occultist and the outsider share an
+      alignment component. After the occultist bargains with the outsider, the
+      magic circle loses all power and the outsider is sent back to its home
+      plane.
+
+      At 12th level and every 4 levels thereafter, the occultist learns to
+      contact one additional outsider of the same type or a different type.
+      Although he can call only one outsider in this way at a time, the
+      occultist can ask such an outsider one additional question per calling for
+      every 4 occultist levels he possesses beyond 8th (to a maximum of four
+      questions at 20th level), all for the same bargaining price. The questions
+      must be in some way related to one another.
+
+      At 16th level, in lieu of asking questions, the occultist can demand that
+      the outsider deliver a message to any one friendly creature that the
+      occultist knows personally. The occultist can also task the outsider to
+      deliver one object weighing no more than 1 pound. Either of these demands
+      requires an opposed check as described above. Delivery typically takes 1d4
+      hours, but this period is reduced to 1d6 minutes if the recipient is
+      within 1 mile of the occultist (or even less if the recipient is within
+      sight). The occultist must be able to accurately describe the recipient in
+      both name and appearance. This ability can’t be used to deliver anything
+      to a location, or to enemies or creatures that are unfriendly to the
+      occultist."
+    source: "PZO1132"
+  - id: "ability:shift_focus#occultist"
+    name: "Shift Focus"
+    type: "Su"
+    description: "At 4th level, an occultist gains the ability to shift his mental
+      focus from one implement to another, though some of the focus is lost
+      along the way. Shifting mental focus removes a number of points of mental
+      focus from one implement and adds the same number – 1 to another
+      implement; this takes 1 minute of quiet contemplation while touching both
+      implements. The occultist can shift his mental focus only from one
+      implement to another implement; he can’t shift generic focus into an
+      implement. Unlike expending focus normally, this shift can reduce the
+      effect of a resonant power in the implement from which the mental focus
+      was taken. It does not, however, add to the resonant power of the
+      implement to which the focus is added."
+    source: "PZO1132"
+  - id: "ability:spell_casting#occultist"
+    name: "Spell Casting"
+    description: "An occultist casts psychic spells drawn from the occultist spell
+      list, limited by the implement groups he knows.
+
+      He can cast any spell he knows without preparing it ahead of time. Every
+      occultist spell has an implement component (see Implements). To learn or
+      cast a spell, an occultist must have an Intelligence score equal to at
+      least 10 + the spell level. The Difficulty Class for a saving throw
+      against an occultist’s spell equals 10 + the spell level + the occultist’s
+      Intelligence modifier.
+
+      An occultist can cast only a certain number of spells of each spell level
+      per day. His base daily spell allotment is given on Table: Occultist. In
+      addition, he gains bonus spells per day if he has a high Intelligence
+      score.
+
+      The occultist’s selection of spells is limited. For each implement school
+      he learns to use, he can add one spell of each level he can cast to his
+      list of spells known, chosen from that school’s spell list. If he selects
+      the same implement school multiple times, he adds one spell of each level
+      from that school’s list for each time he has selected that school.
+
+      When the occultist learns to cast a new level of spells, he immediately
+      adds one spell of that level to his list of spells known from each
+      implement school he knows (plus any extra spells from schools he has
+      selected multiple times).
+
+      At 5th level and every 3 occultist levels thereafter (8th, 11th, and so
+      on), an occultist can choose to learn a new spell in place of one he
+      already knows. In effect, the occultist loses the old spell in exchange
+      for the new one. The new spell’s level must be the same as that of the
+      spell being exchanged, and it must be at least one level lower than the
+      highest-level occultist spell the occultist can cast. The spell learned
+      must come from the same list of spells provided by the implement school of
+      the spell lost. An occultist can swap only a single spell at any given
+      level, and must choose whether or not to swap the spell at the same time
+      that he gains new spells known for that level.
+
+      An occultist need not prepare his spells in advance. He can cast any spell
+      he knows at any time, assuming he has not yet used up his allotment of
+      spells per day for the spell’s level."
+    source: "PZO1132"
+  - id: "ability:weapon_and_armor_proficiency#occultist"
+    name: "Weapon and Armor Proficiency"
+    description: "An occultist is proficient with all simple and martial weapons,
+      light armor, medium armor, and shields (except tower shields)."
+    source: "PZO1132"

@@ -132,7 +132,7 @@ public class ArchetypeMapper {
                 features.add(Feature.builder("modifies:" + id)
                         .setName("Archetype that modifies " + database.query(Query.namedEntity(id)).findFirst().map(
                                         NamedEntity::name)
-                                .orElseThrow(() -> new NoSuchElementException("Named Entity not found: " + id)))
+                                .orElseThrow(() -> new NoSuchElementException("[" + archetype.id() + "] Named Entity not found: " + id)))
                         .build());
             } catch (NoSuchElementException e) {
                 log.warn(e.getMessage());

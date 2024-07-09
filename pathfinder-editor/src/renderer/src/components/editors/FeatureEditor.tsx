@@ -3,17 +3,17 @@ import LoadingBlock from "../LoadingBlock";
 import {data} from "../../../../shared/compiled";
 import TagListEditor from "./TagListEditor";
 import styles from "./FeatureEditor.module.css";
-import {Button} from "react-bootstrap";
 import {FeatureRef} from "../../../../shared/pathfinder";
 import {IdField} from "./fields/IdField";
 import {NameField} from "./fields/NameField";
 import {DescriptionField} from "./fields/DescriptionField";
 import {SourceField} from "./fields/SourceField";
+import {SaveButton} from "../SaveButton";
 import DescriptionDbo = data.DescriptionDbo;
 
 interface FeatureEditorProps {
   feature: FeatureRef;
-  onSave?: (changed: FeatureRef) => void;
+  onSave?: (changed: FeatureRef) => Promise<void>;
 }
 
 export default function FeatureEditor({ feature, onSave }: FeatureEditorProps) {
@@ -25,7 +25,7 @@ export default function FeatureEditor({ feature, onSave }: FeatureEditorProps) {
   const [ enabledFormula, setEnabledFormula ] = useState(feature.enabledFormula);
   const [ source, setSource ] = useState(feature.source);
 
-  function handleSave() {
+  async function handleSave() {
     const modified = {
       ...feature,
       id: id,
@@ -39,7 +39,7 @@ export default function FeatureEditor({ feature, onSave }: FeatureEditorProps) {
     modified.segmentKey = feature.segmentKey;
     modified.featureKey = feature.featureKey;
 
-    onSave?.(modified);
+    return await onSave?.(modified);
   }
 
   if (!feature) {
@@ -50,7 +50,7 @@ export default function FeatureEditor({ feature, onSave }: FeatureEditorProps) {
     <header>{name}</header>
     <section>
       <div>
-        <Button variant="primary" onClick={handleSave}>Save</Button>
+        <SaveButton saveFn={handleSave} />
       </div>
       <hr/>
       <IdField value={id} onChange={setId} />

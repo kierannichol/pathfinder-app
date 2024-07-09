@@ -1,6 +1,7 @@
 import {data} from "../../../../shared/compiled";
 import ListEditor from "./ListEditor";
 import React from "react";
+import {Form} from "react-bootstrap";
 import DescriptionDbo = data.DescriptionDbo;
 
 interface DescriptionEditorProps {
@@ -17,7 +18,11 @@ export default function DescriptionEditor({ id, value, onChange }: DescriptionEd
   }
   
   return <div id={id}>
-    <textarea onChange={handleTextAreaChanged} value={value?.text ?? ''} />
+    <Form.Control
+        as="textarea"
+        onChange={handleTextAreaChanged}
+        value={value?.text ?? ''}
+        rows={3} />
     <ListEditor values={Object.keys(value?.sections ?? [])} addButtonLabel="+ Section">
       {(key: string|null) => key && <div>{value.sections[key]}</div>}
     </ListEditor>

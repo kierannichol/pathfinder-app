@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import EntryNav from "./components/EntryNav";
 import "./App.css";
 import MultipleFeaturesEditor from "./components/editors/MultipleFeaturesEditor";
-import {FeatureKey, FeatureRef} from "../../shared/pathfinder";
+import {FeatureKey, FeatureRef} from "@shared/pathfinder";
 import {SegmentElementEditor} from "./components/editors/SegmentElementEditor";
 import {SourcesProvider} from "./SourcesContext";
 
@@ -53,8 +53,8 @@ function App() {
     }
   }
 
-  function handleChange(feature: FeatureRef) {
-      window.api.save_feature(feature);
+  function handleChange(feature: FeatureRef): Promise<void> {
+      return window.api.save_feature(feature);
   }
 
   function handleSaveMultiple(features: FeatureRef[]) {
@@ -75,6 +75,7 @@ function App() {
           </div>
           {selectedSegmentKeys.length > 0 && <div className="entry-nav entry-nav-item">
             <EntryNav entries={featureKeys.map(featureKeyToString)}
+                      search={true}
                       onSelect={selected => handleSelectFeatureKey(stringToFeatureKey(selected))}
                       keyToLabelFn={key => key.split('/')[1]} />
           </div>}
