@@ -1,88 +1,75 @@
 id: "class:magus#myrmidarch"
 name: "Myrmidarch"
-description: "The myrmidarch is a skilled specialist, using magic to supplement and\
-  \ augment his martial mastery. Less inclined to mix the two than a typical magus,\
-  \ the myrmidarch seeks supremacy with blade, bow, and armor."
+description: "The myrmidarch is a skilled specialist, using magic to supplement
+  and augment his martial mastery. Less inclined to mix the two than a typical
+  magus, the myrmidarch seeks supremacy with blade, bow, and armor."
 modifications:
-- add: "ability:ranged_spellstrike#magus_myrmidarch"
-  remove:
-  - "ability:spell_recall#magus"
-  - "ability:improved_spell_recall#magus"
-- add: "ability:weapon_training#magus_myrmidarch"
-  remove:
-  - "ability:magus_arcana_normally#magus@6"
-  - "ability:magus_arcana_normally#magus@12"
-  - "ability:magus_arcana_normally#magus@18"
-- add: "ability:fighter_training#magus_myrmidarch"
-  remove:
-  - "ability:fighter_training_the_magus_gains#magus@10"
-  - "ability:both_knowledge_pool#magus"
-- add: "ability:armor_training#magus_myrmidarch"
-  remove:
-  - "ability:improved_spell_combat#magus"
-  - "ability:greater_spell_combat#magus"
-- add: "ability:armor_mastery#magus_myrmidarch"
-  remove:
-  - "ability:true_magus#magus"
+  - add: "ability:ranged_spellstrike#magus_myrmidarch"
+    remove:
+      - "ability:spell_recall#magus"
+      - "ability:improved_spell_recall#magus"
+  - add: "ability:weapon_training#magus_myrmidarch"
+    remove:
+      - "ability:magus_arcana#magus@6"
+      - "ability:magus_arcana#magus@12"
+      - "ability:magus_arcana#magus@18"
+  - add: "ability:fighter_training#magus_myrmidarch"
+    remove:
+      - "ability:fighter_training#magus@10"
+      - "ability:knowledge_pool#magus"
+  - add: "ability:armor_training#magus_myrmidarch"
+    remove:
+      - "ability:improved_spell_combat#magus"
+      - "ability:greater_spell_combat#magus"
+  - add: "ability:armor_mastery#magus_myrmidarch"
+    remove:
+      - "ability:true_magus#magus"
 features:
-- id: "ability:ranged_spellstrike#magus_myrmidarch"
-  name: "Ranged Spellstrike"
-  label: null
-  type: null
-  description: "At 4th level, a myrmidarch can use spellstrike to cast a single-target\
-    \ touch attack ranged spell and deliver it through a ranged weapon attack. Even\
-    \ if the spell can normally affect multiple targets, only a single missile, ray,\
-    \ or effect accompanies the attack.\nAt 11th level, a myrmidarch can spend a full-round\
-    \ action to cast a spell that includes multiple ranged touch attacks and deliver\
-    \ more than one using ranged attacks. The spell must have a casting time of 1\
-    \ full-round action or less. This functions similarly to the base ability of ranged\
-    \ spellstrike, but the myrmidarch can deliver a number of missiles, rays, or effect\
-    \ up to the number of attacks he could make with a full attack. Attacks beyond\
-    \ the first take penalties as if the myrmidarch were making a full attack. Any\
-    \ effects not used in the round the spell is cast are lost, as are any additional\
-    \ ranged touch attacks the spell would allow beyond the myrmidarch's maximum number\
-    \ of attacks.\nThis ability replaces spell recall and improved spell recall.\n"
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Ultimate Combat"
-- id: "ability:weapon_training#magus_myrmidarch"
-  name: "Weapon Training"
-  label: null
-  type: null
-  description: "At 6th level, a myrmidarch gains weapon training, as the fighter ability,\
-    \ adding an additional weapon group every six levels after 6th (to a maximum of\
-    \ three groups at 18th level) and increasing the bonus on attack and damage rolls\
-    \ for weapon groups already chosen by +1."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Ultimate Combat"
-- id: "ability:fighter_training#magus_myrmidarch"
-  name: "Fighter Training"
-  label: null
-  type: null
-  description: "At 7th level, a myrmidarch counts his magus level –3 as his fighter\
-    \ level for the purpose of qualifying for feats (if he has levels in fighter,\
-    \ these levels stack).\nAt 10th level, the myrmidarch treats his magus levels\
-    \ as fighter levels for the purposes of fighter training."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Ultimate Combat"
-- id: "ability:armor_training#magus_myrmidarch"
-  name: "Armor Training"
-  label: null
-  type: null
-  description: "At 8th level, a myrmidarch gains armor training, as the fighter ability.\
-    \ At 14th level, he gains armor training 2."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Ultimate Combat"
-- id: "ability:armor_mastery#magus_myrmidarch"
-  name: "Armor Mastery"
-  label: null
-  type: null
-  description: "At 20th level, a myrmidarch gains DR 5/– when wearing armor.\nThis\
-    \ ability replaces true magus."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Ultimate Combat"
+  - id: "ability:ranged_spellstrike#magus_myrmidarch"
+    name: "Ranged Spellstrike"
+    description: "At 4th level, a myrmidarch can use spellstrike to cast a
+      single-target touch attack ranged spell and deliver it through a ranged
+      weapon attack. Even if the spell can normally affect multiple targets,
+      only a single missile, ray, or effect accompanies the attack.
+
+      At 11th level, a myrmidarch can spend a full-round action to cast a spell
+      that includes multiple ranged touch attacks and deliver more than one
+      using ranged attacks. The spell must have a casting time of 1 full-round
+      action or less. This functions similarly to the base ability of ranged
+      spellstrike, but the myrmidarch can deliver a number of missiles, rays, or
+      effect up to the number of attacks he could make with a full attack.
+      Attacks beyond the first take penalties as if the myrmidarch were making a
+      full attack. Any effects not used in the round the spell is cast are lost,
+      as are any additional ranged touch attacks the spell would allow beyond
+      the myrmidarch's maximum number of attacks.
+
+      This ability replaces spell recall and improved spell recall.\n"
+    source: "Pathfinder Roleplaying Game Ultimate Combat"
+  - id: "ability:weapon_training#magus_myrmidarch"
+    name: "Weapon Training"
+    description: "At 6th level, a myrmidarch gains weapon training, as the fighter
+      ability, adding an additional weapon group every six levels after 6th (to
+      a maximum of three groups at 18th level) and increasing the bonus on
+      attack and damage rolls for weapon groups already chosen by +1."
+    source: "Pathfinder Roleplaying Game Ultimate Combat"
+  - id: "ability:fighter_training#magus_myrmidarch"
+    name: "Fighter Training"
+    description: "At 7th level, a myrmidarch counts his magus level –3 as his
+      fighter level for the purpose of qualifying for feats (if he has levels in
+      fighter, these levels stack).
+
+      At 10th level, the myrmidarch treats his magus levels as fighter levels
+      for the purposes of fighter training."
+    source: "Pathfinder Roleplaying Game Ultimate Combat"
+  - id: "ability:armor_training#magus_myrmidarch"
+    name: "Armor Training"
+    description: "At 8th level, a myrmidarch gains armor training, as the fighter
+      ability. At 14th level, he gains armor training 2."
+    source: "Pathfinder Roleplaying Game Ultimate Combat"
+  - id: "ability:armor_mastery#magus_myrmidarch"
+    name: "Armor Mastery"
+    description: "At 20th level, a myrmidarch gains DR 5/– when wearing armor.
+
+      This ability replaces true magus."
+    source: "Pathfinder Roleplaying Game Ultimate Combat"
 source: "Pathfinder Roleplaying Game Ultimate Combat"

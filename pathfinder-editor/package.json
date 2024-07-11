@@ -5,9 +5,6 @@
   "main": "./out/main/index.js",
   "author": "example.com",
   "homepage": "https://www.electronjs.org",
-  "_moduleAliases": {
-    "@src": "dist/modules"
-  },
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
@@ -29,13 +26,19 @@
     "@electron-toolkit/preload": "^2.0.0",
     "@electron-toolkit/utils": "^2.0.0",
     "@kierannichol/formula-js": "^1.4.2",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
     "bootstrap": "^5.3.2",
     "electron-updater": "^6.1.1",
     "module-alias": "^2.2.3",
     "protobufjs": "^7.2.5",
     "protobufjs-cli": "^1.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-icons": "^4.11.0",
+    "uniqid": "^5.3.4",
+    "uuid": "^10.0.0",
     "yaml": "^2.4.5"
   },
   "devDependencies": {
@@ -43,8 +46,8 @@
     "@electron-toolkit/eslint-config-ts": "^1.0.0",
     "@electron-toolkit/tsconfig": "^1.0.1",
     "@types/node": "^18.17.5",
-    "@types/react": "^18.2.20",
-    "@types/react-dom": "^18.2.7",
+    "@types/uniqid": "^5.3.4",
+    "@types/uuid": "^10.0.0",
     "@vitejs/plugin-react": "^4.0.4",
     "electron": "^31.1.0",
     "electron-builder": "^24.6.3",
@@ -52,8 +55,6 @@
     "eslint": "^8.47.0",
     "eslint-plugin-react": "^7.33.2",
     "prettier": "^3.0.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "sass": "^1.68.0",
     "typescript": "^5.5.3",
     "vite": "^4.4.9"

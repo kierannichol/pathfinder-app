@@ -1,95 +1,71 @@
 id: "class:monk#brazen_disciple"
 name: "Brazen Disciple"
-description: ""
 modifications:
-- add: "ability:class_skills#monk_brazen_disciple"
-  remove:
-  - "ability:the_monks_class_skills#monk"
-- add: "ability:feinting_flurry#monk_brazen_disciple"
-  remove:
-  - "ability:monks_bonus_feat#monk@1"
-  - "ability:at_6th_level#monk"
-- add: "ability:bonus_feat#monk_brazen_disciple"
-  remove:
-  - "ability:the_monks_bonus_feat#monk"
-- add: "ability:efreetis_guile#monk_brazen_disciple"
-  remove:
-  - "ability:still_mind#monk"
-- add: "ability:confounding_koan#monk_brazen_disciple"
-  remove:
-  - "ability:abundant_step#monk"
-- add: "ability:genie_apotheosis#monk_brazen_disciple"
-  remove:
-  - "ability:perfect_self#monk"
+  - add: "ability:class_skills#monk_brazen_disciple"
+    remove:
+      - "ability:the_monks_class_skills#monk"
+  - add: "ability:feinting_flurry#monk_brazen_disciple"
+    remove:
+      - "ability:bonus_feat#monk@1"
+      - "ability:bonus_feat#monk@6"
+  - add: "ability:bonus_feat#monk_brazen_disciple"
+    remove:
+      - "ability:bonus_feat#monk"
+  - add: "ability:efreetis_guile#monk_brazen_disciple"
+    remove:
+      - "ability:still_mind#monk"
+  - add: "ability:confounding_koan#monk_brazen_disciple"
+    remove:
+      - "ability:abundant_step#monk"
+  - add: "ability:genie_apotheosis#monk_brazen_disciple"
+    remove:
+      - "ability:perfect_self#monk"
 features:
-- id: "ability:class_skills#monk_brazen_disciple"
-  name: "Class Skills"
-  label: null
-  type: null
-  description: "A brazen disciple gains Bluff (Cha), Disguise (Cha), and Knowledge\
-    \ (planes) (Int) as class skills but loses Knowledge (religion), Ride, and Swim."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Adventurer's Guide"
-- id: "ability:feinting_flurry#monk_brazen_disciple"
-  name: "Feinting Flurry"
-  label: null
-  type: null
-  description: "When using flurry of blows to make melee attacks, a brazen disciple\
-    \ can forgo his first attack to attempt a Bluff check to feint. At 6th level,\
-    \ when a brazen disciple successfully feints, his opponent is denied its Dexterity\
-    \ bonus to AC until the end of the monk's turn."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Adventurer's Guide"
-- id: "ability:bonus_feat#monk_brazen_disciple"
-  name: "Bonus Feat"
-  label: null
-  type: null
-  description: "At 2nd, 10th, 14th, and 18th levels, a brazen disciple can select\
-    \ a bonus feat. These feats must be chosen from the following list: Catch Off-Guard,\
-    \ Combat Reflexes, Deceitful, Dodge, Elemental Fist, and Improved Initiative.\
-    \ At 6th level, the brazen disciple can also choose from the following feats:\
-    \ Efreeti Style, Improved Dirty Trick, Improved Disarm, Improved Steal, Improved\
-    \ Trip, and Mobility. At 10th level, the brazen disciple can also choose from\
-    \ the following feats: Efreeti Stance, Efreeti Touch, Improved Critical, and Spring\
-    \ Attack. He need not meet the prerequisites normally required for these feats\
-    \ to select them."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Adventurer's Guide"
-- id: "ability:efreetis_guile#monk_brazen_disciple"
-  name: "Efreeti's Guile"
-  label: null
-  type: null
-  description: "At 3rd level, a brazen disciple can add his Wisdom modifier on Bluff\
-    \ and Disguise checks instead of his Charisma modifier."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Adventurer's Guide"
-- id: "ability:confounding_koan#monk_brazen_disciple"
-  name: "Confounding Koan"
-  label: null
-  type: null
-  description: "At 12th level, a brazen disciple can spend 2 ki points as a standard\
-    \ action to confuse a target within 30 feet with a riddle or paradox. This ability\
-    \ functions as per confusion, except that it is language-dependent. The DC is\
-    \ equal to 10 + half the monk's class level + his Wisdom modifier, and the caster\
-    \ level is equal to his class level."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Adventurer's Guide"
-- id: "ability:genie_apotheosis#monk_brazen_disciple"
-  name: "Genie Apotheosis"
-  label: null
-  type: null
-  description: "At 20th level, a brazen disciple is treated as a native outsider with\
-    \ the fire subtype rather than as a humanoid (or whatever the monk's creature\
-    \ type was) for the purpose of spells and magical effects. He has immunity to\
-    \ fire and vulnerability to cold. Once per day, the brazen disciple can grant\
-    \ a limited wish (as per the spell limited wish) to a non-outsider as a spell-like\
-    \ ability (CL 20th)."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+  - id: "ability:class_skills#monk_brazen_disciple"
+    name: "Class Skills"
+    description: "A brazen disciple gains Bluff (Cha), Disguise (Cha), and Knowledge
+      (planes) (Int) as class skills but loses Knowledge (religion), Ride, and
+      Swim."
+    source: "Pathfinder Roleplaying Game Adventurer's Guide"
+  - id: "ability:feinting_flurry#monk_brazen_disciple"
+    name: "Feinting Flurry"
+    description: "When using flurry of blows to make melee attacks, a brazen
+      disciple can forgo his first attack to attempt a Bluff check to feint. At
+      6th level, when a brazen disciple successfully feints, his opponent is
+      denied its Dexterity bonus to AC until the end of the monk's turn."
+    source: "Pathfinder Roleplaying Game Adventurer's Guide"
+  - id: "ability:bonus_feat#monk_brazen_disciple"
+    name: "Bonus Feat"
+    description: "At 2nd, 10th, 14th, and 18th levels, a brazen disciple can select
+      a bonus feat. These feats must be chosen from the following list: Catch
+      Off-Guard, Combat Reflexes, Deceitful, Dodge, Elemental Fist, and Improved
+      Initiative. At 6th level, the brazen disciple can also choose from the
+      following feats: Efreeti Style, Improved Dirty Trick, Improved Disarm,
+      Improved Steal, Improved Trip, and Mobility. At 10th level, the brazen
+      disciple can also choose from the following feats: Efreeti Stance, Efreeti
+      Touch, Improved Critical, and Spring Attack. He need not meet the
+      prerequisites normally required for these feats to select them."
+    source: "Pathfinder Roleplaying Game Adventurer's Guide"
+  - id: "ability:efreetis_guile#monk_brazen_disciple"
+    name: "Efreeti's Guile"
+    description: "At 3rd level, a brazen disciple can add his Wisdom modifier on
+      Bluff and Disguise checks instead of his Charisma modifier."
+    source: "Pathfinder Roleplaying Game Adventurer's Guide"
+  - id: "ability:confounding_koan#monk_brazen_disciple"
+    name: "Confounding Koan"
+    description: "At 12th level, a brazen disciple can spend 2 ki points as a
+      standard action to confuse a target within 30 feet with a riddle or
+      paradox. This ability functions as per confusion, except that it is
+      language-dependent. The DC is equal to 10 + half the monk's class level +
+      his Wisdom modifier, and the caster level is equal to his class level."
+    source: "Pathfinder Roleplaying Game Adventurer's Guide"
+  - id: "ability:genie_apotheosis#monk_brazen_disciple"
+    name: "Genie Apotheosis"
+    description: "At 20th level, a brazen disciple is treated as a native outsider
+      with the fire subtype rather than as a humanoid (or whatever the monk's
+      creature type was) for the purpose of spells and magical effects. He has
+      immunity to fire and vulnerability to cold. Once per day, the brazen
+      disciple can grant a limited wish (as per the spell limited wish) to a
+      non-outsider as a spell-like ability (CL 20th)."
+    source: "Pathfinder Roleplaying Game Adventurer's Guide"
 source: "Pathfinder Roleplaying Game Adventurer's Guide"

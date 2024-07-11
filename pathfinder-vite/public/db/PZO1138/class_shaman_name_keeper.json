@@ -1,0 +1,54 @@
+{
+  "id": "class:shaman#name_keeper",
+  "name": "Name-Keeper",
+  "tags": ["archetype", "shaman"],
+  "enabledFormula": "!@modifies:ability:wandering_spirit#shaman AND !@modifies:ability:wandering_hex#shaman AND !@modifies:ability:spirit_animal#shaman",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some study the names of fallen adventurers, correlating their names with the quests they were on when they perished or went missing, and then take it upon themselves to finish these incomplete missions. In delving into the storied histories of these fallen explorers, they have discovered how to commune with the departed spirits of those who have fallen. These mystical agents soon became known as name-keepers, and they pride themselves on helping their predecessors find peace while preventing other names from being added to the wall."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:wandering_spirit#shaman",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wandering_hex#shaman",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:spirit_animal#shaman",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:shaman",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:inherited_wayfinder#shaman_name_keeper"],
+            "linksToRemove": ["ability:spirit_animal#shaman"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:wandering_spirit#shaman"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:pathfinders_past#shaman_name_keeper"],
+            "linksToRemove": ["ability:wandering_spirit#shaman"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:versatile_hex#shaman_name_keeper"],
+            "linksToRemove": ["ability:wandering_hex#shaman"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:wandering_hex#shaman"]
+          }]
+        }]
+      }]
+    }
+  }
+}

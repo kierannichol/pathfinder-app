@@ -1,0 +1,76 @@
+{
+  "id": "class:bard#argent_voice",
+  "name": "Argent Voice",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:frightening_tune#bard AND !@modifies:ability:versatile_performance#bard AND !@modifies:ability:fascinate#bard AND !@modifies:ability:suggestion#bard AND !@modifies:ability:dirge_of_doom#bard AND !@modifies:ability:mass_suggestion#bard",
+  "maxStacks": 1,
+  "description": {
+    "text": "Argent voices explore the magic and power of the song of silver."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:frightening_tune#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:versatile_performance#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:fascinate#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:suggestion#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:dirge_of_doom#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:mass_suggestion#bard",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bard",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:limning_verse#bard_argent_voice"],
+            "linksToRemove": ["ability:fascinate#bard"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:dedicated_performance#bard_argent_voice"],
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:mass_suggestion#bard", "ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:shattering_crescendo#bard_argent_voice"],
+            "linksToRemove": ["ability:suggestion#bard", "ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:devilbane_refrain#bard_argent_voice"],
+            "linksToRemove": ["ability:dirge_of_doom#bard"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:frightening_tune#bard", "ability:versatile_performance#bard"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "class:rogue#toxic_talon",
+  "name": "Toxic Talon",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:uncanny_dodge#rogue AND !@modifies:trait:weapon_proficiency#rogue AND !@modifies:ability:trapfinding#rogue AND !@modifies:ability:trap_sense#rogue",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:weapon_proficiency#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trapfinding#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#rogue",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:rogue",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:forceful_breath#rogue_toxic_talon", "ability:poison_adept#rogue_toxic_talon"],
+            "linksToRemove": ["trait:weapon_proficiency#rogue", "ability:trapfinding#rogue"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:toxin_resistance#rogue_toxic_talon"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:toxin_resistance#rogue_toxic_talon"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:catalyst#rogue_toxic_talon"],
+            "linksToRemove": ["ability:uncanny_dodge#rogue"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:toxin_resistance#rogue_toxic_talon"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:split_toxin#rogue_toxic_talon"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:toxin_resistance#rogue_toxic_talon"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:toxin_resistance#rogue_toxic_talon"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:toxin_resistance#rogue_toxic_talon"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }]
+        }]
+      }]
+    }
+  }
+}

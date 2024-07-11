@@ -2,7 +2,7 @@
   "id": "class:witch#beast_bonded",
   "name": "Beast-bonded",
   "tags": ["archetype", "witch"],
-  "enabledFormula": "!@modifies:ability:hex#witch AND !@modifies:ability:witchs_major_hex#witch",
+  "enabledFormula": "!@modifies:ability:major_hex#witch AND !@modifies:ability:hex#witch",
   "maxStacks": 1,
   "description": {
     "text": "While all witches are intimately tied to their familiars, a beast-bonded witch\u0027s craft focuses specifically on her familiar bond and developing the relationship with her patron through her familiar."
@@ -12,12 +12,12 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:hex#witch",
+            "targetKey": "modifies:ability:major_hex#witch",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:witchs_major_hex#witch",
+            "targetKey": "modifies:ability:hex#witch",
             "numberValue": 1
           }
         }],
@@ -33,7 +33,8 @@
             "linksToRemove": ["ability:hex#witch"]
           }, {
             "targetStackCount": 10,
-            "linksToRemove": ["ability:witchs_major_hex#witch"]
+            "linksToAdd": ["ability:twin_soul#witch_beast_bonded"],
+            "linksToRemove": ["ability:major_hex#witch"]
           }]
         }]
       }]

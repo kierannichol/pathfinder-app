@@ -1,0 +1,56 @@
+{
+  "id": "class:paladin#scion_of_peace",
+  "name": "Scion of Peace",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:divine_grace#paladin AND !@modifies:ability:aura_of_resolve#paladin AND !@modifies:ability:aura_of_justice#paladin AND !@modifies:ability:divine_bond#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:divine_grace#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_resolve#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_justice#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:divine_bond#paladin",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:egalitarian#paladin_scion_of_peace"],
+            "linksToRemove": ["ability:divine_grace#paladin"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:bonded_eagle#paladin_scion_of_peace"],
+            "linksToRemove": ["ability:divine_bond#paladin"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:consensus#paladin_scion_of_peace"],
+            "linksToRemove": ["ability:aura_of_resolve#paladin"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:crusaders_gift#paladin_scion_of_peace"],
+            "linksToRemove": ["ability:aura_of_justice#paladin"]
+          }]
+        }]
+      }]
+    }
+  }
+}

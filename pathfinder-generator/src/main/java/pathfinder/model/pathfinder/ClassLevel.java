@@ -10,7 +10,7 @@ import java.util.function.Predicate;
 import pathfinder.model.Id;
 
 public record ClassLevel(int level,
-                         @JsonProperty("class_feature_names") List<Id> classFeatureIds) {
+                         @JsonProperty(value = "class_feature_names") List<Id> classFeatureIds) {
 
     public static ClassLevelBuilder builder() {
         return new ClassLevelBuilder();

@@ -44,6 +44,7 @@ public class ClassMapper {
     private void addClassFeaturesToClass(CharacterClass characterClass, ClassLevelEditor levelEditor) {
         characterClass.levels().forEach(classLevelDefinition -> {
             int level = classLevelDefinition.level();
+            if (classLevelDefinition.classFeatureIds() == null) return;
             classLevelDefinition.classFeatureIds().forEach(classFeatureId -> {
                 levelEditor.level(level).addLink(classFeatureId);
             });

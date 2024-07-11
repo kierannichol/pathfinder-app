@@ -1,6 +1,7 @@
 package pathfinder.model.pathfinder;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.List;
 import pathfinder.model.FeatureOptions;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
@@ -28,6 +29,7 @@ public record Feat(Id id,
                    @JsonProperty("completion_benefit") String completionBenefit,
                    boolean multiples,
                    @JsonProperty("suggested_traits") String suggestedTraits,
+                   List<String> effects,
                    @JsonProperty("options") FeatureOptions options) implements
         NamedEntity {
 

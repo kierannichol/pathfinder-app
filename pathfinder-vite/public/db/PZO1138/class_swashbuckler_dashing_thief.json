@@ -1,0 +1,29 @@
+{
+  "id": "class:swashbuckler#dashing_thief",
+  "name": "Dashing Thief",
+  "tags": ["archetype", "swashbuckler"],
+  "enabledFormula": "!@modifies:ability:panache#swashbuckler",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:panache#swashbuckler",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:swashbuckler",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:thiefs_confidence#swashbuckler_dashing_thief"],
+            "linksToRemove": ["ability:panache#swashbuckler"]
+          }]
+        }]
+      }]
+    }
+  }
+}

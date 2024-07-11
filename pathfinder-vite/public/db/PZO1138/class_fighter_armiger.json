@@ -1,0 +1,54 @@
+{
+  "id": "class:fighter#armiger",
+  "name": "Armiger",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:bonus_feat#fighter",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bravery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat#fighter",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:studious_squire#fighter_armiger"],
+            "linksToRemove": ["ability:bonus_feat#fighter"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:ardent#fighter_armiger"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:ardent#fighter_armiger"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:ardent#fighter_armiger"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:studious_squire#fighter_armiger", "ability:ardent#fighter_armiger"],
+            "linksToRemove": ["ability:bonus_feat#fighter", "ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:ardent#fighter_armiger"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }]
+        }]
+      }]
+    }
+  }
+}

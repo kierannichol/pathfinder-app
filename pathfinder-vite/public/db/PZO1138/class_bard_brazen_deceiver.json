@@ -1,0 +1,75 @@
+{
+  "id": "class:bard#brazen_deceiver",
+  "name": "Brazen Deceiver",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:lore_master#bard AND !@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:versatile_performance#bard AND !@modifies:ability:well_versed#bard",
+  "maxStacks": 1,
+  "description": {
+    "text": "Where other thieves use stealth or intimidation to achieve their goals, the brazen deceiver depends on lies. Thieves guilds often send brazen deceivers to acquire blackmail materials, arrange the release of incarcerated agents, or otherwise manipulate events."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:lore_master#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bardic_knowledge#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:versatile_performance#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:well_versed#bard",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bard",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:shameless_scoundrel#bard_brazen_deceiver"],
+            "linksToRemove": ["ability:bardic_knowledge#bard"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:invoke_the_blood#bard_brazen_deceiver"],
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:blatant_subtlety#bard_brazen_deceiver", "ability:invoke_the_blood#bard_brazen_deceiver"],
+            "linksToRemove": ["ability:well_versed#bard", "ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:devils_tongue#bard_brazen_deceiver"],
+            "linksToRemove": ["ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:invoke_the_blood#bard_brazen_deceiver"],
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:invoke_the_blood#bard_brazen_deceiver"],
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:invoke_the_blood#bard_brazen_deceiver"],
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }]
+        }]
+      }]
+    }
+  }
+}

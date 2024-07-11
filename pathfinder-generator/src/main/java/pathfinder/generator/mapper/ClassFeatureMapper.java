@@ -49,6 +49,9 @@ public class ClassFeatureMapper {
         if (feature.effects() != null) {
             feature.effects().forEach(effectFormula -> stack.addEffect(EffectParser.parse(effectFormula)));
         }
+        if (feature.links() != null) {
+            feature.links().forEach(stack::addLink);
+        }
 
         Stream.concat(
                         tryCreateFeatureChoice(feature),

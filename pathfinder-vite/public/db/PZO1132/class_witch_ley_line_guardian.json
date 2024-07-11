@@ -2,7 +2,7 @@
   "id": "class:witch#ley_line_guardian",
   "name": "Ley Line Guardian",
   "tags": ["archetype", "witch"],
-  "enabledFormula": "!@modifies:ability:hexes#witch",
+  "enabledFormula": "!@modifies:ability:hex#witch",
   "maxStacks": 1,
   "description": {
   },
@@ -11,7 +11,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:hexes#witch",
+            "targetKey": "modifies:ability:hex#witch",
             "numberValue": 1
           }
         }],
@@ -20,10 +20,10 @@
           "stackModifications": [{
             "targetStackCount": 1,
             "linksToAdd": ["ability:conduit_surge#witch_ley_line_guardian"],
-            "linksToRemove": ["ability:hexes#witch"]
+            "linksToRemove": ["ability:hex#witch"]
           }, {
             "targetStackCount": 8,
-            "linksToRemove": ["ability:hexes#witch"]
+            "linksToRemove": ["ability:hex#witch"]
           }]
         }]
       }]

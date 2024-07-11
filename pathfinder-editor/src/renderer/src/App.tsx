@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import EntryNav from "./components/EntryNav";
 import "./App.css";
-import MultipleFeaturesEditor from "./components/editors/MultipleFeaturesEditor";
+import MultipleFeaturesEditor from "./components/editors/feature/MultipleFeaturesEditor";
 import {FeatureKey, FeatureRef} from "@shared/pathfinder";
 import {SegmentElementEditor} from "./components/editors/SegmentElementEditor";
 import {SourcesProvider} from "./SourcesContext";

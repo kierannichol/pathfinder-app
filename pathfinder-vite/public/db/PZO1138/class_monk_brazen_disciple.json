@@ -1,0 +1,76 @@
+{
+  "id": "class:monk#brazen_disciple",
+  "name": "Brazen Disciple",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:still_mind#monk AND !@modifies:ability:perfect_self#monk AND !@modifies:ability:abundant_step#monk AND !@modifies:ability:bonus_feat#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:still_mind#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:perfect_self#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:abundant_step#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat#monk",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:feinting_flurry#monk_brazen_disciple", "ability:bonus_feat#monk_brazen_disciple"],
+            "linksToRemove": ["ability:bonus_feat#monk", "ability:bonus_feat#monk"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:bonus_feat#monk_brazen_disciple"],
+            "linksToRemove": ["ability:bonus_feat#monk"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:bonus_feat#monk_brazen_disciple"],
+            "linksToRemove": ["ability:bonus_feat#monk"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:efreetis_guile#monk_brazen_disciple"],
+            "linksToRemove": ["ability:still_mind#monk"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:genie_apotheosis#monk_brazen_disciple"],
+            "linksToRemove": ["ability:perfect_self#monk"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:feinting_flurry#monk_brazen_disciple", "ability:bonus_feat#monk_brazen_disciple"],
+            "linksToRemove": ["ability:bonus_feat#monk", "ability:bonus_feat#monk"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:bonus_feat#monk_brazen_disciple"],
+            "linksToRemove": ["ability:bonus_feat#monk"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:confounding_koan#monk_brazen_disciple"],
+            "linksToRemove": ["ability:abundant_step#monk"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:bonus_feat#monk_brazen_disciple"],
+            "linksToRemove": ["ability:bonus_feat#monk"]
+          }]
+        }]
+      }]
+    }
+  }
+}

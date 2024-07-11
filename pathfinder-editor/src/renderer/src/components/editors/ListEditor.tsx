@@ -1,68 +1,42 @@
-import React, {Dispatch, ReactNode, SetStateAction, useId, useState} from "react";
+import React, {Dispatch, ReactNode, SetStateAction} from "react";
 import styles from "./ListEditor.module.css";
-import {arrayMove, SortableContext, verticalListSortingStrategy} from "@dnd-kit/sortable";
-import {DragEndEvent} from "@dnd-kit/core";
-import {Droppable} from "../cards/Droppable";
-import {Draggable} from "../cards/Draggable";
 
-interface ListEditorItemActions {
+export interface ListEditorItemActions {
   remove();
 }
 
-interface ListEditorProps<T extends { id: string|number }> {
+export interface ListEditorProps<T> {
   values: T[];
   onListChanged?: (updated: T[]) => void;
-  onAddItem?: (index: number) => T;
+  onAddItem: (index: number) => T;
   onRemoveItem?: (item: T, index: number) => void;
   addButtonLabel?: ReactNode;
-  draggable?: boolean;
-  children: (item: T, setItem: Dispatch<SetStateAction<T>>, actions: ListEditorItemActions) => ReactNode;
+  children: (item: T, index?: number, setItem?: Dispatch<SetStateAction<T>>, actions?: ListEditorItemActions) => ReactNode;
 }
 
-export default function ListEditor<T extends { id: string|number }>({ values, onListChanged, onAddItem, onRemoveItem, addButtonLabel, draggable, children }: ListEditorProps<T>) {
-  const fieldId = useId();
-  const [ items, setItems ] = useState<T[]>(values);
+export default function ListEditor<T>({ values, onListChanged, onAddItem, onRemoveItem, addButtonLabel = '+ Add', children}: ListEditorProps<T>) {
 
   function notifyUpdated(changed: (T|null)[]) {
     onListChanged?.(changed.filter(item => item !== null) as T[]);
   }
 
-  if (!addButtonLabel) {
-    addButtonLabel = '+ Add';
-  }
-
   function handleAdd() {
-    const newItem = onAddItem?.(items.length) ?? null;
-    const copy = [...items, newItem];
-    setItems(copy);
+    const newItem = onAddItem?.(values.length) ?? null;
+    const copy = [...values, newItem];
     notifyUpdated(copy);
   }
 
   function handleRemove(value: T|null, index: number) {
-    const copy = [...items];
-    copy.splice(index, 1);
-    setItems(copy);
+    const copy = [...values];
+    copy[index] = undefined;
     onRemoveItem?.(value, index);
     notifyUpdated(copy);
   }
 
   function handleEdit(value: SetStateAction<T>, index: number) {
-    const copy = [...items];
-    copy[index] = (value instanceof Function ? value(items[index] as T) : value) as T;
-    setItems(copy);
+    const copy = [...values];
+    copy[index] = (value instanceof Function ? value(values[index] as T) : value) as T;
     notifyUpdated(copy);
-  }
-
-  function handleDragEnd(result: DragEndEvent) {
-    const {active, over} = result;
-
-    if (active.id !== over?.id) {
-        const oldIndex = items.findIndex(item => item.id === active.id)
-        const newIndex = items.findIndex(item => item.id === over?.id)
-        const copy = arrayMove(items, oldIndex, newIndex);
-        setItems(copy);
-        notifyUpdated(copy);
-    }
   }
 
   function createActions(value: T, index: number): ListEditorItemActions {
@@ -71,20 +45,17 @@ export default function ListEditor<T extends { id: string|number }>({ values, on
     } as ListEditorItemActions;
   }
 
-  return <Droppable id={fieldId} onDragEnd={handleDragEnd}>
-    <div className={styles.listContainer}>
-      <SortableContext items={items}
-                       strategy={verticalListSortingStrategy}>
-        {items.filter(value => value !== undefined).map((value, index) => <div key={value.id} className={styles.itemRow}>
-          <Draggable id={value.id} className={styles.valueControl}>
-          {children?.(
-              value,
-              (edited: SetStateAction<T>) => handleEdit(edited, index),
-              createActions(value, index))}
-          </Draggable>
-          </div>)}
-      </SortableContext>
-    <a className={styles.addButton + " clickable"} onClick={handleAdd}>{addButtonLabel}</a>
-    </div>
-  </Droppable>
+  return <div className={styles.listContainer}>
+    {values.map((value, index) => {
+      if (value === undefined) {
+        return;
+      }
+        return children?.(
+                value,
+                index,
+                (edited: SetStateAction<T>) => handleEdit(edited, index),
+                createActions(value, index))
+    })}
+    <div className={styles.addButton + " clickable"} onClick={handleAdd}>{addButtonLabel}</div>
+  </div>
 }

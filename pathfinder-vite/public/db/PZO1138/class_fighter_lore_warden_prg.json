@@ -1,0 +1,85 @@
+{
+  "id": "class:fighter#lore_warden_prg",
+  "name": "Lore Warden (PRG:AG)",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:trait:armor_proficiency#fighter AND !@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:armor_mastery#fighter AND !@modifies:ability:bonus_feat#fighter",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bravery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_training#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_mastery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat#fighter",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:scholastic#fighter_lore_warden_prg"],
+            "linksToRemove": ["trait:armor_proficiency#fighter"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:skill_over_strength#fighter_lore_warden_prg"],
+            "linksToRemove": ["ability:bonus_feat#fighter", "ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:swift_assessment#fighter_lore_warden_prg"],
+            "linksToRemove": ["ability:armor_mastery#fighter"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:swift_assessment#fighter_lore_warden_prg"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:swift_assessment#fighter_lore_warden_prg"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:swift_assessment#fighter_lore_warden_prg"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:swift_assessment#fighter_lore_warden_prg"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -2,7 +2,7 @@ import React, {forwardRef, ReactNode} from "react";
 import styles from "./CardBlock.module.scss";
 import variants from "../controls/ButtonVariants.module.scss";
 import {useSortable} from "@dnd-kit/sortable";
-import {CSS} from "@dnd-kit/utilities";
+import {Arguments, CSS} from "@dnd-kit/utilities";
 import {array} from "@/app/pfutils";
 import {classNames} from "@/utils/classNames";
 
@@ -56,7 +56,7 @@ const DraggableCardBlock = forwardRef<HTMLDivElement, DraggableCardBlockProps>(
     transition,
   } = useSortable({
     id: draggableId
-  });
+  } as Arguments<any>);
 
   const style = {
     transition: transition,

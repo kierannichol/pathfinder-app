@@ -4,6 +4,8 @@ import static pathfinder.model.pathfinder.Sources.CORE;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
@@ -34,6 +36,7 @@ import pathfinder.model.pathfinder.Feat;
 import pathfinder.model.pathfinder.ItemData;
 import pathfinder.model.pathfinder.Skill;
 import pathfinder.model.pathfinder.Skills;
+import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Spell;
 import pathfinder.model.pathfinder.WeaponType;
 import pathfinder.model.pathfinder.Weapons;
@@ -136,5 +139,11 @@ public class PathfinderDatabase {
                 .flatMap(content -> content.classes().stream())
                 .filter(characterClass -> characterClass.id().equals(id))
                 .findFirst();
+    }
+
+    public Set<SourceId> sources() {
+        return this.sources.stream()
+                .map(Source::sourceId)
+                .collect(Collectors.toSet());
     }
 }

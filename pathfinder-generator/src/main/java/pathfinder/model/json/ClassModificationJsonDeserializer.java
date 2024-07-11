@@ -5,6 +5,7 @@ import com.fasterxml.jackson.core.TreeNode;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.fasterxml.jackson.databind.node.IntNode;
+import com.fasterxml.jackson.databind.node.NullNode;
 import com.fasterxml.jackson.databind.node.TextNode;
 import java.io.IOException;
 import java.util.HashSet;
@@ -60,6 +61,9 @@ public class ClassModificationJsonDeserializer extends StdDeserializer<ClassModi
     }
 
     private String toText(TreeNode node) {
+        if (node instanceof NullNode) {
+            return "";
+        }
         return ((TextNode) node).asText("");
     }
 }

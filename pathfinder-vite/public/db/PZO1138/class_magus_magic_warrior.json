@@ -1,0 +1,38 @@
+{
+  "id": "class:magus#magic_warrior",
+  "name": "Magic Warrior",
+  "tags": ["archetype", "magus"],
+  "enabledFormula": "!@modifies:ability:magus_arcana#magus AND !@modifies:ability:greater_spell_access#magus",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:magus_arcana#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:greater_spell_access#magus",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:magus",
+          "stackModifications": [{
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:spell_access#magus_magic_warrior"],
+            "linksToRemove": ["ability:greater_spell_access#magus"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:magic_warriors_aspect#magus_magic_warrior"],
+            "linksToRemove": ["ability:magus_arcana#magus"]
+          }]
+        }]
+      }]
+    }
+  }
+}

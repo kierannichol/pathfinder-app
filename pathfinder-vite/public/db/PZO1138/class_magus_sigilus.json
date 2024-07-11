@@ -1,0 +1,46 @@
+{
+  "id": "class:magus#sigilus",
+  "name": "Sigilus",
+  "tags": ["archetype", "magus"],
+  "enabledFormula": "!@modifies:ability:spellstrike#magus AND !@modifies:ability:medium_armor#magus AND !@modifies:ability:heavy_armor#magus",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:spellstrike#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:medium_armor#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:heavy_armor#magus",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:magus",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:inscribe_rune#magus_sigilus"],
+            "linksToRemove": ["ability:spellstrike#magus"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:inscribe_star_rune#magus_sigilus"],
+            "linksToRemove": ["ability:medium_armor#magus"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:heavy_armor#magus"]
+          }]
+        }]
+      }]
+    }
+  }
+}

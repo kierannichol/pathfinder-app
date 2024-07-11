@@ -1,0 +1,95 @@
+{
+  "id": "class:druid#sunrider",
+  "name": "Sunrider",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:trait:armor_proficiency#druid AND !@modifies:trait:weapon_proficiency#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:wild_shape#druid AND !@modifies:ability:nature_bond#druid AND !@modifies:ability:woodland_stride#druid",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trackless_step#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:weapon_proficiency#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:resist_natures_lure#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_shape#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:nature_bond#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#druid",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#druid_sunrider", "ability:weapon_and_armor_proficiency#druid_sunrider", "ability:nature_bond#druid_sunrider"],
+            "linksToRemove": ["trait:armor_proficiency#druid", "trait:weapon_proficiency#druid", "ability:nature_bond#druid"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:born_to_the_saddle#druid_sunrider"],
+            "linksToRemove": ["ability:woodland_stride#druid"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:mounted_advantage#druid_sunrider"],
+            "linksToRemove": ["ability:trackless_step#druid"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:desert_born#druid_sunrider", "ability:concerted_effort#druid_sunrider"],
+            "linksToRemove": ["ability:resist_natures_lure#druid", "ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }]
+        }]
+      }]
+    }
+  }
+}

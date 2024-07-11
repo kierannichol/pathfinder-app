@@ -1,0 +1,29 @@
+{
+  "id": "class:hunter#totem_bonded",
+  "name": "Totem-Bonded",
+  "tags": ["archetype", "hunter"],
+  "enabledFormula": "!@modifies:ability:animal_companion#hunter",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:animal_companion#hunter",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:hunter",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:primeval_companion#hunter_totem_bonded", "ability:shared_strength#hunter_totem_bonded"],
+            "linksToRemove": ["ability:animal_companion#hunter"]
+          }]
+        }]
+      }]
+    }
+  }
+}

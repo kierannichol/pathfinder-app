@@ -16,7 +16,7 @@ import pathfinder.model.Stack;
 import pathfinder.model.StackBuilder;
 import pathfinder.model.Stacks;
 
-public record Feature(Id id, String name, String label, String type, Description description, List<String> effects, Stacks stacks, String prerequisites, String source) implements NamedEntity, FromSourceBook {
+public record Feature(Id id, String name, String label, String type, Description description, List<String> effects, List<Id> links, Stacks stacks, String prerequisites, String source) implements NamedEntity, FromSourceBook {
 
     public static FeatureBuilder builder() {
         return new FeatureBuilder();
@@ -38,6 +38,7 @@ public record Feature(Id id, String name, String label, String type, Description
         private String type;
         private Description description = Description.empty();
         private final List<String> effects = new ArrayList<>();
+        private final List<Id> links = new ArrayList<>();
         private final List<StackBuilder> fixedStacks = new ArrayList<>();
         private StackBuilder repeatingStack = new StackBuilder();
         private boolean useRepeatingStack = false;
@@ -92,6 +93,16 @@ public record Feature(Id id, String name, String label, String type, Description
             return this;
         }
 
+        public FeatureBuilder addLink(Id link) {
+            this.links.add(link);
+            return this;
+        }
+
+        public FeatureBuilder addLinks(Collection<Id> links) {
+            this.links.addAll(links);
+            return this;
+        }
+
         public FeatureBuilder addEffects(Collection<String> effects) {
             this.effects.addAll(effects);
             return this;
@@ -136,7 +147,7 @@ public record Feature(Id id, String name, String label, String type, Description
             Stacks stacks = useRepeatingStack
                             ? new RepeatingStack(repeatingStack.build())
                             : new FixedStacks(mapList(fixedStacks, StackBuilder::build));
-            return new Feature(id, name, label, type, description, effects, stacks, prerequisites, source);
+            return new Feature(id, name, label, type, description, effects, links, stacks, prerequisites, source);
         }
 
         private FeatureBuilder() {
@@ -149,6 +160,7 @@ public record Feature(Id id, String name, String label, String type, Description
             this.type = copy.type;
             this.description = Description.copy(copy.description);
             this.effects.addAll(copy.effects);
+            this.links.addAll(copy.links);
             this.prerequisites = copy.prerequisites;
             this.source = copy.source;
         }

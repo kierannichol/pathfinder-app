@@ -41,6 +41,7 @@ import pathfinder.model.pathfinder.Feature;
 import pathfinder.model.pathfinder.FromSourceBook;
 import pathfinder.model.pathfinder.ItemData;
 import pathfinder.model.pathfinder.SourceId;
+import pathfinder.model.pathfinder.SourceJson;
 import pathfinder.model.pathfinder.Sources;
 import pathfinder.model.pathfinder.Spell;
 
@@ -164,6 +165,11 @@ public class LocalPathfinderDatabaseLoader {
         return loadAll("db/feat", Feat.class);
     }
 
+    private Stream<SourceId> loadSources() {
+        return load("db/sources.yml", SourceJson[].class)
+                .map(SourceJson::toId);
+    }
+
     private Stream<CharacterClass> loadClasses() {
         return loadAll("db/class", CharacterClass.class);
     }
@@ -196,6 +202,7 @@ public class LocalPathfinderDatabaseLoader {
                         data.description(),
                         data.prerequisites(),
                         data.effects(),
+                        data.links(),
                         data.stacks(),
                         actualSourceId.code()
                 );
@@ -221,6 +228,7 @@ public class LocalPathfinderDatabaseLoader {
                         data.description(),
                         data.prerequisites(),
                         data.effects(),
+                        data.links(),
                         data.stacks(),
                         actualSourceId.code()
                 );

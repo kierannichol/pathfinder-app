@@ -2,19 +2,15 @@
   "id": "class:druid#wild_whisperer",
   "name": "Wild Whisperer",
   "tags": ["archetype", "druid"],
-  "enabledFormula": "!@modifies:ability:additional_use_of_wild_shape#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:wild_shape#druid",
+  "enabledFormula": "!@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:wild_shape#druid",
   "maxStacks": 1,
   "description": {
+    "text": "A wild whisperer is an expert at studying, predicting, and explaining animal behavior. She is less interested in plants, fey, and other aspects of the natural world, and uses her gifts to tame or relocate dangerous beasts and soothe the hurts of wounded and sickly creatures."
   },
   "stacks": {
     "fixedStack": {
       "stacks": [{
         "effects": [{
-          "setAction": {
-            "targetKey": "modifies:ability:additional_use_of_wild_shape#druid",
-            "numberValue": 1
-          }
-        }, {
           "setAction": {
             "targetKey": "modifies:ability:resist_natures_lure#druid",
             "numberValue": 1
@@ -46,11 +42,11 @@
           }, {
             "targetStackCount": 6,
             "linksToAdd": ["ability:natural_expertise#druid_wild_whisperer"],
-            "linksToRemove": ["ability:wild_shape#druid", "ability:additional_use_of_wild_shape#druid"]
+            "linksToRemove": ["ability:wild_shape#druid", "ability:wild_shape#druid"]
           }, {
             "targetStackCount": 8,
             "linksToAdd": ["ability:investigator_talent#druid_wild_whisperer"],
-            "linksToRemove": ["ability:wild_shape#druid", "ability:additional_use_of_wild_shape#druid"]
+            "linksToRemove": ["ability:wild_shape#druid", "ability:wild_shape#druid"]
           }, {
             "targetStackCount": 10,
             "linksToRemove": ["ability:wild_shape#druid"]

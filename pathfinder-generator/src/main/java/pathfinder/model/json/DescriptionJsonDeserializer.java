@@ -35,6 +35,10 @@ public class DescriptionJsonDeserializer extends StdDeserializer<Description> {
     }
 
     private String readField(TreeNode node, String field) {
-        return ((TextNode) node.get(field)).asText("");
+        TextNode fieldNode = (TextNode) node.get(field);
+        if (fieldNode == null) {
+            return "";
+        }
+        return fieldNode.asText("");
     }
 }

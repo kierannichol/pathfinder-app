@@ -16,6 +16,9 @@ export class SourceRef {
   }
 
   matches(name: string): boolean {
+    if (!name) {
+      name = '';
+    }
     name = name.trim().toLowerCase().replaceAll(/[^\w ]/g, '');
     if (name === this.code.toLowerCase()) {
       return true;

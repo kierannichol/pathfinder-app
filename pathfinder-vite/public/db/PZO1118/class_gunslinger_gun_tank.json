@@ -2,7 +2,7 @@
   "id": "class:gunslinger#gun_tank",
   "name": "Gun Tank",
   "tags": ["archetype", "gunslinger"],
-  "enabledFormula": "!@modifies:ability:bonus_feats_the_gunslinger_gains#gunslinger AND !@modifies:ability:nimble#gunslinger",
+  "enabledFormula": "!@modifies:ability:bonus_feat#gunslinger AND !@modifies:ability:nimble#gunslinger",
   "maxStacks": 1,
   "description": {
     "text": "Gunslingers usually don\u0027t use heavy armor, but there are a few who use and modify their armor to protect themselves from both traditional weapons and gunfire. These gun tanks trundle into battle with barrels blazing, dealing out punishment with their firearms while knowing few can penetrate their hard protective shells."
@@ -12,7 +12,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:bonus_feats_the_gunslinger_gains#gunslinger",
+            "targetKey": "modifies:ability:bonus_feat#gunslinger",
             "numberValue": 1
           }
         }, {
@@ -24,6 +24,9 @@
         "featureModifications": [{
           "targetFeatureId": "class:gunslinger",
           "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:bonus_feat#gunslinger"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:gun_tanks_resolve#gunslinger_gun_tank"]
           }, {
@@ -35,17 +38,26 @@
             "linksToAdd": ["ability:bullet_deflection#gunslinger_gun_tank"],
             "linksToRemove": ["ability:nimble#gunslinger"]
           }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:bonus_feat#gunslinger"]
+          }, {
             "targetStackCount": 4,
             "linksToAdd": ["ability:armor_training#gunslinger_gun_tank"],
-            "linksToRemove": ["ability:bonus_feats_the_gunslinger_gains#gunslinger"]
+            "linksToRemove": ["ability:bonus_feat#gunslinger"]
           }, {
             "targetStackCount": 6,
             "linksToAdd": ["ability:bullet_deflection#gunslinger_gun_tank"],
             "linksToRemove": ["ability:nimble#gunslinger"]
           }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:bonus_feat#gunslinger"]
+          }, {
             "targetStackCount": 10,
             "linksToAdd": ["ability:bullet_deflection#gunslinger_gun_tank"],
             "linksToRemove": ["ability:nimble#gunslinger"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:bonus_feat#gunslinger"]
           }, {
             "targetStackCount": 14,
             "linksToAdd": ["ability:bullet_deflection#gunslinger_gun_tank"],

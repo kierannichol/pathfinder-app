@@ -1,81 +1,76 @@
 id: "class:gunslinger#gun_tank"
 name: "Gun Tank"
-description: "Gunslingers usually don't use heavy armor, but there are a few who use\
-  \ and modify their armor to protect themselves from both traditional weapons and\
-  \ gunfire. These gun tanks trundle into battle with barrels blazing, dealing out\
-  \ punishment with their firearms while knowing few can penetrate their hard protective\
-  \ shells."
+description: "Gunslingers usually don't use heavy armor, but there are a few who
+  use and modify their armor to protect themselves from both traditional weapons
+  and gunfire. These gun tanks trundle into battle with barrels blazing, dealing
+  out punishment with their firearms while knowing few can penetrate their hard
+  protective shells."
 modifications:
-- add: "ability:gun_tanks_resolve#gunslinger_gun_tank"
-  remove:
-  - "ability:the_gunslingers_dodge_deed#gunslinger"
-- add: "ability:gun_tanks_resilience#gunslinger_gun_tank"
-  remove:
-  - "ability:the_evasive_deed#gunslinger"
-- add: "ability:bullet_deflection#gunslinger_gun_tank"
-  remove:
-  - "ability:nimble#gunslinger"
-- add: "ability:armor_training#gunslinger_gun_tank"
-  remove:
-  - "ability:bonus_feats_the_gunslinger_gains#gunslinger@4"
-  - "ability:every_four_levels_thereafter#gunslinger"
+  - add: "ability:gun_tanks_resolve#gunslinger_gun_tank"
+    remove:
+      - "ability:the_gunslingers_dodge_deed#gunslinger"
+  - add: "ability:gun_tanks_resilience#gunslinger_gun_tank"
+    remove:
+      - "ability:the_evasive_deed#gunslinger"
+  - add: "ability:bullet_deflection#gunslinger_gun_tank"
+    remove:
+      - "ability:nimble#gunslinger"
+  - add: "ability:armor_training#gunslinger_gun_tank"
+    remove:
+      - "ability:bonus_feat#gunslinger@4"
+      - "ability:bonus_feat#gunslinger@8"
+      - "ability:bonus_feat#gunslinger@12"
+      - "ability:bonus_feat#gunslinger@16"
+      - "ability:bonus_feat#gunslinger@20"
 features:
-- id: "ability:gun_tanks_resolve#gunslinger_gun_tank"
-  name: "Gun Tank's Resolve"
-  label: null
-  type: null
-  description: "At 1st level, the gun tank can shrug off the most serious of attacks.\
-    \ When the gun tank is wearing medium or heavy armor and is subject to a critical\
-    \ hit or sneak attack, she can spend 1 grit point as an immediate action to attempt\
-    \ to negate the critical hit or sneak attack damage. At 1st level, she has a 25%\
-    \ chance of doing so. At 10th level, the chance increases to 50%. At 15th level,\
-    \ the chance increases to 75%. While a gun tank's resolve does not stack with\
-    \ the fortification armor special ability, it does work in concert with that armor\
-    \ special ability or similar effects, so a gun tank can use this ability even\
-    \ after the armor of fortification has failed to negate the critical hit or sneak\
-    \ attack damage.\nThis deed replaces the Gunslinger's Dodge deed."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Ultimate Combat"
-- id: "ability:gun_tanks_resilience#gunslinger_gun_tank"
-  name: "Gun Tank's Resilience"
-  label: null
-  type: null
-  description: "At 15th level, when the gun tank has at least 1 grit point and makes\
-    \ a successful Fortitude saving throw against an attack that would deal half damage\
-    \ or have a partial effect, she takes no damage or other effects from that attack.\
-    \ Furthermore, she gains a +2 bonus on all saving throws against fear and mind-affecting\
-    \ effects.\nThis deed replaces the evasive deed."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Ultimate Combat"
-- id: "ability:bullet_deflection#gunslinger_gun_tank"
-  name: "Bullet Deflection"
-  label: null
-  type: null
-  description: "A gun tank is adept at modifying and using her armor to stop firearm\
-    \ attacks. Starting at 2nd level, a gun tank wearing medium or heavy armor gains\
-    \ half the armor's bonus plus the armor's enhancement bonus (if any) as a deflection\
-    \ bonus against any non-siege firearm or splash weapon attack (including the alchemist's\
-    \ bomb class ability; Advanced Player's Guide 28). This ability has no affect\
-    \ on spells, spell-like abilities, or supernatural abilities that make a touch\
-    \ attack.\nThis ability replaces nimble."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Ultimate Combat"
-- id: "ability:armor_training#gunslinger_gun_tank"
-  name: "Armor Training"
-  label: null
-  type: null
-  description: "At 4th level, a gun tank learns to be more maneuverable while wearing\
-    \ armor. Whenever she is wearing armor, the armor check penalty is reduced by\
-    \ 1 (to a minimum of 0) and the maximum Dexterity bonus allowed by her armor increases\
-    \ by 1. Every four levels thereafter (8th, 12th, and 16th), the bonus increases\
-    \ by 1, to a maximum of a –4 reduction of the armor check penalty and a +4 increase\
-    \ to the maximum Dexterity bonus allowed. This ability stacks with the fighter\
-    \ class ability of the same name. If the gun tank has both class features, she\
-    \ takes the most advantageous benefit of the two class features."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Ultimate Combat"
+  - id: "ability:gun_tanks_resolve#gunslinger_gun_tank"
+    name: "Gun Tank's Resolve"
+    description: "At 1st level, the gun tank can shrug off the most serious of
+      attacks. When the gun tank is wearing medium or heavy armor and is subject
+      to a critical hit or sneak attack, she can spend 1 grit point as an
+      immediate action to attempt to negate the critical hit or sneak attack
+      damage. At 1st level, she has a 25% chance of doing so. At 10th level, the
+      chance increases to 50%. At 15th level, the chance increases to 75%. While
+      a gun tank's resolve does not stack with the fortification armor special
+      ability, it does work in concert with that armor special ability or
+      similar effects, so a gun tank can use this ability even after the armor
+      of fortification has failed to negate the critical hit or sneak attack
+      damage.
+
+      This deed replaces the Gunslinger's Dodge deed."
+    source: "Pathfinder Roleplaying Game Ultimate Combat"
+  - id: "ability:gun_tanks_resilience#gunslinger_gun_tank"
+    name: "Gun Tank's Resilience"
+    description: "At 15th level, when the gun tank has at least 1 grit point and
+      makes a successful Fortitude saving throw against an attack that would
+      deal half damage or have a partial effect, she takes no damage or other
+      effects from that attack. Furthermore, she gains a +2 bonus on all saving
+      throws against fear and mind-affecting effects.
+
+      This deed replaces the evasive deed."
+    source: "Pathfinder Roleplaying Game Ultimate Combat"
+  - id: "ability:bullet_deflection#gunslinger_gun_tank"
+    name: "Bullet Deflection"
+    description: "A gun tank is adept at modifying and using her armor to stop
+      firearm attacks. Starting at 2nd level, a gun tank wearing medium or heavy
+      armor gains half the armor's bonus plus the armor's enhancement bonus (if
+      any) as a deflection bonus against any non-siege firearm or splash weapon
+      attack (including the alchemist's bomb class ability; Advanced Player's
+      Guide 28). This ability has no affect on spells, spell-like abilities, or
+      supernatural abilities that make a touch attack.
+
+      This ability replaces nimble."
+    source: "Pathfinder Roleplaying Game Ultimate Combat"
+  - id: "ability:armor_training#gunslinger_gun_tank"
+    name: "Armor Training"
+    description: "At 4th level, a gun tank learns to be more maneuverable while
+      wearing armor. Whenever she is wearing armor, the armor check penalty is
+      reduced by 1 (to a minimum of 0) and the maximum Dexterity bonus allowed
+      by her armor increases by 1. Every four levels thereafter (8th, 12th, and
+      16th), the bonus increases by 1, to a maximum of a –4 reduction of the
+      armor check penalty and a +4 increase to the maximum Dexterity bonus
+      allowed. This ability stacks with the fighter class ability of the same
+      name. If the gun tank has both class features, she takes the most
+      advantageous benefit of the two class features."
+    source: "Pathfinder Roleplaying Game Ultimate Combat"
 source: "Pathfinder Roleplaying Game Ultimate Combat"

@@ -1,0 +1,34 @@
+{
+  "id": "class:wizard#runesage",
+  "name": "Runesage",
+  "tags": ["archetype", "wizard"],
+  "enabledFormula": "!@modifies:ability:arcane_school#wizard AND !@modifies:ability:arcane_bond#wizard",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:arcane_school#wizard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:arcane_bond#wizard",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:wizard",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:runic_focus#wizard_runesage", "ability:runic_focus#wizard_runesage"],
+            "linksToRemove": ["ability:arcane_school#wizard", "ability:arcane_bond#wizard"]
+          }]
+        }]
+      }]
+    }
+  }
+}

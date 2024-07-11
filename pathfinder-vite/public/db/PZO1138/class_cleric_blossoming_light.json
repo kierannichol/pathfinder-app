@@ -1,0 +1,70 @@
+{
+  "id": "class:cleric#blossoming_light",
+  "name": "Blossoming Light",
+  "tags": ["archetype", "cleric"],
+  "enabledFormula": "!@modifies:ability:channel_energy#cleric AND !@modifies:trait:armor_proficiency#cleric",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:channel_energy#cleric",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#cleric",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:luminous_font#cleric_blossoming_light"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:promise_of_faith#cleric_blossoming_light", "ability:luminous_font#cleric_blossoming_light"],
+            "linksToRemove": ["trait:armor_proficiency#cleric", "ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:luminous_font#cleric_blossoming_light"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:luminous_font#cleric_blossoming_light"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:luminous_font#cleric_blossoming_light"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:luminous_font#cleric_blossoming_light"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:luminous_font#cleric_blossoming_light"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:luminous_font#cleric_blossoming_light"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:luminous_font#cleric_blossoming_light"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:luminous_font#cleric_blossoming_light"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }]
+        }]
+      }]
+    }
+  }
+}

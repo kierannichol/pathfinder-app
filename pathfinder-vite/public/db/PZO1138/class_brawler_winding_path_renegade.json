@@ -1,0 +1,54 @@
+{
+  "id": "class:brawler#winding_path_renegade",
+  "name": "Winding Path Renegade",
+  "tags": ["archetype", "brawler"],
+  "enabledFormula": "!@modifies:ability:bonus_combat_feat#brawler AND !@modifies:ability:ac_bonus#brawler",
+  "maxStacks": 1,
+  "description": {
+    "text": "Winding path renegades epitomize those who have chosen the twisted path. Lacking the mental discipline required by the masters of the school, they have withdrawn from their monasteries-some peacefully, some not-to find their own paths."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_combat_feat#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:ac_bonus#brawler",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:brawler",
+          "stackModifications": [{
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:ac_bonus#brawler"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:mystery_of_untwisting_iron#brawler_winding_path_renegade"],
+            "linksToRemove": ["ability:bonus_combat_feat#brawler"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:monk_moves#brawler_winding_path_renegade"],
+            "linksToRemove": ["ability:ac_bonus#brawler"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:bonus_combat_feat#brawler"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:ac_bonus#brawler"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:ac_bonus#brawler"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:bonus_combat_feat#brawler"]
+          }]
+        }]
+      }]
+    }
+  }
+}

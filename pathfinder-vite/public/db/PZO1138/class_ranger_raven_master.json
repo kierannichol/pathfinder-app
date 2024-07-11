@@ -1,0 +1,66 @@
+{
+  "id": "class:ranger#raven_master",
+  "name": "Raven Master",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:hunters_bond#ranger AND !@modifies:ability:camouflage#ranger AND !@modifies:ability:swift_tracker#ranger AND !@modifies:ability:wild_empathy#ranger AND !@modifies:ability:woodland_stride#ranger",
+  "maxStacks": 1,
+  "description": {
+    "text": "Raven masters serve as messengers and spies for the Silver Ravens, using their ravens to scout and report any suspicious troop movements. Raven companions alight on the rooftops and window ledges of palaces and keeps to eavesdrop on tyrants and dictators, feeding these precious secrets to the raven master so that she can more efficiently foment and organize rebellion."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:hunters_bond#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:camouflage#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:swift_tracker#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_empathy#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#ranger",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:avian_empathy#ranger_raven_master"],
+            "linksToRemove": ["ability:wild_empathy#ranger"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:raven_companion#ranger_raven_master"],
+            "linksToRemove": ["ability:hunters_bond#ranger"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:silver_champion#ranger_raven_master"],
+            "linksToRemove": ["ability:woodland_stride#ranger"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:mimic_figurine#ranger_raven_master"],
+            "linksToRemove": ["ability:swift_tracker#ranger"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:cheat_death#ranger_raven_master"],
+            "linksToRemove": ["ability:camouflage#ranger"]
+          }]
+        }]
+      }]
+    }
+  }
+}

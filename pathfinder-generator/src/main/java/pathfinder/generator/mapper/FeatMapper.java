@@ -17,8 +17,10 @@ import pathfinder.model.Feature;
 import pathfinder.model.Feature.FeatureBuilder;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
+import pathfinder.model.StackBuilder;
 import pathfinder.model.pathfinder.Feat;
 import pathfinder.model.pathfinder.Weapons;
+import pathfinder.util.EffectParser;
 import pathfinder.util.StringUtils;
 
 @RequiredArgsConstructor
@@ -65,6 +67,12 @@ public class FeatMapper {
 
         if (feat.options() != null) {
             builder.addOptions(feat.options());
+        }
+
+        if (feat.effects() != null) {
+            StackBuilder stack = new StackBuilder();
+            feat.effects().forEach(effect -> stack.addEffect(EffectParser.parse(effect)));
+            builder.addFixedStack(stack.build());
         }
 
         return Stream.of(builder.build(),

@@ -2,7 +2,7 @@
   "id": "class:fighter#tactician",
   "name": "Tactician",
   "tags": ["archetype", "fighter"],
-  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:bonus_fighter_combat_feat#fighter AND !@modifies:ability:weapon_training#fighter",
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:bonus_feat#fighter AND !@modifies:ability:weapon_training#fighter",
   "maxStacks": 1,
   "description": {
     "text": "While many fighters focus on the fundamentals of melee and ranged combat, there are those who are trained to view the bigger picture on the battlefield. These fighters use their training and tactical acumen to overcome challenges that would overwhelm mere brute strength and skill at arms."
@@ -22,7 +22,7 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:bonus_fighter_combat_feat#fighter",
+            "targetKey": "modifies:ability:bonus_feat#fighter",
             "numberValue": 1
           }
         }, {
@@ -35,7 +35,8 @@
           "targetFeatureId": "class:fighter",
           "stackModifications": [{
             "targetStackCount": 1,
-            "linksToRemove": ["ability:bonus_fighter_combat_feat#fighter"]
+            "linksToAdd": ["ability:strategic_training#fighter_tactician"],
+            "linksToRemove": ["ability:bonus_feat#fighter"]
           }, {
             "targetStackCount": 18,
             "linksToRemove": ["ability:bravery#fighter"]

@@ -2,7 +2,7 @@
   "id": "class:druid#dragon_shaman",
   "name": "Dragon Shaman",
   "tags": ["archetype", "druid"],
-  "enabledFormula": "!@modifies:ability:additional_use_of_wild_shape#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:a_thousand_faces#druid",
+  "enabledFormula": "!@modifies:ability:wild_shape#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:a_thousand_faces#druid",
   "maxStacks": 1,
   "description": {
   },
@@ -11,7 +11,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:additional_use_of_wild_shape#druid",
+            "targetKey": "modifies:ability:wild_shape#druid",
             "numberValue": 1
           }
         }, {
@@ -33,7 +33,7 @@
           }, {
             "targetStackCount": 8,
             "linksToAdd": ["ability:dragon_bite#druid_dragon_shaman"],
-            "linksToRemove": ["ability:additional_use_of_wild_shape#druid"]
+            "linksToRemove": ["ability:wild_shape#druid"]
           }, {
             "targetStackCount": 9,
             "linksToAdd": ["ability:bonus_feat#druid_dragon_shaman"],

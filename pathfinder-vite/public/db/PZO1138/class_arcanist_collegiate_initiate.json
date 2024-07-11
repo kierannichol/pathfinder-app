@@ -1,0 +1,42 @@
+{
+  "id": "class:arcanist#collegiate_initiate",
+  "name": "Collegiate Initiate",
+  "tags": ["archetype", "arcanist"],
+  "enabledFormula": "!@modifies:ability:arcanist_exploit#arcanist",
+  "maxStacks": 1,
+  "description": {
+    "text": "Those particularly gifted in the art of sculpting spells are sometimes schooled privately in the art of traditional, esoteric, and righteous spells, in the hope that such knowledge will pave the way for the initiate\u0027s acceptance into the school proper as a collegiate arcanist."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:arcanist_exploit#arcanist",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:arcanist",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:halcyon_spell_lore#arcanist_collegiate_initiate"],
+            "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:halcyon_spell_lore#arcanist_collegiate_initiate"],
+            "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:spell_mastery#arcanist_collegiate_initiate"],
+            "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:halcyon_spell_lore#arcanist_collegiate_initiate"],
+            "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+          }]
+        }]
+      }]
+    }
+  }
+}

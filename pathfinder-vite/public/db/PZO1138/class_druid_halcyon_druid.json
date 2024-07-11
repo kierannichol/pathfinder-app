@@ -1,0 +1,87 @@
+{
+  "id": "class:druid#halcyon_druid",
+  "name": "Halcyon Druid",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:wild_shape#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:nature_bond#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:wild_empathy#druid AND !@modifies:ability:a_thousand_faces#druid",
+  "maxStacks": 1,
+  "description": {
+    "text": "Halcyon druids are less focused on emulating its inhabitants. Instead, they treat with beings from the Outer Sphere. As a sign of their allegiance, these druids wear fantastical masks depicting celestials, fiends, and-most often-the bestial agathions."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:wild_shape#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:resist_natures_lure#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:nature_bond#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:nature_sense#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_empathy#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:a_thousand_faces#druid",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:bonded_mask#druid_halcyon_druid", "ability:well_trained#druid_halcyon_druid", "ability:peacekeeper#druid_halcyon_druid"],
+            "linksToRemove": ["ability:nature_bond#druid", "ability:nature_sense#druid", "ability:wild_empathy#druid"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:natural_arcana#druid_halcyon_druid", "ability:resist_fiendish_influence#druid_halcyon_druid"],
+            "linksToRemove": ["ability:wild_shape#druid", "ability:resist_natures_lure#druid"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:embody_mask#druid_halcyon_druid"],
+            "linksToRemove": ["ability:a_thousand_faces#druid"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }]
+        }]
+      }]
+    }
+  }
+}

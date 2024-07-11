@@ -1,0 +1,82 @@
+{
+  "id": "class:ranger#lantern_lighter",
+  "name": "Lantern Lighter",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:camouflage#ranger AND !@modifies:ability:favored_terrain#ranger AND !@modifies:ability:endurance#ranger AND !@modifies:ability:hide_in_plain_sight#ranger AND !@modifies:ability:wild_empathy#ranger AND !@modifies:ability:woodland_stride#ranger",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:camouflage#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:favored_terrain#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:endurance#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:hide_in_plain_sight#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_empathy#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#ranger",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:camouflage#ranger_lantern_lighter"],
+            "linksToRemove": ["ability:hide_in_plain_sight#ranger"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:enhanced_vision#ranger_lantern_lighter"],
+            "linksToRemove": ["ability:wild_empathy#ranger"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:paralyzing_light#ranger_lantern_lighter"],
+            "linksToRemove": ["ability:favored_terrain#ranger", "ability:favored_terrain#ranger"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:poison_resistance#ranger_lantern_lighter", "ability:favored_terrain#ranger_lantern_lighter"],
+            "linksToRemove": ["ability:endurance#ranger", "ability:favored_terrain#ranger"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:cavern_stride#ranger_lantern_lighter"],
+            "linksToRemove": ["ability:woodland_stride#ranger"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:darkvision#ranger_lantern_lighter"],
+            "linksToRemove": ["ability:favored_terrain#ranger", "ability:favored_terrain#ranger"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:poison_immunity#ranger_lantern_lighter"],
+            "linksToRemove": ["ability:camouflage#ranger"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:stunning_light#ranger_lantern_lighter"],
+            "linksToRemove": ["ability:favored_terrain#ranger", "ability:favored_terrain#ranger"]
+          }]
+        }]
+      }]
+    }
+  }
+}

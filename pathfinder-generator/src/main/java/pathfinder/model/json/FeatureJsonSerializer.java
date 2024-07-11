@@ -48,6 +48,14 @@ public class FeatureJsonSerializer extends StdSerializer<Feature> {
             }
             gen.writeEndArray();
         }
+        if (value.links() != null) {
+            gen.writeFieldName("links");
+            gen.writeStartArray();
+            for (Id effect : value.links()) {
+                gen.writeString(effect.string());
+            }
+            gen.writeEndArray();
+        }
         if (value.stacks() != null) {
             if (value.stacks() instanceof FixedStacks fixedStacks) {
                 gen.writeFieldName("fixed_stacks");

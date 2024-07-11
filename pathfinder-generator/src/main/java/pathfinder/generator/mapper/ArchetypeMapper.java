@@ -73,6 +73,7 @@ public class ArchetypeMapper {
                         List<IdAndLevel> found = new ArrayList<>();
 
                         baseClass.levels().forEach(level -> {
+                            if (level.classFeatureIds() == null) return;
                             if (level.classFeatureIds().contains(toRemove.id())) {
                                 found.add(IdAndLevel.of(toRemove.id(), level.level()));
                             }
@@ -101,6 +102,8 @@ public class ArchetypeMapper {
 
                         if (levels.isEmpty()) {
                             for (var classLevel : baseClass.levels()) {
+                                if (classLevel.classFeatureIds() == null)
+                                    continue;
                                 for (IdAndLevel toRemove : toRemoveSet) {
                                     boolean levelMatches =
                                             toRemove.level().isEmpty() || toRemove.level().getAsInt() == classLevel.level();

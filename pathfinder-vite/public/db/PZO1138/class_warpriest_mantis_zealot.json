@@ -1,0 +1,79 @@
+{
+  "id": "class:warpriest#mantis_zealot",
+  "name": "Mantis Zealot",
+  "tags": ["archetype", "warpriest"],
+  "enabledFormula": "!@modifies:trait:weapon_proficiency#warpriest AND !@modifies:ability:aspect_of_war#warpriest AND !@modifies:ability:sacred_weapon#warpriest AND !@modifies:ability:sacred_armor#warpriest AND !@modifies:trait:armor_proficiency#warpriest",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:trait:weapon_proficiency#warpriest",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aspect_of_war#warpriest",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:sacred_weapon#warpriest",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:sacred_armor#warpriest",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#warpriest",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:warpriest",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:sacred_weapon#warpriest", "ability:sacred_armor#warpriest"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#warpriest_mantis_zealot", "ability:weapon_and_armor_proficiency#warpriest_mantis_zealot"],
+            "linksToRemove": ["trait:weapon_proficiency#warpriest", "trait:armor_proficiency#warpriest", "ability:sacred_weapon#warpriest"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:sacred_armor#warpriest"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:aspect_of_the_mantis#warpriest_mantis_zealot"],
+            "linksToRemove": ["ability:sacred_weapon#warpriest", "ability:aspect_of_war#warpriest"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:sneak_attack#warpriest_mantis_zealot"],
+            "linksToRemove": ["ability:sacred_weapon#warpriest"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:sacred_reflexes#warpriest_mantis_zealot"],
+            "linksToRemove": ["ability:sacred_armor#warpriest"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:sacred_weapon#warpriest"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:sacred_armor#warpriest"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:sacred_weapon#warpriest"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:sacred_armor#warpriest"]
+          }]
+        }]
+      }]
+    }
+  }
+}

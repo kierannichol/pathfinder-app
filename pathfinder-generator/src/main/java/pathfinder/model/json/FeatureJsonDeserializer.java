@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.Optional;
 import lombok.extern.slf4j.Slf4j;
 import pathfinder.model.Description;
+import pathfinder.model.Id;
 import pathfinder.model.Stack;
 import pathfinder.model.pathfinder.Feature;
 
@@ -39,6 +40,13 @@ public class FeatureJsonDeserializer extends StdDeserializer<Feature> {
         if (effectNodes != null) {
             for (JsonNode effectNode : effectNodes) {
                 builder.addEffect(effectNode.asText());
+            }
+        }
+
+        JsonNode linkNodes = node.get("links");
+        if (linkNodes != null) {
+            for (JsonNode linkNode : linkNodes) {
+                builder.addLink(Id.of(linkNode.asText()));
             }
         }
 

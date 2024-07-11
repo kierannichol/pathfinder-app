@@ -1,0 +1,55 @@
+{
+  "id": "class:fighter#defender",
+  "name": "Defender",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:ability:armor_training#fighter AND !@modifies:ability:bonus_feat#fighter",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:armor_training#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat#fighter",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:defensive_parry#fighter_defender"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:disarming_strike#fighter_defender"],
+            "linksToRemove": ["ability:bonus_feat#fighter"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:steel_net#fighter_defender"],
+            "linksToRemove": ["ability:bonus_feat#fighter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:counterattack#fighter_defender"],
+            "linksToRemove": ["ability:bonus_feat#fighter"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }]
+        }]
+      }]
+    }
+  }
+}

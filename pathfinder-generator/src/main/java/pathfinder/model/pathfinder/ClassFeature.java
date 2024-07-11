@@ -9,7 +9,7 @@ import pathfinder.model.NamedEntity;
 import pathfinder.model.Stacks;
 
 @Builder
-public record ClassFeature(Id id, String name, String label, String type, Id classId, Description description, String prerequisites, List<String> effects, Stacks stacks, String source) implements NamedEntity, FromSourceBook, ClassSpecific {
+public record ClassFeature(Id id, String name, String label, String type, Id classId, Description description, String prerequisites, List<String> effects, List<Id> links, Stacks stacks, String source) implements NamedEntity, FromSourceBook, ClassSpecific {
 
     @Override
     public List<String> sources() {
@@ -26,6 +26,7 @@ public record ClassFeature(Id id, String name, String label, String type, Id cla
                 feature.description(),
                 feature.prerequisites(),
                 feature.effects(),
+                feature.links(),
                 feature.stacks(),
                 feature.source());
     }

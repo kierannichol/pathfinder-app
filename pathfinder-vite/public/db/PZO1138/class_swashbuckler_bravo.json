@@ -1,0 +1,38 @@
+{
+  "id": "class:swashbuckler#bravo",
+  "name": "Bravo",
+  "tags": ["archetype", "swashbuckler"],
+  "enabledFormula": "!@modifies:trait:armor_proficiency#swashbuckler",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#swashbuckler",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:swashbuckler",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:swashbuckler#swashbuckler_bravo"],
+            "linksToRemove": ["trait:armor_proficiency#swashbuckler"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:sweeping_wind_feint#swashbuckler_bravo"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:dragons_rage#swashbuckler_bravo"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:terror_of_the_great_wyrm#swashbuckler_bravo"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -7,12 +7,45 @@ export interface FeatureKey {
   featureKey: string;
 }
 
+export interface ChoiceData {
+
+}
+
+export interface StackModificationData {
+  targetStackCount: number;
+  featuresToAdd: string[];
+  featuresToRemove: string[];
+}
+
+export interface FeatureModificationData {
+  targetFeatureId: string;
+  stackModifications: StackModificationData[];
+}
+
 export interface ClassFeatureData {
   id: string;
   name: string;
   type: string;
   description: DescriptionDbo|string;
   effects: string[];
+  links: string[];
+}
+
+export interface ClassLevelData {
+  level: number;
+  class_feature_names: string[];
+}
+
+export interface StackData {
+  effects: string[];
+  links: string[];
+  choices: ChoiceData[];
+  featureModifications: FeatureModificationData[];
+}
+
+export interface ArchetypeModificationData {
+  add: string|string[];
+  remove: string|string[];
 }
 
 export interface RawFeatureData {
@@ -23,14 +56,30 @@ export interface RawFeatureData {
   description: DescriptionDbo|string;
   enabledFormula: string;
   source: string;
+  effects: string[];
+  links: string[];
+
+  fixed_stacks: StackData[];
+  repeating_stack: StackData;
 
   // character class specific
   category: string;
   hit_die: string;
+  levels: ClassLevelData[];
   class_features: ClassFeatureData[];
 
   // archetype
   features: ClassFeatureData[];
+  modifications: ArchetypeModificationData[];
+
+  // feat
+  type: string;
+  prerequisites: string;
+  benefit: string;
+  normal: string;
+  special: string;
+  note: string;
+  multiples: boolean;
 }
 
 export function idToKey(id: string): string {

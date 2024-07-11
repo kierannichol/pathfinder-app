@@ -1,42 +1,34 @@
 id: "class:witch#ley_line_guardian"
 name: "Ley Line Guardian"
-description: ""
 modifications:
-- add: "ability:ley_line_powered#witch_ley_line_guardian"
-  remove:
-  - "ability:the_witchs_spellcasting#witch"
-- add: "ability:conduit_surge#witch_ley_line_guardian"
-  remove:
-  - "ability:familiar#witch"
-  - "ability:hexes#witch@1"
-  - "ability:hexes#witch@8"
+  - add: "ability:ley_line_powered#witch_ley_line_guardian"
+    remove:
+      - "ability:the_witchs_spellcasting#witch"
+  - add: "ability:conduit_surge#witch_ley_line_guardian"
+    remove:
+      - "ability:familiar#witch"
+      - "ability:hex#witch@1"
+      - "ability:hex#witch@8"
 features:
-- id: "ability:ley_line_powered#witch_ley_line_guardian"
-  name: "Ley Line Powered"
-  label: null
-  type: null
-  description: "Instead of preparing her spells, a ley line guardian draws the power\
-    \ casting spells directly from ley lines. A ley line guardian is a spontaneous\
-    \ spellcaster. She knows the same number of spells and receives the same number\
-    \ of spell slots per day as a sorcerer of her witch level. Bonus spells granted\
-    \ by a ley line guardian's patron are added to the ley line guardian's total spells\
-    \ known at the appropriate levels."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Occult Adventures"
-- id: "ability:conduit_surge#witch_ley_line_guardian"
-  name: "Conduit Surge"
-  label: null
-  type: null
-  description: "At 1st level, a ley line guardian is adept at channeling energy from\
-    \ ley lines to enhance her own spells. As a swift action, she can increase her\
-    \ effective caster level for the next spell she casts in that round by 1d4–1 levels.\
-    \ After performing a conduit surge, the ley line guardian must succeed at a Fortitude\
-    \ save (DC = 10 + level of spell cast + number of additional caster levels granted)\
-    \ or become staggered for a number of minutes equal to the level of the spell\
-    \ cast. At 8th level, the caster level increase becomes 1d4. She can use this\
-    \ ability a number of times per day equal to 3 + her Charisma modifier."
-  effects: null
-  prerequisites: null
-  source: "Pathfinder Roleplaying Game Occult Adventures"
+  - id: "ability:ley_line_powered#witch_ley_line_guardian"
+    name: "Ley Line Powered"
+    description: "Instead of preparing her spells, a ley line guardian draws the
+      power casting spells directly from ley lines. A ley line guardian is a
+      spontaneous spellcaster. She knows the same number of spells and receives
+      the same number of spell slots per day as a sorcerer of her witch level.
+      Bonus spells granted by a ley line guardian's patron are added to the ley
+      line guardian's total spells known at the appropriate levels."
+    source: "Pathfinder Roleplaying Game Occult Adventures"
+  - id: "ability:conduit_surge#witch_ley_line_guardian"
+    name: "Conduit Surge"
+    description: "At 1st level, a ley line guardian is adept at channeling energy
+      from ley lines to enhance her own spells. As a swift action, she can
+      increase her effective caster level for the next spell she casts in that
+      round by 1d4–1 levels. After performing a conduit surge, the ley line
+      guardian must succeed at a Fortitude save (DC = 10 + level of spell cast +
+      number of additional caster levels granted) or become staggered for a
+      number of minutes equal to the level of the spell cast. At 8th level, the
+      caster level increase becomes 1d4. She can use this ability a number of
+      times per day equal to 3 + her Charisma modifier."
+    source: "Pathfinder Roleplaying Game Occult Adventures"
 source: "Pathfinder Roleplaying Game Occult Adventures"

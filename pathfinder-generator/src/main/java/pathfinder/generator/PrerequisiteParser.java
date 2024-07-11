@@ -40,7 +40,7 @@ import pathfinder.util.PatternMapper;
 public class PrerequisiteParser {
     private static final Pattern IS_INT_PATTERN = Pattern.compile("-?\\d+");
     private static final String RACE_GROUP = "(human|dwarf|drow|orc|hobgoblin|gnome|halfling|elf|half-elf|half-orc|naga|serpentfolk|tiefling|goblin|catfolk|creature that has the constrict special attack)";
-    private static final String CLASS_GROUP = "(barbarian|bard|cleric|druid|fighter|monk|paladin|ranger|rogue|sorcerer|wizard|alchemist|cavalier|gunslinger|inquisitor|magus|omdura|oracle|shifter|summoner|witch|vampire hunter|vigilante|arcanist|bloodrager|brawler|hunter|investigator|shaman|skald|slayer|swashbuckler|warpriest|witch|savage|summoner \\(unchained\\)|occultist)";
+    private static final String CLASS_GROUP = "(barbarian|bard|cleric|druid|fighter|monk|paladin|ranger|rogue|sorcerer|wizard|alchemist|cavalier|gunslinger|inquisitor|magus|omdura|oracle|shifter|summoner|witch|vampire hunter|vigilante|arcanist|bloodrager|brawler|hunter|investigator|shaman|skald|slayer|swashbuckler|warpriest|witch|savage|summoner \\(unchained\\)|occultist|kineticist|mesmerist)";
     private static final String SKILL_GROUP = "(" + Skills.ALL.stream().map(Skill::name).map(Pattern::quote).collect(Collectors.joining("|")) + ")";
     private static final String ABILITY_SCORE_GROUP = "(str|strength|dex|dexterity|con|constitution|wis|wisdom|int|intelligence|cha|charisma)";
     private static final String PHRASE_GROUP = "((?:\\s*[\\w\\s'+\\-\\-]+(?:\\s*\\(.*?\\))?)+)";
@@ -82,12 +82,17 @@ public class PrerequisiteParser {
             .addReplacement("drow", "@race:drow")
             .addReplacement("tiefling", "@race:tiefling")
 
+            .addReplacement("use psychic spell-like abilities", "\"Use psychic spell-like abilities\"")
+            .addReplacement("ability to awaken the heart chakra", "\"Ability to awaken the heart chakra\"")
+            .addReplacement("ability to awaken the crown chakra", "\"Ability to awaken the crown chakra\"")
+            .addReplacement("ability to awaken the root chakra", "\"Ability to awaken the root chakra\"")
+
             // removals
-            .addReplacement("occultist {NUMBER}", "(0)")
+//            .addReplacement("occultist {NUMBER}", "(0)")
             .addReplacement("redmantisassassin {NUMBER}", "(0)")
-            .addReplacement("psychic {NUMBER}", "(0)")
+//            .addReplacement("psychic {NUMBER}", "(0)")
             .addReplacement("antipaladin {NUMBER}", "(0)")
-            .addReplacement("mesmerist {NUMBER}", "(0)")
+//            .addReplacement("mesmerist {NUMBER}", "(0)")
             .addReplacement("medium {NUMBER}", "(0)")
             .addReplacement("spiritualist {NUMBER}", "(0)")
             .addReplacement("sahirafiyun {NUMBER}", "(0)")
