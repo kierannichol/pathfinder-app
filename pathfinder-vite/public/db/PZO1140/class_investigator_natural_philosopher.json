@@ -1,0 +1,79 @@
+{
+  "id": "class:investigator#natural_philosopher",
+  "name": "Natural Philosopher",
+  "tags": ["archetype", "investigator"],
+  "enabledFormula": "!@modifies:ability:alchemy#investigator AND !@modifies:ability:trapfinding#investigator AND !@modifies:ability:inspiration#investigator AND !@modifies:trait:weapon_proficiency#investigator AND !@modifies:ability:trap_sense#investigator AND !@modifies:trait:armor_proficiency#investigator AND !@modifies:ability:investigator_talent#investigator",
+  "maxStacks": 1,
+  "description": {
+    "text": "Natural philosophers are scholars, explorers, and survivalists who feel at home in nature, seldom longing for the comforts of the city."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:alchemy#investigator",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trapfinding#investigator",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:inspiration#investigator",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:weapon_proficiency#investigator",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#investigator",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#investigator",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:investigator_talent#investigator",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:investigator",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#investigator_natural_philosopher", "ability:weapon_and_armor_proficiency#investigator_natural_philosopher", "ability:natural_philosophers_inspiration#investigator_natural_philosopher", "ability:track#investigator_natural_philosopher"],
+            "linksToRemove": ["trait:weapon_proficiency#investigator", "trait:armor_proficiency#investigator", "ability:inspiration#investigator", "ability:trapfinding#investigator", "ability:alchemy#investigator"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:trap_sense#investigator"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:herbalism#investigator_natural_philosopher"],
+            "linksToRemove": ["ability:investigator_talent#investigator", "ability:trap_sense#investigator"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:trap_sense#investigator"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:trap_sense#investigator"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:trap_sense#investigator"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:trap_sense#investigator"]
+          }]
+        }]
+      }]
+    }
+  }
+}

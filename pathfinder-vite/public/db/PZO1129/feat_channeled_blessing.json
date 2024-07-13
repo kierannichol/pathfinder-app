@@ -2,7 +2,7 @@
   "id": "feat:channeled_blessing",
   "name": "Channeled Blessing",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@ability:blessings#warpriest,@ability:channel_energy#warpriest)",
+  "enabledFormula": "all(@ability:blessings#*[Blessings],@ability:channel_energy#*[Channel Energy])",
   "maxStacks": 1,
   "description": {
     "text": "Your channeled energy can deliver a warpriest\u0027s blessing.",

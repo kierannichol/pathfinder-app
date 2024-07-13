@@ -1,0 +1,59 @@
+{
+  "id": "class:bard#cultivator",
+  "name": "Cultivator",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:lore_master#bard AND !@modifies:ability:countersong#bard AND !@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:well_versed#bard",
+  "maxStacks": 1,
+  "description": {
+    "text": "Cultivators use music to promote plant growth and influence the behavior of plants both naturally and supernaturally. Most cultivators work in conjunction with local communities to maintain crops and oversee harvests, while others serve as wardens of unspoiled natural wonders."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:lore_master#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:countersong#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bardic_knowledge#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:well_versed#bard",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bard",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:verdant_voice#bard_cultivator", "ability:song_of_growth#bard_cultivator"],
+            "linksToRemove": ["ability:bardic_knowledge#bard", "ability:countersong#bard"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:resist_natures_lure#bard_cultivator"],
+            "linksToRemove": ["ability:well_versed#bard"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:nature_lore#bard_cultivator"],
+            "linksToRemove": ["ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:lore_master#bard"]
+          }]
+        }]
+      }]
+    }
+  }
+}

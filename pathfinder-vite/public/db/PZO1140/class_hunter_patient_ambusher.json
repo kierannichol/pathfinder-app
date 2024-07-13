@@ -1,0 +1,73 @@
+{
+  "id": "class:hunter#patient_ambusher",
+  "name": "Patient Ambusher",
+  "tags": ["archetype", "hunter"],
+  "enabledFormula": "!@modifies:ability:hunter_tactics#hunter AND !@modifies:ability:teamwork_feat#hunter AND !@modifies:ability:nature_training#hunter AND !@modifies:ability:wild_empathy#hunter AND !@modifies:ability:raise_animal_companion#hunter",
+  "maxStacks": 1,
+  "description": {
+    "text": "Wandering the wilds, some hunters eschew the bond of innate teamwork with their animal companions. Instead, these hunters master the creation and deployment of intricate ranger traps, often using themselves or their animal companions to lure foes into their snares."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:hunter_tactics#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:teamwork_feat#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:nature_training#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_empathy#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:raise_animal_companion#hunter",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:hunter",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:trapfinding#hunter_patient_ambusher", "ability:trapfinding#hunter_patient_ambusher"],
+            "linksToRemove": ["ability:nature_training#hunter", "ability:wild_empathy#hunter"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:snare_trap#hunter_patient_ambusher", "ability:additional_traps#hunter_patient_ambusher"],
+            "linksToRemove": ["ability:hunter_tactics#hunter", "ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:launch_trap#hunter_patient_ambusher"],
+            "linksToRemove": ["ability:raise_animal_companion#hunter"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "class:brawler#venomfist",
+  "name": "Venomfist",
+  "tags": ["archetype", "brawler"],
+  "enabledFormula": "!@modifies:ability:close_weapon_mastery#brawler AND !@modifies:ability:knockout#brawler",
+  "maxStacks": 1,
+  "description": {
+    "text": "Thanks to alchemical experiments and rigorous study of venomous creatures, a venomfist has toxic unarmed strikes."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:close_weapon_mastery#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:knockout#brawler",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:brawler",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:venomous_strike#brawler_venomfist"],
+            "linksToRemove": ["ability:knockout#brawler"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:venomous_strike#brawler_venomfist"],
+            "linksToRemove": ["ability:knockout#brawler"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:venomous_strike#brawler_venomfist"],
+            "linksToRemove": ["ability:close_weapon_mastery#brawler"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:venomous_strike#brawler_venomfist"],
+            "linksToRemove": ["ability:knockout#brawler"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -1,50 +1,38 @@
 package pathfinder.model.pathfinder;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import com.fasterxml.jackson.dataformat.yaml.YAMLGenerator;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UncheckedIOException;
 import java.util.Arrays;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
+import pathfinder.model.json.PathfinderJsonModule;
 import pathfinder.util.StringUtils;
 
 @Slf4j
 public class Sources {
-    public static final SourceId CORE = new SourceId(generate("PZO1110"),
-            "PZO1110", "Core Rulebook", "PFRPG Core", "PRPG Core Rulebook", "Pathfinder RPG Core Rulebook");
+    public static final SourceId CORE = findSourceByCode("PZO1110");
 
-    public static final SourceId ADVANCED_PLAYERS_GUIDE = new SourceId(generate("PZO1115"),
-            "PZO1115", "Advanced Player's Guide", "APG", "Pathfinder Roleplaying Game: Advanced Player's Guide");
-    public static final SourceId ADVANCED_CLASS_GUIDE = new SourceId(generate("PZO1129"),
-            "PZO1129", "Advanced Class Guide", "ACG",
-            "Pathfinder Roleplaying Game: Advanced Class Guide");
-    public static final SourceId ADVANCED_RACE_GUIDE = new SourceId(generate("PZO1121"),
-            "PZO1121", "Advanced Race Guide", "ARG",
-            "Pathfinder Roleplaying Game: Advanced Race Guide");
-    public static final SourceId ADVENTURERS_GUIDE = new SourceId(generate("PZO1138"),
-            "PZO1138", "Adventurer's Guide",
-            "Pathfinder Roleplaying Game: Adventurer's Guide");
-    public static final SourceId GAMEMASTERY_GUIDE = new SourceId(generate("PZO1114"),
-            "PZO1114", "GameMastery Guide");
-    public static final SourceId UNCHAINED = new SourceId(generate("PZO1131"),
-            "PZO1131", "Pathfinder Unchained");
-    public static final SourceId ULTIMATE_COMBAT = new SourceId(generate("PZO1118"),
-            "PZO1118", "Ultimate Combat",
-            "Pathfinder Roleplaying Game: Ultimate Combat");
-    public static final SourceId ULTIMATE_EQUIPMENT = new SourceId(generate("PZO1123"),
-            "PZO1123", "Ultimate Equipment",
-            "Pathfinder Roleplaying Game: Ultimate Equipment");
-    public static final SourceId ULTIMATE_MAGIC = new SourceId(generate("PZO1117"),
-            "PZO1117", "Ultimate Magic",
-            "Pathfinder Roleplaying Game: Ultimate Magic", "PRG:UM");
+    public static final SourceId ADVANCED_PLAYERS_GUIDE = findSourceByCode("PZO1115");
+    public static final SourceId ADVANCED_CLASS_GUIDE = findSourceByCode("PZO1129");
+    public static final SourceId ADVANCED_RACE_GUIDE = findSourceByCode("PZO1121");
+    public static final SourceId ADVENTURERS_GUIDE = findSourceByCode("PZO1138");
+    public static final SourceId GAMEMASTERY_GUIDE = findSourceByCode("PZO1114");
+    public static final SourceId UNCHAINED = findSourceByCode("PZO1131");
+    public static final SourceId ULTIMATE_COMBAT = findSourceByCode("PZO1118");
+    public static final SourceId ULTIMATE_EQUIPMENT = findSourceByCode("PZO1123");
+    public static final SourceId ULTIMATE_MAGIC = findSourceByCode("PZO1117");
 
-    public static final SourceId COMPANION_HEROES_OF_THE_HIGH_COURT = new SourceId(
-            generate("PZO9476"),
-            "PZO9476", "Pathfinder Player Companion: Heroes of the High Court");
-    public static final SourceId OCCULT_ADVENTURES = new SourceId(generate("PZO1132"),
-            "PZO1132", "Occult Adventures",
-            "Pathfinder Roleplaying Game: Occult Adventures", "OGL");
+    public static final SourceId COMPANION_HEROES_OF_THE_HIGH_COURT = findSourceByCode("PZO9476");
+    public static final SourceId OCCULT_ADVENTURES = findSourceByCode("PZO1132");
 
-    public static final SourceId THE_INNER_SEA_WORLD_GUIDE = new SourceId(generate("PZO9226"),
-            "PZO9226", "The Inner Sea World Guide",
-            "Pathfinder Campaign Setting: The Inner Sea World Guide");
+    public static final SourceId THE_INNER_SEA_WORLD_GUIDE = findSourceByCode("PZO9226");
 
     public static SourceId findSourceByNameOrCode(String search) {
         if (search == null) {
@@ -62,7 +50,7 @@ public class Sources {
             return null;
         }
         String sanitizedCode = StringUtils.sanitize(code);
-        return SOURCES_LIST.stream()
+        return initialize().stream()
                 .filter(source -> source.code().equalsIgnoreCase(sanitizedCode))
                 .findFirst()
                 .orElse(null);
@@ -77,7 +65,7 @@ public class Sources {
                 .replace("Pathfinder Roleplaying Game ", "")
                 .replace("Pathfinder RPG ", "");
         String sanitizedName = StringUtils.sanitize(name);
-        return SOURCES_LIST.stream()
+        return initialize().stream()
                 .filter(source -> source.name().equalsIgnoreCase(sanitizedName) || Arrays.stream(source.aliases())
                         .anyMatch(alias -> alias.equalsIgnoreCase(sanitizedName)))
                 .findFirst()
@@ -88,50 +76,34 @@ public class Sources {
         return Integer.parseInt(sourceCode.substring(3));
     }
 
-    public static final List<SourceId> SOURCES_LIST = List.of(
-            CORE,
-            ADVANCED_PLAYERS_GUIDE,
-            ADVANCED_CLASS_GUIDE,
-//            ADVANCED_RACE_GUIDE,
-            ADVENTURERS_GUIDE,
-            GAMEMASTERY_GUIDE,
-            new SourceId(generate("PZO1112"), "PZO1112", "Bestiary", "Pathfinder RPG Bestiary"),
-            new SourceId(generate("PZO1116"), "PZO1116", "Bestiary 2"),
-            new SourceId(generate("PZO1120"), "PZO1120", "Bestiary 3"),
-            new SourceId(generate("PZO1127"), "PZO1127", "Bestiary 4"),
-            new SourceId(generate("PZO1133"), "PZO1133", "Bestiary 5"),
-            new SourceId(generate("PZO1137"), "PZO1137", "Bestiary 6"),
-            new SourceId(generate("PZO1128"), "PZO1128", "Strategy Guide"),
-            OCCULT_ADVENTURES,
-            UNCHAINED,
-//            new Source("PZO1136", "Villain Codex"),
-//            new Source("PZO1130", "Monster Codex"),
-//            new Source("PZO1135", "Horror Adventures"),
-//            new Source("PZO1126", "Mythic Adventures"),
-//            new Source("PZO1124", "NPC Codex"),
-//            new Source("PZO1125", "Ultimate Campaign"),
-            ULTIMATE_COMBAT,
-            ULTIMATE_EQUIPMENT,
-//            new Source("PZO1134", "Ultimate Intrigue"),
-            ULTIMATE_MAGIC,
+    private static List<SourceId> sourceList;
 
-//            new Source("PZO1139", "Book of the Damned"),
-//            new Source("PZO1140", "Ultimate Wilderness"),
-//            new Source("PZO1141", "Planar Adventures")
+    private static List<SourceId> initialize() {
+        if (sourceList != null) {
+            return sourceList;
+        }
 
-            // Companions
-            COMPANION_HEROES_OF_THE_HIGH_COURT,
-            THE_INNER_SEA_WORLD_GUIDE
-    );
+        final String path = "db/sources.yml";
+        log.info("Initializing sources DB");
 
-    public static void main(String[] args) {
-        for (SourceId source : SOURCES_LIST) {
-            System.out.printf("- name: \"%s\"%n", source.name());
-            System.out.printf("  code: \"%s\"%n", source.code());
-            System.out.printf("  aliases:%n");
-            for (String alias : source.aliases()) {
-                System.out.printf("   - \"%s\"%n", alias);
+        var objectMapper = new ObjectMapper(new YAMLFactory()
+                .disable(YAMLGenerator.Feature.WRITE_DOC_START_MARKER))
+                .setPropertyNamingStrategy(PropertyNamingStrategies.SNAKE_CASE)
+                .findAndRegisterModules()
+                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+                .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false)
+                .registerModule(new PathfinderJsonModule());
+
+        try (InputStream is = ClassLoader.getSystemResourceAsStream(path)) {
+            if (is == null) {
+                throw new IOException("Unable to open " + path);
             }
+
+            SourceJson[] loaded = objectMapper.readValue(is, SourceJson[].class);
+            sourceList = Arrays.stream(loaded).map(SourceJson::toId).toList();
+            return sourceList;
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
         }
     }
 }

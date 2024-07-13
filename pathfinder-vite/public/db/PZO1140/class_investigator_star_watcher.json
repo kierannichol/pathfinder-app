@@ -1,0 +1,74 @@
+{
+  "id": "class:investigator#star_watcher",
+  "name": "Star Watcher",
+  "tags": ["archetype", "investigator"],
+  "enabledFormula": "!@modifies:ability:alchemy#investigator AND !@modifies:ability:trapfinding#investigator AND !@modifies:trait:weapon_proficiency#investigator AND !@modifies:ability:trap_sense#investigator AND !@modifies:trait:armor_proficiency#investigator",
+  "maxStacks": 1,
+  "description": {
+    "text": "Star watchers study the movements and positions of the sun, the moon, and the stars, searching for secrets written in the sky. They use a combination of scientific study and esoteric arts to measure, record, and predict astronomical cycles and their effects on nature, such as the moon\u0027s influence on tides and rivers. Some star watchers also use these observations to predict fate and significant events, such as natural disasters."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:alchemy#investigator",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trapfinding#investigator",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:weapon_proficiency#investigator",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#investigator",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#investigator",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:investigator",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#investigator_star_watcher", "ability:weapon_and_armor_proficiency#investigator_star_watcher", "ability:astrology#investigator_star_watcher", "ability:starfinding#investigator_star_watcher"],
+            "linksToRemove": ["trait:weapon_proficiency#investigator", "trait:armor_proficiency#investigator", "ability:alchemy#investigator", "ability:trapfinding#investigator"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:starfinding#investigator_star_watcher"],
+            "linksToRemove": ["ability:trap_sense#investigator"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:starfinding#investigator_star_watcher"],
+            "linksToRemove": ["ability:trap_sense#investigator"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:starfinding#investigator_star_watcher"],
+            "linksToRemove": ["ability:trap_sense#investigator"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:starfinding#investigator_star_watcher"],
+            "linksToRemove": ["ability:trap_sense#investigator"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:starfinding#investigator_star_watcher"],
+            "linksToRemove": ["ability:trap_sense#investigator"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:starfinding#investigator_star_watcher"],
+            "linksToRemove": ["ability:trap_sense#investigator"]
+          }]
+        }]
+      }]
+    }
+  }
+}

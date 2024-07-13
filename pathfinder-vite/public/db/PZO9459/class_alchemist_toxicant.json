@@ -1,0 +1,39 @@
+{
+  "id": "class:alchemist#toxicant",
+  "name": "Toxicant",
+  "tags": ["alchemist", "archetype"],
+  "enabledFormula": "!@modifies:ability:mutagen#alchemist AND !@modifies:ability:persistent_mutagen#alchemist",
+  "maxStacks": 1,
+  "description": {
+    "text": "In lands where poisons are legal and may be openly studied and sold, some alchemists obsess over the myriad ways that poisons and venoms can be applied and delivered. Known as toxicants, these deadly artists induce the production of deadly secretions within their own bodies in order to better inflict crippling conditions upon their foes."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:mutagen#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:persistent_mutagen#alchemist",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:alchemist",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:toxic_secretion#alchemist_toxicant"],
+            "linksToRemove": ["ability:mutagen#alchemist"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:toxic_digestion#alchemist_toxicant"],
+            "linksToRemove": ["ability:persistent_mutagen#alchemist"]
+          }]
+        }]
+      }]
+    }
+  }
+}

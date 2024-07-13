@@ -1,0 +1,42 @@
+{
+  "id": "class:monk#monk_of_the_mantis",
+  "name": "Monk of the Mantis",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:quivering_palm#monk AND !@modifies:ability:diamond_soul#monk",
+  "maxStacks": 1,
+  "description": {
+    "text": "A body contains many points where the flesh, mind, and spirit coincide. A monk of the mantis is skilled at manipulating these points. With precise strikes, she temporarily disrupts a body\u0027s connection with the rest of the self."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:quivering_palm#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:diamond_soul#monk",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:pressuring_strikes#monk_monk_of_the_mantis"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:debilitating_blows#monk_monk_of_the_mantis"],
+            "linksToRemove": ["ability:diamond_soul#monk"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:disabling_palm#monk_monk_of_the_mantis"],
+            "linksToRemove": ["ability:quivering_palm#monk"]
+          }]
+        }]
+      }]
+    }
+  }
+}

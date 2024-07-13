@@ -1,0 +1,30 @@
+{
+  "id": "class:witch#season_witch",
+  "name": "Season Witch",
+  "tags": ["archetype", "witch"],
+  "enabledFormula": "!@modifies:ability:hex#witch",
+  "maxStacks": 1,
+  "description": {
+    "text": "Season witches gain their power from the cyclical and mystical exchange of energy passed from one season of nature to another. Often, season witches carry bitter grudges against their fellow witches, with many believing that the season prior to their chosen focus is inferior and the season that replaces their favored time is an usurper of time, but at other times season witches work together, understanding that all are a part of the cycle of the natural world."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:hex#witch",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:witch",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:season_of_the_witch#witch_season_witch"],
+            "linksToRemove": ["ability:hex#witch"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "class:druid#green_faith_initiate",
+  "name": "Green Faith Initiate",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:druids_additional_daily_use_of_wild_shape#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:a_thousand_faces#druid",
+  "maxStacks": 1,
+  "description": {
+    "text": "Druids who are initiated into the magic of nature sometimes demonstrate abilities unique to their organization."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trackless_step#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:druids_additional_daily_use_of_wild_shape#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:venom_immunity#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:a_thousand_faces#druid",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:mediators_ear#druid_green_faith_initiate"],
+            "linksToRemove": ["ability:trackless_step#druid"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:zephyr_message#druid_green_faith_initiate"],
+            "linksToRemove": ["ability:druids_additional_daily_use_of_wild_shape#druid"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:path_to_refuge#druid_green_faith_initiate"],
+            "linksToRemove": ["ability:venom_immunity#druid"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:secrets_across_lifetimes#druid_green_faith_initiate"],
+            "linksToRemove": ["ability:druids_additional_daily_use_of_wild_shape#druid"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:a_thousand_voices#druid_green_faith_initiate"],
+            "linksToRemove": ["ability:a_thousand_faces#druid"]
+          }]
+        }]
+      }]
+    }
+  }
+}

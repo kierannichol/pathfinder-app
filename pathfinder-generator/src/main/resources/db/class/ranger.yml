@@ -295,7 +295,9 @@ class_features:
   name: "Spell Casting (Ranger)"
   label: null
   type: null
-  description: "Ranger can cast spells."
+  description: "Beginning at 4th level, a ranger gains the ability to cast a small\
+    \ number of divine spells, which are drawn from the ranger spell list. A ranger\
+    \ must choose and prepare his spells in advance."
   effects:
   - "SET trait:level_1_spells_per_day#ranger if(@class:ranger>=4,0+if(@class:ranger>4,1,0)+if(@class:ranger>8,1,0)+if(@class:ranger>12,1,0)+if(@class:ranger>16,1,0),null)"
   - "SET trait:level_2_spells_per_day#ranger if(@class:ranger>=7,0+if(@class:ranger>7,1,0)+if(@class:ranger>11,1,0)+if(@class:ranger>15,1,0)+if(@class:ranger>19,1,0),null)"
@@ -303,16 +305,6 @@ class_features:
   - "SET trait:level_4_spells_per_day#ranger if(@class:ranger>=13,0+if(@class:ranger>13,1,0)+if(@class:ranger>17,1,0)+if(@class:ranger>19,1,0),null)"
   prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
-- id: "ability:spellcasting#ranger"
-  name: "Spells (Ranger)"
-  label: null
-  type: null
-  description: "Beginning at 4th level, a ranger gains the ability to cast a small\
-    \ number of divine spells, which are drawn from the ranger spell list. A ranger\
-    \ must choose and prepare his spells in advance."
-  effects: null
-  prerequisites: null
-  source: null
 - id: "ability:swift_tracker#ranger"
   name: "Swift Tracker"
   label: null

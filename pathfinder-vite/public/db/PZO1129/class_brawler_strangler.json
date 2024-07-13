@@ -2,7 +2,7 @@
   "id": "class:brawler#strangler",
   "name": "Strangler",
   "tags": ["archetype", "brawler"],
-  "enabledFormula": "!@modifies:ability:awesome_blow#brawler AND !@modifies:ability:improved_awesome_blow#brawler AND !@modifies:ability:knockout#brawler AND !@modifies:ability:ac_bonus#brawler AND !@modifies:ability:brawlers_flurry#brawler",
+  "enabledFormula": "!@modifies:ability:improved_awesome_blow#brawler AND !@modifies:ability:awesome_blow#brawler AND !@modifies:ability:knockout#brawler AND !@modifies:ability:ac_bonus#brawler AND !@modifies:ability:brawlers_flurry#brawler",
   "maxStacks": 1,
   "description": {
     "text": "A strangler is trained to choke the life out of her victims with her vise-like grip. Some stranglers are self-taught and are little more than brutish murderers, unhinged sociopaths, or opportunistic alley-bashers. Others are members of murder cults or specialized schools of assassination, trained since the cradle to kill with their bare hands."
@@ -12,12 +12,12 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:awesome_blow#brawler",
+            "targetKey": "modifies:ability:improved_awesome_blow#brawler",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:improved_awesome_blow#brawler",
+            "targetKey": "modifies:ability:awesome_blow#brawler",
             "numberValue": 1
           }
         }, {

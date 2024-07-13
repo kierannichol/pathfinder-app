@@ -1,0 +1,66 @@
+{
+  "id": "class:ranger#wilderness_explorer",
+  "name": "Wilderness Explorer",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:quarry#ranger AND !@modifies:ability:hunters_bond#ranger AND !@modifies:ability:improved_quarry#ranger AND !@modifies:ability:swift_tracker#ranger AND !@modifies:ability:wild_empathy#ranger",
+  "maxStacks": 1,
+  "description": {
+    "text": "Wilderness explorers are adept at making peaceful contact with remote societies."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:quarry#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:hunters_bond#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_quarry#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:swift_tracker#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_empathy#ranger",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:cultural_contact#ranger_wilderness_explorer"],
+            "linksToRemove": ["ability:wild_empathy#ranger"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:manifest_spirit#ranger_wilderness_explorer"],
+            "linksToRemove": ["ability:improved_quarry#ranger"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:hazard_sense#ranger_wilderness_explorer"],
+            "linksToRemove": ["ability:hunters_bond#ranger"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:indigenous_spirit#ranger_wilderness_explorer"],
+            "linksToRemove": ["ability:swift_tracker#ranger"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:guardian_spirit#ranger_wilderness_explorer"],
+            "linksToRemove": ["ability:quarry#ranger"]
+          }]
+        }]
+      }]
+    }
+  }
+}

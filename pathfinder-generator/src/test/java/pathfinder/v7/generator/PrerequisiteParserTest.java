@@ -2,16 +2,14 @@ package pathfinder.v7.generator;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import pathfinder.generator.PrerequisiteParser;
-import pathfinder.model.pathfinder.Sources;
+import pathfinder.db.LocalPathfinderDatabaseLoader;
 import pathfinder.db.PathfinderDatabase;
 import pathfinder.db.query.Query;
-import pathfinder.db.LocalPathfinderDatabaseLoader;
+import pathfinder.generator.PrerequisiteParser;
+import pathfinder.model.pathfinder.Sources;
 
 @Slf4j
-@Disabled
 class PrerequisiteParserTest {
     private static PathfinderDatabase database;
     private static PrerequisiteParser prerequisiteParser;
@@ -35,5 +33,11 @@ class PrerequisiteParserTest {
     void feats() {
         database.query(Query.feats()).forEach(feat ->
                 prerequisiteParser.prerequisites(feat));
+    }
+
+    @Test
+    void mercy() {
+        database.query(Query.classFeatures().idMatches("mercy:.*")).forEach(mercy ->
+                prerequisiteParser.prerequisites(mercy));
     }
 }

@@ -1,0 +1,98 @@
+{
+  "id": "class:monk#water_dancer",
+  "name": "Water Dancer",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:quivering_palm#monk AND !@modifies:ability:unarmed_strike#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:abundant_step#monk AND !@modifies:ability:bonus_feat_the_monk_normally_gains#monk AND !@modifies:ability:improved_evasion#monk AND !@modifies:ability:evasion#monk",
+  "maxStacks": 1,
+  "description": {
+    "text": "Water dancers derive their martial training from ancient nereid traditions jealously guarded by these enigmatic fey."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:quivering_palm#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:unarmed_strike#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slow_fall#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:abundant_step#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat_the_monk_normally_gains#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_evasion#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:evasion#monk",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:unarmed_strike#monk_water_dancer"],
+            "linksToRemove": ["ability:bonus_feat_the_monk_normally_gains#monk", "ability:unarmed_strike#monk"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:burn#monk_water_dancer", "ability:wild_talents#monk_water_dancer"],
+            "linksToRemove": ["ability:evasion#monk"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:water_dance#monk_water_dancer"],
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:metakinesis#monk_water_dancer"],
+            "linksToRemove": ["ability:improved_evasion#monk"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:water_stride#monk_water_dancer"],
+            "linksToRemove": ["ability:slow_fall#monk", "ability:abundant_step#monk"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:elemental_focus#monk_water_dancer"],
+            "linksToRemove": ["ability:quivering_palm#monk"]
+          }]
+        }]
+      }]
+    }
+  }
+}

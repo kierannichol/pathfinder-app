@@ -1,0 +1,67 @@
+{
+  "id": "class:druid#dinosaur_druid",
+  "name": "Dinosaur Druid",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:wild_shape#druid AND !@modifies:ability:resist_natures_lure#druid",
+  "maxStacks": 1,
+  "description": {
+    "text": "A dinosaur druid speaks for the spirit of prehistoric nature, even taking the form of great beasts of legend."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:wild_shape#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:resist_natures_lure#druid",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:dinosaur_shape#druid_dinosaur_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:dinosaur_shape#druid_dinosaur_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:dinosaur_shape#druid_dinosaur_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:dinosaur_shape#druid_dinosaur_druid", "ability:primeval_voice#druid_dinosaur_druid"],
+            "linksToRemove": ["ability:wild_shape#druid", "ability:resist_natures_lure#druid"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:dinosaur_shape#druid_dinosaur_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:dinosaur_shape#druid_dinosaur_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:dinosaur_shape#druid_dinosaur_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:dinosaur_shape#druid_dinosaur_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:dinosaur_shape#druid_dinosaur_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }]
+        }]
+      }]
+    }
+  }
+}

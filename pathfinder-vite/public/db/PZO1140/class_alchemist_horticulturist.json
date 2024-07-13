@@ -1,0 +1,101 @@
+{
+  "id": "class:alchemist#horticulturist",
+  "name": "Horticulturist",
+  "tags": ["alchemist", "archetype"],
+  "enabledFormula": "!@modifies:ability:poison_immunity#alchemist AND !@modifies:ability:bomb#alchemist AND !@modifies:ability:discovery_normally#alchemist AND !@modifies:ability:discovery#alchemist AND !@modifies:ability:persistent_mutagen#alchemist",
+  "maxStacks": 1,
+  "description": {
+    "text": "A horticulturist spends his time cultivating plants and plant creatures, allowing him to experiment with strange and wondrous herbal concoctions."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:poison_immunity#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bomb#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:discovery_normally#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:discovery#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:persistent_mutagen#alchemist",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:alchemist",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:seed_extract#alchemist_horticulturist", "ability:herbal_bombs#alchemist_horticulturist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:plant_voice#alchemist_horticulturist"],
+            "linksToRemove": ["ability:discovery_normally#alchemist"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:herbal_bombs#alchemist_horticulturist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:plant_familiar#alchemist_horticulturist"],
+            "linksToRemove": ["ability:discovery#alchemist"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:herbal_bombs#alchemist_horticulturist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:herbal_bombs#alchemist_horticulturist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:herbal_bombs#alchemist_horticulturist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:poison_immunity#alchemist"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:herbal_bombs#alchemist_horticulturist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:herbal_bombs#alchemist_horticulturist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:fury_of_nature#alchemist_horticulturist"],
+            "linksToRemove": ["ability:persistent_mutagen#alchemist"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:herbal_bombs#alchemist_horticulturist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:herbal_bombs#alchemist_horticulturist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:herbal_bombs#alchemist_horticulturist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }]
+        }]
+      }]
+    }
+  }
+}

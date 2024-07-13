@@ -1,0 +1,48 @@
+{
+  "id": "class:skald#boaster",
+  "name": "Boaster",
+  "tags": ["archetype", "skald"],
+  "enabledFormula": "!@modifies:ability:scribe_scroll#skald AND !@modifies:ability:song_of_the_fallen#skald AND !@modifies:ability:rage_power#skald",
+  "maxStacks": 1,
+  "description": {
+    "text": "Boasters use incredible tales and claims to challenge themselves and their allies to accomplish remarkable feats. With a properly delivered boast, a boaster can inspire listeners to attempt, and more often than not, succeed at stunts or tasks they may not have realized they were capable of doing."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:scribe_scroll#skald",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:song_of_the_fallen#skald",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:rage_power#skald",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:skald",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:endurance#skald_boaster"],
+            "linksToRemove": ["ability:scribe_scroll#skald"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:greater_endurance#skald_boaster"],
+            "linksToRemove": ["ability:rage_power#skald"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:frightful_boast#skald_boaster"],
+            "linksToRemove": ["ability:song_of_the_fallen#skald"]
+          }]
+        }]
+      }]
+    }
+  }
+}

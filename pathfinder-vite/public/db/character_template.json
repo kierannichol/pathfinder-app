@@ -17,6 +17,51 @@
       }
     }, {
       "setAction": {
+        "targetKey": "str_bonus_spells_1",
+        "formula": "if(@str_mod\u003e0,1,0)+if(@str_mod\u003e4,1,0)+if(@str_mod\u003e8,1,0)+if(@str_mod\u003e12,1,0)+if(@str_mod\u003e16,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "str_bonus_spells_2",
+        "formula": "if(@str_mod\u003e1,1,0)+if(@str_mod\u003e5,1,0)+if(@str_mod\u003e9,1,0)+if(@str_mod\u003e13,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "str_bonus_spells_3",
+        "formula": "if(@str_mod\u003e2,1,0)+if(@str_mod\u003e6,1,0)+if(@str_mod\u003e10,1,0)+if(@str_mod\u003e14,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "str_bonus_spells_4",
+        "formula": "if(@str_mod\u003e3,1,0)+if(@str_mod\u003e7,1,0)+if(@str_mod\u003e11,1,0)+if(@str_mod\u003e15,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "str_bonus_spells_5",
+        "formula": "if(@str_mod\u003e4,1,0)+if(@str_mod\u003e8,1,0)+if(@str_mod\u003e12,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "str_bonus_spells_6",
+        "formula": "if(@str_mod\u003e5,1,0)+if(@str_mod\u003e9,1,0)+if(@str_mod\u003e13,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "str_bonus_spells_7",
+        "formula": "if(@str_mod\u003e6,1,0)+if(@str_mod\u003e10,1,0)+if(@str_mod\u003e14,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "str_bonus_spells_8",
+        "formula": "if(@str_mod\u003e7,1,0)+if(@str_mod\u003e11,1,0)+if(@str_mod\u003e15,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "str_bonus_spells_9",
+        "formula": "if(@str_mod\u003e8,1,0)+if(@str_mod\u003e12,1,0)+if(@str_mod\u003e16,1,0)"
+      }
+    }, {
+      "setAction": {
         "targetKey": "ability_point_cost:str",
         "formula": "if(@str:base\u003d\u003d7,-4,0) + if(@str:base\u003d\u003d8,-2,0) + if(@str:base\u003d\u003d9,-1,0) + if(@str:base\u003d\u003d10,0,0) + if(@str:base\u003d\u003d11,1,0) + if(@str:base\u003d\u003d12,2,0) + if(@str:base\u003d\u003d13,3,0) + if(@str:base\u003d\u003d14,5,0) + if(@str:base\u003d\u003d15,7,0) + if(@str:base\u003d\u003d16,10,0) + if(@str:base\u003d\u003d17,13,0) + if(@str:base\u003d\u003d18,17,0)"
       }
@@ -34,6 +79,51 @@
       "setAction": {
         "targetKey": "dex_mod",
         "formula": "floor(@dex_score / 2) - 5"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "dex_bonus_spells_1",
+        "formula": "if(@dex_mod\u003e0,1,0)+if(@dex_mod\u003e4,1,0)+if(@dex_mod\u003e8,1,0)+if(@dex_mod\u003e12,1,0)+if(@dex_mod\u003e16,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "dex_bonus_spells_2",
+        "formula": "if(@dex_mod\u003e1,1,0)+if(@dex_mod\u003e5,1,0)+if(@dex_mod\u003e9,1,0)+if(@dex_mod\u003e13,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "dex_bonus_spells_3",
+        "formula": "if(@dex_mod\u003e2,1,0)+if(@dex_mod\u003e6,1,0)+if(@dex_mod\u003e10,1,0)+if(@dex_mod\u003e14,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "dex_bonus_spells_4",
+        "formula": "if(@dex_mod\u003e3,1,0)+if(@dex_mod\u003e7,1,0)+if(@dex_mod\u003e11,1,0)+if(@dex_mod\u003e15,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "dex_bonus_spells_5",
+        "formula": "if(@dex_mod\u003e4,1,0)+if(@dex_mod\u003e8,1,0)+if(@dex_mod\u003e12,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "dex_bonus_spells_6",
+        "formula": "if(@dex_mod\u003e5,1,0)+if(@dex_mod\u003e9,1,0)+if(@dex_mod\u003e13,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "dex_bonus_spells_7",
+        "formula": "if(@dex_mod\u003e6,1,0)+if(@dex_mod\u003e10,1,0)+if(@dex_mod\u003e14,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "dex_bonus_spells_8",
+        "formula": "if(@dex_mod\u003e7,1,0)+if(@dex_mod\u003e11,1,0)+if(@dex_mod\u003e15,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "dex_bonus_spells_9",
+        "formula": "if(@dex_mod\u003e8,1,0)+if(@dex_mod\u003e12,1,0)+if(@dex_mod\u003e16,1,0)"
       }
     }, {
       "setAction": {
@@ -57,6 +147,51 @@
       }
     }, {
       "setAction": {
+        "targetKey": "con_bonus_spells_1",
+        "formula": "if(@con_mod\u003e0,1,0)+if(@con_mod\u003e4,1,0)+if(@con_mod\u003e8,1,0)+if(@con_mod\u003e12,1,0)+if(@con_mod\u003e16,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "con_bonus_spells_2",
+        "formula": "if(@con_mod\u003e1,1,0)+if(@con_mod\u003e5,1,0)+if(@con_mod\u003e9,1,0)+if(@con_mod\u003e13,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "con_bonus_spells_3",
+        "formula": "if(@con_mod\u003e2,1,0)+if(@con_mod\u003e6,1,0)+if(@con_mod\u003e10,1,0)+if(@con_mod\u003e14,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "con_bonus_spells_4",
+        "formula": "if(@con_mod\u003e3,1,0)+if(@con_mod\u003e7,1,0)+if(@con_mod\u003e11,1,0)+if(@con_mod\u003e15,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "con_bonus_spells_5",
+        "formula": "if(@con_mod\u003e4,1,0)+if(@con_mod\u003e8,1,0)+if(@con_mod\u003e12,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "con_bonus_spells_6",
+        "formula": "if(@con_mod\u003e5,1,0)+if(@con_mod\u003e9,1,0)+if(@con_mod\u003e13,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "con_bonus_spells_7",
+        "formula": "if(@con_mod\u003e6,1,0)+if(@con_mod\u003e10,1,0)+if(@con_mod\u003e14,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "con_bonus_spells_8",
+        "formula": "if(@con_mod\u003e7,1,0)+if(@con_mod\u003e11,1,0)+if(@con_mod\u003e15,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "con_bonus_spells_9",
+        "formula": "if(@con_mod\u003e8,1,0)+if(@con_mod\u003e12,1,0)+if(@con_mod\u003e16,1,0)"
+      }
+    }, {
+      "setAction": {
         "targetKey": "ability_point_cost:con",
         "formula": "if(@con:base\u003d\u003d7,-4,0) + if(@con:base\u003d\u003d8,-2,0) + if(@con:base\u003d\u003d9,-1,0) + if(@con:base\u003d\u003d10,0,0) + if(@con:base\u003d\u003d11,1,0) + if(@con:base\u003d\u003d12,2,0) + if(@con:base\u003d\u003d13,3,0) + if(@con:base\u003d\u003d14,5,0) + if(@con:base\u003d\u003d15,7,0) + if(@con:base\u003d\u003d16,10,0) + if(@con:base\u003d\u003d17,13,0) + if(@con:base\u003d\u003d18,17,0)"
       }
@@ -74,6 +209,51 @@
       "setAction": {
         "targetKey": "int_mod",
         "formula": "floor(@int_score / 2) - 5"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "int_bonus_spells_1",
+        "formula": "if(@int_mod\u003e0,1,0)+if(@int_mod\u003e4,1,0)+if(@int_mod\u003e8,1,0)+if(@int_mod\u003e12,1,0)+if(@int_mod\u003e16,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "int_bonus_spells_2",
+        "formula": "if(@int_mod\u003e1,1,0)+if(@int_mod\u003e5,1,0)+if(@int_mod\u003e9,1,0)+if(@int_mod\u003e13,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "int_bonus_spells_3",
+        "formula": "if(@int_mod\u003e2,1,0)+if(@int_mod\u003e6,1,0)+if(@int_mod\u003e10,1,0)+if(@int_mod\u003e14,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "int_bonus_spells_4",
+        "formula": "if(@int_mod\u003e3,1,0)+if(@int_mod\u003e7,1,0)+if(@int_mod\u003e11,1,0)+if(@int_mod\u003e15,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "int_bonus_spells_5",
+        "formula": "if(@int_mod\u003e4,1,0)+if(@int_mod\u003e8,1,0)+if(@int_mod\u003e12,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "int_bonus_spells_6",
+        "formula": "if(@int_mod\u003e5,1,0)+if(@int_mod\u003e9,1,0)+if(@int_mod\u003e13,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "int_bonus_spells_7",
+        "formula": "if(@int_mod\u003e6,1,0)+if(@int_mod\u003e10,1,0)+if(@int_mod\u003e14,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "int_bonus_spells_8",
+        "formula": "if(@int_mod\u003e7,1,0)+if(@int_mod\u003e11,1,0)+if(@int_mod\u003e15,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "int_bonus_spells_9",
+        "formula": "if(@int_mod\u003e8,1,0)+if(@int_mod\u003e12,1,0)+if(@int_mod\u003e16,1,0)"
       }
     }, {
       "setAction": {
@@ -97,6 +277,51 @@
       }
     }, {
       "setAction": {
+        "targetKey": "wis_bonus_spells_1",
+        "formula": "if(@wis_mod\u003e0,1,0)+if(@wis_mod\u003e4,1,0)+if(@wis_mod\u003e8,1,0)+if(@wis_mod\u003e12,1,0)+if(@wis_mod\u003e16,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "wis_bonus_spells_2",
+        "formula": "if(@wis_mod\u003e1,1,0)+if(@wis_mod\u003e5,1,0)+if(@wis_mod\u003e9,1,0)+if(@wis_mod\u003e13,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "wis_bonus_spells_3",
+        "formula": "if(@wis_mod\u003e2,1,0)+if(@wis_mod\u003e6,1,0)+if(@wis_mod\u003e10,1,0)+if(@wis_mod\u003e14,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "wis_bonus_spells_4",
+        "formula": "if(@wis_mod\u003e3,1,0)+if(@wis_mod\u003e7,1,0)+if(@wis_mod\u003e11,1,0)+if(@wis_mod\u003e15,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "wis_bonus_spells_5",
+        "formula": "if(@wis_mod\u003e4,1,0)+if(@wis_mod\u003e8,1,0)+if(@wis_mod\u003e12,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "wis_bonus_spells_6",
+        "formula": "if(@wis_mod\u003e5,1,0)+if(@wis_mod\u003e9,1,0)+if(@wis_mod\u003e13,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "wis_bonus_spells_7",
+        "formula": "if(@wis_mod\u003e6,1,0)+if(@wis_mod\u003e10,1,0)+if(@wis_mod\u003e14,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "wis_bonus_spells_8",
+        "formula": "if(@wis_mod\u003e7,1,0)+if(@wis_mod\u003e11,1,0)+if(@wis_mod\u003e15,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "wis_bonus_spells_9",
+        "formula": "if(@wis_mod\u003e8,1,0)+if(@wis_mod\u003e12,1,0)+if(@wis_mod\u003e16,1,0)"
+      }
+    }, {
+      "setAction": {
         "targetKey": "ability_point_cost:wis",
         "formula": "if(@wis:base\u003d\u003d7,-4,0) + if(@wis:base\u003d\u003d8,-2,0) + if(@wis:base\u003d\u003d9,-1,0) + if(@wis:base\u003d\u003d10,0,0) + if(@wis:base\u003d\u003d11,1,0) + if(@wis:base\u003d\u003d12,2,0) + if(@wis:base\u003d\u003d13,3,0) + if(@wis:base\u003d\u003d14,5,0) + if(@wis:base\u003d\u003d15,7,0) + if(@wis:base\u003d\u003d16,10,0) + if(@wis:base\u003d\u003d17,13,0) + if(@wis:base\u003d\u003d18,17,0)"
       }
@@ -114,6 +339,51 @@
       "setAction": {
         "targetKey": "cha_mod",
         "formula": "floor(@cha_score / 2) - 5"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "cha_bonus_spells_1",
+        "formula": "if(@cha_mod\u003e0,1,0)+if(@cha_mod\u003e4,1,0)+if(@cha_mod\u003e8,1,0)+if(@cha_mod\u003e12,1,0)+if(@cha_mod\u003e16,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "cha_bonus_spells_2",
+        "formula": "if(@cha_mod\u003e1,1,0)+if(@cha_mod\u003e5,1,0)+if(@cha_mod\u003e9,1,0)+if(@cha_mod\u003e13,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "cha_bonus_spells_3",
+        "formula": "if(@cha_mod\u003e2,1,0)+if(@cha_mod\u003e6,1,0)+if(@cha_mod\u003e10,1,0)+if(@cha_mod\u003e14,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "cha_bonus_spells_4",
+        "formula": "if(@cha_mod\u003e3,1,0)+if(@cha_mod\u003e7,1,0)+if(@cha_mod\u003e11,1,0)+if(@cha_mod\u003e15,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "cha_bonus_spells_5",
+        "formula": "if(@cha_mod\u003e4,1,0)+if(@cha_mod\u003e8,1,0)+if(@cha_mod\u003e12,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "cha_bonus_spells_6",
+        "formula": "if(@cha_mod\u003e5,1,0)+if(@cha_mod\u003e9,1,0)+if(@cha_mod\u003e13,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "cha_bonus_spells_7",
+        "formula": "if(@cha_mod\u003e6,1,0)+if(@cha_mod\u003e10,1,0)+if(@cha_mod\u003e14,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "cha_bonus_spells_8",
+        "formula": "if(@cha_mod\u003e7,1,0)+if(@cha_mod\u003e11,1,0)+if(@cha_mod\u003e15,1,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "cha_bonus_spells_9",
+        "formula": "if(@cha_mod\u003e8,1,0)+if(@cha_mod\u003e12,1,0)+if(@cha_mod\u003e16,1,0)"
       }
     }, {
       "setAction": {

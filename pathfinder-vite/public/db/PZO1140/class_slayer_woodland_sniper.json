@@ -1,0 +1,83 @@
+{
+  "id": "class:slayer#woodland_sniper",
+  "name": "Woodland Sniper",
+  "tags": ["archetype", "slayer"],
+  "enabledFormula": "!@modifies:ability:track#slayer AND !@modifies:ability:stalker#slayer AND !@modifies:ability:slayers_advance#slayer AND !@modifies:ability:swift_tracker#slayer AND !@modifies:ability:sneak_attack#slayer",
+  "maxStacks": 1,
+  "description": {
+    "text": "Woodland snipers are guardians of forest and grove, keeping vigil on their borders and hunting bounties and trespassers from the shelter of sturdy branches."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:track#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:stalker#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slayers_advance#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:swift_tracker#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:sneak_attack#slayer",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:slayer",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:slayers_advance#slayer"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:tree_climber#slayer_woodland_sniper"],
+            "linksToRemove": ["ability:track#slayer"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:sneak_attack#slayer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:ranged_sneak_attack#slayer_woodland_sniper"],
+            "linksToRemove": ["ability:sneak_attack#slayer"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:sneak_attack#slayer"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:still_shot#slayer_woodland_sniper"],
+            "linksToRemove": ["ability:stalker#slayer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:sneak_attack#slayer"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:branchwalking#slayer_woodland_sniper"],
+            "linksToRemove": ["ability:swift_tracker#slayer"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:sneak_attack#slayer"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:slayers_advance#slayer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:sneak_attack#slayer"]
+          }]
+        }]
+      }]
+    }
+  }
+}

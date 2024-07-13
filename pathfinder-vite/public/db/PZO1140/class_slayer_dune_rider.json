@@ -1,0 +1,77 @@
+{
+  "id": "class:slayer#dune_rider",
+  "name": "Dune Rider",
+  "tags": ["archetype", "slayer"],
+  "enabledFormula": "!@modifies:ability:track#slayer AND !@modifies:ability:studied_target#slayer AND !@modifies:ability:stalker#slayer AND !@modifies:ability:slayer_talent_normally#slayer AND !@modifies:ability:master_slayer#slayer",
+  "maxStacks": 1,
+  "description": {
+    "text": "Mounted harriers, saboteurs, and skirmishers, dune riders can disrupt even the most organized opposition."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:track#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:studied_target#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:stalker#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slayer_talent_normally#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:master_slayer#slayer",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:slayer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:sand_foot#slayer_dune_rider", "ability:desert_skirmisher#slayer_dune_rider"],
+            "linksToRemove": ["ability:track#slayer", "ability:studied_target#slayer"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:galloping_fire#slayer_dune_rider"],
+            "linksToRemove": ["ability:slayer_talent_normally#slayer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:desert_skirmisher#slayer_dune_rider", "ability:dunes_of_death#slayer_dune_rider"],
+            "linksToRemove": ["ability:studied_target#slayer", "ability:master_slayer#slayer"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:desert_skirmisher#slayer_dune_rider"],
+            "linksToRemove": ["ability:studied_target#slayer"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:stalker#slayer"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:dust_vision#slayer_dune_rider"],
+            "linksToRemove": ["ability:slayer_talent_normally#slayer"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:desert_skirmisher#slayer_dune_rider"],
+            "linksToRemove": ["ability:studied_target#slayer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:desert_skirmisher#slayer_dune_rider"],
+            "linksToRemove": ["ability:studied_target#slayer"]
+          }]
+        }]
+      }]
+    }
+  }
+}

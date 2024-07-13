@@ -1,0 +1,86 @@
+{
+  "id": "class:barbarian#pack_hunter",
+  "name": "Pack Hunter",
+  "tags": ["archetype", "barbarian"],
+  "enabledFormula": "!@modifies:ability:trap_sense#barbarian AND !@modifies:ability:rage_power_normally#barbarian AND !@modifies:ability:rage_power#barbarian",
+  "maxStacks": 1,
+  "description": {
+    "text": "Pack hunter barbarians team up to hunt dangerous prey to feed, to protect their camps, and as a rite of passage. Often, a tribe of pack hunters looks to a specific species of animal (such as wolves) who themselves hunt in packs, and view these animals as sacred manifestations of their people\u0027s traditions and values."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:rage_power_normally#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:rage_power#barbarian",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:barbarian",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:bonus_feat#barbarian_pack_hunter"],
+            "linksToRemove": ["ability:rage_power#barbarian"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:in_and_out#barbarian_pack_hunter"],
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:bonus_feat#barbarian_pack_hunter"],
+            "linksToRemove": ["ability:rage_power#barbarian"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:bonus_feat#barbarian_pack_hunter", "ability:sympathetic_rage#barbarian_pack_hunter"],
+            "linksToRemove": ["ability:rage_power#barbarian", "ability:trap_sense#barbarian", "ability:rage_power_normally#barbarian"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:bonus_feat#barbarian_pack_hunter"],
+            "linksToRemove": ["ability:rage_power#barbarian"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:bonus_feat#barbarian_pack_hunter"],
+            "linksToRemove": ["ability:rage_power#barbarian"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:bonus_feat#barbarian_pack_hunter"],
+            "linksToRemove": ["ability:rage_power#barbarian", "ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:bonus_feat#barbarian_pack_hunter"],
+            "linksToRemove": ["ability:rage_power#barbarian"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:bonus_feat#barbarian_pack_hunter"],
+            "linksToRemove": ["ability:rage_power#barbarian"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:bonus_feat#barbarian_pack_hunter"],
+            "linksToRemove": ["ability:rage_power#barbarian", "ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:bonus_feat#barbarian_pack_hunter"],
+            "linksToRemove": ["ability:rage_power#barbarian"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -61,6 +61,9 @@ public class GeneratorApplication {
             var sources = db.sources();
 
             for (SourceId sourceId : sources) {
+                if (!sourceId.enabled()) {
+                    continue;
+                }
                 log.info("Generating module \"%s\"...".formatted(sourceId.name()));
                 ctx.getBean(SourceModuleDatabaseGenerator.class, sourceId).generate();
                 ctx.getBean(SourceModuleItemDatabaseGenerator.class, sourceId).generate();

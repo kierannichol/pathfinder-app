@@ -1,0 +1,84 @@
+{
+  "id": "class:barbarian#untamed_rager",
+  "name": "Untamed Rager",
+  "tags": ["archetype", "barbarian"],
+  "enabledFormula": "!@modifies:ability:trap_sense#barbarian AND !@modifies:ability:uncanny_dodge#barbarian AND !@modifies:ability:improved_uncanny_dodge#barbarian AND !@modifies:ability:damage_reduction#barbarian",
+  "maxStacks": 1,
+  "description": {
+    "text": "There are no rules in the wild. Some barbarians enter combat with only victory in mind and do anything in their power to achieve it."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:damage_reduction#barbarian",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:barbarian",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:despicable_tactics#barbarian_untamed_rager"],
+            "linksToRemove": ["ability:uncanny_dodge#barbarian"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:feral_appearance#barbarian_untamed_rager"],
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:deplorable_tactics#barbarian_untamed_rager"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#barbarian"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:dishonorable#barbarian_untamed_rager"],
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }]
+        }]
+      }]
+    }
+  }
+}

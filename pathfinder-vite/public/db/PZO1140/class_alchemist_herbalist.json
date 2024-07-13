@@ -1,0 +1,44 @@
+{
+  "id": "class:alchemist#herbalist",
+  "name": "Herbalist",
+  "tags": ["alchemist", "archetype"],
+  "enabledFormula": "!@modifies:ability:poison_immunity#alchemist AND !@modifies:ability:throw_anything#alchemist AND !@modifies:ability:alchemy#alchemist",
+  "maxStacks": 1,
+  "description": {
+    "text": "Vine leshys who study the physical and spiritual composition of their own bodies have discovered a strange herbal alchemy all their own."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:poison_immunity#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:throw_anything#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:alchemy#alchemist",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:alchemist",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:herbalism#alchemist_herbalist", "ability:natural_magic#alchemist_herbalist"],
+            "linksToRemove": ["ability:alchemy#alchemist", "ability:throw_anything#alchemist"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:seedpods#alchemist_herbalist"],
+            "linksToRemove": ["ability:poison_immunity#alchemist"]
+          }]
+        }]
+      }]
+    }
+  }
+}

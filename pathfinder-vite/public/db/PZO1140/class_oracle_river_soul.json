@@ -1,0 +1,39 @@
+{
+  "id": "class:oracle#river_soul",
+  "name": "River Soul",
+  "tags": ["archetype", "oracle"],
+  "enabledFormula": "!@modifies:ability:oracles_curse#oracle AND !@modifies:ability:final_revelation#oracle",
+  "maxStacks": 1,
+  "description": {
+    "text": "River soul oracles derive their powers from their bonds with rivers, whether these waterways are rapid cascades or lazy channels plied by boats. The powerful bond formed with a river is also the river soul oracle\u0027s curse, as he must always carry water from the river with him, and his fate is bound to it. River soul oracles can be gentle and still when calm, but they\u0027re raging torrents when angered."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:oracles_curse#oracle",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:final_revelation#oracle",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:oracle",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:river_bound_curse#oracle_river_soul"],
+            "linksToRemove": ["ability:oracles_curse#oracle"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:revelation#oracle_river_soul"],
+            "linksToRemove": ["ability:final_revelation#oracle"]
+          }]
+        }]
+      }]
+    }
+  }
+}

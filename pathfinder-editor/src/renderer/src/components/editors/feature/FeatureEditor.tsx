@@ -8,9 +8,9 @@ import {DescriptionField} from "../../fields/DescriptionField";
 import {SourceField} from "../../fields/SourceField";
 import {SaveButton} from "../../SaveButton";
 import {LabelField} from "../../fields/LabelField";
-import {EnabledFormulaField} from "../../fields/EnabledFormulaField";
 import {TagsField} from "../../fields/TagsField";
 import {StacksField} from "../../fields/StacksField";
+import {PrerequisitesField} from "../../fields/PrerequisitesField";
 import DescriptionDbo = data.DescriptionDbo;
 
 interface FeatureEditorProps {
@@ -24,7 +24,7 @@ export default function FeatureEditor({ feature, onSave }: FeatureEditorProps) {
   const [ label, setLabel ] = useState(feature.label ?? '');
   const [ tags, setTags ] = useState(feature.tags);
   const [ description, setDescription ] = useState(feature.description ?? new DescriptionDbo());
-  const [ enabledFormula, setEnabledFormula ] = useState(feature.enabledFormula);
+  const [ prerequisites, setPrerequisites ] = useState(feature.prerequisites);
   const [ fixedStacks, setFixedStacks ] = useState(feature.fixed_stacks);
   const [ repeatingStack, setRepeatingStack ] = useState(feature.repeating_stack);
   const [ source, setSource ] = useState(feature.source);
@@ -37,7 +37,7 @@ export default function FeatureEditor({ feature, onSave }: FeatureEditorProps) {
       label: label === "" ? null : label,
       tags: tags,
       description: description,
-      enabledFormula: enabledFormula,
+      prerequisites: prerequisites,
       fixed_stacks: fixedStacks,
       repeating_stack: repeatingStack,
     } as FeatureRef;
@@ -64,7 +64,7 @@ export default function FeatureEditor({ feature, onSave }: FeatureEditorProps) {
       <LabelField value={label} onChange={setLabel} />
       <TagsField value={tags} onChange={setTags} />
       <DescriptionField value={description} onChange={setDescription} />
-      <EnabledFormulaField value={enabledFormula} onChange={setEnabledFormula} />
+      <PrerequisitesField value={prerequisites} onChange={setPrerequisites} />
       <StacksField fixedStacks={fixedStacks} repeatingStack={repeatingStack} onChangeFixedStack={setFixedStacks} onChangeRepeatingStack={setRepeatingStack} />
       <SourceField value={source} onChange={setSource} />
     </section>

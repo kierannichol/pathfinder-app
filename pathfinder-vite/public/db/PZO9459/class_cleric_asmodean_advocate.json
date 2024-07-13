@@ -1,0 +1,30 @@
+{
+  "id": "class:cleric#asmodean_advocate",
+  "name": "Asmodean Advocate",
+  "tags": ["archetype", "cleric"],
+  "enabledFormula": "!@modifies:ability:domains#cleric",
+  "maxStacks": 1,
+  "description": {
+    "text": "For the faithful of Asmodeus, the words used in a negotiation or contract matter more than their intent."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:domains#cleric",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:pact_bound#cleric_asmodean_advocate"],
+            "linksToRemove": ["ability:domains#cleric"]
+          }]
+        }]
+      }]
+    }
+  }
+}

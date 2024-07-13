@@ -1,0 +1,63 @@
+{
+  "id": "class:rogue#desert_raider",
+  "name": "Desert Raider",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:rogue_talent#rogue AND !@modifies:ability:trapfinding#rogue AND !@modifies:ability:trap_sense#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "Desert raiders constantly threaten caravans that cross vast, desolate expanses. Some desert raiders are tribespeople who raid to supplement their hardscrabble existence, while others are career thieves who take to the desert to avoid the noose. To survive, a desert raider must learn the secrets of the deserts and become inured to their dangers."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:rogue_talent#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trapfinding#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#rogue",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:rogue",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:desert_tracker#rogue_desert_raider"],
+            "linksToRemove": ["ability:trapfinding#rogue"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:sun_at_your_back#rogue_desert_raider"],
+            "linksToRemove": ["ability:rogue_talent#rogue"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:light_step#rogue_desert_raider"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }]
+        }]
+      }]
+    }
+  }
+}

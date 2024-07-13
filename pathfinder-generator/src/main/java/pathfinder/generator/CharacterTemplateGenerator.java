@@ -58,6 +58,42 @@ public class CharacterTemplateGenerator {
                         "%s_mod".formatted(abilityScore.shortName()),
                         "floor(@%s_score / 2) - 5".formatted(abilityScore.shortName())));
                 level.addEffect(Effect.setFormula(
+                        "%s_bonus_spells_1".formatted(abilityScore.shortName()),
+                        "if(@{ability}_mod>0,1,0)+if(@{ability}_mod>4,1,0)+if(@{ability}_mod>8,1,0)+if(@{ability}_mod>12,1,0)+if(@{ability}_mod>16,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                ));
+                level.addEffect(Effect.setFormula(
+                        "%s_bonus_spells_2".formatted(abilityScore.shortName()),
+                        "if(@{ability}_mod>1,1,0)+if(@{ability}_mod>5,1,0)+if(@{ability}_mod>9,1,0)+if(@{ability}_mod>13,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                ));
+                level.addEffect(Effect.setFormula(
+                        "%s_bonus_spells_3".formatted(abilityScore.shortName()),
+                        "if(@{ability}_mod>2,1,0)+if(@{ability}_mod>6,1,0)+if(@{ability}_mod>10,1,0)+if(@{ability}_mod>14,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                ));
+                level.addEffect(Effect.setFormula(
+                        "%s_bonus_spells_4".formatted(abilityScore.shortName()),
+                        "if(@{ability}_mod>3,1,0)+if(@{ability}_mod>7,1,0)+if(@{ability}_mod>11,1,0)+if(@{ability}_mod>15,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                ));
+                level.addEffect(Effect.setFormula(
+                        "%s_bonus_spells_5".formatted(abilityScore.shortName()),
+                        "if(@{ability}_mod>4,1,0)+if(@{ability}_mod>8,1,0)+if(@{ability}_mod>12,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                ));
+                level.addEffect(Effect.setFormula(
+                        "%s_bonus_spells_6".formatted(abilityScore.shortName()),
+                        "if(@{ability}_mod>5,1,0)+if(@{ability}_mod>9,1,0)+if(@{ability}_mod>13,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                ));
+                level.addEffect(Effect.setFormula(
+                        "%s_bonus_spells_7".formatted(abilityScore.shortName()),
+                        "if(@{ability}_mod>6,1,0)+if(@{ability}_mod>10,1,0)+if(@{ability}_mod>14,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                ));
+                level.addEffect(Effect.setFormula(
+                        "%s_bonus_spells_8".formatted(abilityScore.shortName()),
+                        "if(@{ability}_mod>7,1,0)+if(@{ability}_mod>11,1,0)+if(@{ability}_mod>15,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                ));
+                level.addEffect(Effect.setFormula(
+                        "%s_bonus_spells_9".formatted(abilityScore.shortName()),
+                        "if(@{ability}_mod>8,1,0)+if(@{ability}_mod>12,1,0)+if(@{ability}_mod>16,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                ));
+                level.addEffect(Effect.setFormula(
                         "ability_point_cost:%s".formatted(abilityScore.shortName()),
                         "if(@%s:base==7,-4,0) + if(@%s:base==8,-2,0) + if(@%s:base==9,-1,0) + if(@%s:base==10,0,0) + if(@%s:base==11,1,0) + if(@%s:base==12,2,0) + if(@%s:base==13,3,0) + if(@%s:base==14,5,0) + if(@%s:base==15,7,0) + if(@%s:base==16,10,0) + if(@%s:base==17,13,0) + if(@%s:base==18,17,0)".formatted(abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName())));
 

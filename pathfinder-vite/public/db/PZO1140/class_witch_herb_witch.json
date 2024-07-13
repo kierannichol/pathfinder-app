@@ -1,0 +1,32 @@
+{
+  "id": "class:witch#herb_witch",
+  "name": "Herb Witch",
+  "tags": ["archetype", "witch"],
+  "enabledFormula": "!@modifies:ability:hexes#witch",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some witches dedicate their lives to the mastery of herb lore. Herb witches brew foul-tasting medicines, sweet poisons, and other concoctions from the untamed plants of the wild."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:hexes#witch",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:witch",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToRemove": ["ability:hexes#witch"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:hexes#witch"]
+          }]
+        }]
+      }]
+    }
+  }
+}

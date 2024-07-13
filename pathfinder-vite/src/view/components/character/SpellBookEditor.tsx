@@ -2,7 +2,7 @@ import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
 import {useMemo} from "react";
 import {ResolvedValue} from "@kierannichol/formula-js";
 import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
-import {ChoiceInputType, ChoiceSelectedHandler, SelectChoiceRef} from "../../../data/v8/Choice.ts";
+import {ChoiceInputType, ChoiceSelectedHandler, SelectChoiceRef} from "@/data/v8/Choice.ts";
 
 interface SpellBookEditorProps {
   characterAtLevel: CharacterAtLevel;
@@ -46,7 +46,6 @@ function spellsKnown(characterAtLevel: CharacterAtLevel, spellLv: number) {
   const resolved = characterAtLevel.resolve(
       // `sum(@trait:level_${spellLv}_spells_per_day#*)`
       `{sum(@trait:level_${spellLv}_spells_per_day#*)}`
-
   ) ?? ResolvedValue.None;
   if (resolved.equals(ResolvedValue.of(''))) {
     return "-";

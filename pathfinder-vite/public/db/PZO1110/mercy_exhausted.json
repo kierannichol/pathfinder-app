@@ -1,7 +1,8 @@
 {
   "id": "mercy:exhausted",
   "name": "Exhausted",
-  "tags": ["class_feature", "paladin", "mercy"],
+  "tags": ["class_feature", "mercy", "paladin"],
+  "enabledFormula": "all(@class:paladin\u003e\u003d9,@mercy:fatigued)",
   "description": {
     "text": "The target is no longer exhausted. The paladin must have the fatigue mercy before selecting this mercy."
   },

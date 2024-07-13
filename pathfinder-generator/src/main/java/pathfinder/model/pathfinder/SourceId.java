@@ -8,10 +8,11 @@ import pathfinder.model.id.IntId;
 
 public class SourceId implements Serializable {
 
-    public static final SourceId NONE = new SourceId(0,"", "");
+    public static final SourceId NONE = new SourceId(0,"", "", false);
 
     private final int id;
     private final String code;
+    private final boolean enabled;
     private final String name;
     private final String[] aliases;
 
@@ -21,6 +22,18 @@ public class SourceId implements Serializable {
         this.id = id;
         this.code = code;
         this.name = name;
+        this.enabled = true;
+        this.aliases = aliases;
+
+        this.idGenerator = new PersistedIdGenerator(code,
+                new SourceModuleIdGenerator(id));
+    }
+
+    public SourceId(int id, String code, String name, boolean enabled, String ...aliases) {
+        this.id = id;
+        this.code = code;
+        this.name = name;
+        this.enabled = enabled;
         this.aliases = aliases;
 
         this.idGenerator = new PersistedIdGenerator(code,
@@ -46,6 +59,10 @@ public class SourceId implements Serializable {
 
     public String[] aliases() {
         return aliases;
+    }
+
+    public boolean enabled() {
+        return enabled;
     }
 
     public int id() {

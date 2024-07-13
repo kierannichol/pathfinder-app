@@ -1,0 +1,48 @@
+{
+  "id": "class:rogue#sylvan_trickster",
+  "name": "Sylvan Trickster",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:improved_uncanny_dodge#rogue AND !@modifies:ability:uncanny_dodge#rogue AND !@modifies:ability:trapfinding#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "Sylvan tricksters are rogues who model themselves after the mischievous fey of legend. Though not spellcasters, sylvan tricksters learn minor magical abilities reminiscent of those favored by fey creatures. The journey for many sylvan tricksters began in childhood, learning at an elder\u0027s knee the stories of the fey and the secrets of how to resist their tricks. Sylvan tricksters often live in areas where the boundary with the Fey World is thin, and a few have even been there-- voluntarily or not."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trapfinding#rogue",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:rogue",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:wild_empathy#rogue_sylvan_trickster"],
+            "linksToRemove": ["ability:trapfinding#rogue"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:resist_natures_lure#rogue_sylvan_trickster"],
+            "linksToRemove": ["ability:uncanny_dodge#rogue"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:fey_resistance#rogue_sylvan_trickster"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#rogue"]
+          }]
+        }]
+      }]
+    }
+  }
+}

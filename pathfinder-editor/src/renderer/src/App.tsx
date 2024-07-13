@@ -57,8 +57,9 @@ function App() {
       return window.api.save_feature(feature);
   }
 
-  function handleSaveMultiple(features: FeatureRef[]) {
-
+  async function handleSaveMultiple(features: FeatureRef[]): Promise<void> {
+    const promises = features.map(feature => window.api.save_feature(feature))
+    await Promise.all(promises);
   }
 
   if (!segmentKeys) {

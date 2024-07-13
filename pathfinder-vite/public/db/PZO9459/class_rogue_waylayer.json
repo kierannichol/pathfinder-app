@@ -1,0 +1,61 @@
+{
+  "id": "class:rogue#waylayer",
+  "name": "Waylayer",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:improved_uncanny_dodge#rogue AND !@modifies:ability:rogue_talent#rogue AND !@modifies:ability:uncanny_dodge#rogue AND !@modifies:ability:trapfinding#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "A clever rogue knows the easiest battle to win is the one that\u0027s over before your foe knows it has begun. Some rogues thus specialize in setting up ambushes to catch their opponents off guard."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:rogue_talent#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trapfinding#rogue",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:rogue",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:staggering_reflexes#rogue_waylayer"],
+            "linksToRemove": ["ability:trapfinding#rogue"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:masterful_reflexes#rogue_waylayer"],
+            "linksToRemove": ["ability:rogue_talent#rogue"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:ambuscading_sneak_attack#rogue_waylayer"],
+            "linksToRemove": ["ability:uncanny_dodge#rogue"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:danger_awareness#rogue_waylayer"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#rogue"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:exceptional_reflexes#rogue_waylayer"],
+            "linksToRemove": ["ability:rogue_talent#rogue"]
+          }]
+        }]
+      }]
+    }
+  }
+}

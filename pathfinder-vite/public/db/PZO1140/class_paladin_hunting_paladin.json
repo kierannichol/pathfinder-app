@@ -1,0 +1,78 @@
+{
+  "id": "class:paladin#hunting_paladin",
+  "name": "Hunting Paladin",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:use_of_smite_evil#paladin AND !@modifies:ability:detect_evil#paladin AND !@modifies:ability:smite_evil#paladin AND !@modifies:ability:aura_of_resolve#paladin AND !@modifies:trait:armor_proficiency#paladin",
+  "maxStacks": 1,
+  "description": {
+    "text": "Hunting paladins are tenacious trackers and stealthy stalkers in pursuit of evildoers."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:use_of_smite_evil#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:detect_evil#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:smite_evil#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_resolve#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#paladin",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:smite_evil#paladin_hunting_paladin"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#paladin_hunting_paladin", "ability:detect_evil#paladin_hunting_paladin", "ability:smite_evil#paladin_hunting_paladin"],
+            "linksToRemove": ["trait:armor_proficiency#paladin", "ability:use_of_smite_evil#paladin", "ability:detect_evil#paladin", "ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:smite_evil#paladin_hunting_paladin"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:smite_evil#paladin_hunting_paladin"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:smite_evil#paladin_hunting_paladin"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:tireless_aura#paladin_hunting_paladin"],
+            "linksToRemove": ["ability:aura_of_resolve#paladin"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:smite_evil#paladin_hunting_paladin"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:smite_evil#paladin_hunting_paladin"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }]
+        }]
+      }]
+    }
+  }
+}

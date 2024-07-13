@@ -1,0 +1,75 @@
+{
+  "id": "class:brawler#living_avalanche",
+  "name": "Living Avalanche",
+  "tags": ["archetype", "brawler"],
+  "enabledFormula": "!@modifies:ability:maneuver_training#brawler AND !@modifies:ability:bonus_feat#brawler AND !@modifies:ability:awesome_blow#brawler AND !@modifies:ability:improved_awesome_blow#brawler",
+  "maxStacks": 1,
+  "description": {
+    "text": "When a living avalanche is on the move, no one can stand in her way."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:maneuver_training#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:awesome_blow#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_awesome_blow#brawler",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:brawler",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:avalanche#brawler_living_avalanche"],
+            "linksToRemove": ["ability:awesome_blow#brawler"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:earth_discipline#brawler_living_avalanche"],
+            "linksToRemove": ["ability:bonus_feat#brawler"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:landslide#brawler_living_avalanche"],
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:improved_avalanche#brawler_living_avalanche"],
+            "linksToRemove": ["ability:improved_awesome_blow#brawler"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:unyielding#brawler_living_avalanche"]
+          }, {
+            "targetStackCount": 5,
+            "linksToRemove": ["ability:bonus_feat#brawler"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }]
+        }]
+      }]
+    }
+  }
+}

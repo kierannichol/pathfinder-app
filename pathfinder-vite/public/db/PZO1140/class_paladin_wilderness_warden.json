@@ -1,0 +1,90 @@
+{
+  "id": "class:paladin#wilderness_warden",
+  "name": "Wilderness Warden",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:aura_of_courage#paladin AND !@modifies:ability:smite_evil#paladin AND !@modifies:ability:divine_grace#paladin AND !@modifies:ability:aura_of_resolve#paladin AND !@modifies:ability:aura_of_justice#paladin",
+  "maxStacks": 1,
+  "description": {
+    "text": "Wilderness wardens are vigilant guardians of natural places of all kinds, from mountain peaks to tangled thickets."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_courage#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:smite_evil#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:divine_grace#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_resolve#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_justice#paladin",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:smite_evil#paladin_wilderness_warden"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:smite_evil#paladin_wilderness_warden"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:natural_defense#paladin_wilderness_warden"],
+            "linksToRemove": ["ability:divine_grace#paladin"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:aura_of_comfort#paladin_wilderness_warden", "ability:favored_terrain#paladin_wilderness_warden"],
+            "linksToRemove": ["ability:aura_of_courage#paladin"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:smite_evil#paladin_wilderness_warden"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:smite_evil#paladin_wilderness_warden"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:smite_evil#paladin_wilderness_warden"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:aura_of_purity#paladin_wilderness_warden"],
+            "linksToRemove": ["ability:aura_of_resolve#paladin"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:smite_evil#paladin_wilderness_warden"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:natural_shield#paladin_wilderness_warden"],
+            "linksToRemove": ["ability:aura_of_justice#paladin"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:smite_evil#paladin_wilderness_warden"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }]
+        }]
+      }]
+    }
+  }
+}

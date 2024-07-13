@@ -1,0 +1,21 @@
+{
+  "id": "ability:rage_power#skald_boaster",
+  "name": "Rage Power",
+  "tags": ["ability", "class_feature", "skald"],
+  "description": {
+    "text": "The boaster does not gain this ability until 4th level."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "choices": [{
+        "choiceId": "rage_power",
+        "label": "Rage Power",
+        "type": "rage_power",
+        "featureSelect": {
+          "optionTags": ["rage_power"],
+          "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+        }
+      }]
+    }
+  }
+}

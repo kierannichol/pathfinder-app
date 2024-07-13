@@ -1,0 +1,94 @@
+{
+  "id": "class:druid#kraken_caller",
+  "name": "Kraken Caller",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:wild_shape#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:woodland_stride#druid",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some druids draw upon power irreverently stolen from one of the most dangerous creatures of the depths: the kraken."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trackless_step#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:resist_natures_lure#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_shape#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:a_thousand_faces#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#druid",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:wild_shape#druid_kraken_caller"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:wild_shape#druid_kraken_caller"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:dauntless_swimmer#druid_kraken_caller"],
+            "linksToRemove": ["ability:woodland_stride#druid"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:hold_breath#druid_kraken_caller"],
+            "linksToRemove": ["ability:trackless_step#druid"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:wild_shape#druid_kraken_caller"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:resist_the_waves_lure#druid_kraken_caller", "ability:wild_shape#druid_kraken_caller"],
+            "linksToRemove": ["ability:resist_natures_lure#druid", "ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:wild_shape#druid_kraken_caller"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:wild_shape#druid_kraken_caller"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:wild_shape#druid_kraken_caller"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:wild_shape#druid_kraken_caller"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:beast_of_the_depths#druid_kraken_caller"],
+            "linksToRemove": ["ability:a_thousand_faces#druid"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:wild_shape#druid_kraken_caller"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }]
+        }]
+      }]
+    }
+  }
+}

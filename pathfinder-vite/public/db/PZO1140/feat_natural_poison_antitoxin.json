@@ -1,0 +1,17 @@
+{
+  "id": "feat:natural_poison_antitoxin",
+  "name": "Natural Poison Antitoxin",
+  "tags": ["feat", "general"],
+  "enabledFormula": "all(@feat:natural_poison_harvester,@skill:craft#alchemy\u003e\u003d8,@skill:survival\u003e\u003d8)",
+  "maxStacks": 1,
+  "description": {
+    "text": "You have learned how to create antitoxin that can resist natural poisons.",
+    "sections": {
+      "Benefit": "When you succeed at a Craft (alchemy) check to create an antitoxin using a dose of a natural poison you harvested, you increase the duration of the antitoxin to an amount equal to 4 hours plus an additional hour for every 5 by which your result exceeds the DC."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

@@ -49,6 +49,10 @@ public class Id implements Comparable<Id> {
         return new Id.Type(type);
     }
 
+    public boolean hasOption() {
+        return option != null && !option.isEmpty();
+    }
+
     public Id withOption(String option) {
         return new Id(type, key, option);
     }

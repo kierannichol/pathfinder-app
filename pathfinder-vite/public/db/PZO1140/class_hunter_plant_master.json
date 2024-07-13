@@ -1,0 +1,58 @@
+{
+  "id": "class:hunter#plant_master",
+  "name": "Plant Master",
+  "tags": ["archetype", "hunter"],
+  "enabledFormula": "!@modifies:ability:master_hunter#hunter AND !@modifies:ability:animal_companion#hunter AND !@modifies:ability:wild_empathy#hunter AND !@modifies:ability:one_with_the_wild#hunter AND !@modifies:ability:animal_focus#hunter",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some hunters form a bond with plant life instead of an animal and take on those aspects instead. These hunters form potent bonds with plant creatures, and their leafy or fungal friends are more than capable of anything another hunter\u0027s animal allies can accomplish."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:master_hunter#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:animal_companion#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_empathy#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:one_with_the_wild#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:animal_focus#hunter",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:hunter",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:plant_shield#hunter_plant_master"],
+            "linksToRemove": ["ability:one_with_the_wild#hunter"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:plant_companion#hunter_plant_master", "ability:plant_focus#hunter_plant_master", "ability:green_empathy#hunter_plant_master"],
+            "linksToRemove": ["ability:animal_companion#hunter", "ability:animal_focus#hunter", "ability:wild_empathy#hunter"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:master_hunter#hunter_plant_master"],
+            "linksToRemove": ["ability:master_hunter#hunter"]
+          }]
+        }]
+      }]
+    }
+  }
+}

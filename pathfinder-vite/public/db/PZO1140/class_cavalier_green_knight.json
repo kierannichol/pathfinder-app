@@ -1,0 +1,111 @@
+{
+  "id": "class:cavalier#green_knight",
+  "name": "Green Knight",
+  "tags": ["archetype", "cavalier"],
+  "enabledFormula": "!@modifies:ability:mount#cavalier AND !@modifies:ability:mighty_charge#cavalier AND !@modifies:ability:order#cavalier AND !@modifies:ability:greater_banner#cavalier AND !@modifies:ability:tactician#cavalier AND !@modifies:ability:cavaliers_charge#cavalier AND !@modifies:ability:expert_trainer#cavalier AND !@modifies:ability:banner#cavalier AND !@modifies:ability:master_tactician#cavalier AND !@modifies:ability:supreme_charge#cavalier AND !@modifies:ability:greater_tactician#cavalier",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some knights serve nature itself and can be found protecting unspoiled natural places or serving fey beings."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:mount#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:mighty_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:order#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:greater_banner#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:tactician#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:cavaliers_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:expert_trainer#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:banner#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:master_tactician#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:supreme_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:greater_tactician#cavalier",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:cavalier",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:take_their_heads#cavalier_green_knight"],
+            "linksToRemove": ["ability:master_tactician#cavalier"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:beast_tongue#cavalier_green_knight", "ability:implacable_knight#cavalier_green_knight", "ability:natures_servant#cavalier_green_knight"],
+            "linksToRemove": ["ability:tactician#cavalier", "ability:mount#cavalier", "ability:order#cavalier"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:ferocious#cavalier_green_knight"],
+            "linksToRemove": ["ability:cavaliers_charge#cavalier"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:indestructible#cavalier_green_knight"],
+            "linksToRemove": ["ability:supreme_charge#cavalier"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:woodland_stride#cavalier_green_knight"],
+            "linksToRemove": ["ability:expert_trainer#cavalier"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:woodland_stride#cavalier_green_knight"],
+            "linksToRemove": ["ability:banner#cavalier"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:stalwart#cavalier_green_knight"],
+            "linksToRemove": ["ability:greater_tactician#cavalier"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:oaken_vitality#cavalier_green_knight"],
+            "linksToRemove": ["ability:mighty_charge#cavalier"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:greater_banner#cavalier"]
+          }]
+        }]
+      }]
+    }
+  }
+}

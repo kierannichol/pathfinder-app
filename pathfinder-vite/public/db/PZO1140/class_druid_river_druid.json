@@ -1,0 +1,103 @@
+{
+  "id": "class:druid#river_druid",
+  "name": "River Druid",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:wild_shape#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:woodland_stride#druid AND !@modifies:ability:timeless_body#druid",
+  "maxStacks": 1,
+  "description": {
+    "text": "These druids are the guardians of rivers and the creatures that depend on them. Just as rivers pour from mountains to seas, river druids adapt to many environments and cultures. They can be found wherever water flows, even among underground rivers or sewer systems."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trackless_step#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:resist_natures_lure#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_shape#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:nature_sense#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:timeless_body#druid",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:ferrier#druid_river_druid"],
+            "linksToRemove": ["ability:nature_sense#druid"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:read_the_currents#druid_river_druid"],
+            "linksToRemove": ["ability:woodland_stride#druid"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:countercurrent#druid_river_druid"],
+            "linksToRemove": ["ability:trackless_step#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:deep_breath#druid_river_druid", "ability:wild_shape#druid_river_druid"],
+            "linksToRemove": ["ability:resist_natures_lure#druid", "ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:wild_shape#druid_river_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:wild_shape#druid_river_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:wild_shape#druid_river_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:wild_shape#druid_river_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:wild_shape#druid_river_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:tongue_of_the_sun_and_moon#druid_river_druid"],
+            "linksToRemove": ["ability:timeless_body#druid"]
+          }, {
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:wild_shape#druid_river_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:wild_shape#druid_river_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:wild_shape#druid_river_druid"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }]
+        }]
+      }]
+    }
+  }
+}

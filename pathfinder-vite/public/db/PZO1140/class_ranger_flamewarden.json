@@ -1,0 +1,65 @@
+{
+  "id": "class:ranger#flamewarden",
+  "name": "Flamewarden",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:hunters_bond#ranger AND !@modifies:ability:camouflage#ranger AND !@modifies:ability:master_hunter#ranger AND !@modifies:ability:improved_evasion#ranger AND !@modifies:ability:evasion#ranger",
+  "maxStacks": 1,
+  "description": {
+    "text": "Emulating the blazing phoenix, flamewardens sweep through the world like a selective forest fire, burning away corruption, evil, and those who cling to decay."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:hunters_bond#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:camouflage#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:master_hunter#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_evasion#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:evasion#ranger",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:phoenix_rising#ranger_flamewarden"],
+            "linksToRemove": ["ability:improved_evasion#ranger"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:master_hunter#ranger"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:touch_of_flame#ranger_flamewarden"],
+            "linksToRemove": ["ability:hunters_bond#ranger"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:stoking_the_embers#ranger_flamewarden"],
+            "linksToRemove": ["ability:evasion#ranger"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:burning_renewal#ranger_flamewarden"],
+            "linksToRemove": ["ability:camouflage#ranger"]
+          }]
+        }]
+      }]
+    }
+  }
+}

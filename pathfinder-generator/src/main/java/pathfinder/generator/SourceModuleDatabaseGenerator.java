@@ -1,25 +1,18 @@
 package pathfinder.generator;
 
 import com.google.protobuf.Message;
-import com.google.protobuf.util.JsonFormat;
-import com.google.protobuf.util.JsonFormat.Printer;
 import java.io.IOException;
-import java.io.UncheckedIOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import pathfinder.data.FeatureDbo;
 import pathfinder.data.FeatureSummaryDbo;
 import pathfinder.data.SourceModuleDbo;
-import pathfinder.model.Id;
-import pathfinder.model.pathfinder.SourceId;
-import pathfinder.spring.OutputPathValue;
-import pathfinder.util.FileUtils;
-import pathfinder.util.StreamUtils;
 import pathfinder.model.Feature;
+import pathfinder.model.pathfinder.SourceId;
+import pathfinder.util.StreamUtils;
 
 @RequiredArgsConstructor
 public class SourceModuleDatabaseGenerator {
@@ -55,6 +48,7 @@ public class SourceModuleDatabaseGenerator {
     }
 
     protected Message createSummaryDatabase(List<FeatureSummaryDbo> features) {
+        features.sort(Comparator.comparing(FeatureSummaryDbo::getId));
         return SourceModuleDbo.newBuilder()
                 .setSourceId(databaseId())
                 .addAllFeatures(features)

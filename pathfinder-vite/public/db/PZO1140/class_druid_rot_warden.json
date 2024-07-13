@@ -1,0 +1,98 @@
+{
+  "id": "class:druid#rot_warden",
+  "name": "Rot Warden",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:wild_shape#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:nature_bond#druid AND !@modifies:ability:wild_empathy#druid",
+  "maxStacks": 1,
+  "description": {
+    "text": "Harbingers of decay, rot wardens live in damp lands where insects and rot break down the dead to feed the living. They see in the process of rot the beauty of nature\u0027s capacity to recycle and repurpose material into something wondrous and new."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trackless_step#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:resist_natures_lure#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_shape#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:venom_immunity#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:nature_bond#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_empathy#druid",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:wild_shape#druid_rot_warden"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:nature_bond#druid_rot_warden", "ability:vermin_empathy#druid_rot_warden"],
+            "linksToRemove": ["ability:nature_bond#druid", "ability:wild_empathy#druid"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:wild_shape#druid_rot_warden"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:swarmcaller#druid_rot_warden"],
+            "linksToRemove": ["ability:trackless_step#druid"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:wild_shape#druid_rot_warden"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:enduring_druid#druid_rot_warden", "ability:wild_shape#druid_rot_warden"],
+            "linksToRemove": ["ability:resist_natures_lure#druid", "ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:wild_shape#druid_rot_warden"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:wild_shape#druid_rot_warden"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:venom_immunity#druid"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:wild_shape#druid_rot_warden"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:wild_shape#druid_rot_warden"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:wild_shape#druid_rot_warden"],
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }]
+        }]
+      }]
+    }
+  }
+}

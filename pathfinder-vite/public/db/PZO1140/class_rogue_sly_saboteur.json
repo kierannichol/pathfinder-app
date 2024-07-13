@@ -1,0 +1,63 @@
+{
+  "id": "class:rogue#sly_saboteur",
+  "name": "Sly Saboteur",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:improved_uncanny_dodge#rogue AND !@modifies:ability:uncanny_dodge#rogue AND !@modifies:ability:trap_sense#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "Sly saboteurs are irregular soldiers who specialize in sabotage and surprise attacks. Though they often face enemies with greater numbers or resources (or both), sly saboteurs have the advantage of knowing the local people and terrain. They might be rebels fighting against a corrupt government, or they might be members of a militia opposing an invading force. Some are environmentalists who sabotage the tools of industry in order to protect unspoiled nature."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#rogue",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:rogue",
+          "stackModifications": [{
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:scamper#rogue_sly_saboteur"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:catastrophic_failure#rogue_sly_saboteur"],
+            "linksToRemove": ["ability:uncanny_dodge#rogue"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:disable_magic_device#rogue_sly_saboteur"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#rogue"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "class:barbarian#wildborn",
+  "name": "Wildborn",
+  "tags": ["archetype", "barbarian"],
+  "enabledFormula": "!@modifies:ability:trap_sense#barbarian AND !@modifies:trait:weapon_proficiency#barbarian AND !@modifies:trait:armor_proficiency#barbarian AND !@modifies:ability:damage_reduction#barbarian",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some barbarians are born or bred outside the reach of civilization. These wildborn fight and survive without ever seeing a forge or worked stone, and only dare a trip into the city when no other option is available."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:weapon_proficiency#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:damage_reduction#barbarian",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:barbarian",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#barbarian_wildborn", "ability:weapon_and_armor_proficiency#barbarian_wildborn"],
+            "linksToRemove": ["trait:armor_proficiency#barbarian", "trait:weapon_proficiency#barbarian"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:live_off_the_land#barbarian_wildborn"],
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:bonus_feat#barbarian_wildborn"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:inexhaustible#barbarian_wildborn"],
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:inexhaustible#barbarian_wildborn"],
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:inexhaustible#barbarian_wildborn"],
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:inexhaustible#barbarian_wildborn"],
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:inexhaustible#barbarian_wildborn"],
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }]
+        }]
+      }]
+    }
+  }
+}

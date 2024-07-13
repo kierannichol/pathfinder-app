@@ -1,0 +1,18 @@
+{
+  "id": "feat:thrill_of_the_hunt",
+  "name": "Thrill of the Hunt",
+  "tags": ["combat", "feat"],
+  "enabledFormula": "all(@skill:survival\u003e\u003d1,any(@bab\u003e\u003d4,@ability:track#*[Track]))",
+  "maxStacks": 1,
+  "description": {
+    "text": "The pursuit of prey invigorates you. You revel in tracking down and slaying your quarry.",
+    "sections": {
+      "Benefit": "Once per day, when you succeed at a Survival check to find or follow a creature\u0027s tracks, you can designate that creature to be your prize for a number of hours equal to 4 + your ranks in Survival. You gain a +2 morale bonus on Survival checks to follow your prize\u0027s tracks and on weapon damage rolls against your prize.",
+      "Special": "An animal companion can choose this feat as if it were an animal feat."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

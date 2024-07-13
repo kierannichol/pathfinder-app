@@ -1,0 +1,57 @@
+{
+  "id": "class:ranger#summit_sentinel",
+  "name": "Summit Sentinel",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:favored_terrain#ranger AND !@modifies:ability:hide_in_plain_sight#ranger AND !@modifies:ability:swift_tracker#ranger",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some rangers eschew the path of the swift skirmisher and embrace the implacable strength of the mountain."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:favored_terrain#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:hide_in_plain_sight#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:swift_tracker#ranger",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:invincible#ranger_summit_sentinel"],
+            "linksToRemove": ["ability:hide_in_plain_sight#ranger"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:favored_terrain#ranger"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:roots_of_the_mountain#ranger_summit_sentinel"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:mountain_mastery#ranger_summit_sentinel"],
+            "linksToRemove": ["ability:favored_terrain#ranger"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:rockslide#ranger_summit_sentinel"],
+            "linksToRemove": ["ability:favored_terrain#ranger", "ability:swift_tracker#ranger"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:favored_terrain#ranger"]
+          }]
+        }]
+      }]
+    }
+  }
+}

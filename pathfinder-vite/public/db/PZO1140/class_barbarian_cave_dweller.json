@@ -1,0 +1,75 @@
+{
+  "id": "class:barbarian#cave_dweller",
+  "name": "Cave Dweller",
+  "tags": ["archetype", "barbarian"],
+  "enabledFormula": "!@modifies:ability:trap_sense#barbarian AND !@modifies:ability:fast_movement#barbarian AND !@modifies:ability:damage_reduction#barbarian",
+  "maxStacks": 1,
+  "description": {
+    "text": "Unused to the light of the sun, cave dwellers use their subterranean expertise to protect their clans from the manifold dangers of deep caverns and tunnels. The typical cave dweller is perfectly content to live his entire life underground, and he may even view the light of the sun as particularly abhorrent or taboo. While this lifestyle doesn\u0027t in and of itself imply evil or sinister intent, many outlanders ignorantly assume that cave dwellers avoid the light of the sun for malicious reasons."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:fast_movement#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:damage_reduction#barbarian",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:barbarian",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:tight_tunnels#barbarian_cave_dweller"],
+            "linksToRemove": ["ability:fast_movement#barbarian"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:tunnel_vision#barbarian_cave_dweller"],
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:sun_walker#barbarian_cave_dweller"],
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }]
+        }]
+      }]
+    }
+  }
+}

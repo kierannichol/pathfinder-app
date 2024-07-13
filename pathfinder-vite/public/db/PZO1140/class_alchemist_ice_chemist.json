@@ -1,0 +1,91 @@
+{
+  "id": "class:alchemist#ice_chemist",
+  "name": "Ice Chemist",
+  "tags": ["alchemist", "archetype"],
+  "enabledFormula": "!@modifies:ability:discovery_that_the_alchemist_normally_gains#alchemist AND !@modifies:ability:poison_immunity#alchemist AND !@modifies:ability:bomb#alchemist AND !@modifies:ability:poison_resistance#alchemist",
+  "maxStacks": 1,
+  "description": {
+    "text": "Reclusive alchemists who dwell in the highest mountains or on the frozen tundra devote their skills to mastering the cold."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:discovery_that_the_alchemist_normally_gains#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:poison_immunity#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bomb#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:poison_resistance#alchemist",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:alchemist",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:icy_bombs#alchemist_ice_chemist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:cold_sweat#alchemist_ice_chemist", "ability:frost_bomb#alchemist_ice_chemist"],
+            "linksToRemove": ["ability:poison_resistance#alchemist", "ability:discovery_that_the_alchemist_normally_gains#alchemist"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:icy_bombs#alchemist_ice_chemist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:icy_bombs#alchemist_ice_chemist"],
+            "linksToRemove": ["ability:bomb#alchemist", "ability:poison_resistance#alchemist"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:icy_bombs#alchemist_ice_chemist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:poison_resistance#alchemist"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:icy_bombs#alchemist_ice_chemist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:poison_immunity#alchemist"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:icy_bombs#alchemist_ice_chemist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:icy_bombs#alchemist_ice_chemist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:icy_bombs#alchemist_ice_chemist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:icy_bombs#alchemist_ice_chemist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:icy_bombs#alchemist_ice_chemist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }]
+        }]
+      }]
+    }
+  }
+}

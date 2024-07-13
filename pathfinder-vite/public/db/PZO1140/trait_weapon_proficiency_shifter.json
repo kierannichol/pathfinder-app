@@ -1,0 +1,63 @@
+{
+  "id": "trait:weapon_proficiency#shifter",
+  "name": "Weapon Proficiency (Shifter)",
+  "tags": ["class_feature", "shifter", "trait"],
+  "description": {
+    "text": "A Shifter is proficient with the club, dagger, dart, quarterstaff, scimitar, scythe, shortspear, sickle, sling, spear."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:scimitar",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:dart",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:shortspear",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:club",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:quarterstaff",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:spear",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:sickle",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:dagger",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:sling",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:scythe",
+          "numberValue": 1
+        }
+      }]
+    }
+  }
+}

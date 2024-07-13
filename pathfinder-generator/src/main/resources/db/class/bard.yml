@@ -388,22 +388,22 @@ class_features:
     effects:
       - "SET trait:level_1_spells_per_day#bard
         1+if(@class:bard>1,1,0)+if(@class:bard>2,1,0)+if(@class:bard>4,1,0)+if(\
-        @class:bard>8,1,0)"
+        @class:bard>8,1,0)+@cha_bonus_spells_1"
       - "SET trait:level_2_spells_per_day#bard
         if(@class:bard>=4,1+if(@class:bard>4,1,0)+if(@class:bard>5,1,0)+if(@cla\
-        ss:bard>7,1,0)+if(@class:bard>11,1,0),null)"
+        ss:bard>7,1,0)+if(@class:bard>11,1,0),null)+@cha_bonus_spells_2"
       - "SET trait:level_3_spells_per_day#bard
         if(@class:bard>=7,1+if(@class:bard>7,1,0)+if(@class:bard>8,1,0)+if(@cla\
-        ss:bard>10,1,0)+if(@class:bard>14,1,0),null)"
+        ss:bard>10,1,0)+if(@class:bard>14,1,0),null)+@cha_bonus_spells_3"
       - "SET trait:level_4_spells_per_day#bard
         if(@class:bard>=10,1+if(@class:bard>10,1,0)+if(@class:bard>11,1,0)+if(@\
-        class:bard>13,1,0)+if(@class:bard>17,1,0),null)"
+        class:bard>13,1,0)+if(@class:bard>17,1,0),null)+@cha_bonus_spells_4"
       - "SET trait:level_5_spells_per_day#bard
         if(@class:bard>=13,1+if(@class:bard>13,1,0)+if(@class:bard>14,1,0)+if(@\
-        class:bard>16,1,0)+if(@class:bard>18,1,0),null)"
+        class:bard>16,1,0)+if(@class:bard>18,1,0),null)+@cha_bonus_spells_5"
       - "SET trait:level_6_spells_per_day#bard
         if(@class:bard>=16,1+if(@class:bard>16,1,0)+if(@class:bard>17,1,0)+if(@\
-        class:bard>18,1,0)+if(@class:bard>19,1,0),null)"
+        class:bard>18,1,0)+if(@class:bard>19,1,0),null)+@cha_bonus_spells_6"
     source: " Pathfinder RPG Core Rulebook"
   - id: "ability:suggestion#bard"
     name: "Suggestion"

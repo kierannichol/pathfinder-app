@@ -1,0 +1,57 @@
+{
+  "id": "class:brawler#turfer",
+  "name": "Turfer",
+  "tags": ["archetype", "brawler"],
+  "enabledFormula": "!@modifies:ability:maneuver_training#brawler AND !@modifies:ability:knockout#brawler",
+  "maxStacks": 1,
+  "description": {
+    "text": "A turfer has a mastery over particular types of terrain."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:maneuver_training#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:knockout#brawler",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:brawler",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:knockout#brawler"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:favored_turf#brawler_turfer"],
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:terrain_mastery#brawler_turfer"],
+            "linksToRemove": ["ability:knockout#brawler"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:knockout#brawler"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }]
+        }]
+      }]
+    }
+  }
+}

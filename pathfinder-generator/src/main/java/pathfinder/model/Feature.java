@@ -4,9 +4,11 @@ import static pathfinder.util.ListUtils.mapList;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.List;
 import pathfinder.data.FeatureDbo;
 import pathfinder.data.FeatureSummaryDbo;
+import pathfinder.util.SortedArrayList;
 
 public record Feature(Id id,
                       String name,
@@ -119,7 +121,7 @@ public record Feature(Id id,
         private String typeAlias = "";
         private Description description = pathfinder.model.Description.empty();
         private Condition enabledCondition = new Condition("");
-        private final List<String> tags = new ArrayList<>();
+        private final List<String> tags = new SortedArrayList<>(Comparator.comparing(key -> key));
         private FeatureOptions options = null;
         private final List<Stack> fixedStack = new ArrayList<>();
         private Stack repeatingStack = null;

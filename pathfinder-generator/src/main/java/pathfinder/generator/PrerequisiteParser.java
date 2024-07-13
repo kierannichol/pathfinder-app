@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.text.WordUtils;
 import org.formula.Formula;
 import org.formula.parse.tree.ParseException;
 import org.springframework.context.annotation.Lazy;
@@ -67,6 +68,8 @@ public class PrerequisiteParser {
             .addToken("ANY", "(.*?)")
 
             .addFunction("key", (id, text) -> Id.of(id).key)
+//            .addFunction("class_feature", (id, text) -> wildcard(id, text, ""))
+//            .addFunction("wildcard", (id, text) -> id)
 
             .addImmediateReplacement("proficient with {NAME} or {NAME}", "(@proficiency:{0} OR @proficiency:{1})")
             .addImmediateReplacement("the ability to cast animate dead or command undead", "(@spell:animate_dead OR @spell:command_undead)")
@@ -132,12 +135,14 @@ public class PrerequisiteParser {
             .addReplacement("proficient with all martial weapons", "@feat:martial_weapon_proficiency")
             .addReplacement("proficient with {NAME}", "@proficiency:{0}")
 
-            .addReplacement("patron deity is an evil god", "any(@parton_deity:alignment:le,@parton_deity:alignment:ne,@parton_deity:alignment:ce)")
+            .addReplacement("patron deity is an evil god", "any(@deity:alignment_le,@deity:alignment_ne,@deity:alignment_ce)")
             .addReplacement("follower of the green faith", "@deity=='Green Faith'")
             .addReplacement("cannot have a patron deity", "@deity==''")
+            .addImmediateReplacement("worshiper of a deity of trickery, lust, and revenge", "all(@deity:domain_trickery,@deity:domain_lust,@deity:domain_revenge)")
+            .addImmediateReplacement("worshiper of a deity of trickery, lust, revenge", "all(@deity:domain_trickery,@deity:domain_lust,@deity:domain_revenge)")
 
             .addReplacement("chaotic alignment", "any(@alignment:cg,@alignment:cn,@alignment:ce)")
-
+            .addReplacement("chaotic neutral alignment", "@alignment:cn")
             .addReplacement("divine bond (mount)", "@ability:divine_bond#mount")
             .addReplacement("divine bond (armor)", "@ability:divine_bond#armor")
             .addReplacement("divine bond (shield)", "@ability:divine_bond#shield")
@@ -198,11 +203,11 @@ public class PrerequisiteParser {
             .addReplacement("{NAME} class", "{0}")
             .addReplacement("{NAME} +{NUMBER}d{NUMBER}", "{0} >= {1}")
 
-            .addReplacement("{NAME} class feature or the {NAME} feat", "({ability:0} OR {feat:1})")
+            .addReplacement("{NAME} class feature or the {NAME} feat", "({class_feature:0} OR {feat:1})")
             .addReplacement("{NAME} feature or {NAME} feat", "({ability:0} OR {feat:1})")
             .addReplacement("any {NAME}", "{0}")
             .addReplacement("{NAME} feat", "{feat:0}")
-            .addReplacement("{NAME} or {NAME} class feature", "({0} OR {ability:1})")
+            .addReplacement("{NAME} or {NAME} class feature", "({0} OR {class_feature:1})")
             .addReplacement("{NAME} class ability", "{ability:0}")
             .addReplacement("either the {PHRASE} or {PHRASE}", "({0} OR {1})")
             .addReplacement("either {PHRASE} or {PHRASE}", "({0} OR {1})")
@@ -224,6 +229,7 @@ public class PrerequisiteParser {
             .addReplacement("{NAME} discovery", "{discovery:0}")
             .addReplacement("{NAME} magus arcana", "{magus_arcana:0}")
             .addReplacement("{NAME} rogue talent", "{rogue_talent:0}")
+            .addReplacement("{NAME} mercy", "{mercy:0}")
             .addReplacement("{NAME} advanced slayer talent or ninja master trick", "{slayer_talent:0}")
             .addReplacement("Trained in {NAME}", "{0}")
             .addReplacement("{PHRASE} {NUMBER} ranks", "{0} >= {1}")
@@ -259,7 +265,7 @@ public class PrerequisiteParser {
             .addReplacement("Able to cast {NAME}", "{0}")
             .addReplacement("Able to spontaneously cast spells", "@ability:spontaneous_caster")
             .addReplacement("ability to perform {NAME}", "{0}")
-            .addReplacement("{NAME} class feature", "{ability:0}")
+            .addReplacement("{NAME} class feature", "{class_feature:0}")
             .addReplacement("Fly speed", "@speed:fly")
             .addReplacement("{NUMBER} years old", "@age >= {0}")
             .addReplacement("{NAME} racial trait or {NAME} racial trait", "{0} OR {1}")
@@ -583,7 +589,7 @@ public class PrerequisiteParser {
             });
         };
 
-        patternMapper.addFunction("class_feature", (id, text) -> resolveClassFeature(text));
+        patternMapper.addFunction("class_feature", this::resolveClassFeature);
 
         addTypeLookupFunction.accept("class", text -> database.query(Query.characterClass(text)));
         addTypeLookupFunction.accept("ability", text -> database.query(Query.namedEntity(text)));
@@ -595,6 +601,8 @@ public class PrerequisiteParser {
         addTypeLookupFunction.accept("slayer_talent", text -> database.query(Query.classFeatures().classId(Id.of("class:slayer"))));
 //        addTypeLookupFunction.accept("ninja_trick");
         addTypeLookupFunction.accept("discovery", text -> database.query(Query.classFeature(text).classId(Id.of("class:alchemist"))));
+
+        addTypeLookupFunction.accept("mercy", text -> database.query(Query.classFeature(text).idMatches(Pattern.compile("mercy:.*"))));
 
         patternMapper.addContextResolver((text, context) -> {
             if (IS_INT_PATTERN.matcher(text).matches()) {
@@ -621,6 +629,14 @@ public class PrerequisiteParser {
         });
 
         log.info("Finished initializing prerequisite parser");
+    }
+
+    private static String wildcard(String id, String text, String appendText) {
+        Id idObj = Id.of(id);
+        if (!idObj.hasOption()) {
+            return id;
+        }
+        return formatId(idObj.withOption("*")) + "[" + WordUtils.capitalize(text) + appendText + "]";
     }
 
     private NamedEntityQuery<NamedEntity> expandQuery(NamedEntityQuery<NamedEntity> query, int i) {
@@ -701,8 +717,10 @@ public class PrerequisiteParser {
         return "any(" + spells + ")";
     }
 
-    private String resolveClassFeature(String text) {
-        throw new IllegalArgumentException("Unsupported class feature: " + text);
+    private String resolveClassFeature(String id, String text) {
+        return wildcard(id, text, "");
+
+//        throw new IllegalArgumentException("Unsupported class feature: " + text);
 //        return switch (text) {
 //            default -> throw new IllegalArgumentException("Unsupported class feature: " + text);
 //        };
@@ -713,6 +731,9 @@ public class PrerequisiteParser {
     }
 
     private static String formatId(String id) {
+        if (id.startsWith("@")) {
+            return id;
+        }
         return (id.startsWith("(") || id.startsWith("\"") || IS_INT_PATTERN.matcher(id).matches())
                 ? id
                 : "@" + id;

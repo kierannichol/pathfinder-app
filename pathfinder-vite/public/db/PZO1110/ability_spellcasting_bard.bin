@@ -1,9 +1,9 @@
 
-ability:spellcasting#bardSpell Casting (Bard)class_featurebardability¢
-Bard can cast spells.ªª§ª€~
-!trait:level_1_spells_per_day#bardY1+if(@class:bard>1,1,0)+if(@class:bard>2,1,0)+if(@class:bard>4,1,0)+if(@class:bard>8,1,0)ªš—
-!trait:level_2_spells_per_day#bardrif(@class:bard>=4,1+if(@class:bard>4,1,0)+if(@class:bard>5,1,0)+if(@class:bard>7,1,0)+if(@class:bard>11,1,0),null)ª›˜
-!trait:level_3_spells_per_day#bardsif(@class:bard>=7,1+if(@class:bard>7,1,0)+if(@class:bard>8,1,0)+if(@class:bard>10,1,0)+if(@class:bard>14,1,0),null)ªž›
-!trait:level_4_spells_per_day#bardvif(@class:bard>=10,1+if(@class:bard>10,1,0)+if(@class:bard>11,1,0)+if(@class:bard>13,1,0)+if(@class:bard>17,1,0),null)ªž›
-!trait:level_5_spells_per_day#bardvif(@class:bard>=13,1+if(@class:bard>13,1,0)+if(@class:bard>14,1,0)+if(@class:bard>16,1,0)+if(@class:bard>18,1,0),null)ªž›
-!trait:level_6_spells_per_day#bardvif(@class:bard>=16,1+if(@class:bard>16,1,0)+if(@class:bard>17,1,0)+if(@class:bard>18,1,0)+if(@class:bard>19,1,0),null)
+ability:spellcasting#bardSpell Casting (Bard)abilitybardclass_feature¢
+Bard can cast spells.ª¨¥ª•’
+!trait:level_1_spells_per_day#bardm1+if(@class:bard>1,1,0)+if(@class:bard>2,1,0)+if(@class:bard>4,1,0)+if(@class:bard>8,1,0)+@cha_bonus_spells_1ª¯¬
+!trait:level_2_spells_per_day#bard†if(@class:bard>=4,1+if(@class:bard>4,1,0)+if(@class:bard>5,1,0)+if(@class:bard>7,1,0)+if(@class:bard>11,1,0),null)+@cha_bonus_spells_2ª°­
+!trait:level_3_spells_per_day#bard‡if(@class:bard>=7,1+if(@class:bard>7,1,0)+if(@class:bard>8,1,0)+if(@class:bard>10,1,0)+if(@class:bard>14,1,0),null)+@cha_bonus_spells_3ª³°
+!trait:level_4_spells_per_day#bardŠif(@class:bard>=10,1+if(@class:bard>10,1,0)+if(@class:bard>11,1,0)+if(@class:bard>13,1,0)+if(@class:bard>17,1,0),null)+@cha_bonus_spells_4ª³°
+!trait:level_5_spells_per_day#bardŠif(@class:bard>=13,1+if(@class:bard>13,1,0)+if(@class:bard>14,1,0)+if(@class:bard>16,1,0)+if(@class:bard>18,1,0),null)+@cha_bonus_spells_5ª³°
+!trait:level_6_spells_per_day#bardŠif(@class:bard>=16,1+if(@class:bard>16,1,0)+if(@class:bard>17,1,0)+if(@class:bard>18,1,0)+if(@class:bard>19,1,0),null)+@cha_bonus_spells_6

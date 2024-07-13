@@ -1,0 +1,87 @@
+{
+  "id": "class:fighter#skirmisher",
+  "name": "Skirmisher",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:trait:armor_proficiency#fighter AND !@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:bonus_feat_the_fighter_normally_receives#fighter AND !@modifies:ability:armor_mastery#fighter",
+  "maxStacks": 1,
+  "description": {
+    "text": "Not all battles are fought between armies; sometimes, a settlement or nation faces a threat too dire to fight in the open. In order to repel a much larger enemy force, some soldiers must abandon equipment and tactics designed for open-field warfare and instead rely on ambushes, hit-and-run tactics, and sabotage to whittle down their enemies\u0027 strength and morale. Skirmishers use harsh weather and unforgiving terrain to their advantage, attacking isolated groups of enemies that cannot flee or fight back effectively. Many tribal warriors also employ small-unit tactics because it is part of their warrior culture, because they cannot field a large army, or simply because they refuse to fight on the enemy\u0027s terms."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bravery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_training#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat_the_fighter_normally_receives#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_mastery#fighter",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["trait:armor_proficiency#fighter_skirmisher"],
+            "linksToRemove": ["trait:armor_proficiency#fighter"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:reconnaissance_training#fighter_skirmisher"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:conditioning#fighter_skirmisher", "ability:reconnaissance_training#fighter_skirmisher"],
+            "linksToRemove": ["ability:bonus_feat_the_fighter_normally_receives#fighter", "ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:mobile_mastery#fighter_skirmisher"],
+            "linksToRemove": ["ability:armor_mastery#fighter"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:mobility_training#fighter_skirmisher"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:reconnaissance_training#fighter_skirmisher"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:reconnaissance_training#fighter_skirmisher"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:reconnaissance_training#fighter_skirmisher"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }]
+        }]
+      }]
+    }
+  }
+}

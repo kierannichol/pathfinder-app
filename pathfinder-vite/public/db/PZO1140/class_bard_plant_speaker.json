@@ -1,0 +1,63 @@
+{
+  "id": "class:bard#plant_speaker",
+  "name": "Plant Speaker",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:lore_master#bard AND !@modifies:ability:inspire_greatness#bard AND !@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:well_versed#bard",
+  "maxStacks": 1,
+  "description": {
+    "text": "Plant speakers build upon their racial plantspeech ability and their storytelling tendencies to create an art form full of deep metaphors and allegory rather than specific details and facts."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:lore_master#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:inspire_greatness#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bardic_knowledge#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:well_versed#bard",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bard",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:plant_speech#bard_plant_speaker"],
+            "linksToRemove": ["ability:bardic_knowledge#bard"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:plant_speech#bard_plant_speaker"],
+            "linksToRemove": ["ability:well_versed#bard"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:mystical_allegory#bard_plant_speaker"],
+            "linksToRemove": ["ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:bardic_performance#bard_plant_speaker"],
+            "linksToRemove": ["ability:inspire_greatness#bard"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:lore_master#bard"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -1,84 +1,218 @@
 {
   "sourceId": "PZO9476",
   "features": [{
-    "id": "feat:noble_scion",
-    "name": "Noble Scion",
-    "tags": ["feat", "general"],
-    "enabledFormula": "all(@cha_score\u003e\u003d13,@character_level\u003d\u003d1)",
+    "id": "ability:advanced_deeds",
+    "name": "Advanced Deeds",
     "maxStacks": 1
   }, {
-    "id": "witch_hex:protective_luck",
-    "name": "Protective Luck",
-    "tags": ["spell", "witch_hex"],
+    "id": "ability:advanced_deeds#paladin_virtuous_bravo",
+    "name": "Advanced Deeds",
+    "tags": ["ability", "class_feature", "paladin"]
+  }, {
+    "id": "ability:alchemical_antidote",
+    "name": "Alchemical Antidote",
     "maxStacks": 1
   }, {
-    "id": "witch_hex:distraction",
-    "name": "Distraction",
-    "tags": ["spell", "witch_hex"],
+    "id": "ability:alchemical_antidote#alchemist_royal_alchemist",
+    "name": "Alchemical Antidote",
+    "tags": ["ability", "alchemist", "class_feature"]
+  }, {
+    "id": "ability:bravos_holy_strike",
+    "name": "Bravo\u0027s Holy Strike",
     "maxStacks": 1
   }, {
-    "id": "modifies:ability",
-    "name": "Archetype that modifies Bonus Feat",
+    "id": "ability:bravos_holy_strike#paladin_virtuous_bravo",
+    "name": "Bravo\u0027s Holy Strike",
+    "tags": ["ability", "class_feature", "paladin"]
+  }, {
+    "id": "ability:bravos_smite",
+    "name": "Bravo\u0027s Smite",
     "maxStacks": 1
   }, {
-    "id": "class:monk#invested_regent",
-    "name": "Invested Regent",
-    "tags": ["archetype", "monk"],
-    "enabledFormula": "!@modifies:ability:bonus_feat#monk",
-    "maxStacks": 1
-  }, {
-    "id": "ability:investiture#monk_invested_regent",
-    "name": "Investiture",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:investiture",
-    "name": "Investiture",
-    "maxStacks": 1
-  }, {
-    "id": "ability:vested_power#monk_invested_regent",
-    "name": "Vested Power",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:vested_power",
-    "name": "Vested Power",
-    "maxStacks": 1
-  }, {
-    "id": "class:slayer#butterfly_blade",
-    "name": "Butterfly Blade",
-    "tags": ["archetype", "slayer"],
-    "enabledFormula": "!@modifies:ability:studied_target#slayer AND !@modifies:ability:track#slayer AND !@modifies:ability:quarry#slayer AND !@modifies:ability:stalker#slayer AND !@modifies:ability:swift_tracker#slayer AND !@modifies:ability:improved_quarry#slayer AND !@modifies:ability:sneak_attack#slayer",
-    "maxStacks": 1
-  }, {
-    "id": "ability:studied_stalker#slayer_butterfly_blade",
-    "name": "Studied Stalker",
-    "tags": ["class_feature", "slayer", "ability"]
-  }, {
-    "id": "ability:studied_stalker",
-    "name": "Studied Stalker",
-    "maxStacks": 1
-  }, {
-    "id": "ability:butterflys_kiss#slayer_butterfly_blade",
-    "name": "Butterfly\u0027s Kiss",
-    "tags": ["class_feature", "slayer", "ability"]
+    "id": "ability:bravos_smite#paladin_virtuous_bravo",
+    "name": "Bravo\u0027s Smite",
+    "tags": ["ability", "class_feature", "paladin"]
   }, {
     "id": "ability:butterflys_kiss",
     "name": "Butterfly\u0027s Kiss",
     "maxStacks": 1
   }, {
-    "id": "ability:innocent_butterfly#slayer_butterfly_blade",
-    "name": "Innocent Butterfly",
-    "tags": ["class_feature", "slayer", "ability"]
+    "id": "ability:butterflys_kiss#slayer_butterfly_blade",
+    "name": "Butterfly\u0027s Kiss",
+    "tags": ["ability", "class_feature", "slayer"]
+  }, {
+    "id": "ability:code_of_gallantry",
+    "name": "Code of Gallantry",
+    "maxStacks": 1
+  }, {
+    "id": "ability:code_of_gallantry#cavalier_gallant",
+    "name": "Code of Gallantry",
+    "tags": ["ability", "cavalier", "class_feature"]
+  }, {
+    "id": "ability:deadly_butterfly",
+    "name": "Deadly Butterfly",
+    "maxStacks": 1
+  }, {
+    "id": "ability:deadly_butterfly#slayer_butterfly_blade",
+    "name": "Deadly Butterfly",
+    "tags": ["ability", "class_feature", "slayer"]
+  }, {
+    "id": "ability:deeds",
+    "name": "Deeds",
+    "maxStacks": 1
+  }, {
+    "id": "ability:deeds#gunslinger_thronewarden",
+    "name": "Deeds",
+    "tags": ["ability", "class_feature", "gunslinger"]
+  }, {
+    "id": "ability:defenders_reflexes",
+    "name": "Defender\u0027s Reflexes",
+    "maxStacks": 1
+  }, {
+    "id": "ability:defenders_reflexes#fighter_high_guardian",
+    "name": "Defender\u0027s Reflexes",
+    "tags": ["ability", "class_feature", "fighter"]
+  }, {
+    "id": "ability:eye_for_trouble",
+    "name": "Eye for Trouble",
+    "maxStacks": 1
+  }, {
+    "id": "ability:eye_for_trouble#gunslinger_thronewarden",
+    "name": "Eye for Trouble",
+    "tags": ["ability", "class_feature", "gunslinger"]
+  }, {
+    "id": "ability:hair_trigger_reflexes",
+    "name": "Hair-Trigger Reflexes",
+    "maxStacks": 1
+  }, {
+    "id": "ability:hair_trigger_reflexes#gunslinger_thronewarden",
+    "name": "Hair-Trigger Reflexes",
+    "tags": ["ability", "class_feature", "gunslinger"]
+  }, {
+    "id": "ability:handling_the_crowd",
+    "name": "Handling the Crowd",
+    "maxStacks": 1
+  }, {
+    "id": "ability:handling_the_crowd#skald_court_poet",
+    "name": "Handling the Crowd",
+    "tags": ["ability", "class_feature", "skald"]
   }, {
     "id": "ability:innocent_butterfly",
     "name": "Innocent Butterfly",
     "maxStacks": 1
   }, {
-    "id": "ability:deadly_butterfly#slayer_butterfly_blade",
-    "name": "Deadly Butterfly",
-    "tags": ["class_feature", "slayer", "ability"]
+    "id": "ability:innocent_butterfly#slayer_butterfly_blade",
+    "name": "Innocent Butterfly",
+    "tags": ["ability", "class_feature", "slayer"]
   }, {
-    "id": "ability:deadly_butterfly",
-    "name": "Deadly Butterfly",
+    "id": "ability:insightful_contemplation",
+    "name": "Insightful Contemplation",
+    "maxStacks": 1
+  }, {
+    "id": "ability:insightful_contemplation#skald_court_poet",
+    "name": "Insightful Contemplation",
+    "tags": ["ability", "class_feature", "skald"]
+  }, {
+    "id": "ability:investiture",
+    "name": "Investiture",
+    "maxStacks": 1
+  }, {
+    "id": "ability:investiture#monk_invested_regent",
+    "name": "Investiture",
+    "tags": ["ability", "class_feature", "monk"]
+  }, {
+    "id": "ability:nimble",
+    "name": "Nimble",
+    "maxStacks": 1
+  }, {
+    "id": "ability:nimble#paladin_virtuous_bravo",
+    "name": "Nimble",
+    "tags": ["ability", "class_feature", "paladin"]
+  }, {
+    "id": "ability:panache_and_deeds",
+    "name": "Panache and Deeds",
+    "maxStacks": 1
+  }, {
+    "id": "ability:panache_and_deeds#paladin_virtuous_bravo",
+    "name": "Panache and Deeds",
+    "tags": ["ability", "class_feature", "paladin"]
+  }, {
+    "id": "ability:right_hand",
+    "name": "Right Hand",
+    "maxStacks": 1
+  }, {
+    "id": "ability:right_hand#fighter_high_guardian",
+    "name": "Right Hand",
+    "tags": ["ability", "class_feature", "fighter"]
+  }, {
+    "id": "ability:royal_protector",
+    "name": "Royal Protector",
+    "maxStacks": 1
+  }, {
+    "id": "ability:royal_protector#fighter_high_guardian",
+    "name": "Royal Protector",
+    "tags": ["ability", "class_feature", "fighter"]
+  }, {
+    "id": "ability:song_of_inspiration",
+    "name": "Song of Inspiration",
+    "maxStacks": 1
+  }, {
+    "id": "ability:song_of_inspiration#skald_court_poet",
+    "name": "Song of Inspiration",
+    "tags": ["ability", "class_feature", "skald"]
+  }, {
+    "id": "ability:studied_stalker",
+    "name": "Studied Stalker",
+    "maxStacks": 1
+  }, {
+    "id": "ability:studied_stalker#slayer_butterfly_blade",
+    "name": "Studied Stalker",
+    "tags": ["ability", "class_feature", "slayer"]
+  }, {
+    "id": "ability:symbol_of_inspiration",
+    "name": "Symbol of Inspiration",
+    "maxStacks": 1
+  }, {
+    "id": "ability:symbol_of_inspiration#cavalier_gallant",
+    "name": "Symbol of Inspiration",
+    "tags": ["ability", "cavalier", "class_feature"]
+  }, {
+    "id": "ability:symbol_of_resilience",
+    "name": "Symbol of Resilience",
+    "maxStacks": 1
+  }, {
+    "id": "ability:symbol_of_resilience#cavalier_gallant",
+    "name": "Symbol of Resilience",
+    "tags": ["ability", "cavalier", "class_feature"]
+  }, {
+    "id": "ability:unassailable_allegiance",
+    "name": "Unassailable Allegiance",
+    "maxStacks": 1
+  }, {
+    "id": "ability:unassailable_allegiance#fighter_high_guardian",
+    "name": "Unassailable Allegiance",
+    "tags": ["ability", "class_feature", "fighter"]
+  }, {
+    "id": "ability:vested_power",
+    "name": "Vested Power",
+    "maxStacks": 1
+  }, {
+    "id": "ability:vested_power#monk_invested_regent",
+    "name": "Vested Power",
+    "tags": ["ability", "class_feature", "monk"]
+  }, {
+    "id": "ability:weapon_and_armor_proficiency",
+    "name": "Weapon and Armor Proficiency",
+    "maxStacks": 1
+  }, {
+    "id": "ability:weapon_and_armor_proficiency#paladin_virtuous_bravo",
+    "name": "Weapon and Armor Proficiency",
+    "tags": ["ability", "class_feature", "paladin"]
+  }, {
+    "id": "class:alchemist#royal_alchemist",
+    "name": "Royal Alchemist",
+    "tags": ["alchemist", "archetype"],
+    "enabledFormula": "!@modifies:ability:poison_use#alchemist AND !@modifies:ability:swift_poisoning#alchemist",
     "maxStacks": 1
   }, {
     "id": "class:cavalier#gallant",
@@ -87,28 +221,10 @@
     "enabledFormula": "!@modifies:ability:order#cavalier AND !@modifies:ability:greater_banner#cavalier AND !@modifies:ability:banner#cavalier",
     "maxStacks": 1
   }, {
-    "id": "ability:code_of_gallantry#cavalier_gallant",
-    "name": "Code of Gallantry",
-    "tags": ["class_feature", "cavalier", "ability"]
-  }, {
-    "id": "ability:code_of_gallantry",
-    "name": "Code of Gallantry",
-    "maxStacks": 1
-  }, {
-    "id": "ability:symbol_of_inspiration#cavalier_gallant",
-    "name": "Symbol of Inspiration",
-    "tags": ["class_feature", "cavalier", "ability"]
-  }, {
-    "id": "ability:symbol_of_inspiration",
-    "name": "Symbol of Inspiration",
-    "maxStacks": 1
-  }, {
-    "id": "ability:symbol_of_resilience#cavalier_gallant",
-    "name": "Symbol of Resilience",
-    "tags": ["class_feature", "cavalier", "ability"]
-  }, {
-    "id": "ability:symbol_of_resilience",
-    "name": "Symbol of Resilience",
+    "id": "class:fighter#high_guardian",
+    "name": "High Guardian",
+    "tags": ["archetype", "fighter"],
+    "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:bonus_feat#fighter",
     "maxStacks": 1
   }, {
     "id": "class:gunslinger#thronewarden",
@@ -117,76 +233,15 @@
     "enabledFormula": "!@modifies:ability:bonus_feat#gunslinger AND !@modifies:ability:nimble#gunslinger",
     "maxStacks": 1
   }, {
-    "id": "ability:hair_trigger_reflexes#gunslinger_thronewarden",
-    "name": "Hair-Trigger Reflexes",
-    "tags": ["class_feature", "gunslinger", "ability"]
-  }, {
-    "id": "ability:hair_trigger_reflexes",
-    "name": "Hair-Trigger Reflexes",
+    "id": "class:monk#invested_regent",
+    "name": "Invested Regent",
+    "tags": ["archetype", "monk"],
+    "enabledFormula": "!@modifies:ability:bonus_feat#monk",
     "maxStacks": 1
   }, {
-    "id": "ability:eye_for_trouble#gunslinger_thronewarden",
-    "name": "Eye for Trouble",
-    "tags": ["class_feature", "gunslinger", "ability"]
-  }, {
-    "id": "ability:eye_for_trouble",
-    "name": "Eye for Trouble",
-    "maxStacks": 1
-  }, {
-    "id": "ability:deeds#gunslinger_thronewarden",
-    "name": "Deeds",
-    "tags": ["class_feature", "gunslinger", "ability"]
-  }, {
-    "id": "ability:deeds",
-    "name": "Deeds",
-    "maxStacks": 1
-  }, {
-    "id": "class:alchemist#royal_alchemist",
-    "name": "Royal Alchemist",
-    "tags": ["archetype", "alchemist"],
-    "enabledFormula": "!@modifies:ability:poison_use#alchemist AND !@modifies:ability:swift_poisoning#alchemist",
-    "maxStacks": 1
-  }, {
-    "id": "ability:alchemical_antidote#alchemist_royal_alchemist",
-    "name": "Alchemical Antidote",
-    "tags": ["class_feature", "alchemist", "ability"]
-  }, {
-    "id": "ability:alchemical_antidote",
-    "name": "Alchemical Antidote",
-    "maxStacks": 1
-  }, {
-    "id": "class:skald#court_poet",
-    "name": "Court Poet",
-    "tags": ["archetype", "skald"],
-    "enabledFormula": "!@modifies:ability:inspired_rage#skald AND !@modifies:ability:song_of_strength#skald AND !@modifies:ability:well_versed#skald",
-    "maxStacks": 1
-  }, {
-    "id": "ability:insightful_contemplation#skald_court_poet",
-    "name": "Insightful Contemplation",
-    "tags": ["class_feature", "skald", "ability"]
-  }, {
-    "id": "ability:insightful_contemplation",
-    "name": "Insightful Contemplation",
-    "maxStacks": 1
-  }, {
-    "id": "ability:song_of_inspiration#skald_court_poet",
-    "name": "Song of Inspiration",
-    "tags": ["class_feature", "skald", "ability"]
-  }, {
-    "id": "ability:song_of_inspiration",
-    "name": "Song of Inspiration",
-    "maxStacks": 1
-  }, {
-    "id": "ability:handling_the_crowd#skald_court_poet",
-    "name": "Handling the Crowd",
-    "tags": ["class_feature", "skald", "ability"]
-  }, {
-    "id": "ability:handling_the_crowd",
-    "name": "Handling the Crowd",
-    "maxStacks": 1
-  }, {
-    "id": "modifies:trait",
-    "name": "Archetype that modifies Armor Proficiency (Paladin)",
+    "id": "class:oracle#inerrant_voice",
+    "name": "Inerrant Voice",
+    "tags": ["archetype", "oracle"],
     "maxStacks": 1
   }, {
     "id": "class:paladin#virtuous_bravo",
@@ -195,57 +250,16 @@
     "enabledFormula": "!@modifies:ability:mercy#paladin AND !@modifies:ability:smite_evil#paladin AND !@modifies:ability:spellcasting#paladin AND !@modifies:trait:armor_proficiency#paladin AND !@modifies:ability:aura_of_justice#paladin AND !@modifies:ability:holy_champion#paladin",
     "maxStacks": 1
   }, {
-    "id": "ability:weapon_and_armor_proficiency#paladin_virtuous_bravo",
-    "name": "Weapon and Armor Proficiency",
-    "tags": ["class_feature", "paladin", "ability"]
-  }, {
-    "id": "ability:weapon_and_armor_proficiency",
-    "name": "Weapon and Armor Proficiency",
+    "id": "class:skald#court_poet",
+    "name": "Court Poet",
+    "tags": ["archetype", "skald"],
+    "enabledFormula": "!@modifies:ability:inspired_rage#skald AND !@modifies:ability:song_of_strength#skald AND !@modifies:ability:well_versed#skald",
     "maxStacks": 1
   }, {
-    "id": "ability:bravos_smite#paladin_virtuous_bravo",
-    "name": "Bravo\u0027s Smite",
-    "tags": ["class_feature", "paladin", "ability"]
-  }, {
-    "id": "ability:bravos_smite",
-    "name": "Bravo\u0027s Smite",
-    "maxStacks": 1
-  }, {
-    "id": "ability:nimble#paladin_virtuous_bravo",
-    "name": "Nimble",
-    "tags": ["class_feature", "paladin", "ability"]
-  }, {
-    "id": "ability:nimble",
-    "name": "Nimble",
-    "maxStacks": 1
-  }, {
-    "id": "ability:panache_and_deeds#paladin_virtuous_bravo",
-    "name": "Panache and Deeds",
-    "tags": ["class_feature", "paladin", "ability"]
-  }, {
-    "id": "ability:panache_and_deeds",
-    "name": "Panache and Deeds",
-    "maxStacks": 1
-  }, {
-    "id": "ability:advanced_deeds#paladin_virtuous_bravo",
-    "name": "Advanced Deeds",
-    "tags": ["class_feature", "paladin", "ability"]
-  }, {
-    "id": "ability:advanced_deeds",
-    "name": "Advanced Deeds",
-    "maxStacks": 1
-  }, {
-    "id": "ability:bravos_holy_strike#paladin_virtuous_bravo",
-    "name": "Bravo\u0027s Holy Strike",
-    "tags": ["class_feature", "paladin", "ability"]
-  }, {
-    "id": "ability:bravos_holy_strike",
-    "name": "Bravo\u0027s Holy Strike",
-    "maxStacks": 1
-  }, {
-    "id": "class:oracle#inerrant_voice",
-    "name": "Inerrant Voice",
-    "tags": ["archetype", "oracle"],
+    "id": "class:slayer#butterfly_blade",
+    "name": "Butterfly Blade",
+    "tags": ["archetype", "slayer"],
+    "enabledFormula": "!@modifies:ability:studied_target#slayer AND !@modifies:ability:track#slayer AND !@modifies:ability:stalker#slayer AND !@modifies:ability:quarry#slayer AND !@modifies:ability:swift_tracker#slayer AND !@modifies:ability:improved_quarry#slayer AND !@modifies:ability:sneak_attack#slayer",
     "maxStacks": 1
   }, {
     "id": "class:witch#witch_watcher",
@@ -253,42 +267,28 @@
     "tags": ["archetype", "witch"],
     "maxStacks": 1
   }, {
-    "id": "class:fighter#high_guardian",
-    "name": "High Guardian",
-    "tags": ["archetype", "fighter"],
-    "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:bonus_feat#fighter",
+    "id": "feat:noble_scion",
+    "name": "Noble Scion",
+    "tags": ["feat", "general"],
+    "enabledFormula": "all(@cha_score\u003e\u003d13,@character_level\u003d\u003d1)",
     "maxStacks": 1
   }, {
-    "id": "ability:right_hand#fighter_high_guardian",
-    "name": "Right Hand",
-    "tags": ["class_feature", "fighter", "ability"]
-  }, {
-    "id": "ability:right_hand",
-    "name": "Right Hand",
+    "id": "modifies:ability",
+    "name": "Archetype that modifies Bonus Feat",
     "maxStacks": 1
   }, {
-    "id": "ability:defenders_reflexes#fighter_high_guardian",
-    "name": "Defender\u0027s Reflexes",
-    "tags": ["class_feature", "fighter", "ability"]
-  }, {
-    "id": "ability:defenders_reflexes",
-    "name": "Defender\u0027s Reflexes",
+    "id": "modifies:trait",
+    "name": "Archetype that modifies Armor Proficiency (Paladin)",
     "maxStacks": 1
   }, {
-    "id": "ability:unassailable_allegiance#fighter_high_guardian",
-    "name": "Unassailable Allegiance",
-    "tags": ["class_feature", "fighter", "ability"]
-  }, {
-    "id": "ability:unassailable_allegiance",
-    "name": "Unassailable Allegiance",
+    "id": "witch_hex:distraction",
+    "name": "Distraction",
+    "tags": ["spell", "witch_hex"],
     "maxStacks": 1
   }, {
-    "id": "ability:royal_protector#fighter_high_guardian",
-    "name": "Royal Protector",
-    "tags": ["class_feature", "fighter", "ability"]
-  }, {
-    "id": "ability:royal_protector",
-    "name": "Royal Protector",
+    "id": "witch_hex:protective_luck",
+    "name": "Protective Luck",
+    "tags": ["spell", "witch_hex"],
     "maxStacks": 1
   }]
 }

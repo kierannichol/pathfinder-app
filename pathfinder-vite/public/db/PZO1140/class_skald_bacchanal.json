@@ -1,0 +1,48 @@
+{
+  "id": "class:skald#bacchanal",
+  "name": "Bacchanal",
+  "tags": ["archetype", "skald"],
+  "enabledFormula": "!@modifies:ability:scribe_scroll#skald AND !@modifies:ability:versatile_performance#skald",
+  "maxStacks": 1,
+  "description": {
+    "text": "Bacchanals are skalds who use ecstatic dancing and ribald songs to influence the primal instincts of listeners. To these skalds, the passionate frenzy of a celebration or feast shares many features with the violence of combat, and several of their talents blur the line between festival and battle in dramatic ways."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:scribe_scroll#skald",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:versatile_performance#skald",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:skald",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:versatile_performance#skald"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:fermented_fruit#skald_bacchanal"],
+            "linksToRemove": ["ability:scribe_scroll#skald"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:drunken_dancer#skald_bacchanal"],
+            "linksToRemove": ["ability:versatile_performance#skald"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:versatile_performance#skald"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:versatile_performance#skald"]
+          }]
+        }]
+      }]
+    }
+  }
+}

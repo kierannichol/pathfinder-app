@@ -1,0 +1,77 @@
+{
+  "id": "class:barbarian#sharptooth",
+  "name": "Sharptooth",
+  "tags": ["archetype", "barbarian"],
+  "enabledFormula": "!@modifies:ability:trap_sense#barbarian AND !@modifies:ability:fast_movement#barbarian AND !@modifies:ability:uncanny_dodge#barbarian AND !@modifies:ability:improved_uncanny_dodge#barbarian AND !@modifies:ability:rage_powers_normally#barbarian",
+  "maxStacks": 1,
+  "description": {
+    "text": "Coastal hunters and agents of the ocean\u0027s rage, sharptooth barbarians emulate the greatest predators of the sea. Sharks, in particular, are respected and admired by many such tribes, if not as manifestations of divine power, then merely as scions of the power and fury of the natural world."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:fast_movement#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:rage_powers_normally#barbarian",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:barbarian",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:swim_like_a_fish#barbarian_sharptooth"],
+            "linksToRemove": ["ability:fast_movement#barbarian"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:scent_of_blood#barbarian_sharptooth"],
+            "linksToRemove": ["ability:uncanny_dodge#barbarian"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:ocean_breath#barbarian_sharptooth"],
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 5,
+            "linksToRemove": ["ability:improved_uncanny_dodge#barbarian"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:blood_in_the_water#barbarian_sharptooth"],
+            "linksToRemove": ["ability:trap_sense#barbarian", "ability:rage_powers_normally#barbarian"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:trap_sense#barbarian", "ability:rage_powers_normally#barbarian"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }]
+        }]
+      }]
+    }
+  }
+}

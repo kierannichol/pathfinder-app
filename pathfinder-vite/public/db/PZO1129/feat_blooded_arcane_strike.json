@@ -1,8 +1,8 @@
 {
   "id": "feat:blooded_arcane_strike",
   "name": "Blooded Arcane Strike",
-  "tags": ["feat", "combat"],
-  "enabledFormula": "all(@ability:arcane_strike#bard_arcane_duelist,max(@spells_per_day:arcane#*)[Arcane spells],@ability:bloodrage#bloodrager)",
+  "tags": ["combat", "feat"],
+  "enabledFormula": "all(@feat:arcane_strike,max(@spells_per_day:arcane#*)[Arcane spells],@ability:bloodrage#*[Bloodrage])",
   "maxStacks": 1,
   "description": {
     "sections": {

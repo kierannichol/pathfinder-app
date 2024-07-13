@@ -33,17 +33,17 @@ public class ClassFeatureMapper {
                 .addTag(feature.classId().key)
                 .addTag(feature.id().type);
 
-        String prerequisiteFormula = tryParsePrerequisites(feature);
-        builder.setEnabledCondition(prerequisiteFormula);
+        String enabledFormula = tryParsePrerequisites(feature);
+        builder.setEnabledCondition(enabledFormula);
 
-        if (prerequisiteFormula.contains("@ability:grand_discovery#alchemist")) {
+        if (enabledFormula.contains("@ability:grand_discovery#alchemist")) {
             builder
                     .removeTag("discovery")
                     .addTag("grand_discovery");
 
-            prerequisiteFormula = prerequisiteFormula.replace("@ability:grand_discovery#alchemist", "true");
-            prerequisiteFormula = Formula.optimize(prerequisiteFormula);
-            builder.setEnabledCondition(prerequisiteFormula);
+            enabledFormula = enabledFormula.replace("@ability:grand_discovery#alchemist", "true");
+            enabledFormula = Formula.optimize(enabledFormula);
+            builder.setEnabledCondition(enabledFormula);
         }
 
         if (feature.effects() != null) {
