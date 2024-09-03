@@ -3,11 +3,12 @@
   "name": "Energy Absorption",
   "tags": ["barbarian", "class_feature", "rage_power"],
   "enabledFormula": "all(@class:barbarian\u003e\u003d12,@rage_power:greater_energy_resistance)",
+  "maxStacks": 1,
   "description": {
     "text": "Absorb energy to gain temporary hit points"
   },
   "stacks": {
-    "repeatingStack": {
+    "fixedStack": {
     }
   }
 }

@@ -2,7 +2,7 @@
   "id": "feat:extra_mercy",
   "name": "Extra Mercy",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@ability:lay_on_hands#*[Lay On Hands],@ability:mercy#*[Mercy])",
+  "enabledFormula": "all(sum(@ability:lay_on_hands#*)[Lay On Hands],sum(@ability:mercy#*)[Mercy])",
   "maxStacks": 1,
   "description": {
     "sections": {

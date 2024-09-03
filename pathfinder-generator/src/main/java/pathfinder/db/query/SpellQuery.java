@@ -1,14 +1,15 @@
 package pathfinder.db.query;
 
+import java.util.Collection;
 import pathfinder.model.Source;
 import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Spell;
 
 public class SpellQuery implements SourceSpecificQuery<SpellQuery> {
     private final String name;
-    private SourceId sourceId;
+    private Collection<SourceId> sourceId;
 
-    public SpellQuery source(SourceId sourceId) {
+    public SpellQuery sources(Collection<SourceId> sourceId) {
         return new SpellQuery(name, sourceId);
     }
 
@@ -16,7 +17,7 @@ public class SpellQuery implements SourceSpecificQuery<SpellQuery> {
         if (sourceId == null) {
             return true;
         }
-        return source.sourceId().equals(sourceId);
+        return sourceId.contains(source.sourceId());
     }
 
     public boolean matches(Spell spell) {
@@ -27,7 +28,7 @@ public class SpellQuery implements SourceSpecificQuery<SpellQuery> {
         this.name = name;
     }
 
-    private SpellQuery(String name, SourceId sourceId) {
+    private SpellQuery(String name, Collection<SourceId> sourceId) {
         this.name = name;
         this.sourceId = sourceId;
     }

@@ -1,5 +1,6 @@
 package pathfinder.db.query;
 
+import java.util.Collection;
 import java.util.Objects;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
@@ -10,7 +11,7 @@ import pathfinder.model.pathfinder.SourceId;
 public class NamedEntityQuery<T extends NamedEntity> implements SourceSpecificQuery<NamedEntityQuery<T>>, ClassSpecificQuery<NamedEntityQuery<T>> {
     private final Id id;
     private final String name;
-    private final SourceId sourceId;
+    private final Collection<SourceId> sourceIds;
     private final Id classId;
     private final Class<T> ofType;
 
@@ -32,20 +33,20 @@ public class NamedEntityQuery<T extends NamedEntity> implements SourceSpecificQu
 
     @Override
     public NamedEntityQuery<T> classId(Id classId) {
-        return new NamedEntityQuery<>(id, name, sourceId, classId, ofType);
+        return new NamedEntityQuery<>(id, name, sourceIds, classId, ofType);
     }
 
     @Override
-    public NamedEntityQuery<T> source(SourceId sourceId) {
-        return new NamedEntityQuery<>(id, name, sourceId, classId, ofType);
+    public NamedEntityQuery<T> sources(Collection<SourceId> sourceIds) {
+        return new NamedEntityQuery<>(id, name, sourceIds, classId, ofType);
     }
 
     public <U extends NamedEntity> NamedEntityQuery<U> type(Class<U> type) {
-        return new NamedEntityQuery<>(id, name, sourceId, classId, type);
+        return new NamedEntityQuery<>(id, name, sourceIds, classId, type);
     }
 
     public boolean matches(Source source) {
-        return this.sourceId == null || Objects.equals(source.sourceId(), this.sourceId);
+        return this.sourceIds == null || this.sourceIds.contains(source.sourceId());
     }
 
     public boolean matches(NamedEntity entity) {
@@ -64,10 +65,10 @@ public class NamedEntityQuery<T extends NamedEntity> implements SourceSpecificQu
         return ofType.isInstance(entity);
     }
 
-    private NamedEntityQuery(Id id, String name, SourceId sourceId, Id classId, Class<T> type) {
+    private NamedEntityQuery(Id id, String name, Collection<SourceId> sourceIds, Id classId, Class<T> type) {
         this.id = id;
         this.name = name;
-        this.sourceId = sourceId;
+        this.sourceIds = sourceIds;
         this.classId = classId;
         this.ofType = type;
     }

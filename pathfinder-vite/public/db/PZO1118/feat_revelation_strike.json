@@ -2,7 +2,7 @@
   "id": "feat:revelation_strike",
   "name": "Revelation Strike",
   "tags": ["combat", "feat"],
-  "enabledFormula": "all(@ability:revelation#*[Revelation],@ability:improved_unarmed_strike#hunter_treestrider)",
+  "enabledFormula": "all(sum(@ability:revelation#*)[Revelation],@feat:improved_unarmed_strike)",
   "maxStacks": 1,
   "description": {
     "text": "Your unarmed strike brings a revelation down upon your foe.",

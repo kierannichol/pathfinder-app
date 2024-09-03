@@ -1,19 +1,38 @@
 import {Button, Container, Modal} from "react-bootstrap";
 import "./NewCharacterDialog.scss";
-import {useState} from "react";
+import {useMemo, useState} from "react";
 import TextInput from "../controls/TextInput.tsx";
+import {useDatabase} from "@/data/context.tsx";
+import {Typeahead} from "react-bootstrap-typeahead";
+import {Option} from "react-bootstrap-typeahead/types/types";
 
 interface NewCharacterDialogProps {
   show: boolean;
-  onCreate: (name: string) => void;
+  onCreate: (name: string, classId: string) => void;
   onCancel?: () => void;
 }
 
 function NewCharacterDialog({ show, onCreate, onCancel }: NewCharacterDialogProps) {
   const [ characterName, setCharacterName ] = useState('');
+  const [ characterClass, setCharacterClass ] = useState('');
 
-  function handleCreate(name: string) {
-    onCreate(name);
+  const database = useDatabase();
+
+  const classOptions = useMemo(() => {
+    return database.query(['favored_class']).map(summary => {
+      return {
+        id: summary.key,
+        label: summary.name
+      };
+    });
+  }, [database]);
+
+  function handleCreate() {
+    onCreate(characterName, characterClass);
+  }
+
+  function handleClassSelected(selected: Option[]) {
+    setCharacterClass(selected[0]?.id);
   }
 
   return (<Modal
@@ -36,11 +55,24 @@ function NewCharacterDialog({ show, onCreate, onCancel }: NewCharacterDialogProp
             onChange={setCharacterName}
             onEnter={handleCreate}
             autoFocus={true} />
+        <label>Class</label>
+        <Typeahead id="new_character_class_select"
+                   caseSensitive={false}
+                   positionFixed={true}
+                   multiple={false}
+                   onChange={handleClassSelected}
+                   onFocus={e => e.target.select()}
+                   options={classOptions} />
+        {/*<Form.Select>*/}
+        {/*  <option></option>*/}
+        {/*  {database.query(['favored_class']).map(summary =>*/}
+        {/*      <option key={summary.key} value={summary.key}>{summary.name}</option>)}*/}
+        {/*</Form.Select>*/}
       </Container>
     </Modal.Body>
 
     <Modal.Footer>
-      <Button size={'lg'} onClick={_ => handleCreate(characterName)}>Create</Button>
+      <Button size={'lg'} onClick={handleCreate}>Create</Button>
     </Modal.Footer>
   </Modal>);
 }

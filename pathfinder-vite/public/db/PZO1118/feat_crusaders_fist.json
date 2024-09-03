@@ -2,7 +2,7 @@
   "id": "feat:crusaders_fist",
   "name": "Crusader\u0027s Fist",
   "tags": ["combat", "feat"],
-  "enabledFormula": "all(any(@ability:lay_on_hands#*[Lay On Hands],@ability:touch_of_corruption),@ability:improved_unarmed_strike#hunter_treestrider,@bab\u003e\u003d6)",
+  "enabledFormula": "all(any(sum(@ability:lay_on_hands#*)[Lay On Hands],@ability:touch_of_corruption),@feat:improved_unarmed_strike,@bab\u003e\u003d6)",
   "maxStacks": 1,
   "description": {
     "sections": {

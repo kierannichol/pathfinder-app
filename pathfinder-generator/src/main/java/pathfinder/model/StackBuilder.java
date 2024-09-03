@@ -13,4 +13,8 @@ public class StackBuilder extends AbstractComponentBuilder<StackBuilder> {
     public Stack build() {
         return new Stack(effects, links, choices, featureModifications);
     }
+
+    public boolean isEmpty() {
+        return effects.isEmpty() && links.isEmpty() && choices.isEmpty() && featureModifications.isEmpty();
+    }
 }

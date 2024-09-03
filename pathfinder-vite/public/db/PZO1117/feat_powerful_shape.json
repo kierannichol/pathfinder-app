@@ -2,7 +2,7 @@
   "id": "feat:powerful_shape",
   "name": "Powerful Shape",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@ability:wild_shape#*[Wild Shape],@class:druid\u003e\u003d8)",
+  "enabledFormula": "all(sum(@ability:wild_shape#*)[Wild Shape],@class:druid\u003e\u003d8)",
   "maxStacks": 1,
   "description": {
     "sections": {

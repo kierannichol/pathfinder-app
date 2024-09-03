@@ -1,11 +1,11 @@
-import {HTMLAttributes} from "react";
+import React, {HTMLAttributes} from "react";
 import BoxedValue from "../common/BoxedValue.tsx";
 import * as CharacterData from "../common/CharacterData.tsx";
 import Header from "../common/Header.tsx";
 import Label from "../common/Label.tsx";
 import Section from "../common/Section.tsx";
 import styles from "./SpeedSection.module.scss";
-import {classNames} from "../../../../../utils/classNames.ts";
+import {classNames} from "@/utils/classNames.ts";
 
 export default function SpeedSection({ className, ...divProps }: HTMLAttributes<HTMLDivElement>) {
   return <Section className={classNames([styles.section, className])} {...divProps}>

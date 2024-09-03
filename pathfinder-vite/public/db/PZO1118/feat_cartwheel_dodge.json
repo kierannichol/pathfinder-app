@@ -2,7 +2,7 @@
   "id": "feat:cartwheel_dodge",
   "name": "Cartwheel Dodge",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@ability:evasion#*[Evasion],@ability:improved_evasion#*[Improved Evasion],@skill:acrobatics\u003e\u003d12)",
+  "enabledFormula": "all(sum(@ability:evasion#*)[Evasion],sum(@ability:improved_evasion#*)[Improved Evasion],@skill:acrobatics\u003e\u003d12)",
   "maxStacks": 1,
   "description": {
     "text": "You use your knack for avoiding damage to reposition yourself in combat.",

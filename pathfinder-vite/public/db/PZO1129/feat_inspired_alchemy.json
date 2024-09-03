@@ -2,7 +2,7 @@
   "id": "feat:inspired_alchemy",
   "name": "Inspired Alchemy",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@spells_per_day:alchemist#2,@ability:alchemy#*[Alchemy],@ability:inspiration#*[Inspiration])",
+  "enabledFormula": "all(@spells_per_day:alchemist#2,sum(@ability:alchemy#*)[Alchemy],sum(@ability:inspiration#*)[Inspiration])",
   "maxStacks": 1,
   "description": {
     "text": "With some inspiration and elbow grease, you can recreate a consumed extract in a pinch.",

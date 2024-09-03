@@ -2,7 +2,7 @@
   "id": "feat:fast_empathy",
   "name": "Fast Empathy",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@skill:handle_animal\u003e\u003d5,@ability:wild_empathy#*[Wild Empathy])",
+  "enabledFormula": "all(@skill:handle_animal\u003e\u003d5,sum(@ability:wild_empathy#*)[Wild Empathy])",
   "maxStacks": 1,
   "description": {
     "sections": {

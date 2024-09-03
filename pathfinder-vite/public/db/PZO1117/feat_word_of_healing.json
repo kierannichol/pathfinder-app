@@ -2,7 +2,7 @@
   "id": "feat:word_of_healing",
   "name": "Word of Healing",
   "tags": ["feat", "general"],
-  "enabledFormula": "@ability:lay_on_hands#*[Lay On Hands]",
+  "enabledFormula": "sum(@ability:lay_on_hands#*)[Lay On Hands]",
   "maxStacks": 1,
   "description": {
     "text": "Using the same divine energy as your lay on hands ability, you can heal others at a distance.",

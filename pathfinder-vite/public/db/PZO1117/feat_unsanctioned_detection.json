@@ -2,7 +2,7 @@
   "id": "feat:unsanctioned_detection",
   "name": "Unsanctioned Detection",
   "tags": ["feat", "general"],
-  "enabledFormula": "@ability:detect_evil#*[Detect Evil]",
+  "enabledFormula": "sum(@ability:detect_evil#*)[Detect Evil]",
   "maxStacks": 1,
   "description": {
     "sections": {

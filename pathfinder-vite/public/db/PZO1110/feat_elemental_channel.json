@@ -2,7 +2,7 @@
   "id": "feat:elemental_channel",
   "name": "Elemental Channel",
   "tags": ["feat", "general"],
-  "enabledFormula": "@ability:channel_energy#*[Channel Energy]",
+  "enabledFormula": "sum(@ability:channel_energy#*)[Channel Energy]",
   "maxStacks": 1,
   "description": {
     "text": "Choose one elemental subtype, such as air, earth, fire, or water. You can channel your divine energy to harm or heal outsiders that possess your chosen elemental subtype.",

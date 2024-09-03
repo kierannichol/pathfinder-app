@@ -1,17 +1,18 @@
 package pathfinder.db.query;
 
+import java.util.Collection;
 import java.util.Objects;
 import pathfinder.model.Id;
+import pathfinder.model.Source;
 import pathfinder.model.pathfinder.Bloodline;
 import pathfinder.model.pathfinder.SourceId;
-import pathfinder.model.Source;
 
 public class BloodlineQuery implements SourceSpecificQuery<BloodlineQuery>, ClassSpecificQuery<BloodlineQuery> {
     private final String name;
-    private SourceId sourceId;
+    private Collection<SourceId> sourceId;
     private Id classId;
 
-    public BloodlineQuery source(SourceId sourceId) {
+    public BloodlineQuery sources(Collection<SourceId> sourceId) {
         return new BloodlineQuery(name, sourceId, classId);
     }
 
@@ -23,7 +24,7 @@ public class BloodlineQuery implements SourceSpecificQuery<BloodlineQuery>, Clas
         if (sourceId == null) {
             return true;
         }
-        return Objects.equals(source.sourceId(), sourceId);
+        return sourceId.contains(source.sourceId());
     }
 
     public boolean matches(Bloodline feature) {
@@ -35,7 +36,7 @@ public class BloodlineQuery implements SourceSpecificQuery<BloodlineQuery>, Clas
         this.name = name;
     }
 
-    private BloodlineQuery(String name, SourceId sourceId, Id classId) {
+    private BloodlineQuery(String name, Collection<SourceId> sourceId, Id classId) {
         this.name = name;
         this.sourceId = sourceId;
         this.classId = classId;

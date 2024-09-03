@@ -2,7 +2,7 @@
   "id": "feat:improved_awesome_blow",
   "name": "Improved Awesome Blow",
   "tags": ["combat", "feat"],
-  "enabledFormula": "all(@str_score\u003e\u003d13,any(@ability:awesome_blow#brawler,@ability:awesome_blow#*[Awesome Blow]),@feat:power_attack)",
+  "enabledFormula": "all(@str_score\u003e\u003d13,any(@ability:awesome_blow#brawler,sum(@ability:awesome_blow#*)[Awesome Blow]),@feat:power_attack)",
   "maxStacks": 1,
   "description": {
     "text": "You are skilled at sending your opponents flying.",

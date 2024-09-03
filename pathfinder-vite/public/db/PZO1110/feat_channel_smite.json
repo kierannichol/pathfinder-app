@@ -2,7 +2,7 @@
   "id": "feat:channel_smite",
   "name": "Channel Smite",
   "tags": ["combat", "feat"],
-  "enabledFormula": "@ability:channel_energy#*[Channel Energy]",
+  "enabledFormula": "sum(@ability:channel_energy#*)[Channel Energy]",
   "maxStacks": 1,
   "description": {
     "text": "You can channel your divine energy through a melee weapon you wield.",

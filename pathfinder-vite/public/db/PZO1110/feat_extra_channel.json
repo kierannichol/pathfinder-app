@@ -2,7 +2,7 @@
   "id": "feat:extra_channel",
   "name": "Extra Channel",
   "tags": ["feat", "general"],
-  "enabledFormula": "@ability:channel_energy#*[Channel Energy]",
+  "enabledFormula": "sum(@ability:channel_energy#*)[Channel Energy]",
   "maxStacks": 1,
   "description": {
     "text": "You can channel divine energy more often.",

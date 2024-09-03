@@ -12,6 +12,7 @@ import {FeatureSummary} from "@/data/v8/FeatureSummary.ts";
 interface DataChoiceSelectButtonProps {
   choiceRef: SelectChoiceRef;
   characterAtLevel: CharacterAtLevel;
+  characterAtPreviousLevel?: CharacterAtLevel;
   choiceIndex?: number;
   id?: string;
   onSelect?: (id: string) => void;
@@ -25,12 +26,15 @@ interface DataChoiceSelectButtonProps {
   children?: ReactNode;
 }
 
-export default function DataChoiceSelectButton({ choiceRef, choiceIndex, characterAtLevel, id, onSelect, label, buttonLabel, variant, dialogVariant, descriptionFn, search, labelPrefix, children }: DataChoiceSelectButtonProps) {
+export default function DataChoiceSelectButton({ choiceRef, choiceIndex, characterAtLevel, characterAtPreviousLevel, id, onSelect, label, buttonLabel, variant, dialogVariant, descriptionFn, search, labelPrefix, children }: DataChoiceSelectButtonProps) {
   const database = useDatabase();
   const characterWithoutCurrent = useMemo(() => {
     const selected = characterAtLevel.selected(choiceRef);
-    return selected !== undefined ? characterAtLevel.withoutChoice(choiceRef.path) : characterAtLevel;
+    return selected !== '' ? characterAtLevel.withoutChoice(choiceRef.path) : characterAtLevel;
   }, [characterAtLevel, choiceRef]);
+
+  const selected = useMemo(() => characterAtLevel.selected(choiceRef, choiceIndex) as string,
+      [choiceRef, choiceIndex]);
 
   function handleSelect(id: string|undefined) {
     onSelect?.(id ?? '');
@@ -41,19 +45,32 @@ export default function DataChoiceSelectButton({ choiceRef, choiceIndex, charact
       choiceName={label ?? choiceRef.label}
       variant={variant ?? "default"}
       dialogVariant={dialogVariant ?? variant ?? "default"}
-      value={characterAtLevel.selected(choiceRef, choiceIndex) as string}
+      value={selected}
       buttonLabel={buttonLabel}
       onSelect={handleSelect}
       search={search}
       labelPrefix={labelPrefix}
       optionsFn={(query: string|undefined, category: ChoiceSelectorCategory|undefined) => {
-          return queryOptions(database, choiceRef, query, category)
-            .map(summary => featureToChoiceSelectorOption(summary, database, characterWithoutCurrent, descriptionFn, handleSelect))
+          let options = queryOptions(database, choiceRef, query, category);
+
+          if (characterAtPreviousLevel && category?.key === '_new') {
+            options = options.filter(option => {
+              return option.isEnabled(characterWithoutCurrent) && !option.isEnabled(characterAtPreviousLevel);
+            })
+          }
+
+          return options.map(summary => featureToChoiceSelectorOption(summary, database, characterWithoutCurrent, descriptionFn, handleSelect));
       }}
-      categoriesFn={() => choiceRef.categories.map((category: ChoiceCategory) => new ChoiceSelectorCategory(category.label, category.tag))}
+      categoriesFn={() => {
+        let categories = choiceRef.categories.map((category: ChoiceCategory) => new ChoiceSelectorCategory(category.label, category.tag));
+        // if (characterAtPreviousLevel) {
+        //   categories = [...categories, new ChoiceSelectorCategory('New', '', '_new')]
+        // }
+        return categories;
+      }}
       children={children}
       actionVerb={choiceRef.repeatingIndex === 0 ? 'Select' : 'Add'}
-      removable={choiceRef.repeatingIndex > 0 && characterAtLevel.selected(choiceRef, choiceIndex) !== undefined}
+      removable={choiceRef.repeatingIndex > 0 && selected !== ''}
   />
 }
 

@@ -1,22 +1,23 @@
 package pathfinder.db.query;
 
+import java.util.Collection;
+import pathfinder.model.Source;
 import pathfinder.model.pathfinder.Feat;
 import pathfinder.model.pathfinder.SourceId;
-import pathfinder.model.Source;
 
 public class FeatQuery implements SourceSpecificQuery<FeatQuery> {
     private final String name;
-    private SourceId sourceId;
+    private Collection<SourceId> sourceIds;
 
-    public FeatQuery source(SourceId sourceId) {
-        return new FeatQuery(name, sourceId);
+    public FeatQuery sources(Collection<SourceId> sourceIds) {
+        return new FeatQuery(name, sourceIds);
     }
 
     public boolean matches(Source source) {
-        if (sourceId == null) {
+        if (sourceIds == null) {
             return true;
         }
-        return source.sourceId().equals(sourceId);
+        return sourceIds.contains(source.sourceId());
     }
 
     public boolean matches(Feat feat) {
@@ -27,8 +28,8 @@ public class FeatQuery implements SourceSpecificQuery<FeatQuery> {
         this.name = name;
     }
 
-    private FeatQuery(String name, SourceId sourceId) {
+    private FeatQuery(String name, Collection<SourceId> sourceIds) {
         this.name = name;
-        this.sourceId = sourceId;
+        this.sourceIds = sourceIds;
     }
 }

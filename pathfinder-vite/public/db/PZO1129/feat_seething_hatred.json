@@ -2,7 +2,7 @@
   "id": "feat:seething_hatred",
   "name": "Seething Hatred",
   "tags": ["combat", "feat"],
-  "enabledFormula": "@ability:studied_target#*[Studied Target]",
+  "enabledFormula": "sum(@ability:studied_target#*)[Studied Target]",
   "maxStacks": 1,
   "description": {
     "text": "You\u0027ve learned to channel your hatred of a particular type of creature into a devastating strike.",

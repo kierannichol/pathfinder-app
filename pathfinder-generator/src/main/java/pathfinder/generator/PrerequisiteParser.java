@@ -2,6 +2,7 @@ package pathfinder.generator;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -31,6 +32,8 @@ import pathfinder.model.pathfinder.Feature;
 import pathfinder.model.pathfinder.Size;
 import pathfinder.model.pathfinder.Skill;
 import pathfinder.model.pathfinder.Skills;
+import pathfinder.model.pathfinder.SourceId;
+import pathfinder.model.pathfinder.Sources;
 import pathfinder.model.pathfinder.Weapons;
 import pathfinder.util.PatternMapper;
 
@@ -71,14 +74,18 @@ public class PrerequisiteParser {
 //            .addFunction("class_feature", (id, text) -> wildcard(id, text, ""))
 //            .addFunction("wildcard", (id, text) -> id)
 
+            .addImmediateReplacement("Proficient with armor or shield", "any(@proficiency:light_armor,@proficiency:medium_armor,@proficiency:heavy_armor,@proficiency:shield)")
             .addImmediateReplacement("proficient with {NAME} or {NAME}", "(@proficiency:{0} OR @proficiency:{1})")
             .addImmediateReplacement("the ability to cast animate dead or command undead", "(@spell:animate_dead OR @spell:command_undead)")
-            .addImmediateReplacement("ability to acquire an animal companion, eidolon, familiar, or special mount", "(@feature:animal_companion OR @feature:eidolon OR @feature:familiar OR @feature:special_mount)")
+            .addImmediateReplacement("ability to acquire an animal companion, eidolon, familiar, or special mount", "(@trait:animal_companion OR @feature:eidolon OR @feature:familiar OR @feature:special_mount)")
+            .addReplacement("base attack bonus +{NUMBER} or {CLASS} level {LEVEL}", "any(@bab>={0},{1}>={2})")
 
             .addReplacement("no levels in a class that has the {NAME}", "!{0}")
             .addReplacement("must be taken at {LEVEL} level", "@character_level==1")
             .addReplacement("you may only select this feat at {LEVEL} level", "@character_level=={0}")
             .addReplacement("you may only gain this feat at {LEVEL} level", "@character_level=={0}")
+
+            .addReplacement("must have an animal companion", "@trait:animal_companion")
 
 //            .addReplacement("{RACE}", "@race:{0}")
             .addReplacement("goblin", "@race:goblin")
@@ -134,20 +141,25 @@ public class PrerequisiteParser {
             .addReplacement("Craft Magic Arms and Armor", "@feat:craft_magic_arms_and_armor")
             .addReplacement("proficient with all martial weapons", "@feat:martial_weapon_proficiency")
             .addReplacement("proficient with {NAME}", "@proficiency:{0}")
+            .addReplacement("proficient in {NAME}", "@proficiency:{0}")
 
             .addReplacement("patron deity is an evil god", "any(@deity:alignment_le,@deity:alignment_ne,@deity:alignment_ce)")
+            .addReplacement("worshiper of an evil deity", "any(@deity:alignment_le,@deity:alignment_ne,@deity:alignment_ce)")
+            .addReplacement("worshiper of a good deity", "any(@deity:alignment_lg,@deity:alignment_ng,@deity:alignment_cg)")
+            .addReplacement("worshiper of a chaotic neutral deity", "@deity:alignment_cn")
             .addReplacement("follower of the green faith", "@deity=='Green Faith'")
             .addReplacement("cannot have a patron deity", "@deity==''")
             .addImmediateReplacement("worshiper of a deity of trickery, lust, and revenge", "all(@deity:domain_trickery,@deity:domain_lust,@deity:domain_revenge)")
             .addImmediateReplacement("worshiper of a deity of trickery, lust, revenge", "all(@deity:domain_trickery,@deity:domain_lust,@deity:domain_revenge)")
 
             .addReplacement("chaotic alignment", "any(@alignment:cg,@alignment:cn,@alignment:ce)")
-            .addReplacement("chaotic neutral alignment", "@alignment:cn")
-            .addReplacement("divine bond (mount)", "@ability:divine_bond#mount")
-            .addReplacement("divine bond (armor)", "@ability:divine_bond#armor")
-            .addReplacement("divine bond (shield)", "@ability:divine_bond#shield")
-            .addReplacement("divine bond (armor or shield)", "@ability:divine_bond#armor OR @ability:divine_bond#shield")
-            .addReplacement("divine bond (armor or shield), or sacred armor class feature", "(@ability:divine_bond#armor OR @ability:divine_bond#shield) OR @ability:sacred_armor")
+            .addReplacement("chaotic neutral alignment", "any(@alignment:ln,@alignment:n,@alignment:cn)")
+            .addReplacement("neutral alignment", "@alignment:cn")
+            .addReplacement("divine bond (mount)", "sum(@trait:mount_bond#*)")
+            .addReplacement("divine bond (armor)", "sum(@trait:armor_bond#*)")
+            .addReplacement("divine bond (shield)", "sum(@trait:shield_bond#*)")
+            .addReplacement("divine bond (armor or shield)", "sum(@trait:armor_bond#*) OR sum(@trait:shield_bond#*)")
+            .addReplacement("divine bond (armor or shield), or sacred armor class feature", "sum(@trait:armor_bond#*) OR sum(@trait:shield_bond#*) OR @ability:sacred_armor")
             .addReplacement("rage class feature", "@trait:rage[Rage class feature]")
             .addReplacement("rage or raging song class feature", "any(@trait:rage, @trait:raging_song)[Rage class feature]")
             .addReplacement("able to maintain studied target against two opponents simultaneously", "@ability:studied_target>=2")
@@ -156,7 +168,7 @@ public class PrerequisiteParser {
             .addReplacement("{NAME} as a spell or spell-like ability (including from the {NAME} or {NAME} class features)", "({0} OR {class_feature:1} OR {class_feature:2})")
             .addReplacement("Ability to cast divine spells", "@trait:divine_spellcaster[Divine spellcaster]")
             .addReplacement("Divine spellcaster", "@trait:divine_spellcaster[Divine spellcaster]")
-            .addReplacement("Ability to use the {NAME} or cast {NAME}", "({ability:0} OR {1})")
+            .addReplacement("Ability to use the {NAME} or cast {NAME}", "({0} OR {spell:1})")
             .addImmediateReplacement("darkvision or low-light vision racial trait", "(@ability:darkvision OR @ability:low_light_vision)")
             .addImmediateReplacement("darkvision or lowlight vision racial trait", "(@ability:darkvision OR @ability:low_light_vision)")
             .addReplacement("lowlight vision", "@ability:low_light_vision")
@@ -164,7 +176,7 @@ public class PrerequisiteParser {
             .addReplacement("Darkvision {NUMBER} feet", "@ability:darkvision >= {0}")
             .addReplacement("ability to create magical darkness", "(@spell:darkness OR @spell:deeper_darkness)")
             .addReplacement("Ability to acquire a new familiar", "@ability:familiar")
-            .addReplacement("ability to acquire an animal companion", "@ability:animal_companion")
+            .addReplacement("ability to acquire an animal companion", "@trait:animal_companion")
             .addReplacement("{LEVEL}-level spells", "@spells_per_day#{0}")
             .addReplacement("{LEVEL}-level {CLASS} spells", "@spells_per_day:{key:1}#{0}")
             .addReplacement("{LEVEL}-level arcane spells", "@spells_per_day:arcane#{0}")
@@ -411,6 +423,7 @@ public class PrerequisiteParser {
             .addReplacement("or {PHRASE}", " OR {1}")
             .addReplacement("{PHRASE}, {PHRASE}, or {PHRASE}", "any({0}, {1}, {2})")
             .addReplacement("{PHRASE}, {PHRASE} or {PHRASE}", "any({0}, {1}, {2})")
+            .addReplacement("{PHRASE}, {PHRASE}, {PHRASE}", "all({0}, {1}, {2})")
             .addReplacement("{PHRASE}, {PHRASE}, {PHRASE}, or {PHRASE}", "any({0}, {1}, {2}, {3})")
             .addReplacement("{PHRASE}, {PHRASE}, {PHRASE} or {PHRASE}", "any({0}, {1}, {2}, {3})")
             .addReplacement("{PHRASE}, {PHRASE}, {PHRASE}, {PHRASE}, or {PHRASE}", "any({0}, {1}, {2}, {3}, {4})")
@@ -511,8 +524,8 @@ public class PrerequisiteParser {
         addNameMapping("proficiency:{NAME}", Id.partial("@proficiency:{key:0}"));
 
         // hard-coded
-        addNameMapping("force spell", Id.partial("\"force spell\""));
-        addNameMapping("arcane force spell", Id.partial("\"arcane force spell\""));
+        addNameMapping("force spell", Id.partial("(1[force spell])"));
+        addNameMapping("arcane force spell", Id.partial("(1[arcane force spell])"));
 
         // custom (not dynamically supported yet)
         addNameMapping("ranger spellbook", Id.of("spellbook:ranger"));
@@ -594,7 +607,7 @@ public class PrerequisiteParser {
         addTypeLookupFunction.accept("class", text -> database.query(Query.characterClass(text)));
         addTypeLookupFunction.accept("ability", text -> database.query(Query.namedEntity(text)));
         addTypeLookupFunction.accept("feat", text -> database.query(Query.feat(text)));
-//        addTypeLookupFunction.accept("spell");
+        addTypeLookupFunction.accept("spell", text -> database.query(Query.spell(text)));
         addTypeLookupFunction.accept("magus_arcana", text -> database.query(Query.classFeature(text).classId(Id.of("class:magus"))));
         addTypeLookupFunction.accept("rogue_talent", text -> database.query(Query.classFeature(text).classId(Id.of("class:rogue"))));
         addTypeLookupFunction.accept("rage_power", text -> database.query(Query.classFeature(text).classId(Id.of("class:barbarian"))));
@@ -608,20 +621,33 @@ public class PrerequisiteParser {
             if (IS_INT_PATTERN.matcher(text).matches()) {
                 return text;
             }
+            return null;
+        });
 
+        patternMapper.addContextResolver((text, context) -> {
             if (context instanceof PrerequisiteContext c) {
-                var query = Query.namedEntity(text)
-                        .source(c.sourceId())
-                        .classId(c.classId());
+                var typeOrder = new ArrayList<Class<? extends NamedEntity>>();
+                if (c.classId() != null) {
+                    typeOrder.add(ClassFeature.class);
+                }
+                typeOrder.add(Feat.class);
+                typeOrder.add(NamedEntity.class);
 
-                for (int i = 0; i < 4; i++) {
-                    var expandedQuery = expandQuery(query, i);
-                    var found = database.query(expandedQuery).findFirst()
-                            .map(NamedEntity::id)
-                            .map(PrerequisiteParser::formatId);
+                for (Class<? extends NamedEntity> type : typeOrder) {
+                    var query = Query.namedEntity(text)
+                            .source(c.sourceId())
+                            .type(type)
+                            .classId(c.classId());
 
-                    if (found.isPresent()) {
-                        return found.get();
+                    for (int i = 0; i < 4; i++) {
+                        var expandedQuery = expandQuery((NamedEntityQuery<NamedEntity>) query, c.sourceId(), i);
+                        var found = database.query(expandedQuery).findFirst()
+                                .map(NamedEntity::id)
+                                .map(PrerequisiteParser::formatId);
+
+                        if (found.isPresent()) {
+                            return found.get();
+                        }
                     }
                 }
             }
@@ -636,15 +662,16 @@ public class PrerequisiteParser {
         if (!idObj.hasOption()) {
             return id;
         }
-        return formatId(idObj.withOption("*")) + "[" + WordUtils.capitalize(text) + appendText + "]";
+        return "sum(" + formatId(idObj.withOption("*")) + ")[" + WordUtils.capitalize(text) + appendText + "]";
     }
 
-    private NamedEntityQuery<NamedEntity> expandQuery(NamedEntityQuery<NamedEntity> query, int i) {
+    private NamedEntityQuery<NamedEntity> expandQuery(NamedEntityQuery<NamedEntity> query, SourceId sourceId, int i) {
+        var previousSources = Sources.previousSourceIds(sourceId);
         return switch (i) {
             case 0 -> query;
-            case 1 -> query.source(null);
+            case 1 -> query.sources(previousSources);
             case 2 -> query.classId(null);
-            default -> query.source(null).classId(null);
+            default -> query.sources(previousSources).classId(null);
         };
     }
 

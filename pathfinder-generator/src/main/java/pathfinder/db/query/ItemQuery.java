@@ -1,14 +1,15 @@
 package pathfinder.db.query;
 
+import java.util.Collection;
 import pathfinder.model.Source;
 import pathfinder.model.pathfinder.ItemData;
 import pathfinder.model.pathfinder.SourceId;
 
 public class ItemQuery implements SourceSpecificQuery<ItemQuery> {
     private final String name;
-    private SourceId sourceId;
+    private Collection<SourceId> sourceId;
 
-    public ItemQuery source(SourceId sourceId) {
+    public ItemQuery sources(Collection<SourceId> sourceId) {
         return new ItemQuery(name, sourceId);
     }
 
@@ -16,7 +17,7 @@ public class ItemQuery implements SourceSpecificQuery<ItemQuery> {
         if (sourceId == null) {
             return true;
         }
-        return source.sourceId().equals(sourceId);
+        return sourceId.contains(source.sourceId());
     }
 
     public boolean matches(ItemData item) {
@@ -27,7 +28,7 @@ public class ItemQuery implements SourceSpecificQuery<ItemQuery> {
         this.name = name;
     }
 
-    private ItemQuery(String name, SourceId sourceId) {
+    private ItemQuery(String name, Collection<SourceId> sourceId) {
         this.name = name;
         this.sourceId = sourceId;
     }

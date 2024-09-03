@@ -6,7 +6,7 @@ import ChoiceSelectorList, {
   ChoiceSelectorOptions
 } from "./ChoiceSelectorList";
 import styles from "../Dialog.module.scss";
-import {array} from "../../../app/pfutils.ts";
+import {array} from "@/app/pfutils.ts";
 import LoadingBlock from "../LoadingBlock.tsx";
 import SearchBar from "../SearchBar.tsx";
 import {FaMagnifyingGlass} from "react-icons/fa6";

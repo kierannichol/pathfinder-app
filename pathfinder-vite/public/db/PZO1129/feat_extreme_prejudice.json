@@ -2,7 +2,7 @@
   "id": "feat:extreme_prejudice",
   "name": "Extreme Prejudice",
   "tags": ["combat", "feat"],
-  "enabledFormula": "all(@feat:seething_hatred,@ability:sneak_attack#slayer\u003e\u003d3,@ability:studied_target#*[Studied Target])",
+  "enabledFormula": "all(@feat:seething_hatred,@ability:sneak_attack#slayer\u003e\u003d3,sum(@ability:studied_target#*)[Studied Target])",
   "maxStacks": 1,
   "description": {
     "text": "Your hatred of a particular type of creature has honed your killer instinct.",

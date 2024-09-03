@@ -2,7 +2,7 @@
   "id": "feat:intimidating_performance",
   "name": "Intimidating Performance",
   "tags": ["feat", "general"],
-  "enabledFormula": "any(\"Ability to start a performance (or raging song) as a move action\",@ability:bardic_performance,@ability:raging_song#*[Raging Song])",
+  "enabledFormula": "any(\"Ability to start a performance (or raging song) as a move action\",@ability:bardic_performance,sum(@ability:raging_song#*)[Raging Song])",
   "maxStacks": 1,
   "description": {
     "text": "Your performance strikes fear in the hearts of foes.",

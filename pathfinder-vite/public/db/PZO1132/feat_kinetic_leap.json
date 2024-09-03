@@ -2,7 +2,7 @@
   "id": "feat:kinetic_leap",
   "name": "Kinetic Leap",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@skill:acrobatics\u003e\u003d3,@ability:kinetic_blast#*[Kinetic Blast])",
+  "enabledFormula": "all(@skill:acrobatics\u003e\u003d3,sum(@ability:kinetic_blast#*)[Kinetic Blast])",
   "maxStacks": 1,
   "description": {
     "text": "Kinetic energy propels you when you jump.",

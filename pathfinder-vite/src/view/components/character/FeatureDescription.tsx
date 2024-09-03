@@ -32,6 +32,7 @@ export default function FeatureDescription({ feature, description}: FeatureDescr
         <span className={styles.p}>{descriptionTextElement}</span>
         {Object.keys(description.sections).map(sectionLabel =>
             <p key={sectionLabel}><span className={styles.sectionLabel}>{sectionLabel}:</span> <span className={styles.p}>{description?.sections[sectionLabel]}</span></p>)}
+        {feature.source && <div><i>Source: {feature.source.title}</i></div>}
       </div>);
 }
 

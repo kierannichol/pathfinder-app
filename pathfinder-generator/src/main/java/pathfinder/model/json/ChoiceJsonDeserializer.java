@@ -28,7 +28,8 @@ public class ChoiceJsonDeserializer extends StdDeserializer<Choice> {
         String label = node.get("label").asText("");
         String type = node.get("type").asText("");
         boolean repeating = node.has("repeating") && node.get("repeating").asBoolean();
-        String sortBy = node.get("sort_by").asText("none");
+        var sortByNode = node.get("sort_by");
+        String sortBy = sortByNode != null ? sortByNode.asText("none") : "none";
 
         boolean isSelect = false;
         List<String> optionTags = new ArrayList<>();

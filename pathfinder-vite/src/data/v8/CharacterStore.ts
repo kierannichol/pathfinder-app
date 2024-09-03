@@ -17,7 +17,9 @@ export default abstract class CharacterStore {
   async list(): Promise<CharacterSummary[]> {
     const packedList = await this.loadAllPacked();
     return await Promise.all(packedList.map(packed =>
-        new CharacterSummary(packed.id, packed.selections['character_name'] as string)));
+        new CharacterSummary(packed.id,
+            packed.selections['character_name'] as string,
+            packed.selections['favored_class'] as string)));
   }
 
   async load(id: string): Promise<Character|undefined> {
@@ -35,6 +37,7 @@ export default abstract class CharacterStore {
     const id = uuidv4();
     let newCharacter = Character.create(id, this.template, this.database);
     newCharacter = await newCharacter.selectAll(selections);
+    console.log(newCharacter);
     await this.save(newCharacter);
     return newCharacter;
   }

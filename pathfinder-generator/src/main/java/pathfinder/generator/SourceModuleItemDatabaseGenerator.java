@@ -71,6 +71,7 @@ public class SourceModuleItemDatabaseGenerator {
         return SourceModuleItemDatabaseDbo.newBuilder()
                 .setSourceId(sourceId.id())
                 .setSourceCode(databaseId())
+                .setTitle(sourceId.name())
                 .addAllItems(items)
                 .addAllOptionSets(itemOptionSets)
                 .addAllOptions(itemOptions)

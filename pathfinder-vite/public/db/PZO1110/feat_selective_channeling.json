@@ -2,7 +2,7 @@
   "id": "feat:selective_channeling",
   "name": "Selective Channeling",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@cha_score\u003e\u003d13,@ability:channel_energy#*[Channel Energy])",
+  "enabledFormula": "all(@cha_score\u003e\u003d13,sum(@ability:channel_energy#*)[Channel Energy])",
   "maxStacks": 1,
   "description": {
     "text": "You can choose whom to affect when you channel energy.",

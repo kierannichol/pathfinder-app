@@ -1,6 +1,6 @@
 import useAsyncMemo from "../../utils/useAsyncMemo.tsx";
 import Panel from "../components/Panel.tsx";
-import {useEffect, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import {Button} from "react-bootstrap";
 import NewCharacterDialog from "../components/character/NewCharacterDialog.tsx";
 import styles from "./CharacterList.module.scss";
@@ -8,7 +8,7 @@ import {useNavigate} from "react-router-dom";
 import LoadingBlock from "../components/LoadingBlock.tsx";
 import DeleteIcon from "../components/icons/DeleteIcon.tsx";
 import {classNames} from "@/utils/classNames.ts";
-import {useCharacterStore} from "../../data/context.tsx";
+import {useCharacterStore, useDatabase} from "../../data/context.tsx";
 import CharacterSummary from "../../data/v8/CharacterSummary.ts";
 
 export default function CharacterList() {
@@ -24,10 +24,16 @@ export default function CharacterList() {
     setCharacters(loadedCharacters);
   }, [ loadedCharacters ]);
 
-  const handleCreate = async (characterName: string) => {
-    const created = await characterStore.create({
-      'character_name': characterName
-    });
+  const handleCreate = async (characterName: string, favoredClassId: string) => {
+    const data = {
+      'character_name': characterName,
+      'favored_class': favoredClassId
+    };
+    const characterClassId = favoredClassId.replace("favored_class", "class");
+    for (let level = 1; level <= 20; level++) {
+      data[`${level}:class`] = characterClassId;
+    }
+    const created = await characterStore.create(data);
     navigate(`/character/plan/${created.id}`)
   };
 
@@ -59,13 +65,24 @@ interface CharacterListEntryProps {
 
 function CharacterListEntry({ character, onDelete }: CharacterListEntryProps) {
   const navigate = useNavigate();
+  const db = useDatabase();
+
+  const favoredClassName = useMemo(
+      () => db.name(character.favored_class),
+      [character, db]);
+
   return <Panel
       className={styles.character}>
 
     <div className={classNames([styles.nameContainer, 'clickable'])} onClick={() => {
       navigate(`/character/plan/${character.id}`)
     }}>
-      {character.name}
+      <div className={styles.nameLabel}>
+        {character.name}
+        <div className={styles.favoredClassLabel}>
+          ({favoredClassName})
+        </div>
+      </div>
     </div>
     <div className={classNames([styles.deleteButtonContainer, 'clickable'])} onClick={() => {
       onDelete(character.id);
@@ -76,16 +93,16 @@ function CharacterListEntry({ character, onDelete }: CharacterListEntryProps) {
 }
 
 interface AddCharacterButtonProps {
-  onCreate: (name: string) => void;
+  onCreate: (name: string, classId: string) => void;
   disabled?: boolean;
 }
 
 function AddCharacterButton({ onCreate, disabled = false }: AddCharacterButtonProps) {
   const [ show, setShow ] = useState(false);
 
-  function handleCreate(characterName: string) {
+  function handleCreate(characterName: string, characterClassId: string) {
     setShow(false);
-    onCreate(characterName);
+    onCreate(characterName, characterClassId);
   }
 
   function handleCancel() {

@@ -2,7 +2,7 @@
   "id": "feat:hex_strike",
   "name": "Hex Strike",
   "tags": ["combat", "feat"],
-  "enabledFormula": "all(@ability:hex#*[Hex],@ability:improved_unarmed_strike#hunter_treestrider)",
+  "enabledFormula": "all(sum(@ability:hex#*)[Hex],@feat:improved_unarmed_strike)",
   "maxStacks": 1,
   "description": {
     "sections": {

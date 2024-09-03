@@ -3,11 +3,12 @@
   "name": "Greater Celestial Totem",
   "tags": ["barbarian", "class_feature", "rage_power"],
   "enabledFormula": "all(@class:barbarian\u003e\u003d12,@rage_power:celestial_totem)",
+  "maxStacks": 1,
   "description": {
     "text": "Gain SR while raging equal to 11 + barbarian class level against spells with the evil descriptor; also gain +2 bonus on all saves against spells and effects from evil creatures."
   },
   "stacks": {
-    "repeatingStack": {
+    "fixedStack": {
     }
   }
 }

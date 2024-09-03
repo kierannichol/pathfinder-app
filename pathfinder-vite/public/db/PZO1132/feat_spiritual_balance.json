@@ -2,7 +2,7 @@
   "id": "feat:spiritual_balance",
   "name": "Spiritual Balance",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@ability:ki_pool#*[Ki Pool],@ability:still_mind#*[Still Mind])",
+  "enabledFormula": "all(sum(@ability:ki_pool#*)[Ki Pool],sum(@ability:still_mind#*)[Still Mind])",
   "maxStacks": 1,
   "description": {
     "text": "You focus your ki in order to quell the influence of outside spirits on you.",

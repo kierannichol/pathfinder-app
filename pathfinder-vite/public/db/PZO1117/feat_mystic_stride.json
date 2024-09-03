@@ -2,7 +2,7 @@
   "id": "feat:mystic_stride",
   "name": "Mystic Stride",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@dex_score\u003e\u003d15,@feat:nimble_moves,@ability:woodland_stride#*[Woodland Stride])",
+  "enabledFormula": "all(@dex_score\u003e\u003d15,@feat:nimble_moves,sum(@ability:woodland_stride#*)[Woodland Stride])",
   "maxStacks": 1,
   "description": {
     "sections": {

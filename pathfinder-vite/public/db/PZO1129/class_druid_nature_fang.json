@@ -2,7 +2,7 @@
   "id": "class:druid#nature_fang",
   "name": "Nature Fang",
   "tags": ["archetype", "druid"],
-  "enabledFormula": "!@modifies:ability:wild_shape#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:wild_empathy#druid AND !@modifies:ability:woodland_stride#druid",
+  "enabledFormula": "!@modifies:ability:wild_shape#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:wild_empathy#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:woodland_stride#druid",
   "maxStacks": 1,
   "description": {
   },
@@ -26,12 +26,12 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:nature_sense#druid",
+            "targetKey": "modifies:ability:wild_empathy#druid",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:wild_empathy#druid",
+            "targetKey": "modifies:ability:nature_sense#druid",
             "numberValue": 1
           }
         }, {
@@ -48,7 +48,7 @@
           }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:studied_target#druid_nature_fang"],
-            "linksToRemove": ["ability:nature_sense#druid", "ability:wild_empathy#druid"]
+            "linksToRemove": ["ability:wild_empathy#druid", "ability:nature_sense#druid"]
           }, {
             "targetStackCount": 18,
             "linksToRemove": ["ability:wild_shape#druid"]

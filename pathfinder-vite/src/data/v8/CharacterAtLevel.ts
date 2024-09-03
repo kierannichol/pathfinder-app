@@ -22,9 +22,9 @@ export default class CharacterAtLevel extends BaseDataContext {
     }
     const value = this.character.selected(choice) ?? '';
     if (index === undefined) {
-      return value;
+      return value ?? '';
     }
-    return array(value)[index];
+    return (array(value)[index] as string) ?? '';
   }
 
   hasSelection(choice: ChoiceRef|string): boolean {
@@ -81,12 +81,14 @@ export default class CharacterAtLevel extends BaseDataContext {
   diff(otherLevel: CharacterAtLevel): CharacterAtLevel {
     const intersectedState = { ...this.state };
     for (const key of otherLevel.keys()) {
-      const newer = this.resolve(key)?.asNumber() ?? 0;
-      const older = otherLevel.resolve(key)?.asNumber() ?? 0;
-      if (newer - older > 0) {
-        continue;
-      }
-      delete intersectedState[key];
+      try {
+        const newer = this.resolve(key)?.asNumber() ?? 0;
+        const older = otherLevel.resolve(key)?.asNumber() ?? 0;
+        if (newer - older > 0) {
+          continue;
+        }
+        delete intersectedState[key];
+      } catch (ResolvableError) {}
     }
 
     const intersectedFeatures: Feature[] = this.features.filter(feature => {

@@ -3,11 +3,12 @@
   "name": "Greater Fiend Totem",
   "tags": ["barbarian", "class_feature", "rage_power"],
   "enabledFormula": "all(@class:barbarian\u003e\u003d10,@rage_power:fiend_totem)",
+  "maxStacks": 1,
   "description": {
     "text": "Non-evil creatures adjacent to the barbarian take damage and are shaken"
   },
   "stacks": {
-    "repeatingStack": {
+    "fixedStack": {
     }
   }
 }

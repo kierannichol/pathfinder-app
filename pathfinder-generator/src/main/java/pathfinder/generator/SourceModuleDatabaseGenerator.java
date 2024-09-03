@@ -51,6 +51,7 @@ public class SourceModuleDatabaseGenerator {
         features.sort(Comparator.comparing(FeatureSummaryDbo::getId));
         return SourceModuleDbo.newBuilder()
                 .setSourceId(databaseId())
+                .setTitle(sourceId.name())
                 .addAllFeatures(features)
                 .build();
     }

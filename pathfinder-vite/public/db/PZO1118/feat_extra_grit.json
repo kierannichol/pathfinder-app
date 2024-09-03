@@ -2,7 +2,7 @@
   "id": "feat:extra_grit",
   "name": "Extra Grit",
   "tags": ["feat", "grit"],
-  "enabledFormula": "any(@ability:grit#*[Grit],@feat:amateur_gunslinger)",
+  "enabledFormula": "any(sum(@ability:grit#*)[Grit],@feat:amateur_gunslinger)",
   "maxStacks": 1,
   "description": {
     "text": "You have more grit than the ordinary gunslinger.",

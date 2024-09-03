@@ -2,7 +2,7 @@
   "id": "feat:favored_judgment",
   "name": "Favored Judgment",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@wis_score\u003e\u003d13,@ability:judgment#*[Judgment])",
+  "enabledFormula": "all(@wis_score\u003e\u003d13,sum(@ability:judgment#*)[Judgment])",
   "maxStacks": 1,
   "description": {
     "sections": {

@@ -2,7 +2,7 @@
   "id": "feat:shapeshifting_hunter",
   "name": "Shapeshifting Hunter",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@ability:favored_enemy#*[Favored Enemy],@ability:wild_shape#*[Wild Shape])",
+  "enabledFormula": "all(sum(@ability:favored_enemy#*)[Favored Enemy],sum(@ability:wild_shape#*)[Wild Shape])",
   "maxStacks": 1,
   "description": {
     "text": "You blend your knowledge of foes and your shapeshifting abilities together.",

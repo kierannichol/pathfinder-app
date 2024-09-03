@@ -1,5 +1,5 @@
 import * as $protobuf from "protobufjs";
-
+import Long = require("long");
 /** Namespace data. */
 export namespace data {
 
@@ -2273,6 +2273,9 @@ export namespace data {
         /** SourceModuleDbo sourceId */
         sourceId?: (string|null);
 
+        /** SourceModuleDbo title */
+        title?: (string|null);
+
         /** SourceModuleDbo features */
         features?: (data.FeatureSummaryDbo[]|null);
     }
@@ -2288,6 +2291,9 @@ export namespace data {
 
         /** SourceModuleDbo sourceId. */
         public sourceId: string;
+
+        /** SourceModuleDbo title. */
+        public title: string;
 
         /** SourceModuleDbo features. */
         public features: data.FeatureSummaryDbo[];
@@ -2379,6 +2385,9 @@ export namespace data {
         /** SourceModuleItemDatabaseDbo sourceCode */
         sourceCode?: (string|null);
 
+        /** SourceModuleItemDatabaseDbo title */
+        title?: (string|null);
+
         /** SourceModuleItemDatabaseDbo items */
         items?: (data.ItemSummaryDbo[]|null);
 
@@ -2403,6 +2412,9 @@ export namespace data {
 
         /** SourceModuleItemDatabaseDbo sourceCode. */
         public sourceCode: string;
+
+        /** SourceModuleItemDatabaseDbo title. */
+        public title: string;
 
         /** SourceModuleItemDatabaseDbo items. */
         public items: data.ItemSummaryDbo[];

@@ -10,13 +10,15 @@ package data;
 
 message SourceModuleDbo {
   string source_id = 1;
-  repeated FeatureSummaryDbo features = 2;
+  string title = 2;
+  repeated FeatureSummaryDbo features = 3;
 }
 
 message SourceModuleItemDatabaseDbo {
   uint32 source_id = 1;
   string source_code = 2;
-  repeated ItemSummaryDbo items = 3;
-  repeated ItemOptionSetDbo option_sets = 4;
-  repeated ItemOptionSummaryDbo options = 5;
+  string title = 3;
+  repeated ItemSummaryDbo items = 4;
+  repeated ItemOptionSetDbo option_sets = 5;
+  repeated ItemOptionSummaryDbo options = 6;
 }

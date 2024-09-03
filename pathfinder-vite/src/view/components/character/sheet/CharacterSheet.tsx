@@ -18,6 +18,7 @@ import PrintablePage from "../../PrintablePage";
 import styles from "./CharacterSheet.module.css";
 import CharacterAtLevel from "../../../../data/v8/CharacterAtLevel.ts";
 import Database from "../../../../data/v8/Database.ts";
+import ACItemsSection from "@/view/components/character/sheet/sections/ACItemsSection.tsx";
 
 type CharacterSheetContextValues = {
   characterAtLevel: CharacterAtLevel;
@@ -75,6 +76,9 @@ export default function CharacterSheet(values: CharacterSheetContextValues) {
             <LanguagesSection />
           </Section.Column>
         </Section.Row>
+      </PrintablePage>
+      <PrintablePage className={styles.sheet}>
+        <ACItemsSection />
       </PrintablePage>
       <PrintablePage style={{ display: "flex" }}>
         <CharacterAtLevelDebugView />

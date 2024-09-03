@@ -51,6 +51,7 @@ public class CoreCharacterFeatureProvider implements FeatureProvider {
 
     private Stream<Feature> generalConcepts() {
         return Stream.of(
+                Feature.simple(Id.of("character_level"), "Character Level"),
                 Feature.simple(Id.of("caster_level"), "Caster Level"),
                 Feature.simple(Id.of("size"), "Character size")
         );

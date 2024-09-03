@@ -25,8 +25,8 @@ public class CharacterTemplateGenerator {
     );
 
     private static final List<FeatureSelectCategory> FEAT_CATEGORIES = List.of(
-            new FeatureSelectCategory("General", "general"),
             new FeatureSelectCategory("Combat", "combat"),
+            new FeatureSelectCategory("General", "general"),
             new FeatureSelectCategory("Item Creation", "item_creation"),
             new FeatureSelectCategory("Metamagic", "metamagic")
     );

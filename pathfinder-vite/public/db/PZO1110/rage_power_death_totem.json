@@ -3,11 +3,12 @@
   "name": "Death Totem",
   "tags": ["barbarian", "class_feature", "rage_power"],
   "enabledFormula": "all(any(@class:barbarian\u003e\u003d6,@class:savage\u003e\u003d2),@rage_power:lesser_death_totem)",
+  "maxStacks": 1,
   "description": {
     "text": "While raging, gain DR 5/bludgeoning and +2 resistance bonus against cold-based spells and effects."
   },
   "stacks": {
-    "repeatingStack": {
+    "fixedStack": {
     }
   }
 }

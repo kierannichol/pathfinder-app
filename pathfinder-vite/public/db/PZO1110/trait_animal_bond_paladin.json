@@ -1,0 +1,18 @@
+{
+  "id": "trait:animal_bond#paladin",
+  "name": "Divine Bond (Mount)",
+  "tags": ["class_feature", "paladin", "trait"],
+  "description": {
+    "text": "The second type of bond allows a paladin to gain the service of an unusually intelligent, strong, and loyal steed to serve her in her crusade against evil. This mount is usually a heavy horse (for a Medium paladin) or a pony (for a Small paladin), although more exotic mounts, such as a boar, camel, or dog are also suitable. This mount functions as a druid’s animal companion, using the paladin’s level as her effective druid level. Bonded mounts have an Intelligence of at least 6.\nIn addition to horses, a paladin may select (at the GM’s discretion) some less ordinary creatures.\nA Medium paladin can select an elkPPC:WO, giant seahorsePPC:WO, giraffePPC:WO, yakPZO1140 or zebraPZO1140 as a bonded mount.\nA Small paladin can select an antelopePPC:WO, capybaraPZO1140, eohippusPZO1140, giant weaselPPC:WO, ramPPC:WO, reindeerPZO1140, stagPPC:WO, or wolfdogPZO1140 as a bonded mount.\nThe auspice, bodyguard, racer, and totem guide archetypes are all particularly appropriate for a paladin’s bonded mount.\nOnce per day, as a full-round action, a paladin may magically call her mount to her side. This ability is the equivalent of a spell of a level equal to one-third the paladin’s level. The mount immediately appears adjacent to the paladin. A paladin can use this ability once per day at 5th level, and one additional time per day for every 4 levels thereafter, for a total of four times per day at 17th level.\nAt 11th level, the mount gains the celestial creature simple template and becomes a magical beast for the purposes of determining which spells affect it.\nAt 15th level, a paladin’s mount gains spell resistance equal to the paladin’s level + 11.\nShould the paladin’s mount die, the paladin may not summon another mount for 30 days or until she gains a paladin level, whichever comes first. During this 30-day period, the paladin takes a –1 penalty on attack and weapon damage rolls."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "addAction": {
+          "targetKey": "trait:animal_companion",
+          "numberDelta": 1
+        }
+      }]
+    }
+  }
+}

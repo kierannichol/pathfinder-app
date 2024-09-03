@@ -5925,6 +5925,7 @@ export const data = $root.data = (() => {
          * @memberof data
          * @interface ISourceModuleDbo
          * @property {string|null} [sourceId] SourceModuleDbo sourceId
+         * @property {string|null} [title] SourceModuleDbo title
          * @property {Array.<data.FeatureSummaryDbo>|null} [features] SourceModuleDbo features
          */
 
@@ -5951,6 +5952,14 @@ export const data = $root.data = (() => {
          * @instance
          */
         SourceModuleDbo.prototype.sourceId = "";
+
+        /**
+         * SourceModuleDbo title.
+         * @member {string} title
+         * @memberof data.SourceModuleDbo
+         * @instance
+         */
+        SourceModuleDbo.prototype.title = "";
 
         /**
          * SourceModuleDbo features.
@@ -5986,9 +5995,11 @@ export const data = $root.data = (() => {
                 writer = $Writer.create();
             if (message.sourceId != null && Object.hasOwnProperty.call(message, "sourceId"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.sourceId);
+            if (message.title != null && Object.hasOwnProperty.call(message, "title"))
+                writer.uint32(/* id 2, wireType 2 =*/18).string(message.title);
             if (message.features != null && message.features.length)
                 for (let i = 0; i < message.features.length; ++i)
-                    $root.data.FeatureSummaryDbo.encode(message.features[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    $root.data.FeatureSummaryDbo.encode(message.features[i], writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
             return writer;
         };
 
@@ -6028,6 +6039,10 @@ export const data = $root.data = (() => {
                         break;
                     }
                 case 2: {
+                        message.title = reader.string();
+                        break;
+                    }
+                case 3: {
                         if (!(message.features && message.features.length))
                             message.features = [];
                         message.features.push($root.data.FeatureSummaryDbo.decode(reader, reader.uint32()));
@@ -6071,6 +6086,9 @@ export const data = $root.data = (() => {
             if (message.sourceId != null && message.hasOwnProperty("sourceId"))
                 if (!$util.isString(message.sourceId))
                     return "sourceId: string expected";
+            if (message.title != null && message.hasOwnProperty("title"))
+                if (!$util.isString(message.title))
+                    return "title: string expected";
             if (message.features != null && message.hasOwnProperty("features")) {
                 if (!Array.isArray(message.features))
                     return "features: array expected";
@@ -6097,6 +6115,8 @@ export const data = $root.data = (() => {
             let message = new $root.data.SourceModuleDbo();
             if (object.sourceId != null)
                 message.sourceId = String(object.sourceId);
+            if (object.title != null)
+                message.title = String(object.title);
             if (object.features) {
                 if (!Array.isArray(object.features))
                     throw TypeError(".data.SourceModuleDbo.features: array expected");
@@ -6125,10 +6145,14 @@ export const data = $root.data = (() => {
             let object = {};
             if (options.arrays || options.defaults)
                 object.features = [];
-            if (options.defaults)
+            if (options.defaults) {
                 object.sourceId = "";
+                object.title = "";
+            }
             if (message.sourceId != null && message.hasOwnProperty("sourceId"))
                 object.sourceId = message.sourceId;
+            if (message.title != null && message.hasOwnProperty("title"))
+                object.title = message.title;
             if (message.features && message.features.length) {
                 object.features = [];
                 for (let j = 0; j < message.features.length; ++j)
@@ -6174,6 +6198,7 @@ export const data = $root.data = (() => {
          * @interface ISourceModuleItemDatabaseDbo
          * @property {number|null} [sourceId] SourceModuleItemDatabaseDbo sourceId
          * @property {string|null} [sourceCode] SourceModuleItemDatabaseDbo sourceCode
+         * @property {string|null} [title] SourceModuleItemDatabaseDbo title
          * @property {Array.<data.ItemSummaryDbo>|null} [items] SourceModuleItemDatabaseDbo items
          * @property {Array.<data.ItemOptionSetDbo>|null} [optionSets] SourceModuleItemDatabaseDbo optionSets
          * @property {Array.<data.ItemOptionSummaryDbo>|null} [options] SourceModuleItemDatabaseDbo options
@@ -6212,6 +6237,14 @@ export const data = $root.data = (() => {
          * @instance
          */
         SourceModuleItemDatabaseDbo.prototype.sourceCode = "";
+
+        /**
+         * SourceModuleItemDatabaseDbo title.
+         * @member {string} title
+         * @memberof data.SourceModuleItemDatabaseDbo
+         * @instance
+         */
+        SourceModuleItemDatabaseDbo.prototype.title = "";
 
         /**
          * SourceModuleItemDatabaseDbo items.
@@ -6265,15 +6298,17 @@ export const data = $root.data = (() => {
                 writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.sourceId);
             if (message.sourceCode != null && Object.hasOwnProperty.call(message, "sourceCode"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.sourceCode);
+            if (message.title != null && Object.hasOwnProperty.call(message, "title"))
+                writer.uint32(/* id 3, wireType 2 =*/26).string(message.title);
             if (message.items != null && message.items.length)
                 for (let i = 0; i < message.items.length; ++i)
-                    $root.data.ItemSummaryDbo.encode(message.items[i], writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                    $root.data.ItemSummaryDbo.encode(message.items[i], writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
             if (message.optionSets != null && message.optionSets.length)
                 for (let i = 0; i < message.optionSets.length; ++i)
-                    $root.data.ItemOptionSetDbo.encode(message.optionSets[i], writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+                    $root.data.ItemOptionSetDbo.encode(message.optionSets[i], writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
             if (message.options != null && message.options.length)
                 for (let i = 0; i < message.options.length; ++i)
-                    $root.data.ItemOptionSummaryDbo.encode(message.options[i], writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
+                    $root.data.ItemOptionSummaryDbo.encode(message.options[i], writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
             return writer;
         };
 
@@ -6317,18 +6352,22 @@ export const data = $root.data = (() => {
                         break;
                     }
                 case 3: {
+                        message.title = reader.string();
+                        break;
+                    }
+                case 4: {
                         if (!(message.items && message.items.length))
                             message.items = [];
                         message.items.push($root.data.ItemSummaryDbo.decode(reader, reader.uint32()));
                         break;
                     }
-                case 4: {
+                case 5: {
                         if (!(message.optionSets && message.optionSets.length))
                             message.optionSets = [];
                         message.optionSets.push($root.data.ItemOptionSetDbo.decode(reader, reader.uint32()));
                         break;
                     }
-                case 5: {
+                case 6: {
                         if (!(message.options && message.options.length))
                             message.options = [];
                         message.options.push($root.data.ItemOptionSummaryDbo.decode(reader, reader.uint32()));
@@ -6375,6 +6414,9 @@ export const data = $root.data = (() => {
             if (message.sourceCode != null && message.hasOwnProperty("sourceCode"))
                 if (!$util.isString(message.sourceCode))
                     return "sourceCode: string expected";
+            if (message.title != null && message.hasOwnProperty("title"))
+                if (!$util.isString(message.title))
+                    return "title: string expected";
             if (message.items != null && message.hasOwnProperty("items")) {
                 if (!Array.isArray(message.items))
                     return "items: array expected";
@@ -6421,6 +6463,8 @@ export const data = $root.data = (() => {
                 message.sourceId = object.sourceId >>> 0;
             if (object.sourceCode != null)
                 message.sourceCode = String(object.sourceCode);
+            if (object.title != null)
+                message.title = String(object.title);
             if (object.items) {
                 if (!Array.isArray(object.items))
                     throw TypeError(".data.SourceModuleItemDatabaseDbo.items: array expected");
@@ -6475,11 +6519,14 @@ export const data = $root.data = (() => {
             if (options.defaults) {
                 object.sourceId = 0;
                 object.sourceCode = "";
+                object.title = "";
             }
             if (message.sourceId != null && message.hasOwnProperty("sourceId"))
                 object.sourceId = message.sourceId;
             if (message.sourceCode != null && message.hasOwnProperty("sourceCode"))
                 object.sourceCode = message.sourceCode;
+            if (message.title != null && message.hasOwnProperty("title"))
+                object.title = message.title;
             if (message.items && message.items.length) {
                 object.items = [];
                 for (let j = 0; j < message.items.length; ++j)

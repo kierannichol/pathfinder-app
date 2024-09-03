@@ -3,8 +3,10 @@ import Database from "./Database.ts";
 import {PrerequisiteValidation} from "./PrerequisiteValidation.ts";
 import {DataContext, Formula, NamedResolvedValue, ResolvedValue} from "@kierannichol/formula-js";
 import FormulaFormatter, {FormattedValue, TreeNodeOperator} from "../../utils/logic/FormulaTreeFormatter.ts";
+import SourceModule from "@/data/v8/SourceModule.ts";
 
 export class FeatureSummary {
+  public source: SourceModule|undefined;
 
   constructor(public readonly key: string,
               public readonly name: string,

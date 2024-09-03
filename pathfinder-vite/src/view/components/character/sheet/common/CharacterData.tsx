@@ -33,7 +33,7 @@ export const CharismaMod = value("cha_mod");
 
 export const SizeMod = value("size_mod");
 
-const Value = (props: CharacterValueProps) => <CharacterValue {...props} />
+export const Value = (props: CharacterValueProps) => <CharacterValue {...props} />
 
 function value(dataKey: string, lookupFn?: (value: string) => string) {
   return (props: CharacterValueWithoutDataKeyProps) => <CharacterValue dataKey={dataKey}

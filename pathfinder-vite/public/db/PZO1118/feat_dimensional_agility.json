@@ -2,7 +2,7 @@
   "id": "feat:dimensional_agility",
   "name": "Dimensional Agility",
   "tags": ["feat", "general"],
-  "enabledFormula": "any(@ability:abundant_step#*[Abundant Step],@spell:dimension_door)",
+  "enabledFormula": "any(sum(@ability:abundant_step#*)[Abundant Step],@spell:dimension_door)",
   "maxStacks": 1,
   "description": {
     "sections": {

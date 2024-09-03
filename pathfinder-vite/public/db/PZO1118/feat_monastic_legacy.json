@@ -2,7 +2,7 @@
   "id": "feat:monastic_legacy",
   "name": "Monastic Legacy",
   "tags": ["combat", "feat"],
-  "enabledFormula": "all(@ability:still_mind#*[Still Mind],@ability:improved_unarmed_strike#hunter_treestrider)",
+  "enabledFormula": "all(sum(@ability:still_mind#*)[Still Mind],@feat:improved_unarmed_strike)",
   "maxStacks": 1,
   "description": {
     "sections": {

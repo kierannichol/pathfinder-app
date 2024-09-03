@@ -2,7 +2,7 @@
   "id": "feat:twin_thunders",
   "name": "Twin Thunders",
   "tags": ["combat", "feat"],
-  "enabledFormula": "all(any(@race:dwarf,@race:gnome),@ability:defensive_training,any(@feat:two_weapon_fighting,@ability:flurry_of_blows#*[Flurry Of Blows]),@feat:weapon_focus#selected_weapon)",
+  "enabledFormula": "all(any(@race:dwarf,@race:gnome),@ability:defensive_training,any(@feat:two_weapon_fighting,sum(@ability:flurry_of_blows#*)[Flurry Of Blows]),@feat:weapon_focus#selected_weapon)",
   "maxStacks": 1,
   "description": {
     "sections": {

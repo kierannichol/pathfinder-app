@@ -13,6 +13,8 @@ import pathfinder.model.Feature.FeatureBuilder;
 import pathfinder.model.FeatureSelectByTagChoice;
 import pathfinder.model.FeatureSelectByTagChoice.Builder;
 import pathfinder.model.FeatureSelectSortBy;
+import pathfinder.model.FixedStacks;
+import pathfinder.model.RepeatingStack;
 import pathfinder.model.StackBuilder;
 import pathfinder.model.pathfinder.ClassFeature;
 import pathfinder.util.EffectParser;
@@ -46,6 +48,13 @@ public class ClassFeatureMapper {
             builder.setEnabledCondition(enabledFormula);
         }
 
+        if (feature.stacks() instanceof FixedStacks fixedStacks) {
+            fixedStacks.stacks().forEach(builder::addFixedStack);
+        }
+        else if (feature.stacks() instanceof RepeatingStack repeatingStack) {
+            builder.setRepeatingStack(repeatingStack.stack());
+        }
+
         if (feature.effects() != null) {
             feature.effects().forEach(effectFormula -> stack.addEffect(EffectParser.parse(effectFormula)));
         }
@@ -58,7 +67,9 @@ public class ClassFeatureMapper {
                         tryCreateClassSpecificFeatureChoice(feature))
                 .forEach(stack::addChoice);
 
-        builder.setRepeatingStack(stack.build());
+        if (!stack.isEmpty()) {
+            builder.setRepeatingStack(stack.build());
+        }
         return Stream.of(builder.build(),
                 makeGeneric(builder));
     }

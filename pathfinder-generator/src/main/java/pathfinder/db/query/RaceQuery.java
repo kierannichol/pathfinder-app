@@ -1,22 +1,23 @@
 package pathfinder.db.query;
 
+import java.util.Collection;
 import pathfinder.model.Source;
 import pathfinder.model.pathfinder.ComplexFeature;
 import pathfinder.model.pathfinder.SourceId;
 
 public class RaceQuery implements SourceSpecificQuery<RaceQuery> {
     private final String name;
-    private SourceId sourceId;
+    private Collection<SourceId> sourceIds;
 
-    public RaceQuery source(SourceId sourceId) {
-        return new RaceQuery(name, sourceId);
+    public RaceQuery sources(Collection<SourceId> sourceIds) {
+        return new RaceQuery(name, sourceIds);
     }
 
     public boolean matches(Source source) {
-        if (sourceId == null) {
+        if (sourceIds == null) {
             return true;
         }
-        return source.sourceId().equals(sourceId);
+        return sourceIds.contains(source.sourceId());
     }
 
     public boolean matches(ComplexFeature race) {
@@ -27,9 +28,9 @@ public class RaceQuery implements SourceSpecificQuery<RaceQuery> {
         this.name = name;
     }
 
-    private RaceQuery(String name, SourceId sourceId) {
+    private RaceQuery(String name, Collection<SourceId> sourceIds) {
         this.name = name;
-        this.sourceId = sourceId;
+        this.sourceIds = sourceIds;
     }
 }
 

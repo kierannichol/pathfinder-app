@@ -2,7 +2,7 @@
   "id": "feat:horse_master",
   "name": "Horse Master",
   "tags": ["combat", "feat"],
-  "enabledFormula": "all(@ability:expert_trainer#*[Expert Trainer],@skill:ride\u003e\u003d6)",
+  "enabledFormula": "all(sum(@ability:expert_trainer#*)[Expert Trainer],@skill:ride\u003e\u003d6)",
   "maxStacks": 1,
   "description": {
     "sections": {

@@ -2,7 +2,7 @@
   "id": "feat:extra_panache",
   "name": "Extra Panache",
   "tags": ["feat", "general"],
-  "enabledFormula": "any(@feat:amateur_swashbuckler,@ability:panache#*[Panache])",
+  "enabledFormula": "any(@feat:amateur_swashbuckler,sum(@ability:panache#*)[Panache])",
   "maxStacks": 1,
   "description": {
     "text": "You have more panache than the ordinary swashbuckler.",

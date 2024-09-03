@@ -2,7 +2,7 @@
   "id": "feat:lay_of_the_land",
   "name": "Lay of the Land",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@ability:animal_focus#*[Animal Focus],@ability:wild_empathy#*[Wild Empathy])",
+  "enabledFormula": "all(sum(@ability:animal_focus#*)[Animal Focus],sum(@ability:wild_empathy#*)[Wild Empathy])",
   "maxStacks": 1,
   "description": {
     "text": "Your affinity to nature grants you greater insight into specific biomes.",

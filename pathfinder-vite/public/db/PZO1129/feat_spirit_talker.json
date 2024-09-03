@@ -2,7 +2,7 @@
   "id": "feat:spirit_talker",
   "name": "Spirit Talker",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@ability:hex#*[Hex],any(@class:shaman\u003e\u003d6,@class:witch\u003e\u003d6))",
+  "enabledFormula": "all(sum(@ability:hex#*)[Hex],any(@class:shaman\u003e\u003d6,@class:witch\u003e\u003d6))",
   "maxStacks": 1,
   "description": {
     "text": "By forging a temporary bond with a spirit, you gain access to an unfamiliar hex.",

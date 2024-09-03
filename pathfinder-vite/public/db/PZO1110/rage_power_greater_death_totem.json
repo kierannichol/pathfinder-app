@@ -3,11 +3,12 @@
   "name": "Greater Death Totem",
   "tags": ["barbarian", "class_feature", "rage_power"],
   "enabledFormula": "all(any(@class:barbarian\u003e\u003d12,@class:savage\u003e\u003d2),@rage_power:death_totem,@rage_power:lesser_death_totem)",
+  "maxStacks": 1,
   "description": {
     "text": "While raging, nearby living enemies damaged by death energies and must make Fortitude save or be sickened."
   },
   "stacks": {
-    "repeatingStack": {
+    "fixedStack": {
     }
   }
 }

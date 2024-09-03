@@ -55,6 +55,7 @@ export default function CharacterLevelEditor({ characterAtLevel, characterAtPrev
               choiceRef={choice as SelectChoiceRef}
               search={"auto"}
               characterAtLevel={characterAtLevel}
+              characterAtPreviousLevel={characterAtPreviousLevel}
               onSelect={selected => onChange(choice, selected)} />
         </div>)}
 

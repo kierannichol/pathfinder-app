@@ -2,7 +2,7 @@
   "id": "feat:pommel_strike_deed",
   "name": "Pommel Strike Deed",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(any(@feat:amateur_swashbuckler,@ability:panache#*[Panache]),@bab\u003e\u003d3)",
+  "enabledFormula": "all(any(@feat:amateur_swashbuckler,sum(@ability:panache#*)[Panache]),@bab\u003e\u003d3)",
   "maxStacks": 1,
   "description": {
     "sections": {

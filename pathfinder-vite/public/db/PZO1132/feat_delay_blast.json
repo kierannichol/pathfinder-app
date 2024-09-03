@@ -2,7 +2,7 @@
   "id": "feat:delay_blast",
   "name": "Delay Blast",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@bab\u003e\u003d3,@ability:kinetic_blast#*[Kinetic Blast])",
+  "enabledFormula": "all(@bab\u003e\u003d3,sum(@ability:kinetic_blast#*)[Kinetic Blast])",
   "maxStacks": 1,
   "description": {
     "text": "You can delay your kinetic blasts.",

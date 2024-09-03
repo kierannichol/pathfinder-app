@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.UncheckedIOException;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Comparator;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import pathfinder.model.json.PathfinderJsonModule;
@@ -105,5 +107,14 @@ public class Sources {
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }
+    }
+
+    public static Collection<SourceId> previousSourceIds(SourceId sourceId) {
+        List<SourceId> sources = Sources.sourceList.stream()
+                .sorted(Comparator.comparing(SourceId::code))
+                .toList();
+
+        int indexOfSelf = sources.indexOf(sourceId);
+        return sources.subList(0, indexOfSelf + 1);
     }
 }

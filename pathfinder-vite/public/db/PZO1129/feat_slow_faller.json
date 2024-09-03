@@ -2,7 +2,7 @@
   "id": "feat:slow_faller",
   "name": "Slow Faller",
   "tags": ["feat", "general"],
-  "enabledFormula": "any(@skill:acrobatics\u003e\u003d5,@ability:slow_fall#*[Slow Fall])",
+  "enabledFormula": "any(@skill:acrobatics\u003e\u003d5,sum(@ability:slow_fall#*)[Slow Fall])",
   "maxStacks": 1,
   "description": {
     "text": "You can reduce the amount of falling damage you take when you are close to a wall.",

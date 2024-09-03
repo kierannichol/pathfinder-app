@@ -1,0 +1,17 @@
+{
+  "id": "feat:bestow_hope",
+  "name": "Bestow Hope",
+  "tags": ["feat", "general"],
+  "enabledFormula": "all(@feat:improved_channel,sum(@ability:channel_energy#*)[Channel Energy],any(@deity:alignment_lg,@deity:alignment_ng,@deity:alignment_cg))",
+  "maxStacks": 1,
+  "description": {
+    "text": "You instill hope in the creatures you heal.",
+    "sections": {
+      "Benefit": "When you heal a creature by channeling positive energy, you also relieve its fear. If a creature you heal is shaken, that condition ends. If the creature is frightened, it becomes shaken instead. If the creature is panicked, it becomes frightened instead."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

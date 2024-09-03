@@ -2,9 +2,10 @@ package pathfinder.db;
 
 import static pathfinder.model.pathfinder.Sources.CORE;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
@@ -141,9 +142,12 @@ public class PathfinderDatabase {
                 .findFirst();
     }
 
-    public Set<SourceId> sources() {
+    public List<SourceId> sources() {
         return this.sources.stream()
                 .map(Source::sourceId)
-                .collect(Collectors.toSet());
+                .distinct()
+                .sorted(Comparator.comparing(SourceId::id))
+                .collect(Collectors.toCollection(ArrayList::new));
+
     }
 }

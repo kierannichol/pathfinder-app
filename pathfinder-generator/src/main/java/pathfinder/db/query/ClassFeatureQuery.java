@@ -1,5 +1,6 @@
 package pathfinder.db.query;
 
+import java.util.Collection;
 import java.util.Objects;
 import java.util.regex.Pattern;
 import pathfinder.model.Id;
@@ -10,11 +11,11 @@ import pathfinder.model.pathfinder.SourceId;
 public class ClassFeatureQuery implements SourceSpecificQuery<ClassFeatureQuery>, ClassSpecificQuery<ClassFeatureQuery> {
 
     private final String name;
-    private SourceId sourceId;
+    private Collection<SourceId> sourceId;
     private Id classId;
     private Pattern idMatches;
 
-    public ClassFeatureQuery source(SourceId sourceId) {
+    public ClassFeatureQuery sources(Collection<SourceId> sourceId) {
         return new ClassFeatureQuery(name, sourceId, classId, idMatches);
     }
 
@@ -34,7 +35,7 @@ public class ClassFeatureQuery implements SourceSpecificQuery<ClassFeatureQuery>
         if (sourceId == null) {
             return true;
         }
-        return Objects.equals(source.sourceId(), sourceId);
+        return sourceId.contains(source.sourceId());
     }
 
     public boolean matches(ClassFeature feature) {
@@ -46,7 +47,7 @@ public class ClassFeatureQuery implements SourceSpecificQuery<ClassFeatureQuery>
     ClassFeatureQuery(String name) {
         this.name = name;
     }
-    private ClassFeatureQuery(String name, SourceId sourceId, Id classId, Pattern idMatches) {
+    private ClassFeatureQuery(String name, Collection<SourceId> sourceId, Id classId, Pattern idMatches) {
         this.name = name;
         this.sourceId = sourceId;
         this.classId = classId;

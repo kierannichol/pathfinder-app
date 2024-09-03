@@ -9,31 +9,33 @@ import CharacterTemplateDbo = data.CharacterTemplateDbo;
 import SourceModuleDbo = data.SourceModuleDbo;
 
 const Modules: () => (SourceModule|Promise<SourceModule>)[] = () => [
-  loadModule('PZO1110'),
-  loadModule('PZO1114'),
-  loadModule('PZO1115'),
-  loadModule('PZO1117'),
-  loadModule('PZO1118'),
-  loadModule('PZO1123'),
-  loadModule('PZO1129'),
-  loadModule('PZO1131'),
-  loadModule('PZO1132'),
-  loadModule('PZO9476'),
-  loadModule('PZO9226'),
+    loadModule('PZO1110'),
+    loadModule('PZO1114'),
+    loadModule('PZO1115'),
+    loadModule('PZO1117'),
+    loadModule('PZO1118'),
+    loadModule('PZO1123'),
+    loadModule('PZO1129'),
+    loadModule('PZO1131'),
+    loadModule('PZO1132'),
+    loadModule('PZO9476'),
+    loadModule('PZO9226'),
+    loadModule('PZO9267')
 ];
 
 const ItemModules: () => (SourceItemModule|Promise<SourceItemModule>)[] = () => [
-  loadItemModule('PZO1110'),
-  loadItemModule('PZO1114'),
-  loadItemModule('PZO1115'),
-  loadItemModule('PZO1117'),
-  loadItemModule('PZO1118'),
-  loadItemModule('PZO1123'),
-  loadItemModule('PZO1129'),
-  loadItemModule('PZO1131'),
-  loadItemModule('PZO1132'),
-  loadItemModule('PZO9476'),
-  loadItemModule('PZO9226'),
+    loadItemModule('PZO1110'),
+    loadItemModule('PZO1114'),
+    loadItemModule('PZO1115'),
+    loadItemModule('PZO1117'),
+    loadItemModule('PZO1118'),
+    loadItemModule('PZO1123'),
+    loadItemModule('PZO1129'),
+    loadItemModule('PZO1131'),
+    loadItemModule('PZO1132'),
+    loadItemModule('PZO9476'),
+    loadItemModule('PZO9226'),
+    loadItemModule('PZO9267')
 ];
 
 export async function loadBaseCharacterTemplate(): Promise<CharacterTemplate> {
@@ -44,6 +46,7 @@ export async function loadBaseCharacterTemplate(): Promise<CharacterTemplate> {
 async function loadModule(id: string): Promise<SourceModule> {
   const dbo = await fetchProto(`db/${id}.bin`, SourceModuleDbo.decode);
   return ExternalSourceModule.create(dbo.sourceId,
+      dbo.title,
       dbo.features.map(decodeFeatureSummary));
 }
 

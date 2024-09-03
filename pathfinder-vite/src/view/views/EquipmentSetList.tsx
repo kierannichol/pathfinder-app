@@ -4,12 +4,12 @@ import useAsyncMemo from "../../utils/useAsyncMemo.tsx";
 import LoadingBlock from "../components/LoadingBlock.tsx";
 import styles from "./EquipmentSetList.module.scss";
 import Panel from "../components/Panel.tsx";
-import {classNames} from "../../utils/classNames.ts";
+import {classNames} from "@/utils/classNames.ts";
 import DeleteIcon from "../components/icons/DeleteIcon.tsx";
 import {Button} from "react-bootstrap";
 import NewEquipmentSetDialog from "../components/character/NewEquipmentSetDialog.tsx";
 import {useEquipmentSetStore} from "../../data/context.tsx";
-import {EquipmentSet} from "../../data/v8/Equipment.ts";
+import {EquipmentSet} from "@/data/v8/Equipment.ts";
 
 export function EquipmentSetList() {
   const equipmentSetStore = useEquipmentSetStore();

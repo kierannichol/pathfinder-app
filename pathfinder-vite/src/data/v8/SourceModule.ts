@@ -8,6 +8,7 @@ import FeatureDbo = data.FeatureDbo;
 
 export default abstract class SourceModule {
   abstract get sourceCode(): string;
+  abstract get title(): string;
 
   abstract features(): FeatureSummary[];
 
@@ -28,7 +29,7 @@ export default abstract class SourceModule {
 
 export class ExternalSourceModule extends SourceModule {
 
-  public static create(sourceCode: string, features: FeatureSummary[]): SourceModule {
+  public static create(sourceCode: string, title: string, features: FeatureSummary[]): SourceModule {
     const featuresById: { [id: string]: FeatureSummary } = {};
     let tags = new Set<string>();
     for (let feature of features) {
@@ -37,13 +38,18 @@ export class ExternalSourceModule extends SourceModule {
         tags = tags.add(tag);
       }
     }
-    return new ExternalSourceModule(sourceCode, featuresById, tags);
+    return new ExternalSourceModule(sourceCode, title, featuresById, tags);
   }
 
   private constructor(public readonly sourceCode: string,
+                      public readonly title: string,
                       private readonly featuresById: { [id: string]: FeatureSummary },
                       protected readonly tags: Set<string>) {
     super();
+
+    for (const feature of Object.values(featuresById)) {
+      feature.source = this;
+    }
   }
 
   features(): FeatureSummary[] {
@@ -60,6 +66,8 @@ export class ExternalSourceModule extends SourceModule {
       .replace('#', '_');
 
     const dbo = await fetchProto(`db/${this.sourceCode}/${filename}.bin`, FeatureDbo.decode);
-    return decodeFeature(dbo);
+    let feature = decodeFeature(dbo);
+    feature.source = this;
+    return feature;
   }
 }

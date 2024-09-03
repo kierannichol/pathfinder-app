@@ -5,7 +5,7 @@ import Label from "../common/Label.tsx";
 import Operator from "../common/Operator.tsx";
 import Section from "../common/Section.tsx";
 import styles from "./InitiativeSection.module.scss";
-import {classNames} from "../../../../../utils/classNames.ts";
+import {classNames} from "@/utils/classNames.ts";
 
 export default function InitiativeSection({ className, ...divProps }: HTMLAttributes<HTMLDivElement>) {
   return <Section className={classNames([styles.section, className])} {...divProps}>

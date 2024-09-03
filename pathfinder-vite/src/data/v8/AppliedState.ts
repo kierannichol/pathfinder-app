@@ -6,6 +6,7 @@ export default class AppliedState {
   public readonly rawState: EntityState;
   private readonly dataContext: MutableDataContext;
   private readonly stackModifications: ResolvedStackModification[] = [];
+  private readonly stackCounts: {[key:string]:number} = {};
 
   constructor(public readonly withoutChoicePath: string | undefined = undefined) {
     this.rawState = {};
@@ -14,13 +15,15 @@ export default class AppliedState {
 
   public increment(key: string, amount: number = 1): void {
     const current = this.getAsNumber(key);
+    this.stackCounts[key] = (this.stackCounts[key] ?? 0) + 1;
     this.set(key, current + amount);
   }
 
   public set(key: string, value: number|string|boolean|Resolvable) {
     this.dataContext.set(key, value);
+    this.stackCounts[key] = 1;
 
-    this.modifications(key, this.getAsNumber(key))
+    this.modifications(key, this.stackCounts[key])
       .forEach(mod => mod.applyModification(this));
   }
 

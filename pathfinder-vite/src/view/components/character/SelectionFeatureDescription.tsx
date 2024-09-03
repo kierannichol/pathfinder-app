@@ -28,6 +28,10 @@ export default function SelectionFeatureDescription({ feature, description, char
 
   const showPrerequisiteList = !validation.isEmpty();//useMemo(() => !feat.isValidFor(characterAtLevel), [feat, characterAtLevel]);
 
+  if (description === undefined || (description.text === '' && description.sections === {})) {
+    return <></>
+  }
+
   return <div>
       {showPrerequisiteList && characterAtLevel !== undefined &&
           <div className={isValid ? styles.prerequisitesValid : styles.prerequisitesInvalid}>

@@ -1,0 +1,181 @@
+{
+  "sourceId": "PZO9267",
+  "title": "Inner Sea Gods",
+  "features": [{
+    "id": "feat:arcane_insight",
+    "name": "Arcane Insight",
+    "tags": ["feat", "general"],
+    "maxStacks": 1
+  }, {
+    "id": "feat:bestow_hope",
+    "name": "Bestow Hope",
+    "tags": ["feat", "general"],
+    "enabledFormula": "all(@feat:improved_channel,sum(@ability:channel_energy#*)[Channel Energy],any(@deity:alignment_lg,@deity:alignment_ng,@deity:alignment_cg))",
+    "maxStacks": 1
+  }, {
+    "id": "feat:bloody_vengeance",
+    "name": "Bloody Vengeance",
+    "tags": ["combat", "feat"],
+    "enabledFormula": "all(@bab\u003e\u003d1,@deity:alignment_cn)",
+    "maxStacks": 1
+  }, {
+    "id": "feat:bullseye_shot",
+    "name": "Bullseye Shot",
+    "tags": ["combat", "feat"],
+    "enabledFormula": "all(@feat:point_blank_shot,@feat:precise_shot,@bab\u003e\u003d5)",
+    "maxStacks": 1
+  }, {
+    "id": "feat:charge_of_the_righteous",
+    "name": "Charge of the Righteous",
+    "tags": ["combat", "feat"],
+    "enabledFormula": "all(@bab\u003e\u003d1,any(@alignment:lg,@alignment:ng,@alignment:cg)[Good alignment])",
+    "maxStacks": 1
+  }, {
+    "id": "feat:divination_guide",
+    "name": "Divination Guide",
+    "tags": ["feat", "general"],
+    "maxStacks": 1
+  }, {
+    "id": "feat:drunken_brawler",
+    "name": "Drunken Brawler",
+    "tags": ["combat", "feat"],
+    "enabledFormula": "all(@feat:endurance,any(@deity:alignment_lg,@deity:alignment_ng,@deity:alignment_cg))",
+    "maxStacks": 1
+  }, {
+    "id": "feat:fearsome_finish",
+    "name": "Fearsome Finish",
+    "tags": ["feat", "general"],
+    "enabledFormula": "all(@feat:intimidating_prowess,any(@deity:alignment_le,@deity:alignment_ne,@deity:alignment_ce))",
+    "maxStacks": 1
+  }, {
+    "id": "feat:measured_response",
+    "name": "Measured Response",
+    "tags": ["combat", "feat"],
+    "maxStacks": 1
+  }, {
+    "id": "feat:merciless_rush",
+    "name": "Merciless Rush",
+    "tags": ["feat", "general"],
+    "maxStacks": 1
+  }, {
+    "id": "feat:nimble_natural_summons",
+    "name": "Nimble Natural Summons",
+    "tags": ["feat", "general"],
+    "maxStacks": 1
+  }, {
+    "id": "feat:protectors_strike",
+    "name": "Protector\u0027s Strike",
+    "tags": ["feat", "general"],
+    "enabledFormula": "all(@bab\u003e\u003d5,sum(@ability:smite_evil#*)[Smite Evil])",
+    "maxStacks": 1
+  }, {
+    "id": "feat:spear_dancer",
+    "name": "Spear Dancer",
+    "tags": ["feat", "general"],
+    "enabledFormula": "all(@feat:weapon_focus#two,@skill:perform#dance)\u003e\u003d4",
+    "maxStacks": 1
+  }, {
+    "id": "feat:spiked_destroyer",
+    "name": "Spiked Destroyer",
+    "tags": ["combat", "feat"],
+    "enabledFormula": "@spiked_armor",
+    "maxStacks": 1
+  }, {
+    "id": "feat:steady_engagement",
+    "name": "Steady Engagement",
+    "tags": ["combat", "feat"],
+    "maxStacks": 1
+  }, {
+    "id": "feat:stone_read",
+    "name": "Stone Read",
+    "tags": ["feat", "general"],
+    "enabledFormula": "@skill:knowledge_dungeoneering\u003e\u003d4",
+    "maxStacks": 1
+  }, {
+    "id": "feat:undermining_exploit",
+    "name": "Undermining Exploit",
+    "tags": ["feat", "general"],
+    "enabledFormula": "@skill:knowledge_dungeoneering\u003e\u003d4",
+    "maxStacks": 1
+  }, {
+    "id": "spell:baphomets_blessing",
+    "name": "Baphomet\u0027s Blessing",
+    "tags": ["arcanist4", "bloodrager4", "cleric4", "druid4", "hunter4", "oracle4", "sorcerer4", "spell", "spell", "summoner4", "warpriest4", "witch4", "wizard4"]
+  }, {
+    "id": "spell:beacon_of_luck",
+    "name": "Beacon of Luck",
+    "tags": ["bard3", "cleric3", "inquisitor4", "oracle3", "paladin4", "skald3", "spell", "spell"]
+  }, {
+    "id": "spell:blade_snare",
+    "name": "Blade Snare",
+    "tags": ["arcanist3", "bloodrager3", "druid3", "hunter3", "magus3", "ranger3", "sorcerer3", "spell", "spell", "wizard3"]
+  }, {
+    "id": "spell:caustic_blood",
+    "name": "Caustic Blood",
+    "tags": ["alchemist4", "arcanist5", "bloodrager4", "cleric5", "druid4", "hunter4", "investigator4", "magus4", "oracle5", "sorcerer5", "spell", "spell", "summoner4", "warpriest5", "wizard5"]
+  }, {
+    "id": "spell:freedoms_toast",
+    "name": "Freedom\u0027s Toast",
+    "tags": ["arcanist4", "bard5", "cleric5", "inquisitor5", "oracle5", "skald5", "sorcerer4", "spell", "spell", "warpriest5"]
+  }, {
+    "id": "spell:greater_shield_of_the_dawnflower",
+    "name": "Greater Shield of the Dawnflower",
+    "tags": ["bard6", "cleric6", "magus6", "oracle6", "skald6", "spell", "spell"]
+  }, {
+    "id": "spell:hammer_of_mending",
+    "name": "Hammer of Mending",
+    "tags": ["arcanist5", "cleric6", "oracle6", "sorcerer5", "spell", "spell", "summoner5", "warpriest6"]
+  }, {
+    "id": "spell:hunters_blessing",
+    "name": "Hunter\u0027s Blessing",
+    "tags": ["cleric5", "druid5", "hunter5", "inquisitor5", "oracle5", "shaman5", "spell", "spell"]
+  }, {
+    "id": "spell:light_prison",
+    "name": "Light Prison",
+    "tags": ["arcanist2", "bard2", "cleric2", "inquisitor2", "magus2", "oracle2", "skald2", "sorcerer2", "spell", "spell", "warpriest2"]
+  }, {
+    "id": "spell:maddening_oubliette",
+    "name": "Maddening Oubliette",
+    "tags": ["arcanist7", "cleric7", "oracle7", "sorcerer7", "spell", "spell", "witch7"]
+  }, {
+    "id": "spell:plague_bearer",
+    "name": "Plague Bearer",
+    "tags": ["alchemist6", "arcanist7", "cleric6", "druid6", "hunter6", "inquisitor6", "investigator6", "oracle6", "sorcerer7", "spell", "spell", "warpriest6", "witch6"]
+  }, {
+    "id": "spell:sadomasochism",
+    "name": "Sadomasochism",
+    "tags": ["arcanist4", "bloodrager4", "cleric3", "inquisitor3", "magus4", "oracle3", "sorcerer4", "spell", "spell", "warpriest3", "witch4"]
+  }, {
+    "id": "spell:spawn_calling",
+    "name": "Spawn Calling",
+    "tags": ["arcanist9", "cleric9", "oracle9", "sorcerer9", "spell", "spell", "witch9"]
+  }, {
+    "id": "spell:spell_scourge",
+    "name": "Spell Scourge",
+    "tags": ["arcanist7", "cleric7", "oracle7", "sorcerer7", "spell", "spell", "witch7"]
+  }, {
+    "id": "spell:symbol_of_debauchery",
+    "name": "Symbol of Debauchery",
+    "tags": ["arcanist8", "bard6", "cleric8", "oracle8", "skald6", "sorcerer8", "spell", "spell", "witch8", "wizard8"]
+  }, {
+    "id": "spell:symbol_of_dispelling",
+    "name": "Symbol of Dispelling",
+    "tags": ["arcanist8", "cleric8", "oracle8", "shaman8", "sorcerer8", "spell", "spell", "witch8", "wizard8"]
+  }, {
+    "id": "spell:transplant_visage",
+    "name": "Transplant Visage",
+    "tags": ["alchemist5", "arcanist5", "cleric4", "inquisitor4", "investigator5", "magus5", "oracle4", "shaman4", "sorcerer5", "spell", "spell", "warpriest4", "witch5", "wizard5"]
+  }, {
+    "id": "spell:unwelcome_halo",
+    "name": "Unwelcome Halo",
+    "tags": ["arcanist1", "cleric1", "oracle1", "paladin1", "sorcerer1", "spell", "spell", "warpriest1"]
+  }, {
+    "id": "spell:vengeful_stinger",
+    "name": "Vengeful Stinger",
+    "tags": ["arcanist5", "cleric6", "oracle6", "shaman5", "sorcerer5", "spell", "spell", "summoner5", "warpriest6", "witch5"]
+  }, {
+    "id": "spell:vexing_miscalculation",
+    "name": "Vexing Miscalculation",
+    "tags": ["cleric2", "inquisitor2", "oracle2", "spell", "spell", "warpriest2", "witch2"]
+  }]
+}
