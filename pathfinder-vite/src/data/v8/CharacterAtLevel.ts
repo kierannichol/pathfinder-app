@@ -4,7 +4,7 @@ import Expression from "../../utils/logic/Expression.ts";
 import {ChoiceRef} from "./Choice.ts";
 import {Feature} from "./Feature.ts";
 import {EntityState} from "./Entity.ts";
-import {array} from "../../app/pfutils.ts";
+import {array} from "@/app/pfutils.ts";
 
 export default class CharacterAtLevel extends BaseDataContext {
 

@@ -1,0 +1,76 @@
+{
+  "id": "class:alchemist#gloom_chymist",
+  "name": "Gloom Chymist",
+  "tags": ["alchemist", "archetype"],
+  "enabledFormula": "!@modifies:ability:swift_poisoning#alchemist AND !@modifies:ability:bomb#alchemist",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:swift_poisoning#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bomb#alchemist",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:alchemist",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:gloom#alchemist_gloom_chymist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:gloom#alchemist_gloom_chymist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:umbral_gloom#alchemist_gloom_chymist"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:gloom#alchemist_gloom_chymist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:gloom#alchemist_gloom_chymist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:gloom#alchemist_gloom_chymist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:swift_poisoning#alchemist"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:gloom#alchemist_gloom_chymist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:gloom#alchemist_gloom_chymist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:gloom#alchemist_gloom_chymist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:gloom#alchemist_gloom_chymist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:gloom#alchemist_gloom_chymist"],
+            "linksToRemove": ["ability:bomb#alchemist"]
+          }]
+        }]
+      }]
+    }
+  }
+}

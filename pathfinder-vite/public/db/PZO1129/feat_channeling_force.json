@@ -2,7 +2,7 @@
   "id": "feat:channeling_force",
   "name": "Channeling Force",
   "tags": ["combat", "feat"],
-  "enabledFormula": "all(1[force spell]\u003e\u003d1,sum(@ability:channel_energy#*)[Channel Energy])",
+  "enabledFormula": "@ability:channel_energy[Channel Energy]",
   "maxStacks": 1,
   "description": {
     "text": "You distill your channeled energy into a sheen of force that surrounds your weapon for a limited time.",

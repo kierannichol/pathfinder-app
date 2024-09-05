@@ -169,8 +169,8 @@ Bonus Featabilityclass_feature	warpriest(]
  ability:champions_weapon_masteryChampion's Weapon Mastery(z
 9ability:champions_weapon_mastery#cavalier_daring_championChampion's Weapon Masteryabilitycavalierclass_feature(*
 ability:channel_energyChannel Energy(^
-*ability:channel_energy#shaman_witch_doctorChannel Energyabilityclass_featureshaman(W
- ability:channel_energy#warpriestChannel Energyabilityclass_feature	warpriest(]
+*ability:channel_energy#shaman_witch_doctorChannel Energyabilityclass_featureshaman(U
+ ability:channel_energy#warpriestChannel Energyabilityclass_feature	warpriest]
 *ability:channel_energy#witch_hex_channelerChannel Energyabilityclass_featurewitch(&
 ability:charmed_lifeCharmed Life(Y
 !ability:charmed_life#swashbucklerCharmed Lifeabilityclass_featureswashbuckler($
@@ -1107,9 +1107,9 @@ Battle Crycombatfeat"aall(@cha_score>=13,any(@bab>=5,@skill:perform#act,@ski
 feat:blessed_strikerBlessed Strikerfeatgeneral"oall(@bab>=11,@trait:divine_spellcaster[Divine spellcaster],"alignment must be within one step of your deity's")(¯
 feat:blooded_arcane_strikeBlooded Arcane Strikecombatfeat"jall(@feat:arcane_strike,max(@spells_per_day:arcane#*)[Arcane spells],sum(@ability:bloodrage#*)[Bloodrage])(O
 feat:bookish_rogueBookish Roguefeatgeneral"@rogue_talent:minor_magic(g
-feat:canny_tumbleCanny Tumblecombatfeat"4all(@feat:dodge,@feat:mobility,@skill:acrobatics>=5)(˜
-feat:channeled_blessingChanneled Blessingfeatgeneral"Xall(sum(@ability:blessings#*)[Blessings],sum(@ability:channel_energy#*)[Channel Energy])(€
-feat:channeling_forceChanneling Forcecombatfeat"Eall(1[force spell]>=1,sum(@ability:channel_energy#*)[Channel Energy])(·
+feat:canny_tumbleCanny Tumblecombatfeat"4all(@feat:dodge,@feat:mobility,@skill:acrobatics>=5)(g
+feat:channeled_blessingChanneled Blessingfeatgeneral"'@ability:channel_energy[Channel Energy](b
+feat:channeling_forceChanneling Forcecombatfeat"'@ability:channel_energy[Channel Energy](·
 feat:confounding_tumble_deedConfounding Tumble Deedfeatgeneral"mall(any(@feat:amateur_swashbuckler,sum(@ability:panache#*)[Panache]),@feat:canny_tumble,@skill:acrobatics>=7)(S
 feat:coordinated_shotCoordinated Shotfeatteamwork"@feat:point_blank_shot(Ÿ
 feat:counter_reflexesCounter Reflexescombatfeat"dall(@feat:anticipate_dodge,@feat:dodge,@feat:mobility,any(@bab>=9,@class:brawler>=6,@class:monk>=6))(¾
@@ -1122,8 +1122,8 @@ Battle Crycombatfeat"aall(@cha_score>=13,any(@bab>=5,@skill:perform#act,@ski
 feat:divine_protectionDivine Protectionfeatgeneral"0all(@cha_score>=13,@skill:knowledge_religion>=5)(
 feat:draining_strikeDraining Strikecombatfeat"Hall(@dex_score>=13,@wis_score>=13,@feat:improved_unarmed_strike,@bab>=8)(¨
 feat:dual_enhancementDual Enhancementfeatgeneral"lall(@feat:two_weapon_fighting,any(@divine_bond:weapon#paladin,sum(@ability:sacred_weapon#*)[Sacred Weapon]))(g
-feat:dueling_cape_deedDueling Cape Deedcombatfeat"*all(@feat:dodge,@skill:sleight_of_hand>=1)(›
-feat:energy_channelEnergy Channelfeatgeneral"call(sum(@ability:channel_energy#*)[Channel Energy],"Air, Earth, Fire, or Water domain or blessing")(a
+feat:dueling_cape_deedDueling Cape Deedcombatfeat"*all(@feat:dodge,@skill:sleight_of_hand>=1)(_
+feat:energy_channelEnergy Channelfeatgeneral"'@ability:channel_energy[Channel Energy](a
 feat:esoteric_linguisticsEsoteric Linguisticsfeatgeneral"@feat:skill_focus#linguistics(„
 feat:evolved_companionEvolved Companionfeatgeneral"Fall(@cha_score>=13,sum(@ability:animal_companion#*)[Animal Companion])(ž
 feat:evolved_summoned_monsterEvolved Summoned Monsterfeatgeneral"Rall(@feat:augment_summoning,@feat:spell_focus#conjuration,@spell:summon_monster_1)(V
@@ -1215,9 +1215,9 @@ Force Dashfeatgeneral">all(@bab>=4,@spells_per_day:arcane#2,1[arcane force s
 feat:studied_combatantStudied Combatantfeatgeneral",max(@skill:knowledge_*)[Any knowledge skill](¦
 feat:surprise_maneuverSurprise Maneuverfeatgeneral"hall(@feat:combat_expertise,any(@ability:sneak_attack#slayer>=3,@ability:studied_strike#investigator>=3))(v
 feat:talented_magicianTalented Magicianfeatgeneral"8all(@rogue_talent:major_magic,@rogue_talent:minor_magic)(C
-feat:twinned_feintTwinned Feintcombatfeat"@cha_score>=13(R
+feat:twinned_feintTwinned Feintcombatfeat"@cha_score>=13(E
 feat:twist_away
-Twist Awayfeatgeneral""@ability:evasion#monk_weapon_adept(I
+Twist Awayfeatgeneral"@ability:evasion#monk(I
 feat:undersized_mountUndersized Mountcombatfeat"@skill:ride>=1(r
 feat:unfettered_familiarUnfettered Familiarfeatgeneral"0all(@caster_level>=5,@arcanist_exploit:familiar)(a
 feat:war_blessingWar Blessingfeatgeneral"-any(@ability:mystery#oracle,@ability:domains)(l

@@ -1,15 +1,18 @@
-.root {
+.underlined-value {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
 .underlined {
-  composes: underlined from "../CharacterSheet.module.css";
+  display: flex;
+  height: 1.5em;
+  line-height: 1em;
+  border-bottom: 2px solid dimgray;
+  align-items: center;
 }
 
 .label {
-  composes: label from "../CharacterSheet.module.css";
   font-size: 0.75em;
   color: dimgray;
 }

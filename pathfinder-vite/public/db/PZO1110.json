@@ -289,7 +289,6 @@
     "id": "ability:channel_energy#cleric",
     "name": "Channel Energy",
     "tags": ["ability", "class_feature", "cleric"],
-    "maxStacks": 1,
     "label": "Channel Energy ({@ability:channel_energy#cleric}d6)"
   }, {
     "id": "ability:channel_positive_energy",
@@ -298,8 +297,7 @@
   }, {
     "id": "ability:channel_positive_energy#paladin",
     "name": "Channel Positive Energy",
-    "tags": ["ability", "class_feature", "paladin"],
-    "maxStacks": 1
+    "tags": ["ability", "class_feature", "paladin"]
   }, {
     "id": "ability:claws#sorcerer",
     "name": "Claws",
@@ -1889,7 +1887,7 @@
     "id": "feat:channel_smite",
     "name": "Channel Smite",
     "tags": ["combat", "feat"],
-    "enabledFormula": "sum(@ability:channel_energy#*)[Channel Energy]",
+    "enabledFormula": "@ability:channel_energy[Channel Energy]",
     "maxStacks": 1
   }, {
     "id": "feat:cleave",
@@ -1917,7 +1915,7 @@
     "id": "feat:command_undead",
     "name": "Command Undead",
     "tags": ["feat", "general"],
-    "enabledFormula": "@ability:channel_negative_energy",
+    "enabledFormula": "sum(@ability:channel_negative_energy#*)",
     "maxStacks": 1
   }, {
     "id": "feat:craft_magic_arms_and_armor",
@@ -2034,7 +2032,7 @@
     "id": "feat:elemental_channel",
     "name": "Elemental Channel",
     "tags": ["feat", "general"],
-    "enabledFormula": "sum(@ability:channel_energy#*)[Channel Energy]",
+    "enabledFormula": "@ability:channel_energy[Channel Energy]",
     "maxStacks": 1
   }, {
     "id": "feat:elemental_fist",
@@ -2088,7 +2086,7 @@
     "id": "feat:extra_channel",
     "name": "Extra Channel",
     "tags": ["feat", "general"],
-    "enabledFormula": "sum(@ability:channel_energy#*)[Channel Energy]",
+    "enabledFormula": "@ability:channel_energy[Channel Energy]",
     "maxStacks": 1
   }, {
     "id": "feat:extra_ki",
@@ -2265,7 +2263,7 @@
     "id": "feat:improved_channel",
     "name": "Improved Channel",
     "tags": ["feat", "general"],
-    "enabledFormula": "sum(@ability:channel_energy#*)[Channel Energy]",
+    "enabledFormula": "@ability:channel_energy[Channel Energy]",
     "maxStacks": 1
   }, {
     "id": "feat:improved_counterspell",
@@ -2563,7 +2561,7 @@
     "id": "feat:selective_channeling",
     "name": "Selective Channeling",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@cha_score\u003e\u003d13,sum(@ability:channel_energy#*)[Channel Energy])",
+    "enabledFormula": "@ability:channel_energy[Channel Energy]",
     "maxStacks": 1
   }, {
     "id": "feat:self_sufficient",

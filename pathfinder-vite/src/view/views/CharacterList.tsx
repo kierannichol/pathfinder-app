@@ -10,6 +10,8 @@ import DeleteIcon from "../components/icons/DeleteIcon.tsx";
 import {classNames} from "@/utils/classNames.ts";
 import {useCharacterStore, useDatabase} from "../../data/context.tsx";
 import CharacterSummary from "../../data/v8/CharacterSummary.ts";
+import DuplicateIcon from "@/view/components/icons/DuplicateIcon.tsx";
+import CopyCharacterDialog from "@/view/components/character/CopyCharacterDialog.tsx";
 
 export default function CharacterList() {
   const characterStore = useCharacterStore();
@@ -25,7 +27,7 @@ export default function CharacterList() {
   }, [ loadedCharacters ]);
 
   const handleCreate = async (characterName: string, favoredClassId: string) => {
-    const data = {
+    const data: {[key:string]:any} = {
       'character_name': characterName,
       'favored_class': favoredClassId
     };
@@ -34,6 +36,25 @@ export default function CharacterList() {
       data[`${level}:class`] = characterClassId;
     }
     const created = await characterStore.create(data);
+    navigate(`/character/plan/${created.id}`)
+  };
+
+  const handleDuplicate = async (characterToCopy: CharacterSummary, newName: string) => {
+    const copyCharacter = await characterStore.load(characterToCopy.id);
+    if (!copyCharacter) {
+      console.error("Could not load character", characterToCopy.id);
+      return;
+    }
+
+    const selections = {
+      ...copyCharacter.pack().selections,
+    };
+    selections['character_name'] = newName;
+
+    console.log(newName)
+    console.log(selections);
+
+    const created = await characterStore.create(selections);
     navigate(`/character/plan/${created.id}`)
   };
 
@@ -49,7 +70,8 @@ export default function CharacterList() {
       {characters?.map(character => <CharacterListEntry
           key={character.id}
           character={character}
-          onDelete={handleDelete} />)}
+          onDelete={handleDelete}
+          onDuplicate={handleDuplicate} />)}
       </div>}
       <div className={styles.controls}>
         <AddCharacterButton disabled={isLoading} onCreate={handleCreate} />
@@ -61,9 +83,10 @@ export default function CharacterList() {
 interface CharacterListEntryProps {
   character: CharacterSummary;
   onDelete: (id: string) => void;
+  onDuplicate: (characterToCopy: CharacterSummary, newName: string) => void;
 }
 
-function CharacterListEntry({ character, onDelete }: CharacterListEntryProps) {
+function CharacterListEntry({ character, onDelete, onDuplicate }: CharacterListEntryProps) {
   const navigate = useNavigate();
   const db = useDatabase();
 
@@ -84,10 +107,11 @@ function CharacterListEntry({ character, onDelete }: CharacterListEntryProps) {
         </div>
       </div>
     </div>
+    <DuplicateCharacterButton characterToCopy={character} onDuplicate={onDuplicate} />
     <div className={classNames([styles.deleteButtonContainer, 'clickable'])} onClick={() => {
       onDelete(character.id);
     }}>
-      <DeleteIcon />
+      <DeleteIcon/>
     </div>
   </Panel>
 }
@@ -97,7 +121,7 @@ interface AddCharacterButtonProps {
   disabled?: boolean;
 }
 
-function AddCharacterButton({ onCreate, disabled = false }: AddCharacterButtonProps) {
+function AddCharacterButton({onCreate, disabled = false }: AddCharacterButtonProps) {
   const [ show, setShow ] = useState(false);
 
   function handleCreate(characterName: string, characterClassId: string) {
@@ -115,4 +139,25 @@ function AddCharacterButton({ onCreate, disabled = false }: AddCharacterButtonPr
                                  onCreate={handleCreate}
                                  onCancel={handleCancel} />}
   </>);
+}
+
+function DuplicateCharacterButton({ characterToCopy, onDuplicate }: { characterToCopy: CharacterSummary, onDuplicate: (characterToCopy: CharacterSummary, newName: string) => void }) {
+  const [ show, setShow ] = useState(false);
+
+  function handleCreateCopy(characterName: string) {
+    setShow(false);
+    onDuplicate(characterToCopy, characterName);
+  }
+
+  function handleCancel() {
+    setShow(false);
+  }
+
+  return <div className={classNames([styles.duplicateButtonContainer, 'clickable'])} onClick={_ => setShow(true)}>
+    <DuplicateIcon/>
+    {show && <CopyCharacterDialog show={show}
+                                 defaultCharacterName={characterToCopy.name}
+                                 onCreateCopy={handleCreateCopy}
+                                 onCancel={handleCancel} />}
+  </div>
 }

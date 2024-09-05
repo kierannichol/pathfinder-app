@@ -1,0 +1,74 @@
+{
+  "sourceId": "PZO9407",
+  "title": "Pathfinder Chronicles – Cheliax: Empire of Devils",
+  "features": [{
+    "id": "feat:bleeding_attack",
+    "name": "Bleeding Attack",
+    "tags": ["combat", "feat"],
+    "enabledFormula": "@feat:improved_unarmed_strike",
+    "maxStacks": 1
+  }, {
+    "id": "feat:cornugon_shield",
+    "name": "Cornugon Shield",
+    "tags": ["combat", "feat"],
+    "enabledFormula": "all(@dex_score\u003e\u003d15,@feat:weapon_focus#spiked_chain)",
+    "maxStacks": 1
+  }, {
+    "id": "feat:cornugon_smash",
+    "name": "Cornugon Smash",
+    "tags": ["combat", "feat"],
+    "enabledFormula": "all(@feat:power_attack,@skill:intimidate\u003e\u003d6)",
+    "maxStacks": 1
+  }, {
+    "id": "feat:cornugon_stun",
+    "name": "Cornugon Stun",
+    "tags": ["combat", "feat"],
+    "enabledFormula": "@feat:stunning_fist",
+    "maxStacks": 1
+  }, {
+    "id": "feat:cornugon_trip",
+    "name": "Cornugon Trip",
+    "tags": ["combat", "feat"],
+    "enabledFormula": "all(@dex_score\u003e\u003d15,@feat:improved_trip,@feat:weapon_focus#spiked_chain)",
+    "maxStacks": 1
+  }, {
+    "id": "feat:furys_fall",
+    "name": "Fury\u0027s Fall",
+    "tags": ["combat", "feat"],
+    "enabledFormula": "@feat:improved_trip",
+    "maxStacks": 1
+  }, {
+    "id": "feat:furys_snare",
+    "name": "Fury\u0027s Snare",
+    "tags": ["combat", "feat"],
+    "enabledFormula": "all(@feat:furys_fall,@feat:improved_trip)",
+    "maxStacks": 1
+  }, {
+    "id": "feat:hamatula_grasp",
+    "name": "Hamatula Grasp",
+    "tags": ["combat", "feat"],
+    "maxStacks": 1
+  }, {
+    "id": "feat:hamatula_strike",
+    "name": "Hamatula Strike",
+    "tags": ["combat", "feat"],
+    "enabledFormula": "all(@feat:improved_grapple,@str_score\u003e\u003d13,@bab\u003e\u003d7)",
+    "maxStacks": 1
+  }, {
+    "id": "feat:hellcat_pounce",
+    "name": "Hellcat Pounce",
+    "tags": ["combat", "feat"],
+    "maxStacks": 1
+  }, {
+    "id": "feat:hellcat_stealth",
+    "name": "Hellcat Stealth",
+    "tags": ["feat", "general"],
+    "maxStacks": 1
+  }, {
+    "id": "feat:osyluth_guile",
+    "name": "Osyluth Guile",
+    "tags": ["combat", "feat"],
+    "enabledFormula": "all(@skill:bluff\u003e\u003d8,@feat:dodge)",
+    "maxStacks": 1
+  }]
+}

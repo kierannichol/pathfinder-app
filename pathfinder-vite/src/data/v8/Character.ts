@@ -89,6 +89,12 @@ export default class Character {
       ...choiceSelections
     };
 
+    for (let key in allSelections) {
+      if (Array.isArray(allSelections[key])) {
+        allSelections[key] = allSelections[key].filter(v => v !== undefined && v !== '');
+      }
+    }
+
     const resolved = await timedAsync(() => this.template.resolve(this.database, allSelections), 'Resolving Character');
 
     return new Character(this.id, this.template, this.database, allSelections, resolved);

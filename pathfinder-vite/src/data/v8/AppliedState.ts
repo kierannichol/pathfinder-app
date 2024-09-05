@@ -21,7 +21,11 @@ export default class AppliedState {
 
   public set(key: string, value: number|string|boolean|Resolvable) {
     this.dataContext.set(key, value);
-    this.stackCounts[key] = 1;
+    if (typeof value === "number") {
+      this.stackCounts[key] = value;
+    } else {
+      this.stackCounts[key] = 1;
+    }
 
     this.modifications(key, this.stackCounts[key])
       .forEach(mod => mod.applyModification(this));

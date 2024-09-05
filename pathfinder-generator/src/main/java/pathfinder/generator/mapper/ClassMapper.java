@@ -29,6 +29,7 @@ public class ClassMapper {
 
         levelEditor.level(1).addRepeatingFeatureSelectByTagChoice("archetype", "Archetype", "archetype", "archetype+" + characterClass.id().key);
 
+        levelEditor.level(1).addEffect(Effect.setFormula("max_skill_ranks#" + characterClass.id().key, "(%s+@int_mod)*@%s".formatted(characterClass.skill_ranks_per_level(), characterClass.id())));
         characterClass.class_skills().forEach(skill -> levelEditor.level(1).addEffect(Effect.setNumber("trained:" + skill, 1)));
 
 //        addCasterLevels(characterClass, levelEditor);

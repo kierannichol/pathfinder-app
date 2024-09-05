@@ -1,0 +1,78 @@
+{
+  "id": "class:rogue#shadow_walker",
+  "name": "Shadow Walker",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:rogue_talent#rogue AND !@modifies:ability:improved_uncanny_dodge#rogue AND !@modifies:ability:uncanny_dodge#rogue AND !@modifies:ability:trapfinding#rogue AND !@modifies:ability:trap_sense#rogue",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:rogue_talent#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trapfinding#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#rogue",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:rogue",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:expanded_sight#rogue_shadow_walker"],
+            "linksToRemove": ["ability:trapfinding#rogue"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 2,
+            "linksToRemove": ["ability:rogue_talent#rogue"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:illumination_control#rogue_shadow_walker"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:favored_illumination#rogue_shadow_walker"],
+            "linksToRemove": ["ability:uncanny_dodge#rogue"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:improved_uncanny_dodge#rogue"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }]
+        }]
+      }]
+    }
+  }
+}

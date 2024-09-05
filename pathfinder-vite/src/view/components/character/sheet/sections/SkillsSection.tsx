@@ -4,7 +4,7 @@ import Label from "../common/Label.tsx";
 import Section from "../common/Section.tsx";
 import UnderlinedValue from "../common/UnderlinedValue.tsx";
 import styles from "./SkillsSection.module.scss";
-import {classNames} from "../../../../../utils/classNames.ts";
+import {classNames} from "@/utils/classNames.ts";
 import Skills from "../../../../../data/Skills.tsx";
 import CharacterAtLevel from "../../../../../data/v8/CharacterAtLevel.ts";
 

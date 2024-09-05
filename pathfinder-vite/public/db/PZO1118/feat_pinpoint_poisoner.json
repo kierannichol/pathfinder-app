@@ -2,7 +2,7 @@
   "id": "feat:pinpoint_poisoner",
   "name": "Pinpoint Poisoner",
   "tags": ["combat", "feat"],
-  "enabledFormula": "any(sum(@ability:poison_use#*)[Poison Use],@skill:craft#alchemy\u003e\u003d6,@feat:adder_strike,@feat:improved_unarmed_strike,@feat:two_weapon_fighting,sum(@ability:flurry_of_blows#*)[Flurry Of Blows])",
+  "enabledFormula": "any(@rogue_talent:poison_use,@skill:craft#alchemy\u003e\u003d6,@feat:adder_strike,@feat:improved_unarmed_strike,@feat:two_weapon_fighting,sum(@ability:flurry_of_blows#*)[Flurry Of Blows])",
   "maxStacks": 1,
   "description": {
     "text": "You deftly use specially prepared needles to apply poison for maximum effect.",

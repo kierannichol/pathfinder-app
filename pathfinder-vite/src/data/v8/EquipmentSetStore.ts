@@ -1,6 +1,6 @@
 import {getActiveUser} from "../../app/auth.tsx";
-import {timedAsync} from "../../app/pfutils.ts";
-import {FirebaseRepository} from "../../app/firebase.ts";
+import {timedAsync} from "@/app/pfutils.ts";
+import {FirebaseRepository} from "@/app/firebase.ts";
 import {ItemDatabase} from "./Database.ts";
 import PackedEquipmentSet, {EquipmentSet} from "./Equipment.ts";
 
@@ -69,6 +69,7 @@ export class FirebaseEquipmentSetStore extends EquipmentSetStore {
       id: data.id,
       name: data.name,
       budget: data.budget,
+      priceLimit: data.priceLimit,
       equipment: data.equipment
     };
   }
@@ -88,6 +89,7 @@ export class FirebaseEquipmentSetStore extends EquipmentSetStore {
         id: data.id,
         name: data.name,
         budget: data.budget,
+        priceLimit: data.priceLimit,
         equipment: data.equipment
       }
     });

@@ -10,11 +10,13 @@ interface NewCharacterDialogProps {
   show: boolean;
   onCreate: (name: string, classId: string) => void;
   onCancel?: () => void;
+  defaultCharacterName?: string;
+  defaultCharacterClass?: string;
 }
 
-function NewCharacterDialog({ show, onCreate, onCancel }: NewCharacterDialogProps) {
-  const [ characterName, setCharacterName ] = useState('');
-  const [ characterClass, setCharacterClass ] = useState('');
+function NewCharacterDialog({ show, onCreate, onCancel, defaultCharacterName = '', defaultCharacterClass = '' }: NewCharacterDialogProps) {
+  const [ characterName, setCharacterName ] = useState(defaultCharacterName);
+  const [ characterClass, setCharacterClass ] = useState(defaultCharacterClass);
 
   const database = useDatabase();
 
@@ -27,12 +29,18 @@ function NewCharacterDialog({ show, onCreate, onCancel }: NewCharacterDialogProp
     });
   }, [database]);
 
+  const defaultSelectedOption = useMemo(() => {
+    return classOptions.find(option => option.id === characterClass);
+  }, [classOptions, defaultCharacterClass]);
+
   function handleCreate() {
     onCreate(characterName, characterClass);
   }
 
   function handleClassSelected(selected: Option[]) {
-    setCharacterClass(selected[0]?.id);
+    const first = selected[0];
+    const id = typeof first === 'string' ? first : first.id;
+    setCharacterClass(id);
   }
 
   return (<Modal
@@ -57,11 +65,12 @@ function NewCharacterDialog({ show, onCreate, onCancel }: NewCharacterDialogProp
             autoFocus={true} />
         <label>Class</label>
         <Typeahead id="new_character_class_select"
+                   defaultSelected={defaultSelectedOption !== undefined ? [defaultSelectedOption] : []}
                    caseSensitive={false}
                    positionFixed={true}
                    multiple={false}
                    onChange={handleClassSelected}
-                   onFocus={e => e.target.select()}
+                   onFocus={e => e.currentTarget.select()}
                    options={classOptions} />
         {/*<Form.Select>*/}
         {/*  <option></option>*/}

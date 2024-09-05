@@ -200,7 +200,10 @@ class_features:
     \ level + the warpriest's Wisdom modifier. Creatures healed by channeled energy\
     \ cannot exceed their maximum hit point total--all excess healing is lost. A warpriest\
     \ can choose whether or not to include himself in this effect."
-  effects: []
+  effects:
+    - "INCR ability:channel_energy 1"
+    - "INCR ability:channel_positive_energy 1"
+    - "INCR ability:channel_negative_energy 1"
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
 - id: "ability:fervor#warpriest"

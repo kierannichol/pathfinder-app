@@ -129,7 +129,10 @@ class_features:
     \ that does not provoke an attack of opportunity. A cleric can choose whether\
     \ or not to include herself in this effect.\nA cleric must be able to present\
     \ her holy symbol to use this ability."
-  effects: []
+  effects:
+    - "INCR ability:channel_energy 1"
+    - "INCR ability:channel_positive_energy 1"
+    - "INCR ability:channel_negative_energy 1"
   prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
 - id: "ability:domains#cleric"

@@ -68,10 +68,10 @@ Camouflageabilityclass_featureranger(
 ability:cantrips#sorcererCantripsabilityclass_featuresorcerer(E
 ability:cantrips#wizardCantripsabilityclass_featurewizard([
 &ability:celestial_resistances#sorcererCelestial Resistancesabilitybloodline_power(*
-ability:channel_energyChannel Energy(†
-ability:channel_energy#clericChannel Energyabilityclass_featurecleric(23Channel Energy ({@ability:channel_energy#cleric}d6)<
-ability:channel_positive_energyChannel Positive Energy(e
-'ability:channel_positive_energy#paladinChannel Positive Energyabilityclass_featurepaladin(;
+ability:channel_energyChannel Energy(„
+ability:channel_energy#clericChannel Energyabilityclass_featurecleric23Channel Energy ({@ability:channel_energy#cleric}d6)<
+ability:channel_positive_energyChannel Positive Energy(c
+'ability:channel_positive_energy#paladinChannel Positive Energyabilityclass_featurepaladin;
 ability:claws#sorcererClawsabilitybloodline_power(0
 ability:combat_style_featCombat Style Feat(W
  ability:combat_style_feat#rangerCombat Style Featabilityclass_featureranger(E
@@ -448,13 +448,13 @@ Spellcraftclass_skill(-
 feat:blind_fightBlind-Fightcombatfeat(_
 feat:blinding_criticalBlinding Criticalcombatfeat""all(@feat:critical_focus,@bab>=15)(H
 feat:brew_potionBrew Potionfeatitem_creation"@caster_level>=3(7
-feat:catch_off_guardCatch Off-Guardcombatfeat(c
-feat:channel_smiteChannel Smitecombatfeat".sum(@ability:channel_energy#*)[Channel Energy](U
+feat:catch_off_guardCatch Off-Guardcombatfeat(\
+feat:channel_smiteChannel Smitecombatfeat"'@ability:channel_energy[Channel Energy](U
 feat:cleaveCleavecombatfeat".all(@str_score>=13,@feat:power_attack,@bab>=1)(6
 feat:combat_castingCombat Castingfeatgeneral(I
 feat:combat_expertiseCombat Expertisecombatfeat"@int_score>=13(7
-feat:combat_reflexesCombat Reflexescombatfeat(X
-feat:command_undeadCommand Undeadfeatgeneral" @ability:channel_negative_energy(f
+feat:combat_reflexesCombat Reflexescombatfeat(_
+feat:command_undeadCommand Undeadfeatgeneral"'sum(@ability:channel_negative_energy#*)(f
 feat:craft_magic_arms_and_armorCraft Magic Arms and Armorfeatitem_creation"@caster_level>=5(D
 feat:craft_rod	Craft Rodfeatitem_creation"@caster_level>=9(I
 feat:craft_staffCraft Stafffeatitem_creation"@caster_level>=11(F
@@ -478,8 +478,8 @@ Deft Handsfeatgeneral(9
 Disruptivecombatfeat"@class:fighter>=6(3
 
 feat:dodgeDodgecombatfeat"@dex_score>=13(`
-feat:double_sliceDouble Slicecombatfeat"-all(@dex_score>=15,@feat:two_weapon_fighting)(l
-feat:elemental_channelElemental Channelfeatgeneral".sum(@ability:channel_energy#*)[Channel Energy](
+feat:double_sliceDouble Slicecombatfeat"-all(@dex_score>=15,@feat:two_weapon_fighting)(e
+feat:elemental_channelElemental Channelfeatgeneral"'@ability:channel_energy[Channel Energy](
 feat:elemental_fistElemental Fistcombatfeat"Hall(@con_score>=13,@wis_score>=13,@feat:improved_unarmed_strike,@bab>=8)(8
 feat:elemental_focusElemental Focusfeatgeneral(6
 feat:empower_spellEmpower Spellfeat	metamagic(,
@@ -488,8 +488,8 @@ feat:dodgeDodgecombatfeat"@dex_score>=13(`
 feat:eschew_materialsEschew Materialsfeatgeneral(y
 feat:exhausting_criticalExhausting Criticalcombatfeat"8all(@feat:critical_focus,@feat:tiring_critical,@bab>=15)(T
 feat:exotic_weapon_proficiencyExotic Weapon Proficiencycombatfeat"@bab>=1(4
-feat:extend_spellExtend Spellfeat	metamagic(d
-feat:extra_channelExtra Channelfeatgeneral".sum(@ability:channel_energy#*)[Channel Energy](L
+feat:extend_spellExtend Spellfeat	metamagic(]
+feat:extra_channelExtra Channelfeatgeneral"'@ability:channel_energy[Channel Energy](L
 feat:extra_kiExtra Kifeatgeneral" sum(@ability:ki_pool#*)[Ki Pool](j
 feat:extra_lay_on_handsExtra Lay On Handsfeatgeneral"*sum(@ability:lay_on_hands#*)[Lay On Hands](~
 feat:extra_mercyExtra Mercyfeatgeneral"Lall(sum(@ability:lay_on_hands#*)[Lay On Hands],sum(@ability:mercy#*)[Mercy])(Y
@@ -521,8 +521,8 @@ Forge Ringfeatitem_creation"@caster_level>=7(s
 "feat:greater_weapon_specializationGreater Weapon Specializationcombatfeat"®all(@proficiency:selected_weapon,@feat:greater_weapon_focus#selected_weapon,@feat:weapon_focus#selected_weapon,@feat:weapon_specialization#selected_weapon,@class:fighter>=12)(€
 feat:heavy_armor_proficiencyHeavy Armor Proficiencycombatfeat"7all(@proficiency:light_armor,@proficiency:medium_armor)(8
 feat:heighten_spellHeighten Spellfeat	metamagic(m
-feat:improved_bull_rushImproved Bull Rushcombatfeat".all(@str_score>=13,@feat:power_attack,@bab>=1)(j
-feat:improved_channelImproved Channelfeatgeneral".sum(@ability:channel_energy#*)[Channel Energy](D
+feat:improved_bull_rushImproved Bull Rushcombatfeat".all(@str_score>=13,@feat:power_attack,@bab>=1)(c
+feat:improved_channelImproved Channelfeatgeneral"'@ability:channel_energy[Channel Energy](D
 feat:improved_counterspellImproved Counterspellfeatgeneral(f
 feat:improved_criticalImproved Criticalcombatfeat")all(@proficiency:selected_weapon,@bab>=8)(c
 feat:improved_disarmImproved Disarmcombatfeat"*all(@int_score>=13,@feat:combat_expertise)(a
@@ -578,8 +578,8 @@ Rapid Shotcombatfeat"*all(@dex_score>=13,@feat:point_blank_shot)(_
 feat:ride_by_attackRide-by Attackcombatfeat"(all(@skill:ride>=1,@feat:mounted_combat)( 
 feat:runRunfeatgeneral(T
 feat:scorpion_styleScorpion Stylecombatfeat"@feat:improved_unarmed_strike(L
-feat:scribe_scrollScribe Scrollfeatitem_creation"@caster_level>=1(†
-feat:selective_channelingSelective Channelingfeatgeneral"Ball(@cha_score>=13,sum(@ability:channel_energy#*)[Channel Energy])(8
+feat:scribe_scrollScribe Scrollfeatitem_creation"@caster_level>=1(k
+feat:selective_channelingSelective Channelingfeatgeneral"'@ability:channel_energy[Channel Energy](8
 feat:self_sufficientSelf-Sufficientfeatgeneral(…
 feat:shatter_defensesShatter Defensescombatfeat"Jall(@feat:weapon_focus,@feat:dazzling_display,@bab>=6,@proficiency:weapon)(X
 feat:shield_focusShield Focuscombatfeat"%all(@feat:shield_proficiency,@bab>=1)(¢

@@ -1,0 +1,24 @@
+{
+  "id": "class:sorcerer#umbral_scion",
+  "name": "Umbral Scion",
+  "tags": ["archetype", "sorcerer"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:potent_shadows#sorcerer_umbral_scion"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:crippling_darkness#sorcerer_umbral_scion"]
+          }]
+        }]
+      }]
+    }
+  }
+}

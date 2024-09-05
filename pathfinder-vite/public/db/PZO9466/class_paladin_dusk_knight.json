@@ -1,0 +1,85 @@
+{
+  "id": "class:paladin#dusk_knight",
+  "name": "Dusk Knight",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:channel_positive_energy#paladin AND !@modifies:ability:smite_evil#paladin AND !@modifies:ability:aura_of_resolve#paladin AND !@modifies:ability:aura_of_justice#paladin AND !@modifies:ability:divine_bond#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:channel_positive_energy#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:smite_evil#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_resolve#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_justice#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:divine_bond#paladin",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:shadow_smite#paladin_dusk_knight"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:shadow_smite#paladin_dusk_knight"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:shadow_smite#paladin_dusk_knight"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:shadow_smite#paladin_dusk_knight", "ability:illuminating_zeal#paladin_dusk_knight"],
+            "linksToRemove": ["ability:smite_evil#paladin", "ability:channel_positive_energy#paladin"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:shadows_embrace#paladin_dusk_knight"],
+            "linksToRemove": ["ability:divine_bond#paladin"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:shadow_smite#paladin_dusk_knight"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:cloak_of_shadow#paladin_dusk_knight"],
+            "linksToRemove": ["ability:aura_of_resolve#paladin"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:shadow_smite#paladin_dusk_knight"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:clouding_smite#paladin_dusk_knight"],
+            "linksToRemove": ["ability:aura_of_justice#paladin"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:shadow_smite#paladin_dusk_knight"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }]
+        }]
+      }]
+    }
+  }
+}

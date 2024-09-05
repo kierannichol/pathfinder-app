@@ -326,7 +326,7 @@ Theologian	archetypecleric(<
 class:magus#bladebound
 Bladebound	archetypemagus(½
 class:magus#hexcrafter
-Hexcrafter	archetypemagus"‚!@modifies:ability:magus_arcana#magus AND !@modifies:ability:spell_recall#magus AND !@modifies:ability:improved_spell_recall#magus(^
+Hexcrafter	archetypemagus"‚!@modifies:ability:spell_recall#magus AND !@modifies:ability:magus_arcana#magus AND !@modifies:ability:improved_spell_recall#magus(^
 class:magus#spellblade
 Spellblade	archetypemagus"$!@modifies:ability:spellstrike#magus(ê
 class:magus#staff_magusStaff Magus	archetypemagus"­!@modifies:ability:fighter_training#magus AND !@modifies:trait:armor_proficiency#magus AND !@modifies:ability:heavy_armor#magus AND !@modifies:trait:weapon_proficiency#magus(4
@@ -361,8 +361,8 @@ $class:oracle#enlightened_philosopherEnlightened Philosopher	archetypeoracl
 feat:advanced_ranger_trapAdvanced Ranger Trapfeatgeneral"#all(@ability:trap,@class:ranger>=5)(.
 feat:antagonize
 Antagonizefeatgeneral(6
-feat:burning_spellBurning Spellfeat	metamagic(ß
-feat:channeled_shield_wallChanneled Shield Wallfeatgeneral"˜all(any(@ability:channel_positive_energy>=3,@ability:channel_negative_energy>=3),any(@proficiency:other,@proficiency:light_armor,@proficiency:medium_armor,@proficiency:heavy_armor,@proficiency:buckler,@proficiency:light_shield,@proficiency:heavy_shield,@proficiency:tower_shield))(<
+feat:burning_spellBurning Spellfeat	metamagic(½
+feat:channeled_shield_wallChanneled Shield Wallfeatgeneral"öall(@ability:channel_energy[Channel Energy]>=3,any(@proficiency:other,@proficiency:light_armor,@proficiency:medium_armor,@proficiency:heavy_armor,@proficiency:buckler,@proficiency:light_shield,@proficiency:heavy_shield,@proficiency:tower_shield))(<
 feat:concussive_spellConcussive Spellfeat	metamagic(¦
 &feat:create_reliquary_arms_and_shields!Create Reliquary Arms and Shieldsfeatgeneral"Hany(@feat:craft_magic_arms_and_armor,@spell:consecrate,@spell:desecrate)(™
 feat:create_sanguine_elixirCreate Sanguine Elixirfeatgeneral"Qall(@cha_score>=15,@feat:brew_potion,@skill:craft#alchemy>=12,@class:sorcerer>=3)(R
@@ -377,14 +377,14 @@ Deny Deathfeatgeneral"*all(@ability:ki_pool#monk,@feat:endurance)(¿
 feat:eldritch_heritageEldritch Heritagefeatgeneral"=all(@cha_score>=13,@feat:skill_focus#the,@character_level>=3)(>
 feat:ensembleEnsemblefeatteamwork"@skill:perform>=5(u
 feat:evolved_familiarEvolved Familiarfeatgeneral"9all(@int_score>=13,@cha_score>=13,@magus_arcana:familiar)(l
-feat:exploit_loreExploit Lorefeatgeneral"8all(sum(@ability:monster_lore#*)[Monster Lore],@bab>=11)(P
-feat:extended_baneExtended Banefeatgeneral"sum(@ability:bane#*)[Bane](^
+feat:exploit_loreExploit Lorefeatgeneral"8all(sum(@ability:monster_lore#*)[Monster Lore],@bab>=11)(A
+feat:extended_baneExtended Banefeatgeneral"@spell:bane(^
 feat:extra_arcanaExtra Arcanafeatgeneral"*sum(@ability:magus_arcana#*)[Magus Arcana](f
-feat:extra_arcane_poolExtra Arcane Poolfeatgeneral"(sum(@ability:arcane_pool#*)[Arcane Pool](‚
-feat:extra_cantrips_or_orisonsExtra Cantrips or Orisonsfeatgeneral"4any(@ability:cantrips#magus,@ability:orisons#oracle)(Z
+feat:extra_arcane_poolExtra Arcane Poolfeatgeneral"(sum(@ability:arcane_pool#*)[Arcane Pool](
+feat:extra_cantrips_or_orisonsExtra Cantrips or Orisonsfeatgeneral"3any(@ability:cantrips#magus,@ability:orisons#druid)(Z
 feat:extra_evolutionExtra Evolutionfeatgeneral" sum(@ability:eidolon#*)[Eidolon](K
 feat:extra_ranger_trapExtra Ranger Trapfeatgeneral"@ability:trap(»
-feat:extra_summonsExtra Summonsfeatgeneral"„all(@ability:summon_monster_v#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer[Summon monster],@class:summoner>=1)(„
+feat:extra_summonsExtra Summonsfeatgeneral"„all(@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer,@ability:summon_monster_iii#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_v#summoner[Summon monster],@class:summoner>=1)(„
 feat:eyes_of_judgmentEyes of Judgmentfeatgeneral"Hall(sum(@ability:detect_alignment#*)[Detect Alignment],@caster_level>=6)({
 feat:fast_empathyFast Empathyfeatgeneral"Gall(@skill:handle_animal>=5,sum(@ability:wild_empathy#*)[Wild Empathy])(r
 feat:favored_judgmentFavored Judgmentfeatgeneral"6all(@wis_score>=13,sum(@ability:judgment#*)[Judgment])(|
@@ -407,7 +407,7 @@ Fire Musicfeatgeneral"vall(@skill:spellcraft>=5,max(@spells_per_day:bard#*)[
 feat:ki_standKi Standfeatgeneral"@ability:ki_pool#monk(P
 feat:learn_ranger_trapLearn Ranger Trapfeatgeneral"@skill:survival>=5(n
 feat:life_lure	Life Lurefeatgeneral"@sum(@ability:channel_positive_energy#*)[Channel Positive Energy](Ç
-feat:moonlight_summonsMoonlight Summonsfeatgeneral"ˆall(@any,@ability:summon_natures_ally#summoner_leshy_caller,@ability:summon_natures_ally#bard_animal_speaker,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9[Summon nature's ally])(
+feat:moonlight_summonsMoonlight Summonsfeatgeneral"ˆall(@any,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9,@ability:summon_natures_ally#summoner_leshy_caller,@ability:summon_natures_ally#bard_animal_speaker[Summon nature's ally])(
 feat:mystic_strideMystic Stridefeatgeneral"Wall(@dex_score>=15,@feat:nimble_moves,sum(@ability:woodland_stride#*)[Woodland Stride])(`
 feat:oracular_intuitionOracular Intuitionfeatgeneral" sum(@ability:mystery#*)[Mystery](O
 feat:painful_anchorPainful Anchorfeatgeneral"@ability:anchoring_aura(8
@@ -418,8 +418,8 @@ Fire Musicfeatgeneral"vall(@skill:spellcraft>=5,max(@spells_per_day:bard#*)[
 feat:prophetic_visionaryProphetic Visionaryfeatgeneral" sum(@ability:mystery#*)[Mystery](\
 feat:pure_faith
 Pure Faithfeatgeneral",sum(@ability:divine_health#*)[Divine Health](m
-feat:quarterstaff_masterQuarterstaff Mastercombatfeat",all(@feat:weapon_focus#quarterstaff,@bab>=5)(†
-feat:quick_channelQuick Channelfeatgeneral"Pall(@skill:knowledge_religion>=5,sum(@ability:channel_energy#*)[Channel Energy])(x
+feat:quarterstaff_masterQuarterstaff Mastercombatfeat",all(@feat:weapon_focus#quarterstaff,@bab>=5)(]
+feat:quick_channelQuick Channelfeatgeneral"'@ability:channel_energy[Channel Energy](x
 feat:quick_wild_shapeQuick Wild Shapefeatgeneral"<all(sum(@ability:wild_shape#*)[Wild Shape],@caster_level>=8)(b
 feat:radiant_chargeRadiant Chargefeatgeneral"*sum(@ability:lay_on_hands#*)[Lay On Hands](I
 feat:remote_bombRemote Bombfeatgeneral"@discovery:delayed_bomb(^
@@ -429,12 +429,12 @@ Pure Faithfeatgeneral",sum(@ability:divine_health#*)[Divine Health](m
 feat:ricochet_splash_weaponRicochet Splash Weaponfeatgeneral"(all(@dex_score>=13,@feat:throw_anything)(0
 feat:rime_spell
 Rime Spellfeat	metamagic(¯
-feat:sacred_summonsSacred Summonsfeatgeneral"öall(@any,@ability:summon_monster_v#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer[Summon monster])(X
+feat:sacred_summonsSacred Summonsfeatgeneral"öall(@any,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer,@ability:summon_monster_iii#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_v#summoner[Summon monster])(X
 feat:sense_link
 Sense Linkfeatgeneral"(sum(@ability:bond_senses#*)[Bond Senses](|
 feat:shaping_focusShaping Focusfeatgeneral"Fall(sum(@ability:wild_shape#*)[Wild Shape],@skill:knowledge_nature>=5)(J
 feat:sin_seerSin Seerfeatgeneral"@ability:detect_undead#paladin(µ
-feat:skeleton_summonerSkeleton Summonerfeatgeneral"öall(@any,@ability:summon_monster_v#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer[Summon monster])(r
+feat:skeleton_summonerSkeleton Summonerfeatgeneral"öall(@any,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer,@ability:summon_monster_iii#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_v#summoner[Summon monster])(r
 feat:sorcerous_bloodstrikeSorcerous Bloodstrikefeatgeneral",all(@cha_score>=13,@ability:bloodline_power)([
 feat:spell_bluffSpell Blufffeatgeneral")all(@skill:bluff>=5,@skill:spellcraft>=5)(R
 feat:spell_hex	Spell Hexfeatgeneral"$sum(@ability:major_hex#*)[Major Hex](i
@@ -443,12 +443,12 @@ Sense Linkfeatgeneral"(sum(@ability:bond_senses#*)[Bond Senses](|
 feat:split_hex	Split Hexfeatgeneral"@class:witch>=10(`
 feat:split_major_hexSplit Major Hexfeatgeneral"&all(@feat:split_hex,@caster_level>=18)(K
 feat:spontaneous_metafocusSpontaneous Metafocusfeatgeneral"false(Ç
-feat:starlight_summonsStarlight Summonsfeatgeneral"ˆall(@any,@ability:summon_natures_ally#summoner_leshy_caller,@ability:summon_natures_ally#bard_animal_speaker,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9[Summon nature's ally])(Å
-feat:sunlight_summonsSunlight Summonsfeatgeneral"ˆall(@any,@ability:summon_natures_ally#summoner_leshy_caller,@ability:summon_natures_ally#bard_animal_speaker,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9[Summon nature's ally])(m
+feat:starlight_summonsStarlight Summonsfeatgeneral"ˆall(@any,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9,@ability:summon_natures_ally#summoner_leshy_caller,@ability:summon_natures_ally#bard_animal_speaker[Summon nature's ally])(Å
+feat:sunlight_summonsSunlight Summonsfeatgeneral"ˆall(@any,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9,@ability:summon_natures_ally#summoner_leshy_caller,@ability:summon_natures_ally#bard_animal_speaker[Summon nature's ally])(m
 feat:superior_summoningSuperior Summoningfeatgeneral"-all(@feat:augment_summoning,@caster_level>=3)(|
 feat:thanatopic_spellThanatopic Spellfeat	metamagic">all(@skill:knowledge_religion>=6,@feat:spell_focus#necromancy)(Ž
-feat:theurgyTheurgyfeatgeneral"dall(@wis_score>=13,any(@int_score,@cha_score>=13),@spells_per_day:arcane#1,@spells_per_day:divine#1)(r
-feat:thoughtful_discernmentThoughtful Discernmentfeatgeneral"*sum(@ability:discern_lies#*)[Discern Lies](z
+feat:theurgyTheurgyfeatgeneral"dall(@wis_score>=13,any(@int_score,@cha_score>=13),@spells_per_day:arcane#1,@spells_per_day:divine#1)([
+feat:thoughtful_discernmentThoughtful Discernmentfeatgeneral"@spell:discern_lies(z
 feat:threnodic_spellThrenodic Spellfeat	metamagic">all(@skill:knowledge_religion>=6,@feat:spell_focus#necromancy)(8
 feat:toppling_spellToppling Spellfeat	metamagic(
 feat:tripping_staffTripping Staffcombatfeat"fall(@int_score>=13,@feat:combat_expertise,@feat:improved_trip,@feat:weapon_focus#quarterstaff,@bab>=6)(Ý
@@ -459,8 +459,8 @@ Sense Linkfeatgeneral"(sum(@ability:bond_senses#*)[Bond Senses](|
 feat:uncanny_concentrationUncanny Concentrationfeatgeneral"@feat:combat_casting(d
 feat:undead_masterUndead Masterfeatgeneral".any(@spell:animate_dead,@spell:command_undead)(p
 feat:unsanctioned_detectionUnsanctioned Detectionfeatgeneral"(sum(@ability:detect_evil#*)[Detect Evil](u
-feat:unsanctioned_knowledgeUnsanctioned Knowledgefeatgeneral"-all(@int_score>=13,@spells_per_day:paladin#1)(Ý
-feat:versatile_channelerVersatile Channelerfeatgeneral"šany(sum(@ability:channel_energy#*)[Channel Energy],@class:necromancer,all(@class:cleric,any(@alignment:ng,@alignment:n,@alignment:ne)[Neutral alignment]))(\
+feat:unsanctioned_knowledgeUnsanctioned Knowledgefeatgeneral"-all(@int_score>=13,@spells_per_day:paladin#1)(i
+feat:versatile_channelerVersatile Channelerfeatgeneral"'@ability:channel_energy[Channel Energy](\
 feat:vigilant_eidolonVigilant Eidolonfeatgeneral" sum(@ability:eidolon#*)[Eidolon](N
 feat:voice_of_the_sibylVoice of the Sibylfeatgeneral"@cha_score>=15(œ
 feat:warrior_priestWarrior Priestfeatgeneral"dany(@trait:divine_spellcaster[Divine spellcaster],@ability:domains,sum(@ability:mystery#*)[Mystery])(m

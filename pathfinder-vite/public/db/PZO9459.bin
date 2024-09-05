@@ -56,8 +56,8 @@ Wild Shapeabilityclass_featuredruid(–
 feat:frightening_ambushFrightening Ambushcombatfeat"@skill:intimidate>=1(y
 feat:kitsune_styleKitsune Stylefeatstyle"Eall(@int_score>=13,@feat:combat_expertise,@feat:improved_dirty_trick)(«
 feat:kitsune_tricksKitsune Tricksfeatstyle"uall(@int_score>=13,@feat:combat_expertise,@feat:improved_dirty_trick,@feat:kitsune_style,any(@bab>=3,@class:monk>=3))(Ç
-feat:kitsune_vengeanceKitsune Vengeancefeatstyle"Šall(@int_score>=13,@feat:combat_expertise,@feat:improved_dirty_trick,@feat:kitsune_style,@feat:kitsune_tricks,any(@bab>=6,@class:monk>=6))({
-feat:toxic_spellToxic Spellfeat	metamagic"Gall(@skill:craft#poison>=5,@spells_per_day#2,@slayer_talent:poison_use)(x
+feat:kitsune_vengeanceKitsune Vengeancefeatstyle"Šall(@int_score>=13,@feat:combat_expertise,@feat:improved_dirty_trick,@feat:kitsune_style,@feat:kitsune_tricks,any(@bab>=6,@class:monk>=6))(ˆ
+feat:toxic_spellToxic Spellfeat	metamagic"Tall(@skill:craft#poison>=5,@spells_per_day#2,sum(@ability:poison_use#*)[Poison Use])(x
 feat:trick_spellTrick Spellfeat	metamagic"Dall(@deity:domain_trickery,@deity:domain_lust,@deity:domain_revenge)(5
 modifies:abilityArchetype that modifies Mutagen(r
 slayer_talent:catfolk_slayerCatfolk Slayerclass_featureslayerslayer_talent"all(@race:catfolk,@varies)(¿

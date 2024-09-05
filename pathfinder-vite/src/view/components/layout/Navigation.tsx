@@ -12,10 +12,10 @@ export default function Navigation() {
   return (
       <Navbar id="primary-nav-bar" bg="primary" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand className="mb-0 h1" onClick={() => navigate(equipmentPath)}>Pathfinder 1E Tools</Navbar.Brand>
+          <Navbar.Brand className="mb-0 h1" onClick={() => navigate(basePath)}>Pathfinder 1E Tools</Navbar.Brand>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              {/*<Nav.Link href={basePath}>Character</Nav.Link>*/}
+              <Nav.Link onClick={() => navigate(basePath)}>Characters</Nav.Link>
               <Nav.Link onClick={() => navigate(equipmentPath)}>Equipment</Nav.Link>
             </Nav>
           </Navbar.Collapse>

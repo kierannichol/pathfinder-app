@@ -2,7 +2,7 @@
   "id": "class:slayer#butterfly_blade",
   "name": "Butterfly Blade",
   "tags": ["archetype", "slayer"],
-  "enabledFormula": "!@modifies:ability:studied_target#slayer AND !@modifies:ability:track#slayer AND !@modifies:ability:stalker#slayer AND !@modifies:ability:quarry#slayer AND !@modifies:ability:swift_tracker#slayer AND !@modifies:ability:improved_quarry#slayer AND !@modifies:ability:sneak_attack#slayer",
+  "enabledFormula": "!@modifies:ability:studied_target#slayer AND !@modifies:ability:track#slayer AND !@modifies:ability:quarry#slayer AND !@modifies:ability:stalker#slayer AND !@modifies:ability:swift_tracker#slayer AND !@modifies:ability:improved_quarry#slayer AND !@modifies:ability:sneak_attack#slayer",
   "maxStacks": 1,
   "description": {
   },
@@ -21,12 +21,12 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:stalker#slayer",
+            "targetKey": "modifies:ability:quarry#slayer",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:quarry#slayer",
+            "targetKey": "modifies:ability:stalker#slayer",
             "numberValue": 1
           }
         }, {
@@ -50,7 +50,7 @@
           "stackModifications": [{
             "targetStackCount": 1,
             "linksToAdd": ["ability:studied_stalker#slayer_butterfly_blade", "ability:studied_stalker#slayer_butterfly_blade"],
-            "linksToRemove": ["ability:studied_target#slayer", "ability:track#slayer"]
+            "linksToRemove": ["ability:track#slayer", "ability:studied_target#slayer"]
           }, {
             "targetStackCount": 3,
             "linksToAdd": ["ability:butterflys_kiss#slayer_butterfly_blade"],

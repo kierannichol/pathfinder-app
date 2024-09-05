@@ -19,6 +19,8 @@ import styles from "./CharacterSheet.module.css";
 import CharacterAtLevel from "../../../../data/v8/CharacterAtLevel.ts";
 import Database from "../../../../data/v8/Database.ts";
 import ACItemsSection from "@/view/components/character/sheet/sections/ACItemsSection.tsx";
+import FeatsSection from "@/view/components/character/sheet/sections/FeatsSection.tsx";
+import SpecialAbilitiesSection from "@/view/components/character/sheet/sections/SpecialAbilitiesSection.tsx";
 
 type CharacterSheetContextValues = {
   characterAtLevel: CharacterAtLevel;
@@ -79,6 +81,8 @@ export default function CharacterSheet(values: CharacterSheetContextValues) {
       </PrintablePage>
       <PrintablePage className={styles.sheet}>
         <ACItemsSection />
+        <FeatsSection />
+        <SpecialAbilitiesSection />
       </PrintablePage>
       <PrintablePage style={{ display: "flex" }}>
         <CharacterAtLevelDebugView />

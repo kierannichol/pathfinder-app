@@ -192,7 +192,7 @@ export function EntitySelectDialog({ title, show, value, onSelect, onCancel, opt
 
             <Dropdown.Menu className={styles.categoryDropdownMenu}>
               {categories?.map(category =>
-                  <Dropdown.Item onClick={() => setCategory(category)}>{category.label}</Dropdown.Item>)}
+                  <Dropdown.Item key={category.key} onClick={() => setCategory(category)}>{category.label}</Dropdown.Item>)}
             </Dropdown.Menu>
           </Dropdown>
       }

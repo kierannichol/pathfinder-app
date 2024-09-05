@@ -8,7 +8,7 @@ export class ItemSummary {
   }
 
   get itemId(): number {
-    return this.dbo.id;
+    return (this.sourceId * 10^20) + this.dbo.id;
   }
 
   get name(): string {

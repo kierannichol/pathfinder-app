@@ -78,6 +78,16 @@ public class ItemMapper {
             }
         }
 
+        if ("Shield".equals(item.item_type())) {
+            if (item.armor_enhancement_bonus() == null) {
+                builder.addOptionSet(OptionSets.ARMOR_ENHANCEMENT_BONUS);
+            }
+
+            if (item.armor_special_material() == null) {
+                builder.addOptionSet(OptionSets.SHIELD_ARMOR_MATERIAL);
+            }
+        }
+
         return Stream.of(builder.build());
     }
 

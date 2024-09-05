@@ -78,6 +78,8 @@ public class PrerequisiteParser {
             .addImmediateReplacement("proficient with {NAME} or {NAME}", "(@proficiency:{0} OR @proficiency:{1})")
             .addImmediateReplacement("the ability to cast animate dead or command undead", "(@spell:animate_dead OR @spell:command_undead)")
             .addImmediateReplacement("ability to acquire an animal companion, eidolon, familiar, or special mount", "(@trait:animal_companion OR @feature:eidolon OR @feature:familiar OR @feature:special_mount)")
+            .addImmediateReplacement("Channel energy class feature", "@ability:channel_energy[Channel Energy]")
+
             .addReplacement("base attack bonus +{NUMBER} or {CLASS} level {LEVEL}", "any(@bab>={0},{1}>={2})")
 
             .addReplacement("no levels in a class that has the {NAME}", "!{0}")
@@ -121,7 +123,7 @@ public class PrerequisiteParser {
 
             .addReplacement("Spell-like ability at CL 10th or higher", "\"Spell-like ability at CL 10th or higher\"")
 
-            .addReplacement("Channel energy {NUMBER}d{NUMBER} (positive energy)", "@ability:channel_positive_energy >= {0}")
+            .addReplacement("Channel energy {NUMBER}d{NUMBER} (positive energy)", "sum(@ability:channel_positive_energy#*) >= {0}")
 
             .addReplacement("Strength {NUMBER}", "@str_score >= {0}")
             .addReplacement("Dexterity {NUMBER}", "@dex_score >= {0}")
@@ -283,14 +285,14 @@ public class PrerequisiteParser {
             .addReplacement("{NAME} racial trait or {NAME} racial trait", "{0} OR {1}")
 
             // Not supported automatically yet
-            .addReplacement("Ability to channel energy", "@ability:channel_energy[Channel Energy]")
-            .addReplacement("channel energy {NUMBER}d{NUMBER}", "(@ability:channel_positive_energy >= {0} OR @ability:channel_negative_energy >= {0})")
+            .addReplacement("Ability to channel energy", "(@ability:channel_energy)[Channel Energy]")
+            .addReplacement("channel energy {NUMBER}d{NUMBER}", "(@ability:channel_energy)[Channel Energy] >= {0}")
             .addReplacement("Good alignment", "(@alignment:lg OR @alignment:ng OR @alignment:cg)[Good alignment]")
             .addReplacement("must be lawful good", "@alignment:lg")
             .addReplacement("alignment must be within one step of your deity's", "\"alignment must be within one step of your deity's\"")
             .addReplacement("nonlawful", "(@alignment:ng OR @alignment:cg OR @alignment:n OR @alignment:cn OR @alignment:ne OR @alignment:ce)[Non-lawful alignment]")
-            .addReplacement("Channel negative energy", "@ability:channel_negative_energy")
-            .addReplacement("Channel energy {NUMBER}d{NUMBER}#positive energy", "@ability:channel_positive_energy >= {0}")
+            .addReplacement("Channel negative energy", "sum(@ability:channel_negative_energy#*)")
+            .addReplacement("Channel energy {NUMBER}d{NUMBER}#positive energy", "sum(@ability:channel_positive_energy#*) >= {0}")
             .addReplacement("Cold resistance racial trait", "@trait:cold_resistance")
             .addReplacement("{NAME} archetype", "true")
             .addReplacement("darkvision {NUMBER} ft", "@trait:darkvision >= {0}")

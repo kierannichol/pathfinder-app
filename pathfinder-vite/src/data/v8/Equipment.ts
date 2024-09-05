@@ -8,6 +8,7 @@ export default interface PackedEquipmentSet {
   id: string;
   name: string;
   budget: number|null;
+  priceLimit: number|null;
   equipment: PackedEquipment[];
 }
 
@@ -19,15 +20,18 @@ export class EquipmentSet {
         packed.id,
         packed.name,
         packed.budget ?? undefined,
+        packed.priceLimit ?? undefined,
         packed.equipment?.map(data => Equipment.unpack(itemDb, data)) ?? [],
         itemDb);
   }
 
   pack(): PackedEquipmentSet {
+    console.log(this)
     return {
       id: this.id,
       name: this.name,
       budget: this.budget ?? null,
+      priceLimit: this.priceLimit ?? null,
       equipment: this.equipment.map(e => e.pack())
     }
   }
@@ -35,20 +39,25 @@ export class EquipmentSet {
   constructor(public readonly id: string,
               public name: string,
               public budget: number|undefined,
+              public priceLimit: number|undefined,
               public equipment: Equipment[],
               private readonly itemDatabase: ItemDatabase) {
   }
 
   static create(name: string, itemDatabase: ItemDatabase) {
-    return new EquipmentSet(uuidv4(), name, undefined, [], itemDatabase);
+    return new EquipmentSet(uuidv4(), name, undefined, undefined, [], itemDatabase);
   }
 
   setBudget(value: number | undefined) {
-    return new EquipmentSet(this.id, this.name, value, this.equipment, this.itemDatabase);
+    return new EquipmentSet(this.id, this.name, value, this.priceLimit, this.equipment, this.itemDatabase);
+  }
+
+  setPriceLimit(value: number | undefined) {
+    return new EquipmentSet(this.id, this.name, this.budget, value, this.equipment, this.itemDatabase);
   }
 
   setEquipment(equipment: Equipment[]) {
-    return new EquipmentSet(this.id, this.name, this.budget, equipment, this.itemDatabase);
+    return new EquipmentSet(this.id, this.name, this.budget, this.priceLimit, equipment, this.itemDatabase);
   }
 
   add(itemId: number, optionIds: number[]) {

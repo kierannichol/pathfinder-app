@@ -1354,7 +1354,7 @@
     "id": "class:magus#hexcrafter",
     "name": "Hexcrafter",
     "tags": ["archetype", "magus"],
-    "enabledFormula": "!@modifies:ability:magus_arcana#magus AND !@modifies:ability:spell_recall#magus AND !@modifies:ability:improved_spell_recall#magus",
+    "enabledFormula": "!@modifies:ability:spell_recall#magus AND !@modifies:ability:magus_arcana#magus AND !@modifies:ability:improved_spell_recall#magus",
     "maxStacks": 1
   }, {
     "id": "class:magus#spellblade",
@@ -1543,7 +1543,7 @@
     "id": "feat:channeled_shield_wall",
     "name": "Channeled Shield Wall",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(any(@ability:channel_positive_energy\u003e\u003d3,@ability:channel_negative_energy\u003e\u003d3),any(@proficiency:other,@proficiency:light_armor,@proficiency:medium_armor,@proficiency:heavy_armor,@proficiency:buckler,@proficiency:light_shield,@proficiency:heavy_shield,@proficiency:tower_shield))",
+    "enabledFormula": "all(@ability:channel_energy[Channel Energy]\u003e\u003d3,any(@proficiency:other,@proficiency:light_armor,@proficiency:medium_armor,@proficiency:heavy_armor,@proficiency:buckler,@proficiency:light_shield,@proficiency:heavy_shield,@proficiency:tower_shield))",
     "maxStacks": 1
   }, {
     "id": "feat:concussive_spell",
@@ -1631,7 +1631,7 @@
     "id": "feat:extended_bane",
     "name": "Extended Bane",
     "tags": ["feat", "general"],
-    "enabledFormula": "sum(@ability:bane#*)[Bane]",
+    "enabledFormula": "@spell:bane",
     "maxStacks": 1
   }, {
     "id": "feat:extra_arcana",
@@ -1649,7 +1649,7 @@
     "id": "feat:extra_cantrips_or_orisons",
     "name": "Extra Cantrips or Orisons",
     "tags": ["feat", "general"],
-    "enabledFormula": "any(@ability:cantrips#magus,@ability:orisons#oracle)",
+    "enabledFormula": "any(@ability:cantrips#magus,@ability:orisons#druid)",
     "maxStacks": 1
   }, {
     "id": "feat:extra_evolution",
@@ -1667,7 +1667,7 @@
     "id": "feat:extra_summons",
     "name": "Extra Summons",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@ability:summon_monster_v#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer[Summon monster],@class:summoner\u003e\u003d1)",
+    "enabledFormula": "all(@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer,@ability:summon_monster_iii#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_v#summoner[Summon monster],@class:summoner\u003e\u003d1)",
     "maxStacks": 1
   }, {
     "id": "feat:eyes_of_judgment",
@@ -1798,7 +1798,7 @@
     "id": "feat:moonlight_summons",
     "name": "Moonlight Summons",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@any,@ability:summon_natures_ally#summoner_leshy_caller,@ability:summon_natures_ally#bard_animal_speaker,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9[Summon nature\u0027s ally])",
+    "enabledFormula": "all(@any,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9,@ability:summon_natures_ally#summoner_leshy_caller,@ability:summon_natures_ally#bard_animal_speaker[Summon nature\u0027s ally])",
     "maxStacks": 1
   }, {
     "id": "feat:mystic_stride",
@@ -1862,7 +1862,7 @@
     "id": "feat:quick_channel",
     "name": "Quick Channel",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@skill:knowledge_religion\u003e\u003d5,sum(@ability:channel_energy#*)[Channel Energy])",
+    "enabledFormula": "@ability:channel_energy[Channel Energy]",
     "maxStacks": 1
   }, {
     "id": "feat:quick_wild_shape",
@@ -1915,7 +1915,7 @@
     "id": "feat:sacred_summons",
     "name": "Sacred Summons",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@any,@ability:summon_monster_v#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer[Summon monster])",
+    "enabledFormula": "all(@any,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer,@ability:summon_monster_iii#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_v#summoner[Summon monster])",
     "maxStacks": 1
   }, {
     "id": "feat:sense_link",
@@ -1939,7 +1939,7 @@
     "id": "feat:skeleton_summoner",
     "name": "Skeleton Summoner",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@any,@ability:summon_monster_v#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer[Summon monster])",
+    "enabledFormula": "all(@any,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer,@ability:summon_monster_iii#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_v#summoner[Summon monster])",
     "maxStacks": 1
   }, {
     "id": "feat:sorcerous_bloodstrike",
@@ -1993,13 +1993,13 @@
     "id": "feat:starlight_summons",
     "name": "Starlight Summons",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@any,@ability:summon_natures_ally#summoner_leshy_caller,@ability:summon_natures_ally#bard_animal_speaker,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9[Summon nature\u0027s ally])",
+    "enabledFormula": "all(@any,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9,@ability:summon_natures_ally#summoner_leshy_caller,@ability:summon_natures_ally#bard_animal_speaker[Summon nature\u0027s ally])",
     "maxStacks": 1
   }, {
     "id": "feat:sunlight_summons",
     "name": "Sunlight Summons",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@any,@ability:summon_natures_ally#summoner_leshy_caller,@ability:summon_natures_ally#bard_animal_speaker,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9[Summon nature\u0027s ally])",
+    "enabledFormula": "all(@any,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9,@ability:summon_natures_ally#summoner_leshy_caller,@ability:summon_natures_ally#bard_animal_speaker[Summon nature\u0027s ally])",
     "maxStacks": 1
   }, {
     "id": "feat:superior_summoning",
@@ -2023,7 +2023,7 @@
     "id": "feat:thoughtful_discernment",
     "name": "Thoughtful Discernment",
     "tags": ["feat", "general"],
-    "enabledFormula": "sum(@ability:discern_lies#*)[Discern Lies]",
+    "enabledFormula": "@spell:discern_lies",
     "maxStacks": 1
   }, {
     "id": "feat:threnodic_spell",
@@ -2094,7 +2094,7 @@
     "id": "feat:versatile_channeler",
     "name": "Versatile Channeler",
     "tags": ["feat", "general"],
-    "enabledFormula": "any(sum(@ability:channel_energy#*)[Channel Energy],@class:necromancer,all(@class:cleric,any(@alignment:ng,@alignment:n,@alignment:ne)[Neutral alignment]))",
+    "enabledFormula": "@ability:channel_energy[Channel Energy]",
     "maxStacks": 1
   }, {
     "id": "feat:vigilant_eidolon",

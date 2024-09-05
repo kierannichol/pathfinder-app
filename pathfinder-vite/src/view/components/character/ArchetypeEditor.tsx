@@ -19,11 +19,10 @@ export default function ArchetypeEditor({ characterAtLevel, onChange }: Archetyp
 
   const selections = useMemo(() => (array(characterAtLevel.selected(archetypeChoiceRef))) ?? [], [characterAtLevel, archetypeChoiceRef]);
 
-  console.log(selections)
   return <div>
     <ButtonBlockGroup>
       {selections
-          .filter(value => (value?.length ?? '') > 0)
+          .filter(value => (value ?? '').length > 0)
           .map((_, index) => <EditArchetypeButton key={archetypeChoiceRef.path + "/" + index}
                                                        choiceRef={archetypeChoiceRef}
                                                        selectedIndex={index}

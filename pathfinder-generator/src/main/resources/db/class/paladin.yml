@@ -181,7 +181,9 @@ class_features:
     \ to channel positive energy like a cleric. Using this ability consumes two uses\
     \ of her lay on hands ability. A paladin uses her level as her effective cleric\
     \ level when channeling positive energy. This is a Charisma-based ability."
-  effects: []
+  effects:
+    - "INCR ability:channel_energy 1"
+    - "INCR ability:channel_positive_energy 1"
   prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
 - id: "ability:detect_evil#paladin"

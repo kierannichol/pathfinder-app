@@ -9,6 +9,7 @@ import EquipmentEditorButton from "../equipment/EquipmentEditorButton.tsx";
 import CharacterAtLevel from "../../../../data/v8/CharacterAtLevel.ts";
 import {ChoiceInputType, ChoiceRef, SelectChoiceRef} from "@/data/v8/Choice.ts";
 import {Feature} from "@/data/v8/Feature.ts";
+import EditSkillsButton from "@/view/components/character/plan/EditSkillsButton.tsx";
 
 interface CharacterLevelEditorProps {
   characterAtLevel: CharacterAtLevel;
@@ -45,6 +46,8 @@ export default function CharacterLevelEditor({ characterAtLevel, characterAtPrev
       <EquipmentEditorButton
           characterAtLevel={characterAtLevel}
           onChange={onChange} />
+
+      <EditSkillsButton characterAtLevel={characterAtLevel} onChange={onChange} />
     </div>
 
     {characterChanges.choices.filter(choice => showChoice(choice)).filter(choice => choice.inputType === ChoiceInputType.Select).map(choice =>
@@ -71,14 +74,16 @@ function notFromChoice(feature: Feature, characterAtLevel: CharacterAtLevel) {
 
 function showChoice(choice: ChoiceRef): boolean {
   return !(choice.type === 'class'
-    || choice.type === 'spell'
-    || choice.type === 'archetype'
-    || choice.type === 'equipment');
+      || choice.type === 'spell'
+      || choice.type === 'archetype'
+      || choice.type === 'equipment'
+      || choice.type === 'skill');
 }
 
 function showFeature(feature: Feature): boolean {
   return !(feature.tags.includes('archetype')
     || feature.tags.includes('class')
     || feature.key.startsWith('proficiency:')
-    || feature.tags.includes('spell'));
+    || feature.tags.includes('spell')
+    || feature.key.startsWith('skill:'));
 }

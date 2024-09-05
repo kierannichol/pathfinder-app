@@ -157,6 +157,8 @@ public class CharacterTemplateGenerator {
                 if (level.levelNumber() % 4 == 0) {
                     level.addChoice(ASI_CHOICE_1);
                 }
+
+                level.addChoice(new FeatureSelectByTagChoice("skills", "Skills", "skill", List.of("skill"), List.of(), List.of(), FeatureSelectSortBy.NONE, true));
             });
         }
 

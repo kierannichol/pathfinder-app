@@ -26,6 +26,7 @@ export function EquipmentSetEditor({ equipmentSet }: EquipmentSetEditorProps) {
   const [ name, setName ] = useState(equipmentSet.name);
   const [ equipment, setEquipment ] = useState(equipmentSet.equipment);
   const [ budget, setBudget ] = useState(equipmentSet.budget);
+  const [ priceLimit, setPriceLimit ] = useState(equipmentSet.priceLimit);
 
   const equipmentSetStore = useEquipmentSetStore();
 
@@ -66,6 +67,16 @@ export function EquipmentSetEditor({ equipmentSet }: EquipmentSetEditorProps) {
     updateEquipmentSet(async updating => updating.setBudget(value))
   }
 
+  function handleChangePriceLimit(value: string) {
+    if (value.trim() === '') {
+      setPriceLimit(undefined);
+      return;
+    }
+    const asNumber = parseFloat(value);
+    setPriceLimit(asNumber);
+    updateEquipmentSet(async updating => updating.setPriceLimit(asNumber))
+  }
+
   function handleChangeEquipment(updated: Equipment[]) {
     setEquipment(updated);
     updateEquipmentSet(async equipmentSet =>
@@ -94,6 +105,9 @@ export function EquipmentSetEditor({ equipmentSet }: EquipmentSetEditorProps) {
                           value={budget}
                           onCancel={() => setShowSelectBudgetDialog(false)}
                           onConfirm={handleChangeBudget} />
+      <label>Price Limit</label>
+      <TextInput value={priceLimit?.toString() ?? ''}
+                 onChange={handleChangePriceLimit} />
     </section>
     <header>Equipment List</header>
     <section className={styles.section}>
@@ -113,8 +127,9 @@ export function EquipmentSetEditor({ equipmentSet }: EquipmentSetEditorProps) {
       />
       <ButtonBlock variant="link" onClick={() => setShowAddItemDialog(true)}>+ Add Item</ButtonBlock>
       {showAddItemDialog && <EquipmentSearchDialog show={showAddItemDialog}
-                             onSelect={handleSubmitAdd}
-                             onCancel={handleCancelAdd}/>}
+                                                   priceLimit={priceLimit}
+                                                   onSelect={handleSubmitAdd}
+                                                   onCancel={handleCancelAdd}/>}
     </section>
   </div>
 }

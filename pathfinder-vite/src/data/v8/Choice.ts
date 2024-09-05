@@ -1,8 +1,8 @@
 import {ResolvedTrait, Trait} from "./Trait.ts";
 import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
-import {Path} from "../../utils/Path.ts";
+import {Path} from "@/utils/Path.ts";
 import AppliedState from "./AppliedState.ts";
-import {array} from "../../app/pfutils.ts";
+import {array} from "@/app/pfutils.ts";
 import Database from "./Database.ts";
 import {FeatureSummary} from "./FeatureSummary.ts";
 import React from "react";
@@ -77,7 +77,7 @@ abstract class BaseResolvedSelectChoice extends ResolvedChoice {
   abstract readonly featureIds: string[];
   abstract readonly sortBy: "name" | "none";
 
-  options(database: Database, query: string | undefined, filterTag: string | undefined): FeatureSummary[] {
+  options(database: Database, query: string | undefined = undefined, filterTag: string | undefined = undefined): FeatureSummary[] {
     let tags = [...this.optionTags];
     if (filterTag && filterTag !== '') {
       tags = tags.map(tag => tag + '+' + filterTag);

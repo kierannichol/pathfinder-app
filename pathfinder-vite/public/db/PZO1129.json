@@ -685,8 +685,7 @@
   }, {
     "id": "ability:channel_energy#warpriest",
     "name": "Channel Energy",
-    "tags": ["ability", "class_feature", "warpriest"],
-    "maxStacks": 1
+    "tags": ["ability", "class_feature", "warpriest"]
   }, {
     "id": "ability:channel_energy#witch_hex_channeler",
     "name": "Channel Energy",
@@ -4767,13 +4766,13 @@
     "id": "feat:channeled_blessing",
     "name": "Channeled Blessing",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(sum(@ability:blessings#*)[Blessings],sum(@ability:channel_energy#*)[Channel Energy])",
+    "enabledFormula": "@ability:channel_energy[Channel Energy]",
     "maxStacks": 1
   }, {
     "id": "feat:channeling_force",
     "name": "Channeling Force",
     "tags": ["combat", "feat"],
-    "enabledFormula": "all(1[force spell]\u003e\u003d1,sum(@ability:channel_energy#*)[Channel Energy])",
+    "enabledFormula": "@ability:channel_energy[Channel Energy]",
     "maxStacks": 1
   }, {
     "id": "feat:confounding_tumble_deed",
@@ -4856,7 +4855,7 @@
     "id": "feat:energy_channel",
     "name": "Energy Channel",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(sum(@ability:channel_energy#*)[Channel Energy],\"Air, Earth, Fire, or Water domain or blessing\")",
+    "enabledFormula": "@ability:channel_energy[Channel Energy]",
     "maxStacks": 1
   }, {
     "id": "feat:esoteric_linguistics",
@@ -5406,7 +5405,7 @@
     "id": "feat:twist_away",
     "name": "Twist Away",
     "tags": ["feat", "general"],
-    "enabledFormula": "@ability:evasion#monk_weapon_adept",
+    "enabledFormula": "@ability:evasion#monk",
     "maxStacks": 1
   }, {
     "id": "feat:undersized_mount",

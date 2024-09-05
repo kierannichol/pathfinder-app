@@ -2,7 +2,7 @@
   "id": "feat:channeled_shield_wall",
   "name": "Channeled Shield Wall",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(any(@ability:channel_positive_energy\u003e\u003d3,@ability:channel_negative_energy\u003e\u003d3),any(@proficiency:other,@proficiency:light_armor,@proficiency:medium_armor,@proficiency:heavy_armor,@proficiency:buckler,@proficiency:light_shield,@proficiency:heavy_shield,@proficiency:tower_shield))",
+  "enabledFormula": "all(@ability:channel_energy[Channel Energy]\u003e\u003d3,any(@proficiency:other,@proficiency:light_armor,@proficiency:medium_armor,@proficiency:heavy_armor,@proficiency:buckler,@proficiency:light_shield,@proficiency:heavy_shield,@proficiency:tower_shield))",
   "maxStacks": 1,
   "description": {
     "sections": {
