@@ -1,4 +1,4 @@
-import BoxedValue from "@/view/components/character/edit/common/BoxedValue.tsx";
+import BoxedValue from "@/view/components/character/sheet/common/BoxedValue.tsx";
 
 export default function TestView() {
   return <main>

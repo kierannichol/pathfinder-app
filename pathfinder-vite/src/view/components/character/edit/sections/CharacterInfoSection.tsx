@@ -1,59 +1,34 @@
-import {HTMLAttributes} from "react";
-import * as CharacterData from "../data/CharacterData.tsx";
-import Section from "../common/Section.tsx";
-import UnderlinedValue from "../common/UnderlinedValue.tsx";
-import styles from "./CharacterInfoSection.module.scss";
-import {classNames} from "@/utils/classNames.ts";
+import Section from "@/view/components/character/edit/common/Section.tsx";
+import FlowLayout from "@/view/components/character/edit/common/FlowLayout.tsx";
+import UnderlinedTextInput from "@/view/components/character/edit/fields/UnderlinedTextInput.tsx";
+import AlignmentSelect from "@/view/components/character/edit/fields/AlignmentSelect.tsx";
+import VerticalLayout from "@/view/components/character/edit/common/VerticalLayout.tsx";
+import {UnderlinedSelectChoiceInput} from "@/view/components/character/edit/fields/UnderlinedSelectChoiceInput.tsx";
+import styles from "./CharacterInfoSection.module.css";
+import ClassSelect from "@/view/components/character/edit/fields/ClassSelect.tsx";
 
-export default function CharacterInfoSection({ className, ...divProps }: HTMLAttributes<HTMLDivElement>) {
-  return <Section className={classNames([styles.section, className])} {...divProps}>
-    <Section.Column className="header-gap">
-      <Section.Row className={styles.row}>
-        <UnderlinedValue label="Character Name" className={styles.characterName}>
-          <CharacterData.CharacterName />
-        </UnderlinedValue>
-        <UnderlinedValue label="Alignment" className={styles.alignment}>
-          <CharacterData.Alignment />
-        </UnderlinedValue>
-        <UnderlinedValue label="Player" className={styles.playerName}/>
-      </Section.Row>
-      <Section.Row className={styles.row}>
-        <UnderlinedValue label="Character Level" className={styles.characterLevel}>
-          <CharacterData.CharacterLevel />
-        </UnderlinedValue>
-        <UnderlinedValue label="Deity" className={styles.deity}>
-          <CharacterData.Deity />
-        </UnderlinedValue>
-        <UnderlinedValue label="Homeland" className={styles.homeland}>
-          <CharacterData.Homeland />
-        </UnderlinedValue>
-      </Section.Row>
-      <Section.Row className={styles.row}>
-        <UnderlinedValue label="Race" className={styles.race}>
-          <CharacterData.Race />
-        </UnderlinedValue>
-        <UnderlinedValue label="Size" className={styles.size}>
-          <CharacterData.Size />
-        </UnderlinedValue>
-        <UnderlinedValue label="Gender" className={styles.gender}>
-          <CharacterData.Gender />
-        </UnderlinedValue>
-        <UnderlinedValue label="Age" className={styles.age}>
-          <CharacterData.Age />
-        </UnderlinedValue>
-        <UnderlinedValue label="Height" className={styles.height}>
-          <CharacterData.Height />
-        </UnderlinedValue>
-        <UnderlinedValue label="Weight" className={styles.weight}>
-          <CharacterData.Weight />
-        </UnderlinedValue>
-        <UnderlinedValue label="Hair" className={styles.hair}>
-          <CharacterData.Hair />
-        </UnderlinedValue>
-        <UnderlinedValue label="Eyes" className={styles.eyes}>
-          <CharacterData.Eyes />
-        </UnderlinedValue>
-      </Section.Row>
-    </Section.Column>
+interface CharacterInformationSectionProps {
+
+}
+
+export default function CharacterInfoSection({}: CharacterInformationSectionProps) {
+  return <Section header='Character Information'>
+    <VerticalLayout>
+      <FlowLayout>
+        <UnderlinedTextInput className={styles['choice-character_name']} choice='character_name' />
+        <UnderlinedTextInput className={styles['choice-current_level']} choice='current_level' />
+        <AlignmentSelect className={styles['choice-alignment']} />
+        <UnderlinedSelectChoiceInput className={styles['choice-race']} choice='race' />
+        <ClassSelect className={styles['choice-class']} />
+        <UnderlinedTextInput className={styles['choice-deity']} choice='deity' />
+        <UnderlinedTextInput className={styles['choice-homeland']} choice='homeland' />
+        <UnderlinedTextInput className={styles['choice-gender']} choice='gender' />
+        <UnderlinedTextInput className={styles['choice-age']} choice='age' />
+        <UnderlinedTextInput className={styles['choice-height']} choice='height' />
+        <UnderlinedTextInput className={styles['choice-weight']} choice='weight' />
+        <UnderlinedTextInput className={styles['choice-hair']} choice='hair' />
+        <UnderlinedTextInput className={styles['choice-eyes']} choice='eyes' />
+      </FlowLayout>
+    </VerticalLayout>
   </Section>
 }

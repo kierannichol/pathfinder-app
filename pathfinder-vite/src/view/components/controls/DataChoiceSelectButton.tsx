@@ -23,10 +23,11 @@ interface DataChoiceSelectButtonProps {
   descriptionFn?: (description: Description) => ReactNode;
   search?: boolean|"auto";
   labelPrefix?: ReactNode;
+  className?: string;
   children?: ReactNode;
 }
 
-export default function DataChoiceSelectButton({ choiceRef, choiceIndex, characterAtLevel, characterAtPreviousLevel, id, onSelect, label, buttonLabel, variant, dialogVariant, descriptionFn, search, labelPrefix, children }: DataChoiceSelectButtonProps) {
+export default function DataChoiceSelectButton({ choiceRef, choiceIndex, characterAtLevel, characterAtPreviousLevel, id, onSelect, label, buttonLabel, variant, dialogVariant, descriptionFn, search, labelPrefix, className, children }: DataChoiceSelectButtonProps) {
   const database = useDatabase();
   const characterWithoutCurrent = useMemo(() => {
     const selected = characterAtLevel.selected(choiceRef);
@@ -50,6 +51,7 @@ export default function DataChoiceSelectButton({ choiceRef, choiceIndex, charact
       onSelect={handleSelect}
       search={search}
       labelPrefix={labelPrefix}
+      className={className}
       optionsFn={(query: string|undefined, category: ChoiceSelectorCategory|undefined) => {
           let options = queryOptions(database, choiceRef, query, category);
 

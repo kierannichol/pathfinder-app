@@ -9,3 +9,41 @@
 .disabled {
   color: grey;
 }
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  border-bottom: var(--pf-border);
+  padding-bottom: 0.5rem;
+}
+
+.skill-control {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.skill-button {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.skill-value {
+  display: flex;
+  border: var(--pf-border);
+  width: 3em;
+  height: 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-name {
+  flex-grow: 1;
+}

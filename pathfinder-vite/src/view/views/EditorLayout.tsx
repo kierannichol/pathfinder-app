@@ -1,5 +1,5 @@
 import {Outlet} from "react-router-dom";
-import "./EditorLayout.scss";
+import "./EditorLayout.css";
 import "./EditorControls.scss";
 import Navigation from "../components/layout/Navigation.tsx";
 

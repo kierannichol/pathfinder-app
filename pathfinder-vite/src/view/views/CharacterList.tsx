@@ -13,6 +13,8 @@ import CharacterSummary from "../../data/v8/CharacterSummary.ts";
 import DuplicateIcon from "@/view/components/icons/DuplicateIcon.tsx";
 import CopyCharacterDialog from "@/view/components/character/CopyCharacterDialog.tsx";
 
+const EDIT_ACTION: 'plan' | 'edit' = 'edit';
+
 export default function CharacterList() {
   const characterStore = useCharacterStore();
   const navigate = useNavigate();
@@ -36,7 +38,7 @@ export default function CharacterList() {
       data[`${level}:class`] = characterClassId;
     }
     const created = await characterStore.create(data);
-    navigate(`/character/plan/${created.id}`)
+    navigate(`/character/${EDIT_ACTION}/${created.id}`)
   };
 
   const handleDuplicate = async (characterToCopy: CharacterSummary, newName: string) => {
@@ -55,7 +57,7 @@ export default function CharacterList() {
     console.log(selections);
 
     const created = await characterStore.create(selections);
-    navigate(`/character/plan/${created.id}`)
+    navigate(`/character/${EDIT_ACTION}/${created.id}`)
   };
 
   const handleDelete = async (characterId: string) => {
@@ -98,7 +100,7 @@ function CharacterListEntry({ character, onDelete, onDuplicate }: CharacterListE
       className={styles.character}>
 
     <div className={classNames([styles.nameContainer, 'clickable'])} onClick={() => {
-      navigate(`/character/plan/${character.id}`)
+      navigate(`/character/${EDIT_ACTION}/${character.id}`)
     }}>
       <div className={styles.nameLabel}>
         {character.name}

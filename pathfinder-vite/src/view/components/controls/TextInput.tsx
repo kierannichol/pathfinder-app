@@ -10,9 +10,10 @@ export type Props = {
   readonly?: boolean;
   placeholder?: string;
   autoFocus?: boolean;
+  className?: string;
 };
 
-export default function TextInput({ value, id, onChange, onEnter, onFocus, onBlur, readonly = false, placeholder, autoFocus = false }: Props) {
+export default function TextInput({ value, id, onChange, onEnter, onFocus, onBlur, className, readonly = false, placeholder, autoFocus = false }: Props) {
   const [current, setCurrent] = useState(value);
   useEffect(() => setCurrent(value), [value]);
 
@@ -35,6 +36,7 @@ export default function TextInput({ value, id, onChange, onEnter, onFocus, onBlu
   return (
       <input
           id={id}
+          className={className}
           type={"text"}
           value={current}
           readOnly={readonly}

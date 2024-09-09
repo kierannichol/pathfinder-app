@@ -11,6 +11,8 @@ import CharacterSheetRoute, {characterSheetLoader} from "./view/routes/Character
 import EquipmentSetListRoute, {equipmentSetListLoader} from "./view/routes/EquipmentSetListRoute.tsx";
 import EquipmentSetEditRoute, {equipmentSetEditLoader} from "./view/routes/EquipmentSetEditRoute.tsx";
 import {TestRoute} from "@/view/routes/TestRoute.tsx";
+import CharacterEditRoute from './view/routes/CharacterEditRoute.tsx';
+import {characterEditLoader} from "@/view/routes/CharacterEditRoute.tsx";
 
 const router = createHashRouter([
   {
@@ -27,11 +29,11 @@ const router = createHashRouter([
         element: <LoginRoute />,
         loader: loginLoader
       },
-      // {
-      //   path: "character/edit/:id",
-      //   element: <CharacterEditRoute />,
-      //   loader: characterEditLoader
-      // },
+      {
+        path: "character/edit/:id",
+        element: <CharacterEditRoute />,
+        loader: characterEditLoader
+      },
       {
         path: "character/plan/:id",
         element: <CharacterPlannerRoute />,

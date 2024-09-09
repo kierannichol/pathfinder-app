@@ -4,7 +4,7 @@ import styles from "./ChoiceSelectButton.module.scss";
 import ChoiceSelectorDialog from "./ChoiceSelectorDialog";
 import {ChoiceSelectorCategory, ChoiceSelectorOptions} from "./ChoiceSelectorList";
 import ButtonBlock from "./ButtonBlock.tsx";
-import {array} from "../../../app/pfutils.ts";
+import {array} from "@/app/pfutils.ts";
 import EditIcon from "../icons/EditIcon.tsx";
 
 interface ChoiceSelectButtonProps {
@@ -22,10 +22,11 @@ interface ChoiceSelectButtonProps {
   removable?: boolean;
   sortBy?: "none" | "name";
   labelPrefix?: ReactNode;
+  className?: string;
   children?: ReactNode;
 }
 
-export default function ChoiceSelectButton({ choiceName, value, id, onSelect, optionsFn, categoriesFn, buttonLabel, children, actionVerb = 'Select', removable = false, variant = 'white', dialogVariant = variant, search = false, sortBy = "none", labelPrefix = <EditIcon/> }: ChoiceSelectButtonProps) {
+export default function ChoiceSelectButton({ choiceName, value, id, onSelect, optionsFn, categoriesFn, buttonLabel, children, actionVerb = 'Select', removable = false, variant = 'white', dialogVariant = variant, search = false, sortBy = "none", className = undefined, labelPrefix = <EditIcon/> }: ChoiceSelectButtonProps) {
   const [removing, setRemoving] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [show, setShow] = useState(false);
@@ -82,7 +83,7 @@ export default function ChoiceSelectButton({ choiceName, value, id, onSelect, op
   }
 
   return <>
-    <Collapse in={!removing} onExited={finishRemove}>
+    <Collapse in={!removing} onExited={finishRemove} className={className}>
       <div>
         <ButtonBlock id={id} variant={variant} onClick={_ => handleShow()}>
             {actualButtonLabel} {removeButton}

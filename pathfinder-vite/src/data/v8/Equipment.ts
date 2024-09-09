@@ -21,7 +21,14 @@ export class EquipmentSet {
         packed.name,
         packed.budget ?? undefined,
         packed.priceLimit ?? undefined,
-        packed.equipment?.map(data => Equipment.unpack(itemDb, data)) ?? [],
+        packed.equipment?.map(data => {
+          try {
+            return Equipment.unpack(itemDb, data)
+          } catch (e) {
+            console.warn("Failed to load equipment; skipping", e);
+            return undefined;
+          }
+        }).filter(data => data !== undefined) ?? [],
         itemDb);
   }
 
@@ -81,13 +88,14 @@ export class Equipment {
       .map(oid => itemDb.option(oid))
       .filter(opt => opt !== undefined) as ItemOption[];
 
-    return Equipment.create(item, included === 1, options, itemDb);
+    return Equipment.create(item, included === 1, options, itemDb, quantity);
   }
 
   static create(item: ItemSummary,
                 included: boolean,
                 options: ItemOptionSummary[],
-                itemDb: ItemDatabase): Equipment {
+                itemDb: ItemDatabase,
+                quantity: number = 1): Equipment {
     let name = item.name;
     for (let option of options) {
       if (option.baseNamePrefix.length > 0)
@@ -124,7 +132,7 @@ export class Equipment {
       // const optionSet = itemDb.optionSet(item.optionSetId);
       // cost += optionSet?.pointCurrencyCosts[points] ?? 0;
 
-    return new Equipment(uuidv4(), name, cost, item.weight, item, options, included);
+    return new Equipment(uuidv4(), name, cost, item.weight, item, options, included, quantity);
   }
 
   pack(): PackedEquipment {
@@ -144,11 +152,19 @@ export class Equipment {
               public readonly quantity: number = 1) {
   }
 
+  get totalCost(): number {
+    return this.cost * this.quantity;
+  }
+
   include(include: boolean): Equipment {
-    return new Equipment(this.uid, this.name, this.cost, this.weight, this.item, this.options, include);
+    return new Equipment(this.uid, this.name, this.cost, this.weight, this.item, this.options, include, this.quantity);
+  }
+
+  changeQuantity(quantity: number): Equipment {
+    return new Equipment(this.uid, this.name, this.cost, this.weight, this.item, this.options, this.included, quantity);
   }
 
   duplicate() {
-    return new Equipment(uuidv4(), this.name, this.cost, this.weight, this.item, this.options, this.included);
+    return new Equipment(uuidv4(), this.name, this.cost, this.weight, this.item, this.options, this.included, this.quantity);
   }
 }

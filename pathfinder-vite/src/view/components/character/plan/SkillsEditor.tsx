@@ -40,7 +40,7 @@ export default function SkillsEditor({ characterAtLevel, onChange }: SkillsEdito
     onChange?.(skillsChoice, selections);
   }
 
-  return <div>
+  return <div className={styles['skill-list']}>
     {options.map(skill => {
       return <SkillRow key={skill.key}
                        characterAtLevel={characterAtLevel}
@@ -85,8 +85,12 @@ function SkillRow({ characterAtLevel, choice, skill, selections, onAdd, onRemove
     if (canRemove) onRemove(skill.key);
   }
 
-  return <div>{skill.name}:
-    <FaMinusCircle onClick={handleRemove} className={classNames(canRemove ? ['clickable', styles.remove] : [styles.disabled])} />
-    {currentPoints}
-    <FaPlusCircle onClick={handleAdd} className={classNames(canAdd ? ['clickable', styles.add] : [styles.disabled])} /></div>
+  return <div className={styles['skill-row']}>
+    <div className={styles['skill-name']}>{skill.name}:</div>
+    <div className={styles['skill-control']}>
+      <FaMinusCircle onClick={handleRemove} className={classNames([styles['skill-button'], ...(canRemove ? ['clickable', styles.remove] : [styles.disabled])])} />
+      <div className={styles['skill-value']}>{currentPoints}</div>
+      <FaPlusCircle onClick={handleAdd} className={classNames([styles['skill-button'], ...(canAdd ? ['clickable', styles.add] : [styles.disabled])])} />
+    </div>
+  </div>
 }

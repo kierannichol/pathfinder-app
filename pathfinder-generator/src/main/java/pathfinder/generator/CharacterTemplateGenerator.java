@@ -31,6 +31,7 @@ public class CharacterTemplateGenerator {
             new FeatureSelectCategory("Metamagic", "metamagic")
     );
 
+    private static final Choice CURRENT_LEVEL_CHOICE = new TextChoice("current_level", "Current Level", "current_level");
     private static final Choice CLASS_CHOICE = new FeatureSelectByTagChoice("class", "Class", "class", List.of("class"), List.of(), CLASS_CATEGORIES, FeatureSelectSortBy.NAME);
     private static final Choice FEAT_CHOICE = new FeatureSelectByTagChoice("feat", "Feat", "feat", List.of("feat"), List.of(), FEAT_CATEGORIES, FeatureSelectSortBy.NAME);
     private static final Choice ASI_CHOICE_1 = new FeatureSelectByTagChoice("asi1", "Ability Score Increase", "asi", List.of("asi"), List.of(), List.of(), FeatureSelectSortBy.NAME);
@@ -47,6 +48,8 @@ public class CharacterTemplateGenerator {
         Builder builder = new Builder();
 
         builder.level(0, level -> {
+            level.addChoice(CURRENT_LEVEL_CHOICE);
+
             for (AbilityScore abilityScore : AbilityScore.values()) {
                 level.addEffect(Effect.setNumber(
                         "%s:base".formatted(abilityScore.shortName()),

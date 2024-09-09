@@ -11,6 +11,7 @@ import pathfinder.db.LocalPathfinderDatabaseLoader;
 import pathfinder.db.PathfinderDatabase;
 import pathfinder.generator.CharacterTemplateGenerator;
 import pathfinder.generator.DatabaseWriter;
+import pathfinder.generator.SourceBookIndexGenerator;
 import pathfinder.generator.SourceModuleDatabaseGenerator;
 import pathfinder.generator.SourceModuleItemDatabaseGenerator;
 import pathfinder.model.CharacterTemplate;
@@ -59,6 +60,8 @@ public class GeneratorApplication {
 //                    Sources.THE_INNER_SEA_WORLD_GUIDE
 //            );
             var sources = db.sources();
+
+            ctx.getBean(SourceBookIndexGenerator.class).generate();
 
             for (SourceId sourceId : sources) {
                 if (!sourceId.enabled()) {

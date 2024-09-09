@@ -81,10 +81,9 @@ export function EquipmentSearchDialog({ show, value, onSelect, onCancel, priceLi
                              categories={categories}
                              optionsFn={(query, category) => {
                                let options = database.summaries()
-                                 .filter(item => query !== '' || item.name.toLowerCase().includes(query.toLowerCase()))
+                                 .filter(item => !query || query === '' || item.name.toLowerCase().includes(query.toLowerCase()))
                                  .filter(item => !category?.tag || item.tags.includes(category.tag))
                                  .filter(item => {
-                                   console.log("item: " + item.itemId + ": " + item.name + " (" + item.sourceId + ")");
                                    if (priceLimit === undefined || query !== '') return true;
                                    return item.cost <= priceLimit;
                                  })

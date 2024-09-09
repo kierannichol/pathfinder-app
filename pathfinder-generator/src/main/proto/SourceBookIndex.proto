@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "Feature.proto";
+import "Item.proto";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data";
+
+package data;
+
+message SourceBookIndexDbo {
+    repeated string source_book_code = 1;
+}

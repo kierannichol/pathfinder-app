@@ -13,6 +13,6 @@ public record SourceJson(String name, String code, boolean enabled, List<String>
     }
 
     private static int generate(String sourceCode) {
-        return Integer.parseInt(sourceCode.substring(3));
+        return Integer.parseInt(1 + sourceCode.substring(3));
     }
 }

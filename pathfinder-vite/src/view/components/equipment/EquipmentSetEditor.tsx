@@ -33,7 +33,7 @@ export function EquipmentSetEditor({ equipmentSet }: EquipmentSetEditorProps) {
   const totalCost = useMemo(() => {
     return equipment
       .filter(e => e.included)
-      .map(e => e.cost)
+      .map(e => e.totalCost)
       .reduce((a, b) => a + b, 0);
   }, [equipment]);
 

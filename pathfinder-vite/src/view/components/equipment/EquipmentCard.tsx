@@ -8,6 +8,8 @@ import {CardBlock} from "../cards/CardBlock.tsx";
 import EditIcon from "../icons/EditIcon.tsx";
 import {Equipment} from "@/data/v8/Equipment.ts";
 import {CostedLabel} from "@/view/components/equipment/CostedLabel.tsx";
+import EquipmentQuantity from "@/view/components/equipment/EquipmentQuantity.tsx";
+import {FaTimes} from "react-icons/fa";
 
 interface EquipmentCardProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   equipment: Equipment;
@@ -15,9 +17,10 @@ interface EquipmentCardProps extends React.DetailedHTMLProps<React.HTMLAttribute
   onClick?: () => void;
   onEdit?: () => void;
   onDelete?: () => void;
+  onChangeQuantity?: (quantity: number) => void;
 }
 
-export function EquipmentCard({ equipment, disabled = false, onClick, onEdit, onDelete }: EquipmentCardProps) {
+export function EquipmentCard({ equipment, disabled = false, onClick, onEdit, onDelete, onChangeQuantity }: EquipmentCardProps) {
   const [removing, setRemoving] = useState(false);
 
   const hasOptions = useMemo(() => equipment.item.optionSetIds.length > 0,
@@ -32,6 +35,10 @@ export function EquipmentCard({ equipment, disabled = false, onClick, onEdit, on
     onDelete?.();
   };
 
+  function handleChangeQuantity(quantity: number) {
+    onChangeQuantity?.(quantity);
+  }
+
   return <Collapse in={!removing} onExited={finishDelete} unmountOnExit={true}>
     <div>
       <CardBlock
@@ -42,8 +49,9 @@ export function EquipmentCard({ equipment, disabled = false, onClick, onEdit, on
             <div className={classNames([styles.labelSegment, styles.control, styles.editButton])}
                  onClick={onEdit}><EditIcon /></div>}
           <div className={styles.labelSegment + " " + styles.equipmentName} onClick={onClick}>
-            <CostedLabel name={equipment.name} cost={<Currency gp={equipment.cost}/>} />
+            <CostedLabel name={equipment.name} cost={<Currency gp={equipment.totalCost}/>} />
           </div>
+          <FaTimes /><EquipmentQuantity quantity={equipment.quantity} onChange={handleChangeQuantity} className={styles.quantity} />
           <div className={classNames([styles.labelSegment, styles.control, styles.deleteButton])}
                onClick={startDelete}><DeleteIcon /></div>
         </div>

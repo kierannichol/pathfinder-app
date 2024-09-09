@@ -26,10 +26,12 @@ public class ItemMapper {
         name = StringUtils.capitalize(name);
         name = StringUtils.toSimpleName(name);
 
+        var description = Description.create(item.description())
+                .addSection("Destruction", item.destruction());
+
         ItemBuilder builder = Item.builder(sourceId, item.id().toString())
                 .setName(name)
-                .setDescription(Description.create(item.description())
-                        .addSection("Destruction", item.destruction()))
+                .setDescription(description)
                 .setCost(parsePrice(item.price()))
                 .setWeight(item.weight().equals("–") ? 0.0 : Weight.parseWeight(item.weight()).toLbs())
                 .addTag("item")
@@ -45,6 +47,12 @@ public class ItemMapper {
                 } else {
                     builder.addOptionSet(OptionSets.SINGLE_WEAPON_ENHANCEMENT_BONUS);
                 }
+
+                description.addSection("Damage", item.weapon_damage());
+                description.addSection("Damage Type", item.weapon_damage_type());
+                description.addSection("Critical", item.weapon_crit_range());
+                description.addSection("Proficiency", item.weapon_proficiency_group());
+                description.addSection("Weapon Group", item.weapon_proficiency_group());
             }
 
             if (item.weapon_special_material() == null) {
@@ -70,12 +78,19 @@ public class ItemMapper {
                     builder.addOptionSet(OptionSets.LIGHT_ARMOR_MATERIAL);
                 } else if ("Medium".equals(item.armor_type())) {
                     builder.addOptionSet(OptionSets.MEDIUM_ARMOR_MATERIAL);
+                    description.addSection("Speed", "20 ft./15 ft.");
                 } else if ("Heavy".equals(item.armor_type())) {
                     builder.addOptionSet(OptionSets.HEAVY_ARMOR_MATERIAL);
+                    description.addSection("Speed", "20 ft./15 ft.");
                 } else if ("Shield".equals(item.armor_type())) {
                     builder.addOptionSet(OptionSets.SHIELD_ARMOR_MATERIAL);
                 }
             }
+
+            description.addSection("Armor Bonus", signed(item.armor_bonus()));
+            description.addSection("Max Dex Bonus", signed(item.armor_max_dex()));
+            description.addSection("Armor Check Penalty", signed(item.armor_check_penalty()));
+            description.addSection("Arcane Spell Failure Chance", item.arcane_spell_failure_chance() + "%");
         }
 
         if ("Shield".equals(item.item_type())) {
@@ -89,6 +104,10 @@ public class ItemMapper {
         }
 
         return Stream.of(builder.build());
+    }
+
+    private String signed(int integer) {
+        return integer > 0 ? "+" + integer : Integer.toString(integer);
     }
 
     private Optional<WeaponType> tryFindWeaponType(String name) {

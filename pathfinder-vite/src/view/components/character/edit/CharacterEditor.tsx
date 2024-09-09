@@ -3,14 +3,13 @@ import {isString} from "@/app/pfutils.ts";
 import {useCharacterStore} from "@/data/context.tsx";
 import Character from "../../../../data/v8/Character.ts";
 import {ChoiceRef} from "@/data/v8/Choice.ts";
-import styles from "@/view/components/character/edit/CharacterEditor.module.css";
-import AbilityScoreSection from "@/view/components/character/edit/sections/AbilityScoreSection.tsx";
-import HealthSection from "@/view/components/character/edit/sections/HealthSection.tsx";
 import {CharacterAtLevelContext} from "@/view/components/character/edit/CharacterAtLevelContext.tsx";
-import "./edit.css";
 import {CharacterUpdateContext} from "@/view/components/character/edit/CharacterUpdateContext.tsx";
 import CharacterInfoSection from "@/view/components/character/edit/sections/CharacterInfoSection.tsx";
-import SpeedSection from "@/view/components/character/edit/sections/SpeedSection.tsx";
+import BaseAbilityScoreSection from "@/view/components/character/edit/sections/BaseAbilityScoreSection.tsx";
+import FeatsSection from "@/view/components/character/edit/sections/FeatsSection.tsx";
+import SkillsSection from "@/view/components/character/edit/sections/SkillsSection.tsx";
+import SpecialAbilitiesSection from "@/view/components/character/edit/sections/SpecialAbilitiesSection.tsx";
 
 interface CharacterEditorProps {
   loaded: Character;
@@ -52,32 +51,21 @@ export default function CharacterEditor({ loaded }: CharacterEditorProps) {
     updateCharacter(character => character.selectAll({ [choice.path]: value }));
   }
 
+  console.log(characterAtLevel);
+
   const updateObj = {
     select: handleChange
   }
 
-  return <main>
-    <section className={styles.layout}>
-        <CharacterAtLevelContext.Provider value={characterAtLevel}>
+  return <CharacterAtLevelContext.Provider value={characterAtLevel}>
           <CharacterUpdateContext.Provider value={{ select: handleChange}}>
-              <CharacterInfoSection className={styles.characterInfo} />
-              <AbilityScoreSection className={styles.abilityScores} />
-              <HealthSection className={styles.health} />
-              <SpeedSection className={styles.speed} />
-              {/*<InitiativeSection className={styles.initiative} />*/}
-              {/*<ArmorSection className={styles.armor} />*/}
-              {/*<SavingThrowsSection className={styles.savingThrows} />*/}
-              {/*<BabSection className={styles.bab} />*/}
-              {/*<SpellResistanceSection className={styles.spellResistance} />*/}
-              {/*<CombatManeuverSection className={styles.combatManeuver} />*/}
-              {/*<WeaponSection />*/}
-              {/*<WeaponSection />*/}
-              {/*<WeaponSection />*/}
-              {/*<WeaponSection />*/}
-              {/*<SkillsSection />*/}
-              {/*<LanguagesSection />*/}
+            <main>
+              <CharacterInfoSection />
+              <BaseAbilityScoreSection />
+              <SpecialAbilitiesSection />
+              <FeatsSection />
+              <SkillsSection />
+            </main>
           </CharacterUpdateContext.Provider>
         </CharacterAtLevelContext.Provider>
-    </section>
-  </main>
 }

@@ -17,6 +17,7 @@ export interface ChoiceRef {
 export interface SelectChoiceRef extends ChoiceRef {
   readonly categories: FeatureSelectCategory[];
   readonly repeatingIndex: number;
+  options(database: Database): FeatureSummary[];
   options(database: Database, query: string | undefined, filterTag: string | undefined): FeatureSummary[];
 }
 

@@ -1011,7 +1011,7 @@ Wild Child	archetypebrawler"‘!@modifies:ability:maneuver_training#brawler AN
 gunslinger"¯!@modifies:ability:gunsmith#gunslinger AND !@modifies:ability:gun_training#gunslinger AND !@modifies:trait:weapon_proficiency#gunslinger AND !@modifies:ability:grit#gunslinger('
 class:hunterHunterclasshybrid(–
 class:hunter#divine_hunterDivine Hunter	archetypehunter"T!@modifies:ability:hunter_tactics#hunter AND !@modifies:ability:teamwork_feat#hunter(è
-class:hunter#feral_hunterFeral Hunter	archetypehunter"§!@modifies:ability:bonus_trick#hunter AND !@modifies:ability:greater_empathic_link#hunter AND !@modifies:ability:improved_empathic_link#hunter AND !@modifies:ability:hunter_tactics#hunter AND !@modifies:ability:speak_with_master#hunter AND !@modifies:ability:teamwork_feat#hunter AND !@modifies:ability:animal_focus#hunter AND !@modifies:ability:precise_companion#hunter AND !@modifies:ability:raise_animal_companion#hunter(œ
+class:hunter#feral_hunterFeral Hunter	archetypehunter"§!@modifies:ability:greater_empathic_link#hunter AND !@modifies:ability:bonus_trick#hunter AND !@modifies:ability:improved_empathic_link#hunter AND !@modifies:ability:hunter_tactics#hunter AND !@modifies:ability:speak_with_master#hunter AND !@modifies:ability:teamwork_feat#hunter AND !@modifies:ability:animal_focus#hunter AND !@modifies:ability:precise_companion#hunter AND !@modifies:ability:raise_animal_companion#hunter(œ
 class:hunter#packmaster
 Packmaster	archetypehunter"ß!@modifies:ability:master_hunter#hunter AND !@modifies:ability:animal_companion#hunter AND !@modifies:ability:teamwork_feat#hunter AND !@modifies:ability:animal_focus#hunter AND !@modifies:ability:second_animal_focus#hunter(Í
 class:hunter#primal_companionPrimal Companion	archetypehunter"„!@modifies:ability:master_hunter#hunter AND !@modifies:ability:animal_focus#hunter AND !@modifies:ability:second_animal_focus#hunter(÷
@@ -1215,9 +1215,9 @@ Force Dashfeatgeneral">all(@bab>=4,@spells_per_day:arcane#2,1[arcane force s
 feat:studied_combatantStudied Combatantfeatgeneral",max(@skill:knowledge_*)[Any knowledge skill](¦
 feat:surprise_maneuverSurprise Maneuverfeatgeneral"hall(@feat:combat_expertise,any(@ability:sneak_attack#slayer>=3,@ability:studied_strike#investigator>=3))(v
 feat:talented_magicianTalented Magicianfeatgeneral"8all(@rogue_talent:major_magic,@rogue_talent:minor_magic)(C
-feat:twinned_feintTwinned Feintcombatfeat"@cha_score>=13(E
+feat:twinned_feintTwinned Feintcombatfeat"@cha_score>=13(R
 feat:twist_away
-Twist Awayfeatgeneral"@ability:evasion#monk(I
+Twist Awayfeatgeneral""@ability:evasion#monk_weapon_adept(I
 feat:undersized_mountUndersized Mountcombatfeat"@skill:ride>=1(r
 feat:unfettered_familiarUnfettered Familiarfeatgeneral"0all(@caster_level>=5,@arcanist_exploit:familiar)(a
 feat:war_blessingWar Blessingfeatgeneral"-any(@ability:mystery#oracle,@ability:domains)(l

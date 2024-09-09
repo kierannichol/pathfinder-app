@@ -2814,7 +2814,7 @@
     "id": "class:monk#sohei",
     "name": "Sohei",
     "tags": ["archetype", "monk"],
-    "enabledFormula": "!@modifies:ability:stunning_fist#monk AND !@modifies:trait:armor_proficiency#monk AND !@modifies:ability:tongue_of_the_sun_and_moon#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:abundant_step#monk AND !@modifies:ability:fast_movement#monk AND !@modifies:trait:weapon_proficiency#monk",
+    "enabledFormula": "!@modifies:ability:stunning_fist#monk AND !@modifies:trait:armor_proficiency#monk AND !@modifies:ability:tongue_of_the_sun_and_moon#monk AND !@modifies:ability:abundant_step#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:fast_movement#monk AND !@modifies:trait:weapon_proficiency#monk",
     "maxStacks": 1
   }, {
     "id": "class:monk#tetori",
@@ -2969,7 +2969,7 @@
     "id": "feat:adder_strike",
     "name": "Adder Strike",
     "tags": ["combat", "feat"],
-    "enabledFormula": "all(@rogue_talent:poison_use,@skill:craft#alchemy,@feat:improved_unarmed_strike)",
+    "enabledFormula": "all(sum(@ability:poison_use#*)[Poison Use],@skill:craft#alchemy,@feat:improved_unarmed_strike)",
     "maxStacks": 1
   }, {
     "id": "feat:adept_champion",
@@ -3052,7 +3052,7 @@
     "id": "feat:branded_for_retribution",
     "name": "Branded for Retribution",
     "tags": ["feat", "general"],
-    "enabledFormula": "@spell:bane",
+    "enabledFormula": "sum(@ability:bane#*)[Bane]",
     "maxStacks": 1
   }, {
     "id": "feat:break_guard",
@@ -3130,7 +3130,7 @@
     "id": "feat:combat_style_master",
     "name": "Combat Style Master",
     "tags": ["combat", "feat"],
-    "enabledFormula": "all(@feat:improved_unarmed_strike,(@feat:kitsune_tricks+@feat:kitsune_style+@feat:kitsune_vengeance+@feat:sisterhood_style+@feat:perfect_style+@feat:sisterhood_dedication+@feat:sisterhood_rampart+@feat:unblinking_flame_feint+@feat:beastmaster_ire+@feat:crashing_wave_fist+@feat:indomitable_mountain_style+@feat:wolf_savage+@feat:crashing_wave_style+@feat:wolf_style+@feat:wolf_trip+@feat:indomitable_mountain_avalanche+@feat:indomitable_mountain_peak+@feat:beastmaster_style+@feat:beastmaster_salvation+@feat:crashing_wave_buffet+@feat:boar_ferocity+@feat:marid_spirit+@feat:mantis_style+@feat:snake_sidewind+@feat:efreeti_touch+@feat:earth_child_style+@feat:earth_child_binder+@feat:janni_tempest+@feat:panther_style+@feat:dragon_roar+@feat:earth_child_topple+@feat:snapping_turtle_style+@feat:djinni_style+@feat:kirin_strike+@feat:crane_riposte+@feat:snapping_turtle_clutch+@feat:djinni_spirit+@feat:mantis_torment+@feat:dragon_style+@feat:monkey_moves+@feat:tiger_claws+@feat:monkey_shine+@feat:shaitan_earthblast+@feat:shaitan_skin+@feat:kirin_path+@feat:snapping_turtle_shell+@feat:shaitan_style+@feat:monkey_style+@feat:boar_shred+@feat:djinni_spin+@feat:dragon_ferocity+@feat:janni_rush+@feat:panther_claw+@feat:efreeti_style+@feat:mantis_wisdom+@feat:snake_fang+@feat:panther_parry+@feat:tiger_pounce+@feat:marid_style+@feat:tiger_style+@feat:crane_wing+@feat:kirin_style+@feat:snake_style+@feat:marid_coldsnap+@feat:boar_style+@feat:efreeti_stance+@feat:janni_style+@feat:crane_style+@feat:pummeling_bully+@feat:jabbing_dancer+@feat:jabbing_style+@feat:pummeling_style+@feat:jabbing_master+@feat:grabbing_style+@feat:grabbing_drag+@feat:pummeling_charge+@feat:grabbing_master)[style feat(s)]\u003e\u003d2,any(@bab\u003e\u003d6,@class:monk\u003e\u003d5))",
+    "enabledFormula": "all(@feat:improved_unarmed_strike,(@feat:kitsune_tricks+@feat:kitsune_style+@feat:kitsune_vengeance+@feat:beastmaster_ire+@feat:crashing_wave_fist+@feat:indomitable_mountain_style+@feat:wolf_savage+@feat:crashing_wave_style+@feat:wolf_style+@feat:wolf_trip+@feat:indomitable_mountain_avalanche+@feat:indomitable_mountain_peak+@feat:beastmaster_style+@feat:beastmaster_salvation+@feat:crashing_wave_buffet+@feat:boar_ferocity+@feat:marid_spirit+@feat:mantis_style+@feat:snake_sidewind+@feat:efreeti_touch+@feat:earth_child_style+@feat:earth_child_binder+@feat:janni_tempest+@feat:panther_style+@feat:dragon_roar+@feat:earth_child_topple+@feat:snapping_turtle_style+@feat:djinni_style+@feat:kirin_strike+@feat:crane_riposte+@feat:snapping_turtle_clutch+@feat:djinni_spirit+@feat:mantis_torment+@feat:dragon_style+@feat:monkey_moves+@feat:tiger_claws+@feat:monkey_shine+@feat:shaitan_earthblast+@feat:shaitan_skin+@feat:kirin_path+@feat:snapping_turtle_shell+@feat:shaitan_style+@feat:monkey_style+@feat:boar_shred+@feat:djinni_spin+@feat:dragon_ferocity+@feat:janni_rush+@feat:panther_claw+@feat:efreeti_style+@feat:mantis_wisdom+@feat:snake_fang+@feat:panther_parry+@feat:tiger_pounce+@feat:marid_style+@feat:tiger_style+@feat:crane_wing+@feat:kirin_style+@feat:snake_style+@feat:marid_coldsnap+@feat:boar_style+@feat:efreeti_stance+@feat:janni_style+@feat:crane_style+@feat:sisterhood_style+@feat:perfect_style+@feat:sisterhood_dedication+@feat:sisterhood_rampart+@feat:unblinking_flame_feint+@feat:pummeling_bully+@feat:jabbing_dancer+@feat:jabbing_style+@feat:pummeling_style+@feat:jabbing_master+@feat:grabbing_style+@feat:grabbing_drag+@feat:pummeling_charge+@feat:grabbing_master)[style feat(s)]\u003e\u003d2,any(@bab\u003e\u003d6,@class:monk\u003e\u003d5))",
     "maxStacks": 1
   }, {
     "id": "feat:contingent_channeling",
@@ -3369,7 +3369,7 @@
     "id": "feat:double_bane",
     "name": "Double Bane",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@spell:bane,@feat:two_weapon_fighting)",
+    "enabledFormula": "all(sum(@ability:bane#*)[Bane],@feat:two_weapon_fighting)",
     "maxStacks": 1
   }, {
     "id": "feat:drag_down",
@@ -3459,7 +3459,7 @@
     "id": "feat:extra_bane",
     "name": "Extra Bane",
     "tags": ["feat", "general"],
-    "enabledFormula": "@spell:bane",
+    "enabledFormula": "sum(@ability:bane#*)[Bane]",
     "maxStacks": 1
   }, {
     "id": "feat:extra_grit",
@@ -3709,7 +3709,7 @@
     "id": "feat:intimidating_bane",
     "name": "Intimidating Bane",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@spell:bane,@feat:dazzling_display,@feat:weapon_focus,@character_level\u003e\u003d8)",
+    "enabledFormula": "all(sum(@ability:bane#*)[Bane],@feat:dazzling_display,@feat:weapon_focus,@character_level\u003e\u003d8)",
     "maxStacks": 1
   }, {
     "id": "feat:janni_rush",
@@ -3829,13 +3829,13 @@
     "id": "feat:menacing_bane",
     "name": "Menacing Bane",
     "tags": ["feat", "general"],
-    "enabledFormula": "@spell:bane",
+    "enabledFormula": "sum(@ability:bane#*)[Bane]",
     "maxStacks": 1
   }, {
     "id": "feat:merciful_bane",
     "name": "Merciful Bane",
     "tags": ["feat", "general"],
-    "enabledFormula": "@spell:bane",
+    "enabledFormula": "sum(@ability:bane#*)[Bane]",
     "maxStacks": 1
   }, {
     "id": "feat:monastic_legacy",
@@ -4001,7 +4001,7 @@
     "id": "feat:pinpoint_poisoner",
     "name": "Pinpoint Poisoner",
     "tags": ["combat", "feat"],
-    "enabledFormula": "any(@rogue_talent:poison_use,@skill:craft#alchemy\u003e\u003d6,@feat:adder_strike,@feat:improved_unarmed_strike,@feat:two_weapon_fighting,sum(@ability:flurry_of_blows#*)[Flurry Of Blows])",
+    "enabledFormula": "any(sum(@ability:poison_use#*)[Poison Use],@skill:craft#alchemy\u003e\u003d6,@feat:adder_strike,@feat:improved_unarmed_strike,@feat:two_weapon_fighting,sum(@ability:flurry_of_blows#*)[Flurry Of Blows])",
     "maxStacks": 1
   }, {
     "id": "feat:planar_wild_shape",
@@ -4132,13 +4132,13 @@
     "id": "feat:sap_adept",
     "name": "Sap Adept",
     "tags": ["combat", "feat"],
-    "enabledFormula": "@ability:sneak_attack#rogue\u003e\u003d1",
+    "enabledFormula": "@ability:sneak_attack#bard_sandman\u003e\u003d1",
     "maxStacks": 1
   }, {
     "id": "feat:sap_master",
     "name": "Sap Master",
     "tags": ["combat", "feat"],
-    "enabledFormula": "all(@ability:sneak_attack#rogue\u003e\u003d3,@feat:sap_adept)",
+    "enabledFormula": "all(@ability:sneak_attack#bard_sandman\u003e\u003d3,@feat:sap_adept)",
     "maxStacks": 1
   }, {
     "id": "feat:school_strike",
@@ -4300,7 +4300,7 @@
     "id": "feat:spell_bane",
     "name": "Spell Bane",
     "tags": ["feat", "general"],
-    "enabledFormula": "@spell:bane",
+    "enabledFormula": "sum(@ability:bane#*)[Bane]",
     "maxStacks": 1
   }, {
     "id": "feat:spinning_throw",
@@ -4335,7 +4335,7 @@
     "id": "feat:strangler",
     "name": "Strangler",
     "tags": ["combat", "feat"],
-    "enabledFormula": "all(@dex_score\u003e\u003d13,@ability:sneak_attack#rogue\u003e\u003d1,@feat:improved_grapple,@feat:improved_unarmed_strike)",
+    "enabledFormula": "all(@dex_score\u003e\u003d13,@ability:sneak_attack#bard_sandman\u003e\u003d1,@feat:improved_grapple,@feat:improved_unarmed_strike)",
     "maxStacks": 1
   }, {
     "id": "feat:strong_comeback",

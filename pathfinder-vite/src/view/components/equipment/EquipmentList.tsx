@@ -78,6 +78,18 @@ export function EquipmentList({ equipment, onChange }: EquipmentListProps) {
     setEquipmentToEdit(undefined);
   }
 
+  function handleChangeQuantity(uid: string, quantity: number) {
+    updateEquipmentList(list => {
+      const updated = [ ...list ];
+      const targetIndex = updated.findIndex(e => e.uid === uid);
+      if (targetIndex < 0) return list;
+      const target = updated[targetIndex];
+      updated[targetIndex] = target.changeQuantity(quantity);
+      console.log(updated[targetIndex]);
+      return updated;
+    });
+  }
+
   return <div>
     <Droppable id="equipment-set"
                onDragEnd={handleDragEnd}>
@@ -90,7 +102,8 @@ export function EquipmentList({ equipment, onChange }: EquipmentListProps) {
                             disabled={!equipment.included}
                             onClick={() => handleClickItem(equipment.uid)}
                             onEdit={() => handleEditItem(equipment)}
-                            onDelete={() => handleDelete(equipment.uid)} />
+                            onDelete={() => handleDelete(equipment.uid)}
+                            onChangeQuantity={quantity => handleChangeQuantity(equipment.uid, quantity)}/>
         )}
         </SortableContext>
       </CardBlockList>
