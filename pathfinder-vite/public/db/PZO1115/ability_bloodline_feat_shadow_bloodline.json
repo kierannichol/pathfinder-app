@@ -1,0 +1,25 @@
+{
+  "id": "ability:bloodline_feat#shadow_bloodline",
+  "name": "Bloodline Feat (Shadow Bloodline)",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "bloodline_feat",
+          "label": "Bloodline Feat",
+          "type": "bonus_feat",
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["feat:acrobatic", "feat:blind_fight", "feat:dodge", "feat:quick_draw", "feat:silent_spell", "feat:stealthy", "feat:weapon_finesse"]
+          }
+        }]
+      }]
+    }
+  }
+}

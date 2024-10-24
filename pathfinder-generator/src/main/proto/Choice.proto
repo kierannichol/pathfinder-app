@@ -9,11 +9,34 @@ message ChoiceDbo {
   string choice_id = 1;
   string label = 2;
   string type = 3;
-  bool repeating = 4;
+  RepeatingChoiceTypeDbo repeating = 4;
 
   oneof input {
     TextChoiceInputDbo text = 100;
     FeatureSelectChoiceInputDbo feature_select = 101;
+  }
+}
+
+message RepeatingChoiceTypeDbo {
+  message None {
+  }
+
+  message Unlimited {
+  }
+
+  message MaxLimit {
+    uint32 limit = 1;
+  }
+
+  message CalculatedLimit {
+    string formula = 1;
+  }
+
+  oneof type {
+    None none = 1;
+    Unlimited unlimited = 2;
+    MaxLimit max_limit = 3;
+    CalculatedLimit calculated_limit = 4;
   }
 }
 

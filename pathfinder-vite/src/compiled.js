@@ -2727,7 +2727,7 @@ export const data = $root.data = (() => {
          * @property {string|null} [choiceId] ChoiceDbo choiceId
          * @property {string|null} [label] ChoiceDbo label
          * @property {string|null} [type] ChoiceDbo type
-         * @property {boolean|null} [repeating] ChoiceDbo repeating
+         * @property {data.RepeatingChoiceTypeDbo|null} [repeating] ChoiceDbo repeating
          * @property {data.TextChoiceInputDbo|null} [text] ChoiceDbo text
          * @property {data.FeatureSelectChoiceInputDbo|null} [featureSelect] ChoiceDbo featureSelect
          */
@@ -2773,11 +2773,11 @@ export const data = $root.data = (() => {
 
         /**
          * ChoiceDbo repeating.
-         * @member {boolean} repeating
+         * @member {data.RepeatingChoiceTypeDbo|null|undefined} repeating
          * @memberof data.ChoiceDbo
          * @instance
          */
-        ChoiceDbo.prototype.repeating = false;
+        ChoiceDbo.prototype.repeating = null;
 
         /**
          * ChoiceDbo text.
@@ -2840,7 +2840,7 @@ export const data = $root.data = (() => {
             if (message.type != null && Object.hasOwnProperty.call(message, "type"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.type);
             if (message.repeating != null && Object.hasOwnProperty.call(message, "repeating"))
-                writer.uint32(/* id 4, wireType 0 =*/32).bool(message.repeating);
+                $root.data.RepeatingChoiceTypeDbo.encode(message.repeating, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
             if (message.text != null && Object.hasOwnProperty.call(message, "text"))
                 $root.data.TextChoiceInputDbo.encode(message.text, writer.uint32(/* id 100, wireType 2 =*/802).fork()).ldelim();
             if (message.featureSelect != null && Object.hasOwnProperty.call(message, "featureSelect"))
@@ -2892,7 +2892,7 @@ export const data = $root.data = (() => {
                         break;
                     }
                 case 4: {
-                        message.repeating = reader.bool();
+                        message.repeating = $root.data.RepeatingChoiceTypeDbo.decode(reader, reader.uint32());
                         break;
                     }
                 case 100: {
@@ -2948,9 +2948,11 @@ export const data = $root.data = (() => {
             if (message.type != null && message.hasOwnProperty("type"))
                 if (!$util.isString(message.type))
                     return "type: string expected";
-            if (message.repeating != null && message.hasOwnProperty("repeating"))
-                if (typeof message.repeating !== "boolean")
-                    return "repeating: boolean expected";
+            if (message.repeating != null && message.hasOwnProperty("repeating")) {
+                let error = $root.data.RepeatingChoiceTypeDbo.verify(message.repeating);
+                if (error)
+                    return "repeating." + error;
+            }
             if (message.text != null && message.hasOwnProperty("text")) {
                 properties.input = 1;
                 {
@@ -2990,8 +2992,11 @@ export const data = $root.data = (() => {
                 message.label = String(object.label);
             if (object.type != null)
                 message.type = String(object.type);
-            if (object.repeating != null)
-                message.repeating = Boolean(object.repeating);
+            if (object.repeating != null) {
+                if (typeof object.repeating !== "object")
+                    throw TypeError(".data.ChoiceDbo.repeating: object expected");
+                message.repeating = $root.data.RepeatingChoiceTypeDbo.fromObject(object.repeating);
+            }
             if (object.text != null) {
                 if (typeof object.text !== "object")
                     throw TypeError(".data.ChoiceDbo.text: object expected");
@@ -3022,7 +3027,7 @@ export const data = $root.data = (() => {
                 object.choiceId = "";
                 object.label = "";
                 object.type = "";
-                object.repeating = false;
+                object.repeating = null;
             }
             if (message.choiceId != null && message.hasOwnProperty("choiceId"))
                 object.choiceId = message.choiceId;
@@ -3031,7 +3036,7 @@ export const data = $root.data = (() => {
             if (message.type != null && message.hasOwnProperty("type"))
                 object.type = message.type;
             if (message.repeating != null && message.hasOwnProperty("repeating"))
-                object.repeating = message.repeating;
+                object.repeating = $root.data.RepeatingChoiceTypeDbo.toObject(message.repeating, options);
             if (message.text != null && message.hasOwnProperty("text")) {
                 object.text = $root.data.TextChoiceInputDbo.toObject(message.text, options);
                 if (options.oneofs)
@@ -3072,6 +3077,1094 @@ export const data = $root.data = (() => {
         };
 
         return ChoiceDbo;
+    })();
+
+    data.RepeatingChoiceTypeDbo = (function() {
+
+        /**
+         * Properties of a RepeatingChoiceTypeDbo.
+         * @memberof data
+         * @interface IRepeatingChoiceTypeDbo
+         * @property {data.RepeatingChoiceTypeDbo.None|null} [none] RepeatingChoiceTypeDbo none
+         * @property {data.RepeatingChoiceTypeDbo.Unlimited|null} [unlimited] RepeatingChoiceTypeDbo unlimited
+         * @property {data.RepeatingChoiceTypeDbo.MaxLimit|null} [maxLimit] RepeatingChoiceTypeDbo maxLimit
+         * @property {data.RepeatingChoiceTypeDbo.CalculatedLimit|null} [calculatedLimit] RepeatingChoiceTypeDbo calculatedLimit
+         */
+
+        /**
+         * Constructs a new RepeatingChoiceTypeDbo.
+         * @memberof data
+         * @classdesc Represents a RepeatingChoiceTypeDbo.
+         * @implements IRepeatingChoiceTypeDbo
+         * @constructor
+         * @param {data.IRepeatingChoiceTypeDbo=} [properties] Properties to set
+         */
+        function RepeatingChoiceTypeDbo(properties) {
+            if (properties)
+                for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * RepeatingChoiceTypeDbo none.
+         * @member {data.RepeatingChoiceTypeDbo.None|null|undefined} none
+         * @memberof data.RepeatingChoiceTypeDbo
+         * @instance
+         */
+        RepeatingChoiceTypeDbo.prototype.none = null;
+
+        /**
+         * RepeatingChoiceTypeDbo unlimited.
+         * @member {data.RepeatingChoiceTypeDbo.Unlimited|null|undefined} unlimited
+         * @memberof data.RepeatingChoiceTypeDbo
+         * @instance
+         */
+        RepeatingChoiceTypeDbo.prototype.unlimited = null;
+
+        /**
+         * RepeatingChoiceTypeDbo maxLimit.
+         * @member {data.RepeatingChoiceTypeDbo.MaxLimit|null|undefined} maxLimit
+         * @memberof data.RepeatingChoiceTypeDbo
+         * @instance
+         */
+        RepeatingChoiceTypeDbo.prototype.maxLimit = null;
+
+        /**
+         * RepeatingChoiceTypeDbo calculatedLimit.
+         * @member {data.RepeatingChoiceTypeDbo.CalculatedLimit|null|undefined} calculatedLimit
+         * @memberof data.RepeatingChoiceTypeDbo
+         * @instance
+         */
+        RepeatingChoiceTypeDbo.prototype.calculatedLimit = null;
+
+        // OneOf field names bound to virtual getters and setters
+        let $oneOfFields;
+
+        /**
+         * RepeatingChoiceTypeDbo type.
+         * @member {"none"|"unlimited"|"maxLimit"|"calculatedLimit"|undefined} type
+         * @memberof data.RepeatingChoiceTypeDbo
+         * @instance
+         */
+        Object.defineProperty(RepeatingChoiceTypeDbo.prototype, "type", {
+            get: $util.oneOfGetter($oneOfFields = ["none", "unlimited", "maxLimit", "calculatedLimit"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * Creates a new RepeatingChoiceTypeDbo instance using the specified properties.
+         * @function create
+         * @memberof data.RepeatingChoiceTypeDbo
+         * @static
+         * @param {data.IRepeatingChoiceTypeDbo=} [properties] Properties to set
+         * @returns {data.RepeatingChoiceTypeDbo} RepeatingChoiceTypeDbo instance
+         */
+        RepeatingChoiceTypeDbo.create = function create(properties) {
+            return new RepeatingChoiceTypeDbo(properties);
+        };
+
+        /**
+         * Encodes the specified RepeatingChoiceTypeDbo message. Does not implicitly {@link data.RepeatingChoiceTypeDbo.verify|verify} messages.
+         * @function encode
+         * @memberof data.RepeatingChoiceTypeDbo
+         * @static
+         * @param {data.RepeatingChoiceTypeDbo} message RepeatingChoiceTypeDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        RepeatingChoiceTypeDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.none != null && Object.hasOwnProperty.call(message, "none"))
+                $root.data.RepeatingChoiceTypeDbo.None.encode(message.none, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+            if (message.unlimited != null && Object.hasOwnProperty.call(message, "unlimited"))
+                $root.data.RepeatingChoiceTypeDbo.Unlimited.encode(message.unlimited, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+            if (message.maxLimit != null && Object.hasOwnProperty.call(message, "maxLimit"))
+                $root.data.RepeatingChoiceTypeDbo.MaxLimit.encode(message.maxLimit, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+            if (message.calculatedLimit != null && Object.hasOwnProperty.call(message, "calculatedLimit"))
+                $root.data.RepeatingChoiceTypeDbo.CalculatedLimit.encode(message.calculatedLimit, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+            return writer;
+        };
+
+        /**
+         * Encodes the specified RepeatingChoiceTypeDbo message, length delimited. Does not implicitly {@link data.RepeatingChoiceTypeDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof data.RepeatingChoiceTypeDbo
+         * @static
+         * @param {data.RepeatingChoiceTypeDbo} message RepeatingChoiceTypeDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        RepeatingChoiceTypeDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a RepeatingChoiceTypeDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof data.RepeatingChoiceTypeDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {data.RepeatingChoiceTypeDbo} RepeatingChoiceTypeDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        RepeatingChoiceTypeDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.RepeatingChoiceTypeDbo();
+            while (reader.pos < end) {
+                let tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.none = $root.data.RepeatingChoiceTypeDbo.None.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 2: {
+                        message.unlimited = $root.data.RepeatingChoiceTypeDbo.Unlimited.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 3: {
+                        message.maxLimit = $root.data.RepeatingChoiceTypeDbo.MaxLimit.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 4: {
+                        message.calculatedLimit = $root.data.RepeatingChoiceTypeDbo.CalculatedLimit.decode(reader, reader.uint32());
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a RepeatingChoiceTypeDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof data.RepeatingChoiceTypeDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {data.RepeatingChoiceTypeDbo} RepeatingChoiceTypeDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        RepeatingChoiceTypeDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a RepeatingChoiceTypeDbo message.
+         * @function verify
+         * @memberof data.RepeatingChoiceTypeDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        RepeatingChoiceTypeDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            let properties = {};
+            if (message.none != null && message.hasOwnProperty("none")) {
+                properties.type = 1;
+                {
+                    let error = $root.data.RepeatingChoiceTypeDbo.None.verify(message.none);
+                    if (error)
+                        return "none." + error;
+                }
+            }
+            if (message.unlimited != null && message.hasOwnProperty("unlimited")) {
+                if (properties.type === 1)
+                    return "type: multiple values";
+                properties.type = 1;
+                {
+                    let error = $root.data.RepeatingChoiceTypeDbo.Unlimited.verify(message.unlimited);
+                    if (error)
+                        return "unlimited." + error;
+                }
+            }
+            if (message.maxLimit != null && message.hasOwnProperty("maxLimit")) {
+                if (properties.type === 1)
+                    return "type: multiple values";
+                properties.type = 1;
+                {
+                    let error = $root.data.RepeatingChoiceTypeDbo.MaxLimit.verify(message.maxLimit);
+                    if (error)
+                        return "maxLimit." + error;
+                }
+            }
+            if (message.calculatedLimit != null && message.hasOwnProperty("calculatedLimit")) {
+                if (properties.type === 1)
+                    return "type: multiple values";
+                properties.type = 1;
+                {
+                    let error = $root.data.RepeatingChoiceTypeDbo.CalculatedLimit.verify(message.calculatedLimit);
+                    if (error)
+                        return "calculatedLimit." + error;
+                }
+            }
+            return null;
+        };
+
+        /**
+         * Creates a RepeatingChoiceTypeDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof data.RepeatingChoiceTypeDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {data.RepeatingChoiceTypeDbo} RepeatingChoiceTypeDbo
+         */
+        RepeatingChoiceTypeDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.data.RepeatingChoiceTypeDbo)
+                return object;
+            let message = new $root.data.RepeatingChoiceTypeDbo();
+            if (object.none != null) {
+                if (typeof object.none !== "object")
+                    throw TypeError(".data.RepeatingChoiceTypeDbo.none: object expected");
+                message.none = $root.data.RepeatingChoiceTypeDbo.None.fromObject(object.none);
+            }
+            if (object.unlimited != null) {
+                if (typeof object.unlimited !== "object")
+                    throw TypeError(".data.RepeatingChoiceTypeDbo.unlimited: object expected");
+                message.unlimited = $root.data.RepeatingChoiceTypeDbo.Unlimited.fromObject(object.unlimited);
+            }
+            if (object.maxLimit != null) {
+                if (typeof object.maxLimit !== "object")
+                    throw TypeError(".data.RepeatingChoiceTypeDbo.maxLimit: object expected");
+                message.maxLimit = $root.data.RepeatingChoiceTypeDbo.MaxLimit.fromObject(object.maxLimit);
+            }
+            if (object.calculatedLimit != null) {
+                if (typeof object.calculatedLimit !== "object")
+                    throw TypeError(".data.RepeatingChoiceTypeDbo.calculatedLimit: object expected");
+                message.calculatedLimit = $root.data.RepeatingChoiceTypeDbo.CalculatedLimit.fromObject(object.calculatedLimit);
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a RepeatingChoiceTypeDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof data.RepeatingChoiceTypeDbo
+         * @static
+         * @param {data.RepeatingChoiceTypeDbo} message RepeatingChoiceTypeDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        RepeatingChoiceTypeDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            let object = {};
+            if (message.none != null && message.hasOwnProperty("none")) {
+                object.none = $root.data.RepeatingChoiceTypeDbo.None.toObject(message.none, options);
+                if (options.oneofs)
+                    object.type = "none";
+            }
+            if (message.unlimited != null && message.hasOwnProperty("unlimited")) {
+                object.unlimited = $root.data.RepeatingChoiceTypeDbo.Unlimited.toObject(message.unlimited, options);
+                if (options.oneofs)
+                    object.type = "unlimited";
+            }
+            if (message.maxLimit != null && message.hasOwnProperty("maxLimit")) {
+                object.maxLimit = $root.data.RepeatingChoiceTypeDbo.MaxLimit.toObject(message.maxLimit, options);
+                if (options.oneofs)
+                    object.type = "maxLimit";
+            }
+            if (message.calculatedLimit != null && message.hasOwnProperty("calculatedLimit")) {
+                object.calculatedLimit = $root.data.RepeatingChoiceTypeDbo.CalculatedLimit.toObject(message.calculatedLimit, options);
+                if (options.oneofs)
+                    object.type = "calculatedLimit";
+            }
+            return object;
+        };
+
+        /**
+         * Converts this RepeatingChoiceTypeDbo to JSON.
+         * @function toJSON
+         * @memberof data.RepeatingChoiceTypeDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        RepeatingChoiceTypeDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for RepeatingChoiceTypeDbo
+         * @function getTypeUrl
+         * @memberof data.RepeatingChoiceTypeDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        RepeatingChoiceTypeDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/data.RepeatingChoiceTypeDbo";
+        };
+
+        RepeatingChoiceTypeDbo.None = (function() {
+
+            /**
+             * Properties of a None.
+             * @memberof data.RepeatingChoiceTypeDbo
+             * @interface INone
+             */
+
+            /**
+             * Constructs a new None.
+             * @memberof data.RepeatingChoiceTypeDbo
+             * @classdesc Represents a None.
+             * @implements INone
+             * @constructor
+             * @param {data.RepeatingChoiceTypeDbo.INone=} [properties] Properties to set
+             */
+            function None(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Creates a new None instance using the specified properties.
+             * @function create
+             * @memberof data.RepeatingChoiceTypeDbo.None
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.INone=} [properties] Properties to set
+             * @returns {data.RepeatingChoiceTypeDbo.None} None instance
+             */
+            None.create = function create(properties) {
+                return new None(properties);
+            };
+
+            /**
+             * Encodes the specified None message. Does not implicitly {@link data.RepeatingChoiceTypeDbo.None.verify|verify} messages.
+             * @function encode
+             * @memberof data.RepeatingChoiceTypeDbo.None
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.None} message None message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            None.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified None message, length delimited. Does not implicitly {@link data.RepeatingChoiceTypeDbo.None.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof data.RepeatingChoiceTypeDbo.None
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.None} message None message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            None.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a None message from the specified reader or buffer.
+             * @function decode
+             * @memberof data.RepeatingChoiceTypeDbo.None
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {data.RepeatingChoiceTypeDbo.None} None
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            None.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.RepeatingChoiceTypeDbo.None();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a None message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof data.RepeatingChoiceTypeDbo.None
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {data.RepeatingChoiceTypeDbo.None} None
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            None.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a None message.
+             * @function verify
+             * @memberof data.RepeatingChoiceTypeDbo.None
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            None.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                return null;
+            };
+
+            /**
+             * Creates a None message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof data.RepeatingChoiceTypeDbo.None
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {data.RepeatingChoiceTypeDbo.None} None
+             */
+            None.fromObject = function fromObject(object) {
+                if (object instanceof $root.data.RepeatingChoiceTypeDbo.None)
+                    return object;
+                return new $root.data.RepeatingChoiceTypeDbo.None();
+            };
+
+            /**
+             * Creates a plain object from a None message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof data.RepeatingChoiceTypeDbo.None
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.None} message None
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            None.toObject = function toObject() {
+                return {};
+            };
+
+            /**
+             * Converts this None to JSON.
+             * @function toJSON
+             * @memberof data.RepeatingChoiceTypeDbo.None
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            None.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for None
+             * @function getTypeUrl
+             * @memberof data.RepeatingChoiceTypeDbo.None
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            None.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/data.RepeatingChoiceTypeDbo.None";
+            };
+
+            return None;
+        })();
+
+        RepeatingChoiceTypeDbo.Unlimited = (function() {
+
+            /**
+             * Properties of an Unlimited.
+             * @memberof data.RepeatingChoiceTypeDbo
+             * @interface IUnlimited
+             */
+
+            /**
+             * Constructs a new Unlimited.
+             * @memberof data.RepeatingChoiceTypeDbo
+             * @classdesc Represents an Unlimited.
+             * @implements IUnlimited
+             * @constructor
+             * @param {data.RepeatingChoiceTypeDbo.IUnlimited=} [properties] Properties to set
+             */
+            function Unlimited(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Creates a new Unlimited instance using the specified properties.
+             * @function create
+             * @memberof data.RepeatingChoiceTypeDbo.Unlimited
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.IUnlimited=} [properties] Properties to set
+             * @returns {data.RepeatingChoiceTypeDbo.Unlimited} Unlimited instance
+             */
+            Unlimited.create = function create(properties) {
+                return new Unlimited(properties);
+            };
+
+            /**
+             * Encodes the specified Unlimited message. Does not implicitly {@link data.RepeatingChoiceTypeDbo.Unlimited.verify|verify} messages.
+             * @function encode
+             * @memberof data.RepeatingChoiceTypeDbo.Unlimited
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.Unlimited} message Unlimited message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Unlimited.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified Unlimited message, length delimited. Does not implicitly {@link data.RepeatingChoiceTypeDbo.Unlimited.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof data.RepeatingChoiceTypeDbo.Unlimited
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.Unlimited} message Unlimited message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Unlimited.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an Unlimited message from the specified reader or buffer.
+             * @function decode
+             * @memberof data.RepeatingChoiceTypeDbo.Unlimited
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {data.RepeatingChoiceTypeDbo.Unlimited} Unlimited
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Unlimited.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.RepeatingChoiceTypeDbo.Unlimited();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an Unlimited message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof data.RepeatingChoiceTypeDbo.Unlimited
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {data.RepeatingChoiceTypeDbo.Unlimited} Unlimited
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Unlimited.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an Unlimited message.
+             * @function verify
+             * @memberof data.RepeatingChoiceTypeDbo.Unlimited
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            Unlimited.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                return null;
+            };
+
+            /**
+             * Creates an Unlimited message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof data.RepeatingChoiceTypeDbo.Unlimited
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {data.RepeatingChoiceTypeDbo.Unlimited} Unlimited
+             */
+            Unlimited.fromObject = function fromObject(object) {
+                if (object instanceof $root.data.RepeatingChoiceTypeDbo.Unlimited)
+                    return object;
+                return new $root.data.RepeatingChoiceTypeDbo.Unlimited();
+            };
+
+            /**
+             * Creates a plain object from an Unlimited message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof data.RepeatingChoiceTypeDbo.Unlimited
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.Unlimited} message Unlimited
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            Unlimited.toObject = function toObject() {
+                return {};
+            };
+
+            /**
+             * Converts this Unlimited to JSON.
+             * @function toJSON
+             * @memberof data.RepeatingChoiceTypeDbo.Unlimited
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            Unlimited.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for Unlimited
+             * @function getTypeUrl
+             * @memberof data.RepeatingChoiceTypeDbo.Unlimited
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            Unlimited.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/data.RepeatingChoiceTypeDbo.Unlimited";
+            };
+
+            return Unlimited;
+        })();
+
+        RepeatingChoiceTypeDbo.MaxLimit = (function() {
+
+            /**
+             * Properties of a MaxLimit.
+             * @memberof data.RepeatingChoiceTypeDbo
+             * @interface IMaxLimit
+             * @property {number|null} [limit] MaxLimit limit
+             */
+
+            /**
+             * Constructs a new MaxLimit.
+             * @memberof data.RepeatingChoiceTypeDbo
+             * @classdesc Represents a MaxLimit.
+             * @implements IMaxLimit
+             * @constructor
+             * @param {data.RepeatingChoiceTypeDbo.IMaxLimit=} [properties] Properties to set
+             */
+            function MaxLimit(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * MaxLimit limit.
+             * @member {number} limit
+             * @memberof data.RepeatingChoiceTypeDbo.MaxLimit
+             * @instance
+             */
+            MaxLimit.prototype.limit = 0;
+
+            /**
+             * Creates a new MaxLimit instance using the specified properties.
+             * @function create
+             * @memberof data.RepeatingChoiceTypeDbo.MaxLimit
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.IMaxLimit=} [properties] Properties to set
+             * @returns {data.RepeatingChoiceTypeDbo.MaxLimit} MaxLimit instance
+             */
+            MaxLimit.create = function create(properties) {
+                return new MaxLimit(properties);
+            };
+
+            /**
+             * Encodes the specified MaxLimit message. Does not implicitly {@link data.RepeatingChoiceTypeDbo.MaxLimit.verify|verify} messages.
+             * @function encode
+             * @memberof data.RepeatingChoiceTypeDbo.MaxLimit
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.MaxLimit} message MaxLimit message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            MaxLimit.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.limit != null && Object.hasOwnProperty.call(message, "limit"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.limit);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified MaxLimit message, length delimited. Does not implicitly {@link data.RepeatingChoiceTypeDbo.MaxLimit.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof data.RepeatingChoiceTypeDbo.MaxLimit
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.MaxLimit} message MaxLimit message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            MaxLimit.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a MaxLimit message from the specified reader or buffer.
+             * @function decode
+             * @memberof data.RepeatingChoiceTypeDbo.MaxLimit
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {data.RepeatingChoiceTypeDbo.MaxLimit} MaxLimit
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            MaxLimit.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.RepeatingChoiceTypeDbo.MaxLimit();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.limit = reader.uint32();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a MaxLimit message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof data.RepeatingChoiceTypeDbo.MaxLimit
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {data.RepeatingChoiceTypeDbo.MaxLimit} MaxLimit
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            MaxLimit.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a MaxLimit message.
+             * @function verify
+             * @memberof data.RepeatingChoiceTypeDbo.MaxLimit
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            MaxLimit.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.limit != null && message.hasOwnProperty("limit"))
+                    if (!$util.isInteger(message.limit))
+                        return "limit: integer expected";
+                return null;
+            };
+
+            /**
+             * Creates a MaxLimit message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof data.RepeatingChoiceTypeDbo.MaxLimit
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {data.RepeatingChoiceTypeDbo.MaxLimit} MaxLimit
+             */
+            MaxLimit.fromObject = function fromObject(object) {
+                if (object instanceof $root.data.RepeatingChoiceTypeDbo.MaxLimit)
+                    return object;
+                let message = new $root.data.RepeatingChoiceTypeDbo.MaxLimit();
+                if (object.limit != null)
+                    message.limit = object.limit >>> 0;
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a MaxLimit message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof data.RepeatingChoiceTypeDbo.MaxLimit
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.MaxLimit} message MaxLimit
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            MaxLimit.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults)
+                    object.limit = 0;
+                if (message.limit != null && message.hasOwnProperty("limit"))
+                    object.limit = message.limit;
+                return object;
+            };
+
+            /**
+             * Converts this MaxLimit to JSON.
+             * @function toJSON
+             * @memberof data.RepeatingChoiceTypeDbo.MaxLimit
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            MaxLimit.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for MaxLimit
+             * @function getTypeUrl
+             * @memberof data.RepeatingChoiceTypeDbo.MaxLimit
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            MaxLimit.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/data.RepeatingChoiceTypeDbo.MaxLimit";
+            };
+
+            return MaxLimit;
+        })();
+
+        RepeatingChoiceTypeDbo.CalculatedLimit = (function() {
+
+            /**
+             * Properties of a CalculatedLimit.
+             * @memberof data.RepeatingChoiceTypeDbo
+             * @interface ICalculatedLimit
+             * @property {string|null} [formula] CalculatedLimit formula
+             */
+
+            /**
+             * Constructs a new CalculatedLimit.
+             * @memberof data.RepeatingChoiceTypeDbo
+             * @classdesc Represents a CalculatedLimit.
+             * @implements ICalculatedLimit
+             * @constructor
+             * @param {data.RepeatingChoiceTypeDbo.ICalculatedLimit=} [properties] Properties to set
+             */
+            function CalculatedLimit(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * CalculatedLimit formula.
+             * @member {string} formula
+             * @memberof data.RepeatingChoiceTypeDbo.CalculatedLimit
+             * @instance
+             */
+            CalculatedLimit.prototype.formula = "";
+
+            /**
+             * Creates a new CalculatedLimit instance using the specified properties.
+             * @function create
+             * @memberof data.RepeatingChoiceTypeDbo.CalculatedLimit
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.ICalculatedLimit=} [properties] Properties to set
+             * @returns {data.RepeatingChoiceTypeDbo.CalculatedLimit} CalculatedLimit instance
+             */
+            CalculatedLimit.create = function create(properties) {
+                return new CalculatedLimit(properties);
+            };
+
+            /**
+             * Encodes the specified CalculatedLimit message. Does not implicitly {@link data.RepeatingChoiceTypeDbo.CalculatedLimit.verify|verify} messages.
+             * @function encode
+             * @memberof data.RepeatingChoiceTypeDbo.CalculatedLimit
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.CalculatedLimit} message CalculatedLimit message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            CalculatedLimit.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.formula != null && Object.hasOwnProperty.call(message, "formula"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.formula);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified CalculatedLimit message, length delimited. Does not implicitly {@link data.RepeatingChoiceTypeDbo.CalculatedLimit.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof data.RepeatingChoiceTypeDbo.CalculatedLimit
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.CalculatedLimit} message CalculatedLimit message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            CalculatedLimit.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a CalculatedLimit message from the specified reader or buffer.
+             * @function decode
+             * @memberof data.RepeatingChoiceTypeDbo.CalculatedLimit
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {data.RepeatingChoiceTypeDbo.CalculatedLimit} CalculatedLimit
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            CalculatedLimit.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.RepeatingChoiceTypeDbo.CalculatedLimit();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.formula = reader.string();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a CalculatedLimit message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof data.RepeatingChoiceTypeDbo.CalculatedLimit
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {data.RepeatingChoiceTypeDbo.CalculatedLimit} CalculatedLimit
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            CalculatedLimit.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a CalculatedLimit message.
+             * @function verify
+             * @memberof data.RepeatingChoiceTypeDbo.CalculatedLimit
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            CalculatedLimit.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.formula != null && message.hasOwnProperty("formula"))
+                    if (!$util.isString(message.formula))
+                        return "formula: string expected";
+                return null;
+            };
+
+            /**
+             * Creates a CalculatedLimit message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof data.RepeatingChoiceTypeDbo.CalculatedLimit
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {data.RepeatingChoiceTypeDbo.CalculatedLimit} CalculatedLimit
+             */
+            CalculatedLimit.fromObject = function fromObject(object) {
+                if (object instanceof $root.data.RepeatingChoiceTypeDbo.CalculatedLimit)
+                    return object;
+                let message = new $root.data.RepeatingChoiceTypeDbo.CalculatedLimit();
+                if (object.formula != null)
+                    message.formula = String(object.formula);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a CalculatedLimit message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof data.RepeatingChoiceTypeDbo.CalculatedLimit
+             * @static
+             * @param {data.RepeatingChoiceTypeDbo.CalculatedLimit} message CalculatedLimit
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            CalculatedLimit.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults)
+                    object.formula = "";
+                if (message.formula != null && message.hasOwnProperty("formula"))
+                    object.formula = message.formula;
+                return object;
+            };
+
+            /**
+             * Converts this CalculatedLimit to JSON.
+             * @function toJSON
+             * @memberof data.RepeatingChoiceTypeDbo.CalculatedLimit
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            CalculatedLimit.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for CalculatedLimit
+             * @function getTypeUrl
+             * @memberof data.RepeatingChoiceTypeDbo.CalculatedLimit
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            CalculatedLimit.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/data.RepeatingChoiceTypeDbo.CalculatedLimit";
+            };
+
+            return CalculatedLimit;
+        })();
+
+        return RepeatingChoiceTypeDbo;
     })();
 
     data.TextChoiceInputDbo = (function() {

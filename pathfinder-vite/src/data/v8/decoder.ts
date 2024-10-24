@@ -34,6 +34,7 @@ import ItemOptionSummaryDbo = data.ItemOptionSummaryDbo;
 import ItemOptionDbo = data.ItemOptionDbo;
 import DescriptionDbo = data.DescriptionDbo;
 import ItemOptionGroupDbo = data.ItemOptionGroupDbo;
+import RepeatingChoiceTypeDbo = data.RepeatingChoiceTypeDbo;
 
 export function decodeDescription(dbo: DescriptionDbo|null|undefined): Description {
   return new Description(dbo?.text ?? "", dbo?.sections ?? {});
@@ -158,23 +159,40 @@ function decodeEffect(dbo: EffectDbo): Trait {
 function decodeChoice(dbo: ChoiceDbo): Trait {
   switch (dbo.input) {
     case "text": return new TextChoice(dbo.choiceId, dbo.label, dbo.type, dbo.repeating ? 1 : 0);
-    case "featureSelect": return dbo.repeating
-      ? new MultiSelectChoice(dbo.choiceId, dbo.label, dbo.type,
+    case "featureSelect": return (dbo.repeating?.type ?? "none") === "none"
+      ? new SelectChoice(dbo.choiceId, dbo.label, dbo.type,
             dbo.featureSelect?.optionTags ?? [],
             dbo.featureSelect?.featureIds ?? [],
             dbo.featureSelect?.categories?.map(decodeFeatureSelectCategory) ?? [],
             decodeFeatureSelectSortBy(dbo.featureSelect?.sortBy),
-            dbo.repeating ? 1 : 0
+            0
         )
-      : new SelectChoice(dbo.choiceId, dbo.label, dbo.type,
-        dbo.featureSelect?.optionTags ?? [],
-        dbo.featureSelect?.featureIds ?? [],
-        dbo.featureSelect?.categories?.map(decodeFeatureSelectCategory) ?? [],
-        decodeFeatureSelectSortBy(dbo.featureSelect?.sortBy),
-        dbo.repeating ? 1 : 0
+      : new MultiSelectChoice(dbo.choiceId,
+            dbo.label,
+            dbo.type,
+            dbo.featureSelect?.optionTags ?? [],
+            dbo.featureSelect?.featureIds ?? [],
+            dbo.featureSelect?.categories?.map(decodeFeatureSelectCategory) ?? [],
+            decodeFeatureSelectSortBy(dbo.featureSelect?.sortBy),
+            1,
+            decodeRepeatingChoiceType(dbo.repeating ?? new RepeatingChoiceTypeDbo())
         );
     default: throw new Error("Unknown choice type: " + dbo.input);
   }
+}
+
+function decodeRepeatingChoiceType(dbo: RepeatingChoiceTypeDbo): number | string | null {
+  switch (dbo.type) {
+    case "none":
+      return 1;
+    case "unlimited":
+      return null;
+    case "maxLimit":
+      return dbo.maxLimit?.limit ?? null;
+    case "calculatedLimit":
+      return dbo.calculatedLimit?.formula ?? null;
+  }
+  return null;
 }
 
 function decodeFeatureSelectCategory(dbo: FeatureSelectChoiceCategoryDbo): FeatureSelectCategory {

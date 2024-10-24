@@ -70,4 +70,8 @@ export class ExternalSourceModule extends SourceModule {
     feature.source = this;
     return feature;
   }
+
+  toString(): string {
+    return "Pathfinder Source Module: " + this.sourceCode;
+  }
 }

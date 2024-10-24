@@ -139,10 +139,133 @@
           "choiceId": "archetype",
           "label": "Archetype",
           "type": "archetype",
-          "repeating": true,
+          "repeating": {
+            "unlimited": {
+            }
+          },
           "featureSelect": {
             "optionTags": ["archetype+investigator"],
             "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "investigator:spells_0",
+          "label": "Investigator Level 0 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#investigator"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+investigator0"]
+          }
+        }, {
+          "choiceId": "investigator:spells_1",
+          "label": "Investigator Level 1 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#investigator"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+investigator1"]
+          }
+        }, {
+          "choiceId": "investigator:spells_2",
+          "label": "Investigator Level 2 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#investigator"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+investigator2"]
+          }
+        }, {
+          "choiceId": "investigator:spells_3",
+          "label": "Investigator Level 3 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#investigator"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+investigator3"]
+          }
+        }, {
+          "choiceId": "investigator:spells_4",
+          "label": "Investigator Level 4 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#investigator"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+investigator4"]
+          }
+        }, {
+          "choiceId": "investigator:spells_5",
+          "label": "Investigator Level 5 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#investigator"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+investigator5"]
+          }
+        }, {
+          "choiceId": "investigator:spells_6",
+          "label": "Investigator Level 6 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#investigator"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+investigator6"]
+          }
+        }, {
+          "choiceId": "investigator:spells_7",
+          "label": "Investigator Level 7 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#investigator"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+investigator7"]
+          }
+        }, {
+          "choiceId": "investigator:spells_8",
+          "label": "Investigator Level 8 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#investigator"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+investigator8"]
+          }
+        }, {
+          "choiceId": "investigator:spells_9",
+          "label": "Investigator Level 9 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#investigator"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+investigator9"]
           }
         }]
       }, {

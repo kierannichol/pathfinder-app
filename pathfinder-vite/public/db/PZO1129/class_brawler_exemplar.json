@@ -34,8 +34,17 @@
         "featureModifications": [{
           "targetFeatureId": "class:brawler",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:brawlers_strike#brawler"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:call_to_arms#brawler_exemplar"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:ac_bonus#brawler"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
           }, {
             "targetStackCount": 3,
             "linksToAdd": ["ability:inspiring_prowess#brawler_exemplar"],
@@ -64,15 +73,6 @@
             "linksToRemove": ["ability:ac_bonus#brawler"]
           }, {
             "targetStackCount": 15,
-            "linksToRemove": ["ability:maneuver_training#brawler"]
-          }, {
-            "targetStackCount": 17,
-            "linksToRemove": ["ability:brawlers_strike#brawler"]
-          }, {
-            "targetStackCount": 18,
-            "linksToRemove": ["ability:ac_bonus#brawler"]
-          }, {
-            "targetStackCount": 19,
             "linksToRemove": ["ability:maneuver_training#brawler"]
           }]
         }]

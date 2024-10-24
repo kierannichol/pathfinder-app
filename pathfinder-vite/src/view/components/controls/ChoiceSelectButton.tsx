@@ -69,7 +69,7 @@ export default function ChoiceSelectButton({ choiceName, value, id, onSelect, op
   const actualButtonLabel = children
       ?? <div className={styles.label}>{labelPrefix} {buttonLabel
           ?? selectedName
-          ?? <i>{actionVerb} {choiceName}</i>}
+          ?? <i className={styles.empty}>{actionVerb} {choiceName}</i>}
         </div>;
 
   const removeButton = removable
@@ -84,11 +84,9 @@ export default function ChoiceSelectButton({ choiceName, value, id, onSelect, op
 
   return <>
     <Collapse in={!removing} onExited={finishRemove} className={className}>
-      <div>
         <ButtonBlock id={id} variant={variant} onClick={_ => handleShow()}>
             {actualButtonLabel} {removeButton}
         </ButtonBlock>
-      </div>
     </Collapse>
     {show && <ChoiceSelectorDialog
         choiceName={choiceName}

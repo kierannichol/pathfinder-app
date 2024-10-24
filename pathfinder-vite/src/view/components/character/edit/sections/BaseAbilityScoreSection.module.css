@@ -1,19 +1,57 @@
 .ability-label {
-  background-color: black;
-  color: white;
+  background-color: var(--pf-active-background-color);
+  color: var(--pf-active-color);
+  min-width: 3em;
 }
 
-.base-ability-scores, .ability-row {
-  gap: 5px;
+.base-ability-scores {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ability-row {
+  gap: 10px;
+}
+
+.ability-row {
+  display: flex;
 }
 
 .ability-row>* {
   width: 5rem;
   align-content: center;
   text-align: center;
+  line-height: 1em;
+}
+
+.text-input {
+  width: 100%;
+  border: none;
+  text-align: center;
 }
 
 .radio {
   width: 2rem;
   height: 2rem;
+}
+
+.selected {
+  color: green;
+}
+
+.radio2 {
+  font-size: 0.75em;
+  width: 2em;
+  height: 2em;
+  border: 0.2em solid;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+  line-height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -1px;
 }

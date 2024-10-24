@@ -1,0 +1,25 @@
+{
+  "id": "ability:bloodline_feat#destined_bloodline",
+  "name": "Bloodline Feat (Destined Bloodline)",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "bloodline_feat",
+          "label": "Bloodline Feat",
+          "type": "bonus_feat",
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["feat:arcane_strike", "feat:diehard", "feat:endurance", "feat:leadership", "feat:lightning_reflexes", "feat:maximize_spell", "feat:weapon_focus"]
+          }
+        }]
+      }]
+    }
+  }
+}

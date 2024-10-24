@@ -13,12 +13,13 @@ interface BoxedValueProps extends PropsWithChildren {
 }
 
 export default function BoxedValue({ children, id = undefined, label = undefined, className = undefined, tabIndex = undefined, onClick = undefined, onFocus = undefined, onBlur = undefined }: BoxedValueProps) {
-  return <div id={id} className={classNames([`${styles['boxed-value']}`, className])}>
-    <div tabIndex={tabIndex}
-         onFocus={onFocus}
-         onBlur={onBlur}
-         onClick={onClick}
-         className={styles.boxed}>
+  return <div id={id}
+              className={classNames([`${styles['boxed-value']}`, className])}
+              tabIndex={tabIndex}
+              onFocus={onFocus}
+              onBlur={onBlur}
+              onClick={onClick}>
+    <div className={styles.boxed}>
       {children}
     </div>
     {label && <label>{label}</label>}

@@ -143,7 +143,6 @@ public class GenerateSpellItemsModifier extends AbstractLocalPathfinderDatabaseM
                     .findFirst()
                     .flatMap(level -> {
                         int spellLevel = level.level();
-                        int casterLevel =
 //                        if (costsPerLevel.length <= spellLevel) {
 //                            return Optional.empty();
 //                        }

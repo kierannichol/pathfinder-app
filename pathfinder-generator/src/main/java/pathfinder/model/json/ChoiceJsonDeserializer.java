@@ -1,6 +1,7 @@
 package pathfinder.model.json;
 
 import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.ObjectCodec;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
@@ -12,6 +13,7 @@ import pathfinder.model.FeatureSelectByTagChoice;
 import pathfinder.model.FeatureSelectCategory;
 import pathfinder.model.FeatureSelectSortBy;
 import pathfinder.model.Id;
+import pathfinder.model.RepeatingChoiceType;
 import pathfinder.model.TextChoice;
 
 public class ChoiceJsonDeserializer extends StdDeserializer<Choice> {
@@ -22,12 +24,15 @@ public class ChoiceJsonDeserializer extends StdDeserializer<Choice> {
 
     @Override
     public Choice deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
-        JsonNode node = p.getCodec().readTree(p);
+        ObjectCodec codec = p.getCodec();
+        JsonNode node = codec.readTree(p);
 
         String choiceId = node.get("choice_id").asText();
         String label = node.get("label").asText("");
         String type = node.get("type").asText("");
-        boolean repeating = node.has("repeating") && node.get("repeating").asBoolean();
+        RepeatingChoiceType repeating = node.has("repeating")
+            ? codec.treeToValue(node.get("repeating"), RepeatingChoiceType.class)
+            : RepeatingChoiceType.none();
         var sortByNode = node.get("sort_by");
         String sortBy = sortByNode != null ? sortByNode.asText("none") : "none";
 

@@ -73,10 +73,133 @@
           "choiceId": "archetype",
           "label": "Archetype",
           "type": "archetype",
-          "repeating": true,
+          "repeating": {
+            "unlimited": {
+            }
+          },
           "featureSelect": {
             "optionTags": ["archetype+witch"],
             "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "witch:spells_0",
+          "label": "Witch Level 0 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch0"]
+          }
+        }, {
+          "choiceId": "witch:spells_1",
+          "label": "Witch Level 1 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch1"]
+          }
+        }, {
+          "choiceId": "witch:spells_2",
+          "label": "Witch Level 2 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch2"]
+          }
+        }, {
+          "choiceId": "witch:spells_3",
+          "label": "Witch Level 3 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch3"]
+          }
+        }, {
+          "choiceId": "witch:spells_4",
+          "label": "Witch Level 4 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch4"]
+          }
+        }, {
+          "choiceId": "witch:spells_5",
+          "label": "Witch Level 5 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch5"]
+          }
+        }, {
+          "choiceId": "witch:spells_6",
+          "label": "Witch Level 6 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch6"]
+          }
+        }, {
+          "choiceId": "witch:spells_7",
+          "label": "Witch Level 7 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch7"]
+          }
+        }, {
+          "choiceId": "witch:spells_8",
+          "label": "Witch Level 8 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch8"]
+          }
+        }, {
+          "choiceId": "witch:spells_9",
+          "label": "Witch Level 9 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch9"]
           }
         }]
       }, {

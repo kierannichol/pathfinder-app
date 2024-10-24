@@ -48,7 +48,7 @@ public class AbstractComponentBuilder<SELF extends AbstractComponentBuilder<SELF
     }
 
     public SELF addRepeatingFeatureSelectByTagChoice(String id, String label, String type, String... optionTags) {
-        return addChoice(new FeatureSelectByTagChoice(id, label, type, List.of(optionTags), List.of(), List.of(), FeatureSelectSortBy.NAME, true));
+        return addChoice(new FeatureSelectByTagChoice(id, label, type, List.of(optionTags), List.of(), List.of(), FeatureSelectSortBy.NAME, RepeatingChoiceType.unlimited()));
     }
 
     public SELF addChoice(Choice choice) {

@@ -15,14 +15,26 @@
             "targetStackCount": 1,
             "linksToAdd": ["ability:dehydrating_touch#sorcerer"]
           }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:bloodline_feat#aquatic_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
             "targetStackCount": 3,
             "linksToAdd": ["ability:aquatic_adaptation#sorcerer"]
           }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:control_water#sorcerer", "ability:deep_one#sorcerer"]
           }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:bloodline_feat#aquatic_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
             "targetStackCount": 9,
             "linksToAdd": ["ability:aquatic_telepathy#sorcerer"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:bloodline_feat#aquatic_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
             "linksToAdd": ["ability:suggestion#sorcerer", "ability:raise_the_deep#sorcerer"]
@@ -30,39 +42,5 @@
         }]
       }]
     }
-  },
-  "conditionalStacks": [{
-    "conditionFormula": "@class:sorcerer\u003e\u003d7",
-    "choices": [{
-      "choiceId": "sorcerer7:bloodline_feat",
-      "label": "Bloodline Feat",
-      "type": "bonus_feat",
-      "featureSelect": {
-        "featureIds": ["feat:athletic", "feat:brew_potion", "feat:defensive_combat_training", "feat:dodge", "feat:mobility", "feat:silent_spell", "feat:skill_focus", "feat:toughness"],
-        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-      }
-    }]
-  }, {
-    "conditionFormula": "@class:sorcerer\u003e\u003d13",
-    "choices": [{
-      "choiceId": "sorcerer13:bloodline_feat",
-      "label": "Bloodline Feat",
-      "type": "bonus_feat",
-      "featureSelect": {
-        "featureIds": ["feat:athletic", "feat:brew_potion", "feat:defensive_combat_training", "feat:dodge", "feat:mobility", "feat:silent_spell", "feat:skill_focus", "feat:toughness"],
-        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-      }
-    }]
-  }, {
-    "conditionFormula": "@class:sorcerer\u003e\u003d19",
-    "choices": [{
-      "choiceId": "sorcerer19:bloodline_feat",
-      "label": "Bloodline Feat",
-      "type": "bonus_feat",
-      "featureSelect": {
-        "featureIds": ["feat:athletic", "feat:brew_potion", "feat:defensive_combat_training", "feat:dodge", "feat:mobility", "feat:silent_spell", "feat:skill_focus", "feat:toughness"],
-        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-      }
-    }]
-  }]
+  }
 }

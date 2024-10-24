@@ -1,7 +1,5 @@
 package pathfinder.generator.mapper;
 
-import static pathfinder.util.ListUtils.mapList;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -13,12 +11,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import pathfinder.db.PathfinderDatabase;
 import pathfinder.db.query.Query;
-import pathfinder.model.ConditionalStack;
 import pathfinder.model.Feature;
 import pathfinder.model.Feature.FeatureBuilder;
 import pathfinder.model.FeatureModification;
+import pathfinder.model.FeatureModification.FeatureModificationBuilder;
+import pathfinder.model.FeatureSelectByTagChoice;
 import pathfinder.model.Id;
-import pathfinder.model.Stack;
 import pathfinder.model.StackBuilder;
 import pathfinder.model.pathfinder.Bloodline;
 import pathfinder.model.pathfinder.Feat;
@@ -55,7 +53,9 @@ public class BloodlineMapper {
             });
         });
 
-        addBloodlineFeatChoices(bloodlineModel, bloodline);
+        addBloodlineFeatChoices(bloodlineModel,
+                featureList,
+                bloodlineModification);
 
         bloodlineStack.addFeatureModification(bloodlineModification.build());
         bloodline.addFixedStack(bloodlineStack.build());
@@ -72,17 +72,35 @@ public class BloodlineMapper {
         return Optional.of(Integer.parseInt(matches.group(1)));
     }
 
-    private void addBloodlineFeatChoices(Bloodline bloodline, FeatureBuilder feature) {
+    private void addBloodlineFeatChoices(Bloodline bloodline,
+            List<Feature> features,
+            FeatureModificationBuilder modification) {
+        String bonusFeatFeatureId = "ability:bloodline_feat#%s".formatted(bloodline.id().key);
+        features.add(Feature.builder(bonusFeatFeatureId)
+                        .addFixedStack(new StackBuilder()
+                                .addChoice(FeatureSelectByTagChoice.builder("bloodline_feat", "Bloodline Feat", "bonus_feat")
+                                        .featureIds(bloodline.bonusFeats().stream()
+//                                                .map(featName -> database.query(Query.feat(featName)).findFirst().orElseThrow(() -> new IllegalArgumentException("Feat not found: " + featName)))
+                                                .flatMap(featName -> database.query(Query.feat(featName)))
+                                                .map(Feat::id)
+                                                .toList())
+                                        .build())
+                                .build())
+                .build());
+
         List<Integer> levels = List.of(7, 13, 19);
         for (int level : levels) {
-            String conditionFormula = "@%s>=%d".formatted(bloodline.classId(), level);
-            Stack stack = new StackBuilder()
-                    .addFeatureSelectByIdsChoice("%s%d:bloodline_feat".formatted(bloodline.classId().key, level),
-                            "Bloodline Feat",
-                            "bonus_feat",
-                            mapList(bloodline.bonusFeats(), this::findFeatId))
-                    .build();
-            feature.addConditionalStack(new ConditionalStack(conditionFormula, stack));
+            modification.stack(level)
+                    .addsFeature(Id.of(bonusFeatFeatureId))
+                    .removesFeature(Id.of("ability:bloodline_feat#%s".formatted(bloodline.classId().key)));
+//            String conditionFormula = "@%s>=%d".formatted(bloodline.classId(), level);
+//            Stack stack = new StackBuilder()
+//                    .addFeatureSelectByIdsChoice("%s%d:bloodline_feat".formatted(bloodline.classId().key, level),
+//                            "Bloodline Feat",
+//                            "bonus_feat",
+//                            mapList(bloodline.bonusFeats(), this::findFeatId))
+//                    .build();
+//            feature.addConditionalStack(new ConditionalStack(conditionFormula, stack));
         }
     }
 

@@ -18,54 +18,32 @@
             "targetStackCount": 1,
             "linksToAdd": ["ability:staggering_strike#bloodrager"]
           }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:bloodline_feat#aberrant_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:aberrant_form#bloodrager"]
           }, {
             "targetStackCount": 4,
             "linksToAdd": ["ability:abnormal_reach#bloodrager"]
           }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:bloodline_feat#aberrant_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
             "targetStackCount": 8,
             "linksToAdd": ["ability:aberrant_fortitude#bloodrager"]
           }, {
             "targetStackCount": 12,
             "linksToAdd": ["ability:unusual_anatomy#bloodrager"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:bloodline_feat#aberrant_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
           }]
         }]
       }]
     }
-  },
-  "conditionalStacks": [{
-    "conditionFormula": "@class:bloodrager\u003e\u003d7",
-    "choices": [{
-      "choiceId": "bloodrager7:bloodline_feat",
-      "label": "Bloodline Feat",
-      "type": "bonus_feat",
-      "featureSelect": {
-        "featureIds": ["feat:combat_reflexes", "feat:great_fortitude", "feat:improved_disarm", "feat:improved_grapple", "feat:improved_initiative", "feat:improved_unarmed_strike", "feat:iron_will"],
-        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-      }
-    }]
-  }, {
-    "conditionFormula": "@class:bloodrager\u003e\u003d13",
-    "choices": [{
-      "choiceId": "bloodrager13:bloodline_feat",
-      "label": "Bloodline Feat",
-      "type": "bonus_feat",
-      "featureSelect": {
-        "featureIds": ["feat:combat_reflexes", "feat:great_fortitude", "feat:improved_disarm", "feat:improved_grapple", "feat:improved_initiative", "feat:improved_unarmed_strike", "feat:iron_will"],
-        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-      }
-    }]
-  }, {
-    "conditionFormula": "@class:bloodrager\u003e\u003d19",
-    "choices": [{
-      "choiceId": "bloodrager19:bloodline_feat",
-      "label": "Bloodline Feat",
-      "type": "bonus_feat",
-      "featureSelect": {
-        "featureIds": ["feat:combat_reflexes", "feat:great_fortitude", "feat:improved_disarm", "feat:improved_grapple", "feat:improved_initiative", "feat:improved_unarmed_strike", "feat:iron_will"],
-        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-      }
-    }]
-  }]
+  }
 }

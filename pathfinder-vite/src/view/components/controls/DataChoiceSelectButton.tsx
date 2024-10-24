@@ -71,8 +71,8 @@ export default function DataChoiceSelectButton({ choiceRef, choiceIndex, charact
         return categories;
       }}
       children={children}
-      actionVerb={choiceRef.repeatingIndex === 0 ? 'Select' : 'Add'}
-      removable={choiceRef.repeatingIndex > 0 && selected !== ''}
+      actionVerb={choiceRef.isRepeating ? 'Add' : 'Select'}
+      removable={choiceRef.isRepeating && selected !== ''}
   />
 }
 

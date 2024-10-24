@@ -1,0 +1,25 @@
+{
+  "id": "ability:bloodline_feat#stormborn_bloodline",
+  "name": "Bloodline Feat (Stormborn Bloodline)",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "bloodline_feat",
+          "label": "Bloodline Feat",
+          "type": "bonus_feat",
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["feat:deadly_aim", "feat:dodge", "feat:enlarge_spell", "feat:far_shot", "feat:great_fortitude", "feat:point_blank_shot", "feat:wind_stance"]
+          }
+        }]
+      }]
+    }
+  }
+}

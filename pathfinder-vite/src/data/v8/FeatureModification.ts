@@ -2,6 +2,7 @@ import {ResolvedTrait, Trait} from "./Trait.ts";
 import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
 import AppliedState from "./AppliedState.ts";
 import {Link} from "./Link.ts";
+import {FeatureRef} from "@/data/v8/Feature.ts";
 
 export class FeatureModification implements Trait {
 
@@ -9,10 +10,11 @@ export class FeatureModification implements Trait {
               public readonly stackModifications: StackModification[]) {
   }
 
-  async resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait> {
+  async resolve(parent: FeatureRef, context: ResolvedEntityContext): Promise<ResolvedTrait> {
     return new ResolvedFeatureModification(this.targetFeatureId,
-        await Promise.all(this.stackModifications.map(stackModification =>
-            stackModification.resolve(basePath, context))));
+        await Promise.all(this.stackModifications
+          .filter(stackModification => stackModification.targetStackCount <= context.count(stackModification.targetFeatureId))
+          .map(stackModification => stackModification.resolve(parent, context))));
   }
 
 }
@@ -41,11 +43,12 @@ export class StackModification implements Trait {
               public readonly linksToRemove: string[]) {
   }
 
-  async resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedStackModification> {
+  async resolve(parent: FeatureRef, context: ResolvedEntityContext): Promise<ResolvedStackModification> {
+    const stackRef = context.getStackRef(this.targetFeatureId, this.targetStackCount);
     return new ResolvedStackModification(
         this.targetFeatureId,
         this.targetStackCount,
-        await Promise.all(this.linksToAdd.map(link => link.resolve(basePath, context))),
+        await Promise.all(this.linksToAdd.map(link => link.resolve(stackRef, context))),
         this.linksToRemove);
   }
 

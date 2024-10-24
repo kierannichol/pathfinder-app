@@ -18,54 +18,32 @@
             "targetStackCount": 1,
             "linksToAdd": ["ability:angelic_attacks#bloodrager"]
           }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:bloodline_feat#celestial_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:ascension#bloodrager"]
           }, {
             "targetStackCount": 4,
             "linksToAdd": ["ability:celestial_resistances#bloodrager"]
           }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:bloodline_feat#celestial_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
             "targetStackCount": 8,
             "linksToAdd": ["ability:conviction#bloodrager"]
           }, {
             "targetStackCount": 12,
             "linksToAdd": ["ability:wings_of_heaven#bloodrager"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:bloodline_feat#celestial_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
           }]
         }]
       }]
     }
-  },
-  "conditionalStacks": [{
-    "conditionFormula": "@class:bloodrager\u003e\u003d7",
-    "choices": [{
-      "choiceId": "bloodrager7:bloodline_feat",
-      "label": "Bloodline Feat",
-      "type": "bonus_feat",
-      "featureSelect": {
-        "featureIds": ["feat:dodge", "feat:improved_initiative", "feat:iron_will", "feat:mobility", "feat:mounted_combat", "feat:ride_by_attack", "feat:weapon_focus"],
-        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-      }
-    }]
-  }, {
-    "conditionFormula": "@class:bloodrager\u003e\u003d13",
-    "choices": [{
-      "choiceId": "bloodrager13:bloodline_feat",
-      "label": "Bloodline Feat",
-      "type": "bonus_feat",
-      "featureSelect": {
-        "featureIds": ["feat:dodge", "feat:improved_initiative", "feat:iron_will", "feat:mobility", "feat:mounted_combat", "feat:ride_by_attack", "feat:weapon_focus"],
-        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-      }
-    }]
-  }, {
-    "conditionFormula": "@class:bloodrager\u003e\u003d19",
-    "choices": [{
-      "choiceId": "bloodrager19:bloodline_feat",
-      "label": "Bloodline Feat",
-      "type": "bonus_feat",
-      "featureSelect": {
-        "featureIds": ["feat:dodge", "feat:improved_initiative", "feat:iron_will", "feat:mobility", "feat:mounted_combat", "feat:ride_by_attack", "feat:weapon_focus"],
-        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-      }
-    }]
-  }]
+  }
 }

@@ -8,7 +8,7 @@ import {CharacterChoiceSelectHandler} from "../edit/CharacterEditor.tsx";
 import EquipmentEditorButton from "../equipment/EquipmentEditorButton.tsx";
 import CharacterAtLevel from "../../../../data/v8/CharacterAtLevel.ts";
 import {ChoiceInputType, ChoiceRef, SelectChoiceRef} from "@/data/v8/Choice.ts";
-import {Feature} from "@/data/v8/Feature.ts";
+import {ResolvedFeature} from "@/data/v8/Feature.ts";
 import EditSkillsButton from "@/view/components/character/plan/EditSkillsButton.tsx";
 
 interface CharacterLevelEditorProps {
@@ -67,7 +67,7 @@ export default function CharacterLevelEditor({ characterAtLevel, characterAtPrev
   </div>
 }
 
-function notFromChoice(feature: Feature, characterAtLevel: CharacterAtLevel) {
+function notFromChoice(feature: ResolvedFeature, characterAtLevel: CharacterAtLevel) {
   return !characterAtLevel.choices
       .find(choice => characterAtLevel.selected(choice) === feature.key);
 }
@@ -80,7 +80,7 @@ function showChoice(choice: ChoiceRef): boolean {
       || choice.type === 'skill');
 }
 
-function showFeature(feature: Feature): boolean {
+function showFeature(feature: ResolvedFeature): boolean {
   return !(feature.tags.includes('archetype')
     || feature.tags.includes('class')
     || feature.key.startsWith('proficiency:')

@@ -2,7 +2,7 @@ import {BaseDataContext, DataContext, Resolvable, ResolvedValue} from "@kieranni
 import Character from "./Character.ts";
 import Expression from "../../utils/logic/Expression.ts";
 import {ChoiceRef} from "./Choice.ts";
-import {Feature} from "./Feature.ts";
+import {ResolvedFeature} from "./Feature.ts";
 import {EntityState} from "./Entity.ts";
 import {array} from "@/app/pfutils.ts";
 
@@ -10,7 +10,7 @@ export default class CharacterAtLevel extends BaseDataContext {
 
   constructor(public readonly level: number,
               private readonly character: Character,
-              public readonly features: Feature[] = [],
+              public readonly features: ResolvedFeature[] = [],
               private readonly state: EntityState = {},
               public readonly choices: ChoiceRef[] = []) {
     super();
@@ -36,9 +36,9 @@ export default class CharacterAtLevel extends BaseDataContext {
       .find(choice => choice.path === id);
   }
 
-  public choicesOfType(type: string): ChoiceRef[] {
+  public choicesOfType(...type: string[]): ChoiceRef[] {
     return this.choices
-        .filter(choice => choice.type === type);
+        .filter(choice => type.includes(choice.type));
   }
 
   public modify(modifyFn: (state: EntityState) => void): CharacterAtLevel {
@@ -91,7 +91,7 @@ export default class CharacterAtLevel extends BaseDataContext {
       } catch (ResolvableError) {}
     }
 
-    const intersectedFeatures: Feature[] = this.features.filter(feature => {
+    const intersectedFeatures: ResolvedFeature[] = this.features.filter(feature => {
       return intersectedState[feature.key] !== undefined;
     })
 

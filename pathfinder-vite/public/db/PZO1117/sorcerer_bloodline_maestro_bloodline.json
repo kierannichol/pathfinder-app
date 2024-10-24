@@ -15,14 +15,26 @@
             "targetStackCount": 1,
             "linksToAdd": ["ability:beguiling_voice#sorcerer"]
           }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:bloodline_feat#maestro_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
             "targetStackCount": 3,
             "linksToAdd": ["ability:fascinate#sorcerer"]
           }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:grand_maestro#sorcerer"]
           }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:bloodline_feat#maestro_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
             "targetStackCount": 9,
             "linksToAdd": ["ability:perfect_voice#sorcerer"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:bloodline_feat#maestro_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
             "linksToAdd": ["ability:inspire#sorcerer", "ability:greater_heroism#sorcerer"]
@@ -30,39 +42,5 @@
         }]
       }]
     }
-  },
-  "conditionalStacks": [{
-    "conditionFormula": "@class:sorcerer\u003e\u003d7",
-    "choices": [{
-      "choiceId": "sorcerer7:bloodline_feat",
-      "label": "Bloodline Feat",
-      "type": "bonus_feat",
-      "featureSelect": {
-        "featureIds": ["feat:deceitful", "feat:greater_spell_focus", "feat:lingering_performance", "feat:persuasive", "feat:skill_focus", "feat:spell_focus", "feat:spellsong", "feat:still_spell"],
-        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-      }
-    }]
-  }, {
-    "conditionFormula": "@class:sorcerer\u003e\u003d13",
-    "choices": [{
-      "choiceId": "sorcerer13:bloodline_feat",
-      "label": "Bloodline Feat",
-      "type": "bonus_feat",
-      "featureSelect": {
-        "featureIds": ["feat:deceitful", "feat:greater_spell_focus", "feat:lingering_performance", "feat:persuasive", "feat:skill_focus", "feat:spell_focus", "feat:spellsong", "feat:still_spell"],
-        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-      }
-    }]
-  }, {
-    "conditionFormula": "@class:sorcerer\u003e\u003d19",
-    "choices": [{
-      "choiceId": "sorcerer19:bloodline_feat",
-      "label": "Bloodline Feat",
-      "type": "bonus_feat",
-      "featureSelect": {
-        "featureIds": ["feat:deceitful", "feat:greater_spell_focus", "feat:lingering_performance", "feat:persuasive", "feat:skill_focus", "feat:spell_focus", "feat:spellsong", "feat:still_spell"],
-        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-      }
-    }]
-  }]
+  }
 }

@@ -6,17 +6,21 @@ import {array} from "@/app/pfutils.ts";
 import Database from "./Database.ts";
 import {FeatureSummary} from "./FeatureSummary.ts";
 import React from "react";
+import {FeatureRef} from "@/data/v8/Feature.ts";
+import {DataContext, Formula} from "@kierannichol/formula-js";
 
 export interface ChoiceRef {
   inputType: ChoiceInputType;
   path: string;
   type: string;
   label: string;
+  parent: FeatureRef;
 }
 
 export interface SelectChoiceRef extends ChoiceRef {
   readonly categories: FeatureSelectCategory[];
-  readonly repeatingIndex: number;
+  readonly isRepeating: boolean;
+  maxLimit(context: DataContext): number | null;
   options(database: Database): FeatureSummary[];
   options(database: Database, query: string | undefined, filterTag: string | undefined): FeatureSummary[];
 }
@@ -29,6 +33,7 @@ export enum ChoiceInputType {
 }
 
 export abstract class ResolvedChoice implements ChoiceRef, ResolvedTrait {
+  abstract parent: FeatureRef;
   abstract path: string;
   abstract type: string;
   abstract label: string;
@@ -45,11 +50,13 @@ export class MultiSelectChoice implements Trait {
               public readonly featureIds: string[],
               public readonly categories: FeatureSelectCategory[],
               public readonly sortBy: "name" | "none",
-              public readonly repeatingIndex: number) {
+              public readonly repeatingIndex: number,
+              public readonly repeatingLimit: number | string | null) {
   }
 
-  async resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait> {
-    const path = Path.combine(basePath, this.key);
+  async resolve(parent: FeatureRef, context: ResolvedEntityContext): Promise<ResolvedTrait> {
+    const path = Path.combine(parent.path, this.key);
+    const ref = new FeatureRef(path, 'choice', this.label, parent);
     let selectedKeys = array(context.selection(path)) as string[];
     let selected: Trait[] = (selectedKeys?.length ?? []) > 0
         ? (await Promise.all(selectedKeys.map(selectedKey => context.feature(selectedKey))))
@@ -58,7 +65,8 @@ export class MultiSelectChoice implements Trait {
 
     selectedKeys.forEach(selectedKey => context.register(selectedKey));
 
-    return new ResolvedMultiSelectChoice(path,
+    return new ResolvedMultiSelectChoice(parent,
+        path,
         this.key,
         this.label,
         this.type,
@@ -67,7 +75,8 @@ export class MultiSelectChoice implements Trait {
         this.categories,
         this.sortBy,
         this.repeatingIndex,
-        await Promise.all(selected.map(s => s.resolve(basePath, context))));
+        this.repeatingLimit,
+        await Promise.all(selected.map(s => s.resolve(ref, context))));
   }
 }
 
@@ -105,7 +114,8 @@ abstract class BaseResolvedSelectChoice extends ResolvedChoice {
 export class ResolvedMultiSelectChoice extends BaseResolvedSelectChoice implements SelectChoiceRef {
   readonly inputType: ChoiceInputType = ChoiceInputType.Select;
 
-  constructor(public readonly path: string,
+  constructor(public readonly parent: FeatureRef,
+              public readonly path: string,
               public readonly key: string,
               public readonly label: string,
               public readonly type: string,
@@ -114,8 +124,18 @@ export class ResolvedMultiSelectChoice extends BaseResolvedSelectChoice implemen
               public readonly categories: FeatureSelectCategory[],
               public readonly sortBy: "name" | "none",
               public readonly repeatingIndex: number,
+              public readonly repeatingLimit: number | string | null,
               private readonly selected: ResolvedTrait[]) {
     super();
+  }
+
+  isRepeating: boolean = true;
+
+  maxLimit(context: DataContext): number | null {
+      if (typeof this.repeatingLimit === 'string') {
+        return Formula.parse(this.repeatingLimit).resolve(context)?.asNumber() ?? null;
+      }
+      return this.repeatingLimit;
   }
 
   applyTo(state: AppliedState): void {
@@ -142,17 +162,18 @@ export class SelectChoice implements Trait {
               public readonly repeatingIndex: number) {
   }
 
-  async resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait> {
+  async resolve(parent: FeatureRef, context: ResolvedEntityContext): Promise<ResolvedTrait> {
     const path = this.repeatingIndex === 0
-        ? Path.combine(basePath, this.key)
-        : Path.combine(basePath, this.key, this.repeatingIndex);
+        ? Path.combine(parent.path, this.key)
+        : Path.combine(parent.path, this.key, this.repeatingIndex);
+    const ref = new FeatureRef(path, 'choice', this.label, parent);
     let selectedKey = context.selection(path) as string;
     let selected = selectedKey !== undefined
         ? await context.feature(selectedKey)
         : undefined;
 
     if (this.repeatingIndex > 0 && selected === undefined) {
-      const nextPath = Path.combine(basePath, this.key, this.repeatingIndex + 1);
+      const nextPath = Path.combine(parent.path, this.key, this.repeatingIndex + 1);
       context.swapSelections(path, nextPath);
 
       selectedKey = context.selection(path) as string;
@@ -172,10 +193,12 @@ export class SelectChoice implements Trait {
           this.featureIds,
           this.categories,
           this.sortBy,
-          this.repeatingIndex + 1).resolve(basePath, context);
+          this.repeatingIndex + 1).resolve(ref, context);
     }
 
-    return new ResolvedSelectChoice(path,
+    return new ResolvedSelectChoice(
+        parent,
+        path,
         this.key,
         this.label,
         this.type,
@@ -184,7 +207,7 @@ export class SelectChoice implements Trait {
         this.categories,
         this.sortBy,
         this.repeatingIndex,
-        await selected?.resolve(basePath, context),
+        await selected?.resolve(ref, context),
         repeatedChoice);
   }
 }
@@ -192,7 +215,8 @@ export class SelectChoice implements Trait {
 export class ResolvedSelectChoice extends BaseResolvedSelectChoice implements SelectChoiceRef {
   readonly inputType: ChoiceInputType = ChoiceInputType.Select;
 
-  constructor(public readonly path: string,
+  constructor(public readonly parent: FeatureRef,
+              public readonly path: string,
               public readonly key: string,
               public readonly label: string,
               public readonly type: string,
@@ -202,8 +226,14 @@ export class ResolvedSelectChoice extends BaseResolvedSelectChoice implements Se
               public readonly sortBy: "name" | "none",
               public readonly repeatingIndex: number,
               private readonly selected?: ResolvedTrait,
-              private readonly repeatedChoice?: ResolvedTrait) {
+              private readonly repeatedChoice?: ResolvedTrait,) {
     super();
+  }
+
+  isRepeating: boolean = false;
+
+  maxLimit(): number | null {
+      return 1;
   }
 
   applyTo(state: AppliedState): void {
@@ -229,10 +259,10 @@ export class TextChoice implements Trait {
               public readonly repeatingIndex: number) {
   }
 
-  async resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait> {
-    const path = Path.combine(basePath, this.key);
+  async resolve(parent: FeatureRef, context: ResolvedEntityContext): Promise<ResolvedTrait> {
+    const path = Path.combine(parent.path, this.key);
     const selectedValue = context.selection(path) as string;
-    return new ResolvedTextChoice(path, this.key, this.label, this.type, this.repeatingIndex, selectedValue);
+    return new ResolvedTextChoice(parent, path, this.key, this.label, this.type, this.repeatingIndex, selectedValue);
   }
 
 }
@@ -241,7 +271,8 @@ export class ResolvedTextChoice extends ResolvedChoice {
   readonly inputType: ChoiceInputType = ChoiceInputType.Text;
   readonly children: ResolvedTrait[] = [];
 
-  constructor(public readonly path: string,
+  constructor(public readonly parent: FeatureRef,
+              public readonly path: string,
               public readonly key: string,
               public readonly label: string,
               public readonly type: string,

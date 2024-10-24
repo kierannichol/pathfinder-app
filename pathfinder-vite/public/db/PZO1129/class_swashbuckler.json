@@ -113,10 +113,133 @@
           "choiceId": "archetype",
           "label": "Archetype",
           "type": "archetype",
-          "repeating": true,
+          "repeating": {
+            "unlimited": {
+            }
+          },
           "featureSelect": {
             "optionTags": ["archetype+swashbuckler"],
             "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "swashbuckler:spells_0",
+          "label": "Swashbuckler Level 0 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#swashbuckler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+swashbuckler0"]
+          }
+        }, {
+          "choiceId": "swashbuckler:spells_1",
+          "label": "Swashbuckler Level 1 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#swashbuckler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+swashbuckler1"]
+          }
+        }, {
+          "choiceId": "swashbuckler:spells_2",
+          "label": "Swashbuckler Level 2 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#swashbuckler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+swashbuckler2"]
+          }
+        }, {
+          "choiceId": "swashbuckler:spells_3",
+          "label": "Swashbuckler Level 3 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#swashbuckler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+swashbuckler3"]
+          }
+        }, {
+          "choiceId": "swashbuckler:spells_4",
+          "label": "Swashbuckler Level 4 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#swashbuckler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+swashbuckler4"]
+          }
+        }, {
+          "choiceId": "swashbuckler:spells_5",
+          "label": "Swashbuckler Level 5 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#swashbuckler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+swashbuckler5"]
+          }
+        }, {
+          "choiceId": "swashbuckler:spells_6",
+          "label": "Swashbuckler Level 6 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#swashbuckler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+swashbuckler6"]
+          }
+        }, {
+          "choiceId": "swashbuckler:spells_7",
+          "label": "Swashbuckler Level 7 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#swashbuckler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+swashbuckler7"]
+          }
+        }, {
+          "choiceId": "swashbuckler:spells_8",
+          "label": "Swashbuckler Level 8 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#swashbuckler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+swashbuckler8"]
+          }
+        }, {
+          "choiceId": "swashbuckler:spells_9",
+          "label": "Swashbuckler Level 9 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#swashbuckler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+swashbuckler9"]
           }
         }]
       }, {

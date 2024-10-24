@@ -8,10 +8,10 @@ import {
 import {EquipmentSetStore, FirebaseEquipmentSetStore} from "./v8/EquipmentSetStore.ts";
 
 
-// let globalDatabase: Promise<Database> | undefined = undefined;
-// let globalItemDatabase: Promise<ItemDatabase> | undefined = undefined;
-// let globalCharacterStore: Promise<CharacterStore> | undefined = undefined;
-// let globalEquipmentSetStore: Promise<EquipmentSetStore> | undefined = undefined;
+let globalDatabase: Promise<Database> | undefined = undefined;
+let globalItemDatabase: Promise<ItemDatabase> | undefined = undefined;
+let globalCharacterStore: Promise<CharacterStore> | undefined = undefined;
+let globalEquipmentSetStore: Promise<EquipmentSetStore> | undefined = undefined;
 
 async function initializeCharacterStore(): Promise<CharacterStore> {
   const template = await loadBaseCharacterTemplate();
@@ -25,35 +25,29 @@ async function initializeEquipmentSetStore(): Promise<EquipmentSetStore> {
 }
 
 export async function withGlobalCharacterStore(): Promise<CharacterStore> {
-  // if (!globalCharacterStore) {
-  //   globalCharacterStore = initializeCharacterStore();
-  // }
-  // return globalCharacterStore;
-  return initializeCharacterStore();
+  if (!globalCharacterStore) {
+    globalCharacterStore = initializeCharacterStore();
+  }
+  return globalCharacterStore;
 }
 
 export async function withGlobalEquipmentSetStore(): Promise<EquipmentSetStore> {
-  // if (!globalEquipmentSetStore) {
-  //   globalEquipmentSetStore = initializeEquipmentSetStore();
-  // }
-  // return globalEquipmentSetStore;
-
-  return initializeEquipmentSetStore();
+  if (!globalEquipmentSetStore) {
+    globalEquipmentSetStore = initializeEquipmentSetStore();
+  }
+  return globalEquipmentSetStore;
 }
 
 export function withGlobalDatabase(): Promise<Database> {
-  // if (!globalDatabase) {
-  //   globalDatabase = initializePathfinderDatabase();
-  // }
-  // return globalDatabase;
-  return initializePathfinderDatabase();
+  if (!globalDatabase) {
+    globalDatabase = initializePathfinderDatabase();
+  }
+  return globalDatabase;
 }
 
 export function withGlobalItemDatabase(): Promise<ItemDatabase> {
-  // if (!globalItemDatabase) {
-  //   globalItemDatabase = initializePathfinderItemDatabase();
-  // }
-  // return globalItemDatabase;
-
-  return initializePathfinderItemDatabase();
+  if (!globalItemDatabase) {
+    globalItemDatabase = initializePathfinderItemDatabase();
+  }
+  return globalItemDatabase;
 }

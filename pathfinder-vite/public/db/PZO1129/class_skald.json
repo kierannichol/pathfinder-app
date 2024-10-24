@@ -129,10 +129,133 @@
           "choiceId": "archetype",
           "label": "Archetype",
           "type": "archetype",
-          "repeating": true,
+          "repeating": {
+            "unlimited": {
+            }
+          },
           "featureSelect": {
             "optionTags": ["archetype+skald"],
             "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "skald:spells_0",
+          "label": "Skald Level 0 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#skald"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+skald0"]
+          }
+        }, {
+          "choiceId": "skald:spells_1",
+          "label": "Skald Level 1 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#skald"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+skald1"]
+          }
+        }, {
+          "choiceId": "skald:spells_2",
+          "label": "Skald Level 2 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#skald"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+skald2"]
+          }
+        }, {
+          "choiceId": "skald:spells_3",
+          "label": "Skald Level 3 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#skald"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+skald3"]
+          }
+        }, {
+          "choiceId": "skald:spells_4",
+          "label": "Skald Level 4 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#skald"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+skald4"]
+          }
+        }, {
+          "choiceId": "skald:spells_5",
+          "label": "Skald Level 5 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#skald"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+skald5"]
+          }
+        }, {
+          "choiceId": "skald:spells_6",
+          "label": "Skald Level 6 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#skald"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+skald6"]
+          }
+        }, {
+          "choiceId": "skald:spells_7",
+          "label": "Skald Level 7 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#skald"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+skald7"]
+          }
+        }, {
+          "choiceId": "skald:spells_8",
+          "label": "Skald Level 8 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#skald"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+skald8"]
+          }
+        }, {
+          "choiceId": "skald:spells_9",
+          "label": "Skald Level 9 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#skald"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+skald9"]
           }
         }]
       }, {

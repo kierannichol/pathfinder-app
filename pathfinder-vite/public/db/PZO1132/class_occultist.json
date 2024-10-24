@@ -124,10 +124,133 @@
           "choiceId": "archetype",
           "label": "Archetype",
           "type": "archetype",
-          "repeating": true,
+          "repeating": {
+            "unlimited": {
+            }
+          },
           "featureSelect": {
             "optionTags": ["archetype+occultist"],
             "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "occultist:spells_0",
+          "label": "Occultist Level 0 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#occultist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+occultist0"]
+          }
+        }, {
+          "choiceId": "occultist:spells_1",
+          "label": "Occultist Level 1 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#occultist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+occultist1"]
+          }
+        }, {
+          "choiceId": "occultist:spells_2",
+          "label": "Occultist Level 2 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#occultist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+occultist2"]
+          }
+        }, {
+          "choiceId": "occultist:spells_3",
+          "label": "Occultist Level 3 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#occultist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+occultist3"]
+          }
+        }, {
+          "choiceId": "occultist:spells_4",
+          "label": "Occultist Level 4 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#occultist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+occultist4"]
+          }
+        }, {
+          "choiceId": "occultist:spells_5",
+          "label": "Occultist Level 5 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#occultist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+occultist5"]
+          }
+        }, {
+          "choiceId": "occultist:spells_6",
+          "label": "Occultist Level 6 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#occultist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+occultist6"]
+          }
+        }, {
+          "choiceId": "occultist:spells_7",
+          "label": "Occultist Level 7 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#occultist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+occultist7"]
+          }
+        }, {
+          "choiceId": "occultist:spells_8",
+          "label": "Occultist Level 8 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#occultist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+occultist8"]
+          }
+        }, {
+          "choiceId": "occultist:spells_9",
+          "label": "Occultist Level 9 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#occultist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+occultist9"]
           }
         }]
       }, {

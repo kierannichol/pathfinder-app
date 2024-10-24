@@ -2,7 +2,7 @@
   "id": "feat:toxic_spell",
   "name": "Toxic Spell",
   "tags": ["feat", "metamagic"],
-  "enabledFormula": "all(@skill:craft#poison\u003e\u003d5,@spells_per_day#2,sum(@ability:poison_use#*)[Poison Use])",
+  "enabledFormula": "all(@skill:craft#poison\u003e\u003d5,@spells_per_day#2,@slayer_talent:poison_use)",
   "maxStacks": 1,
   "description": {
     "text": "You can infuse a spell with the power of a poison.",

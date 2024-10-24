@@ -2,9 +2,10 @@ import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
 import AppliedState from "./AppliedState.ts";
 import {ConditionalResolvedTrait} from "@/data/v8/ConditionalResolvedTrait.ts";
 import {Formula} from "@kierannichol/formula-js";
+import {FeatureRef} from "@/data/v8/Feature.ts";
 
 export interface Trait {
-  resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait>;
+  resolve(parent: FeatureRef, context: ResolvedEntityContext): Promise<ResolvedTrait>;
 }
 
 export interface ResolvedTrait {
@@ -15,7 +16,7 @@ export interface ResolvedTrait {
 export function traverseTrait(trait: ResolvedTrait,
                               state: AppliedState,
                               actionFn: (descendant: ResolvedTrait, depth: number) => boolean): void {
-  traverseTraitWithDepth(trait, state,0, actionFn);
+  traverseTraitWithDepth(trait, state, 0, actionFn);
 }
 
 function traverseTraitWithDepth(trait: ResolvedTrait,

@@ -1,0 +1,25 @@
+{
+  "id": "ability:bloodline_feat#psychic_bloodline",
+  "name": "Bloodline Feat (Psychic Bloodline)",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "bloodline_feat",
+          "label": "Bloodline Feat",
+          "type": "bonus_feat",
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["feat:focused_spell", "feat:heighten_spell", "feat:intuitive_spell", "feat:iron_will", "feat:logical_spell", "feat:persuasive", "feat:quicken_spell", "feat:spell_focus"]
+          }
+        }]
+      }]
+    }
+  }
+}

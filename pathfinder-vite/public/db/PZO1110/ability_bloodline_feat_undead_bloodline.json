@@ -1,0 +1,25 @@
+{
+  "id": "ability:bloodline_feat#undead_bloodline",
+  "name": "Bloodline Feat (Undead Bloodline)",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "bloodline_feat",
+          "label": "Bloodline Feat",
+          "type": "bonus_feat",
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["feat:combat_casting", "feat:diehard", "feat:endurance", "feat:iron_will", "feat:spell_focus", "feat:still_spell", "feat:toughness"]
+          }
+        }]
+      }]
+    }
+  }
+}

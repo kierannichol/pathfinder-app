@@ -104,10 +104,133 @@
           "choiceId": "archetype",
           "label": "Archetype",
           "type": "archetype",
-          "repeating": true,
+          "repeating": {
+            "unlimited": {
+            }
+          },
           "featureSelect": {
             "optionTags": ["archetype+ranger"],
             "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "ranger:spells_0",
+          "label": "Ranger Level 0 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#ranger"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+ranger0"]
+          }
+        }, {
+          "choiceId": "ranger:spells_1",
+          "label": "Ranger Level 1 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#ranger"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+ranger1"]
+          }
+        }, {
+          "choiceId": "ranger:spells_2",
+          "label": "Ranger Level 2 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#ranger"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+ranger2"]
+          }
+        }, {
+          "choiceId": "ranger:spells_3",
+          "label": "Ranger Level 3 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#ranger"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+ranger3"]
+          }
+        }, {
+          "choiceId": "ranger:spells_4",
+          "label": "Ranger Level 4 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#ranger"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+ranger4"]
+          }
+        }, {
+          "choiceId": "ranger:spells_5",
+          "label": "Ranger Level 5 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#ranger"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+ranger5"]
+          }
+        }, {
+          "choiceId": "ranger:spells_6",
+          "label": "Ranger Level 6 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#ranger"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+ranger6"]
+          }
+        }, {
+          "choiceId": "ranger:spells_7",
+          "label": "Ranger Level 7 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#ranger"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+ranger7"]
+          }
+        }, {
+          "choiceId": "ranger:spells_8",
+          "label": "Ranger Level 8 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#ranger"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+ranger8"]
+          }
+        }, {
+          "choiceId": "ranger:spells_9",
+          "label": "Ranger Level 9 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#ranger"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+ranger9"]
           }
         }]
       }, {

@@ -4,9 +4,9 @@ export type Props = {
   value: string;
   id?: string;
   onChange?: (value: string) => void;
-  onEnter?: (value: string) => void;
-  onFocus?: () => void;
-  onBlur?: () => void;
+  onEnter?: (value: string, event: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   readonly?: boolean;
   placeholder?: string;
   autoFocus?: boolean;
@@ -19,18 +19,18 @@ export default function TextInput({ value, id, onChange, onEnter, onFocus, onBlu
 
   function handleKeyUp(event: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>) {
     if (event.key === "Enter") {
-      onEnter?.(current)
+      onEnter?.(current, event);
     }
   }
 
   function handleFocus(event: React.FocusEvent<HTMLInputElement>) {
-    event.target.select()
-    onFocus?.();
+    event.target.select();
+    onFocus?.(event);
   }
 
   function handleBlur(event: React.FocusEvent<HTMLInputElement>) {
     !readonly && onChange?.(current)
-    onBlur?.();
+    onBlur?.(event);
   }
 
   return (

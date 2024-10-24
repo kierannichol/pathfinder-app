@@ -4,6 +4,7 @@ import {Path} from "../../utils/Path.ts";
 import {EntityChoiceSelections} from "./Entity.ts";
 import Database from "./Database.ts";
 import AppliedState from "./AppliedState.ts";
+import {FeatureRef} from "@/data/v8/Feature.ts";
 
 export class CharacterTemplate {
 
@@ -55,7 +56,8 @@ export class CharacterLevelTemplate {
 
   async resolve(context: ResolvedEntityContext): Promise<ResolvedCharacterLevelTemplate> {
     const path = Path.of(this.levelNumber > 0 ? this.levelNumber : '');
-    const promises = this.traits.map(trait => trait.resolve(path, context));
+    const ref = new FeatureRef(path, 'level', this.levelNumber > 0 ? `Level ${this.levelNumber}` : 'Base', undefined);
+    const promises = this.traits.map(trait => trait.resolve(ref, context));
     const resolved = await Promise.all(promises);
     return new ResolvedCharacterLevelTemplate(
         this.levelNumber,

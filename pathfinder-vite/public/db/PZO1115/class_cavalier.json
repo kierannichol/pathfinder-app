@@ -88,10 +88,133 @@
           "choiceId": "archetype",
           "label": "Archetype",
           "type": "archetype",
-          "repeating": true,
+          "repeating": {
+            "unlimited": {
+            }
+          },
           "featureSelect": {
             "optionTags": ["archetype+cavalier"],
             "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "cavalier:spells_0",
+          "label": "Cavalier Level 0 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#cavalier"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cavalier0"]
+          }
+        }, {
+          "choiceId": "cavalier:spells_1",
+          "label": "Cavalier Level 1 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#cavalier"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cavalier1"]
+          }
+        }, {
+          "choiceId": "cavalier:spells_2",
+          "label": "Cavalier Level 2 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#cavalier"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cavalier2"]
+          }
+        }, {
+          "choiceId": "cavalier:spells_3",
+          "label": "Cavalier Level 3 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#cavalier"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cavalier3"]
+          }
+        }, {
+          "choiceId": "cavalier:spells_4",
+          "label": "Cavalier Level 4 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#cavalier"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cavalier4"]
+          }
+        }, {
+          "choiceId": "cavalier:spells_5",
+          "label": "Cavalier Level 5 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#cavalier"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cavalier5"]
+          }
+        }, {
+          "choiceId": "cavalier:spells_6",
+          "label": "Cavalier Level 6 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#cavalier"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cavalier6"]
+          }
+        }, {
+          "choiceId": "cavalier:spells_7",
+          "label": "Cavalier Level 7 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#cavalier"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cavalier7"]
+          }
+        }, {
+          "choiceId": "cavalier:spells_8",
+          "label": "Cavalier Level 8 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#cavalier"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cavalier8"]
+          }
+        }, {
+          "choiceId": "cavalier:spells_9",
+          "label": "Cavalier Level 9 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#cavalier"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cavalier9"]
           }
         }]
       }, {

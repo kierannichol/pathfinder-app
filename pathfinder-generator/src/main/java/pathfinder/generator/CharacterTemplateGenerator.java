@@ -9,6 +9,7 @@ import pathfinder.model.Effect;
 import pathfinder.model.FeatureSelectByTagChoice;
 import pathfinder.model.FeatureSelectCategory;
 import pathfinder.model.FeatureSelectSortBy;
+import pathfinder.model.RepeatingChoiceType;
 import pathfinder.model.TextChoice;
 import pathfinder.model.pathfinder.AbilityScore;
 
@@ -161,7 +162,7 @@ public class CharacterTemplateGenerator {
                     level.addChoice(ASI_CHOICE_1);
                 }
 
-                level.addChoice(new FeatureSelectByTagChoice("skills", "Skills", "skill", List.of("skill"), List.of(), List.of(), FeatureSelectSortBy.NONE, true));
+                level.addChoice(new FeatureSelectByTagChoice("skills", "Skills", "skill", List.of("skill"), List.of(), List.of(), FeatureSelectSortBy.NONE, RepeatingChoiceType.unlimited()));
             });
         }
 

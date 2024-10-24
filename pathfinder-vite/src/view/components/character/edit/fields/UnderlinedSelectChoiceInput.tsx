@@ -7,11 +7,12 @@ import ErrorBlock from "@/view/components/character/edit/common/ErrorBlock.tsx";
 
 interface UnderlinedSelectChoiceInputProps {
   choice: string | ChoiceRef;
+  choiceIndex?: number;
   label?: ReactNode;
   className?: string;
 }
 
-export function UnderlinedSelectChoiceInput({ choice, label = undefined, className = undefined }: UnderlinedSelectChoiceInputProps) {
+export function UnderlinedSelectChoiceInput({ choice, choiceIndex = undefined, label = undefined, className = undefined }: UnderlinedSelectChoiceInputProps) {
   const character = useCharacterAtLevel();
   const choiceRef = useMemo(() => typeof choice === 'string' ? character.choice(choice) : choice, [character, choice]);
 
@@ -20,6 +21,8 @@ export function UnderlinedSelectChoiceInput({ choice, label = undefined, classNa
   }
 
   return <UnderlinedValue className={className} label={label || choiceRef?.label}>
-    <SelectChoiceInput className="flex-grow-1" choice={choiceRef} />
+    <SelectChoiceInput className="d-flex flex-grow-1"
+                       choice={choiceRef}
+                       choiceIndex={choiceIndex}/>
   </UnderlinedValue>
 }

@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 import pathfinder.model.Effect;
 import pathfinder.model.Feature;
 import pathfinder.model.Feature.FeatureBuilder;
+import pathfinder.model.FeatureSelectByTagChoice;
 import pathfinder.model.core.BaseAttackBonus;
 import pathfinder.model.core.SaveBonus;
 import pathfinder.model.pathfinder.CharacterClass;
@@ -33,7 +34,7 @@ public class ClassMapper {
         characterClass.class_skills().forEach(skill -> levelEditor.level(1).addEffect(Effect.setNumber("trained:" + skill, 1)));
 
 //        addCasterLevels(characterClass, levelEditor);
-//        addSpellChoices(characterClass, levelEditor);
+        addSpellChoices(characterClass, levelEditor);
 
         addSpecialClassChoicesToClass(characterClass, levelEditor);
 
@@ -87,7 +88,15 @@ public class ClassMapper {
 //                levelEditor.level(minimumCasterLevel).addEffect(Effect.setNumber("trait:" + casterType + "_spellcaster", 1)));
 //    }
 //
-//    private void addSpellChoices(CharacterClass characterClass, ClassLevelEditor levelEditor) {
+    private void addSpellChoices(CharacterClass characterClass, ClassLevelEditor levelEditor) {
+
+        for (int i = 0; i <= 9; i++) {
+            levelEditor.level(1).addChoice(FeatureSelectByTagChoice.builder("%s:spells_%s".formatted(characterClass.id().key, i), "%s Level %s Spells".formatted(characterClass.name(), i), "spell")
+                    .repeating("@trait:level_%s_spells_per_day#%s".formatted(i, characterClass.id().key))
+                            .optionTag("spell+%s%d".formatted(characterClass.id().key, i))
+                    .build());
+        }
+
 //        for (var level : characterClass.levels()) {
 //            level.spellsPerDay().forEach((spellLevel, knownCount) -> {
 //                spellLevel = spellLevel - 1; // bad data
@@ -105,5 +114,5 @@ public class ClassMapper {
 //                }
 //            });
 //        }
-//    }
+    }
 }

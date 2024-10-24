@@ -84,10 +84,133 @@
           "choiceId": "archetype",
           "label": "Archetype",
           "type": "archetype",
-          "repeating": true,
+          "repeating": {
+            "unlimited": {
+            }
+          },
           "featureSelect": {
             "optionTags": ["archetype+magus"],
             "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "magus:spells_0",
+          "label": "Magus Level 0 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#magus"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+magus0"]
+          }
+        }, {
+          "choiceId": "magus:spells_1",
+          "label": "Magus Level 1 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#magus"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+magus1"]
+          }
+        }, {
+          "choiceId": "magus:spells_2",
+          "label": "Magus Level 2 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#magus"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+magus2"]
+          }
+        }, {
+          "choiceId": "magus:spells_3",
+          "label": "Magus Level 3 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#magus"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+magus3"]
+          }
+        }, {
+          "choiceId": "magus:spells_4",
+          "label": "Magus Level 4 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#magus"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+magus4"]
+          }
+        }, {
+          "choiceId": "magus:spells_5",
+          "label": "Magus Level 5 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#magus"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+magus5"]
+          }
+        }, {
+          "choiceId": "magus:spells_6",
+          "label": "Magus Level 6 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#magus"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+magus6"]
+          }
+        }, {
+          "choiceId": "magus:spells_7",
+          "label": "Magus Level 7 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#magus"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+magus7"]
+          }
+        }, {
+          "choiceId": "magus:spells_8",
+          "label": "Magus Level 8 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#magus"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+magus8"]
+          }
+        }, {
+          "choiceId": "magus:spells_9",
+          "label": "Magus Level 9 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#magus"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+magus9"]
           }
         }]
       }, {

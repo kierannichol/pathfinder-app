@@ -1,0 +1,25 @@
+{
+  "id": "ability:bloodline_feat#accursed_bloodline",
+  "name": "Bloodline Feat (Accursed Bloodline)",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "bloodline_feat",
+          "label": "Bloodline Feat",
+          "type": "bonus_feat",
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["feat:alertness", "feat:blind_fight", "feat:combat_casting", "feat:deceitful", "feat:defensive_combat_training", "feat:endurance", "feat:great_fortitude", "feat:mounted_combat"]
+          }
+        }]
+      }]
+    }
+  }
+}

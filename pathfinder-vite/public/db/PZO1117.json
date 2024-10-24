@@ -114,6 +114,34 @@
     "tags": ["ability", "bloodline_power"],
     "maxStacks": 1
   }, {
+    "id": "ability:bloodline_feat#accursed_bloodline",
+    "name": "Bloodline Feat (Accursed Bloodline)",
+    "maxStacks": 1
+  }, {
+    "id": "ability:bloodline_feat#djinni_bloodline",
+    "name": "Bloodline Feat (Djinni Bloodline)",
+    "maxStacks": 1
+  }, {
+    "id": "ability:bloodline_feat#efreeti_bloodline",
+    "name": "Bloodline Feat (Efreeti Bloodline)",
+    "maxStacks": 1
+  }, {
+    "id": "ability:bloodline_feat#maestro_bloodline",
+    "name": "Bloodline Feat (Maestro Bloodline)",
+    "maxStacks": 1
+  }, {
+    "id": "ability:bloodline_feat#marid_bloodline",
+    "name": "Bloodline Feat (Marid Bloodline)",
+    "maxStacks": 1
+  }, {
+    "id": "ability:bloodline_feat#rakshasa_bloodline",
+    "name": "Bloodline Feat (Rakshasa Bloodline)",
+    "maxStacks": 1
+  }, {
+    "id": "ability:bloodline_feat#shaitan_bloodline",
+    "name": "Bloodline Feat (Shaitan Bloodline)",
+    "maxStacks": 1
+  }, {
     "id": "ability:bonethrall",
     "name": "Bonethrall",
     "maxStacks": 1
@@ -1308,7 +1336,7 @@
     "id": "class:druid#menhir_savant",
     "name": "Menhir Savant",
     "tags": ["archetype", "druid"],
-    "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:wild_empathy#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:woodland_stride#druid",
+    "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:wild_empathy#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:woodland_stride#druid",
     "maxStacks": 1
   }, {
     "id": "class:druid#pack_lord",
@@ -1667,7 +1695,7 @@
     "id": "feat:extra_summons",
     "name": "Extra Summons",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@ability:summon_monster_ii#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_v#summoner,@ability:summon_monster_iv#summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer,@ability:summon_monster#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_vi#unchained_summoner[Summon monster],@class:summoner\u003e\u003d1)",
+    "enabledFormula": "all(@ability:summon_monster_v#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_viii#summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_ix#unchained_summoner[Summon monster],@class:summoner\u003e\u003d1)",
     "maxStacks": 1
   }, {
     "id": "feat:eyes_of_judgment",
@@ -1798,7 +1826,7 @@
     "id": "feat:moonlight_summons",
     "name": "Moonlight Summons",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@any,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9,@ability:summon_natures_ally#summoner_leshy_caller,@ability:summon_natures_ally#bard_animal_speaker[Summon nature\u0027s ally])",
+    "enabledFormula": "all(@any,@ability:summon_natures_ally#bard_animal_speaker,@ability:summon_natures_ally#summoner_leshy_caller,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9[Summon nature\u0027s ally])",
     "maxStacks": 1
   }, {
     "id": "feat:mystic_stride",
@@ -1915,7 +1943,7 @@
     "id": "feat:sacred_summons",
     "name": "Sacred Summons",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@any,@ability:summon_monster_ii#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_v#summoner,@ability:summon_monster_iv#summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer,@ability:summon_monster#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_vi#unchained_summoner[Summon monster])",
+    "enabledFormula": "all(@any,@ability:summon_monster_v#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_viii#summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_ix#unchained_summoner[Summon monster])",
     "maxStacks": 1
   }, {
     "id": "feat:sense_link",
@@ -1939,7 +1967,7 @@
     "id": "feat:skeleton_summoner",
     "name": "Skeleton Summoner",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@any,@ability:summon_monster_ii#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_v#summoner,@ability:summon_monster_iv#summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer,@ability:summon_monster#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_vi#unchained_summoner[Summon monster])",
+    "enabledFormula": "all(@any,@ability:summon_monster_v#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_viii#summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_ix#unchained_summoner[Summon monster])",
     "maxStacks": 1
   }, {
     "id": "feat:sorcerous_bloodstrike",
@@ -1993,13 +2021,13 @@
     "id": "feat:starlight_summons",
     "name": "Starlight Summons",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@any,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9,@ability:summon_natures_ally#summoner_leshy_caller,@ability:summon_natures_ally#bard_animal_speaker[Summon nature\u0027s ally])",
+    "enabledFormula": "all(@any,@ability:summon_natures_ally#bard_animal_speaker,@ability:summon_natures_ally#summoner_leshy_caller,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9[Summon nature\u0027s ally])",
     "maxStacks": 1
   }, {
     "id": "feat:sunlight_summons",
     "name": "Sunlight Summons",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@any,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9,@ability:summon_natures_ally#summoner_leshy_caller,@ability:summon_natures_ally#bard_animal_speaker[Summon nature\u0027s ally])",
+    "enabledFormula": "all(@any,@ability:summon_natures_ally#bard_animal_speaker,@ability:summon_natures_ally#summoner_leshy_caller,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9[Summon nature\u0027s ally])",
     "maxStacks": 1
   }, {
     "id": "feat:superior_summoning",

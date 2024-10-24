@@ -104,10 +104,133 @@
           "choiceId": "archetype",
           "label": "Archetype",
           "type": "archetype",
-          "repeating": true,
+          "repeating": {
+            "unlimited": {
+            }
+          },
           "featureSelect": {
             "optionTags": ["archetype+unchained_monk"],
             "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "unchained_monk:spells_0",
+          "label": "Unchained Monk Level 0 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#unchained_monk"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_monk0"]
+          }
+        }, {
+          "choiceId": "unchained_monk:spells_1",
+          "label": "Unchained Monk Level 1 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#unchained_monk"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_monk1"]
+          }
+        }, {
+          "choiceId": "unchained_monk:spells_2",
+          "label": "Unchained Monk Level 2 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#unchained_monk"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_monk2"]
+          }
+        }, {
+          "choiceId": "unchained_monk:spells_3",
+          "label": "Unchained Monk Level 3 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#unchained_monk"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_monk3"]
+          }
+        }, {
+          "choiceId": "unchained_monk:spells_4",
+          "label": "Unchained Monk Level 4 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#unchained_monk"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_monk4"]
+          }
+        }, {
+          "choiceId": "unchained_monk:spells_5",
+          "label": "Unchained Monk Level 5 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#unchained_monk"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_monk5"]
+          }
+        }, {
+          "choiceId": "unchained_monk:spells_6",
+          "label": "Unchained Monk Level 6 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#unchained_monk"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_monk6"]
+          }
+        }, {
+          "choiceId": "unchained_monk:spells_7",
+          "label": "Unchained Monk Level 7 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#unchained_monk"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_monk7"]
+          }
+        }, {
+          "choiceId": "unchained_monk:spells_8",
+          "label": "Unchained Monk Level 8 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#unchained_monk"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_monk8"]
+          }
+        }, {
+          "choiceId": "unchained_monk:spells_9",
+          "label": "Unchained Monk Level 9 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#unchained_monk"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_monk9"]
           }
         }]
       }, {

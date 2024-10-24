@@ -6,6 +6,11 @@ import {useDatabase} from "@/data/context.tsx";
 import VerticalLayout from "@/view/components/character/edit/common/VerticalLayout.tsx";
 import {ChoiceRef} from "@/data/v8/Choice.ts";
 import {UnderlinedSelectChoiceInput} from "@/view/components/character/edit/fields/UnderlinedSelectChoiceInput.tsx";
+import {classNames} from "@/utils/classNames.ts";
+import styles from "./ClassSelect.module.css";
+import ChoicePathLabel from "@/view/components/character/edit/common/ChoicePathLabel.tsx";
+import ArchetypeEditor from "@/view/components/character/ArchetypeEditor.tsx";
+import {useCharacterUpdate} from "@/view/components/character/edit/CharacterUpdateContext.tsx";
 
 interface ClassSelectProps {
   className?: string;
@@ -17,7 +22,7 @@ export default function ClassSelect({ className = undefined }: ClassSelectProps)
   const character = useCharacterAtLevel();
   const database = useDatabase();
 
-  const classChoices = useMemo(() => character.choicesOfType('class'), [character]);
+  const classChoices = useMemo(() => character.choicesOfType('class', 'archetype'), [character]);
 
   const current = useMemo(() => {
     const counts: {[className:string]: number} = {};
@@ -43,7 +48,7 @@ export default function ClassSelect({ className = undefined }: ClassSelectProps)
   }
 
   return (<>
-    <UnderlinedValue label='Class' className={className} onClick={handleClickValue}>{current}</UnderlinedValue>
+    <UnderlinedValue label='Class' className={classNames([styles.value, className])} onClick={handleClickValue}>{current}</UnderlinedValue>
     <ClassSelectPopup show={showPopup}
                       classChoices={classChoices}
                       onClose={handleClose} />
@@ -57,6 +62,8 @@ interface ClassSelectPopupProps {
 }
 
 function ClassSelectPopup({ show, classChoices, onClose }: ClassSelectPopupProps) {
+  const characterAtLevel = useCharacterAtLevel();
+  const update = useCharacterUpdate();
   return (<Modal
       show={show}
       onHide={onClose}
@@ -71,8 +78,13 @@ function ClassSelectPopup({ show, classChoices, onClose }: ClassSelectPopupProps
       <Container>
         <VerticalLayout>
           <UnderlinedSelectChoiceInput choice='favored_class' />
-          {classChoices.map((choice, index) =>
-              <UnderlinedSelectChoiceInput key={choice.path} label={`Level ${index+1} Class`} choice={choice} />)}
+          {classChoices.map((choice) =>
+              choice.type === 'class'
+                ? <UnderlinedSelectChoiceInput key={choice.path}
+                                           label={<ChoicePathLabel choice={choice} separator={' '} />}
+                                           choice={choice} />
+                  : <ArchetypeEditor key={choice.path} characterAtLevel={characterAtLevel} onChange={update.select} />
+          )}
         </VerticalLayout>
       </Container>
     </Modal.Body>

@@ -1,17 +1,18 @@
 import React, {ReactNode, useMemo} from "react";
 import styles from "./EntityDescription.module.scss";
 import Description from "../../../data/Description.ts";
-import {Feature} from "../../../data/v8/Feature.ts";
+import {Feature, ResolvedFeature} from "@/data/v8/Feature.ts";
 import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
-import {FeatureSummary} from "../../../data/v8/FeatureSummary.ts";
+import {FeatureSummary} from "@/data/v8/FeatureSummary.ts";
 
 interface FeatureDescriptionProps {
-  feature: Feature|FeatureSummary;
+  feature: ResolvedFeature|Feature|FeatureSummary;
   description?: Description;
   characterAtLevel?: CharacterAtLevel;
+  includeSource?: boolean;
 }
 
-export default function FeatureDescription({ feature, description}: FeatureDescriptionProps) {
+export default function FeatureDescription({ feature, description, includeSource = true }: FeatureDescriptionProps) {
   description ??= 'description' in feature ? feature.description : undefined;
   description ??= Description.empty();
 
@@ -32,7 +33,7 @@ export default function FeatureDescription({ feature, description}: FeatureDescr
         <span className={styles.p}>{descriptionTextElement}</span>
         {Object.keys(description.sections).map(sectionLabel =>
             <p key={sectionLabel}><span className={styles.sectionLabel}>{sectionLabel}:</span> <span className={styles.p}>{description?.sections[sectionLabel]}</span></p>)}
-        {feature.source && <div><i>Source: {feature.source.title}</i></div>}
+        {(includeSource && feature.source) && <div><i>Source: {feature.source.title}</i></div>}
       </div>);
 }
 

@@ -2,6 +2,7 @@ import {FeatureStack, ResolvedStack, Stack} from "./Stack.ts";
 import {ResolvedTrait, Trait} from "./Trait.ts";
 import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
 import {ConditionalResolvedTrait} from "@/data/v8/ConditionalResolvedTrait.ts";
+import {FeatureRef} from "@/data/v8/Feature.ts";
 
 export interface Stacks extends Trait {
 
@@ -14,12 +15,12 @@ export class FixedStack implements Stacks {
   }
 
   next(count: number): FeatureStack {
-    return (this.stacks[count-1] ?? Stack.Empty).instance(this.featureId, count+1);
+    return (this.stacks[count-1] ?? Stack.Empty).instance(this.featureId, count);
   }
 
-  resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait> {
+  resolve(parent: FeatureRef, context: ResolvedEntityContext): Promise<ResolvedTrait> {
     const count = context.count(this.featureId);
-    return this.next(count).resolve(basePath, context);
+    return this.next(count).resolve(parent, context);
   }
 
 }
@@ -30,11 +31,11 @@ export class RepeatingStack implements Stacks {
               private readonly stack: Stack) {
   }
 
-  async resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait> {
+  async resolve(parent: FeatureRef, context: ResolvedEntityContext): Promise<ResolvedTrait> {
     const count = context.count(this.featureId);
     return this.stack
       .instance(this.featureId, count+1)
-      .resolve(basePath, context);
+      .resolve(parent, context);
   }
 
 }
@@ -46,8 +47,8 @@ export class ConditionalStack implements Stacks {
               private readonly stack: Stack) {
   }
 
-  async resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait> {
-    const resolvedStack = await this.stack.instance(this.featureId, 1).resolve(basePath, context);
+  async resolve(parent: FeatureRef, context: ResolvedEntityContext): Promise<ResolvedTrait> {
+    const resolvedStack = await this.stack.instance(this.featureId, 1).resolve(parent, context);
 
     return new ResolvedStack(resolvedStack.featureId,
         resolvedStack.stackNumber,

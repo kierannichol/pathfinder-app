@@ -9,6 +9,7 @@ import pathfinder.model.FeatureSelectByTagChoice;
 import pathfinder.model.FeatureSelectCategory;
 import pathfinder.model.FeatureSelectSortBy;
 import pathfinder.model.Id;
+import pathfinder.model.RepeatingChoiceType;
 import pathfinder.model.TextChoice;
 
 public class ChoiceJsonSerializer extends StdSerializer<Choice> {
@@ -24,17 +25,13 @@ public class ChoiceJsonSerializer extends StdSerializer<Choice> {
             gen.writeStringField("choice_id", textChoice.choiceId());
             gen.writeStringField("label", textChoice.label());
             gen.writeStringField("type", textChoice.type());
-            if (textChoice.repeating()) {
-                gen.writeBooleanField("repeating", true);
-            }
+            provider.findValueSerializer(RepeatingChoiceType.class).serialize(textChoice.repeating(), gen, provider);
         }
         else if (value instanceof FeatureSelectByTagChoice selectChoice) {
             gen.writeStringField("choice_id", selectChoice.choiceId());
             gen.writeStringField("label", selectChoice.label());
             gen.writeStringField("type", selectChoice.type());
-            if (selectChoice.repeating()) {
-                gen.writeBooleanField("repeating", true);
-            }
+            provider.findValueSerializer(RepeatingChoiceType.class).serialize(selectChoice.repeating(), gen, provider);
 
             if (FeatureSelectSortBy.NAME.equals(selectChoice.sortBy())) {
                 gen.writeStringField("sort_by", "name");

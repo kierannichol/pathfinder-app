@@ -78,4 +78,8 @@ export class SourceItemModule {
     const dbo = await fetchProto(`db/${this.sourceCode}/${filename}.bin`, ItemOptionDbo.decode);
     return decodeItemOption(dbo);
   }
+
+  toString(): string {
+    return "Item Source Module: " + this.sourceCode;
+  }
 }

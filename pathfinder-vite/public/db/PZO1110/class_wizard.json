@@ -68,10 +68,133 @@
           "choiceId": "archetype",
           "label": "Archetype",
           "type": "archetype",
-          "repeating": true,
+          "repeating": {
+            "unlimited": {
+            }
+          },
           "featureSelect": {
             "optionTags": ["archetype+wizard"],
             "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "wizard:spells_0",
+          "label": "Wizard Level 0 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#wizard"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+wizard0"]
+          }
+        }, {
+          "choiceId": "wizard:spells_1",
+          "label": "Wizard Level 1 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#wizard"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+wizard1"]
+          }
+        }, {
+          "choiceId": "wizard:spells_2",
+          "label": "Wizard Level 2 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#wizard"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+wizard2"]
+          }
+        }, {
+          "choiceId": "wizard:spells_3",
+          "label": "Wizard Level 3 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#wizard"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+wizard3"]
+          }
+        }, {
+          "choiceId": "wizard:spells_4",
+          "label": "Wizard Level 4 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#wizard"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+wizard4"]
+          }
+        }, {
+          "choiceId": "wizard:spells_5",
+          "label": "Wizard Level 5 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#wizard"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+wizard5"]
+          }
+        }, {
+          "choiceId": "wizard:spells_6",
+          "label": "Wizard Level 6 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#wizard"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+wizard6"]
+          }
+        }, {
+          "choiceId": "wizard:spells_7",
+          "label": "Wizard Level 7 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#wizard"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+wizard7"]
+          }
+        }, {
+          "choiceId": "wizard:spells_8",
+          "label": "Wizard Level 8 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#wizard"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+wizard8"]
+          }
+        }, {
+          "choiceId": "wizard:spells_9",
+          "label": "Wizard Level 9 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#wizard"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+wizard9"]
           }
         }]
       }, {

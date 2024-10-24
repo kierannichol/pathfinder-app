@@ -1,0 +1,25 @@
+{
+  "id": "ability:bloodline_feat#fey_bloodline",
+  "name": "Bloodline Feat (Fey Bloodline)",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "bloodline_feat",
+          "label": "Bloodline Feat",
+          "type": "bonus_feat",
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["feat:combat_reflexes", "feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:step_up", "feat:intimidating_prowess"]
+          }
+        }]
+      }]
+    }
+  }
+}

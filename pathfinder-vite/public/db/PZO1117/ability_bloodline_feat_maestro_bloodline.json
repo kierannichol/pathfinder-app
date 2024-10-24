@@ -1,0 +1,25 @@
+{
+  "id": "ability:bloodline_feat#maestro_bloodline",
+  "name": "Bloodline Feat (Maestro Bloodline)",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "bloodline_feat",
+          "label": "Bloodline Feat",
+          "type": "bonus_feat",
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["feat:deceitful", "feat:lingering_performance", "feat:persuasive", "feat:spellsong", "feat:still_spell"]
+          }
+        }]
+      }]
+    }
+  }
+}

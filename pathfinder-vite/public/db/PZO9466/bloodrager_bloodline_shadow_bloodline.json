@@ -15,11 +15,19 @@
             "targetStackCount": 16,
             "linksToAdd": ["ability:shadow_door#bloodrager"]
           }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:bloodline_feat#shadow_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:shadow_warrior#bloodrager"]
           }, {
             "targetStackCount": 4,
             "linksToAdd": ["ability:shades_of_rage#bloodrager"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:bloodline_feat#shadow_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
           }, {
             "targetStackCount": 8,
             "linksToAdd": ["ability:strength_of_shadows#bloodrager"]
@@ -29,43 +37,13 @@
           }, {
             "targetStackCount": 12,
             "linksToAdd": ["ability:strike_through_shadow#bloodrager"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:bloodline_feat#shadow_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
           }]
         }]
       }]
     }
-  },
-  "conditionalStacks": [{
-    "conditionFormula": "@class:bloodrager\u003e\u003d7",
-    "choices": [{
-      "choiceId": "bloodrager7:bloodline_feat",
-      "label": "Bloodline Feat",
-      "type": "bonus_feat",
-      "featureSelect": {
-        "featureIds": ["feat:blind_fight", "feat:combat_reflexes", "feat:improved_initiative", "feat:lightning_reflexes", "feat:quick_draw", "feat:step_up"],
-        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-      }
-    }]
-  }, {
-    "conditionFormula": "@class:bloodrager\u003e\u003d13",
-    "choices": [{
-      "choiceId": "bloodrager13:bloodline_feat",
-      "label": "Bloodline Feat",
-      "type": "bonus_feat",
-      "featureSelect": {
-        "featureIds": ["feat:blind_fight", "feat:combat_reflexes", "feat:improved_initiative", "feat:lightning_reflexes", "feat:quick_draw", "feat:step_up"],
-        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-      }
-    }]
-  }, {
-    "conditionFormula": "@class:bloodrager\u003e\u003d19",
-    "choices": [{
-      "choiceId": "bloodrager19:bloodline_feat",
-      "label": "Bloodline Feat",
-      "type": "bonus_feat",
-      "featureSelect": {
-        "featureIds": ["feat:blind_fight", "feat:combat_reflexes", "feat:improved_initiative", "feat:lightning_reflexes", "feat:quick_draw", "feat:step_up"],
-        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-      }
-    }]
-  }]
+  }
 }

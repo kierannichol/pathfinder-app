@@ -70,7 +70,7 @@ function NewCharacterDialog({ show, onCreate, onCancel, defaultCharacterName = '
                    positionFixed={true}
                    multiple={false}
                    onChange={handleClassSelected}
-                   onFocus={e => e.currentTarget.select()}
+                   onFocus={e => e.currentTarget?.select()}
                    options={classOptions} />
         {/*<Form.Select>*/}
         {/*  <option></option>*/}

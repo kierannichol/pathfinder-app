@@ -5,11 +5,11 @@ import variants from "../controls/ButtonVariants.module.scss";
 import Expression from "../../../utils/logic/Expression.ts";
 import FeatureDescription from "./FeatureDescription.tsx";
 import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
-import {Feature} from "../../../data/v8/Feature.ts";
+import {ResolvedFeature} from "@/data/v8/Feature.ts";
 
 interface CharacterFeatureListProps {
   characterAtLevel: CharacterAtLevel;
-  features: Feature[];
+  features: ResolvedFeature[];
 }
 
 export default function CharacterFeatureList({ characterAtLevel, features }: CharacterFeatureListProps) {
@@ -27,7 +27,7 @@ export default function CharacterFeatureList({ characterAtLevel, features }: Cha
 
 interface FeatureButtonLabelProps {
   characterAtLevel: CharacterAtLevel;
-  feature: Feature;
+  feature: ResolvedFeature;
   type?: string;
 }
 
@@ -50,7 +50,7 @@ function FeatureButtonLabel({ characterAtLevel, feature, type = undefined }: Fea
   </div>;
 }
 
-function determineVariant(feature: Feature) {
+function determineVariant(feature: ResolvedFeature) {
   for (let tag of feature.tags) {
     if (tag in variants) {
       return tag;

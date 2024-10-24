@@ -1,0 +1,25 @@
+{
+  "id": "ability:bloodline_feat#draconic_bloodline",
+  "name": "Bloodline Feat (Draconic Bloodline)",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "bloodline_feat",
+          "label": "Bloodline Feat",
+          "type": "bonus_feat",
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["feat:blind_fight", "feat:great_fortitude", "feat:improved_initiative", "feat:power_attack", "feat:quicken_spell", "feat:toughness"]
+          }
+        }]
+      }]
+    }
+  }
+}

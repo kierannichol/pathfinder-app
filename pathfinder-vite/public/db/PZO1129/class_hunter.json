@@ -99,10 +99,133 @@
           "choiceId": "archetype",
           "label": "Archetype",
           "type": "archetype",
-          "repeating": true,
+          "repeating": {
+            "unlimited": {
+            }
+          },
           "featureSelect": {
             "optionTags": ["archetype+hunter"],
             "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "hunter:spells_0",
+          "label": "Hunter Level 0 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#hunter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+hunter0"]
+          }
+        }, {
+          "choiceId": "hunter:spells_1",
+          "label": "Hunter Level 1 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#hunter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+hunter1"]
+          }
+        }, {
+          "choiceId": "hunter:spells_2",
+          "label": "Hunter Level 2 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#hunter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+hunter2"]
+          }
+        }, {
+          "choiceId": "hunter:spells_3",
+          "label": "Hunter Level 3 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#hunter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+hunter3"]
+          }
+        }, {
+          "choiceId": "hunter:spells_4",
+          "label": "Hunter Level 4 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#hunter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+hunter4"]
+          }
+        }, {
+          "choiceId": "hunter:spells_5",
+          "label": "Hunter Level 5 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#hunter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+hunter5"]
+          }
+        }, {
+          "choiceId": "hunter:spells_6",
+          "label": "Hunter Level 6 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#hunter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+hunter6"]
+          }
+        }, {
+          "choiceId": "hunter:spells_7",
+          "label": "Hunter Level 7 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#hunter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+hunter7"]
+          }
+        }, {
+          "choiceId": "hunter:spells_8",
+          "label": "Hunter Level 8 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#hunter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+hunter8"]
+          }
+        }, {
+          "choiceId": "hunter:spells_9",
+          "label": "Hunter Level 9 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#hunter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+hunter9"]
           }
         }]
       }, {

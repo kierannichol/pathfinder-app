@@ -93,10 +93,133 @@
           "choiceId": "archetype",
           "label": "Archetype",
           "type": "archetype",
-          "repeating": true,
+          "repeating": {
+            "unlimited": {
+            }
+          },
           "featureSelect": {
             "optionTags": ["archetype+bloodrager"],
             "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "bloodrager:spells_0",
+          "label": "Bloodrager Level 0 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#bloodrager"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+bloodrager0"]
+          }
+        }, {
+          "choiceId": "bloodrager:spells_1",
+          "label": "Bloodrager Level 1 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#bloodrager"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+bloodrager1"]
+          }
+        }, {
+          "choiceId": "bloodrager:spells_2",
+          "label": "Bloodrager Level 2 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#bloodrager"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+bloodrager2"]
+          }
+        }, {
+          "choiceId": "bloodrager:spells_3",
+          "label": "Bloodrager Level 3 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#bloodrager"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+bloodrager3"]
+          }
+        }, {
+          "choiceId": "bloodrager:spells_4",
+          "label": "Bloodrager Level 4 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#bloodrager"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+bloodrager4"]
+          }
+        }, {
+          "choiceId": "bloodrager:spells_5",
+          "label": "Bloodrager Level 5 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#bloodrager"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+bloodrager5"]
+          }
+        }, {
+          "choiceId": "bloodrager:spells_6",
+          "label": "Bloodrager Level 6 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#bloodrager"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+bloodrager6"]
+          }
+        }, {
+          "choiceId": "bloodrager:spells_7",
+          "label": "Bloodrager Level 7 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#bloodrager"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+bloodrager7"]
+          }
+        }, {
+          "choiceId": "bloodrager:spells_8",
+          "label": "Bloodrager Level 8 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#bloodrager"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+bloodrager8"]
+          }
+        }, {
+          "choiceId": "bloodrager:spells_9",
+          "label": "Bloodrager Level 9 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#bloodrager"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+bloodrager9"]
           }
         }]
       }, {

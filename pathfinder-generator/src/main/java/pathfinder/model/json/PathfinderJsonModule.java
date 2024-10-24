@@ -7,6 +7,7 @@ import pathfinder.model.Description;
 import pathfinder.model.Effect;
 import pathfinder.model.Id;
 import pathfinder.model.Link;
+import pathfinder.model.RepeatingChoiceType;
 import pathfinder.model.Stack;
 import pathfinder.model.pathfinder.ClassModification;
 import pathfinder.model.pathfinder.ComplexFeature;
@@ -23,6 +24,8 @@ public class PathfinderJsonModule extends SimpleModule {
         addDeserializer(IdAndLevel.class, new IdAndLevelJsonDeserializer());
         addSerializer(Description.class, new DescriptionJsonSerializer());
         addDeserializer(Description.class, new DescriptionJsonDeserializer());
+        addSerializer(RepeatingChoiceType.class, new RepeatingChoiceTypeJsonSerializer());
+        addDeserializer(RepeatingChoiceType.class, new RepeatingChoiceTypeJsonDeserializer());
         addSerializer(Choice.class, new ChoiceJsonSerializer());
         addDeserializer(Choice.class, new ChoiceJsonDeserializer());
         addSerializer(SourceId.class, new SourceJsonSerializer());

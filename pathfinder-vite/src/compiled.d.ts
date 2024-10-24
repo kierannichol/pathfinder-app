@@ -1069,7 +1069,7 @@ export namespace data {
         type?: (string|null);
 
         /** ChoiceDbo repeating */
-        repeating?: (boolean|null);
+        repeating?: (data.RepeatingChoiceTypeDbo|null);
 
         /** ChoiceDbo text */
         text?: (data.TextChoiceInputDbo|null);
@@ -1097,7 +1097,7 @@ export namespace data {
         public type: string;
 
         /** ChoiceDbo repeating. */
-        public repeating: boolean;
+        public repeating?: (data.RepeatingChoiceTypeDbo|null);
 
         /** ChoiceDbo text. */
         public text?: (data.TextChoiceInputDbo|null);
@@ -1184,6 +1184,503 @@ export namespace data {
          * @returns The default type url
          */
         public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a RepeatingChoiceTypeDbo. */
+    interface IRepeatingChoiceTypeDbo {
+
+        /** RepeatingChoiceTypeDbo none */
+        none?: (data.RepeatingChoiceTypeDbo.None|null);
+
+        /** RepeatingChoiceTypeDbo unlimited */
+        unlimited?: (data.RepeatingChoiceTypeDbo.Unlimited|null);
+
+        /** RepeatingChoiceTypeDbo maxLimit */
+        maxLimit?: (data.RepeatingChoiceTypeDbo.MaxLimit|null);
+
+        /** RepeatingChoiceTypeDbo calculatedLimit */
+        calculatedLimit?: (data.RepeatingChoiceTypeDbo.CalculatedLimit|null);
+    }
+
+    /** Represents a RepeatingChoiceTypeDbo. */
+    class RepeatingChoiceTypeDbo implements IRepeatingChoiceTypeDbo {
+
+        /**
+         * Constructs a new RepeatingChoiceTypeDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.IRepeatingChoiceTypeDbo);
+
+        /** RepeatingChoiceTypeDbo none. */
+        public none?: (data.RepeatingChoiceTypeDbo.None|null);
+
+        /** RepeatingChoiceTypeDbo unlimited. */
+        public unlimited?: (data.RepeatingChoiceTypeDbo.Unlimited|null);
+
+        /** RepeatingChoiceTypeDbo maxLimit. */
+        public maxLimit?: (data.RepeatingChoiceTypeDbo.MaxLimit|null);
+
+        /** RepeatingChoiceTypeDbo calculatedLimit. */
+        public calculatedLimit?: (data.RepeatingChoiceTypeDbo.CalculatedLimit|null);
+
+        /** RepeatingChoiceTypeDbo type. */
+        public type?: ("none"|"unlimited"|"maxLimit"|"calculatedLimit");
+
+        /**
+         * Creates a new RepeatingChoiceTypeDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns RepeatingChoiceTypeDbo instance
+         */
+        public static create(properties?: data.IRepeatingChoiceTypeDbo): data.RepeatingChoiceTypeDbo;
+
+        /**
+         * Encodes the specified RepeatingChoiceTypeDbo message. Does not implicitly {@link data.RepeatingChoiceTypeDbo.verify|verify} messages.
+         * @param message RepeatingChoiceTypeDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.RepeatingChoiceTypeDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified RepeatingChoiceTypeDbo message, length delimited. Does not implicitly {@link data.RepeatingChoiceTypeDbo.verify|verify} messages.
+         * @param message RepeatingChoiceTypeDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.RepeatingChoiceTypeDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a RepeatingChoiceTypeDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns RepeatingChoiceTypeDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.RepeatingChoiceTypeDbo;
+
+        /**
+         * Decodes a RepeatingChoiceTypeDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns RepeatingChoiceTypeDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.RepeatingChoiceTypeDbo;
+
+        /**
+         * Verifies a RepeatingChoiceTypeDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a RepeatingChoiceTypeDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns RepeatingChoiceTypeDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.RepeatingChoiceTypeDbo;
+
+        /**
+         * Creates a plain object from a RepeatingChoiceTypeDbo message. Also converts values to other types if specified.
+         * @param message RepeatingChoiceTypeDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.RepeatingChoiceTypeDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this RepeatingChoiceTypeDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for RepeatingChoiceTypeDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    namespace RepeatingChoiceTypeDbo {
+
+        /** Properties of a None. */
+        interface INone {
+        }
+
+        /** Represents a None. */
+        class None implements INone {
+
+            /**
+             * Constructs a new None.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: data.RepeatingChoiceTypeDbo.INone);
+
+            /**
+             * Creates a new None instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns None instance
+             */
+            public static create(properties?: data.RepeatingChoiceTypeDbo.INone): data.RepeatingChoiceTypeDbo.None;
+
+            /**
+             * Encodes the specified None message. Does not implicitly {@link data.RepeatingChoiceTypeDbo.None.verify|verify} messages.
+             * @param message None message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: data.RepeatingChoiceTypeDbo.None, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified None message, length delimited. Does not implicitly {@link data.RepeatingChoiceTypeDbo.None.verify|verify} messages.
+             * @param message None message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: data.RepeatingChoiceTypeDbo.None, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a None message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns None
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.RepeatingChoiceTypeDbo.None;
+
+            /**
+             * Decodes a None message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns None
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.RepeatingChoiceTypeDbo.None;
+
+            /**
+             * Verifies a None message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a None message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns None
+             */
+            public static fromObject(object: { [k: string]: any }): data.RepeatingChoiceTypeDbo.None;
+
+            /**
+             * Creates a plain object from a None message. Also converts values to other types if specified.
+             * @param message None
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: data.RepeatingChoiceTypeDbo.None, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this None to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for None
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of an Unlimited. */
+        interface IUnlimited {
+        }
+
+        /** Represents an Unlimited. */
+        class Unlimited implements IUnlimited {
+
+            /**
+             * Constructs a new Unlimited.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: data.RepeatingChoiceTypeDbo.IUnlimited);
+
+            /**
+             * Creates a new Unlimited instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns Unlimited instance
+             */
+            public static create(properties?: data.RepeatingChoiceTypeDbo.IUnlimited): data.RepeatingChoiceTypeDbo.Unlimited;
+
+            /**
+             * Encodes the specified Unlimited message. Does not implicitly {@link data.RepeatingChoiceTypeDbo.Unlimited.verify|verify} messages.
+             * @param message Unlimited message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: data.RepeatingChoiceTypeDbo.Unlimited, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified Unlimited message, length delimited. Does not implicitly {@link data.RepeatingChoiceTypeDbo.Unlimited.verify|verify} messages.
+             * @param message Unlimited message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: data.RepeatingChoiceTypeDbo.Unlimited, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an Unlimited message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns Unlimited
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.RepeatingChoiceTypeDbo.Unlimited;
+
+            /**
+             * Decodes an Unlimited message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns Unlimited
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.RepeatingChoiceTypeDbo.Unlimited;
+
+            /**
+             * Verifies an Unlimited message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an Unlimited message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Unlimited
+             */
+            public static fromObject(object: { [k: string]: any }): data.RepeatingChoiceTypeDbo.Unlimited;
+
+            /**
+             * Creates a plain object from an Unlimited message. Also converts values to other types if specified.
+             * @param message Unlimited
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: data.RepeatingChoiceTypeDbo.Unlimited, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Unlimited to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for Unlimited
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of a MaxLimit. */
+        interface IMaxLimit {
+
+            /** MaxLimit limit */
+            limit?: (number|null);
+        }
+
+        /** Represents a MaxLimit. */
+        class MaxLimit implements IMaxLimit {
+
+            /**
+             * Constructs a new MaxLimit.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: data.RepeatingChoiceTypeDbo.IMaxLimit);
+
+            /** MaxLimit limit. */
+            public limit: number;
+
+            /**
+             * Creates a new MaxLimit instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns MaxLimit instance
+             */
+            public static create(properties?: data.RepeatingChoiceTypeDbo.IMaxLimit): data.RepeatingChoiceTypeDbo.MaxLimit;
+
+            /**
+             * Encodes the specified MaxLimit message. Does not implicitly {@link data.RepeatingChoiceTypeDbo.MaxLimit.verify|verify} messages.
+             * @param message MaxLimit message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: data.RepeatingChoiceTypeDbo.MaxLimit, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MaxLimit message, length delimited. Does not implicitly {@link data.RepeatingChoiceTypeDbo.MaxLimit.verify|verify} messages.
+             * @param message MaxLimit message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: data.RepeatingChoiceTypeDbo.MaxLimit, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MaxLimit message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MaxLimit
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.RepeatingChoiceTypeDbo.MaxLimit;
+
+            /**
+             * Decodes a MaxLimit message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MaxLimit
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.RepeatingChoiceTypeDbo.MaxLimit;
+
+            /**
+             * Verifies a MaxLimit message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MaxLimit message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MaxLimit
+             */
+            public static fromObject(object: { [k: string]: any }): data.RepeatingChoiceTypeDbo.MaxLimit;
+
+            /**
+             * Creates a plain object from a MaxLimit message. Also converts values to other types if specified.
+             * @param message MaxLimit
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: data.RepeatingChoiceTypeDbo.MaxLimit, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MaxLimit to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for MaxLimit
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of a CalculatedLimit. */
+        interface ICalculatedLimit {
+
+            /** CalculatedLimit formula */
+            formula?: (string|null);
+        }
+
+        /** Represents a CalculatedLimit. */
+        class CalculatedLimit implements ICalculatedLimit {
+
+            /**
+             * Constructs a new CalculatedLimit.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: data.RepeatingChoiceTypeDbo.ICalculatedLimit);
+
+            /** CalculatedLimit formula. */
+            public formula: string;
+
+            /**
+             * Creates a new CalculatedLimit instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns CalculatedLimit instance
+             */
+            public static create(properties?: data.RepeatingChoiceTypeDbo.ICalculatedLimit): data.RepeatingChoiceTypeDbo.CalculatedLimit;
+
+            /**
+             * Encodes the specified CalculatedLimit message. Does not implicitly {@link data.RepeatingChoiceTypeDbo.CalculatedLimit.verify|verify} messages.
+             * @param message CalculatedLimit message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: data.RepeatingChoiceTypeDbo.CalculatedLimit, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified CalculatedLimit message, length delimited. Does not implicitly {@link data.RepeatingChoiceTypeDbo.CalculatedLimit.verify|verify} messages.
+             * @param message CalculatedLimit message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: data.RepeatingChoiceTypeDbo.CalculatedLimit, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a CalculatedLimit message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns CalculatedLimit
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.RepeatingChoiceTypeDbo.CalculatedLimit;
+
+            /**
+             * Decodes a CalculatedLimit message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns CalculatedLimit
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.RepeatingChoiceTypeDbo.CalculatedLimit;
+
+            /**
+             * Verifies a CalculatedLimit message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a CalculatedLimit message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns CalculatedLimit
+             */
+            public static fromObject(object: { [k: string]: any }): data.RepeatingChoiceTypeDbo.CalculatedLimit;
+
+            /**
+             * Creates a plain object from a CalculatedLimit message. Also converts values to other types if specified.
+             * @param message CalculatedLimit
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: data.RepeatingChoiceTypeDbo.CalculatedLimit, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this CalculatedLimit to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for CalculatedLimit
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
     }
 
     /** Properties of a TextChoiceInputDbo. */

@@ -11,7 +11,7 @@ interface ButtonBlockProps extends React.DetailedHTMLProps<React.HTMLAttributes<
   dragging?: boolean;
 }
 
-function ButtonBlock({ variant = 'default', className, labelPrefix = undefined, children = undefined, disabled = false, dragging = false, ...divProps }: ButtonBlockProps) {
+const ButtonBlock = React.forwardRef<HTMLDivElement, ButtonBlockProps>(({ variant = 'default', className, labelPrefix = undefined, children = undefined, disabled = false, dragging = false, ...divProps }: ButtonBlockProps, ref) => {
   const buttonClass = useMemo(() => {
     const buttonClassNames = [ dragging ? styles.buttonDragging : styles.button, className ];
     if (!disabled) {
@@ -24,9 +24,9 @@ function ButtonBlock({ variant = 'default', className, labelPrefix = undefined, 
   }, [dragging, className, variant, disabled]);
 
   return (
-      <div {...divProps} className={buttonClass}>
+      <div ref={ref} {...divProps} className={buttonClass}>
           {children}
     </div>);
-}
+})
 
 export default ButtonBlock;

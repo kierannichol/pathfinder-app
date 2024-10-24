@@ -83,10 +83,133 @@
           "choiceId": "archetype",
           "label": "Archetype",
           "type": "archetype",
-          "repeating": true,
+          "repeating": {
+            "unlimited": {
+            }
+          },
           "featureSelect": {
             "optionTags": ["archetype+fighter"],
             "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "fighter:spells_0",
+          "label": "Fighter Level 0 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#fighter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+fighter0"]
+          }
+        }, {
+          "choiceId": "fighter:spells_1",
+          "label": "Fighter Level 1 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#fighter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+fighter1"]
+          }
+        }, {
+          "choiceId": "fighter:spells_2",
+          "label": "Fighter Level 2 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#fighter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+fighter2"]
+          }
+        }, {
+          "choiceId": "fighter:spells_3",
+          "label": "Fighter Level 3 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#fighter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+fighter3"]
+          }
+        }, {
+          "choiceId": "fighter:spells_4",
+          "label": "Fighter Level 4 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#fighter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+fighter4"]
+          }
+        }, {
+          "choiceId": "fighter:spells_5",
+          "label": "Fighter Level 5 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#fighter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+fighter5"]
+          }
+        }, {
+          "choiceId": "fighter:spells_6",
+          "label": "Fighter Level 6 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#fighter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+fighter6"]
+          }
+        }, {
+          "choiceId": "fighter:spells_7",
+          "label": "Fighter Level 7 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#fighter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+fighter7"]
+          }
+        }, {
+          "choiceId": "fighter:spells_8",
+          "label": "Fighter Level 8 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#fighter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+fighter8"]
+          }
+        }, {
+          "choiceId": "fighter:spells_9",
+          "label": "Fighter Level 9 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#fighter"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+fighter9"]
           }
         }]
       }, {

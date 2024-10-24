@@ -84,10 +84,133 @@
           "choiceId": "archetype",
           "label": "Archetype",
           "type": "archetype",
-          "repeating": true,
+          "repeating": {
+            "unlimited": {
+            }
+          },
           "featureSelect": {
             "optionTags": ["archetype+spiritualist"],
             "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spiritualist:spells_0",
+          "label": "Spiritualist Level 0 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#spiritualist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+spiritualist0"]
+          }
+        }, {
+          "choiceId": "spiritualist:spells_1",
+          "label": "Spiritualist Level 1 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#spiritualist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+spiritualist1"]
+          }
+        }, {
+          "choiceId": "spiritualist:spells_2",
+          "label": "Spiritualist Level 2 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#spiritualist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+spiritualist2"]
+          }
+        }, {
+          "choiceId": "spiritualist:spells_3",
+          "label": "Spiritualist Level 3 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#spiritualist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+spiritualist3"]
+          }
+        }, {
+          "choiceId": "spiritualist:spells_4",
+          "label": "Spiritualist Level 4 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#spiritualist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+spiritualist4"]
+          }
+        }, {
+          "choiceId": "spiritualist:spells_5",
+          "label": "Spiritualist Level 5 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#spiritualist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+spiritualist5"]
+          }
+        }, {
+          "choiceId": "spiritualist:spells_6",
+          "label": "Spiritualist Level 6 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#spiritualist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+spiritualist6"]
+          }
+        }, {
+          "choiceId": "spiritualist:spells_7",
+          "label": "Spiritualist Level 7 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#spiritualist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+spiritualist7"]
+          }
+        }, {
+          "choiceId": "spiritualist:spells_8",
+          "label": "Spiritualist Level 8 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#spiritualist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+spiritualist8"]
+          }
+        }, {
+          "choiceId": "spiritualist:spells_9",
+          "label": "Spiritualist Level 9 Spells",
+          "type": "spell",
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#spiritualist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+spiritualist9"]
           }
         }]
       }, {

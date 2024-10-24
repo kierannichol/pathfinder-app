@@ -8,7 +8,7 @@ import java.util.List;
 import pathfinder.data.ChoiceDbo;
 import pathfinder.data.FeatureSelectChoiceInputDbo;
 
-public record FeatureSelectByTagChoice(String choiceId, String label, String type, List<String> optionTags, List<Id> featureIds, List<FeatureSelectCategory> categories, FeatureSelectSortBy sortBy, boolean repeating) implements
+public record FeatureSelectByTagChoice(String choiceId, String label, String type, List<String> optionTags, List<Id> featureIds, List<FeatureSelectCategory> categories, FeatureSelectSortBy sortBy, RepeatingChoiceType repeating) implements
         Choice {
 
     public static Builder builder(String id, String label, String type) {
@@ -17,7 +17,7 @@ public record FeatureSelectByTagChoice(String choiceId, String label, String typ
 
     public FeatureSelectByTagChoice(String choiceId, String label, String type, List<String> optionTags,
             List<Id> featureIds, List<FeatureSelectCategory> categories, FeatureSelectSortBy sortBy) {
-        this(choiceId, label, type, optionTags, featureIds, categories, sortBy, false);
+        this(choiceId, label, type, optionTags, featureIds, categories, sortBy, RepeatingChoiceType.none());
     }
 
     @Override
@@ -26,7 +26,7 @@ public record FeatureSelectByTagChoice(String choiceId, String label, String typ
                 .setChoiceId(choiceId)
                 .setLabel(label)
                 .setType(type)
-                .setRepeating(repeating)
+                .setRepeating(repeating.toDbo())
                 .setFeatureSelect(FeatureSelectChoiceInputDbo.newBuilder()
                         .addAllOptionTags(optionTags)
                         .addAllFeatureIds(mapList(featureIds, Id::string))
@@ -44,7 +44,7 @@ public record FeatureSelectByTagChoice(String choiceId, String label, String typ
         private final List<Id> featureIds = new ArrayList<>();
         private final List<FeatureSelectCategory> categories = new ArrayList<>();
         private FeatureSelectSortBy sortBy = FeatureSelectSortBy.NONE;
-        private boolean repeating = false;
+        private RepeatingChoiceType repeating = RepeatingChoiceType.none();
 
         public Builder(String id, String label, String type) {
             this.id = id;
@@ -67,6 +67,11 @@ public record FeatureSelectByTagChoice(String choiceId, String label, String typ
             return this;
         }
 
+        public Builder featureIds(Collection<Id> featureIds) {
+            this.featureIds.addAll(featureIds);
+            return this;
+        }
+
         public Builder category(String label, String tag) {
             this.categories.add(new FeatureSelectCategory(label, tag));
             return this;
@@ -78,7 +83,17 @@ public record FeatureSelectByTagChoice(String choiceId, String label, String typ
         }
 
         public Builder repeating() {
-            this.repeating = true;
+            this.repeating = RepeatingChoiceType.unlimited();
+            return this;
+        }
+
+        public Builder repeating(int max) {
+            this.repeating = RepeatingChoiceType.maxLimit(max);
+            return this;
+        }
+
+        public Builder repeating(String formula) {
+            this.repeating = RepeatingChoiceType.calculatedLimit(formula);
             return this;
         }
 

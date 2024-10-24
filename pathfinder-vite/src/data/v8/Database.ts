@@ -73,6 +73,10 @@ export class ItemDatabase {
     }
     return undefined;
   }
+
+  toString(): string {
+    return "Pathfinder Item Database";
+  }
 }
 
 export default class Database {
@@ -168,5 +172,9 @@ export default class Database {
 
   query(tags: string[]): FeatureSummary[] {
     return this.modules.flatMap(module => module.query(tags));
+  }
+
+  toString(): string {
+    return "Pathfinder Database";
   }
 }

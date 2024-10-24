@@ -1,17 +1,15 @@
 import Section from "@/view/components/character/edit/common/Section.tsx";
 import TextChoiceInput from "@/view/components/character/edit/fields/TextChoiceInput.tsx";
 import styles from "./BaseAbilityScoreSection.module.css";
-import VerticalLayout from "@/view/components/character/edit/common/VerticalLayout.tsx";
 import HorizontalLayout from "@/view/components/character/edit/common/HorizontalLayout.tsx";
 import {ChoiceRef, SelectChoiceRef} from "@/data/v8/Choice.ts";
 import {useCharacterAtLevel} from "@/view/components/character/edit/CharacterAtLevelContext.tsx";
-import {useMemo, useState} from "react";
+import {HTMLAttributes, useMemo, useState} from "react";
 import {useCharacterUpdate} from "@/view/components/character/edit/CharacterUpdateContext.tsx";
-import {BiCheckCircle, BiCircle} from "react-icons/bi";
 import {useDatabase} from "@/data/context.tsx";
-import {classNames} from "@/utils/classNames.ts";
 import BoxedValue from "@/view/components/character/edit/fields/BoxedValue.tsx";
 import {Formula} from "@kierannichol/formula-js";
+import {classNames} from "@/utils/classNames.ts";
 
 interface BaseAbilityScoreSectionProps {
 
@@ -22,21 +20,20 @@ export default function BaseAbilityScoreSection({}: BaseAbilityScoreSectionProps
   const asiChoices = useMemo(() => character.choicesOfType('asi'), [character]);
 
   return <Section header='Base Ability Scores' className={styles['base-ability-scores']}>
-    <VerticalLayout className={styles.grid}>
-      <HorizontalLayout className={styles['ability-row']}>
-        <div></div>
-        <label>Score</label>
-        <label>Mod</label>
-        {asiChoices.map(choice => <label
-            key={choice.path}>{choice.path.substring(0, choice.path.indexOf(':'))}</label>)}
-      </HorizontalLayout>
-      <AbilityScoreRow ability='str' asiChoices={asiChoices} />
-      <AbilityScoreRow ability='dex' asiChoices={asiChoices} />
-      <AbilityScoreRow ability='con' asiChoices={asiChoices} />
-      <AbilityScoreRow ability='wis' asiChoices={asiChoices} />
-      <AbilityScoreRow ability='int' asiChoices={asiChoices} />
-      <AbilityScoreRow ability='cha' asiChoices={asiChoices} />
-    </VerticalLayout>
+    <HorizontalLayout className={styles['ability-row']}>
+      <div></div>
+      <label>Score</label>
+      <label>Mod</label>
+      {asiChoices.map(choice => <label
+          key={choice.path}>{choice.path.substring(0, choice.path.indexOf(':'))}</label>)}
+    </HorizontalLayout>
+    <AbilityScoreRow ability='str' asiChoices={asiChoices}/>
+    <AbilityScoreRow ability='dex' asiChoices={asiChoices}/>
+    <AbilityScoreRow ability='con' asiChoices={asiChoices}/>
+    <AbilityScoreRow ability='wis' asiChoices={asiChoices}/>
+    <AbilityScoreRow ability='int' asiChoices={asiChoices}/>
+    <AbilityScoreRow ability='cha' asiChoices={asiChoices}/>
+    <code>Ability Point Cost: {character.resolve("ability_point_cost")?.asNumber()}</code>
   </Section>
 }
 
@@ -53,9 +50,9 @@ function AbilityScoreRow({ ability, asiChoices }: AbilityScoreRowProps) {
 
   return <HorizontalLayout className={styles['ability-row']}>
     <div className={styles['ability-label']}>{ability.toUpperCase()}</div>
-    <BaseAbilityScoreBox choice={`${ability}:base`} score={score ?? '--'} />
+    <BaseAbilityScoreBox choice={`${ability}:base`} score={score ?? '--'}/>
     <div>{mod}</div>
-    {asiChoices.map(choice => <div key={choice.path}><AsiRadioButton choice={choice} ability={ability} /></div>)}
+    {asiChoices.map(choice => <div key={choice.path}><AsiRadioButton choice={choice} ability={ability}/></div>)}
   </HorizontalLayout>
 }
 
@@ -75,10 +72,13 @@ function BaseAbilityScoreBox({ choice, score }: BaseAbilityScoreBoxProps) {
     setEditing(false);
   }
 
-  return <div onClick={startEdit}>{isEditing
-      ? <TextChoiceInput choice={choice} onBlur={endEdit} />
-      : <BoxedValue>{score}</BoxedValue>}
-  </div>
+  return isEditing
+      ? <BoxedValue>
+          <TextChoiceInput choice={choice}
+                           className={styles['text-input']}
+                           onBlur={endEdit} />
+        </BoxedValue>
+      : <BoxedValue onClick={startEdit}>{score}</BoxedValue>
 }
 
 interface AsiRadioButtonProps {
@@ -104,6 +104,18 @@ function AsiRadioButton({ choice, ability }: AsiRadioButtonProps) {
   }
 
   return selected
-      ? <BiCheckCircle className={styles.radio} />
-      : <BiCircle className={classNames([styles.radio, 'clickable'])} onClick={handleSelect} />;
+      ? (option.tags.includes('asi_p2')
+              ? <RadioCircle className={classNames([styles.radio, styles.selected, 'clickable'])}>2</RadioCircle>
+              : <RadioCircle className={classNames([styles.radio, styles.selected, 'clickable'])}>1</RadioCircle>)
+      : <RadioCircle className={classNames([styles.radio, 'clickable'])} onClick={handleSelect} />
+      // ? <BiCheckCircle className={classNames([styles.radio, styles.selected])} />
+      // : <BiCircle className={classNames([styles.radio, 'clickable'])} onClick={handleSelect} />;
+}
+
+interface RadioCircleProps extends HTMLAttributes<HTMLDivElement> {
+}
+
+function RadioCircle({ children, className, ...divProps }: RadioCircleProps) {
+  // return <Badge content="+1" pill={true}>+1</Badge>
+  return <div className={classNames([className, styles.radio2])} {...divProps}>{children}</div>
 }
