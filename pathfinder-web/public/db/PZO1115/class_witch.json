@@ -1,0 +1,410 @@
+{
+  "id": "class:witch",
+  "name": "Witch",
+  "tags": ["base", "class"],
+  "maxStacks": 20,
+  "description": {
+    "text": "Some gain power through study, some through devotion, others through blood, but the witch gains power from her communion with the unknown. Generally feared and misunderstood, the witch draws her magic from a pact made with an otherworldly power. Communing with that source, using her familiar as a conduit, the witch gains not only a host of spells, but a number of strange abilities known as hexes. As a witch grows in power, she might learn about the source of her magic, but some remain blissfully unaware. Some are even afraid of that source, fearful of what it might be or where its true purposes lie. Role: While many witches are recluses, living on the edge of civilization, some live within society, openly or in hiding. The blend of witches\u0027 spells makes them adept at filling a number of different roles, from seer to healer, and their hexes grant them a number of abilities that are useful in a fight. Some witches travel about, seeking greater knowledge and better understanding of the mysterious powers that guide them. Alignment: Any. Hit Die: d6. Starting Wealth: 3d6 × 10 gp (average 105 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base"
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base"
+          }
+        }, {
+          "setAction": {
+            "targetKey": "max_skill_ranks#witch",
+            "formula": "(2+@int_mod)*@class:witch"
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:fly",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:craft",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:use_magic_device",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:intimidate",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:spellcraft",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:profession",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:knowledge",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:heal",
+            "numberValue": 1
+          }
+        }],
+        "links": ["trait:armor_proficiency#witch", "trait:weapon_proficiency#witch", "ability:hex#witch", "ability:patron_spells#witch", "ability:spellcasting#witch"],
+        "choices": [{
+          "choiceId": "archetype",
+          "label": "Archetype",
+          "tags": ["archetype"],
+          "repeating": {
+            "unlimited": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["archetype+witch"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "witch:spells_0",
+          "label": "Witch Level 0 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch0"]
+          }
+        }, {
+          "choiceId": "witch:spells_1",
+          "label": "Witch Level 1 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch1"]
+          }
+        }, {
+          "choiceId": "witch:spells_2",
+          "label": "Witch Level 2 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch2"]
+          }
+        }, {
+          "choiceId": "witch:spells_3",
+          "label": "Witch Level 3 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch3"]
+          }
+        }, {
+          "choiceId": "witch:spells_4",
+          "label": "Witch Level 4 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch4"]
+          }
+        }, {
+          "choiceId": "witch:spells_5",
+          "label": "Witch Level 5 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch5"]
+          }
+        }, {
+          "choiceId": "witch:spells_6",
+          "label": "Witch Level 6 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch6"]
+          }
+        }, {
+          "choiceId": "witch:spells_7",
+          "label": "Witch Level 7 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch7"]
+          }
+        }, {
+          "choiceId": "witch:spells_8",
+          "label": "Witch Level 8 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch8"]
+          }
+        }, {
+          "choiceId": "witch:spells_9",
+          "label": "Witch Level 9 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#witch"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+witch9"]
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:hex#witch"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:hex#witch"]
+      }, {
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:hex#witch"]
+      }, {
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:hex#witch"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:hex#witch", "ability:major_hex#witch"]
+      }, {
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:hex#witch"]
+      }, {
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:hex#witch"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:hex#witch"]
+      }, {
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:hex#witch", "ability:grand_hex#witch"]
+      }, {
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:hex#witch"]
+      }]
+    }
+  }
+}

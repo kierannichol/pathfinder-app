@@ -14,6 +14,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import pathfinder.model.json.PathfinderJsonModule;
 import pathfinder.util.FileUtils;
 
@@ -64,5 +68,22 @@ public abstract class AbstractLocalPathfinderDatabaseModifier {
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
                 .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false)
                 .registerModule(new PathfinderJsonModule());
+    }
+
+    @Configuration
+    static class SelfExecutingConfiguration {
+        @Bean
+        PathfinderDatabase pathfinderDatabase() {
+            return new LocalPathfinderDatabaseLoader().load();
+        }
+
+        @Bean
+        public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+            return args -> {
+                log.info("Modifying data...");
+                ctx.getBean(AbstractLocalPathfinderDatabaseModifier.class).execute();
+                System.exit(0);
+            };
+        }
     }
 }

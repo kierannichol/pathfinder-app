@@ -1,0 +1,17 @@
+{
+  "id": "feat:extra_summons",
+  "name": "Extra Summons",
+  "tags": ["feat", "general"],
+  "enabledFormula": "all(any(@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8)[Able to cast Summon Monster],@class:summoner\u003e\u003d1)",
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "You gain 1 additional use of your summon monster spell-like ability per day.",
+      "Special": "You can take this feat multiple times, but it can only be taken once for every five summoner levels you possess."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

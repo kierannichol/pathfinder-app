@@ -1,0 +1,493 @@
+{
+  "id": "class:warpriest",
+  "name": "Warpriest",
+  "tags": ["class", "hybrid"],
+  "maxStacks": 20,
+  "description": {
+    "text": "Capable of calling upon the power of the gods in the form of blessings and spells, warpriests blend divine magic with martial skill. They are unflinching bastions of their faith, shouting gospel as they pummel foes into submission, and never shy away from a challenge to their beliefs. While clerics might be subtle and use diplomacy to accomplish their aims, warpriests aren\u0027t above using violence whenever the situation warrants it. In many faiths, warpriests form the core of the church\u0027s martial forces--reclaiming lost relics, rescuing captured clergy, and defending the church\u0027s tenets from all challenges. Role: Warpriests can serve as capable healers or spellcasters, calling upon their divine powers from the center of the fight, where their armor and martial skills are put to the test. Alignment: A warpriest\u0027s alignment must be within one step of his deity\u0027s, along either the law/chaos axis or the good/evil axis. Hit Die: d8. Parent Classes: Cleric and fighter. Starting Wealth: 5d6 × 10 gp (average 175 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base"
+          }
+        }, {
+          "setAction": {
+            "targetKey": "max_skill_ranks#warpriest",
+            "formula": "(2+@int_mod)*@class:warpriest"
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:handle_animal",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:swim",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:diplomacy",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:spellcraft",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:profession",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:climb",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:ride",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:heal",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:craft",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:survival",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:intimidate",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:knowledge",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:sense_motive",
+            "numberValue": 1
+          }
+        }],
+        "links": ["trait:armor_proficiency#warpriest", "trait:weapon_proficiency#warpriest", "ability:aura#warpriest", "ability:blessings#warpriest", "ability:focus_weapon#warpriest", "ability:sacred_weapon#warpriest", "ability:spellcasting#warpriest"],
+        "choices": [{
+          "choiceId": "archetype",
+          "label": "Archetype",
+          "tags": ["archetype"],
+          "repeating": {
+            "unlimited": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["archetype+warpriest"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "warpriest:spells_0",
+          "label": "Warpriest Level 0 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#warpriest"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+warpriest0"]
+          }
+        }, {
+          "choiceId": "warpriest:spells_1",
+          "label": "Warpriest Level 1 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#warpriest"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+warpriest1"]
+          }
+        }, {
+          "choiceId": "warpriest:spells_2",
+          "label": "Warpriest Level 2 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#warpriest"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+warpriest2"]
+          }
+        }, {
+          "choiceId": "warpriest:spells_3",
+          "label": "Warpriest Level 3 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#warpriest"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+warpriest3"]
+          }
+        }, {
+          "choiceId": "warpriest:spells_4",
+          "label": "Warpriest Level 4 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#warpriest"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+warpriest4"]
+          }
+        }, {
+          "choiceId": "warpriest:spells_5",
+          "label": "Warpriest Level 5 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#warpriest"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+warpriest5"]
+          }
+        }, {
+          "choiceId": "warpriest:spells_6",
+          "label": "Warpriest Level 6 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#warpriest"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+warpriest6"]
+          }
+        }, {
+          "choiceId": "warpriest:spells_7",
+          "label": "Warpriest Level 7 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#warpriest"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+warpriest7"]
+          }
+        }, {
+          "choiceId": "warpriest:spells_8",
+          "label": "Warpriest Level 8 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#warpriest"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+warpriest8"]
+          }
+        }, {
+          "choiceId": "warpriest:spells_9",
+          "label": "Warpriest Level 9 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#warpriest"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+warpriest9"]
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:fervor#warpriest"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bonus_feat#warpriest"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#warpriest", "ability:sacred_weapon#warpriest"]
+      }, {
+        "links": ["ability:fervor#warpriest"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bonus_feat#warpriest"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:sacred_armor#warpriest"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:fervor#warpriest", "ability:sacred_weapon#warpriest"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bonus_feat#warpriest"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:sacred_armor#warpriest"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:fervor#warpriest"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bonus_feat#warpriest", "ability:sacred_weapon#warpriest"]
+      }, {
+        "links": ["ability:sacred_armor#warpriest"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:fervor#warpriest"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bonus_feat#warpriest"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:sacred_armor#warpriest", "ability:sacred_weapon#warpriest"]
+      }, {
+        "links": ["ability:fervor#warpriest"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bonus_feat#warpriest"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:sacred_armor#warpriest"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:aspect_of_war#warpriest", "ability:fervor#warpriest", "ability:sacred_weapon#warpriest"]
+      }]
+    }
+  }
+}

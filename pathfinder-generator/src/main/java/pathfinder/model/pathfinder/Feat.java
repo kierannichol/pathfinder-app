@@ -5,6 +5,7 @@ import java.util.List;
 import pathfinder.model.FeatureOptions;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
+import pathfinder.model.Stack;
 
 public record Feat(Id id,
                    String name,
@@ -12,6 +13,7 @@ public record Feat(Id id,
                    String description,
                    String prerequisites,
                    @JsonProperty("prerequisite_feats") String prerequisiteFeats,
+                   String enabled_formula,
                    String benefit,
                    String normal,
                    String special,
@@ -30,7 +32,10 @@ public record Feat(Id id,
                    boolean multiples,
                    @JsonProperty("suggested_traits") String suggestedTraits,
                    List<String> effects,
-                   @JsonProperty("options") FeatureOptions options) implements
+                   @JsonProperty("repeating_stack") Stack repeatingStack,
+                   @JsonProperty("fixed_stacks") List<Stack> fixedStacks,
+                   @JsonProperty("options") FeatureOptions options,
+                   @JsonProperty("metamagic") MetamagicOptions metamagic) implements
         NamedEntity {
 
     public enum FeatType {

@@ -1,0 +1,488 @@
+{
+  "id": "class:alchemist",
+  "name": "Alchemist",
+  "tags": ["base", "class"],
+  "maxStacks": 20,
+  "description": {
+    "text": "Whether secreted away in a smoky basement laboratory or gleefully experimenting in a well-respected school of magic, the alchemist is often regarded as being just as unstable, unpredictable, and dangerous as the concoctions he brews. While some creators of alchemical items content themselves with sedentary lives as merchants, providing tindertwigs and smokesticks, the true alchemist answers a deeper calling. Rather than cast magic like a spellcaster, the alchemist captures his own magic potential within liquids and extracts he creates, infusing his chemicals with virulent power to grant him impressive skill with poisons, explosives, and all manner of self-transformative magic. Role: The alchemist\u0027s reputation is not softened by his exuberance (some would say dangerous recklessness) in perfecting his magical extracts and potion-like creations, infusing these substances with magic siphoned from his aura and using his own body as experimental stock. Nor is it mollified by the alchemist\u0027s almost gleeful passion for building explosive bombs and discovering strange new poisons and methods for their use. These traits, while making him a liability and risk for most civilized organizations and institutions of higher learning, seem to fit quite well with most adventuring groups. Alignment: Any. Hit Die: d8. Starting Wealth: 3d6 × 10 gp (average 105gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base"
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 2
+          }
+        }, {
+          "setAction": {
+            "targetKey": "max_skill_ranks#alchemist",
+            "formula": "(4+@int_mod)*@class:alchemist"
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:fly",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:perception",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:craft",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:sleight_of_hand",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:use_magic_device",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:survival",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:disable_device",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:spellcraft",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:profession",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:knowledge",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:heal",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:appraise",
+            "numberValue": 1
+          }
+        }],
+        "links": ["trait:armor_proficiency#alchemist", "trait:weapon_proficiency#alchemist", "ability:alchemy#alchemist", "ability:bomb#alchemist", "ability:brew_potion#alchemist", "ability:mutagen#alchemist", "ability:throw_anything#alchemist", "ability:spellcasting#alchemist"],
+        "choices": [{
+          "choiceId": "archetype",
+          "label": "Archetype",
+          "tags": ["archetype"],
+          "repeating": {
+            "unlimited": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["archetype+alchemist"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "alchemist:spells_0",
+          "label": "Alchemist Level 0 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#alchemist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"]
+          }
+        }, {
+          "choiceId": "alchemist:spells_1",
+          "label": "Alchemist Level 1 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#alchemist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"]
+          }
+        }, {
+          "choiceId": "alchemist:spells_2",
+          "label": "Alchemist Level 2 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#alchemist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"]
+          }
+        }, {
+          "choiceId": "alchemist:spells_3",
+          "label": "Alchemist Level 3 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#alchemist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"]
+          }
+        }, {
+          "choiceId": "alchemist:spells_4",
+          "label": "Alchemist Level 4 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#alchemist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"]
+          }
+        }, {
+          "choiceId": "alchemist:spells_5",
+          "label": "Alchemist Level 5 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#alchemist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"]
+          }
+        }, {
+          "choiceId": "alchemist:spells_6",
+          "label": "Alchemist Level 6 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#alchemist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+alchemist6"]
+          }
+        }, {
+          "choiceId": "alchemist:spells_7",
+          "label": "Alchemist Level 7 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#alchemist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+alchemist7"]
+          }
+        }, {
+          "choiceId": "alchemist:spells_8",
+          "label": "Alchemist Level 8 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#alchemist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+alchemist8"]
+          }
+        }, {
+          "choiceId": "alchemist:spells_9",
+          "label": "Alchemist Level 9 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#alchemist"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+alchemist9"]
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:discovery#alchemist", "ability:poison_resistance#alchemist", "ability:poison_use#alchemist"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bomb#alchemist", "ability:swift_alchemy#alchemist"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:discovery#alchemist"]
+      }, {
+        "links": ["ability:bomb#alchemist", "ability:poison_resistance#alchemist"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:discovery#alchemist", "ability:swift_poisoning#alchemist"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bomb#alchemist"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:discovery#alchemist", "ability:poison_resistance#alchemist"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bomb#alchemist"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:discovery#alchemist", "ability:poison_immunity#alchemist"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bomb#alchemist"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:discovery#alchemist"]
+      }, {
+        "links": ["ability:bomb#alchemist"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:discovery#alchemist", "ability:persistent_mutagen#alchemist"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bomb#alchemist"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:discovery#alchemist"]
+      }, {
+        "links": ["ability:bomb#alchemist"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:discovery#alchemist", "ability:instant_alchemy#alchemist"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bomb#alchemist"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:grand_discovery#alchemist"]
+      }]
+    }
+  }
+}

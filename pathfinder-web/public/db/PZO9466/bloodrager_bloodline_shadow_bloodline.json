@@ -1,0 +1,55 @@
+{
+  "id": "bloodrager_bloodline:shadow_bloodline",
+  "name": "Shadow Bloodline",
+  "tags": ["bloodrager_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Because of your heritage, you can move and see through shadows as if you are part of them. Your fury absorbs light, warmth, and strength."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:shadow_door#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:bloodline_feat#shadow_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:shadow_warrior#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:shades_of_rage#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:bloodline_feat#shadow_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:strength_of_shadows#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:shadow_vision#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:strike_through_shadow#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:bloodline_feat#shadow_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }]
+        }]
+      }]
+    }
+  }
+}

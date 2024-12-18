@@ -1,0 +1,86 @@
+{
+  "id": "class:bloodrager#enlightened_bloodrager_pzo1138",
+  "name": "Enlightened Bloodrager (PZO1138)",
+  "tags": ["archetype", "bloodrager"],
+  "enabledFormula": "!@modifies:ability:bloodrage#bloodrager AND !@modifies:ability:bloodline_power#bloodrager AND !@modifies:ability:bloodline_spell#bloodrager AND !@modifies:ability:spellcasting#bloodrager AND !@modifies:ability:damage_reduction#bloodrager",
+  "maxStacks": 1,
+  "description": {
+    "text": "An enlightened bloodrager unlocks a unique method of casting her violent, rage-fueled spells. As a result, an enlightened bloodrager\u0027s magic looks, feels, and functions quite differently from the magic of other bloodragers. In many cases, when an enlightened bloodrager encounters a more traditional bloodrager, the meeting is laced with tension and suspicion. The enlightened bloodrager is, of course, well aware of the other bloodrager\u0027s tendency toward violence, and the other bloodrager is often unnerved by the calm and reasoned mannerisms of his enlightened counterpart. Many bloodragers even take offense at this demeanor, interpreting the enlightened bloodrager as a pawn of intellectuals or as having dishonored her ancestry or traditions by abandoning emotion and wrath. As one can well expect, such confrontations rarely result in lasting friendships!"
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bloodrage#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bloodline_power#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bloodline_spell#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:spellcasting#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:damage_reduction#bloodrager",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:enlightened_spellcasting#bloodrager_enlightened_bloodrager_pzo1138"],
+            "linksToRemove": ["ability:bloodline_spell#bloodrager", "ability:damage_reduction#bloodrager", "ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:enlightened_spellcasting#bloodrager_enlightened_bloodrager_pzo1138", "ability:enlightened_bloodrage#bloodrager_enlightened_bloodrager_pzo1138"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager", "ability:bloodrage#bloodrager", "ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:damage_reduction#bloodrager"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:enlightened_spellcasting#bloodrager_enlightened_bloodrager_pzo1138", "ability:enlightened_bloodrage#bloodrager_enlightened_bloodrager_pzo1138"],
+            "linksToRemove": ["ability:spellcasting#bloodrager", "ability:bloodline_power#bloodrager", "ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:bloodline_feat#bloodrager_enlightened_bloodrager_pzo1138"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:enlightened_spellcasting#bloodrager_enlightened_bloodrager_pzo1138"],
+            "linksToRemove": ["ability:bloodline_spell#bloodrager", "ability:damage_reduction#bloodrager"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:bloodline_powers#bloodrager_enlightened_bloodrager_pzo1138"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:enlightened_spellcasting#bloodrager_enlightened_bloodrager_pzo1138"],
+            "linksToRemove": ["ability:bloodline_spell#bloodrager", "ability:damage_reduction#bloodrager"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:enlightened_spellcasting#bloodrager_enlightened_bloodrager_pzo1138"],
+            "linksToRemove": ["ability:bloodline_spell#bloodrager", "ability:damage_reduction#bloodrager"]
+          }]
+        }]
+      }]
+    }
+  }
+}

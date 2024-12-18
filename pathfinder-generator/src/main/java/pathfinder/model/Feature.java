@@ -22,6 +22,12 @@ public record Feature(Id id,
                       Stacks stacks,
                       List<ConditionalStack> conditionalStacks) implements NamedEntity {
 
+    public static Feature simple(NamedEntity namedEntity) {
+        return builder(namedEntity.id())
+                .setName(namedEntity.name())
+                .build();
+    }
+
     public static Feature simple(Id id, String name) {
         return builder(id)
                 .setName(name)
@@ -68,6 +74,11 @@ public record Feature(Id id,
 
     public static FeatureBuilder builder(Id id) {
         return new FeatureBuilder(id);
+    }
+
+    public static FeatureBuilder builder(NamedEntity namedEntity) {
+        return builder(namedEntity.id())
+                .setName(namedEntity.name());
     }
 
     public FeatureSummaryDbo toSummaryDbo() {

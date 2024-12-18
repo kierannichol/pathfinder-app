@@ -1,0 +1,516 @@
+{
+  "id": "class:brawler",
+  "name": "Brawler",
+  "tags": ["class", "hybrid"],
+  "maxStacks": 20,
+  "description": {
+    "text": "Deadly even with nothing in her hands, a brawler eschews using the fighter\u0027s heavy armor and the monk\u0027s mysticism, focusing instead on perfecting many styles of brutal unarmed combat. Versatile, agile, and able to adapt to most enemy attacks, a brawler\u0027s body is a powerful weapon. Role: Brawlers are maneuverable and well suited for creating flanking situations or dealing with lightly armored enemies, as well as quickly adapting to a rapidly changing battlefield. Alignment: Any. Hit Die: d10. Parent Classes: Fighter and monk. Starting Wealth: 3d6 × 10 gp (average 105 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base"
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 2
+          }
+        }, {
+          "setAction": {
+            "targetKey": "max_skill_ranks#brawler",
+            "formula": "(4+@int_mod)*@class:brawler"
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:perception",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:craft",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:handle_animal",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:swim",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:escape_artist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:intimidate",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:acrobatics",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:profession",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:climb",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:knowledge",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:ride",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:sense_motive",
+            "numberValue": 1
+          }
+        }],
+        "links": ["trait:armor_proficiency#brawler", "trait:weapon_proficiency#brawler", "ability:brawlers_cunning#brawler", "ability:martial_flexibility#brawler", "ability:martial_training#brawler"],
+        "choices": [{
+          "choiceId": "archetype",
+          "label": "Archetype",
+          "tags": ["archetype"],
+          "repeating": {
+            "unlimited": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["archetype+brawler"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "brawler:spells_0",
+          "label": "Brawler Level 0 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#brawler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+brawler0"]
+          }
+        }, {
+          "choiceId": "brawler:spells_1",
+          "label": "Brawler Level 1 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#brawler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+brawler1"]
+          }
+        }, {
+          "choiceId": "brawler:spells_2",
+          "label": "Brawler Level 2 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#brawler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+brawler2"]
+          }
+        }, {
+          "choiceId": "brawler:spells_3",
+          "label": "Brawler Level 3 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#brawler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+brawler3"]
+          }
+        }, {
+          "choiceId": "brawler:spells_4",
+          "label": "Brawler Level 4 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#brawler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+brawler4"]
+          }
+        }, {
+          "choiceId": "brawler:spells_5",
+          "label": "Brawler Level 5 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#brawler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+brawler5"]
+          }
+        }, {
+          "choiceId": "brawler:spells_6",
+          "label": "Brawler Level 6 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#brawler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+brawler6"]
+          }
+        }, {
+          "choiceId": "brawler:spells_7",
+          "label": "Brawler Level 7 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#brawler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+brawler7"]
+          }
+        }, {
+          "choiceId": "brawler:spells_8",
+          "label": "Brawler Level 8 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#brawler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+brawler8"]
+          }
+        }, {
+          "choiceId": "brawler:spells_9",
+          "label": "Brawler Level 9 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#brawler"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+brawler9"]
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bonus_combat_feat#brawler", "ability:brawlers_flurry#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:maneuver_training#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:ac_bonus#brawler", "ability:knockout#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bonus_combat_feat#brawler", "ability:brawlers_strike#brawler", "ability:close_weapon_mastery#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:martial_flexibility#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:maneuver_training#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bonus_combat_feat#brawler", "ability:brawlers_flurry#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:ac_bonus#brawler", "ability:brawlers_strike#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:martial_flexibility#brawler", "ability:knockout#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bonus_combat_feat#brawler", "ability:maneuver_training#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:brawlers_strike#brawler", "ability:martial_flexibility#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:ac_bonus#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bonus_combat_feat#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:brawlers_flurry#brawler", "ability:maneuver_training#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:awesome_blow#brawler", "ability:knockout#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bonus_combat_feat#brawler", "ability:brawlers_strike#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:ac_bonus#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:maneuver_training#brawler"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bonus_combat_feat#brawler", "ability:improved_awesome_blow#brawler", "ability:martial_flexibility#brawler"]
+      }]
+    }
+  }
+}

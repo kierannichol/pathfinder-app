@@ -1,0 +1,60 @@
+{
+  "id": "class:gunslinger#bolt_ace",
+  "name": "Bolt Ace",
+  "tags": ["archetype", "gunslinger"],
+  "enabledFormula": "!@modifies:ability:gunsmith#gunslinger AND !@modifies:ability:gun_training#gunslinger AND !@modifies:trait:weapon_proficiency#gunslinger AND !@modifies:ability:grit#gunslinger",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:gunsmith#gunslinger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:gun_training#gunslinger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:weapon_proficiency#gunslinger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:grit#gunslinger",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:gunslinger",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:crossbow_training#gunslinger_bolt_ace"],
+            "linksToRemove": ["ability:gun_training#gunslinger"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:crossbow_maven#gunslinger_bolt_ace", "ability:crossbow_maven#gunslinger_bolt_ace", "ability:grit#gunslinger_bolt_ace"],
+            "linksToRemove": ["trait:weapon_proficiency#gunslinger", "ability:gunsmith#gunslinger", "ability:grit#gunslinger"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:crossbow_training#gunslinger_bolt_ace"],
+            "linksToRemove": ["ability:gun_training#gunslinger"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:crossbow_training#gunslinger_bolt_ace"],
+            "linksToRemove": ["ability:gun_training#gunslinger"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:crossbow_training#gunslinger_bolt_ace"],
+            "linksToRemove": ["ability:gun_training#gunslinger"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,463 @@
+{
+  "id": "class:cleric",
+  "name": "Cleric",
+  "tags": ["class", "core"],
+  "maxStacks": 20,
+  "description": {
+    "text": "Role: More than capable of upholding the honor of their deities in battle, clerics often prove stalwart and capable combatants. Their true strength lies in their capability to draw upon the power of their deities, whether to increase their own and their allies\u0027 prowess in battle, to vex their foes with divine magic, or to lend healing to companions in need. As their powers are influenced by their faith, all clerics must focus their worship upon a divine source. While the vast majority of clerics revere a specific deity, a small number dedicate themselves to a divine concept worthy of devotion--such as battle, death, justice, or knowledge--free of a deific abstraction. (Work with your GM if you prefer this path to selecting a specific deity.) Alignment: A cleric\u0027s alignment must be within one step of her deity\u0027s, along either the law/chaos axis or the good/evil axis. Hit Die: d8 Starting Wealth: 4d6 × 10 gp (average 140 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base"
+          }
+        }, {
+          "setAction": {
+            "targetKey": "max_skill_ranks#cleric",
+            "formula": "(2+@int_mod)*@class:cleric"
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:craft",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:diplomacy",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:spellcraft",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:profession",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:knowledge",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:heal",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:sense_motive",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:appraise",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:linguistics",
+            "numberValue": 1
+          }
+        }],
+        "links": ["trait:armor_proficiency#cleric", "trait:weapon_proficiency#cleric", "ability:aura#cleric", "ability:channel_energy#cleric", "ability:domains#cleric", "ability:orisons#cleric", "ability:spontaneous_casting#cleric", "ability:spellcasting#cleric"],
+        "choices": [{
+          "choiceId": "archetype",
+          "label": "Archetype",
+          "tags": ["archetype"],
+          "repeating": {
+            "unlimited": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["archetype+cleric"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "cleric:spells_0",
+          "label": "Cleric Level 0 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#cleric"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric0"]
+          }
+        }, {
+          "choiceId": "cleric:spells_1",
+          "label": "Cleric Level 1 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#cleric"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric1"]
+          }
+        }, {
+          "choiceId": "cleric:spells_2",
+          "label": "Cleric Level 2 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#cleric"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric2"]
+          }
+        }, {
+          "choiceId": "cleric:spells_3",
+          "label": "Cleric Level 3 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#cleric"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric3"]
+          }
+        }, {
+          "choiceId": "cleric:spells_4",
+          "label": "Cleric Level 4 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#cleric"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric4"]
+          }
+        }, {
+          "choiceId": "cleric:spells_5",
+          "label": "Cleric Level 5 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#cleric"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric5"]
+          }
+        }, {
+          "choiceId": "cleric:spells_6",
+          "label": "Cleric Level 6 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#cleric"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric6"]
+          }
+        }, {
+          "choiceId": "cleric:spells_7",
+          "label": "Cleric Level 7 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#cleric"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric7"]
+          }
+        }, {
+          "choiceId": "cleric:spells_8",
+          "label": "Cleric Level 8 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#cleric"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric8"]
+          }
+        }, {
+          "choiceId": "cleric:spells_9",
+          "label": "Cleric Level 9 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#cleric"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric9"]
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "links": ["ability:channel_energy#cleric"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "links": ["ability:channel_energy#cleric"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "links": ["ability:channel_energy#cleric"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

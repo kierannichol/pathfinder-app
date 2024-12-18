@@ -15,6 +15,7 @@ import {ItemSummary} from "./ItemSummary.ts";
 import {ItemOption, ItemOptionSummary} from "./ItemOption.ts";
 import {ItemOptionSet} from "./ItemOptionSet.ts";
 import {ItemOptionGroup} from "./ItemOptionGroup.ts";
+import {FeatureOptionsQuery} from "@/data/v8/FeatureOptionsQuery.ts";
 import FeatureSummaryDbo = data.FeatureSummaryDbo;
 import FeatureDbo = data.FeatureDbo;
 import StacksDbo = data.StacksDbo;
@@ -40,6 +41,14 @@ export function decodeDescription(dbo: DescriptionDbo|null|undefined): Descripti
   return new Description(dbo?.text ?? "", dbo?.sections ?? {});
 }
 
+function decodeFeatureOptionsQuery(dbo: data.FeatureOptionsDbo | null | undefined): FeatureOptionsQuery|undefined {
+  if (!dbo || !dbo.select) return undefined;
+  return new FeatureOptionsQuery(
+      dbo.select.optionTag,
+      dbo.select.idTemplate,
+      dbo.select.prerequisitesTemplate);
+}
+
 export function decodeFeatureSummary(dbo: FeatureSummaryDbo): FeatureSummary {
   return new FeatureSummary(dbo.id,
       dbo.name,
@@ -47,7 +56,8 @@ export function decodeFeatureSummary(dbo: FeatureSummaryDbo): FeatureSummary {
       dbo.tags,
       // decodeFeatureOptionsTemplate(dbo.options),
       dbo.enabledFormula,
-      dbo.maxStacks ?? null);
+      dbo.maxStacks ?? null,
+      decodeFeatureOptionsQuery(dbo.options));
 }
 
 export function decodeFeature(dbo: FeatureDbo): Feature {
@@ -59,6 +69,7 @@ export function decodeFeature(dbo: FeatureDbo): Feature {
       // decodeFeatureOptionsTemplate(dbo.options),
       dbo.enabledFormula,
       dbo.maxStacks ?? null,
+      decodeFeatureOptionsQuery(dbo.options),
       new Description(dbo.description?.text ?? "", dbo.description?.sections ?? {}),
       [
           decodeStacks(dbo.id, dbo.stacks ?? new StacksDbo()),

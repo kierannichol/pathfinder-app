@@ -4,6 +4,30 @@
   min-width: 3em;
 }
 
+.base-ability-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.base-ability-table th, .base-ability-table td {
+  text-align: center;
+  font-variant: small-caps;
+  width: 2em;
+  border: 0 solid transparent;
+  background-clip: padding-box;
+}
+
+.base-ability-table tr>th + th, .base-ability-table tr>td + td {
+  border-left-width: var(--pf-gap);
+}
+
+.base-ability-table tr + tr > th, .base-ability-table tr + tr > td {
+  border-top-width: var(--pf-gap);
+}
+
+.base-ability-table td {
+}
+
 .base-ability-scores {
   display: flex;
   flex-direction: column;
@@ -15,20 +39,19 @@
 }
 
 .ability-row {
-  display: flex;
 }
 
 .ability-row>* {
-  width: 5rem;
-  align-content: center;
-  text-align: center;
-  line-height: 1em;
+
 }
 
 .text-input {
   width: 100%;
+  height: 100%;
   border: none;
   text-align: center;
+  line-height: 50px;
+  display: inline-block;
 }
 
 .radio {
@@ -54,4 +77,9 @@
   align-items: center;
   justify-content: center;
   letter-spacing: -1px;
+}
+
+.sign {
+  font-size: 75%;
+  line-height: 1em;
 }

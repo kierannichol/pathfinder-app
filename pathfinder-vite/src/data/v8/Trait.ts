@@ -13,6 +13,16 @@ export interface ResolvedTrait {
   applyTo(state: AppliedState): void;
 }
 
+class EmptyResolvedTraitImplementation implements ResolvedTrait {
+    children: ResolvedTrait[] = [];
+    applyTo(_state: AppliedState): void {
+        // Do nothing
+    }
+
+}
+
+export const EmptyResolvedTrait: ResolvedTrait = new EmptyResolvedTraitImplementation();
+
 export function traverseTrait(trait: ResolvedTrait,
                               state: AppliedState,
                               actionFn: (descendant: ResolvedTrait, depth: number) => boolean): void {

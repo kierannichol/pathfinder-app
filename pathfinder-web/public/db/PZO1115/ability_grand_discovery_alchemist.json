@@ -1,0 +1,49 @@
+{
+  "id": "ability:grand_discovery#alchemist",
+  "name": "Grand Discovery",
+  "tags": ["ability", "alchemist", "class_feature"],
+  "description": {
+    "text": "At 20th level, the alchemist makes a grand discovery. He immediately learns two normal discoveries, but also learns a third discovery chosen from the linked list below, representing a truly astounding alchemical breakthrough of significant import. For many alchemists, the promise of one of these grand discoveries is the primary goal of their experiments and hard work."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "choices": [{
+        "choiceId": "alchemist_discovery_1",
+        "label": "Discovery",
+        "tags": ["class_feature", "alchemist_discovery_1"],
+        "repeating": {
+          "none": {
+          }
+        },
+        "featureSelect": {
+          "optionTags": ["discovery"],
+          "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+        }
+      }, {
+        "choiceId": "alchemist_discovery_2",
+        "label": "Discovery",
+        "tags": ["alchemist_discovery_2", "class_feature"],
+        "repeating": {
+          "none": {
+          }
+        },
+        "featureSelect": {
+          "optionTags": ["discovery"],
+          "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+        }
+      }, {
+        "choiceId": "alchemist_grand_discovery",
+        "label": "Grand Discovery",
+        "tags": ["alchemist_grand_discovery", "class_feature"],
+        "repeating": {
+          "none": {
+          }
+        },
+        "featureSelect": {
+          "optionTags": ["grand_discovery"],
+          "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+        }
+      }]
+    }
+  }
+}

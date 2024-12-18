@@ -1,0 +1,51 @@
+{
+  "id": "sorcerer_bloodline:accursed_bloodline",
+  "name": "Accursed Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Misfortune, pestilence, and nightmares follow your family like vermin drawn to carrion. Somewhere in your family history, a hag\u0027s foul influence entered your bloodline. You may actually be related to the hag, or you may still be suffering the effects of a curse that a hag laid upon your kin in generations past. Now the hag\u0027s powers are part of your heritage."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:horrific_visage#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:bloodline_feat#accursed_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:wretched_endurance#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:fearsome_survival#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:bloodline_feat#accursed_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:dread_gaze#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:bloodline_feat#accursed_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:dream_walking#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }]
+        }]
+      }]
+    }
+  }
+}

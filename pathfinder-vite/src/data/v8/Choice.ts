@@ -196,6 +196,10 @@ export class SelectChoice implements Trait {
           this.repeatingIndex + 1).resolve(ref, context);
     }
 
+    const resolved = await selected?.resolve(ref, context);
+    console.log(selectedKey)
+    console.log(selected)
+
     return new ResolvedSelectChoice(
         parent,
         path,
@@ -207,7 +211,7 @@ export class SelectChoice implements Trait {
         this.categories,
         this.sortBy,
         this.repeatingIndex,
-        await selected?.resolve(ref, context),
+        resolved,
         repeatedChoice);
   }
 }

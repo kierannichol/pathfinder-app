@@ -1,0 +1,427 @@
+{
+  "id": "class:sorcerer",
+  "name": "Sorcerer",
+  "tags": ["class", "core"],
+  "maxStacks": 20,
+  "description": {
+    "text": "Scions of innately magical bloodlines, the chosen of deities, the spawn of monsters, pawns of fate and destiny, or simply flukes of fickle magic, sorcerers look within themselves for arcane prowess and draw forth might few mortals can imagine. Emboldened by lives ever threatening to be consumed by their innate powers, these magic-touched souls endlessly indulge in and refine their mysterious abilities, gradually learning how to harness their birthright and coax forth ever greater arcane feats. Just as varied as these innately powerful spellcasters\u0027 abilities and inspirations are the ways in which they choose to utilize their gifts. While some seek to control their abilities through meditation and discipline, becoming masters of their fantastic birthright, others give in to their magic, letting it rule their lives with often explosive results. Regardless, sorcerers live and breathe that which other spellcasters devote their lives to mastering, and for them magic is more than a boon or a field of study; it is life itself. Role: Sorcerers excel at casting a selection of favored spells frequently, making them powerful battle mages. As they become familiar with a specific and ever-widening set of spells, sorcerers often discover new and versatile ways of making use of magics other spellcasters might overlook. Their bloodlines also grant them additional abilities, assuring that no two sorcerers are ever quite alike. Alignment: Any Hit Die: d6 Starting Wealth: 2d6 × 10 gp (average 70 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base"
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base"
+          }
+        }, {
+          "setAction": {
+            "targetKey": "max_skill_ranks#sorcerer",
+            "formula": "(2+@int_mod)*@class:sorcerer"
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:fly",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:craft",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:use_magic_device",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:bluff",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:intimidate",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:spellcraft",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:profession",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:knowledge",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:appraise",
+            "numberValue": 1
+          }
+        }],
+        "links": ["trait:armor_proficiency#sorcerer", "trait:weapon_proficiency#sorcerer", "ability:bloodline_power#sorcerer", "ability:cantrips#sorcerer", "ability:eschew_materials#sorcerer", "ability:spellcasting#sorcerer"],
+        "choices": [{
+          "choiceId": "archetype",
+          "label": "Archetype",
+          "tags": ["archetype"],
+          "repeating": {
+            "unlimited": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["archetype+sorcerer"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "sorcerer:spells_0",
+          "label": "Sorcerer Level 0 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#sorcerer"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+sorcerer0"]
+          }
+        }, {
+          "choiceId": "sorcerer:spells_1",
+          "label": "Sorcerer Level 1 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#sorcerer"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+sorcerer1"]
+          }
+        }, {
+          "choiceId": "sorcerer:spells_2",
+          "label": "Sorcerer Level 2 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#sorcerer"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+sorcerer2"]
+          }
+        }, {
+          "choiceId": "sorcerer:spells_3",
+          "label": "Sorcerer Level 3 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#sorcerer"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+sorcerer3"]
+          }
+        }, {
+          "choiceId": "sorcerer:spells_4",
+          "label": "Sorcerer Level 4 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#sorcerer"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+sorcerer4"]
+          }
+        }, {
+          "choiceId": "sorcerer:spells_5",
+          "label": "Sorcerer Level 5 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#sorcerer"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+sorcerer5"]
+          }
+        }, {
+          "choiceId": "sorcerer:spells_6",
+          "label": "Sorcerer Level 6 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#sorcerer"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+sorcerer6"]
+          }
+        }, {
+          "choiceId": "sorcerer:spells_7",
+          "label": "Sorcerer Level 7 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#sorcerer"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+sorcerer7"]
+          }
+        }, {
+          "choiceId": "sorcerer:spells_8",
+          "label": "Sorcerer Level 8 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#sorcerer"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+sorcerer8"]
+          }
+        }, {
+          "choiceId": "sorcerer:spells_9",
+          "label": "Sorcerer Level 9 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#sorcerer"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+sorcerer9"]
+          }
+        }, {
+          "choiceId": "sorcerer1:bloodline",
+          "label": "Sorcerer Bloodline",
+          "tags": ["sorcerer_bloodline"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["sorcerer_bloodline"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bloodline_power#sorcerer", "ability:bloodline_spell#sorcerer"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "links": ["ability:bloodline_spell#sorcerer"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "links": ["ability:bloodline_feat#sorcerer", "ability:bloodline_spell#sorcerer"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bloodline_power#sorcerer", "ability:bloodline_spell#sorcerer"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "links": ["ability:bloodline_spell#sorcerer"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "links": ["ability:bloodline_feat#sorcerer", "ability:bloodline_spell#sorcerer"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bloodline_power#sorcerer", "ability:bloodline_spell#sorcerer"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "links": ["ability:bloodline_spell#sorcerer"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "links": ["ability:bloodline_feat#sorcerer", "ability:bloodline_spell#sorcerer"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:bloodline_power#sorcerer"]
+      }]
+    }
+  }
+}

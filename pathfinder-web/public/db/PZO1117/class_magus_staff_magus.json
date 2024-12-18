@@ -1,0 +1,47 @@
+{
+  "id": "class:magus#staff_magus",
+  "name": "Staff Magus",
+  "tags": ["archetype", "magus"],
+  "enabledFormula": "!@modifies:ability:fighter_training#magus AND !@modifies:trait:armor_proficiency#magus AND !@modifies:trait:weapon_proficiency#magus",
+  "maxStacks": 1,
+  "description": {
+    "text": "While most magi use a one-handed weapon as their melee implement of choice, one group of magi uses the quarterstaff instead. These lightly armored magi use staves for both defense and inflicting their spells upon enemies. Skilled in manipulating these weapons with one hand or two, they eventually learn how to use arcane staves as well, and are just as formidable in combat as their sword-swinging brethren."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:fighter_training#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:weapon_proficiency#magus",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:magus",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#magus_staff_magus", "ability:weapon_and_armor_proficiency#magus_staff_magus"],
+            "linksToRemove": ["trait:armor_proficiency#magus", "trait:weapon_proficiency#magus"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:quarterstaff_defense#magus_staff_magus"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:staff_weapon#magus_staff_magus"],
+            "linksToRemove": ["ability:fighter_training#magus"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "sorcerer_bloodline:undead_bloodline",
+  "name": "Undead Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "The taint of the grave runs through your family. Perhaps one of your ancestors became a powerful lich or vampire, or maybe you were born dead before suddenly returning to life. Either way, the forces of death move through you and touch your every action."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:grave_touch#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:bloodline_feat#undead_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:deaths_gift#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:one_of_us#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:bloodline_feat#undead_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:grasp_of_the_dead#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:bloodline_feat#undead_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:incorporeal_form#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -57,19 +57,13 @@ export default function DataChoiceSelectButton({ choiceRef, choiceIndex, charact
 
           if (characterAtPreviousLevel && category?.key === '_new') {
             options = options.filter(option => {
-              return option.isEnabled(characterWithoutCurrent) && !option.isEnabled(characterAtPreviousLevel);
+              return option.isEnabled(characterWithoutCurrent, database) && !option.isEnabled(characterAtPreviousLevel, database);
             })
           }
 
           return options.map(summary => featureToChoiceSelectorOption(summary, database, characterWithoutCurrent, descriptionFn, handleSelect));
       }}
-      categoriesFn={() => {
-        let categories = choiceRef.categories.map((category: ChoiceCategory) => new ChoiceSelectorCategory(category.label, category.tag));
-        // if (characterAtPreviousLevel) {
-        //   categories = [...categories, new ChoiceSelectorCategory('New', '', '_new')]
-        // }
-        return categories;
-      }}
+      categoriesFn={() => choiceRef.categories.map((category: ChoiceCategory) => new ChoiceSelectorCategory(category.label, category.tag))}
       children={children}
       actionVerb={choiceRef.isRepeating ? 'Add' : 'Select'}
       removable={choiceRef.isRepeating && selected !== ''}
@@ -96,24 +90,15 @@ function featureToChoiceSelectorOption(feature: FeatureSummary, database: Databa
     return <SelectionFeatureDescription
         feature={loaded}
         description={description}
-        // featureModifications={loaded.featureModifications}
         characterAtLevel={characterAtLevel} />
   };
-
-  // if (feature.optionsTemplate) {
-  //   const featureOptions = feature.optionsTemplate.queryOptions(database);
-  //   const selectOptions = featureOptions.map(option => new FeatureSummary(option.id, option.name, undefined, [], undefined, option.enabledFormula, feature.maxStacks))
-  //     .map(summary => {
-  //       return featureToChoiceSelectorOption(summary, database, characterAtLevel, descriptionFn, onSelect)
-  //     });
-  //
-  //   descriptionFn = desc => <ChoiceSelectorList options={selectOptions} onSelect={onSelect} />
-  // }
 
   return new ChoiceSelectorOption(
       feature.key,
       feature.name,
-      () => feature.isEnabled(characterAtLevel),
-      async () => descriptionFunction(feature.key)
+      () => feature.isEnabled(characterAtLevel, database),
+      async () => descriptionFunction(feature.key),
+      database.feature(feature.key)?.options(database)
+        .map(child => featureToChoiceSelectorOption(child, database, characterAtLevel, descriptionFn, onSelect)),
   )
 }

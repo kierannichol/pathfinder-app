@@ -1,86 +1,101 @@
 package pathfinder.db.query;
 
+import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Stream;
+import pathfinder.generator.CoreCharacterFeatureProvider;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
+import pathfinder.model.Source;
 
-public class Query {
+public interface Query<T> {
 
-    public static FeatQuery feats() {
+    static FeatQuery feats() {
         return new FeatQuery(null);
     }
 
-    public static FeatQuery feat(String name) {
+    static FeatQuery feat(String name) {
         return new FeatQuery(name);
     }
 
-    public static ClassQuery characterClasses() {
+    static ClassQuery characterClasses() {
         return new ClassQuery(null);
     }
 
-    public static ClassQuery characterClass(String name) {
+    static ClassQuery characterClass(String name) {
         return new ClassQuery(name);
     }
 
-    public static ClassFeatureQuery classFeatures() {
+    static ClassFeatureQuery classFeatures() {
         return new ClassFeatureQuery(null);
     }
 
-    public static ClassFeatureQuery classFeature(String name) {
+    static ClassFeatureQuery classFeature(String name) {
         return new ClassFeatureQuery(name);
     }
 
-    public static RaceQuery races() {
+    static RaceQuery races() {
         return new RaceQuery(null);
     }
 
-    public static RaceQuery race(String name) {
+    static RaceQuery race(String name) {
         return new RaceQuery(name);
     }
 
-    public static NamedEntityQuery<NamedEntity> namedEntity(String name) {
+    static NamedEntityQuery<NamedEntity> namedEntity(String name) {
         return NamedEntityQuery.byName(name);
     }
 
-    public static NamedEntityQuery<NamedEntity> namedEntity(Id id) {
+    static NamedEntityQuery<NamedEntity> namedEntity(Id id) {
         return NamedEntityQuery.byId(id);
     }
 
-    public static NamedEntityQuery<NamedEntity> namedEntities() {
+    static NamedEntityQuery<NamedEntity> namedEntities() {
         return NamedEntityQuery.all();
     }
 
-    public static <U extends NamedEntity> NamedEntityQuery<U> namedEntities(Class<U> type) {
+    static <U extends NamedEntity> NamedEntityQuery<U> namedEntities(Class<U> type) {
         return NamedEntityQuery.byType(type);
     }
 
-    public static BloodlineQuery bloodlines() {
+    static BloodlineQuery bloodlines() {
         return new BloodlineQuery(null);
     }
 
-    public static WeaponProficiencyQuery weapons() {
+    static WeaponProficiencyQuery weapons() {
         return new WeaponProficiencyQuery();
     }
 
-    public static ArmorProficiencyQuery armor() {
+    static ArmorProficiencyQuery armor() {
         return new ArmorProficiencyQuery();
     }
 
-    public static SkillQuery skills() {
+    static SkillQuery skills() {
         return new SkillQuery(null);
     }
 
-    public static SpellQuery spells() {
+    static SpellQuery spells() {
         return new SpellQuery(null);
     }
 
-    public static SpellQuery spell(String name) {
+    static MagicSchoolQuery magicSchools() {
+        return new MagicSchoolQuery();
+    }
+
+    static SpellQuery spell(String name) {
         return new SpellQuery(name);
     }
 
-    public static ItemQuery items() {
+    static ItemQuery items() {
         return new ItemQuery(null);
     }
-    public static ItemOptionQuery itemOptions() {
+    static ItemOptionQuery itemOptions() {
         return new ItemOptionQuery(null);
+    }
+
+    Stream<T> query(List<Source> sources, CoreCharacterFeatureProvider coreCharacterFeatureProvider);
+
+    default <U> Query<U> map(Function<T,U> mapFn) {
+        return new MappedQuery<T,U>(this, mapFn);
     }
 }

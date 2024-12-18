@@ -27,3 +27,7 @@ companion: false
 note: ""
 goal: ""
 multiples: false
+options:
+  option_tag: "weapon"
+  id_template: "feat:greater_weapon_focus#{option.key}"
+  prerequisites_template: "all(@proficiency:{option.key},@feat:weapon_focus#{option.key},@bab>=1,@class:fighter>=8)"

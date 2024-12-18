@@ -1,0 +1,55 @@
+.controls {
+  margin-top: 1rem;
+}
+
+.characters {
+  display: flex;
+  flex-direction: column;
+}
+
+.character {
+  display: flex;
+  flex-grow: 1;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+.character:hover {
+  background-color: var(--pf-highlight-rgb);
+}
+
+.nameContainer {
+  align-self: stretch;
+  justify-self: start;
+  flex-grow: 1;
+}
+
+.nameLabel {
+  flex-grow: 1;
+  padding: 5px;
+}
+
+.favoredClassLabel {
+  text-transform: uppercase;
+  font-size: 8pt;
+  color: grey;
+}
+
+.deleteButtonContainer {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.deleteButtonContainer:hover {
+  color: red;
+}
+
+.duplicateButtonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.duplicateButtonContainer:hover {
+  color: blue;
+}

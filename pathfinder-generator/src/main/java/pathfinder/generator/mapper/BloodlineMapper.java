@@ -19,6 +19,7 @@ import pathfinder.model.FeatureSelectByTagChoice;
 import pathfinder.model.Id;
 import pathfinder.model.StackBuilder;
 import pathfinder.model.pathfinder.Bloodline;
+import pathfinder.model.pathfinder.ClassFeature;
 import pathfinder.model.pathfinder.Feat;
 import pathfinder.util.NameUtils;
 
@@ -27,7 +28,7 @@ import pathfinder.util.NameUtils;
 @Slf4j
 public class BloodlineMapper {
     private static final Pattern LEVEL_PATTERN = Pattern.compile(".*?(\\d+)(?:st|nd|rd|th) level.*");
-    private final FeatureMapper featureMapper;
+    private final ClassFeatureMapper featureMapper;
     private final PathfinderDatabase database;
 
     public Stream<Feature> flatMap(Bloodline bloodlineModel) {
@@ -41,15 +42,17 @@ public class BloodlineMapper {
 
         List<Feature> featureList = new ArrayList<>();
 
-        bloodlineModel.bloodlinePowers().forEach(power -> {
+        Id bloodlinePowerId = Id.of("ability:bloodline_power#%s".formatted(bloodlineModel.classId().key));
 
+        bloodlineModel.bloodlinePowers().forEach(power -> {
             parseLevelFromDescription(power.description().text()).ifPresent(level -> {
-                var powerBuilder = Feature.builder(featureMapper.map(power));
-                powerBuilder.addTag("bloodline_power");
-                Feature powerFeature = powerBuilder.build();
+                var powerBuilder = ClassFeature.fromFeature(power, bloodlineModel.classId());
+                Feature powerFeature = featureMapper.map(powerBuilder).findFirst().get();
                 featureList.add(powerFeature);
 
-                bloodlineModification.stack(level).addsFeature(powerFeature.id());
+                bloodlineModification.stack(level)
+                        .addsFeature(powerFeature.id())
+                        .removesFeature(bloodlinePowerId);
             });
         });
 
@@ -75,10 +78,22 @@ public class BloodlineMapper {
     private void addBloodlineFeatChoices(Bloodline bloodline,
             List<Feature> features,
             FeatureModificationBuilder modification) {
+
+        Id originalFeatureId = Id.of("ability:bloodline_feat#%s".formatted(bloodline.classId().key));
+
+        ClassFeature originalFeature = database.getClassFeatureById(originalFeatureId)
+                .orElseThrow(() -> new IllegalArgumentException("Class Feature not found: " + originalFeatureId));
+
         String bonusFeatFeatureId = "ability:bloodline_feat#%s".formatted(bloodline.id().key);
         features.add(Feature.builder(bonusFeatFeatureId)
-                        .addFixedStack(new StackBuilder()
-                                .addChoice(FeatureSelectByTagChoice.builder("bloodline_feat", "Bloodline Feat", "bonus_feat")
+                        .setName("Bloodline Feat (%s)".formatted(bloodline.name()))
+                        .setDescription(originalFeature.description())
+                        .addTag("class_feature")
+                        .addTag(originalFeature.classId().key)
+                        .addTag(originalFeature.id().type)
+                        .setRepeatingStack(new StackBuilder()
+                                .addChoice(FeatureSelectByTagChoice.builder("bloodline_feat", "Bloodline Feat")
+                                        .tag("bonus_feat")
                                         .featureIds(bloodline.bonusFeats().stream()
 //                                                .map(featName -> database.query(Query.feat(featName)).findFirst().orElseThrow(() -> new IllegalArgumentException("Feat not found: " + featName)))
                                                 .flatMap(featName -> database.query(Query.feat(featName)))
@@ -92,7 +107,7 @@ public class BloodlineMapper {
         for (int level : levels) {
             modification.stack(level)
                     .addsFeature(Id.of(bonusFeatFeatureId))
-                    .removesFeature(Id.of("ability:bloodline_feat#%s".formatted(bloodline.classId().key)));
+                    .removesFeature(originalFeatureId);
 //            String conditionFormula = "@%s>=%d".formatted(bloodline.classId(), level);
 //            Stack stack = new StackBuilder()
 //                    .addFeatureSelectByIdsChoice("%s%d:bloodline_feat".formatted(bloodline.classId().key, level),

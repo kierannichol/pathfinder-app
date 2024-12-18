@@ -41,6 +41,7 @@ export default function SkillsEditor({ characterAtLevel, onChange }: SkillsEdito
   }
 
   return <div className={styles['skill-list']}>
+    <label>Skill Points Assigned: {assignedRanks}/{maxSkillRanks}</label>
     {options.map(skill => {
       return <SkillRow key={skill.key}
                        characterAtLevel={characterAtLevel}

@@ -1,10 +1,11 @@
 import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
 import {ResolvedTrait, Trait, traverseTrait} from "./Trait.ts";
-import {Path} from "../../utils/Path.ts";
+import {Path} from "@/utils/Path.ts";
 import {EntityChoiceSelections} from "./Entity.ts";
 import Database from "./Database.ts";
 import AppliedState from "./AppliedState.ts";
 import {FeatureRef} from "@/data/v8/Feature.ts";
+import {RestartApplyState} from "@/data/v8/RestartApplyState.ts";
 
 export class CharacterTemplate {
 
@@ -15,8 +16,21 @@ export class CharacterTemplate {
     const context = new ResolvedEntityContext(
         key => database.load(key),
         selections);
-    const resolved = await Promise.all(this.levelTemplates.map(levelTemplate => levelTemplate.resolve(context)))
-    return new ResolvedCharacterTemplate(resolved);
+    let i = 0;
+    while (true) {
+      try {
+        i++;
+        if (i > 100) {
+          throw Error("Failed to resolve template");
+        }
+        const resolved = await Promise.all(this.levelTemplates.map(levelTemplate => levelTemplate.resolve(context)))
+        return new ResolvedCharacterTemplate(resolved);
+      } catch (e) {
+        if (e !== RestartApplyState) {
+          throw e;
+        }
+      }
+    }
   }
 }
 

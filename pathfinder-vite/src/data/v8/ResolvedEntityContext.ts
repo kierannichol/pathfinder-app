@@ -2,13 +2,16 @@ import {EntityChoiceSelections} from "./Entity.ts";
 import {Trait} from "./Trait.ts";
 import {BaseDataContext, Resolvable} from "@kierannichol/formula-js";
 import {FeatureRef} from "@/data/v8/Feature.ts";
+import {StackModification} from "@/data/v8/FeatureModification.ts";
+import {RestartApplyState} from "@/data/v8/RestartApplyState.ts";
 
 export type FeatureLoader = (key: string) => Promise<Trait | undefined>;
 
 export class ResolvedEntityContext extends BaseDataContext {
   private readonly cache: { [key: string]: Trait } = {};
-  private readonly counts: { [key: string]: number } = {};
-  private readonly stackRefs: { [key: string]: FeatureRef } = {};
+  private counts: { [key: string]: number } = {};
+  private stackRefs: { [key: string]: FeatureRef } = {};
+  private readonly stackModifications: { [key: string]: StackModification } = {};
 
   get(key: string): Resolvable | undefined {
     return Resolvable.just(this.count(key));
@@ -66,5 +69,34 @@ export class ResolvedEntityContext extends BaseDataContext {
 
   getStackRef(featureId: string, stackCount: number): FeatureRef {
     return this.stackRefs[featureId + ":" + stackCount];
+  }
+
+  hasModification(modificationKey: string): boolean {
+    return modificationKey in this.stackModifications;
+  }
+
+  registerModification(modificationKey: string, modification: StackModification): boolean {
+    if (this.hasModification(modificationKey)) {
+      return false;
+    }
+    this.stackModifications[modificationKey] = modification;
+    return true;
+  }
+
+  restartResolve() {
+    this.counts = {};
+    this.stackRefs = {};
+    throw RestartApplyState;
+  }
+
+  forbidAddFeature(parentKey: string, parentStackCount: number, featureToAddKey: string): boolean {
+    return this.modifications(parentKey, parentStackCount)
+    .find(entry => entry.forbidAddFeature(featureToAddKey)) !== undefined;
+  }
+
+  modifications(featureId: string, stackNumber: number): StackModification[] {
+    return Object.values(this.stackModifications).filter(mod =>
+        mod.targetFeatureId === featureId
+        && mod.targetStackCount === stackNumber);
   }
 }

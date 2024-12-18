@@ -1,0 +1,485 @@
+{
+  "id": "class:unchained_barbarian",
+  "name": "Unchained Barbarian",
+  "tags": ["class", "unchained"],
+  "maxStacks": 20,
+  "description": {
+    "text": "For some, there is only rage. In the ways of their people, in the fury of their passion, in the howl of battle, conflict is all these brutal souls know. Savages, hired muscle, masters of vicious martial techniques, they are not soldiers or professional warriors--they are the battle possessed, creatures of slaughter and spirits of war. Known as barbarians, these warmongers know little of training, preparation, or the rules of warfare; for them, only the moment exists, with the foes that stand before them and the knowledge that the next moment might hold their death. They possess a sixth sense in regard to danger and the endurance to weather all that might entail. These brutal warriors might rise from all walks of life, both civilized and savage, though whole societies embracing such philosophies roam the wild places of the world. Within barbarians storms the primal spirit of battle, and woe to those who face their rage. Role: Barbarians excel in combat, possessing the martial prowess and fortitude to take on foes seemingly far superior to themselves. With rage granting them boldness and daring beyond that of most other warriors, barbarians charge furiously into battle and ruin all who would stand in their way. Unchained: The unchained barbarian is similar in many regards to the standard barbarian--she still goes into a rage and gains rage powers, but many of the details have been changed. Rage now grants temporary hit points and static bonuses on attack and damage rolls, rather than bonuses to ability scores that force players to recalculate a number of statistics. Additionally, many rage powers now function whenever the barbarian is raging, as opposed to just once per rage. Finally, the overall utility of many of the rage powers has been adjusted to make them more useful and interesting. Alignment: Any non-lawful Hit Die: d12 Starting Wealth: 3d6 × 10 gp (average 105gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base"
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base"
+          }
+        }, {
+          "setAction": {
+            "targetKey": "max_skill_ranks#unchained_barbarian",
+            "formula": "(4+@int_mod)*@class:unchained_barbarian"
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:perception",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:craft",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:handle_animal",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:swim",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:survival",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:intimidate",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:acrobatics",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:climb",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:knowledge",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:ride",
+            "numberValue": 1
+          }
+        }],
+        "links": ["trait:armor_proficiency#unchained_barbarian", "trait:weapon_proficiency#unchained_barbarian", "ability:fast_movement#unchained_barbarian", "ability:rage#unchained_barbarian"],
+        "choices": [{
+          "choiceId": "archetype",
+          "label": "Archetype",
+          "tags": ["archetype"],
+          "repeating": {
+            "unlimited": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["archetype+unchained_barbarian"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "unchained_barbarian:spells_0",
+          "label": "Unchained Barbarian Level 0 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#unchained_barbarian"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_barbarian0"]
+          }
+        }, {
+          "choiceId": "unchained_barbarian:spells_1",
+          "label": "Unchained Barbarian Level 1 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#unchained_barbarian"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_barbarian1"]
+          }
+        }, {
+          "choiceId": "unchained_barbarian:spells_2",
+          "label": "Unchained Barbarian Level 2 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#unchained_barbarian"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_barbarian2"]
+          }
+        }, {
+          "choiceId": "unchained_barbarian:spells_3",
+          "label": "Unchained Barbarian Level 3 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#unchained_barbarian"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_barbarian3"]
+          }
+        }, {
+          "choiceId": "unchained_barbarian:spells_4",
+          "label": "Unchained Barbarian Level 4 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#unchained_barbarian"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_barbarian4"]
+          }
+        }, {
+          "choiceId": "unchained_barbarian:spells_5",
+          "label": "Unchained Barbarian Level 5 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#unchained_barbarian"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_barbarian5"]
+          }
+        }, {
+          "choiceId": "unchained_barbarian:spells_6",
+          "label": "Unchained Barbarian Level 6 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#unchained_barbarian"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_barbarian6"]
+          }
+        }, {
+          "choiceId": "unchained_barbarian:spells_7",
+          "label": "Unchained Barbarian Level 7 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#unchained_barbarian"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_barbarian7"]
+          }
+        }, {
+          "choiceId": "unchained_barbarian:spells_8",
+          "label": "Unchained Barbarian Level 8 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#unchained_barbarian"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_barbarian8"]
+          }
+        }, {
+          "choiceId": "unchained_barbarian:spells_9",
+          "label": "Unchained Barbarian Level 9 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#unchained_barbarian"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_barbarian9"]
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:rage_power#unchained_barbarian", "ability:uncanny_dodge#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:danger_sense#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:rage_power#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:improved_uncanny_dodge#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:danger_sense#unchained_barbarian", "ability:rage_power#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:damage_reduction#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:rage_power#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:danger_sense#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:damage_reduction#unchained_barbarian", "ability:rage_power#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:greater_rage#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:danger_sense#unchained_barbarian", "ability:rage_power#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:damage_reduction#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:indomitable_will#unchained_barbarian", "ability:rage_power#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:danger_sense#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:damage_reduction#unchained_barbarian", "ability:rage_power#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:tireless_rage#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:danger_sense#unchained_barbarian", "ability:rage_power#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:damage_reduction#unchained_barbarian"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:mighty_rage#unchained_barbarian", "ability:rage_power#unchained_barbarian"]
+      }]
+    }
+  }
+}

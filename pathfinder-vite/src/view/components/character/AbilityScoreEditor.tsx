@@ -1,6 +1,6 @@
 import styles from "./AbilityScoreEditor.module.css";
 import React, {useMemo} from "react";
-import {classNames} from "../../../utils/classNames.ts";
+import {classNames} from "@/utils/classNames.ts";
 
 interface AbilityScoreEditorProps {
   label: string;

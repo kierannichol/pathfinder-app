@@ -1,0 +1,63 @@
+.abilityScore {
+  display: flex;
+  /*flex: 1;*/
+  flex-direction: column;
+  border: 2px solid var(--pf-primary-rgb);
+}
+
+.label {
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem 0;
+  background-color: var(--pf-primary-rgb);
+  color: white
+}
+
+.control {
+  display: flex;
+}
+
+.control>* {
+  flex: 1;
+  text-align: center;
+}
+
+.score {
+  font-weight: bold;
+  padding: 0.5rem;
+  min-width: 3em;
+}
+
+.button {
+  cursor: pointer;
+  padding: 0.5rem;
+
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 8pt;
+  user-select: none;
+}
+.button:hover {
+  background-color: var(--pf-highlight-rgb);
+}
+
+.minus {
+  border-right: 1px solid gray;
+}
+
+.plus {
+  border-left: 1px solid gray;
+}
+
+.bonus {
+  color: green;
+  font-weight: bolder;
+}
+
+.penalty {
+  color: red;
+  font-weight: bolder;
+}

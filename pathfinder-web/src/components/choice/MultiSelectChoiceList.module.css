@@ -1,0 +1,25 @@
+.choiceList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.button {
+  border-radius: 0;
+}
+
+.button:first-of-type {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.button:last-of-type {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  /*border-bottom: 1px solid #ccc;*/
+}
+
+.add {
+  border: 0;
+  box-shadow: none;
+}

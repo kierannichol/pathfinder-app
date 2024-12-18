@@ -30,6 +30,7 @@ public class FeatureJsonDeserializer extends StdDeserializer<Feature> {
         Optional.ofNullable(node.get("name")).filter(this::isValidNode).ifPresent(n -> builder.name(n.asText()));
         Optional.ofNullable(node.get("label")).filter(this::isValidNode).ifPresent(n -> builder.label(n.asText()));
         Optional.ofNullable(node.get("prerequisites")).filter(this::isValidNode).ifPresent(n -> builder.prerequisites(n.asText()));
+        Optional.ofNullable(node.get("enabled_formula")).filter(this::isValidNode).ifPresent(n -> builder.enabled_formula(n.asText()));
         Optional.ofNullable(node.get("type")).filter(this::isValidNode).ifPresent(n -> builder.type(n.asText()));
         JsonNode dn = node.get("description");
         if (dn != null) {

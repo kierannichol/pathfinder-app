@@ -1,7 +1,8 @@
 import {ResolvedTrait, Trait} from "./Trait.ts";
 import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
 import AppliedState from "./AppliedState.ts";
-import {FeatureRef} from "@/data/v8/Feature.ts";
+import {Feature, FeatureRef} from "@/data/v8/Feature.ts";
+import {Link} from "@/data/v8/Link.ts";
 
 export class Stack {
   static readonly Empty: Stack = new Stack([]);
@@ -25,11 +26,28 @@ export class FeatureStack implements Trait {
 
   async resolve(parent: FeatureRef, context: ResolvedEntityContext): Promise<ResolvedStack> {
     context.registerStackRef(this.featureId, this.stackNumber, parent);
+
+    const modifications = context.modifications(this.featureId, this.stackNumber);
+
+    const resolvedTraits = await Promise.all([
+        ...this.traits.filter(trait => !this.isForbidden(trait, context)),
+        ...modifications.flatMap(modification => modification.linksToAdd)]
+      .map(trait => trait.resolve(parent, context)));
+
     return new ResolvedStack(
         this.featureId,
         this.stackNumber,
-        await Promise.all(this.traits.map(trait =>
-            trait.resolve(parent, context))));
+        resolvedTraits);
+  }
+
+  private isForbidden(trait: Trait, context: ResolvedEntityContext): boolean {
+    if (trait instanceof Link) {
+      return context.forbidAddFeature(this.featureId, this.stackNumber, trait.key);
+    }
+    if (trait instanceof Feature) {
+      return context.forbidAddFeature(this.featureId, this.stackNumber, trait.key);
+    }
+    return false;
   }
 }
 

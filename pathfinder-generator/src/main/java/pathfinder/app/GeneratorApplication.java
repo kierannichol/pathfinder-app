@@ -45,20 +45,6 @@ public class GeneratorApplication {
             CharacterTemplate base = characterTemplateGenerator.generate();
             writer.write(base.toDbo(), "character_template");
 
-//            var sources = List.of(
-//                    Sources.CORE,
-//                    Sources.COMPANION_HEROES_OF_THE_HIGH_COURT,
-//                    Sources.ADVANCED_PLAYERS_GUIDE,
-//                    Sources.GAMEMASTERY_GUIDE,
-//                    Sources.ADVANCED_CLASS_GUIDE,
-//                    Sources.ULTIMATE_COMBAT,
-//                    Sources.ULTIMATE_MAGIC,
-//                    Sources.ULTIMATE_EQUIPMENT,
-//                    Sources.UNCHAINED,
-//                    Sources.OCCULT_ADVENTURES,
-//                    Sources.ADVANCED_RACE_GUIDE,
-//                    Sources.THE_INNER_SEA_WORLD_GUIDE
-//            );
             var sources = db.sources();
 
             ctx.getBean(SourceBookIndexGenerator.class).generate();

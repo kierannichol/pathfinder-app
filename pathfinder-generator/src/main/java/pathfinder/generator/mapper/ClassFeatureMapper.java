@@ -118,8 +118,9 @@ public class ClassFeatureMapper {
         return Stream.ofNullable(switch (feature.id().key + "#" + feature.id().option) {
             case "bonus_feat#magus" -> FeatureSelectByTagChoice.builder(
                     "magus_bonus_feat",
-                    "Magus Bonus Feat",
-                    "bonus_feat")
+                    "Magus Bonus Feat")
+                    .tag("bonus_feat")
+                    .tag("class_feature")
                     .optionTag("feat+combat")
                     .optionTag("feat+item_creation")
                     .optionTag("feat+metamagic")
@@ -129,8 +130,9 @@ public class ClassFeatureMapper {
                     .sortBy(FeatureSelectSortBy.NAME);
             case "bonus_feat#fighter" -> FeatureSelectByTagChoice.builder(
                     "fighter_bonus_feat",
-                    "Fighter Bonus Feat",
-                    "bonus_feat")
+                    "Fighter Bonus Feat")
+                    .tag("bonus_feat")
+                    .tag("class_feature")
                     .optionTag("feat+combat")
                     .category("Combat", "feat+combat")
                     .sortBy(FeatureSelectSortBy.NAME);
@@ -153,7 +155,9 @@ public class ClassFeatureMapper {
     }
 
     private FeatureSelectByTagChoice.Builder byTagChoice(String choiceId, String label, List<String> optionTags) {
-        return FeatureSelectByTagChoice.builder(choiceId, label, choiceId)
+        return FeatureSelectByTagChoice.builder(choiceId, label)
+                .tag(choiceId)
+                .tag("class_feature")
                 .optionTags(optionTags)
                 .sortBy(FeatureSelectSortBy.NAME);
     }

@@ -39,16 +39,16 @@ public class AbstractComponentBuilder<SELF extends AbstractComponentBuilder<SELF
         return self();
     }
 
-    public SELF addFeatureSelectByTagChoice(String id, String label, String type, String... optionTags) {
-        return addChoice(new FeatureSelectByTagChoice(id, label, type, List.of(optionTags), List.of(), List.of(), FeatureSelectSortBy.NAME));
+    public SELF addFeatureSelectByTagChoice(String id, String label, Tags tags, String... optionTags) {
+        return addChoice(new FeatureSelectByTagChoice(id, label, tags, List.of(optionTags), List.of(), List.of(), FeatureSelectSortBy.NAME));
     }
 
-    public SELF addFeatureSelectByIdsChoice(String id, String label, String type, List<Id> featureIds) {
-        return addChoice(new FeatureSelectByTagChoice(id, label, type, List.of(), featureIds, List.of(), FeatureSelectSortBy.NAME));
+    public SELF addFeatureSelectByIdsChoice(String id, String label, Tags tags, List<Id> featureIds) {
+        return addChoice(new FeatureSelectByTagChoice(id, label, tags, List.of(), featureIds, List.of(), FeatureSelectSortBy.NAME));
     }
 
-    public SELF addRepeatingFeatureSelectByTagChoice(String id, String label, String type, String... optionTags) {
-        return addChoice(new FeatureSelectByTagChoice(id, label, type, List.of(optionTags), List.of(), List.of(), FeatureSelectSortBy.NAME, RepeatingChoiceType.unlimited()));
+    public SELF addRepeatingFeatureSelectByTagChoice(String id, String label, Tags tags, String... optionTags) {
+        return addChoice(new FeatureSelectByTagChoice(id, label, tags, List.of(optionTags), List.of(), List.of(), FeatureSelectSortBy.NAME, RepeatingChoiceType.unlimited()));
     }
 
     public SELF addChoice(Choice choice) {

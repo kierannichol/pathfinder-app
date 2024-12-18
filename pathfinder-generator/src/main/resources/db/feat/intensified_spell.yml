@@ -25,3 +25,8 @@ companion: false
 note: ""
 goal: ""
 multiples: false
+options:
+  option_tag: "spell"
+  id_template: "feat:improved_critical#{option.key}"
+  prerequisites_template: "@bab >= 8 AND @proficiency:{option.key}"
+

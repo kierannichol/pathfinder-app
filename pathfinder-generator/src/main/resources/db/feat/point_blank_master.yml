@@ -24,3 +24,7 @@ companion: false
 note: ""
 goal: ""
 multiples: false
+options:
+  option_tag: "weapon+ranged"
+  id_template: "feat:point_blank_master#{option.key}"
+  prerequisites_template: "@feat:weapon_specialization#{option.key}"

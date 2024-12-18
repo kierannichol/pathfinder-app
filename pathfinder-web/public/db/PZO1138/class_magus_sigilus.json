@@ -1,0 +1,32 @@
+{
+  "id": "class:magus#sigilus",
+  "name": "Sigilus",
+  "tags": ["archetype", "magus"],
+  "enabledFormula": "!@modifies:ability:spellstrike#magus",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:spellstrike#magus",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:magus",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:inscribe_rune#magus_sigilus"],
+            "linksToRemove": ["ability:spellstrike#magus"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:inscribe_star_rune#magus_sigilus"]
+          }]
+        }]
+      }]
+    }
+  }
+}

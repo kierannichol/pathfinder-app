@@ -10,6 +10,7 @@ export default class Id {
   }
 
   static justOption(id: string): string|undefined {
+    if (id === undefined) return undefined;
     const index = id.lastIndexOf(Id.OptionDeliminator);
     if (index < 0) return undefined;
     return id.substring(index + 1);

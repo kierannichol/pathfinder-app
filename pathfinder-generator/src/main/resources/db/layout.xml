@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pages>
+  <page id="character_edit">
+    <tabs>
+      <section>
+        <textfield label="Character Name" context="character" choice="character_name" />
+        <textfield label="Current Level" context="character" choice="current_level" />
+        <select label="Race" context="character" choice="race" />
+        <select label="Alignment" context="character" choice="alignment" />
+        <select label="Favored Class" context="character" choice="favored_class" />
+      </section>
+      <section>
+        <header>Feats</header>
+        <foreach context="character_at_level" query="feat:*">
+          <feature id="@item.id" />
+        </foreach>
+      </section>
+      <section>
+        <header>Class Features</header>
+        <foreach context="character_at_level" query="class_feature:*">
+          <block key="@item.id">
+            <label value=""
+          </block>
+        </foreach>
+      </section>
+    </tabs>
+  </page>
+</pages>

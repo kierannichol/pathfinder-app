@@ -36,6 +36,7 @@ import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
 import pathfinder.model.pathfinder.Weapons;
 import pathfinder.util.PatternMapper;
+import pathfinder.util.StringUtils;
 
 @Component("Prerequisite Parser")
 @Lazy
@@ -71,16 +72,22 @@ public class PrerequisiteParser {
             .addToken("ANY", "(.*?)")
 
             .addFunction("key", (id, text) -> Id.of(id).key)
+            .addFunction("id", (id, text) -> id)
 //            .addFunction("class_feature", (id, text) -> wildcard(id, text, ""))
 //            .addFunction("wildcard", (id, text) -> id)
+//enabled_formula: "all(@dex_score>=13,@feat:greater_grapple,@feat:improved_grapple,@feat:improved_unarmed_strike,any(@bab>=9,@class:monk>=9))"
 
             .addImmediateReplacement("Proficient with armor or shield", "any(@proficiency:light_armor,@proficiency:medium_armor,@proficiency:heavy_armor,@proficiency:shield)")
             .addImmediateReplacement("proficient with {NAME} or {NAME}", "(@proficiency:{0} OR @proficiency:{1})")
             .addImmediateReplacement("the ability to cast animate dead or command undead", "(@spell:animate_dead OR @spell:command_undead)")
             .addImmediateReplacement("ability to acquire an animal companion, eidolon, familiar, or special mount", "(@trait:animal_companion OR @feature:eidolon OR @feature:familiar OR @feature:special_mount)")
             .addImmediateReplacement("Channel energy class feature", "@ability:channel_energy[Channel Energy]")
+            .addImmediateReplacement("halfling sling staff", "halfling_sling_staff")
 
-            .addReplacement("base attack bonus +{NUMBER} or {CLASS} level {LEVEL}", "any(@bab>={0},{1}>={2})")
+            .addReplacement("augmented summoning", "@feat:augment_summoning")
+//            .addReplacement("base attack bonus +{NUMBER} or monk level {LEVEL}", "any(@bab>={0},@class:monk>={1})")
+
+            .addImmediateReplacement("base attack bonus +{NUMBER} or {CLASS} level {LEVEL}", "any(@bab>={0},{1}>={2})")
 
             .addReplacement("no levels in a class that has the {NAME}", "!{0}")
             .addReplacement("must be taken at {LEVEL} level", "@character_level==1")
@@ -169,6 +176,7 @@ public class PrerequisiteParser {
 
             .addReplacement("{NAME} as a spell or spell-like ability (including from the {NAME} or {NAME} class features)", "({0} OR {class_feature:1} OR {class_feature:2})")
             .addReplacement("Ability to cast divine spells", "@trait:divine_spellcaster[Divine spellcaster]")
+            .addReplacement("ability to cast at least one force spell", "\"Ability to cast at least one force spell\"")
             .addReplacement("Divine spellcaster", "@trait:divine_spellcaster[Divine spellcaster]")
             .addReplacement("Ability to use the {NAME} or cast {NAME}", "({0} OR {spell:1})")
             .addImmediateReplacement("darkvision or low-light vision racial trait", "(@ability:darkvision OR @ability:low_light_vision)")
@@ -187,11 +195,12 @@ public class PrerequisiteParser {
             .addReplacement("1 rank in any Craft skill", "max(@skill:craft#*)[Any craft skill] >= 1")
             .addReplacement("Ride rank {NUMBER}", "@skill:ride >= {0}")
             .addImmediateReplacement("{NUMBER} ranks in any Craft or Profession skill", "(max(@skill:craft#*)[Any craft skill] >= {0} OR max(@skill:profession:#*)[Any profession skill] >= {0})")
-            .addImmediateReplacement("{NUMBER} rank in at least one knowledge skill", "max(@skill:knowledge_*)[Any knowledge skill]")
+            .addReplacement("{NUMBER} rank in at least one knowledge skill", "max(@skill:knowledge_*)[Any knowledge skill]>={0}")
             .addReplacement("special mount", "\"Special mount\"")
 
             .addImmediateReplacement("Knowledge (dungeoneering, local, nature, planes, or religion) 1 rank", "(@skill:knowledge_dungeoneering OR @skill:knowledge_local OR @skill:knowledge_planes OR @skill:knowledge_religion)")
             .addImmediateReplacement("Knowledge (dungeoneering, local, nature, planes, or religion) {NUMBER} ranks", "(@skill:knowledge_dungeoneering >= {0} OR @skill:knowledge_local >= {0} OR @skill:knowledge_planes >= {0} OR @skill:knowledge_religion >= {0})")
+            .addReplacement("Knowledge ({NAME}) {NUMBER} ranks", "@skill:knowledge_{0}>={1}")
 
             // Sizes
             .addImmediateReplacement("size {SIZE} or larger", "@size >= {0}")
@@ -261,6 +270,7 @@ public class PrerequisiteParser {
             .addReplacement("selected thrown weapon", "selected_thrown_weapon")
             .addReplacement("selected ranged weapon", "selected_ranged_weapon")
             .addReplacement("selected piercing melee weapon", "selected_piercing_melee_weapon")
+            .addReplacement("the chosen weapon", "selected_weapon")
             .addReplacement("the selected vehicle type", "selected_vehicle")
             .addReplacement("both wielded weapons", "selected_weapon")
             .addReplacement("Natural armor", "@ac:natural")
@@ -417,7 +427,7 @@ public class PrerequisiteParser {
             .addReplacement("greater drow nobility", "@trait:greater_drow_nobility")
 
             // Generic
-            .addReplacement("{NAME} with {NAME}", "{0}#{key:1}")
+            .addReplacement("{NAME} with {NAME}", "{id:0}#{key:1}")
             .addReplacement("{PHRASE}, {PHRASE} and either the {PHRASE} or {PHRASE}", "all({0}, {1}, any({2}, {3}))")
             .addReplacement("{PHRASE} and {PHRASE}, or {PHRASE}", "any(all({0}, {1}), {2}))")
             .addReplacement("{PHRASE} and {PHRASE}", "{0} AND {1}")
@@ -468,6 +478,10 @@ public class PrerequisiteParser {
     private final PatternMapper patternMapper = new PatternMapper();
 
     public String prerequisites(Feature feature) {
+        if (StringUtils.notEmpty(feature.enabled_formula())) {
+            return feature.enabled_formula();
+        }
+
         var context = PrerequisiteContext.create()
                 .sourceId(feature.source());
 
@@ -475,6 +489,10 @@ public class PrerequisiteParser {
     }
 
     public String prerequisites(ClassFeature feature) {
+        if (StringUtils.notEmpty(feature.enabled_formula())) {
+            return feature.enabled_formula();
+        }
+
         var context = PrerequisiteContext.create()
                 .sourceId(feature.source())
                 .classId(feature.classId());
@@ -483,6 +501,10 @@ public class PrerequisiteParser {
     }
 
     public String prerequisites(Feat feat) {
+        if (StringUtils.notEmpty(feat.enabled_formula())) {
+            return feat.enabled_formula();
+        }
+
         var context = PrerequisiteContext.create()
                 .sourceId(feat.source());
 
@@ -505,6 +527,7 @@ public class PrerequisiteParser {
                 log.warn("Was just \"@ability\":\n%s\n%s".formatted(prerequisites, parsed));
             }
 
+//            return parsed;
             return Formula.optimize(parsed);
         } catch (ParseException e) {
             log.error("Failed to parse: \"" + prerequisites + "\" for " + id);
@@ -515,6 +538,7 @@ public class PrerequisiteParser {
         }
     }
 
+    @SuppressWarnings("unchecked")
     private synchronized void init() {
         if (initialized.getAndSet(true)) {
             return;
@@ -585,9 +609,9 @@ public class PrerequisiteParser {
         addNameMapping("summon monster iv", Id.of("spell:summon_monster_4"));
         addNameMapping("summon monster v", Id.of("spell:summon_monster_5"));
 
-        addNameMapping("summon monster", Id.partial(summonMonsterSpellClause() + "[Summon monster]"));
-        addNameMapping("summon nature's ally spells", Id.partial(summonNaturesAllyClause() + "[Summon nature's ally spells]"));
-        addNameMapping("summon nature's ally", Id.partial(summonNaturesAllyClause() + "[Summon nature's ally]"));
+        addNameMapping("summon monster", Id.partial(summonMonsterSpellClause() + "[Able to cast Summon Monster]"));
+        addNameMapping("summon nature's ally spells", Id.partial(summonNaturesAllyClause() + "[Able to cast Summon Nature's Ally]"));
+        addNameMapping("summon nature's ally", Id.partial(summonNaturesAllyClause() + "[Able to cast Summon Nature's Ally]"));
 
         patternMapper.addAll(GLOBAL_PATTERN_MAPPER);
 
@@ -644,8 +668,17 @@ public class PrerequisiteParser {
                     for (int i = 0; i < 4; i++) {
                         var expandedQuery = expandQuery((NamedEntityQuery<NamedEntity>) query, c.sourceId(), i);
                         var found = database.query(expandedQuery).findFirst()
-                                .map(NamedEntity::id)
-                                .map(PrerequisiteParser::formatId);
+                                .map(entity -> {
+                                    String entityId = formatId(entity.id());
+//                                    if (entity instanceof Feat feat) {
+//                                        boolean featHasOptions = feat.options() != null;
+//                                        boolean idHasOption = Id.of(entityId).hasOption();
+//                                        if (featHasOptions && !idHasOption) {
+//                                            return "sum(%s#*)".formatted(entityId);
+//                                        }
+//                                    }
+                                    return entityId;
+                                });
 
                         if (found.isPresent()) {
                             return found.get();
@@ -725,25 +758,25 @@ public class PrerequisiteParser {
     }
 
     private String summonNaturesAllyClause() {
-        String spells = database.query(Query.namedEntities())
+        String spells = database.query(Query.spells())
                 .filter(spell -> spell.name().toLowerCase().startsWith("summon nature's ally"))
                 .map(spell -> "@" + spell.id())
                 .collect(Collectors.joining(", "));
         if (spells.isBlank()) {
             spells = "0";
         }
-        return "any(" + spells + ")";
+        return "(any(" + spells + "))";
     }
 
     private String summonMonsterSpellClause() {
-        String spells = database.query(Query.namedEntities())
+        String spells = database.query(Query.spells())
                 .filter(spell -> spell.name().toLowerCase().startsWith("summon monster"))
                 .map(spell -> "@" + spell.id())
                 .collect(Collectors.joining(", "));
         if (spells.isBlank()) {
             spells = "0";
         }
-        return "any(" + spells + ")";
+        return "(any(" + spells + "))";
     }
 
     private String resolveClassFeature(String id, String text) {

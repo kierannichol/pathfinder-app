@@ -1,10 +1,14 @@
 package pathfinder.generator;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Stream;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import pathfinder.db.PathfinderDatabase;
+import pathfinder.db.query.Query;
 import pathfinder.model.Effect;
 import pathfinder.model.Feature;
 import pathfinder.model.Feature.FeatureBuilder;
@@ -12,10 +16,12 @@ import pathfinder.model.FeatureSelectByTagChoice;
 import pathfinder.model.FeatureSelectSortBy;
 import pathfinder.model.Id;
 import pathfinder.model.StackBuilder;
+import pathfinder.model.Tags;
 import pathfinder.model.core.AbilityScore;
 import pathfinder.model.core.BaseAttackBonus;
 import pathfinder.model.pathfinder.Alignment;
 import pathfinder.model.pathfinder.ArmorProficiency;
+import pathfinder.model.pathfinder.MagicSchools;
 import pathfinder.model.pathfinder.Size;
 import pathfinder.model.pathfinder.Skills;
 import pathfinder.model.pathfinder.SourceId;
@@ -25,7 +31,9 @@ import pathfinder.model.pathfinder.Weapons;
 import pathfinder.util.StreamUtils;
 
 @Component
+@RequiredArgsConstructor
 public class CoreCharacterFeatureProvider implements FeatureProvider {
+    private final PathfinderDatabase database;
 
     @Override
     public Stream<Feature> features(SourceId sourceId) {
@@ -43,10 +51,29 @@ public class CoreCharacterFeatureProvider implements FeatureProvider {
                 armorProficiencies(),
                 alignments(),
                 skills(),
+                schoolsOfMagic(),
+                spellbooks(),
                 classSkills(),
                 sizes(),
                 asi()
         ));
+    }
+
+    private Stream<Feature> spellbooks() {
+        var classIds = new HashSet<Id>();
+        database.query(Query.spells())
+                .flatMap(spell -> spell.levels().stream())
+                .forEach(spellLevel -> {
+                    classIds.add(spellLevel.classId());
+                });
+        return classIds.stream()
+                .map(classId -> {
+                    var classDef = database.getClassById(classId).get();
+                    return Feature.builder(Id.of("spellbook:%s", classId.key))
+                            .setName("%s Spellbook".formatted(classDef.name()))
+                            .addTag("spellbook")
+                            .build();
+                });
     }
 
     private Stream<Feature> generalConcepts() {
@@ -62,8 +89,17 @@ public class CoreCharacterFeatureProvider implements FeatureProvider {
                 .map(weapon -> Feature.builder(Id.of("weapon", weapon.id()))
                         .setName(weapon.name())
                         .addTag("weapon")
+                        .addTag(weapon.requiredProficiency().id().key)
+                        .addTag(weapon.range().isRanged() ? "ranged" : "melee")
                         .setMaxStacks(1))
                 .map(FeatureBuilder::build);
+    }
+
+    private Stream<Feature> schoolsOfMagic() {
+        return MagicSchools.ALL.stream()
+                .map(school -> Feature.builder(school)
+                        .addTag("magic_school")
+                        .build());
     }
 
     private Stream<Feature> weaponProficiencies() {
@@ -77,12 +113,14 @@ public class CoreCharacterFeatureProvider implements FeatureProvider {
 
             builder.setMaxStacks(1);
             builder.addFixedStack(stack.build());
+
             return builder.build();
         };
 
         Stream<Feature> weaponFeatures = Weapons.ALL_WEAPONS.stream()
                 .map(weapon -> Feature.builder(Id.of("proficiency", weapon.id()))
-                        .setName("Proficiency: " + weapon.name())
+                        .setName(weapon.name())
+                        .setLabel("Proficiency: " + weapon.name())
                         .setMaxStacks(1)
                         .addFixedStack(new StackBuilder()
                                 .addEffect(Effect.setNumber(Id.of("proficiency", weapon.id()), 1))
@@ -154,7 +192,7 @@ public class CoreCharacterFeatureProvider implements FeatureProvider {
                         .addFixedStack(new StackBuilder()
                                 .addChoice(new FeatureSelectByTagChoice("race_asi_plus_2_any",
                                         "Ability Score Increase",
-                                        "asi",
+                                        Tags.of("asi"),
                                         List.of("asi_p2"),
                                         List.of(),
                                         List.of(),

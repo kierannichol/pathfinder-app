@@ -1,0 +1,51 @@
+{
+  "id": "sorcerer_bloodline:maestro_bloodline",
+  "name": "Maestro Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "The spiritual power of art and song runs strongly through your family line. This may be the result of ancient pacts made with azata patrons, or even an inheritance from a lillend or trumpet archon ancestor. It could also be the lingering taint of a less savory heritage, such as from a harpy or a forefather driven to madness by the disquieting gibbering of a shoggoth. However it came to be, your family\u0027s artistic bent shows itself strongly in your magic."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:beguiling_voice#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:bloodline_feat#maestro_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:fascinate#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:grand_maestro#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:bloodline_feat#maestro_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:perfect_voice#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:bloodline_feat#maestro_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:inspire#sorcerer", "ability:greater_heroism#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer", "ability:bloodline_power#sorcerer"]
+          }]
+        }]
+      }]
+    }
+  }
+}

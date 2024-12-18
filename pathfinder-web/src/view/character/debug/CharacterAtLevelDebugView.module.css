@@ -1,0 +1,25 @@
+table.debug {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table.debug td, table.debug th {
+  padding: 0.25em;
+  text-align: left;
+}
+
+table.debug td:first-child {
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+table.debug th {
+  color: var(--pf-primary-rgb);
+  border-bottom: 2px solid var(--pf-primary-rgb);
+}
+
+table.debug tr:nth-child(even) {
+  background-color: lightgrey;
+}

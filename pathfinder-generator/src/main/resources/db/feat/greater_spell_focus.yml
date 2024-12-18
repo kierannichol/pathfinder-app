@@ -24,3 +24,7 @@ companion: false
 note: ""
 goal: ""
 multiples: false
+options:
+  option_tag: "magic_school"
+  id_template: "feat:greater_spell_focus#{option.key}"
+  prerequisites_template: "@feat:spell_focus#{option.key}"

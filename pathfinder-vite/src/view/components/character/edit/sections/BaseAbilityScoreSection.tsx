@@ -1,7 +1,6 @@
 import Section from "@/view/components/character/edit/common/Section.tsx";
 import TextChoiceInput from "@/view/components/character/edit/fields/TextChoiceInput.tsx";
 import styles from "./BaseAbilityScoreSection.module.css";
-import HorizontalLayout from "@/view/components/character/edit/common/HorizontalLayout.tsx";
 import {ChoiceRef, SelectChoiceRef} from "@/data/v8/Choice.ts";
 import {useCharacterAtLevel} from "@/view/components/character/edit/CharacterAtLevelContext.tsx";
 import {HTMLAttributes, useMemo, useState} from "react";
@@ -20,20 +19,27 @@ export default function BaseAbilityScoreSection({}: BaseAbilityScoreSectionProps
   const asiChoices = useMemo(() => character.choicesOfType('asi'), [character]);
 
   return <Section header='Base Ability Scores' className={styles['base-ability-scores']}>
-    <HorizontalLayout className={styles['ability-row']}>
-      <div></div>
-      <label>Score</label>
-      <label>Mod</label>
-      {asiChoices.map(choice => <label
-          key={choice.path}>{choice.path.substring(0, choice.path.indexOf(':'))}</label>)}
-    </HorizontalLayout>
-    <AbilityScoreRow ability='str' asiChoices={asiChoices}/>
-    <AbilityScoreRow ability='dex' asiChoices={asiChoices}/>
-    <AbilityScoreRow ability='con' asiChoices={asiChoices}/>
-    <AbilityScoreRow ability='wis' asiChoices={asiChoices}/>
-    <AbilityScoreRow ability='int' asiChoices={asiChoices}/>
-    <AbilityScoreRow ability='cha' asiChoices={asiChoices}/>
-    <code>Ability Point Cost: {character.resolve("ability_point_cost")?.asNumber()}</code>
+    <table className={styles['base-ability-table']}>
+      <caption><label>Ability Point Cost: {character.resolve("ability_point_cost")?.asNumber()}</label></caption>
+      <thead>
+      <tr>
+        <th></th>
+        <th>Mod</th>
+        <th>Total</th>
+          <th>Base</th>
+          {asiChoices.map(choice =>
+              <th key={choice.path}>{choice.path.substring(0, choice.path.indexOf(':'))}</th>)}
+        </tr>
+      </thead>
+      <tbody>
+        <AbilityScoreRow ability='str' asiChoices={asiChoices}/>
+        <AbilityScoreRow ability='dex' asiChoices={asiChoices}/>
+        <AbilityScoreRow ability='con' asiChoices={asiChoices}/>
+        <AbilityScoreRow ability='wis' asiChoices={asiChoices}/>
+        <AbilityScoreRow ability='int' asiChoices={asiChoices}/>
+        <AbilityScoreRow ability='cha' asiChoices={asiChoices}/>
+      </tbody>
+  </table>
   </Section>
 }
 
@@ -46,14 +52,21 @@ function AbilityScoreRow({ ability, asiChoices }: AbilityScoreRowProps) {
   const character = useCharacterAtLevel();
 
   const score = useMemo(() => character.resolve(`${ability}_score`)?.asText(), [character, ability]);
+  const baseChoice = useMemo(() => character.choice(`${ability}:base`), [character]);
   const mod = useMemo(() => Formula.parse(`signed(@${ability}_mod)`).resolve(character)?.asText(), [character, ability]);
 
-  return <HorizontalLayout className={styles['ability-row']}>
-    <div className={styles['ability-label']}>{ability.toUpperCase()}</div>
-    <BaseAbilityScoreBox choice={`${ability}:base`} score={score ?? '--'}/>
-    <div>{mod}</div>
-    {asiChoices.map(choice => <div key={choice.path}><AsiRadioButton choice={choice} ability={ability}/></div>)}
-  </HorizontalLayout>
+  return <tr className={styles['ability-row']}>
+    <td className={styles['ability-label']}>{ability.toUpperCase()}</td>
+    <td><BoxedValue>{mod}</BoxedValue></td>
+    <td><BoxedValue>{score}</BoxedValue></td>
+    <td>
+      <BoxedValue>
+        <TextChoiceInput choice={baseChoice as ChoiceRef}
+                           className={styles['text-input']}/>
+      </BoxedValue>
+    </td>
+    {asiChoices.map(choice => <td key={choice.path}><AsiRadioButton choice={choice} ability={ability}/></td>)}
+  </tr>
 }
 
 interface BaseAbilityScoreBoxProps {
@@ -99,23 +112,25 @@ function AsiRadioButton({ choice, ability }: AsiRadioButtonProps) {
 
   const selected = choiceValue === option?.key;
 
+  const value = selected
+      ? option.tags.includes('asi_p2') ? 2 : 1
+      : undefined;
+
   function handleSelect() {
     update.select(choiceRef, option?.key ?? '');
   }
 
   return selected
-      ? (option.tags.includes('asi_p2')
-              ? <RadioCircle className={classNames([styles.radio, styles.selected, 'clickable'])}>2</RadioCircle>
-              : <RadioCircle className={classNames([styles.radio, styles.selected, 'clickable'])}>1</RadioCircle>)
+      ? <RadioCircle className={classNames([styles.radio, styles.selected, 'clickable'])}>
+          <span className={styles.sign}>+</span>
+          <span>{value}</span>
+        </RadioCircle>
       : <RadioCircle className={classNames([styles.radio, 'clickable'])} onClick={handleSelect} />
       // ? <BiCheckCircle className={classNames([styles.radio, styles.selected])} />
       // : <BiCircle className={classNames([styles.radio, 'clickable'])} onClick={handleSelect} />;
 }
 
-interface RadioCircleProps extends HTMLAttributes<HTMLDivElement> {
-}
-
-function RadioCircle({ children, className, ...divProps }: RadioCircleProps) {
+function RadioCircle({ children, className, ...divProps }: HTMLAttributes<HTMLDivElement>) {
   // return <Badge content="+1" pill={true}>+1</Badge>
   return <div className={classNames([className, styles.radio2])} {...divProps}>{children}</div>
 }

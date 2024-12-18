@@ -8,6 +8,7 @@ type: "COMBAT"
 description: "Your attacks are capable of penetrating the defenses of some creatures."
 prerequisites: "Weapon Focus, base attack bonus +1, 12th-level fighter, proficiency\
   \ with weapon."
+enabled_formula: "all(sum(@feat:weapon_focus#*),@bab>=1,@class:fighter>=12)"
 benefit: "Your attacks made with weapons selected with Weapon Focus ignore up to 5\
   \ points of damage reduction. This feat does not apply to damage reduction without\
   \ a type (such as DR 10/--)."

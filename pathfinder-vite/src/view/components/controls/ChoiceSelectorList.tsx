@@ -5,7 +5,8 @@ export class ChoiceSelectorOption {
   constructor(public readonly id: string,
               public readonly label: ReactNode,
               private readonly isValidFn: boolean|(() => boolean),
-              public readonly descriptionFn?: (setSubOptions?: ((subOptionId: string)=>void)) => Promise<ReactNode>) {
+              public readonly descriptionFn?: (setSubOptions?: ((subOptionId: string)=>void)) => Promise<ReactNode>,
+              public readonly subOptions?: ChoiceSelectorOption[]) {
   }
 
   public get isValid(): boolean {
@@ -35,6 +36,10 @@ interface ChoiceSelectorListProps {
 }
 
 export default function ChoiceSelectorList({ options, variant, selected, onSelect, onChangeSelection }: ChoiceSelectorListProps) {
+
+  function handleSelect(selection: string|undefined) {
+    onSelect?.(selection);
+  }
 
   function OptionItem(option: ChoiceSelectorOption, index: number) {
     return <PathfinderSelect.Item key={option.id + index}

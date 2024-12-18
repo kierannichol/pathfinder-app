@@ -1,0 +1,51 @@
+{
+  "id": "race:human",
+  "name": "Human",
+  "tags": ["race"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Ambitious, sometimes heroic, and always confident, humans have an ability to work together toward common goals that makes them a force to be reckoned with. Though short-lived compared to other races, their boundless energy and drive allow them to accomplish much in their brief lifetimes."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "speed:base",
+            "numberValue": 30
+          }
+        }],
+        "links": ["size:m", "asi:any_p2"]
+      }]
+    }
+  },
+  "conditionalStacks": [{
+    "conditionFormula": "@character_level\u003e\u003d1",
+    "choices": [{
+      "choiceId": "bonus_feat_human",
+      "label": "Bonus Feat (Human)",
+      "tags": ["bonus_feat"],
+      "repeating": {
+        "none": {
+        }
+      },
+      "featureSelect": {
+        "optionTags": ["feat"],
+        "categories": [{
+          "label": "General",
+          "tag": "general"
+        }, {
+          "label": "Combat",
+          "tag": "combat"
+        }, {
+          "label": "Item Creation",
+          "tag": "item_creation"
+        }, {
+          "label": "Metamagic",
+          "tag": "metamagic"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }]
+}

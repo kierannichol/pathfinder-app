@@ -8,7 +8,7 @@ package data;
 message ChoiceDbo {
   string choice_id = 1;
   string label = 2;
-  string type = 3;
+  repeated string tags = 3;
   RepeatingChoiceTypeDbo repeating = 4;
 
   oneof input {

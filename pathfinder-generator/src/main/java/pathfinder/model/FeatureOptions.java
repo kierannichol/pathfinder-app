@@ -13,7 +13,9 @@ public record FeatureOptions(@JsonProperty("option_tag") String optionTag,
                 .setSelect(Select.newBuilder()
                         .setOptionTag(optionTag)
                         .setIdTemplate(idTemplate)
-                        .setPrerequisitesTemplate(prerequisitesTemplate)
+                        .setPrerequisitesTemplate(prerequisitesTemplate != null
+                                ? prerequisitesTemplate
+                                : "")
                         .build())
                 .build();
     }

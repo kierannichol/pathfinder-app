@@ -8,6 +8,7 @@ type: "COMBAT"
 description: "You are a quick hand at grappling."
 prerequisites: "Dex 13, Greater Grapple, Improved Grapple, Improved Unarmed Strike,\
   \ base attack bonus +9 or monk level 9th."
+enabled_formula: "all(@dex_score>=13,@feat:greater_grapple,@feat:improved_grapple,@feat:improved_unarmed_strike,any(@bab>=9,@class:monk>=9))"
 benefit: "Whenever you use Greater Grapple to successfully maintain a grapple as a\
   \ move action, you can then spend a swift action to make a grapple combat maneuver\
   \ check at a –5 penalty."

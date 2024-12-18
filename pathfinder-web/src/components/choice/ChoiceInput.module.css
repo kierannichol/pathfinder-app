@@ -1,0 +1,35 @@
+.input {
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.badge {
+  /*border-radius: 4px 0 0 4px;*/
+  border-right: 1px solid #ccc;
+  width: 20px;
+  height: 52px;
+
+  box-shadow: 0 1px 3px #ddd;
+}
+
+.badge.valid {
+  background-color: green;
+}
+
+.badge.unset {
+  background-color: grey;
+}
+
+.badge.invalid {
+  background-color: red;
+}
+
+.text {
+  line-height: 12px;
+  padding: 20px;
+}
+
+.unset {
+  font-style: italic;
+}

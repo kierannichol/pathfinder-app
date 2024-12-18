@@ -1,0 +1,37 @@
+.button {
+  cursor: pointer;
+  display: flex;
+  padding: 12px 20px;
+}
+.button:disabled {
+  cursor: not-allowed;
+}
+.button:disabled:focus {
+  outline: none;
+}
+
+/******* Themes *******/
+
+/* light */
+.light-button {
+  background-color: var(--pf-primary-dark-rgb);
+  color: white;
+}
+.light-button:hover {
+  background-color: var(--pf-primary-dark-hover-rgb);
+}
+.light-button:disabled {
+  background-color: #999;
+}
+
+/* dark */
+.dark-button {
+  background-color: var(--pf-primary-rgb);
+  color: white;
+}
+.dark-button:hover {
+  background-color: var(--pf-primary-hover-rgb);
+}
+.dark-button:disabled {
+  background-color: var(--pf-disabled-rgb);
+}

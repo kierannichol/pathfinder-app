@@ -10,11 +10,13 @@ import pathfinder.model.FeatureSelectByTagChoice;
 import pathfinder.model.FeatureSelectCategory;
 import pathfinder.model.FeatureSelectSortBy;
 import pathfinder.model.RepeatingChoiceType;
+import pathfinder.model.Tags;
 import pathfinder.model.TextChoice;
 import pathfinder.model.pathfinder.AbilityScore;
 
 @Component
 public class CharacterTemplateGenerator {
+
     private static final int DEFAULT_BASE_ABILITY_SCORE = 10;
 
     private static final List<FeatureSelectCategory> CLASS_CATEGORIES = List.of(
@@ -32,11 +34,16 @@ public class CharacterTemplateGenerator {
             new FeatureSelectCategory("Metamagic", "metamagic")
     );
 
-    private static final Choice CURRENT_LEVEL_CHOICE = new TextChoice("current_level", "Current Level", "current_level");
-    private static final Choice CLASS_CHOICE = new FeatureSelectByTagChoice("class", "Class", "class", List.of("class"), List.of(), CLASS_CATEGORIES, FeatureSelectSortBy.NAME);
-    private static final Choice FEAT_CHOICE = new FeatureSelectByTagChoice("feat", "Feat", "feat", List.of("feat"), List.of(), FEAT_CATEGORIES, FeatureSelectSortBy.NAME);
-    private static final Choice ASI_CHOICE_1 = new FeatureSelectByTagChoice("asi1", "Ability Score Increase", "asi", List.of("asi"), List.of(), List.of(), FeatureSelectSortBy.NAME);
-    private static final Choice EQUIPMENT_CHOICE = new FeatureSelectByTagChoice.Builder("equipment", "Equipment", "equipment")
+    private static final Choice CURRENT_LEVEL_CHOICE = new TextChoice("current_level", "Current Level",
+            "current_level");
+    private static final Choice CLASS_CHOICE = new FeatureSelectByTagChoice("class", "Class", Tags.of("class"), List.of("class"),
+            List.of(), CLASS_CATEGORIES, FeatureSelectSortBy.NAME);
+    private static final Choice FEAT_CHOICE = new FeatureSelectByTagChoice("feat", "Feat", Tags.of("feat"), List.of("feat"),
+            List.of(), FEAT_CATEGORIES, FeatureSelectSortBy.NAME);
+    private static final Choice ASI_CHOICE_1 = new FeatureSelectByTagChoice("asi1", "Ability Score Increase", Tags.of("asi"),
+            List.of("asi"), List.of(), List.of(), FeatureSelectSortBy.NAME);
+    private static final Choice EQUIPMENT_CHOICE = new FeatureSelectByTagChoice.Builder("equipment", "Equipment")
+            .tag("equipment")
             .optionTag("item")
             .category("All", "")
             .category("Weapons", "weapon")
@@ -63,43 +70,56 @@ public class CharacterTemplateGenerator {
                         "floor(@%s_score / 2) - 5".formatted(abilityScore.shortName())));
                 level.addEffect(Effect.setFormula(
                         "%s_bonus_spells_1".formatted(abilityScore.shortName()),
-                        "if(@{ability}_mod>0,1,0)+if(@{ability}_mod>4,1,0)+if(@{ability}_mod>8,1,0)+if(@{ability}_mod>12,1,0)+if(@{ability}_mod>16,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                        "if(@{ability}_mod>0,1,0)+if(@{ability}_mod>4,1,0)+if(@{ability}_mod>8,1,0)+if(@{ability}_mod>12,1,0)+if(@{ability}_mod>16,1,0)".replaceAll(
+                                "\\{ability}", abilityScore.shortName())
                 ));
                 level.addEffect(Effect.setFormula(
                         "%s_bonus_spells_2".formatted(abilityScore.shortName()),
-                        "if(@{ability}_mod>1,1,0)+if(@{ability}_mod>5,1,0)+if(@{ability}_mod>9,1,0)+if(@{ability}_mod>13,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                        "if(@{ability}_mod>1,1,0)+if(@{ability}_mod>5,1,0)+if(@{ability}_mod>9,1,0)+if(@{ability}_mod>13,1,0)".replaceAll(
+                                "\\{ability}", abilityScore.shortName())
                 ));
                 level.addEffect(Effect.setFormula(
                         "%s_bonus_spells_3".formatted(abilityScore.shortName()),
-                        "if(@{ability}_mod>2,1,0)+if(@{ability}_mod>6,1,0)+if(@{ability}_mod>10,1,0)+if(@{ability}_mod>14,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                        "if(@{ability}_mod>2,1,0)+if(@{ability}_mod>6,1,0)+if(@{ability}_mod>10,1,0)+if(@{ability}_mod>14,1,0)".replaceAll(
+                                "\\{ability}", abilityScore.shortName())
                 ));
                 level.addEffect(Effect.setFormula(
                         "%s_bonus_spells_4".formatted(abilityScore.shortName()),
-                        "if(@{ability}_mod>3,1,0)+if(@{ability}_mod>7,1,0)+if(@{ability}_mod>11,1,0)+if(@{ability}_mod>15,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                        "if(@{ability}_mod>3,1,0)+if(@{ability}_mod>7,1,0)+if(@{ability}_mod>11,1,0)+if(@{ability}_mod>15,1,0)".replaceAll(
+                                "\\{ability}", abilityScore.shortName())
                 ));
                 level.addEffect(Effect.setFormula(
                         "%s_bonus_spells_5".formatted(abilityScore.shortName()),
-                        "if(@{ability}_mod>4,1,0)+if(@{ability}_mod>8,1,0)+if(@{ability}_mod>12,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                        "if(@{ability}_mod>4,1,0)+if(@{ability}_mod>8,1,0)+if(@{ability}_mod>12,1,0)".replaceAll(
+                                "\\{ability}", abilityScore.shortName())
                 ));
                 level.addEffect(Effect.setFormula(
                         "%s_bonus_spells_6".formatted(abilityScore.shortName()),
-                        "if(@{ability}_mod>5,1,0)+if(@{ability}_mod>9,1,0)+if(@{ability}_mod>13,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                        "if(@{ability}_mod>5,1,0)+if(@{ability}_mod>9,1,0)+if(@{ability}_mod>13,1,0)".replaceAll(
+                                "\\{ability}", abilityScore.shortName())
                 ));
                 level.addEffect(Effect.setFormula(
                         "%s_bonus_spells_7".formatted(abilityScore.shortName()),
-                        "if(@{ability}_mod>6,1,0)+if(@{ability}_mod>10,1,0)+if(@{ability}_mod>14,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                        "if(@{ability}_mod>6,1,0)+if(@{ability}_mod>10,1,0)+if(@{ability}_mod>14,1,0)".replaceAll(
+                                "\\{ability}", abilityScore.shortName())
                 ));
                 level.addEffect(Effect.setFormula(
                         "%s_bonus_spells_8".formatted(abilityScore.shortName()),
-                        "if(@{ability}_mod>7,1,0)+if(@{ability}_mod>11,1,0)+if(@{ability}_mod>15,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                        "if(@{ability}_mod>7,1,0)+if(@{ability}_mod>11,1,0)+if(@{ability}_mod>15,1,0)".replaceAll(
+                                "\\{ability}", abilityScore.shortName())
                 ));
                 level.addEffect(Effect.setFormula(
                         "%s_bonus_spells_9".formatted(abilityScore.shortName()),
-                        "if(@{ability}_mod>8,1,0)+if(@{ability}_mod>12,1,0)+if(@{ability}_mod>16,1,0)".replaceAll("\\{ability}", abilityScore.shortName())
+                        "if(@{ability}_mod>8,1,0)+if(@{ability}_mod>12,1,0)+if(@{ability}_mod>16,1,0)".replaceAll(
+                                "\\{ability}", abilityScore.shortName())
                 ));
                 level.addEffect(Effect.setFormula(
                         "ability_point_cost:%s".formatted(abilityScore.shortName()),
-                        "if(@%s:base==7,-4,0) + if(@%s:base==8,-2,0) + if(@%s:base==9,-1,0) + if(@%s:base==10,0,0) + if(@%s:base==11,1,0) + if(@%s:base==12,2,0) + if(@%s:base==13,3,0) + if(@%s:base==14,5,0) + if(@%s:base==15,7,0) + if(@%s:base==16,10,0) + if(@%s:base==17,13,0) + if(@%s:base==18,17,0)".formatted(abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName())));
+                        "if(@%s:base==7,-4,0) + if(@%s:base==8,-2,0) + if(@%s:base==9,-1,0) + if(@%s:base==10,0,0) + if(@%s:base==11,1,0) + if(@%s:base==12,2,0) + if(@%s:base==13,3,0) + if(@%s:base==14,5,0) + if(@%s:base==15,7,0) + if(@%s:base==16,10,0) + if(@%s:base==17,13,0) + if(@%s:base==18,17,0)".formatted(
+                                abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(),
+                                abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(),
+                                abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(),
+                                abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName())));
 
                 level.addChoice(new TextChoice("%s:temp".formatted(abilityScore.shortName()),
                         "Temporary %s Adjustment".formatted(abilityScore.longName()),
@@ -127,18 +147,28 @@ public class CharacterTemplateGenerator {
             level.addChoice(new TextChoice("current_hp", "Current HP", "hp"));
             level.addChoice(new TextChoice("nonlethal_damage", "Nonlethal Damage", "hp"));
 
-            level.addChoice(new FeatureSelectByTagChoice("race", "Race", "race", List.of("race"), List.of(), List.of(), FeatureSelectSortBy.NAME));
-            level.addChoice(new FeatureSelectByTagChoice("favored_class", "Favored Class", "favored_class", List.of("favored_class"), List.of(), CLASS_CATEGORIES, FeatureSelectSortBy.NAME));
-            level.addChoice(new FeatureSelectByTagChoice("alignment", "Alignment", "alignment", List.of("alignment"), List.of(), List.of(), FeatureSelectSortBy.NONE));
+            level.addChoice(FeatureSelectByTagChoice.builder("race", "Race")
+                    .tag("race")
+                    .optionTag("race")
+                    .sortByName()
+                    .build());
+
+            level.addChoice(new FeatureSelectByTagChoice("favored_class", "Favored Class", Tags.of("favored_class"),
+                    List.of("favored_class"), List.of(), CLASS_CATEGORIES, FeatureSelectSortBy.NAME));
+            level.addChoice(
+                    new FeatureSelectByTagChoice("alignment", "Alignment", Tags.of("alignment"), List.of("alignment"), List.of(),
+                            List.of(), FeatureSelectSortBy.NONE));
             for (AbilityScore abilityScore : AbilityScore.values()) {
                 level.addChoice(new TextChoice("%s:base".formatted(abilityScore.shortName()),
                         abilityScore.longName(),
-                        "ability_score"));
+                        "ability_score", "base"));
             }
 
-            level.addEffect(Effect.setFormula("ac", "10+@ac:armor+@ac:shield+@dex_mod+@size_mod+@ac:natural+@ac:deflection+@ac:misc"));
+            level.addEffect(Effect.setFormula("ac",
+                    "10+@ac:armor+@ac:shield+@dex_mod+@size_mod+@ac:natural+@ac:deflection+@ac:misc"));
             level.addEffect(Effect.setFormula("ac:touch", "10+@dex_mod+@size_mod+@ac:deflection+@ac:misc"));
-            level.addEffect(Effect.setFormula("ac:flat", "10+@ac:armor+@ac:shield+@size_mod+@ac:natural+@ac:deflection+@ac:misc"));
+            level.addEffect(Effect.setFormula("ac:flat",
+                    "10+@ac:armor+@ac:shield+@size_mod+@ac:natural+@ac:deflection+@ac:misc"));
 
             level.addEffect(Effect.setFormula("fort_save", "@fort:base+@con_mod+@fort:magic+@fort:misc+@fort:temp"));
             level.addEffect(Effect.setFormula("will_save", "@will:base+@wis_mod+@will:magic+@will:misc+@will:temp"));
@@ -162,7 +192,8 @@ public class CharacterTemplateGenerator {
                     level.addChoice(ASI_CHOICE_1);
                 }
 
-                level.addChoice(new FeatureSelectByTagChoice("skills", "Skills", "skill", List.of("skill"), List.of(), List.of(), FeatureSelectSortBy.NONE, RepeatingChoiceType.unlimited()));
+                level.addChoice(new FeatureSelectByTagChoice("skills", "Skills", Tags.of("skill"), List.of("skill"), List.of(),
+                        List.of(), FeatureSelectSortBy.NONE, RepeatingChoiceType.unlimited()));
             });
         }
 

@@ -1,14 +1,19 @@
 package pathfinder.db.query;
 
+import static pathfinder.model.pathfinder.Sources.CORE;
+
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Stream;
+import pathfinder.generator.CoreCharacterFeatureProvider;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
 import pathfinder.model.Source;
 import pathfinder.model.pathfinder.ClassSpecific;
 import pathfinder.model.pathfinder.SourceId;
 
-public class NamedEntityQuery<T extends NamedEntity> implements SourceSpecificQuery<NamedEntityQuery<T>>, ClassSpecificQuery<NamedEntityQuery<T>> {
+public class NamedEntityQuery<T extends NamedEntity> implements Query<T>, SourceSpecificQuery<NamedEntityQuery<T>>, ClassSpecificQuery<NamedEntityQuery<T>> {
     private final Id id;
     private final String name;
     private final Collection<SourceId> sourceIds;
@@ -29,6 +34,16 @@ public class NamedEntityQuery<T extends NamedEntity> implements SourceSpecificQu
 
     public static <U extends NamedEntity> NamedEntityQuery<U> byType(Class<U> type) {
         return new NamedEntityQuery<>(null, null, null, null, type);
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public Stream<T> query(List<Source> sources, CoreCharacterFeatureProvider coreCharacterFeatureProvider) {
+        return Stream.concat(sources.stream()
+                        .filter(this::matches)
+                        .flatMap(Source::namedEntities), coreCharacterFeatureProvider.features(CORE))
+                .filter(this::matches)
+                .map(entity -> (T) entity);
     }
 
     @Override

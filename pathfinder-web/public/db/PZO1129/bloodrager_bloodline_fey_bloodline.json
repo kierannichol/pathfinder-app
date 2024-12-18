@@ -1,0 +1,55 @@
+{
+  "id": "bloodrager_bloodline:fey_bloodline",
+  "name": "Fey Bloodline",
+  "tags": ["bloodrager_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "One of your ancestors was fey, or the fey realm somehow intermixed with your bloodline. It affects your bloodrage in tricky and surprising ways."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:one_with_nature#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:confusing_critical#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:bloodline_feat#fey_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:fury_of_the_fey#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:leaping_charger#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:bloodline_feat#fey_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:blurring_movement#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:quickling_bloodrage#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:bloodline_feat#fey_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }]
+        }]
+      }]
+    }
+  }
+}

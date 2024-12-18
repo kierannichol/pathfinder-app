@@ -24,13 +24,18 @@ public class ChoiceJsonSerializer extends StdSerializer<Choice> {
         if (value instanceof TextChoice textChoice) {
             gen.writeStringField("choice_id", textChoice.choiceId());
             gen.writeStringField("label", textChoice.label());
-            gen.writeStringField("type", textChoice.type());
+            gen.writeArrayFieldStart("tags");
+            gen.writeArray(textChoice.tags().toDbos().toArray(String[]::new), 0, textChoice.tags().toDbos().size());
+            gen.writeEndArray();
             provider.findValueSerializer(RepeatingChoiceType.class).serialize(textChoice.repeating(), gen, provider);
         }
         else if (value instanceof FeatureSelectByTagChoice selectChoice) {
             gen.writeStringField("choice_id", selectChoice.choiceId());
             gen.writeStringField("label", selectChoice.label());
-            gen.writeStringField("type", selectChoice.type());
+            gen.writeArrayFieldStart("tags");
+            gen.writeArray(selectChoice.tags().toDbos().toArray(String[]::new), 0, selectChoice.tags().toDbos().size());
+            gen.writeEndArray();
+            gen.writeFieldName("repeating");
             provider.findValueSerializer(RepeatingChoiceType.class).serialize(selectChoice.repeating(), gen, provider);
 
             if (FeatureSelectSortBy.NAME.equals(selectChoice.sortBy())) {

@@ -1,0 +1,44 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabList {
+  font-weight: bold;
+  text-align: left;
+  font-size: 14pt;
+
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+  gap: 0.4em;
+
+  background-color: var(--pf-primary-rgb);
+  color: white;
+}
+
+.tab {
+  padding: 0.5em 1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+}
+
+.tab.active {
+  background-color: var(--pf-primary-hover-rgb);
+}
+
+.content {
+}
+
+.content.open {
+  display: block;
+}
+
+.content.closed {
+  display: none;
+}

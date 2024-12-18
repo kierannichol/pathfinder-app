@@ -1,0 +1,11 @@
+import Database, { ItemDatabase } from "./Database.ts";
+import CharacterStore from "./CharacterStore.ts";
+import { EquipmentSetStore } from "./EquipmentSetStore.ts";
+export declare const DatabaseContext: any;
+export declare function useDatabase(): Database;
+export declare const ItemDatabaseContext: any;
+export declare function useItemDatabase(): ItemDatabase;
+export declare const CharacterStoreContext: any;
+export declare function useCharacterStore(): CharacterStore;
+export declare const EquipmentSetStoreContext: any;
+export declare function useEquipmentSetStore(): EquipmentSetStore;

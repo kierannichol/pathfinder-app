@@ -1,0 +1,75 @@
+{
+  "id": "class:cavalier#horselord",
+  "name": "Horselord",
+  "tags": ["archetype", "cavalier"],
+  "enabledFormula": "!@modifies:ability:bonus_feat#cavalier AND !@modifies:ability:tactician#cavalier AND !@modifies:ability:cavaliers_charge#cavalier AND !@modifies:trait:weapon_proficiency#cavalier AND !@modifies:ability:master_tactician#cavalier AND !@modifies:trait:armor_proficiency#cavalier AND !@modifies:ability:greater_tactician#cavalier",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:tactician#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:cavaliers_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:weapon_proficiency#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:master_tactician#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:greater_tactician#cavalier",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:cavalier",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:sand_scourge#cavalier_horselord"],
+            "linksToRemove": ["ability:master_tactician#cavalier"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#cavalier_horselord", "ability:weapon_and_armor_proficiency#cavalier_horselord", "ability:desert_wind#cavalier_horselord"],
+            "linksToRemove": ["trait:weapon_proficiency#cavalier", "trait:armor_proficiency#cavalier", "ability:tactician#cavalier"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:desert_mastery#cavalier_horselord"],
+            "linksToRemove": ["ability:cavaliers_charge#cavalier"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:sand_storm#cavalier_horselord"],
+            "linksToRemove": ["ability:bonus_feat#cavalier"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:as_one#cavalier_horselord"],
+            "linksToRemove": ["ability:greater_tactician#cavalier"]
+          }]
+        }]
+      }]
+    }
+  }
+}

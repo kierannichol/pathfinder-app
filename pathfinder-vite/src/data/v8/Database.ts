@@ -8,6 +8,7 @@ import {uniqById} from "@/app/pfutils.ts";
 import {ItemOption, ItemOptionSummary} from "./ItemOption.ts";
 import {ItemOptionSet} from "./ItemOptionSet.ts";
 import {SourceItemModule} from "@/data/v8/SourceItemModule.ts";
+import Id from "@/utils/Id.ts";
 
 export class ItemDatabase {
   constructor(private readonly modules: SourceItemModule[]) {
@@ -89,6 +90,15 @@ export default class Database {
   }
 
   public feature(id: string): FeatureSummary|undefined {
+    const option = Id.justOption(id);
+    if (option !== undefined) {
+      const parentKey = Id.withoutOption(id);
+      const parent = this.feature(parentKey);
+
+      if (!parent) return undefined;
+      return parent.option(option, this);
+    }
+
     for (let module of this.modules) {
       const found = module.feature(id);
       if (found) return found;
@@ -120,15 +130,24 @@ export default class Database {
   }
 
   async description(id: string): Promise<Description> {
-    for (let module of this.modules) {
-      if (module.feature(id)) {
-        return (await module.load(id)).description;
-      }
+    if (id === undefined) {
+      return Description.empty();
     }
-    return Description.empty();
+    return (await this.load(id))?.description ?? Description.empty();
   }
 
   async load(id: string): Promise<Feature|undefined> {
+    const option = Id.justOption(id);
+    if (option !== undefined) {
+      const parentKey = Id.withoutOption(id);
+      const parent = await this.load(parentKey);
+      if (!parent) {
+        console.warn("No parent feature found for " + id);
+        return undefined;
+      }
+      return parent.option(option, this);
+    }
+
     for (let module of this.modules) {
       if (module.feature(id)) {
         return await module.load(id);

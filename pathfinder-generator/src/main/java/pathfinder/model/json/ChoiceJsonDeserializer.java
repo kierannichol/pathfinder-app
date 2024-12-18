@@ -14,6 +14,7 @@ import pathfinder.model.FeatureSelectCategory;
 import pathfinder.model.FeatureSelectSortBy;
 import pathfinder.model.Id;
 import pathfinder.model.RepeatingChoiceType;
+import pathfinder.model.Tags;
 import pathfinder.model.TextChoice;
 
 public class ChoiceJsonDeserializer extends StdDeserializer<Choice> {
@@ -64,8 +65,8 @@ public class ChoiceJsonDeserializer extends StdDeserializer<Choice> {
         }
 
         return isSelect
-               ? new FeatureSelectByTagChoice(choiceId, label, type, optionTags, featureIds, categories, parseSortBy(sortBy), repeating)
-               : new TextChoice(choiceId, label, type, repeating);
+               ? new FeatureSelectByTagChoice(choiceId, label, Tags.of(type), optionTags, featureIds, categories, parseSortBy(sortBy), repeating)
+               : new TextChoice(choiceId, label, Tags.of(type), repeating);
     }
 
     private FeatureSelectSortBy parseSortBy(String sortBy) {

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import java.io.IOException;
+import java.util.List;
 import pathfinder.model.Description;
 import pathfinder.model.FixedStacks;
 import pathfinder.model.Id;
@@ -24,23 +25,26 @@ public class FeatureJsonSerializer extends StdSerializer<Feature> {
             gen.writeFieldName("id");
             provider.findValueSerializer(Id.class).serialize(value.id(), gen, provider);
         }
-        if (value.name() != null) {
+        if (notNullOrBlank(value.name())) {
             gen.writeStringField("name", value.name());
         }
-        if (value.label() != null) {
+        if (notNullOrBlank(value.label())) {
             gen.writeStringField("label", value.label());
         }
         if (value.description() != null) {
             gen.writeFieldName("description");
             provider.findValueSerializer(Description.class).serialize(value.description(), gen, provider);
         }
-        if (value.type() != null) {
+        if (notNullOrBlank(value.type())) {
             gen.writeStringField("type", value.type());
         }
-        if (value.prerequisites() != null) {
+        if (notNullOrBlank(value.prerequisites())) {
             gen.writeStringField("prerequisites", value.prerequisites());
         }
-        if (value.effects() != null) {
+        if (notNullOrBlank(value.enabled_formula())) {
+            gen.writeStringField("enabled_formula", value.enabled_formula());
+        }
+        if (notNullOrEmpty(value.effects())) {
             gen.writeFieldName("effects");
             gen.writeStartArray();
             for (String effect : value.effects()) {
@@ -48,7 +52,7 @@ public class FeatureJsonSerializer extends StdSerializer<Feature> {
             }
             gen.writeEndArray();
         }
-        if (value.links() != null) {
+        if (notNullOrEmpty(value.links())) {
             gen.writeFieldName("links");
             gen.writeStartArray();
             for (Id effect : value.links()) {
@@ -57,7 +61,7 @@ public class FeatureJsonSerializer extends StdSerializer<Feature> {
             gen.writeEndArray();
         }
         if (value.stacks() != null) {
-            if (value.stacks() instanceof FixedStacks fixedStacks) {
+            if (value.stacks() instanceof FixedStacks fixedStacks && !fixedStacks.stacks().isEmpty()) {
                 gen.writeFieldName("fixed_stacks");
                 gen.writeStartArray();
                 for (Stack stack : fixedStacks.stacks()) {
@@ -70,9 +74,17 @@ public class FeatureJsonSerializer extends StdSerializer<Feature> {
                 provider.findValueSerializer(Stack.class).serialize(repeatingStack.stack(), gen, provider);
             }
         }
-        if (value.source() != null) {
+        if (notNullOrBlank(value.source())) {
             gen.writeStringField("source", value.source());
         }
         gen.writeEndObject();
+    }
+
+    private static boolean notNullOrEmpty(List<?> list) {
+        return list != null && !list.isEmpty();
+    }
+
+    private static boolean notNullOrBlank(String text) {
+        return text != null && !text.trim().isEmpty();
     }
 }

@@ -19,7 +19,7 @@ export default function SpellsSection({}: SpellsSectionProps) {
           for (let i = 0; i < (choice.maxLimit(character) ?? 1); i++) {
             choices.push({
               choice: choice,
-              index: i+1
+              index: i
             });
           }
           return choices;

@@ -1,0 +1,51 @@
+{
+  "id": "sorcerer_bloodline:aquatic_bloodline",
+  "name": "Aquatic Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Your family traces its heritage back to the ocean depths, whether scions of undersea empires left in the wake of nomadic sea-tribes, or the spawn of creeping ichthyic infiltrators into remote seaside villages. The song of the sea hums in your blood, calling the waves and all those within to your command."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:dehydrating_touch#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:bloodline_feat#aquatic_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:aquatic_adaptation#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:control_water#sorcerer", "ability:deep_one#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer", "ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:bloodline_feat#aquatic_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:aquatic_telepathy#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:bloodline_feat#aquatic_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:suggestion#sorcerer", "ability:raise_the_deep#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer", "ability:bloodline_power#sorcerer"]
+          }]
+        }]
+      }]
+    }
+  }
+}

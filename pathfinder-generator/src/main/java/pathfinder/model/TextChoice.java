@@ -3,10 +3,14 @@ package pathfinder.model;
 import pathfinder.data.ChoiceDbo;
 import pathfinder.data.TextChoiceInputDbo;
 
-public record TextChoice(String choiceId, String label, String type, RepeatingChoiceType repeating) implements Choice {
+public record TextChoice(String choiceId, String label, Tags tags, RepeatingChoiceType repeating) implements Choice {
 
-    public TextChoice(String choiceId, String label, String type) {
-        this(choiceId, label, type, RepeatingChoiceType.none());
+    public TextChoice(String choiceId, String label, String... tags) {
+        this(choiceId, label, Tags.of(tags), RepeatingChoiceType.none());
+    }
+
+    public TextChoice(String choiceId, String label, Tags tags) {
+        this(choiceId, label, tags, RepeatingChoiceType.none());
     }
 
     @Override
@@ -14,7 +18,7 @@ public record TextChoice(String choiceId, String label, String type, RepeatingCh
         return ChoiceDbo.newBuilder()
                 .setChoiceId(choiceId)
                 .setLabel(label)
-                .setType(type)
+                .addAllTags(tags.toDbos())
                 .setRepeating(repeating.toDbo())
                 .setText(TextChoiceInputDbo.newBuilder()
                         .build())

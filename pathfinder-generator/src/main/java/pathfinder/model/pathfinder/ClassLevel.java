@@ -63,12 +63,17 @@ public record ClassLevel(int level,
 
         private ClassLevelBuilder(ClassLevel copy) {
             this.level = copy.level;
-            this.classFeatureIds.addAll(copy.classFeatureIds);
+
+            if (copy.classFeatureIds != null) {
+                this.classFeatureIds.addAll(copy.classFeatureIds);
+            }
         }
 
         private ClassLevelBuilder(ClassLevelLegacy copy) {
             this.level = copy.level();
-            this.classFeatureIds.addAll(copy.classFeatureIds());
+            if (copy.classFeatureIds() != null) {
+                this.classFeatureIds.addAll(copy.classFeatureIds());
+            }
         }
     }
 }

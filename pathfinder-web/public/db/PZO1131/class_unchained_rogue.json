@@ -1,0 +1,507 @@
+{
+  "id": "class:unchained_rogue",
+  "name": "Unchained Rogue",
+  "tags": ["class", "unchained"],
+  "maxStacks": 20,
+  "description": {
+    "text": "Life is an endless adventure for those who live by their wits. Ever just one step ahead of danger, rogues bank on their cunning, skill, and charm to bend fate to their favor. Never knowing what to expect, they prepare for everything, becoming masters of a wide variety of skills, training themselves to be adept manipulators, agile acrobats, shadowy stalkers, or masters of any of dozens of other professions or talents. Thieves and gamblers, fast talkers and diplomats, bandits and bounty hunters, and explorers and investigators all might be considered rogues, as well as countless other professions that rely upon wits, prowess, or luck. Although many rogues favor cities and the innumerable opportunities of civilization, some embrace lives on the road, journeying far, meeting exotic people, and facing fantastic danger in pursuit of equally fantastic riches. In the end, any who desire to shape their fates and live life on their own terms might come to be called rogues. Role: Rogues excel at moving about unseen and catching foes unaware, and tend to avoid head-to-head combat. Their varied skills and abilities allow them to be highly versatile, with great variations in expertise existing between different rogues. Most, however, excel in overcoming hindrances of all types, from unlocking doors and disarming traps to outwitting magical hazards and conning dull-witted opponents. Unchained: While much of the unchained rogue will be familiar to those who have played the original rogue, there are a number of new class features that greatly enhance the power and flexibility of the rogue. Chief among these is the debilitating injury class feature. A rogue with this ability can severely hamper her foes, giving her a much-needed boost to her offense or defense, depending on the situation. In addition, with finesse training, the rogue now gains Weapon Finesse for free at 1st level. This ability also lets her add her Dexterity to damage rolls with one weapon starting at 3rd level. Finally, the rogue\u0027s edge ability ties into a new system called skill unlocks. With this feature, the unchained rogue can master a small set of chosen skills, outperforming all those characters without access to such talents. Alignment: Any Hit Die: d8 Starting Wealth: 4d6 × 10 gp (average 140 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base"
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base"
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 2
+          }
+        }, {
+          "setAction": {
+            "targetKey": "max_skill_ranks#unchained_rogue",
+            "formula": "(8+@int_mod)*@class:unchained_rogue"
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:sleight_of_hand",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:swim",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:diplomacy",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:bluff",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:disable_device",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:acrobatics",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:profession",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:climb",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:perception",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:craft",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:use_magic_device",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:escape_artist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:intimidate",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:stealth",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:disguise",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:knowledge",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:sense_motive",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:appraise",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:linguistics",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:perform",
+            "numberValue": 1
+          }
+        }],
+        "links": ["trait:armor_proficiency#unchained_rogue", "trait:weapon_proficiency#unchained_rogue", "ability:finesse_training#unchained_rogue", "ability:sneak_attack#unchained_rogue", "ability:trapfinding#unchained_rogue"],
+        "choices": [{
+          "choiceId": "archetype",
+          "label": "Archetype",
+          "tags": ["archetype"],
+          "repeating": {
+            "unlimited": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["archetype+unchained_rogue"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "unchained_rogue:spells_0",
+          "label": "Unchained Rogue Level 0 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_0_spells_per_day#unchained_rogue"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_rogue0"]
+          }
+        }, {
+          "choiceId": "unchained_rogue:spells_1",
+          "label": "Unchained Rogue Level 1 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_1_spells_per_day#unchained_rogue"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_rogue1"]
+          }
+        }, {
+          "choiceId": "unchained_rogue:spells_2",
+          "label": "Unchained Rogue Level 2 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_2_spells_per_day#unchained_rogue"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_rogue2"]
+          }
+        }, {
+          "choiceId": "unchained_rogue:spells_3",
+          "label": "Unchained Rogue Level 3 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_3_spells_per_day#unchained_rogue"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_rogue3"]
+          }
+        }, {
+          "choiceId": "unchained_rogue:spells_4",
+          "label": "Unchained Rogue Level 4 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_4_spells_per_day#unchained_rogue"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_rogue4"]
+          }
+        }, {
+          "choiceId": "unchained_rogue:spells_5",
+          "label": "Unchained Rogue Level 5 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_5_spells_per_day#unchained_rogue"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_rogue5"]
+          }
+        }, {
+          "choiceId": "unchained_rogue:spells_6",
+          "label": "Unchained Rogue Level 6 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_6_spells_per_day#unchained_rogue"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_rogue6"]
+          }
+        }, {
+          "choiceId": "unchained_rogue:spells_7",
+          "label": "Unchained Rogue Level 7 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_7_spells_per_day#unchained_rogue"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_rogue7"]
+          }
+        }, {
+          "choiceId": "unchained_rogue:spells_8",
+          "label": "Unchained Rogue Level 8 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_8_spells_per_day#unchained_rogue"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_rogue8"]
+          }
+        }, {
+          "choiceId": "unchained_rogue:spells_9",
+          "label": "Unchained Rogue Level 9 Spells",
+          "tags": ["spell"],
+          "repeating": {
+            "calculatedLimit": {
+              "formula": "@trait:level_9_spells_per_day#unchained_rogue"
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+unchained_rogue9"]
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:evasion#unchained_rogue", "ability:rogue_talent#unchained_rogue"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:danger_sense#unchained_rogue", "ability:finesse_training#unchained_rogue", "ability:sneak_attack#unchained_rogue"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:debilitating_injury#unchained_rogue", "ability:rogue_talent#unchained_rogue", "ability:uncanny_dodge#unchained_rogue"]
+      }, {
+        "links": ["ability:rogues_edge#unchained_rogue", "ability:sneak_attack#unchained_rogue"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:danger_sense#unchained_rogue", "ability:rogue_talent#unchained_rogue"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:sneak_attack#unchained_rogue"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:improved_uncanny_dodge#unchained_rogue", "ability:rogue_talent#unchained_rogue"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:danger_sense#unchained_rogue", "ability:sneak_attack#unchained_rogue"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:advanced_talents#unchained_rogue", "ability:rogue_talent#unchained_rogue", "ability:rogues_edge#unchained_rogue"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:finesse_training#unchained_rogue", "ability:sneak_attack#unchained_rogue"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:danger_sense#unchained_rogue", "ability:rogue_talent#unchained_rogue"]
+      }, {
+        "links": ["ability:sneak_attack#unchained_rogue"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:rogue_talent#unchained_rogue"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:danger_sense#unchained_rogue", "ability:rogues_edge#unchained_rogue", "ability:sneak_attack#unchained_rogue"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:rogue_talent#unchained_rogue"]
+      }, {
+        "links": ["ability:sneak_attack#unchained_rogue"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:danger_sense#unchained_rogue", "ability:rogue_talent#unchained_rogue"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:finesse_training#unchained_rogue", "ability:sneak_attack#unchained_rogue"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:master_strike#unchained_rogue", "ability:rogue_talent#unchained_rogue", "ability:rogues_edge#unchained_rogue"]
+      }]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "feat:sacred_summons",
+  "name": "Sacred Summons",
+  "tags": ["feat", "general"],
+  "enabledFormula": "all(sum(@ability:aura#*)[Aura],any(@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8)[Able to cast Summon Monster])",
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "When using summon monster to summon creatures whose alignment subtype or subtypes exactly match your aura, you may cast the spell as a standard action instead of with a casting time of 1 round."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

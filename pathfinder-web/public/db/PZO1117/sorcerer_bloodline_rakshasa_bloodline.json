@@ -1,0 +1,51 @@
+{
+  "id": "sorcerer_bloodline:rakshasa_bloodline",
+  "name": "Rakshasa Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "At some point in your family\u0027s history, one of your ancestors was tainted by the influence of a rakshasa. Though most of your family seem entirely normal, you have always felt your own skin is a prison from which magic allows you to escape. Your birthright is a secret you may be forced to keep from societies that would never deal with you if your heritage were known."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:silver_tongue#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:bloodline_feat#rakshasa_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:mind_reader#sorcerer", "ability:detect_thoughts#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer", "ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:outsider#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:bloodline_feat#rakshasa_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:hide_aura#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:bloodline_feat#rakshasa_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:alter_self#sorcerer"],
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
+          }]
+        }]
+      }]
+    }
+  }
+}

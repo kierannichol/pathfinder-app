@@ -23,3 +23,7 @@ companion: false
 note: ""
 goal: ""
 multiples: false
+options:
+  option_tag: "weapon"
+  id_template: "feat:weapon_specialization#{option.key}"
+  prerequisites_template: "@proficiency:{option.key} AND @feat:weapon_focus#{option.key}"

@@ -1,0 +1,17 @@
+{
+  "id": "feat:pinning_knockout",
+  "name": "Pinning Knockout",
+  "tags": ["combat", "feat"],
+  "enabledFormula": "all(@dex_score\u003e\u003d13,@feat:greater_grapple,@feat:improved_grapple,@feat:improved_unarmed_strike,any(@bab\u003e\u003d9,@class:monk\u003e\u003d9))",
+  "maxStacks": 1,
+  "description": {
+    "text": "An opponent you have pinned is easy for you to knock out.",
+    "sections": {
+      "Benefit": "While you have an opponent pinned, when you succeed at a grapple combat maneuver check to deal an opponent nonlethal damage using an unarmed strike or a light or one-handed weapon, double your damage result. Any creature that is immune to critical hits is immune to the effects of this feat."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

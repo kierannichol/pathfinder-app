@@ -1,0 +1,17 @@
+{
+  "id": "feat:trick_spell",
+  "name": "Trick Spell",
+  "tags": ["feat", "metamagic"],
+  "enabledFormula": "all(@spells_per_day#1,any(@alignment:ln,@alignment:n,@alignment:cn),@deity:domain_trickery,@deity:domain_lust,@deity:domain_revenge)",
+  "maxStacks": 1,
+  "description": {
+    "text": "The vengeful nature of your goddess flows through your magic, turning your enemies against themselves.",
+    "sections": {
+      "Benefit": "Only enchantment spells that affect a single target and can be negated with a successful Will save can be trick spells. If the target fails its Will save against a trick spell, in addition to the spell\u0027s normal effects, the target also clumsily hinders itself. Immediately attempt a special combat maneuver check (1d20 + your caster level + your Charisma bonus) to perform a dirty trick combat maneuver against the target. Any feats you have that apply to dirty trick maneuvers (such as Greater Dirty Trick) also apply to this check."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

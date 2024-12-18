@@ -1,0 +1,24 @@
+{
+  "id": "ability:bloodline_feat#arcane_bloodline",
+  "name": "Bloodline Feat (Arcane Bloodline)",
+  "tags": ["ability", "bloodrager", "class_feature"],
+  "description": {
+    "text": "At 6th level and every 3 levels thereafter, a bloodrager receives one bonus feat chosen from a list specific to each bloodline. The bloodrager must meet the prerequisites for these bonus feats."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "choices": [{
+        "choiceId": "bloodline_feat",
+        "label": "Bloodline Feat",
+        "tags": ["bonus_feat"],
+        "repeating": {
+          "none": {
+          }
+        },
+        "featureSelect": {
+          "featureIds": ["feat:combat_reflexes", "feat:disruptive", "feat:improved_initiative", "feat:iron_will", "feat:power_attack", "feat:quick_draw"]
+        }
+      }]
+    }
+  }
+}

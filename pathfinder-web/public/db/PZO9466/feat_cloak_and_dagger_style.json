@@ -1,0 +1,18 @@
+{
+  "id": "feat:cloak_and_dagger_style",
+  "name": "Cloak and Dagger Style",
+  "tags": ["combat", "feat"],
+  "enabledFormula": "all(@int_score\u003e\u003d13,@feat:combat_expertise,@feat:improved_dirty_trick,@feat:vital_strike,@feat:weapon_focus#selected_weapon,@bab\u003e\u003d6)",
+  "maxStacks": 1,
+  "description": {
+    "text": "Your attacks effortlessly inflict debilitating conditions on unaware opponents.",
+    "sections": {
+      "Benefit": "Choose one light melee weapon. While using this style, whenever you use the attack action to attack an opponent during a surprise round with your chosen weapon, you can attempt a dirty trick combat maneuver check against that opponent as a free action. Additionally, if an adjacent target attempts to remove a condition that you inflicted upon it with the dirty trick combat maneuver, it provokes an attack of opportunity from you.",
+      "Special": "In addition to the chosen weapon, a character with the weapon training class feature can use Cloak and Dagger Style with any light melee weapon belonging to any fighter weapon group he has selected with weapon training."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

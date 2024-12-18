@@ -1,591 +1,0 @@
-
-óOª
-str:base
-ª
-	str_scoresum(@str:*)ª&$
-str_modfloor(@str_score / 2) - 5ªxv
-str_bonus_spells_1`if(@str_mod>0,1,0)+if(@str_mod>4,1,0)+if(@str_mod>8,1,0)+if(@str_mod>12,1,0)+if(@str_mod>16,1,0)ªdb
-str_bonus_spells_2Lif(@str_mod>1,1,0)+if(@str_mod>5,1,0)+if(@str_mod>9,1,0)+if(@str_mod>13,1,0)ªec
-str_bonus_spells_3Mif(@str_mod>2,1,0)+if(@str_mod>6,1,0)+if(@str_mod>10,1,0)+if(@str_mod>14,1,0)ªec
-str_bonus_spells_4Mif(@str_mod>3,1,0)+if(@str_mod>7,1,0)+if(@str_mod>11,1,0)+if(@str_mod>15,1,0)ªQO
-str_bonus_spells_59if(@str_mod>4,1,0)+if(@str_mod>8,1,0)+if(@str_mod>12,1,0)ªQO
-str_bonus_spells_69if(@str_mod>5,1,0)+if(@str_mod>9,1,0)+if(@str_mod>13,1,0)ªRP
-str_bonus_spells_7:if(@str_mod>6,1,0)+if(@str_mod>10,1,0)+if(@str_mod>14,1,0)ªRP
-str_bonus_spells_8:if(@str_mod>7,1,0)+if(@str_mod>11,1,0)+if(@str_mod>15,1,0)ªRP
-str_bonus_spells_9:if(@str_mod>8,1,0)+if(@str_mod>12,1,0)+if(@str_mod>16,1,0)ª¾»
-ability_point_cost:str if(@str:base==7,-4,0) + if(@str:base==8,-2,0) + if(@str:base==9,-1,0) + if(@str:base==10,0,0) + if(@str:base==11,1,0) + if(@str:base==12,2,0) + if(@str:base==13,3,0) + if(@str:base==14,5,0) + if(@str:base==15,7,0) + if(@str:base==16,10,0) + if(@str:base==17,13,0) + if(@str:base==18,17,0)ª
-dex:base
-ª
-	dex_scoresum(@dex:*)ª&$
-dex_modfloor(@dex_score / 2) - 5ªxv
-dex_bonus_spells_1`if(@dex_mod>0,1,0)+if(@dex_mod>4,1,0)+if(@dex_mod>8,1,0)+if(@dex_mod>12,1,0)+if(@dex_mod>16,1,0)ªdb
-dex_bonus_spells_2Lif(@dex_mod>1,1,0)+if(@dex_mod>5,1,0)+if(@dex_mod>9,1,0)+if(@dex_mod>13,1,0)ªec
-dex_bonus_spells_3Mif(@dex_mod>2,1,0)+if(@dex_mod>6,1,0)+if(@dex_mod>10,1,0)+if(@dex_mod>14,1,0)ªec
-dex_bonus_spells_4Mif(@dex_mod>3,1,0)+if(@dex_mod>7,1,0)+if(@dex_mod>11,1,0)+if(@dex_mod>15,1,0)ªQO
-dex_bonus_spells_59if(@dex_mod>4,1,0)+if(@dex_mod>8,1,0)+if(@dex_mod>12,1,0)ªQO
-dex_bonus_spells_69if(@dex_mod>5,1,0)+if(@dex_mod>9,1,0)+if(@dex_mod>13,1,0)ªRP
-dex_bonus_spells_7:if(@dex_mod>6,1,0)+if(@dex_mod>10,1,0)+if(@dex_mod>14,1,0)ªRP
-dex_bonus_spells_8:if(@dex_mod>7,1,0)+if(@dex_mod>11,1,0)+if(@dex_mod>15,1,0)ªRP
-dex_bonus_spells_9:if(@dex_mod>8,1,0)+if(@dex_mod>12,1,0)+if(@dex_mod>16,1,0)ª¾»
-ability_point_cost:dex if(@dex:base==7,-4,0) + if(@dex:base==8,-2,0) + if(@dex:base==9,-1,0) + if(@dex:base==10,0,0) + if(@dex:base==11,1,0) + if(@dex:base==12,2,0) + if(@dex:base==13,3,0) + if(@dex:base==14,5,0) + if(@dex:base==15,7,0) + if(@dex:base==16,10,0) + if(@dex:base==17,13,0) + if(@dex:base==18,17,0)ª
-con:base
-ª
-	con_scoresum(@con:*)ª&$
-con_modfloor(@con_score / 2) - 5ªxv
-con_bonus_spells_1`if(@con_mod>0,1,0)+if(@con_mod>4,1,0)+if(@con_mod>8,1,0)+if(@con_mod>12,1,0)+if(@con_mod>16,1,0)ªdb
-con_bonus_spells_2Lif(@con_mod>1,1,0)+if(@con_mod>5,1,0)+if(@con_mod>9,1,0)+if(@con_mod>13,1,0)ªec
-con_bonus_spells_3Mif(@con_mod>2,1,0)+if(@con_mod>6,1,0)+if(@con_mod>10,1,0)+if(@con_mod>14,1,0)ªec
-con_bonus_spells_4Mif(@con_mod>3,1,0)+if(@con_mod>7,1,0)+if(@con_mod>11,1,0)+if(@con_mod>15,1,0)ªQO
-con_bonus_spells_59if(@con_mod>4,1,0)+if(@con_mod>8,1,0)+if(@con_mod>12,1,0)ªQO
-con_bonus_spells_69if(@con_mod>5,1,0)+if(@con_mod>9,1,0)+if(@con_mod>13,1,0)ªRP
-con_bonus_spells_7:if(@con_mod>6,1,0)+if(@con_mod>10,1,0)+if(@con_mod>14,1,0)ªRP
-con_bonus_spells_8:if(@con_mod>7,1,0)+if(@con_mod>11,1,0)+if(@con_mod>15,1,0)ªRP
-con_bonus_spells_9:if(@con_mod>8,1,0)+if(@con_mod>12,1,0)+if(@con_mod>16,1,0)ª¾»
-ability_point_cost:con if(@con:base==7,-4,0) + if(@con:base==8,-2,0) + if(@con:base==9,-1,0) + if(@con:base==10,0,0) + if(@con:base==11,1,0) + if(@con:base==12,2,0) + if(@con:base==13,3,0) + if(@con:base==14,5,0) + if(@con:base==15,7,0) + if(@con:base==16,10,0) + if(@con:base==17,13,0) + if(@con:base==18,17,0)ª
-int:base
-ª
-	int_scoresum(@int:*)ª&$
-int_modfloor(@int_score / 2) - 5ªxv
-int_bonus_spells_1`if(@int_mod>0,1,0)+if(@int_mod>4,1,0)+if(@int_mod>8,1,0)+if(@int_mod>12,1,0)+if(@int_mod>16,1,0)ªdb
-int_bonus_spells_2Lif(@int_mod>1,1,0)+if(@int_mod>5,1,0)+if(@int_mod>9,1,0)+if(@int_mod>13,1,0)ªec
-int_bonus_spells_3Mif(@int_mod>2,1,0)+if(@int_mod>6,1,0)+if(@int_mod>10,1,0)+if(@int_mod>14,1,0)ªec
-int_bonus_spells_4Mif(@int_mod>3,1,0)+if(@int_mod>7,1,0)+if(@int_mod>11,1,0)+if(@int_mod>15,1,0)ªQO
-int_bonus_spells_59if(@int_mod>4,1,0)+if(@int_mod>8,1,0)+if(@int_mod>12,1,0)ªQO
-int_bonus_spells_69if(@int_mod>5,1,0)+if(@int_mod>9,1,0)+if(@int_mod>13,1,0)ªRP
-int_bonus_spells_7:if(@int_mod>6,1,0)+if(@int_mod>10,1,0)+if(@int_mod>14,1,0)ªRP
-int_bonus_spells_8:if(@int_mod>7,1,0)+if(@int_mod>11,1,0)+if(@int_mod>15,1,0)ªRP
-int_bonus_spells_9:if(@int_mod>8,1,0)+if(@int_mod>12,1,0)+if(@int_mod>16,1,0)ª¾»
-ability_point_cost:int if(@int:base==7,-4,0) + if(@int:base==8,-2,0) + if(@int:base==9,-1,0) + if(@int:base==10,0,0) + if(@int:base==11,1,0) + if(@int:base==12,2,0) + if(@int:base==13,3,0) + if(@int:base==14,5,0) + if(@int:base==15,7,0) + if(@int:base==16,10,0) + if(@int:base==17,13,0) + if(@int:base==18,17,0)ª
-wis:base
-ª
-	wis_scoresum(@wis:*)ª&$
-wis_modfloor(@wis_score / 2) - 5ªxv
-wis_bonus_spells_1`if(@wis_mod>0,1,0)+if(@wis_mod>4,1,0)+if(@wis_mod>8,1,0)+if(@wis_mod>12,1,0)+if(@wis_mod>16,1,0)ªdb
-wis_bonus_spells_2Lif(@wis_mod>1,1,0)+if(@wis_mod>5,1,0)+if(@wis_mod>9,1,0)+if(@wis_mod>13,1,0)ªec
-wis_bonus_spells_3Mif(@wis_mod>2,1,0)+if(@wis_mod>6,1,0)+if(@wis_mod>10,1,0)+if(@wis_mod>14,1,0)ªec
-wis_bonus_spells_4Mif(@wis_mod>3,1,0)+if(@wis_mod>7,1,0)+if(@wis_mod>11,1,0)+if(@wis_mod>15,1,0)ªQO
-wis_bonus_spells_59if(@wis_mod>4,1,0)+if(@wis_mod>8,1,0)+if(@wis_mod>12,1,0)ªQO
-wis_bonus_spells_69if(@wis_mod>5,1,0)+if(@wis_mod>9,1,0)+if(@wis_mod>13,1,0)ªRP
-wis_bonus_spells_7:if(@wis_mod>6,1,0)+if(@wis_mod>10,1,0)+if(@wis_mod>14,1,0)ªRP
-wis_bonus_spells_8:if(@wis_mod>7,1,0)+if(@wis_mod>11,1,0)+if(@wis_mod>15,1,0)ªRP
-wis_bonus_spells_9:if(@wis_mod>8,1,0)+if(@wis_mod>12,1,0)+if(@wis_mod>16,1,0)ª¾»
-ability_point_cost:wis if(@wis:base==7,-4,0) + if(@wis:base==8,-2,0) + if(@wis:base==9,-1,0) + if(@wis:base==10,0,0) + if(@wis:base==11,1,0) + if(@wis:base==12,2,0) + if(@wis:base==13,3,0) + if(@wis:base==14,5,0) + if(@wis:base==15,7,0) + if(@wis:base==16,10,0) + if(@wis:base==17,13,0) + if(@wis:base==18,17,0)ª
-cha:base
-ª
-	cha_scoresum(@cha:*)ª&$
-cha_modfloor(@cha_score / 2) - 5ªxv
-cha_bonus_spells_1`if(@cha_mod>0,1,0)+if(@cha_mod>4,1,0)+if(@cha_mod>8,1,0)+if(@cha_mod>12,1,0)+if(@cha_mod>16,1,0)ªdb
-cha_bonus_spells_2Lif(@cha_mod>1,1,0)+if(@cha_mod>5,1,0)+if(@cha_mod>9,1,0)+if(@cha_mod>13,1,0)ªec
-cha_bonus_spells_3Mif(@cha_mod>2,1,0)+if(@cha_mod>6,1,0)+if(@cha_mod>10,1,0)+if(@cha_mod>14,1,0)ªec
-cha_bonus_spells_4Mif(@cha_mod>3,1,0)+if(@cha_mod>7,1,0)+if(@cha_mod>11,1,0)+if(@cha_mod>15,1,0)ªQO
-cha_bonus_spells_59if(@cha_mod>4,1,0)+if(@cha_mod>8,1,0)+if(@cha_mod>12,1,0)ªQO
-cha_bonus_spells_69if(@cha_mod>5,1,0)+if(@cha_mod>9,1,0)+if(@cha_mod>13,1,0)ªRP
-cha_bonus_spells_7:if(@cha_mod>6,1,0)+if(@cha_mod>10,1,0)+if(@cha_mod>14,1,0)ªRP
-cha_bonus_spells_8:if(@cha_mod>7,1,0)+if(@cha_mod>11,1,0)+if(@cha_mod>15,1,0)ªRP
-cha_bonus_spells_9:if(@cha_mod>8,1,0)+if(@cha_mod>12,1,0)+if(@cha_mod>16,1,0)ª¾»
-ability_point_cost:cha if(@cha:base==7,-4,0) + if(@cha:base==8,-2,0) + if(@cha:base==9,-1,0) + if(@cha:base==10,0,0) + if(@cha:base==11,1,0) + if(@cha:base==12,2,0) + if(@cha:base==13,3,0) + if(@cha:base==14,5,0) + if(@cha:base==15,7,0) + if(@cha:base==16,10,0) + if(@cha:base==17,13,0) + if(@cha:base==18,17,0)ª20
-ability_point_costsum(@ability_point_cost:*)ªVT
-acN10+@ac:armor+@ac:shield+@dex_mod+@size_mod+@ac:natural+@ac:deflection+@ac:miscª;9
-ac:touch-10+@dex_mod+@size_mod+@ac:deflection+@ac:miscªRP
-ac:flatE10+@ac:armor+@ac:shield+@size_mod+@ac:natural+@ac:deflection+@ac:miscªDB
-	fort_save5@fort:base+@con_mod+@fort:magic+@fort:misc+@fort:tempªDB
-	will_save5@will:base+@wis_mod+@will:magic+@will:misc+@will:tempª?=
-ref_save1@ref:base+@dex_mod+@ref:magic+@ref:misc+@ref:tempª 
-cmb@bab+@str_mod+@size_modª,*
-cmd#10+@bab+@str_mod+@dex_mod+@size_modª)'
-
-initiative@dex_mod+@initiative:miscº4
-current_levelCurrent Levelcurrent_level"
- ¢ º?
-str:tempTemporary Strength Adjustmentability_score"
- ¢ º0
-str:dmgStrength Damageability_score"
- ¢ º1
-	str:drainStrength Drainability_score"
- ¢ º@
-dex:tempTemporary Dexterity Adjustmentability_score"
- ¢ º1
-dex:dmgDexterity Damageability_score"
- ¢ º2
-	dex:drainDexterity Drainability_score"
- ¢ ºC
-con:temp!Temporary Constitution Adjustmentability_score"
- ¢ º4
-con:dmgConstitution Damageability_score"
- ¢ º5
-	con:drainConstitution Drainability_score"
- ¢ ºC
-int:temp!Temporary Intelligence Adjustmentability_score"
- ¢ º4
-int:dmgIntelligence Damageability_score"
- ¢ º5
-	int:drainIntelligence Drainability_score"
- ¢ º=
-wis:tempTemporary Wisdom Adjustmentability_score"
- ¢ º.
-wis:dmgWisdom Damageability_score"
- ¢ º/
-	wis:drainWisdom Drainability_score"
- ¢ º?
-cha:tempTemporary Charisma Adjustmentability_score"
- ¢ º0
-cha:dmgCharisma Damageability_score"
- ¢ º1
-	cha:drainCharisma Drainability_score"
- ¢ º-
-character_nameCharacter Namename"
- ¢ º
-deityDeitydeity"
- ¢ º%
-homelandHomelandhomeland"
- ¢ º
-genderGendergender"
- ¢ º
-ageAgeage"
- ¢ º
-heightHeightheight"
- ¢ º
-weightWeightweight"
- ¢ º
-hairHairhair"
- ¢ º
-eyesEyeseyes"
- ¢ º#
-
-current_hp
-Current HPhp"
- ¢ º/
-nonlethal_damageNonlethal Damagehp"
- ¢ º!
-raceRacerace"
- ª
-race º
-favored_classFavored Classfavored_class"
- ªi
-favored_class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained º3
-	alignment	Alignment	alignment"
- ª
-	alignmentº*
-str:baseStrengthability_score"
- ¢ º+
-dex:base	Dexterityability_score"
- ¢ º.
-con:baseConstitutionability_score"
- ¢ º.
-int:baseIntelligenceability_score"
- ¢ º(
-wis:baseWisdomability_score"
- ¢ º*
-cha:baseCharismaability_score"
- ¢ 
-‰º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º
-featFeatfeat"
- ªf
-feat
-Combatcombat
-Generalgeneral
-Item Creationitem_creation
-	Metamagic	metamagic º%
-skillsSkillsskill" ª
-skill
-‡º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º%
-skillsSkillsskill" ª
-skill
-‰º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º
-featFeatfeat"
- ªf
-feat
-Combatcombat
-Generalgeneral
-Item Creationitem_creation
-	Metamagic	metamagic º%
-skillsSkillsskill" ª
-skill
-»º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º1
-asi1Ability Score Increaseasi"
- ª
-asi º%
-skillsSkillsskill" ª
-skill
-‰º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º
-featFeatfeat"
- ªf
-feat
-Combatcombat
-Generalgeneral
-Item Creationitem_creation
-	Metamagic	metamagic º%
-skillsSkillsskill" ª
-skill
-‡º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º%
-skillsSkillsskill" ª
-skill
-‰º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º
-featFeatfeat"
- ªf
-feat
-Combatcombat
-Generalgeneral
-Item Creationitem_creation
-	Metamagic	metamagic º%
-skillsSkillsskill" ª
-skill
-»º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º1
-asi1Ability Score Increaseasi"
- ª
-asi º%
-skillsSkillsskill" ª
-skill
-‰	º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º
-featFeatfeat"
- ªf
-feat
-Combatcombat
-Generalgeneral
-Item Creationitem_creation
-	Metamagic	metamagic º%
-skillsSkillsskill" ª
-skill
-‡
-º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º%
-skillsSkillsskill" ª
-skill
-‰º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º
-featFeatfeat"
- ªf
-feat
-Combatcombat
-Generalgeneral
-Item Creationitem_creation
-	Metamagic	metamagic º%
-skillsSkillsskill" ª
-skill
-»º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º1
-asi1Ability Score Increaseasi"
- ª
-asi º%
-skillsSkillsskill" ª
-skill
-‰º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º
-featFeatfeat"
- ªf
-feat
-Combatcombat
-Generalgeneral
-Item Creationitem_creation
-	Metamagic	metamagic º%
-skillsSkillsskill" ª
-skill
-‡º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º%
-skillsSkillsskill" ª
-skill
-‰º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º
-featFeatfeat"
- ªf
-feat
-Combatcombat
-Generalgeneral
-Item Creationitem_creation
-	Metamagic	metamagic º%
-skillsSkillsskill" ª
-skill
-»º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º1
-asi1Ability Score Increaseasi"
- ª
-asi º%
-skillsSkillsskill" ª
-skill
-‰º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º
-featFeatfeat"
- ªf
-feat
-Combatcombat
-Generalgeneral
-Item Creationitem_creation
-	Metamagic	metamagic º%
-skillsSkillsskill" ª
-skill
-‡º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º%
-skillsSkillsskill" ª
-skill
-‰º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º
-featFeatfeat"
- ªf
-feat
-Combatcombat
-Generalgeneral
-Item Creationitem_creation
-	Metamagic	metamagic º%
-skillsSkillsskill" ª
-skill
-»º}
-classClassclass"
- ªa
-class
-Corecore
-Basebase
-Hybridhybrid
-Occultoccult
-	Unchained	unchained ºZ
-	equipment	Equipment	equipment" ª2
-item
-All
-Weaponsweapon
-Armorarmor º1
-asi1Ability Score Increaseasi"
- ª
-asi º%
-skillsSkillsskill" ª
-skill

@@ -1,0 +1,24 @@
+{
+  "id": "ability:bloodline_feat#infernal_bloodline",
+  "name": "Bloodline Feat (Infernal Bloodline)",
+  "tags": ["ability", "bloodrager", "class_feature"],
+  "description": {
+    "text": "At 6th level and every 3 levels thereafter, a bloodrager receives one bonus feat chosen from a list specific to each bloodline. The bloodrager must meet the prerequisites for these bonus feats."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "choices": [{
+        "choiceId": "bloodline_feat",
+        "label": "Bloodline Feat",
+        "tags": ["bonus_feat"],
+        "repeating": {
+          "none": {
+          }
+        },
+        "featureSelect": {
+          "featureIds": ["feat:blind_fight", "feat:combat_reflexes", "feat:deceitful", "feat:improved_disarm", "feat:improved_sunder", "feat:intimidating_prowess", "feat:iron_will"]
+        }
+      }]
+    }
+  }
+}

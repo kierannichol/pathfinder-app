@@ -1,0 +1,34 @@
+{
+  "id": "ability:hex_arcana#magus_hexcrafter",
+  "name": "Hex Arcana",
+  "tags": ["ability", "class_feature", "magus"],
+  "description": {
+    "text": "A hexcrafter gains access to the following magus arcana, or may select any witch hex in place of a magus arcana. At 12th level, the hexcrafter may select a hex or major hex in place of a magus arcana. At 18th level, a hexcrafter can select a hex, major hex, or grand hex in place of a magus arcana. He cannot select any hex or arcana more than once."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "choices": [{
+        "choiceId": "hex_arcana",
+        "label": "Hex Arcana",
+        "tags": ["hex_arcana", "class_feature"],
+        "repeating": {
+          "none": {
+          }
+        },
+        "featureSelect": {
+          "optionTags": ["magus_arcana", "witch_hex"],
+          "categories": [{
+            "label": "All"
+          }, {
+            "label": "Magus Arcana",
+            "tag": "magus_arcana"
+          }, {
+            "label": "Hex",
+            "tag": "witch_hex"
+          }],
+          "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+        }
+      }]
+    }
+  }
+}

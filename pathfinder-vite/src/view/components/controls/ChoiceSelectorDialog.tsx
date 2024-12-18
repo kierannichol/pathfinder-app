@@ -10,6 +10,7 @@ import {array} from "@/app/pfutils.ts";
 import LoadingBlock from "../LoadingBlock.tsx";
 import SearchBar from "../SearchBar.tsx";
 import {FaMagnifyingGlass} from "react-icons/fa6";
+import Id from "@/utils/Id.ts";
 
 interface ChoiceSelectorDialogProps {
   choiceName: string;
@@ -35,7 +36,11 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
     return categories?.length > 0 ? categories[0] : undefined;
   });
 
+  const selectedWithoutOption = useMemo(() => selected ? Id.withoutOption(selected) : undefined, [selected]);
+
   const options: ChoiceSelectorOption[] = useMemo(() => array(optionsFn(query, category)), [optionsFn, query, category]);
+
+  const [ showSubOptions, setShowSubOptions] = useState<boolean>(false);
 
   const hasQuery = useMemo(() => query.trim().length > 0, [query]);
 
@@ -98,6 +103,8 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
     })
   }, [ options, query, hasQuery, showInvalid ]);
 
+  const [availableSubOptions, setAvailableSubOptions] = useState<ChoiceSelectorOptions>([]);
+
   const hasSelection = selected !== undefined && selected !== '';
   const includeSearch = search === true || (search === "auto" && (availableOptions.length > 10 || categories?.length > 0)) || hasQuery
 
@@ -118,6 +125,13 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
   }
 
   function handleConfirmSelection() {
+    const selectedOption = options.find(option => option.id === selected);
+    if (selectedOption !== undefined && (selectedOption.subOptions?.length ?? 0) > 0) {
+      console.log(selectedOption.subOptions)
+      setAvailableSubOptions(selectedOption.subOptions ?? []);
+      setShowSubOptions(true);
+      return;
+    }
     onSelect?.(selected ?? '');
   }
 
@@ -154,11 +168,25 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
     <Modal.Body className={styles.body}>
       {isLoading
           ? <LoadingBlock/>
-          : ((availableOptions.length > 0 &&
-          <ChoiceSelectorList selected={selected}
+          : (availableOptions.length > 0 &&
+          <>
+            <ChoiceSelectorList selected={selectedWithoutOption}
                               options={availableOptions}
                               onSelect={handleChangeSelection}
-                              variant={variant} />)
+                              variant={variant} />
+            <ChoiceSelectorDialog choiceName={choiceName}
+                                  show={showSubOptions}
+                                  value={selected}
+                                  optionsFn={() => availableSubOptions}
+                                  variant={variant}
+                                  search={false}
+                                  sortBy="name"
+                                  onSelect={selected => {
+                                    setShowSubOptions(false);
+                                    onSelect?.(selected ?? '');
+                                  }}
+                                  onCancel={() => setShowSubOptions(false)}/>
+          </>
           || <Alert variant="warning">None found</Alert>)}
     </Modal.Body>
 

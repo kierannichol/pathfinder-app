@@ -62,7 +62,7 @@ levels:
   level: 6
 - class_feature_names:
   - "ability:knowledge_pool#magus"
-  - "ability:medium_armor#magus"
+  - "ability:medium_armor_proficiency#magus"
   level: 7
 - class_feature_names:
   - "ability:improved_spell_combat#magus"
@@ -81,7 +81,7 @@ levels:
   - "ability:magus_arcana#magus"
   level: 12
 - class_feature_names:
-  - "ability:heavy_armor#magus"
+  - "ability:heavy_armor_proficiency#magus"
   level: 13
 - class_feature_names:
   - "ability:greater_spell_combat#magus"
@@ -107,7 +107,7 @@ levels:
 class_features:
 - id: "ability:arcane_pool#magus"
   name: "Arcane Pool"
-  label: null
+  label: "Arcane Pool ({@resource:arcane_pool})"
   type: "Su"
   description: "At 1st level, the magus gains a reservoir of mystical arcane energy\
     \ that he can draw upon to fuel his powers and enhance his weapon. This arcane\
@@ -130,7 +130,8 @@ class_features:
     \ wielded by anyone other than the magus.A magus can only enhance one weapon in\
     \ this way at one time. If he uses this ability again, the first use immediately\
     \ ends."
-  effects: []
+  effects:
+    - "SET resource:arcane_pool (floor(@class:magus/2)+@int_mod+@resource:arcane_pool#bonus)"
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Ultimate Magic"
 - id: "ability:bonus_feat#magus"
@@ -150,9 +151,6 @@ class_features:
   type: ""
   description: "A magus can prepare a number of cantrips, or 0-level spells, each\
     \ day, as noted on"
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Ultimate Magic"
 - id: "ability:counterstrike#magus"
   name: "Counterstrike"
   label: null
@@ -197,8 +195,8 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Ultimate Magic"
-- id: "ability:heavy_armor#magus"
-  name: "Heavy Armor"
+- id: "ability:heavy_armor_proficiency#magus"
+  name: "Heavy Armor Proficiency"
   label: null
   type: "Ex"
   description: "At 13th level, a magus gains proficiency with heavy armor. A magus\
@@ -207,6 +205,8 @@ class_features:
     \ a shield incurs a chance of arcane spell failure if the spell in question has\
     \ a somatic component."
   effects: []
+  links:
+    - "feat:heavy_armor_proficiency"
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Ultimate Magic"
 - id: "ability:improved_spell_combat#magus"
@@ -261,11 +261,10 @@ class_features:
     \ in a magus arcana's description, a magus cannot select a particular magus arcana\
     \ more than once. Magus arcana that affect spells can only be used to modify spells\
     \ from the magus spell list unless otherwise noted."
-  effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Ultimate Magic"
-- id: "ability:medium_armor#magus"
-  name: "Medium Armor"
+- id: "ability:medium_armor_proficiency#magus"
+  name: "Medium Armor Proficiency"
   label: null
   type: "Ex"
   description: "At 7th level, a magus gains proficiency with medium armor. A magus\
@@ -275,6 +274,8 @@ class_features:
     \ spell in question has a somatic component."
   effects: []
   prerequisites: ""
+  links:
+    - "feat:medium_armor_proficiency"
   source: " Pathfinder Roleplaying Game: Ultimate Magic"
 - id: "ability:spell_combat#magus"
   name: "Spell Combat"

@@ -5,6 +5,7 @@ import pathfinder.model.Effect;
 import pathfinder.model.Feature;
 import pathfinder.model.Feature.FeatureBuilder;
 import pathfinder.model.FeatureSelectByTagChoice;
+import pathfinder.model.Tags;
 import pathfinder.model.core.BaseAttackBonus;
 import pathfinder.model.core.SaveBonus;
 import pathfinder.model.pathfinder.CharacterClass;
@@ -28,10 +29,13 @@ public class ClassMapper {
         SaveBonus.REF.generateSaveBonuses(characterClass.ref(), levelEditor);
         addClassFeaturesToClass(characterClass, levelEditor);
 
-        levelEditor.level(1).addRepeatingFeatureSelectByTagChoice("archetype", "Archetype", "archetype", "archetype+" + characterClass.id().key);
+        levelEditor.level(1).addRepeatingFeatureSelectByTagChoice("archetype", "Archetype", Tags.of("archetype"),
+                "archetype+" + characterClass.id().key);
 
-        levelEditor.level(1).addEffect(Effect.setFormula("max_skill_ranks#" + characterClass.id().key, "(%s+@int_mod)*@%s".formatted(characterClass.skill_ranks_per_level(), characterClass.id())));
-        characterClass.class_skills().forEach(skill -> levelEditor.level(1).addEffect(Effect.setNumber("trained:" + skill, 1)));
+        levelEditor.level(1).addEffect(Effect.setFormula("max_skill_ranks#" + characterClass.id().key,
+                "(%s+@int_mod)*@%s".formatted(characterClass.skill_ranks_per_level(), characterClass.id())));
+        characterClass.class_skills()
+                .forEach(skill -> levelEditor.level(1).addEffect(Effect.setNumber("trained:" + skill, 1)));
 
 //        addCasterLevels(characterClass, levelEditor);
         addSpellChoices(characterClass, levelEditor);
@@ -46,7 +50,9 @@ public class ClassMapper {
     private void addClassFeaturesToClass(CharacterClass characterClass, ClassLevelEditor levelEditor) {
         characterClass.levels().forEach(classLevelDefinition -> {
             int level = classLevelDefinition.level();
-            if (classLevelDefinition.classFeatureIds() == null) return;
+            if (classLevelDefinition.classFeatureIds() == null) {
+                return;
+            }
             classLevelDefinition.classFeatureIds().forEach(classFeatureId -> {
                 levelEditor.level(level).addLink(classFeatureId);
             });
@@ -58,13 +64,13 @@ public class ClassMapper {
             case "class:sorcerer":
                 levelEditor.level(1).addFeatureSelectByTagChoice("sorcerer1:bloodline",
                         "Sorcerer Bloodline",
-                        "sorcerer_bloodline",
+                        Tags.of("sorcerer_bloodline"),
                         "sorcerer_bloodline");
                 break;
         }
     }
 
-//    private void addCasterLevels(CharacterClass characterClass, ClassLevelEditor levelEditor) {
+    //    private void addCasterLevels(CharacterClass characterClass, ClassLevelEditor levelEditor) {
 //        OptionalInt maybeMinimumCasterLevel = characterClass.levels().stream()
 //                .filter(level -> !level.spellsKnown().isEmpty() || !level.spellsPerDay().isEmpty())
 //                .mapToInt(ClassLevel::level)
@@ -91,10 +97,13 @@ public class ClassMapper {
     private void addSpellChoices(CharacterClass characterClass, ClassLevelEditor levelEditor) {
 
         for (int i = 0; i <= 9; i++) {
-            levelEditor.level(1).addChoice(FeatureSelectByTagChoice.builder("%s:spells_%s".formatted(characterClass.id().key, i), "%s Level %s Spells".formatted(characterClass.name(), i), "spell")
-                    .repeating("@trait:level_%s_spells_per_day#%s".formatted(i, characterClass.id().key))
+            levelEditor.level(1).addChoice(
+                    FeatureSelectByTagChoice.builder("%s:spells_%s".formatted(characterClass.id().key, i),
+                                    "%s Level %s Spells".formatted(characterClass.name(), i))
+                            .tag("spell")
+                            .repeating("@trait:level_%s_spells_per_day#%s".formatted(i, characterClass.id().key))
                             .optionTag("spell+%s%d".formatted(characterClass.id().key, i))
-                    .build());
+                            .build());
         }
 
 //        for (var level : characterClass.levels()) {

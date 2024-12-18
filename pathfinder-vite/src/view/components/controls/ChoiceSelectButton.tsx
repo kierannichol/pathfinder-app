@@ -60,6 +60,7 @@ export default function ChoiceSelectButton({ choiceName, value, id, onSelect, op
 
   const selectedName = useMemo(() => value !== '' && value !== undefined
           ? array(optionsFn(undefined, undefined))
+              .flatMap(option => [option, ...(option.subOptions ?? [])])
               .filter(option => option.id === value)
               .map(option => option.label)
               .at(0)

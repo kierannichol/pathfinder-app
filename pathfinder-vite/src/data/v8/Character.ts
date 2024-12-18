@@ -32,8 +32,6 @@ export default class Character {
     const state: AppliedState = new AppliedState(withoutChoicePath);
 
     const templateAtLevel = this.resolvedTemplate?.atLevel(level);
-
-    state.set('character_level', level);
     templateAtLevel?.applyTo(state);
 
     const featuresByKey: {[key:string]:ResolvedFeature} = {};

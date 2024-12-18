@@ -2,19 +2,29 @@ package pathfinder.db.query;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Stream;
+import pathfinder.generator.CoreCharacterFeatureProvider;
+import pathfinder.model.Source;
 import pathfinder.model.pathfinder.WeaponProficiency;
 import pathfinder.model.pathfinder.WeaponRange;
 import pathfinder.model.pathfinder.WeaponType;
 import pathfinder.model.pathfinder.Weapons;
 
-public class WeaponProficiencyQuery {
+public class WeaponProficiencyQuery implements Query<WeaponType> {
     private WeaponProficiency proficiency;
     private WeaponRange range;
     private Boolean isMelee;
     private Boolean isRanged;
     private Boolean isNatural;
     private final Set<WeaponType> isInSet = new HashSet<>();
+
+    @Override
+    public Stream<WeaponType> query(List<Source> sources, CoreCharacterFeatureProvider coreCharacterFeatureProvider) {
+        return Weapons.ALL_WEAPONS.stream()
+                .filter(this::matches);
+    }
 
     public WeaponProficiencyQuery proficiency(WeaponProficiency proficiency) {
         this.proficiency = proficiency;
@@ -46,7 +56,7 @@ public class WeaponProficiencyQuery {
         return this;
     }
 
-    public boolean matches(WeaponType weapon) {
+    private boolean matches(WeaponType weapon) {
         if (proficiency != null && !weapon.requiredProficiency().equals(proficiency)) {
             return false;
         }

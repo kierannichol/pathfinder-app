@@ -16,7 +16,7 @@ import pathfinder.model.Stack;
 import pathfinder.model.StackBuilder;
 import pathfinder.model.Stacks;
 
-public record Feature(Id id, String name, String label, String type, Description description, List<String> effects, List<Id> links, Stacks stacks, String prerequisites, String source) implements NamedEntity, FromSourceBook {
+public record Feature(Id id, String name, String label, String type, Description description, List<String> effects, List<Id> links, Stacks stacks, String prerequisites, String enabled_formula, String source) implements NamedEntity, FromSourceBook {
 
     public static FeatureBuilder builder() {
         return new FeatureBuilder();
@@ -43,6 +43,7 @@ public record Feature(Id id, String name, String label, String type, Description
         private StackBuilder repeatingStack = new StackBuilder();
         private boolean useRepeatingStack = false;
         private String prerequisites = "";
+        private String enabled_formula = "";
         private String source;
 
         public FeatureBuilder id(Id id) {
@@ -80,6 +81,11 @@ public record Feature(Id id, String name, String label, String type, Description
 
         public FeatureBuilder prerequisites(String prerequisites) {
             this.prerequisites = prerequisites;
+            return this;
+        }
+
+        public FeatureBuilder enabled_formula(String enabled_formula) {
+            this.enabled_formula = enabled_formula;
             return this;
         }
 
@@ -147,7 +153,7 @@ public record Feature(Id id, String name, String label, String type, Description
             Stacks stacks = useRepeatingStack
                             ? new RepeatingStack(repeatingStack.build())
                             : new FixedStacks(mapList(fixedStacks, StackBuilder::build));
-            return new Feature(id, name, label, type, description, effects, links, stacks, prerequisites, source);
+            return new Feature(id, name, label, type, description, effects, links, stacks, prerequisites, enabled_formula, source);
         }
 
         private FeatureBuilder() {

@@ -1,0 +1,44 @@
+.dialog {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.body {
+  width: 100%;
+  flex: 1;
+  /*max-width: 50vw;*/
+}
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.category {
+  display: flex;
+  flex: 1;
+  cursor: pointer;
+  user-select: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5em;
+}
+.category.active {
+  background-color: var(--pf-primary-hover-rgb);
+}
+
+.searchbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.button {
+  flex: 1;
+  justify-content: center;
+}

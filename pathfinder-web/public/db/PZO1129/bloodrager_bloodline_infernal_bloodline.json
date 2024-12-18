@@ -1,0 +1,55 @@
+{
+  "id": "bloodrager_bloodline:infernal_bloodline",
+  "name": "Infernal Bloodline",
+  "tags": ["bloodrager_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "The Pit lives in your blood. Maybe one of your ancestors was seduced by the powers of Hell or made a deal with a devil. Either way, its corruption seethes within your lineage."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:hellfire_charge#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:hellfire_strike#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:bloodline_feat#infernal_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:fiend_of_the_pit#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:infernal_resistance#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:bloodline_feat#infernal_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:diabolical_arrogance#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:dark_wings#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:bloodline_feat#infernal_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "feat:skeleton_summoner",
+  "name": "Skeleton Summoner",
+  "tags": ["feat", "general"],
+  "enabledFormula": "all(@feat:spell_focus#necromancy,any(@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8)[Able to cast Summon Monster])",
+  "maxStacks": 1,
+  "description": {
+    "text": "The walking dead respond to your call.",
+    "sections": {
+      "Benefit": "Add “human skeleton\" to the list of creatures you can summon with summon monster I and “human skeletal champion\" to the list of creatures you can summon with summon monster III. Once per day, when you cast summon monster, you may summon a skeletal version of one of the creatures on that spell\u0027s summoning list (apply the skeleton template to that creature to create this monster)."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

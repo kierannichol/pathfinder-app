@@ -1,0 +1,24 @@
+{
+  "id": "feat:exotic_weapon_proficiency",
+  "name": "Exotic Weapon Proficiency",
+  "tags": ["combat", "feat"],
+  "enabledFormula": "@bab\u003e\u003d1",
+  "maxStacks": 1,
+  "options": {
+    "select": {
+      "optionTag": "weapon+exotic",
+      "idTemplate": "feat:exotic_weapon_proficiency#{option.key}"
+    }
+  },
+  "description": {
+    "sections": {
+      "Benefit": "You make attack rolls with the weapon normally.",
+      "Special": "You can gain Exotic Weapon Proficiency multiple times. Each time you take the feat, it applies to a new type of exotic weapon.",
+      "Normal": "A character who uses a weapon with which he is not proficient takes a –4 penalty on attack rolls."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

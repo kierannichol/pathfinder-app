@@ -1,0 +1,95 @@
+{
+  "id": "class:cavalier#sister_in_arms",
+  "name": "Sister-In-Arms",
+  "tags": ["archetype", "cavalier"],
+  "enabledFormula": "!@modifies:ability:mount#cavalier AND !@modifies:ability:mighty_charge#cavalier AND !@modifies:ability:order#cavalier AND !@modifies:ability:cavaliers_charge#cavalier AND !@modifies:ability:expert_trainer#cavalier AND !@modifies:ability:supreme_charge#cavalier AND !@modifies:ability:challenge#cavalier",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:mount#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:mighty_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:order#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:cavaliers_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:expert_trainer#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:supreme_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:challenge#cavalier",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:cavalier",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:halfhearted_challenge#cavalier_sister_in_arms"],
+            "linksToRemove": ["ability:challenge#cavalier"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:halfhearted_challenge#cavalier_sister_in_arms", "ability:maidens_order#cavalier_sister_in_arms", "ability:maidens_order#cavalier_sister_in_arms"],
+            "linksToRemove": ["ability:challenge#cavalier", "ability:mount#cavalier", "ability:order#cavalier"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:devoted_defender#cavalier_sister_in_arms"],
+            "linksToRemove": ["ability:cavaliers_charge#cavalier"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:halfhearted_challenge#cavalier_sister_in_arms"],
+            "linksToRemove": ["ability:challenge#cavalier"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:dedicated_commander#cavalier_sister_in_arms"],
+            "linksToRemove": ["ability:supreme_charge#cavalier"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:halfhearted_challenge#cavalier_sister_in_arms", "ability:maidens_loyalty#cavalier_sister_in_arms"],
+            "linksToRemove": ["ability:challenge#cavalier", "ability:expert_trainer#cavalier"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:halfhearted_challenge#cavalier_sister_in_arms"],
+            "linksToRemove": ["ability:challenge#cavalier"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:halfhearted_challenge#cavalier_sister_in_arms"],
+            "linksToRemove": ["ability:challenge#cavalier"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:dedicated_commander#cavalier_sister_in_arms"],
+            "linksToRemove": ["ability:mighty_charge#cavalier"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:halfhearted_challenge#cavalier_sister_in_arms"],
+            "linksToRemove": ["ability:challenge#cavalier"]
+          }]
+        }]
+      }]
+    }
+  }
+}

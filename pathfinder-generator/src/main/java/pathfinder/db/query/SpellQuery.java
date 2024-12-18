@@ -1,26 +1,37 @@
 package pathfinder.db.query;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Stream;
+import pathfinder.generator.CoreCharacterFeatureProvider;
 import pathfinder.model.Source;
 import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Spell;
 
-public class SpellQuery implements SourceSpecificQuery<SpellQuery> {
+public class SpellQuery implements Query<Spell>, SourceSpecificQuery<SpellQuery> {
     private final String name;
     private Collection<SourceId> sourceId;
+
+    @Override
+    public Stream<Spell> query(List<Source> sources, CoreCharacterFeatureProvider coreCharacterFeatureProvider) {
+        return sources.stream()
+                .filter(this::matches)
+                .flatMap(content -> content.spells().stream())
+                .filter(this::matches);
+    }
 
     public SpellQuery sources(Collection<SourceId> sourceId) {
         return new SpellQuery(name, sourceId);
     }
 
-    public boolean matches(Source source) {
+    private boolean matches(Source source) {
         if (sourceId == null) {
             return true;
         }
         return sourceId.contains(source.sourceId());
     }
 
-    public boolean matches(Spell spell) {
+    private boolean matches(Spell spell) {
         return this.name == null || spell.name().equalsIgnoreCase(this.name);
     }
 

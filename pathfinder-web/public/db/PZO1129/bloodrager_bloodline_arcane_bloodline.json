@@ -1,0 +1,55 @@
+{
+  "id": "bloodrager_bloodline:arcane_bloodline",
+  "name": "Arcane Bloodline",
+  "tags": ["bloodrager_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "While others of your kin may be powerful wizards and sorcerers, the eldritch nature of the blood coursing through your veins transforms you into a spell-breaking terror."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:true_arcane_bloodrage#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:disruptive_bloodrage#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:bloodline_feat#arcane_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:casters_bane#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:arcane_bloodrage#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:bloodline_feat#arcane_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:greater_arcane_bloodrage#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:casters_scourge#bloodrager"],
+            "linksToRemove": ["ability:bloodline_power#bloodrager"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:bloodline_feat#arcane_bloodline"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }]
+        }]
+      }]
+    }
+  }
+}
