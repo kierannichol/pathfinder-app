@@ -8,7 +8,8 @@ import pathfinder.data.StackDbo;
 public record Stack(List<Effect> effects,
                     List<Link> links,
                     List<Choice> choices,
-                    List<FeatureModification> featureModifications) {
+                    List<FeatureModification> featureModifications,
+                    List<ChoiceModification> choiceModifications) {
 
     public StackDbo toDbo() {
         return StackDbo.newBuilder()

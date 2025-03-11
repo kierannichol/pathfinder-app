@@ -12,36 +12,45 @@
         "featureModifications": [{
           "targetFeatureId": "class:sorcerer",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["spell:greater_shadow_evocation"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:shadowstrike#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 19,
-            "linksToAdd": ["ability:bloodline_feat#shadow_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#shadow_bloodline", "spell:shades"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 3,
-            "linksToAdd": ["ability:nighteye#sorcerer"],
+            "linksToAdd": ["ability:nighteye#sorcerer", "spell:ray_of_enfeeblement"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:shadow_master#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["spell:darkvision"]
+          }, {
             "targetStackCount": 7,
-            "linksToAdd": ["ability:bloodline_feat#shadow_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#shadow_bloodline", "spell:deeper_darkness"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToAdd": ["ability:shadow_well#sorcerer", "ability:dimension_door#sorcerer"],
+            "linksToAdd": ["ability:shadow_well#sorcerer", "ability:dimension_door#sorcerer", "spell:shadow_conjuration"],
             "linksToRemove": ["ability:bloodline_power#sorcerer", "ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["spell:shadow_evocation"]
+          }, {
             "targetStackCount": 13,
-            "linksToAdd": ["ability:bloodline_feat#shadow_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#shadow_bloodline", "spell:shadow_walk"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToAdd": ["ability:enveloping_darkness#sorcerer"],
+            "linksToAdd": ["ability:enveloping_darkness#sorcerer", "spell:power_word_blind"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }]
         }]

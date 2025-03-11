@@ -1,0 +1,25 @@
+{
+  "id": "cleric_domain:death_domain",
+  "name": "Death Domain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You can cause the living to bleed at a touch, and find comfort in the presence of the dead."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:bleeding_touch"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:deaths_embrace"]
+          }]
+        }]
+      }]
+    }
+  }
+}

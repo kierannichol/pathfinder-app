@@ -1,0 +1,22 @@
+{
+  "id": "cleric_domain:glory_domain#honor",
+  "name": "Honor Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You are infused with the glory of the divine, and are a true foe of the undead. In addition, when you channel positive energy to harm undead creatures, the save DC to halve the damage is increased by 2."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:divine_presence", "ability:honor_bound"]
+          }]
+        }]
+      }]
+    }
+  }
+}

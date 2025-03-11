@@ -6,5 +6,59 @@
   "weight": 2.0,
   "description": {
     "text": "This elegant mithral sword bears a blooming rose on the crossguard, with vines winding around the hilt. Filarina Grantsliem discovered the rose knight\u0027s blade during her brief adventuring career, when she earned the blade as a reward after freeing a trapped azata from an ancient magical prison. Scarlet Rose agents have since been successful in creating new rose knight\u0027s blades, and the weapons are increasingly seeing use among these Gray Maidens and their affiliates.\nA rose knight\u0027s blade is a +1 benevolent mithral longsword. Along with its benevolence special ability, this sword can also provide aid by metaphorically cutting through certain debilitating effects. Three times per day, the wielder of a rose knight\u0027s blade can attempt a new saving throw against one of the following conditions affecting her: dazed, frightened, nauseated, panicked, paralyzed, shaken, staggered, or stunned— but only if the condition was caused by a mind-affecting effect.\nAlternatively, the wielder can expend one daily use and touch the blade to an adjacent creature as a standard action to remove one of these mind-affecting conditions from the ally."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "crit_multiplier": 2,
+    "crit_range": 19,
+    "dice_count": 1,
+    "dice_sides": 8,
+    "type:one-handed": 1
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }]
 }

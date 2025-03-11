@@ -13,7 +13,7 @@ export function EffectsField({ value, onChange }: FieldProps<string[]>) {
                   onAddItem={() => ''}
                   addButtonLabel="+ Effect">
         {(element, index, setElement, actions) =>
-            <RemovableBlock key={index} onRemove={actions.remove}>
+            <RemovableBlock key={element} onRemove={actions.remove}>
               <EffectEditor value={element} onChange={setElement} />
             </RemovableBlock>}
       </ListEditor>

@@ -59,4 +59,11 @@ public class StringUtils {
     public static boolean notEmpty(String str) {
         return str != null && !str.isBlank();
     }
+
+    public static String emptyIfNull(String text) {
+        if (text == null) {
+            return "";
+        }
+        return text;
+    }
 }

@@ -21,7 +21,7 @@ public class ClassMapper {
                 .addTag("class")
                 .addTag(characterClass.category());
 
-        ClassLevelEditor levelEditor = ClassLevelEditor.create();
+        ClassLevelEditor levelEditor = ClassLevelEditor.create(characterClass.stacks());
 
         BaseAttackBonus.generateClassBabEffects(characterClass, levelEditor);
         SaveBonus.FORT.generateSaveBonuses(characterClass.fort(), levelEditor);
@@ -39,8 +39,6 @@ public class ClassMapper {
 
 //        addCasterLevels(characterClass, levelEditor);
         addSpellChoices(characterClass, levelEditor);
-
-        addSpecialClassChoicesToClass(characterClass, levelEditor);
 
         levelEditor.addTo(feature);
 

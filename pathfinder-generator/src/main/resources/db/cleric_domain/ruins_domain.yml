@@ -1,0 +1,50 @@
+id: "cleric_domain:ruins_domain"
+parent_id: null
+name: "Ruins Domain"
+description: "You sense nature’s creeping reclamation of what once belonged to the\
+  \ civilized world and understand how to ensure ruins that hold power or significance\
+  \ will persist."
+granted_powers:
+- id: "ability:ruin_touch"
+  name: "Ruin Touch"
+  description: "You can strengthen or weaken objects with your touch. With a melee\
+    \ touch attack, you can increase or decrease the hardness of an object (up to\
+    \ a 10-foot cube) or construct by an amount equal to half your druid level (minimum\
+    \ 1) for 1 minute. You cannot reduce an object’s hardness below 0, and the same\
+    \ target cannot be affected by this ability more than once. You can use this ability\
+    \ a number of times per day equal to 3 + your Wisdom modifier."
+  type: "Su"
+- id: "ability:remembrance"
+  name: "Remembrance"
+  description: "At 4th level, when within a ruin or other structure that is no longer\
+    \ claimed by civilization, you can call upon the wisdom of the land and its long-dead\
+    \ residents. Once per day for every 4 druid levels you possess, you can cast divination\
+    \ as a spell-like ability. Additionally, if you are within ruins when you cast\
+    \ commune with nature, you gain information about the crumbling structures around\
+    \ you as though they were part of nature."
+  type: "Sp"
+- id: "ability:surefooted"
+  name: "Surefooted"
+  description: "At 8th level, your speed is not reduced by difficult terrain unless\
+    \ the terrain has been magically manipulated to impede motion."
+  type: "Ex"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:magic_stone"
+- spell_level: 2
+  spell_id: "spell:stone_call"
+- spell_level: 3
+  spell_id: "spell:meld_into_stone"
+- spell_level: 4
+  spell_id: "spell:rusting_grasp"
+- spell_level: 5
+  spell_id: "spell:commune_with_nature"
+- spell_level: 6
+  spell_id: "spell:stone_tell"
+- spell_level: 7
+  spell_id: "spell:statue"
+- spell_level: 8
+  spell_id: "spell:earthquake"
+- spell_level: 9
+  spell_id: "spell:clashing_rocks"
+source: "Pathfinder Campaign Setting: Inner Sea Monster Codex"

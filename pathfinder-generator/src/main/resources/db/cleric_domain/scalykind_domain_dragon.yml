@@ -1,0 +1,43 @@
+id: "cleric_domain:scalykind_domain#dragon"
+parent_id: "cleric_domain:scalykind_domain"
+name: "Dragon Subdomain"
+description: ""
+granted_powers:
+- id: "ability:venomous_stare"
+  name: "Venomous Stare"
+  description: "You are a true lord of reptiles, able to induce pain, panic, and confusion\
+    \ with a mere glance, and your mesmerizing eyes can even drive weak creatures\
+    \ into unconsciousness. As a standard action, you can activate a gaze attack with\
+    \ a 30-foot range. This is an active gaze attack that can target a single creature\
+    \ within range. The target must make a Will save (DC = 10 + 1/2 your cleric level\
+    \ + your Wisdom modifier). Those who fail take 1d6 points of nonlethal damage\
+    \ + 1 point for every two cleric levels you possess and are fascinated until the\
+    \ beginning of your next turn. You can use this ability a number of times per\
+    \ day equal to 3 + your Wisdom modifier. This is a mind-affecting effect."
+  type: "Sp"
+- id: "ability:serpent_companion"
+  name: "Serpent Companion"
+  description: "At 4th level, you gain the service of an animal companion. Your effective\
+    \ druid level for this animal companion is equal to your cleric level –2. You\
+    \ may choose either a viper or a constrictor snake as your companion."
+  type: "Ex"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:magic_fang"
+- spell_level: 2
+  spell_id: "spell:animal_trance"
+- spell_level: 3
+  spell_id: "spell:draconic_reservoir"
+- spell_level: 4
+  spell_id: "spell:dragons_breath"
+- spell_level: 5
+  spell_id: "spell:animal_growth*"
+- spell_level: 6
+  spell_id: "spell:form_of_the_dragon_i"
+- spell_level: 7
+  spell_id: "spell:creeping_doom"
+- spell_level: 8
+  spell_id: "spell:animal_shapes*"
+- spell_level: 9
+  spell_id: "spell:shapechange"
+source: "Pathfinder Campaign Setting: Inner Sea Gods"

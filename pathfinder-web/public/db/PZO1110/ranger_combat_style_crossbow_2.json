@@ -1,0 +1,27 @@
+{
+  "id": "ranger_combat_style:crossbow_2",
+  "name": "Crossbow",
+  "tags": ["ranger_combat_style_2"],
+  "enabledFormula": "@ranger_combat_style:crossbow_1",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "ranger_combat_style_2",
+          "label": "Ranger Combat Style Feat",
+          "tags": ["class_feature"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["ranger_combat_style_feat:deadly_aim", "ranger_combat_style_feat:focused_shot", "ranger_combat_style_feat:precise_shot", "ranger_combat_style_feat:rapid_reload", "ranger_combat_style_feat:crossbow_mastery", "ranger_combat_style_feat:improved_precise_shot"]
+          }
+        }]
+      }]
+    }
+  }
+}

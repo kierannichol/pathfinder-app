@@ -1,0 +1,11 @@
+syntax = "proto3";
+import "Choice.proto";
+
+option java_multiple_files = true;
+option java_package = "ttrpg.data";
+
+message StackData {
+    optional uint32 stack_number = 1;
+    repeated string feature_ids = 2;
+    repeated ChoiceData choices = 3;
+}

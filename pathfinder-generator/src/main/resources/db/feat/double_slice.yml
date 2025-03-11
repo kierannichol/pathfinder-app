@@ -22,3 +22,5 @@ companion: false
 note: ""
 goal: ""
 multiples: false
+attack_mod:
+  damage_bonus: "if(@arg:is_off_hand, if(@str_mod>0,floor(@str_mod/2),@str_mod), 0)"

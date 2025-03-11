@@ -41,7 +41,7 @@ function CharacterAtLevelDebugView({ characterAtLevel }: CharacterAtLevelDebugVi
         {characterAtLevel.keys().map(key => (
             <tr key={key}>
               <td>{key}</td>
-              <td>{characterAtLevel.resolve(key)?.asText()}</td>
+              <td>{characterAtLevel.get(key)?.asText()}</td>
             </tr>
         ))}
         </tbody>

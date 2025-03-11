@@ -1,0 +1,24 @@
+{
+  "id": "ranger_combat_style_feat:distance_thrower",
+  "name": "Distance Thrower",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You are accurate with thrown weapons at longer ranges than normal.",
+    "sections": {
+      "Benefit": "With a thrown weapon, you reduce your penalty on ranged attack rolls due to range by 2."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:distance_thrower",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

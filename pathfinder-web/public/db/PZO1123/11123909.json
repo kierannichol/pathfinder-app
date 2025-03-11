@@ -6,5 +6,59 @@
   "weight": 3.0,
   "description": {
     "text": "This intelligent item is called a lightning bow by mortals, a name is seen as a slight to the lightning elemental trapped within it—a creature honor-bound to serve in the bow for no less than 100 years. Each of these +3 adaptive composite longbows is a haughty and often highly intelligent member of its race, who chides those who don\u0027t know its true name— which is often a complicated series of high pitched squeaks, like live wood burning on a pyre. The elemental in a lightning bow only speaks Auran. Lightning bows will not fire on other outsiders with the elemental subtype. Some are also bound not to attack other individuals, based on their history. For instance, one of these bows might be foresworn not to attack the Sultan of Fire, fire giants, or red dragons. Additionally, lightning bows have the following powers."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "crit_multiplier": 3,
+    "crit_range": 20,
+    "dice_count": 1,
+    "dice_sides": 8,
+    "type:ranged": 1
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }]
 }

@@ -3720,8 +3720,7 @@
   }, {
     "id": "ability:weapon_and_armor_proficiency#slayer_bounty_hunter",
     "name": "Weapon and Armor Proficiency",
-    "tags": ["ability", "class_feature", "slayer"],
-    "maxStacks": 1
+    "tags": ["ability", "class_feature", "slayer"]
   }, {
     "id": "ability:weapon_and_armor_proficiency#slayer_deliverer",
     "name": "Weapon and Armor Proficiency",
@@ -4250,7 +4249,7 @@
     "id": "class:druid#nature_fang",
     "name": "Nature Fang",
     "tags": ["archetype", "druid"],
-    "enabledFormula": "!@modifies:ability:wild_shape#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:wild_empathy#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:woodland_stride#druid",
+    "enabledFormula": "!@modifies:ability:wild_shape#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:wild_empathy#druid AND !@modifies:ability:woodland_stride#druid",
     "maxStacks": 1
   }, {
     "id": "class:druid#wild_whisperer",
@@ -4291,7 +4290,7 @@
     "id": "class:hunter#feral_hunter",
     "name": "Feral Hunter",
     "tags": ["archetype", "hunter"],
-    "enabledFormula": "!@modifies:ability:greater_empathic_link#hunter AND !@modifies:ability:bonus_trick#hunter AND !@modifies:ability:improved_empathic_link#hunter AND !@modifies:ability:hunter_tactics#hunter AND !@modifies:ability:speak_with_master#hunter AND !@modifies:ability:teamwork_feat#hunter AND !@modifies:ability:animal_focus#hunter AND !@modifies:ability:precise_companion#hunter AND !@modifies:ability:raise_animal_companion#hunter",
+    "enabledFormula": "!@modifies:ability:bonus_trick#hunter AND !@modifies:ability:greater_empathic_link#hunter AND !@modifies:ability:improved_empathic_link#hunter AND !@modifies:ability:hunter_tactics#hunter AND !@modifies:ability:speak_with_master#hunter AND !@modifies:ability:teamwork_feat#hunter AND !@modifies:ability:animal_focus#hunter AND !@modifies:ability:precise_companion#hunter AND !@modifies:ability:raise_animal_companion#hunter",
     "maxStacks": 1
   }, {
     "id": "class:hunter#packmaster",
@@ -4484,7 +4483,7 @@
     "id": "class:slayer#bounty_hunter",
     "name": "Bounty Hunter",
     "tags": ["archetype", "slayer"],
-    "enabledFormula": "!@modifies:trait:armor_proficiency#slayer AND !@modifies:trait:weapon_proficiency#slayer AND !@modifies:ability:advanced_slayer_talent#slayer AND !@modifies:ability:slayer_talent#slayer",
+    "enabledFormula": "!@modifies:trait:armor_proficiency#slayer AND !@modifies:trait:weapon_proficiency#slayer AND !@modifies:ability:slayer_talent#slayer",
     "maxStacks": 1
   }, {
     "id": "class:slayer#cleaner",
@@ -5503,10 +5502,67 @@
     "name": "Archetype that modifies Armor Proficiency (Brawler)",
     "maxStacks": 1
   }, {
+    "id": "ranger_combat_style:thrown_weapon_1",
+    "name": "Thrown Weapon",
+    "tags": ["ranger_combat_style_1"],
+    "maxStacks": 1
+  }, {
+    "id": "ranger_combat_style:thrown_weapon_2",
+    "name": "Thrown Weapon",
+    "tags": ["ranger_combat_style_2"],
+    "enabledFormula": "@ranger_combat_style:thrown_weapon_1",
+    "maxStacks": 1
+  }, {
+    "id": "ranger_combat_style:thrown_weapon_3",
+    "name": "Thrown Weapon",
+    "tags": ["ranger_combat_style_3"],
+    "enabledFormula": "@ranger_combat_style:thrown_weapon_2",
+    "maxStacks": 1
+  }, {
+    "id": "ranger_combat_style_feat:close_quarters_thrower",
+    "name": "Close-Quarters Thrower",
+    "tags": ["ranger_combat_style_feat"],
+    "maxStacks": 1
+  }, {
+    "id": "ranger_combat_style_feat:distance_thrower",
+    "name": "Distance Thrower",
+    "tags": ["ranger_combat_style_feat"],
+    "maxStacks": 1
+  }, {
+    "id": "ranger_combat_style_feat:false_opening",
+    "name": "False Opening",
+    "tags": ["ranger_combat_style_feat"],
+    "maxStacks": 1
+  }, {
+    "id": "ranger_combat_style_feat:pinpoint_targeting",
+    "name": "Pinpoint Targeting",
+    "tags": ["ranger_combat_style_feat"],
+    "maxStacks": 1
+  }, {
+    "id": "ranger_combat_style_feat:precise_shot",
+    "name": "Precise Shot",
+    "tags": ["ranger_combat_style_feat"],
+    "maxStacks": 1
+  }, {
+    "id": "ranger_combat_style_feat:quick_draw",
+    "name": "Quick Draw",
+    "tags": ["ranger_combat_style_feat"],
+    "maxStacks": 1
+  }, {
+    "id": "ranger_combat_style_feat:shot_on_the_run",
+    "name": "Shot on the Run",
+    "tags": ["ranger_combat_style_feat"],
+    "maxStacks": 1
+  }, {
+    "id": "ranger_combat_style_feat:two_weapon_fighting",
+    "name": "Two-Weapon Fighting",
+    "tags": ["ranger_combat_style_feat"],
+    "maxStacks": 1
+  }, {
     "id": "slayer_talent:assassinate",
     "name": "Assassinate",
     "tags": ["class_feature", "slayer", "slayer_talent"],
-    "enabledFormula": "@ability:advanced_talents#rogue",
+    "enabledFormula": "@ability:advanced_slayer_talent#slayer",
     "maxStacks": 1
   }, {
     "id": "slayer_talent:deadly_range",
@@ -5525,10 +5581,27 @@
     "tags": ["class_feature", "slayer", "slayer_talent"],
     "maxStacks": 1
   }, {
-    "id": "slayer_talent:ranger_combat_style",
-    "name": "Ranger Combat Style",
+    "id": "slayer_talent:ranger_combat_style_1",
+    "name": "Ranger Combat Style 1",
     "tags": ["class_feature", "slayer", "slayer_talent"],
     "maxStacks": 1
+  }, {
+    "id": "slayer_talent:ranger_combat_style_2",
+    "name": "Ranger Combat Style 2",
+    "tags": ["class_feature", "slayer", "slayer_talent"],
+    "enabledFormula": "@slayer_talent:ranger_combat_style_1 AND @class:slayer\u003e\u003d6",
+    "maxStacks": 1
+  }, {
+    "id": "slayer_talent:ranger_combat_style_3",
+    "name": "Ranger Combat Style 3",
+    "tags": ["class_feature", "slayer", "slayer_talent"],
+    "enabledFormula": "@slayer_talent:ranger_combat_style_2 AND @class:slayer\u003e\u003d10",
+    "maxStacks": 1
+  }, {
+    "id": "slayer_talent:rogue_advanced_talents_and_ninja_master_tricks",
+    "name": "Rogue Advanced Slayer Talent and Ninja Master Tricks",
+    "tags": ["class_feature", "slayer", "slayer_talent"],
+    "enabledFormula": "@ability:advanced_slayer_talent#slayer"
   }, {
     "id": "slayer_talent:rogue_talent",
     "name": "Rogue Talent",
@@ -5537,7 +5610,7 @@
     "id": "slayer_talent:slayer_camouflage",
     "name": "Slayer Camouflage",
     "tags": ["class_feature", "slayer", "slayer_talent"],
-    "enabledFormula": "@ability:advanced_talents#rogue",
+    "enabledFormula": "@ability:advanced_slayer_talent#slayer",
     "maxStacks": 1
   }, {
     "id": "slayer_talent:slowing_strike",

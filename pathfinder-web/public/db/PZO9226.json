@@ -69,13 +69,13 @@
     "id": "feat:godless_healing",
     "name": "Godless Healing",
     "tags": ["feat", "general"],
-    "enabledFormula": "@deity\u003d\u003d\u0027\u0027",
+    "enabledFormula": "sum(@deity:domain_*)\u003c\u003d0",
     "maxStacks": 1
   }, {
     "id": "feat:green_faith_acolyte",
     "name": "Green Faith Acolyte",
     "tags": ["feat", "general"],
-    "enabledFormula": "@deity\u003d\u003d\u0027Green Faith\u0027",
+    "enabledFormula": "@deity:name\u003d\u003d\u0027Green Faith\u0027",
     "maxStacks": 1
   }, {
     "id": "feat:hamatulatsu",

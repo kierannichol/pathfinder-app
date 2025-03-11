@@ -1,0 +1,25 @@
+{
+  "id": "ranger_combat_style_feat:parting_shot",
+  "name": "Parting Shot",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "Once per encounter, when using the withdraw action, you can make a single ranged attack at any point during your movement.",
+      "Special": "Starting at 6th level, a ranger with the archery combat style may select Parting Shot as a combat style feat.",
+      "Normal": "You cannot attack when using the withdraw action."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:parting_shot",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

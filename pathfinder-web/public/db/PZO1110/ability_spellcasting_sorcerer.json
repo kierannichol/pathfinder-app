@@ -9,48 +9,53 @@
     "repeatingStack": {
       "effects": [{
         "setAction": {
+          "targetKey": "trait:level_0_spells_per_day#sorcerer",
+          "formula": "4+(@class:sorcerer\u003e0)+(@class:sorcerer\u003e3)+(@class:sorcerer\u003e5)+(@class:sorcerer\u003e7)+(@class:sorcerer\u003e9)"
+        }
+      }, {
+        "setAction": {
           "targetKey": "trait:level_1_spells_per_day#sorcerer",
-          "formula": "3+if(@class:sorcerer\u003e1,1,0)+if(@class:sorcerer\u003e2,1,0)+if(@class:sorcerer\u003e3,1,0)"
+          "formula": "2+(@class:sorcerer\u003e2)+(@class:sorcerer\u003e4)+(@class:sorcerer\u003e6)"
         }
       }, {
         "setAction": {
           "targetKey": "trait:level_2_spells_per_day#sorcerer",
-          "formula": "if(@class:sorcerer\u003e\u003d4,3+if(@class:sorcerer\u003e4,1,0)+if(@class:sorcerer\u003e5,1,0)+if(@class:sorcerer\u003e6,1,0),null)"
+          "formula": "(@class:sorcerer\u003e3)+(@class:sorcerer\u003e4)+(@class:sorcerer\u003e6)+(@class:sorcerer\u003e8)+(@class:sorcerer\u003e10)"
         }
       }, {
         "setAction": {
           "targetKey": "trait:level_3_spells_per_day#sorcerer",
-          "formula": "if(@class:sorcerer\u003e\u003d6,3+if(@class:sorcerer\u003e6,1,0)+if(@class:sorcerer\u003e7,1,0)+if(@class:sorcerer\u003e8,1,0),null)"
+          "formula": "(@class:sorcerer\u003e5)+(@class:sorcerer\u003e6)+(@class:sorcerer\u003e8)+(@class:sorcerer\u003e10)"
         }
       }, {
         "setAction": {
           "targetKey": "trait:level_4_spells_per_day#sorcerer",
-          "formula": "if(@class:sorcerer\u003e\u003d8,3+if(@class:sorcerer\u003e8,1,0)+if(@class:sorcerer\u003e9,1,0)+if(@class:sorcerer\u003e10,1,0),null)"
+          "formula": "(@class:sorcerer\u003e7)+(@class:sorcerer\u003e8)+(@class:sorcerer\u003e10)+(@class:sorcerer\u003e12)"
         }
       }, {
         "setAction": {
           "targetKey": "trait:level_5_spells_per_day#sorcerer",
-          "formula": "if(@class:sorcerer\u003e\u003d10,3+if(@class:sorcerer\u003e10,1,0)+if(@class:sorcerer\u003e11,1,0)+if(@class:sorcerer\u003e12,1,0),null)"
+          "formula": "(@class:sorcerer\u003e9)+(@class:sorcerer\u003e10)+(@class:sorcerer\u003e12)"
         }
       }, {
         "setAction": {
           "targetKey": "trait:level_6_spells_per_day#sorcerer",
-          "formula": "if(@class:sorcerer\u003e\u003d12,3+if(@class:sorcerer\u003e12,1,0)+if(@class:sorcerer\u003e13,1,0)+if(@class:sorcerer\u003e14,1,0),null)"
+          "formula": "(@class:sorcerer\u003e11)+(@class:sorcerer\u003e12)+(@class:sorcerer\u003e14)"
         }
       }, {
         "setAction": {
           "targetKey": "trait:level_7_spells_per_day#sorcerer",
-          "formula": "if(@class:sorcerer\u003e\u003d14,3+if(@class:sorcerer\u003e14,1,0)+if(@class:sorcerer\u003e15,1,0)+if(@class:sorcerer\u003e16,1,0),null)"
+          "formula": "(@class:sorcerer\u003e13)+(@class:sorcerer\u003e14)+(@class:sorcerer\u003e16)"
         }
       }, {
         "setAction": {
           "targetKey": "trait:level_8_spells_per_day#sorcerer",
-          "formula": "if(@class:sorcerer\u003e\u003d16,3+if(@class:sorcerer\u003e16,1,0)+if(@class:sorcerer\u003e17,1,0)+if(@class:sorcerer\u003e18,1,0),null)"
+          "formula": "(@class:sorcerer\u003e15)+(@class:sorcerer\u003e16)+(@class:sorcerer\u003e18)"
         }
       }, {
         "setAction": {
           "targetKey": "trait:level_9_spells_per_day#sorcerer",
-          "formula": "if(@class:sorcerer\u003e\u003d18,3+if(@class:sorcerer\u003e18,1,0)+if(@class:sorcerer\u003e19,1,0)+if(@class:sorcerer\u003e19,1,0),null)"
+          "formula": "(@class:sorcerer\u003e17)+(@class:sorcerer\u003e18)+(@class:sorcerer\u003e19)"
         }
       }]
     }

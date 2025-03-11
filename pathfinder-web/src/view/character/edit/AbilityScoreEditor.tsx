@@ -25,14 +25,13 @@ function AbilityScoreEditor({choiceRef, className, characterAtLevel, onChange}: 
 
   const totalScore = useMemo(() => {
     const prefix = choiceRef.label.substring(0, 3).toLowerCase();
-    return characterAtLevel.resolve(`${prefix}_score`)?.asNumber() ?? 10;
+    return characterAtLevel.get(`${prefix}_score`)?.asNumber() ?? 10;
   }, [characterAtLevel, choiceRef]);
 
   const scoreClassName = useMemo(() => {
-    const scoreClassNames = [ styles.score ];
-    if (totalScore > baseScore) scoreClassNames.push(styles.bonus);
-    if (totalScore < baseScore) scoreClassNames.push(styles.penalty);
-    return classNames(scoreClassNames);
+    if (totalScore > baseScore) return styles.bonus;
+    if (totalScore < baseScore) return styles.penalty;
+    return styles.neutral;
   }, [totalScore, baseScore]);
 
   function handleChangeScore(delta: number) {
@@ -51,7 +50,10 @@ function AbilityScoreEditor({choiceRef, className, characterAtLevel, onChange}: 
     <label className={styles.label}>{choiceRef.label}</label>
     <div className={styles.control}>
       <div className={classNames([styles.button, styles.minus])} onClick={handleDecrementScore}><FaMinus/></div>
-      <div className={scoreClassName}>{totalScore}</div>
+      <div className={styles.score}>
+        <div>{baseScore}</div>
+        <div className={scoreClassName}>({totalScore})</div>
+      </div>
       <div className={classNames([styles.button, styles.plus])} onClick={handleIncrementScore}><FaPlus/></div>
     </div>
   </div>

@@ -12,36 +12,45 @@
         "featureModifications": [{
           "targetFeatureId": "class:sorcerer",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["spell:moment_of_prescience"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:touch_of_destiny#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 19,
-            "linksToAdd": ["ability:bloodline_feat#destined_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#destined_bloodline", "spell:foresight"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 3,
-            "linksToAdd": ["ability:fated#sorcerer"],
+            "linksToAdd": ["ability:fated#sorcerer", "spell:alarm"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:destiny_realized#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["spell:blur"]
+          }, {
             "targetStackCount": 7,
-            "linksToAdd": ["ability:bloodline_feat#destined_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#destined_bloodline", "spell:protection_from_energy"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToAdd": ["ability:it_was_meant_to_be#sorcerer"],
+            "linksToAdd": ["ability:it_was_meant_to_be#sorcerer", "spell:freedom_of_movement"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["spell:break_enchantment"]
+          }, {
             "targetStackCount": 13,
-            "linksToAdd": ["ability:bloodline_feat#destined_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#destined_bloodline", "spell:mislead"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToAdd": ["ability:within_reach#sorcerer"],
+            "linksToAdd": ["ability:within_reach#sorcerer", "spell:spell_turning"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }]
         }]

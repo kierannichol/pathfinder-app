@@ -1,0 +1,44 @@
+id: "cleric_domain:repose_domain#souls"
+parent_id: "cleric_domain:repose_domain"
+name: "Souls Subdomain"
+description: "You see death not as something to be feared, but as a final rest and\
+  \ reward for a life well spent. The taint of undeath is a mockery of what you hold\
+  \ dear."
+granted_powers:
+- id: "ability:ward_against_death"
+  name: "Ward Against Death"
+  description: "At 8th level, you can emit a 30-foot aura that wards against death\
+    \ for a number of rounds per day equal to your cleric level. Living creatures\
+    \ in this area are immune to all death effects, energy drain, and effects that\
+    \ cause negative levels. This ward does not remove negative levels that a creature\
+    \ has already gained, but the negative levels have no effect while the creature\
+    \ is inside the warded area. These rounds do not need to be consecutive."
+  type: "Su"
+- id: "ability:touch_the_spirit_world"
+  name: "Touch the Spirit World"
+  description: "With a touch, you can empower a weapon to affect incorporeal creatures.\
+    \ The weapon touched deals half damage to incorporeal creatures, or full damage\
+    \ if it is a magic weapon. This benefit lasts for a number of rounds equal to\
+    \ your cleric level. You can use this ability a number of times per day equal\
+    \ to 3 + your Wisdom modifier."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:deathwatch"
+- spell_level: 2
+  spell_id: "spell:gentle_repose"
+- spell_level: 3
+  spell_id: "spell:animate_dead"
+- spell_level: 4
+  spell_id: "spell:death_ward"
+- spell_level: 5
+  spell_id: "spell:slay_living"
+- spell_level: 6
+  spell_id: "spell:antilife_shell"
+- spell_level: 7
+  spell_id: "spell:destruction"
+- spell_level: 8
+  spell_id: "spell:waves_of_exhaustion"
+- spell_level: 9
+  spell_id: "spell:trap_the_soul"
+source: "Advanced Player's Guide"

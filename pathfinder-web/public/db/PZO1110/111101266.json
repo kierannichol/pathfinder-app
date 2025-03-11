@@ -7,5 +7,59 @@
   "weight": 4.0,
   "description": {
     "text": "This longsword has an enhancement bonus of +1 on the Material Plane, but on any elemental planes its enhancement bonus increases to +2. The +2 enhancement bonus also applies whenever the weapon is used against creatures native to the elemental planes. It operates as a +3 longsword on the Astral Plane and the Ethereal Plane, or when used against opponents native to either of those planes. On any other plane, or against any outsider, it functions as a +4 longsword."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "crit_multiplier": 2,
+    "crit_range": 19,
+    "dice_count": 1,
+    "dice_sides": 8,
+    "type:one-handed": 1
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }]
 }

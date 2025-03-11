@@ -1,0 +1,43 @@
+id: "cleric_domain:air_domain#cloud"
+parent_id: "cleric_domain:air_domain"
+name: "Cloud Subdomain"
+description: "You can manipulate lightning, mist, and wind, traffic with air creatures,\
+  \ and are resistant to electricity damage."
+granted_powers:
+- id: "ability:lightning_arc"
+  name: "Lightning Arc"
+  description: "As a standard action, you can unleash an arc of electricity targeting\
+    \ any foe within 30 feet as a ranged touch attack. This arc of electricity deals\
+    \ 1d6 points of electricity damage + 1 point for every two cleric levels you possess.\
+    \ You can use this ability a number of times per day equal to 3 + your Wisdom\
+    \ modifier."
+  type: "Sp"
+- id: "ability:thundercloud"
+  name: "Thundercloud"
+  description: "At 8th level, you can, as a standard action, summon a storm cloud.\
+    \ This power functions as fog cloud except that creatures inside the cloud are\
+    \ deafened and take 2d6 points of electricity damage each round from the flashes\
+    \ of thunder and lightning. Once created, you can concentrate on the cloud to\
+    \ move it up to 30 feet each round. You can use this ability for a number of rounds\
+    \ per day equal to your cleric level. These rounds do not need to be consecutive."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:obscuring_mist"
+- spell_level: 2
+  spell_id: "spell:wind_wall"
+- spell_level: 3
+  spell_id: "spell:gaseous_form"
+- spell_level: 4
+  spell_id: "spell:solid_fog"
+- spell_level: 5
+  spell_id: "spell:control_winds"
+- spell_level: 6
+  spell_id: "spell:chain_lightning"
+- spell_level: 7
+  spell_id: "spell:elemental_body_iv"
+- spell_level: 8
+  spell_id: "spell:whirlwind"
+- spell_level: 9
+  spell_id: "spell:storm_of_vengeance"
+source: "Advanced Player's Guide"

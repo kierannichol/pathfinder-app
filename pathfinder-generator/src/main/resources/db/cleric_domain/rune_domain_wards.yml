@@ -1,0 +1,49 @@
+id: "cleric_domain:rune_domain#wards"
+parent_id: "cleric_domain:rune_domain"
+name: "Wards Subdomain"
+description: "In strange and eldritch runes you find potent magic. You gain Scribe\
+  \ Scroll as a bonus feat."
+granted_powers:
+- id: "ability:blast_rune"
+  name: "Blast Rune"
+  description: "As a standard action, you can create a blast rune in any adjacent\
+    \ square. Any creature entering this square takes 1d6 points of damage + 1 point\
+    \ for every two cleric levels you possess. This rune deals either acid, cold,\
+    \ electricity, or fire damage, decided when you create the rune. The rune is invisible\
+    \ and lasts a number of rounds equal to your cleric level or until discharged.\
+    \ You cannot create a blast rune in a square occupied by another creature. This\
+    \ rune counts as a 1st-level spell for the purposes of dispelling. It can be discovered\
+    \ with a DC 26 Perception skill check and disarmed with a DC 26 Disable Device\
+    \ skill check. You can use this ability a number of times per day equal to 3 +\
+    \ your Wisdom modifier."
+  type: "Sp"
+- id: "ability:warding_rune"
+  name: "Warding Rune"
+  description: "At 6th level, when a creature is damaged by your blast rune, it cannot\
+    \ attack you for a number of rounds equal to 1/2 your cleric level unless it succeeds\
+    \ at a Will save, as per the spell sanctuary. Using this ability is an immediate\
+    \ action when a creature triggers one of your blast runes. The ability does not\
+    \ prevent you from being attacked or affected by area of effect spells or abilities.\
+    \ You can use this ability once per day at 8th level, plus one additional time\
+    \ per day at 14th level and 20th level."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:arcane_lock"
+- spell_level: 2
+  spell_id: "spell:secret_page"
+- spell_level: 3
+  spell_id: "spell:glyph_of_warding"
+- spell_level: 4
+  spell_id: "spell:dimensional_anchor"
+- spell_level: 5
+  spell_id: "spell:planar_binding"
+- spell_level: 6
+  spell_id: "spell:guards_and_wards"
+- spell_level: 7
+  spell_id: "spell:instant_summons"
+- spell_level: 8
+  spell_id: "spell:symbol_of_death"
+- spell_level: 9
+  spell_id: "spell:teleportation_circle"
+source: "Advanced Player's Guide"

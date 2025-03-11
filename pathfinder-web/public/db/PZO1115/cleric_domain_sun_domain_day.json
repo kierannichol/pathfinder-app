@@ -1,0 +1,25 @@
+{
+  "id": "cleric_domain:sun_domain#day",
+  "name": "Day Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You see truth in the pure and burning light of the sun, and can call upon its blessing or wrath to work great deeds."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:suns_blessing"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:days_resurgence"]
+          }]
+        }]
+      }]
+    }
+  }
+}

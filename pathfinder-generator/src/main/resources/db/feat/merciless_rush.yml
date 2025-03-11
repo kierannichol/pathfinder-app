@@ -7,6 +7,7 @@ name: "Merciless Rush"
 type: "GENERAL"
 description: "Though hordes stand against you, they rarely stand long."
 prerequisites: "Improved Bull Rush, worshiper of the associated deity."
+enabled_formula: "all(@feat:improved_bull_rush, @deity:name=='Rovagug')"
 benefit: "When you bull rush a creature and your check exceeds the target's CMD by\
   \ 5 or more, you deal damage equal to your Strength modifier to that target."
 normal: ""

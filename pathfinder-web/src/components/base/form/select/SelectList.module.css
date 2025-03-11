@@ -1,43 +1,22 @@
-.option {
-  display: flex;
-  border: 2px solid black;
-  border-bottom-style: none;
-  padding: 1em;
-  cursor: pointer;
-  user-select: none;
-}
-
-.option:last-of-type {
-  border-bottom-style: solid;
-}
-
-.option.disabled {
-  background-color: lightgrey !important;
-}
-
-.selected {
-  background-color: var(--pf-highlight-rgb);
-}
-
-.open {
-  border-bottom-style: solid;
-}
-
-.closed {
-  border-bottom-style: hidden;
-}
-
-.last {
-  border-bottom-style: solid !important;
+.option[open] summary {
+  background-color: #0D6EFDFF;
+  color: white;
 }
 
 .description {
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  padding: 1em 1em;
-  margin: 0 10px;
+  background-color: aliceblue;
 }
 
-.expanded {
-  height: calc(100%);
+.option.disabled summary {
+  background-color: darkgray;
+  color: black;
+}
+
+.option[open].disabled summary {
+  background-color: darkgray;
+  color: black;
+}
+
+.option.disabled .description {
+  background-color: lightgrey;
 }

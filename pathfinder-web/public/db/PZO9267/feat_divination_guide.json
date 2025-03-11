@@ -2,6 +2,7 @@
   "id": "feat:divination_guide",
   "name": "Divination Guide",
   "tags": ["feat", "general"],
+  "enabledFormula": "all(@caster_level\u003e\u003d3,any(@spell:augury,@magic_school:divination),sum(@deity:domain_*))",
   "maxStacks": 1,
   "description": {
     "text": "You deity grants you greater guidance and divine insight.",

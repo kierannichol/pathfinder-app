@@ -2,9 +2,20 @@
   margin-top: 1rem;
 }
 
-.characters {
+ul.characters {
+  padding: 0;
+}
+ul.characters>li {
   display: flex;
-  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+ul.characters > li:hover {
+  background-color: #e0eaff;
+}
+ul.characters>li>*:first-child {
+  flex-grow: 1;
 }
 
 .character {

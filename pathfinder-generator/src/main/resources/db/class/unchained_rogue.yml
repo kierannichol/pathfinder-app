@@ -272,6 +272,8 @@ class_features:
   description: ""
   effects: []
   prerequisites: ""
+  attack_mod:
+    damage_bonus: "if(@arg:include_sneak_attack AND !@arg:is_critical_confirm, (@ability:sneak_attack#unchained_rogue * 6) + 0.5, 0)"
   source: " Pathfinder Roleplaying Game Pathfinder Unchained"
 - id: "ability:trapfinding#unchained_rogue"
   name: "Trapfinding"

@@ -7,9 +7,11 @@ import pathfinder.model.pathfinder.Bloodline;
 import pathfinder.model.pathfinder.CharacterClass;
 import pathfinder.model.pathfinder.ClassFeature;
 import pathfinder.model.pathfinder.ClassModificationFeature;
+import pathfinder.model.pathfinder.ClericDomain;
 import pathfinder.model.pathfinder.ComplexFeature;
 import pathfinder.model.pathfinder.Feat;
 import pathfinder.model.pathfinder.ItemData;
+import pathfinder.model.pathfinder.RangerCombatStyle;
 import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Spell;
 import pathfinder.util.StreamUtils;
@@ -25,7 +27,9 @@ public record BasicSource(SourceId sourceId,
                           List<ItemData> items,
                           List<ItemOption> itemOptions,
                           List<ClassModificationFeature> classModificationFeatures,
-                          List<ComplexFeature> complexFeatures) implements Source {
+                          List<ComplexFeature> complexFeatures,
+                          List<ClericDomain> clericDomains,
+                          List<RangerCombatStyle> rangerCombatStyles) implements Source {
 
     public Stream<NamedEntity> namedEntities() {
         return StreamUtils.streamLists(List.of(
@@ -43,6 +47,8 @@ public record BasicSource(SourceId sourceId,
                                 feature.effects(),
                                 feature.links(),
                                 feature.stacks(),
+                                feature.attackModifier(),
+                                feature.attacks(),
                                 feature.source()
                         ))).toList(),
                 classFeatures,
@@ -60,6 +66,8 @@ public record BasicSource(SourceId sourceId,
                                 feature.effects(),
                                 feature.links(),
                                 feature.stacks(),
+                                feature.attackModifier(),
+                                feature.attacks(),
                                 feature.source()
                         ))).toList(),
                 spells,
@@ -83,6 +91,8 @@ public record BasicSource(SourceId sourceId,
                                 feature.effects(),
                                 feature.links(),
                                 feature.stacks(),
+                                feature.attackModifier(),
+                                feature.attacks(),
                                 feature.source()
                         ))).toList(),
                 complexFeatures,
@@ -99,8 +109,12 @@ public record BasicSource(SourceId sourceId,
                                 feature.effects(),
                                 feature.links(),
                                 feature.stacks(),
+                                feature.attackModifier(),
+                                feature.attacks(),
                                 feature.source()
-                        ))).toList()
+                        ))).toList(),
+                clericDomains,
+                rangerCombatStyles
         ));
     }
 }

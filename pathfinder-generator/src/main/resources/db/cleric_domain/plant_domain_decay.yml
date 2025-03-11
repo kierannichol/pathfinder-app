@@ -1,0 +1,46 @@
+id: "cleric_domain:plant_domain#decay"
+parent_id: "cleric_domain:plant_domain"
+name: "Decay Subdomain"
+description: "You find solace in the green, can grow defensive thorns, and can communicate\
+  \ with plants."
+granted_powers:
+- id: "ability:wooden_fist"
+  name: "Wooden Fist"
+  description: "As a free action, your hands can become as hard as wood, covered in\
+    \ tiny thorns. While you have wooden fists, your unarmed strikes do not provoke\
+    \ attacks of opportunity, deal lethal damage, and gain a bonus on damage rolls\
+    \ equal to 1/2 your cleric level (minimum +1). You can use this ability for a\
+    \ number of rounds per day equal to 3 + your Wisdom modifier. These rounds do\
+    \ not need to be consecutive."
+  type: "Su"
+- id: "ability:aura_of_decay"
+  name: "Aura of Decay"
+  description: "At 8th level, you can emit a 30-foot aura of decay as a standard action.\
+    \ Living creatures in this aura (except you) take 1d6 points of damage per round\
+    \ as their flesh rots. They also take a cumulative –1 penalty to Strength each\
+    \ round they remain in the aura. Once outside the aura, the penalty fades at the\
+    \ rate of –1 per round, but it begins building again if they reenter the aura.\
+    \ Plant creatures take 2d6 points of damage per round. You can use this ability\
+    \ for a number of rounds per day equal to your cleric level. These rounds do not\
+    \ need to be consecutive."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:entangle"
+- spell_level: 2
+  spell_id: "spell:barkskin"
+- spell_level: 3
+  spell_id: "spell:contagion"
+- spell_level: 4
+  spell_id: "spell:poison"
+- spell_level: 5
+  spell_id: "spell:wall_of_thorns"
+- spell_level: 6
+  spell_id: "spell:harm"
+- spell_level: 7
+  spell_id: "spell:animate_plants"
+- spell_level: 8
+  spell_id: "spell:control_plants"
+- spell_level: 9
+  spell_id: "spell:shambler"
+source: "Advanced Player's Guide"

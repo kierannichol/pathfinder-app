@@ -1,0 +1,27 @@
+{
+  "id": "ranger_combat_style:two_handed_weapon_2",
+  "name": "Two-Handed Weapon",
+  "tags": ["ranger_combat_style_2"],
+  "enabledFormula": "@ranger_combat_style:two_handed_weapon_1",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "ranger_combat_style_2",
+          "label": "Ranger Combat Style Feat",
+          "tags": ["class_feature"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["ranger_combat_style_feat:cleave", "ranger_combat_style_feat:power_attack", "ranger_combat_style_feat:pushing_assault", "ranger_combat_style_feat:shield_of_swings", "ranger_combat_style_feat:furious_focus", "ranger_combat_style_feat:great_cleave"]
+          }
+        }]
+      }]
+    }
+  }
+}

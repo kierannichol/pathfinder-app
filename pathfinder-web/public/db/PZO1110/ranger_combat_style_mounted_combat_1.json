@@ -1,0 +1,26 @@
+{
+  "id": "ranger_combat_style:mounted_combat_1",
+  "name": "Mounted Combat",
+  "tags": ["ranger_combat_style_1"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "ranger_combat_style_1",
+          "label": "Ranger Combat Style Feat",
+          "tags": ["class_feature"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["ranger_combat_style_feat:mounted_combat", "ranger_combat_style_feat:mounted_archery", "ranger_combat_style_feat:ride_by_attack", "ranger_combat_style_feat:trick_riding"]
+          }
+        }]
+      }]
+    }
+  }
+}

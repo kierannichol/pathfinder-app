@@ -1,0 +1,24 @@
+{
+  "id": "slayer_talent:rogue_advanced_talents_and_ninja_master_tricks",
+  "name": "Rogue Advanced Slayer Talent and Ninja Master Tricks",
+  "tags": ["class_feature", "slayer", "slayer_talent"],
+  "enabledFormula": "@ability:advanced_slayer_talent#slayer",
+  "description": {
+  },
+  "stacks": {
+    "repeatingStack": {
+      "choices": [{
+        "choiceId": "rogue_advanced_talents_or_ninja_master_tricks",
+        "label": "Rogue Advanced Slayer Talent or Ninja Master Tricks",
+        "tags": ["class_feature"],
+        "repeating": {
+          "none": {
+          }
+        },
+        "featureSelect": {
+          "featureIds": ["advanced_rogue_talent:deadly_sneak", "ninja_master_trick:evasion", "advanced_rogue_talent:feat", "advanced_rogue_talent:hunters_surprise", "advanced_rogue_talent:knock_out_blow", "advanced_rogue_talent:master_of_disguise", "advanced_rogue_talent:opportunist", "advanced_rogue_talent:stealthy_sniper"]
+        }
+      }]
+    }
+  }
+}

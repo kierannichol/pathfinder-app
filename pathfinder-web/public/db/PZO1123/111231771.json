@@ -7,5 +7,59 @@
   "weight": 4.0,
   "description": {
     "text": "This intimidating weapon appears to be a longsword with multiple hooks, barbs, and serrations along the blade, excellent for catching and sundering a foe\u0027s weapon. Wielders without the Improved Sunder feat use a shatterspike as a +1 longsword only. Wielders with the Improved Sunder feat instead use shatterspike as a + 4 longsword when attempting to sunder an opponent\u0027s weapon. Shatterspike can damage weapons with an enhancement bonus of +4 or lower."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "crit_multiplier": 2,
+    "crit_range": 19,
+    "dice_count": 1,
+    "dice_sides": 8,
+    "type:one-handed": 1
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }]
 }

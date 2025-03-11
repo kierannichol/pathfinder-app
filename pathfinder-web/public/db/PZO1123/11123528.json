@@ -7,5 +7,59 @@
   "weight": 2.0,
   "description": {
     "text": "This +1 returning light hammer can strike multiple foes with a single throw. If the wielder has multiple attacks from a high base attack bonus, he may throw the hammer so it rebounds off the first target to strike at a second target, and so on for each of the wielder\u0027s additional attacks. The distance to each target adds to the total range of the weapon, and range penalties apply. For example, a 6th-level dwarf fighter can throw the hammer using his +6 BAB at a target 20 feet away (within one range increment, no range penalty); if it hits, he ricochets it to attack using his +1 BAB at a second target 40 feet away from the first target (within three range increments for a –4 range penalty). The hammer can only ricochet if it successfully hits a target; if it misses, it stops ricocheting, has no further attacks that round, and returns as normal for a weapon with the returning property. Because ricocheting attacks are treated as separate attacks, modifiers that only apply to one attack roll (such as true strike) only apply to the first attack and not the others. The ricochet attacks count as the wielder\u0027s additional attacks for that round."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "type:light": 1,
+    "crit_multiplier": 2,
+    "crit_range": 20,
+    "dice_count": 1,
+    "dice_sides": 4
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d4",
+    "missDamage": "0"
+  }]
 }

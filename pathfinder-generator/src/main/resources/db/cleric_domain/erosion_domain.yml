@@ -1,0 +1,48 @@
+id: "cleric_domain:erosion_domain"
+parent_id: null
+name: "Erosion Domain"
+description: "You command the crumbling of stone and revel in rust; the decay and\
+  \ destruction of metal and stone over time appeals to and delights you."
+granted_powers:
+- id: "ability:rusting_touch"
+  name: "Rusting Touch"
+  description: "You can cause an opponent’s metal armor or weapon to become dry and\
+    \ brittle as it magically corrodes and rusts. You make a melee touch attack against\
+    \ a creature wearing metal armor or wielding a metal weapon. If you hit, choose\
+    \ a metal weapon, suit of metal armor, or metal shield carried or worn by that\
+    \ creature. The object takes an amount of hit point damage equal to 1d6 + half\
+    \ your druid level. If the item is not magical, or if your caster level is greater\
+    \ than the item’s caster level, this damage bypasses the item’s hardness. You\
+    \ can use this ability a number of times per day equal to 3 + your Wisdom modifier."
+  type: "Su"
+- id: "ability:erosion_aura"
+  name: "Erosion Aura"
+  description: "At 8th level, you can project an aura of magically enhanced erosion\
+    \ as a standard action. Objects made primarily of metal or stone within this aura\
+    \ lose 10 points of hardness. Magic items retain a minimum hardness equal to twice\
+    \ their enhancement bonus and can attempt a Fortitude saving throw (DC = 10 +\
+    \ half your druid level + your Wisdom modifier) to negate this effect. A construct\
+    \ made primarily of metal or stone must succeed at a Fortitude save or lose all\
+    \ damage reduction and hardness for 1 round. You can use this ability a number\
+    \ of times per day equal to 3 + your Wisdom modifier."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:expeditious_excavation"
+- spell_level: 2
+  spell_id: "spell:soften_earth_and_stone"
+- spell_level: 3
+  spell_id: "spell:disable_construct"
+- spell_level: 4
+  spell_id: "spell:rusting_grasp"
+- spell_level: 5
+  spell_id: "spell:transmute_rock_to_mud"
+- spell_level: 6
+  spell_id: "spell:sympathetic_vibration"
+- spell_level: 7
+  spell_id: "spell:disintegrate"
+- spell_level: 8
+  spell_id: "spell:earthquake"
+- spell_level: 9
+  spell_id: "spell:implosion"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

@@ -46,13 +46,13 @@ bloodragerclass_feature(&
 class:rogue#shadow_walkerShadow Walker	archetyperogue"Õ!@modifies:ability:rogue_talent#rogue AND !@modifies:ability:improved_uncanny_dodge#rogue AND !@modifies:ability:uncanny_dodge#rogue AND !@modifies:ability:trapfinding#rogue AND !@modifies:ability:trap_sense#rogue(B
 class:sorcerer#umbral_scionUmbral Scion	archetypesorcerer(l
 feat:blinded_blade_styleBlinded Blade Stylecombatfeat"+all(@feat:blind_fight,@skill:perception>=5)( 
-feat:blinded_competenceBlinded Competencecombatfeat"aall(@feat:blinded_blade_style,@feat:blind_fight,@feat:improved_blind_fight,@skill:perception>=10)(5
-feat:blinded_masterBlinded Mastercombatfeat(Ë
+feat:blinded_competenceBlinded Competencecombatfeat"aall(@feat:blinded_blade_style,@feat:blind_fight,@feat:improved_blind_fight,@skill:perception>=10)(Ó
+feat:blinded_masterBlinded Mastercombatfeat"›all(@feat:blind_fight, @feat:blinded_competence, @feat:blinded_blade_style, @feat:greater_blind_fight, @feat:improved_blind_fight, @skill:perception >= 15)(Ë
 feat:cloak_and_dagger_styleCloak and Dagger Stylecombatfeat"ƒall(@int_score>=13,@feat:combat_expertise,@feat:improved_dirty_trick,@feat:vital_strike,@feat:weapon_focus#selected_weapon,@bab>=6)(à
  feat:cloak_and_dagger_subterfugeCloak and Dagger Subterfugecombatfeat"Žall(@int_score>=13,@feat:cloak_and_dagger_style,@feat:combat_expertise,@feat:improved_dirty_trick,@feat:weapon_focus#selected_weapon,@bab>=11)(
 feat:cloak_and_dagger_tacticsCloak and Dagger Tacticscombatfeat"Ãall(@int_score>=13,@feat:cloak_and_dagger_style,@feat:cloak_and_dagger_subterfuge,@feat:combat_expertise,@feat:improved_dirty_trick,@feat:vital_strike,@feat:weapon_focus#selected_weapon,@bab>=16)(8
-feat:eclipsed_spellEclipsed Spellfeat	metamagic(B
-feat:flexible_shadow_jumpFlexible Shadow Jumpfeatgeneral(8
+feat:eclipsed_spellEclipsed Spellfeat	metamagic(e
+feat:flexible_shadow_jumpFlexible Shadow Jumpfeatgeneral"!@ability:shadow_jump#shadowdancer(8
 feat:snuffing_spellSnuffing Spellfeat	metamagic(=
 modifies:ability'Archetype that modifies Swift Poisoning(½
 "spell:baleful_shadow_transmutationBaleful Shadow Transmutation

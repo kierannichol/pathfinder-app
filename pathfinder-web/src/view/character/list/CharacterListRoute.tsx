@@ -6,6 +6,7 @@ import {CharacterListLoaderData} from "@/view/character/list/characterListLoader
 
 export default function CharacterListRoute() {
   const { characterStore, database } = useLoaderData() as CharacterListLoaderData;
+  document.title = 'Pathfinder App'
   return <RequiresAuth>
     <DatabaseContext.Provider value={database}>
       <CharacterStoreContext.Provider value={characterStore}>

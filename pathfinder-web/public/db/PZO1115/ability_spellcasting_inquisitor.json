@@ -8,6 +8,11 @@
   "stacks": {
     "repeatingStack": {
       "effects": [{
+        "addAction": {
+          "targetKey": "caster_level",
+          "formula": "@class:inquisitor"
+        }
+      }, {
         "setAction": {
           "targetKey": "trait:level_1_spells_per_day#inquisitor",
           "formula": "1+if(@class:inquisitor\u003e1,1,0)+if(@class:inquisitor\u003e2,1,0)+if(@class:inquisitor\u003e4,1,0)+if(@class:inquisitor\u003e8,1,0)"

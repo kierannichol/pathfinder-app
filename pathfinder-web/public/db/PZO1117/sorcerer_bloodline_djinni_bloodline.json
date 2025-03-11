@@ -12,36 +12,45 @@
         "featureModifications": [{
           "targetFeatureId": "class:sorcerer",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["spell:greater_planar_binding"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:electricity_ray#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 19,
-            "linksToAdd": ["ability:bloodline_feat#djinni_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#djinni_bloodline", "spell:wish"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 3,
-            "linksToAdd": ["ability:elemental_resistance#sorcerer"],
+            "linksToAdd": ["ability:elemental_resistance#sorcerer", "spell:shocking_grasp"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:power_of_the_djinn#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["spell:invisibility"]
+          }, {
             "targetStackCount": 7,
-            "linksToAdd": ["ability:bloodline_feat#djinni_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#djinni_bloodline", "spell:fly"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToAdd": ["ability:whirlwind#sorcerer"],
+            "linksToAdd": ["ability:whirlwind#sorcerer", "spell:minor_creation"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["spell:overland_flight"]
+          }, {
             "targetStackCount": 13,
-            "linksToAdd": ["ability:bloodline_feat#djinni_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#djinni_bloodline", "spell:chain_lightning"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToAdd": ["ability:elemental_movement#sorcerer"],
+            "linksToAdd": ["ability:elemental_movement#sorcerer", "spell:plane_shift"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }]
         }]

@@ -42,6 +42,7 @@ public class MetamagicMapper {
                         Query.characterClasses())
                 .filter(cc -> cc.class_features().stream().anyMatch(cf -> cf.id().key.equals("spellcasting")));
 
-        return features.stream();
+//        return features.stream();
+        return Stream.empty();
     }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "cleric_domain:fire_domain#ash",
+  "name": "Ash Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You can call forth fire, command creatures of the inferno, and your flesh does not burn."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:fire_bolt"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:wall_of_ashes"]
+          }]
+        }]
+      }]
+    }
+  }
+}

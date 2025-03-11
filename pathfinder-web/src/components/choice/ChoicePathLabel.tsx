@@ -4,6 +4,7 @@ import {FeatureRef} from "@/data/Feature.ts";
 
 interface ChoicePathLabelProps {
   choiceRef: ChoiceRef;
+
 }
 
 function ChoicePathLabel({ choiceRef }: ChoicePathLabelProps) {

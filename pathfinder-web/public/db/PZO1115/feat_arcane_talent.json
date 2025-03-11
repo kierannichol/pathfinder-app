@@ -1,0 +1,16 @@
+{
+  "id": "feat:arcane_talent",
+  "name": "Arcane Talent",
+  "tags": ["feat", "general"],
+  "enabledFormula": "all(@cha_score\u003e\u003d10,any(@race:elf,@race:half_elf,@race:gnome))",
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "Choose a 0-level spell from the sorcerer/wizard spell list. You can cast this spell three times per day as a spell-like ability. The caster level is equal to your character level. The save DC is 10 + your Charisma modifier."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

@@ -22,9 +22,8 @@ public class FeatMapper {
     private final PathfinderDatabase database;
     private final PrerequisiteParser prerequisiteParser;
 
-    public Stream<Feature> flatMap(Feat feat) {
-
-        Description description = Description.create(feat.description());
+    public Feature map(Feat feat) {
+        Description description = Description.copy(feat.description());
         if (StringUtils.notEmpty(feat.benefit())) {
             description.addSection("Benefit", feat.benefit());
         }
@@ -48,7 +47,8 @@ public class FeatMapper {
                 .setName(feat.name())
                 .setDescription(description)
                 .addTag("feat")
-                .addTag(feat.type().toLowerCase());
+                .addTag(feat.type().toLowerCase())
+                .setAttackModifier(feat.attackModifier());
 
         if (!feat.multiples()) {
             builder.setMaxStacks(1);
@@ -77,14 +77,18 @@ public class FeatMapper {
             builder.setRepeatingStack(feat.repeatingStack());
         }
 
-        return Stream.of(builder.build(),
-                makeGeneric(builder));
+        return builder.build();
+    }
+
+    public Stream<Feature> flatMap(Feat feat) {
+        var feature = map(feat);
+        return Stream.of(feature,
+                makeGeneric(feature));
 
 //        return trySplitOptions(builder, feat.id().withoutOption(), prerequisiteFormula);
     }
 
-    private Feature makeGeneric(FeatureBuilder builder) {
-        Feature source = builder.build();
+    private Feature makeGeneric(Feature source) {
         return Feature.simple(source.id().withoutOption(),
                 source.name());
     }
@@ -93,8 +97,8 @@ public class FeatMapper {
         try {
             return prerequisiteParser.prerequisites(feat);
         } catch (Exception e) {
-            log.warn("Failed to parse feat prerequisites", e);
-            return "";
+            log.warn("Failed to parse feat prerequisites: " + e.getMessage());
+            return "\"%s\"".formatted(feat.prerequisites());
         }
     }
 }

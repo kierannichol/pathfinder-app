@@ -25,5 +25,14 @@
         }
       }]
     }
-  }
+  },
+  "attacks": [{
+    "name": "Channel Energy",
+    "chanceToHit": {
+      "value": "10 + floor(@class:cleric/2) + @cha_mod",
+      "toBeat": "1d20 + @target:will"
+    },
+    "hitDamage": "(@ability:channel_energy#cleric)d6",
+    "missDamage": "floor((@ability:channel_energy#cleric)d6 / 2)"
+  }]
 }

@@ -6,7 +6,6 @@ import {ClassFeatureEditor} from "../../editors/ClassFeatureEditor";
 import DraggableListEditor from "../../editors/DraggableListEditor";
 import {ListEditorItemActions} from "../../editors/ListEditor";
 import {useSortable} from "@dnd-kit/sortable";
-import {Arguments} from "@dnd-kit/utilities";
 
 interface ClassFeaturesField extends FieldProps<ClassFeatureData[]> {
   classId: string;
@@ -19,7 +18,8 @@ export function ClassFeaturesField({ value, onChange, classId }: ClassFeaturesFi
       name: '',
       description: '',
       type: '',
-      effects: []
+      effects: [],
+      links: [],
     } as ClassFeatureData;
   }
 
@@ -50,7 +50,7 @@ function ClassFeatureElement({ element, setElement, actions, classId }: ClassFea
       setActivatorNodeRef
   } = useSortable({
     id: element.id
-  } as Arguments<any>);
+  });
   const style = {
   }
 

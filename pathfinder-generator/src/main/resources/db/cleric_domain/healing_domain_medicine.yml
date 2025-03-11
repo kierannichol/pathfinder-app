@@ -1,0 +1,40 @@
+id: "cleric_domain:healing_domain#medicine"
+parent_id: "cleric_domain:healing_domain"
+name: "Medicine Subdomain"
+description: "Your touch staves off pain and death, and your healing magic is particularly\
+  \ vital and potent."
+granted_powers:
+- id: "ability:rebuke_death"
+  name: "Rebuke Death"
+  description: "You can touch a living creature as a standard action, healing it for\
+    \ 1d4 points of damage plus 1 for every two cleric levels you possess. You can\
+    \ only use this ability on a creature that is below 0 hit points. You can use\
+    \ this ability a number of times per day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:healers_blessing"
+  name: "Healer’s Blessing"
+  description: "At 6th level, all of your cure spells are treated as if they were\
+    \ empowered, increasing the amount of damage healed by half (+50%). This does\
+    \ not apply to damage dealt to undead with a cure spell. This does not stack with\
+    \ the Empower Spell metamagic feat."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:diagnose_disease"
+- spell_level: 2
+  spell_id: "spell:placebo_effect"
+- spell_level: 3
+  spell_id: "spell:cure_serious_wounds"
+- spell_level: 4
+  spell_id: "spell:cure_critical_wounds"
+- spell_level: 5
+  spell_id: "spell:breath_of_life"
+- spell_level: 6
+  spell_id: "spell:heal"
+- spell_level: 7
+  spell_id: "spell:regenerate"
+- spell_level: 8
+  spell_id: "spell:cure_critical_wounds"
+- spell_level: 9
+  spell_id: "spell:heal"
+source: "Pathfinder Player Companion: Divine Anthology"

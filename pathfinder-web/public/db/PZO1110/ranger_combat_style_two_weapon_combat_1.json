@@ -1,0 +1,26 @@
+{
+  "id": "ranger_combat_style:two_weapon_combat_1",
+  "name": "Two-Weapon Combat",
+  "tags": ["ranger_combat_style_1"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "ranger_combat_style_1",
+          "label": "Ranger Combat Style Feat",
+          "tags": ["class_feature"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["ranger_combat_style_feat:double_slice", "ranger_combat_style_feat:improved_shield_bash", "ranger_combat_style_feat:quick_draw", "ranger_combat_style_feat:two_weapon_fighting"]
+          }
+        }]
+      }]
+    }
+  }
+}

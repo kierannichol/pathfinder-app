@@ -2,7 +2,7 @@
   "id": "feat:godless_healing",
   "name": "Godless Healing",
   "tags": ["feat", "general"],
-  "enabledFormula": "@deity\u003d\u003d\u0027\u0027",
+  "enabledFormula": "sum(@deity:domain_*)\u003c\u003d0",
   "maxStacks": 1,
   "description": {
     "text": "You have mastered a specialized and complex technique to ignore pain by focusing your belief on the self rather than relying on faith.",

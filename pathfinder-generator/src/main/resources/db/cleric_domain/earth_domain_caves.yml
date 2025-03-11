@@ -1,0 +1,45 @@
+id: "cleric_domain:earth_domain#caves"
+parent_id: "cleric_domain:earth_domain"
+name: "Caves Subdomain"
+description: "You have mastery over earth, metal, and stone, can fire darts of acid,\
+  \ and command earth creatures."
+granted_powers:
+- id: "ability:acid_dart"
+  name: "Acid Dart"
+  description: "As a standard action, you can unleash an acid dart targeting any foe\
+    \ within 30 feet as a ranged touch attack. This acid dart deals 1d6 points of\
+    \ acid damage + 1 point for every two cleric levels you possess. You can use this\
+    \ ability a number of times per day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:tunnel_runner"
+  name: "Tunnel Runner"
+  description: "At 8th level, you can move through tunnels and caves with ease. Activating\
+    \ this ability is a standard action. You can move across any stone surface as\
+    \ if under the effects of spider climb. You can also see very well in darkness,\
+    \ gaining darkvision out to a range of 60 feet. If you already possess darkvision,\
+    \ extend the range by 60 feet. While underground, you also gain an insight bonus\
+    \ equal to your cleric level on Stealth skill checks and an insight bonus equal\
+    \ to your Wisdom modifier on initiative checks. You can use this ability for 1\
+    \ minute per day per cleric level you possess. These minutes do not need to be\
+    \ consecutive, but they must be spent in 1-minute increments."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:magic_stone"
+- spell_level: 2
+  spell_id: "spell:create_pit"
+- spell_level: 3
+  spell_id: "spell:spiked_pit"
+- spell_level: 4
+  spell_id: "spell:spike_stones"
+- spell_level: 5
+  spell_id: "spell:wall_of_stone"
+- spell_level: 6
+  spell_id: "spell:hungry_pit"
+- spell_level: 7
+  spell_id: "spell:elemental_body_iv"
+- spell_level: 8
+  spell_id: "spell:earthquake"
+- spell_level: 9
+  spell_id: "spell:elemental_swarm"
+source: "Advanced Player's Guide"

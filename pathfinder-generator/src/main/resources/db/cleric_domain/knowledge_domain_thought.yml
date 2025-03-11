@@ -1,0 +1,44 @@
+id: "cleric_domain:knowledge_domain#thought"
+parent_id: "cleric_domain:knowledge_domain"
+name: "Thought Subdomain"
+description: "You are a scholar and a sage of legends. In addition, you treat all\
+  \ Knowledge skills as class skills."
+granted_powers:
+- id: "ability:lore_keeper"
+  name: "Lore Keeper"
+  description: "You can touch a creature to learn about its abilities and weaknesses.\
+    \ With a successful touch attack, you gain information as if you made the appropriate\
+    \ Knowledge skill check with a result equal to 15 + your cleric level + your Wisdom\
+    \ modifier."
+  type: "Sp"
+- id: "ability:read_minds"
+  name: "Read Minds"
+  description: "At 8th level, you can broaden your mental spectrum to encompass those\
+    \ around you. Doing so allows you to read the mind of every creature within 30\
+    \ feet as if you had cast detect thoughts. This ability allows you to read the\
+    \ surface thoughts of any creature that you are aware of after only 1 round of\
+    \ concentration. Creatures in this area are allowed a Will save to negate the\
+    \ effect. The DC of this Will save is 10 + 1/2 your cleric level + your Wisdom\
+    \ modifier. You can use this ability for a number of rounds per day equal to your\
+    \ cleric level. These rounds do not need to be consecutive."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:comprehend_languages"
+- spell_level: 2
+  spell_id: "spell:detect_thoughts"
+- spell_level: 3
+  spell_id: "spell:seek_thoughts"
+- spell_level: 4
+  spell_id: "spell:divination"
+- spell_level: 5
+  spell_id: "spell:telepathic_bond"
+- spell_level: 6
+  spell_id: "spell:find_the_path"
+- spell_level: 7
+  spell_id: "spell:legend_lore"
+- spell_level: 8
+  spell_id: "spell:mind_blank"
+- spell_level: 9
+  spell_id: "spell:foresight"
+source: "Advanced Player's Guide"

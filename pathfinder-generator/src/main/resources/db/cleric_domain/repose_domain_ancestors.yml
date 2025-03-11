@@ -1,0 +1,43 @@
+id: "cleric_domain:repose_domain#ancestors"
+parent_id: "cleric_domain:repose_domain"
+name: "Ancestors Subdomain"
+description: "You see death not as something to be feared, but as a final rest and\
+  \ reward for a life well spent. The taint of undeath is a mockery of what you hold\
+  \ dear."
+granted_powers:
+- id: "ability:gentle_rest"
+  name: "Gentle Rest"
+  description: "Your touch can fill a creature with lethargy, causing a living creature\
+    \ to become staggered for 1 round as a melee touch attack. If you touch a staggered\
+    \ living creature, that creature falls asleep for 1 round instead. Undead creatures\
+    \ touched are staggered for a number of rounds equal to your Wisdom modifier.\
+    \ You can use this ability a number of times per day equal to 3 + your Wisdom\
+    \ modifier."
+  type: "Sp"
+- id: "ability:speak_with_dead"
+  name: "Speak With Dead"
+  description: "At 8th level, as a standard action, you can ask one question of a\
+    \ dead creature as if using speak with dead. The dead creature you are questioning\
+    \ does not gain a Will saving throw if your alignments are different. You can\
+    \ use this ability for a number of times per day equal to your cleric level."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:deathwatch"
+- spell_level: 2
+  spell_id: "spell:gentle_repose"
+- spell_level: 3
+  spell_id: "spell:speak_with_dead"
+- spell_level: 4
+  spell_id: "spell:rest_eternal"
+- spell_level: 5
+  spell_id: "spell:slay_living"
+- spell_level: 6
+  spell_id: "spell:geas_quest"
+- spell_level: 7
+  spell_id: "spell:destruction"
+- spell_level: 8
+  spell_id: "spell:waves_of_exhaustion"
+- spell_level: 9
+  spell_id: "spell:wail_of_the_banshee"
+source: "Advanced Player's Guide"

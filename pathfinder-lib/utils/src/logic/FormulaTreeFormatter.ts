@@ -42,13 +42,15 @@ export class TreeNodeValue extends FormattedValue {
       return child instanceof FormattedValue
           ? child.asFormatted()
           : child.asText()
-    }).reverse();
+    });
 
-    const operatorText = operator === TreeNodeOperator.ALL ? '; and ' : ', or ';
-    const separatorText = operator === TreeNodeOperator.ANY ? ', ' : '; ';
+    const operatorText = operator === TreeNodeOperator.ALL ? ' and ' : ' or ';
+    // const separatorText = operator === TreeNodeOperator.ANY ? ', ' : '; ';
 
-    let formatted = parts.length > 1 ? (parts.slice(0, -1).join(separatorText) + operatorText) : '';
-    formatted = formatted + parts[parts.length-1];
+    // let formatted = parts.length > 1 ? (parts.slice(0, -1).join(separatorText) + operatorText) : '';
+    // formatted = formatted + parts[parts.length-1];
+
+    let formatted = parts.join(operatorText);
 
     super(actual, formatted);
   }
@@ -118,6 +120,8 @@ export default class FormulaFormatter {
         .operator('!=', 3, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => formatNumberOp(a, b, (a, b)=> a !== b, (a, b) => `${a} is not ${b}`))
         .operator('AND', 1, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => createTreeNode(TreeNodeOperator.ALL, a, b))
         .operator('OR', 1, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => createTreeNode(TreeNodeOperator.ANY, a, b))
+        .operator('d', 4, Associativity.Left, 2, (a: ResolvedValue, b: ResolvedValue) => ResolvedValue.of(a.asNumber() + 'd' + b.asNumber()))
+        // .operator('d', 4, Associativity.Left, 2, (a: ResolvedValue, b: ResolvedValue) => formatNumberOp(a, b, (a, b) => ((a * (b + 1)) / 2.0), (a, b) => `${a}d${b}`))
         .term('true', () => ResolvedValue.of(true))
         .term('false', () => ResolvedValue.of(false))
         .function('abs', 1, (a: ResolvedValue) => ResolvedValue.of(Math.abs(a.asNumber())))
@@ -131,7 +135,7 @@ export default class FormulaFormatter {
         .varargsFunction('any', (args: ResolvedValue[]) => createTreeNode(TreeNodeOperator.ANY, ...args))
         .varargsFunction('all', (args: ResolvedValue[]) => createTreeNode(TreeNodeOperator.ALL, ...args))
         .variable('@', '', (state, key) => {
-          let actual = state.resolve(key) ?? ResolvedValue.None;
+          let actual = state.get(key) ?? ResolvedValue.None;
           let name = this.lookup(key);
           if (name) {
             return new FormattedValue(actual, name);

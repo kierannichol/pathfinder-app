@@ -7,5 +7,59 @@
   "weight": 8.0,
   "description": {
     "text": "This +1 greatsword is decorated with a lock motif. On a successful hit with the sword against a creature that is the wielder\u0027s size or smaller, the wielder can attempt to start a grapple as a free action that doesn\u0027t provoke an attack of opportunity. If the wielder succeeds at the grapple, the sword\u0027s blade transforms into a metal chain and wraps around the target, giving the wielder a +5 bonus on further grapple checks against the target. If the target escapes the grapple or the wielder decides to release the target from the grapple, the chain reverts to sword form (with the wielder holding the handle).\nThe wielder can also let go of the chain\u0027s handle while grappling or pinning the target; if he does so, the chain remains in place and the target gains the entangled condition (Escape Artist DC 20 to slip free, break DC 28, hardness 10, 10 hit points, concentration DC 17 to cast spells while entangled). Another creature can grab the chain\u0027s handle as a standard action and will it to revert to sword form as a swift action, which releases the bound creature. If the chain is destroyed, it reverts to sword form and the weapon gains the broken condition."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "type:light": 1,
+    "crit_multiplier": 2,
+    "crit_range": 19,
+    "dice_count": 2,
+    "dice_sides": 6
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d6",
+    "missDamage": "0"
+  }]
 }

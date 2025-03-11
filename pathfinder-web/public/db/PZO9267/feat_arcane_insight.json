@@ -2,6 +2,7 @@
   "id": "feat:arcane_insight",
   "name": "Arcane Insight",
   "tags": ["feat", "general"],
+  "enabledFormula": "any(@feat:arcane_shield,max(@spells_per_day:arcane#*)[Arcane spellcaster],@caster_level\u003e\u003d10,@deity:domain_magic,@skill:knowledge)",
   "maxStacks": 1,
   "description": {
     "text": "Magical insight helps you evade attacks.",

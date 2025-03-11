@@ -1,0 +1,40 @@
+id: "cleric_domain:war_domain#tactics"
+parent_id: "cleric_domain:war_domain"
+name: "Tactics Subdomain"
+description: "You are a crusader for your god, always ready and willing to fight to\
+  \ defend your faith."
+granted_powers:
+- id: "ability:weapon_master"
+  name: "Weapon Master"
+  description: "At 8th level, as a swift action, you gain the use of one combat feat\
+    \ for a number of rounds per day equal to your cleric level. These rounds do not\
+    \ need to be consecutive and you can change the feat chosen each time you use\
+    \ this ability. You must meet the prerequisites to use this feat."
+  type: "Su"
+- id: "ability:seize_the_initiative"
+  name: "Seize the Initiative"
+  description: "Whenever you and your allies roll for initiative, you can grant one\
+    \ ally within 30 feet the ability to roll twice and take either result. This decision\
+    \ is made before results are revealed. You can use this ability a number of times\
+    \ per day equal to 3 + your Wisdom modifier."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:magic_weapon"
+- spell_level: 2
+  spell_id: "spell:aid"
+- spell_level: 3
+  spell_id: "spell:magic_vestment"
+- spell_level: 4
+  spell_id: "spell:divine_power"
+- spell_level: 5
+  spell_id: "spell:command"
+- spell_level: 6
+  spell_id: "spell:blade_barrier"
+- spell_level: 7
+  spell_id: "spell:power_word_blind"
+- spell_level: 8
+  spell_id: "spell:planar_ally"
+- spell_level: 9
+  spell_id: "spell:power_word_kill"
+source: "Advanced Player's Guide"

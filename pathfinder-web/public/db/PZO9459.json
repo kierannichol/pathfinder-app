@@ -233,6 +233,11 @@
     "enabledFormula": "sum(@ability:sneak_attack#*)[Sneak Attack]",
     "maxStacks": 1
   }, {
+    "id": "feat:dirty_fighting",
+    "name": "Dirty Fighting",
+    "tags": ["combat", "feat"],
+    "maxStacks": 1
+  }, {
     "id": "feat:frightening_ambush",
     "name": "Frightening Ambush",
     "tags": ["combat", "feat"],
@@ -260,7 +265,7 @@
     "id": "feat:toxic_spell",
     "name": "Toxic Spell",
     "tags": ["feat", "metamagic"],
-    "enabledFormula": "all(@skill:craft#poison\u003e\u003d5,@spells_per_day#2,@rogue_talent:poison_use)",
+    "enabledFormula": "all(@skill:craft#poison\u003e\u003d5,@spells_per_day#2,sum(@ability:poison_use#*)[Poison Use])",
     "maxStacks": 1
   }, {
     "id": "feat:trick_spell",

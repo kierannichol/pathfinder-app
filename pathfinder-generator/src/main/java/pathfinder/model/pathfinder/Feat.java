@@ -2,6 +2,8 @@ package pathfinder.model.pathfinder;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import pathfinder.model.AttackModification;
+import pathfinder.model.Description;
 import pathfinder.model.FeatureOptions;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
@@ -10,7 +12,7 @@ import pathfinder.model.Stack;
 public record Feat(Id id,
                    String name,
                    String type,
-                   String description,
+                   Description description,
                    String prerequisites,
                    @JsonProperty("prerequisite_feats") String prerequisiteFeats,
                    String enabled_formula,
@@ -35,7 +37,8 @@ public record Feat(Id id,
                    @JsonProperty("repeating_stack") Stack repeatingStack,
                    @JsonProperty("fixed_stacks") List<Stack> fixedStacks,
                    @JsonProperty("options") FeatureOptions options,
-                   @JsonProperty("metamagic") MetamagicOptions metamagic) implements
+                   @JsonProperty("metamagic") MetamagicOptions metamagic,
+                   @JsonProperty("attack_mod") AttackModification attackModifier) implements
         NamedEntity {
 
     public enum FeatType {

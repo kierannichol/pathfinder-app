@@ -1,0 +1,25 @@
+{
+  "id": "cleric_domain:good_domain#friendship",
+  "name": "Friendship Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You have pledged your life and soul to goodness and purity."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:touch_of_good"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:holy_lance"]
+          }]
+        }]
+      }]
+    }
+  }
+}

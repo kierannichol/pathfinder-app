@@ -1,0 +1,48 @@
+id: "cleric_domain:artifice_domain#toil"
+parent_id: "cleric_domain:artifice_domain"
+name: "Toil Subdomain"
+description: "You can repair damage to objects, animate objects with life, and create\
+  \ objects from nothing."
+granted_powers:
+- id: "ability:artificers_touch"
+  name: "Artificer’s Touch"
+  description: "You can cast mending at will, using your cleric level as the caster\
+    \ level to repair damaged objects. In addition, you can cause damage to objects\
+    \ and construct creatures by striking them with a melee touch attack. Objects\
+    \ and constructs take 1d6 points of damage +1 for every two cleric levels you\
+    \ possess. This attack bypasses an amount of damage reduction and hardness equal\
+    \ to your cleric level. You can use this ability a number of times per day equal\
+    \ to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:aura_of_repetition"
+  name: "Aura of Repetition"
+  description: "At 8th level, you can emit a 30- foot aura of repetition for a number\
+    \ of rounds per day equal to your cleric level. All enemies within this aura must\
+    \ make a Will save each round or repeat their action from the previous round (if\
+    \ possible). Creatures that attacked on the previous round attack again on the\
+    \ following round, although they may change their target. Creatures that moved\
+    \ the previous round must take the same move action again, although they may change\
+    \ their route. Creatures that drank a potion must do so again, even they can only\
+    \ drink from an empty bottle. Actions that cannot be repeated are wasted. These\
+    \ rounds do not need to be consecutive."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:command"
+- spell_level: 2
+  spell_id: "spell:wood_shape"
+- spell_level: 3
+  spell_id: "spell:stone_shape"
+- spell_level: 4
+  spell_id: "spell:minor_creation"
+- spell_level: 5
+  spell_id: "spell:waves_of_fatigue"
+- spell_level: 6
+  spell_id: "spell:major_creation"
+- spell_level: 7
+  spell_id: "spell:waves_of_exhaustion"
+- spell_level: 8
+  spell_id: "spell:statue*"
+- spell_level: 9
+  spell_id: "spell:prismatic_sphere"
+source: "Advanced Player's Guide"

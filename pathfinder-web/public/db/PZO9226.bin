@@ -11,10 +11,9 @@
 feat:flagbearer
 Flagbearercombatfeat"@cha_score>=15(=
 feat:focused_disciplineFocused Disciplinecombatfeat(t
-feat:free_spiritFree Spiritfeatgeneral"Ball(@cha_score>=13,any(@alignment:cg,@alignment:cn,@alignment:ce))(D
-feat:godless_healingGodless Healingfeatgeneral"
-@deity==''(W
-feat:green_faith_acolyteGreen Faith Acolytefeatgeneral"@deity=='Green Faith'(u
+feat:free_spiritFree Spiritfeatgeneral"Ball(@cha_score>=13,any(@alignment:cg,@alignment:cn,@alignment:ce))(Q
+feat:godless_healingGodless Healingfeatgeneral"sum(@deity:domain_*)<=0(\
+feat:green_faith_acolyteGreen Faith Acolytefeatgeneral"@deity:name=='Green Faith'(u
 feat:hamatulatsuHamatulatsucombatfeat"Dall(@feat:improved_unarmed_strike,@feat:weapon_focus#unarmed_strike)(S
 feat:harmonic_spellHarmonic Spellfeatgeneral"@ability:bardic_performance(*
 feat:harrowedHarrowedfeatgeneral(G

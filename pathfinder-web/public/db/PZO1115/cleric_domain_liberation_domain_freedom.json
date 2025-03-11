@@ -1,0 +1,22 @@
+{
+  "id": "cleric_domain:liberation_domain#freedom",
+  "name": "Freedom Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You are a spirit of freedom and a staunch foe against all who would enslave and oppress."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:freedoms_call", "ability:libertys_blessing"]
+          }]
+        }]
+      }]
+    }
+  }
+}

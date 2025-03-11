@@ -7,5 +7,59 @@
   "weight": 10.0,
   "description": {
     "text": "Instead of a blade, a swathe of absolute darkness inimical to life tips this scythe. It functions as a +1 brilliant energy scythe, except the blade is formed of negative energy and gives off no light whatsoever. The wielder can channel negative energy directly into the scythe to charge it with life-destroying energy for 1 round per die of channeling. For example, channeling negative energy for 5d6 points of damage fuels the scythe for 5 rounds. While so charged, the void scythe bestows one negative level with each hit. One day after being struck, subjects must succeed at a DC 16 Fortitude save for each negative level or the negative levels become permanent.\nBlack energy utterly consumes any creature that is slain by the void scythe, leaving no body behind but leaving the creature\u0027s equipment unharmed. A victim of the void scythe can be restored only by true resurrection or carefully worded miracle or wish."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "type:two-handed": 1,
+    "crit_multiplier": 4,
+    "crit_range": 20,
+    "dice_count": 2,
+    "dice_sides": 4
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d4",
+    "missDamage": "0"
+  }]
 }

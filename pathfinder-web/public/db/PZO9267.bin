@@ -1,20 +1,64 @@
 
-PZO9267Inner Sea Gods6
-feat:arcane_insightArcane Insightfeatgeneral(·
+PZO9267Inner Sea GodsE
+ability:calming_touchCalming Touchclass_featuredomain_power(A
+ability:chaos_bladeChaos Bladeclass_featuredomain_power(I
+ability:cold_resistanceCold Resistanceclass_featuredomain_power(K
+ability:destructive_auraDestructive Auraclass_featuredomain_power(M
+ability:destructive_smiteDestructive Smiteclass_featuredomain_power(K
+ability:eyes_of_darknessEyes of Darknessclass_featuredomain_power(=
+ability:fire_bolt	Fire Boltclass_featuredomain_power(I
+ability:fire_resistanceFire Resistanceclass_featuredomain_power(C
+ability:guarded_mindGuarded Mindclass_featuredomain_power(?
+ability:holy_lance
+Holy Lanceclass_featuredomain_power(7
+ability:icicleIcicleclass_featuredomain_power(E
+ability:part_the_veilPart the Veilclass_featuredomain_power(G
+ability:scythe_of_evilScythe of Evilclass_featuredomain_power(M
+ability:serpent_companionSerpent Companionclass_featuredomain_power(G
+ability:staff_of_orderStaff of Orderclass_featuredomain_power(G
+ability:touch_of_chaosTouch of Chaosclass_featuredomain_power(M
+ability:touch_of_darknessTouch of Darknessclass_featuredomain_power(E
+ability:touch_of_evilTouch of Evilclass_featuredomain_power(E
+ability:touch_of_goodTouch of Goodclass_featuredomain_power(C
+ability:touch_of_lawTouch of Lawclass_featuredomain_power(5
+ability:unityUnityclass_featuredomain_power(G
+ability:venomous_stareVenomous Stareclass_featuredomain_power(W
+"cleric_domain:chaos_domain#entropyEntropy Subdomainclass_featurecleric_domain(W
+"cleric_domain:chaos_domain#revelryRevelry Subdomainclass_featurecleric_domain(U
+!cleric_domain:chaos_domain#whimsyWhimsy Subdomainclass_featurecleric_domain(c
+*cleric_domain:community_domain#cooperationCooperation Subdomainclass_featurecleric_domain(T
+"cleric_domain:darkness_domain#moonMoon Subdomainclass_featurecleric_domain(]
+(cleric_domain:destruction_domain#tortureTorture Subdomainclass_featurecleric_domain(P
+cleric_domain:evil_domain#fearFear Subdomainclass_featurecleric_domain(R
+cleric_domain:fire_domain#arsonArson Subdomainclass_featurecleric_domain(\
+$cleric_domain:good_domain#friendshipFriendship Subdomainclass_featurecleric_domain(W
+!cleric_domain:law_domain#judgmentJudgment Subdomainclass_featurecleric_domain(U
+ cleric_domain:law_domain#loyaltyLoyalty Subdomainclass_featurecleric_domain(U
+ cleric_domain:law_domain#slaverySlavery Subdomainclass_featurecleric_domain(U
+ cleric_domain:law_domain#tyrannyTyranny Subdomainclass_featurecleric_domain(Y
+%cleric_domain:scalykind_domain#dragonDragon Subdomainclass_featurecleric_domain([
+&cleric_domain:scalykind_domain#saurianSaurian Subdomainclass_featurecleric_domain(W
+$cleric_domain:scalykind_domain#venomVenom Subdomainclass_featurecleric_domain(b
+'cleric_domain:void_domain#dark_tapestryDark Tapestry Subdomainclass_featurecleric_domain(Z
+#cleric_domain:void_domain#isolationIsolation Subdomainclass_featurecleric_domain(R
+cleric_domain:void_domain#starsStars Subdomainclass_featurecleric_domain(W
+"cleric_domain:water_domain#flotsamFlotsam Subdomainclass_featurecleric_domain(U
+!cleric_domain:water_domain#riversRivers Subdomainclass_featurecleric_domain(º
+feat:arcane_insightArcane Insightfeatgeneral"any(@feat:arcane_shield,max(@spells_per_day:arcane#*)[Arcane spellcaster],@caster_level>=10,@deity:domain_magic,@skill:knowledge)(·
 feat:bestow_hopeBestow Hopefeatgeneral"„all(@feat:improved_channel,@ability:channel_energy[Channel Energy],any(@deity:alignment_lg,@deity:alignment_ng,@deity:alignment_cg))([
 feat:bloody_vengeanceBloody Vengeancecombatfeat" all(@bab>=1,@deity:alignment_cn)(k
 feat:bullseye_shotBullseye Shotcombatfeat"6all(@feat:point_blank_shot,@feat:precise_shot,@bab>=5)(”
-feat:charge_of_the_righteousCharge of the Righteouscombatfeat"Kall(@bab>=1,any(@alignment:lg,@alignment:ng,@alignment:cg)[Good alignment])(:
-feat:divination_guideDivination Guidefeatgeneral(Ž
+feat:charge_of_the_righteousCharge of the Righteouscombatfeat"Kall(@bab>=1,any(@alignment:lg,@alignment:ng,@alignment:cg)[Good alignment])(’
+feat:divination_guideDivination Guidefeatgeneral"Vall(@caster_level>=3,any(@spell:augury,@magic_school:divination),sum(@deity:domain_*))(Ž
 feat:drunken_brawlerDrunken Brawlercombatfeat"Uall(@feat:endurance,any(@deity:alignment_lg,@deity:alignment_ng,@deity:alignment_cg))(š
-feat:fearsome_finishFearsome Finishfeatgeneral"`all(@feat:intimidating_prowess,any(@deity:alignment_le,@deity:alignment_ne,@deity:alignment_ce))(;
-feat:measured_responseMeasured Responsecombatfeat(6
-feat:merciless_rushMerciless Rushfeatgeneral(‚
+feat:fearsome_finishFearsome Finishfeatgeneral"`all(@feat:intimidating_prowess,any(@deity:alignment_le,@deity:alignment_ne,@deity:alignment_ce))(b
+feat:measured_responseMeasured Responsecombatfeat"%all(@bab >= 1, @deity:name=='Abadar')(m
+feat:merciless_rushMerciless Rushfeatgeneral"5all(@feat:improved_bull_rush, @deity:name=='Rovagug')(‚
 feat:nimble_natural_summonsNimble Natural Summonsfeatgeneral"¹all(@feat:augment_summoning,@feat:spell_focus#conjuration,any(@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9)[Able to cast Summon Nature's Ally],@caster_level>=6,any(@deity:alignment_lg,@deity:alignment_ng,@deity:alignment_cg))(r
 feat:protectors_strikeProtector's Strikefeatgeneral"3all(@bab>=5,sum(@ability:smite_evil#*)[Smite Evil])(g
 feat:spear_dancerSpear Dancerfeatgeneral"3all(@feat:weapon_focus#two,@skill:perform#dance)>=4(H
-feat:spiked_destroyerSpiked Destroyercombatfeat"@spiked_armor(;
-feat:steady_engagementSteady Engagementcombatfeat(Q
+feat:spiked_destroyerSpiked Destroyercombatfeat"@spiked_armor(€
+feat:steady_engagementSteady Engagementcombatfeat"Call(@feat:combat_reflexes, @feat:stand_still, @deity:name=='Irori')(Q
 feat:stone_read
 Stone Readfeatgeneral"!@skill:knowledge_dungeoneering>=4(c
 feat:undermining_exploitUndermining Exploitfeatgeneral"!@skill:knowledge_dungeoneering>=4(«

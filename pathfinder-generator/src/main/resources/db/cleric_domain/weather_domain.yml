@@ -1,0 +1,42 @@
+id: "cleric_domain:weather_domain"
+parent_id: null
+name: "Weather Domain"
+description: ""
+granted_powers:
+- id: "ability:storm_burst"
+  name: "Storm Burst"
+  description: "As a standard action, you can create a storm burst targeting any foe within\
+    \ 30 feet as a ranged touch attack. The storm burst deals 1d6 points of nonlethal\
+    \ damage + 1 point for every two cleric levels you possess. In addition, the target\
+    \ is buffeted by winds and rain, causing it to take a –2 penalty on attack rolls\
+    \ for 1 round. You can use this ability a number of times per day equal to 3 +\
+    \ your Wisdom modifier."
+  type: "Sp"
+- id: "ability:lightning_lord"
+  name: "Lightning Lord"
+  description: "At 8th level, you can call down a number of bolts of lightning per day equal\
+    \ to your cleric level. You can call down as many bolts as you want with a single\
+    \ standard action, but no creature can be the target of more than one bolt and\
+    \ no two targets can be more than 30 feet apart. This ability otherwise functions\
+    \ as call lightning."
+  type: "Sp"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:obscuring_mist"
+- spell_level: 2
+  spell_id: "spell:fog_cloud"
+- spell_level: 3
+  spell_id: "spell:call_lightning"
+- spell_level: 4
+  spell_id: "spell:sleet_storm"
+- spell_level: 5
+  spell_id: "spell:ice_storm"
+- spell_level: 6
+  spell_id: "spell:control_winds"
+- spell_level: 7
+  spell_id: "spell:control_weather"
+- spell_level: 8
+  spell_id: "spell:whirlwind"
+- spell_level: 9
+  spell_id: "spell:storm_of_vengeance"
+source: "Pathfinder RPG Core Rulebook"

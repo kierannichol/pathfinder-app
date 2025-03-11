@@ -1,8 +1,20 @@
-id: "rogue_talent:feat"
+id: "advanced_rogue_talent:feat"
 name: "Feat"
-label: null
 type: "NONE"
 description: "Gain a feat"
-effects: null
-prerequisites: null
-source: null
+fixed_stacks:
+  - choices:
+    - choice_id: "advanced_rogue_talent_feat"
+      label: "Feat"
+      type: "class_feature"
+      categories:
+        - label: "Combat"
+          tag: "combat"
+        - label: "General"
+          tag: "general"
+        - label: "Item Creation"
+          tag: "item_creation"
+        - label: "Metamagic"
+          tag: "metamagic"
+      option_tags:
+        - "feat"

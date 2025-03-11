@@ -20,8 +20,8 @@ export function FeatureModificationEditor({ value, onChange }: EditorProps<Featu
                                              elementNoun={'Stack Modification'}
                                              value={value.stackModifications}
                                              onChange={updated => update({ stackModifications: updated })}>
-      {(item, setItem) =>
-          <StackModificationEditor value={item} onChange={setItem} />}
+      {(item, setItem, index) =>
+          <StackModificationEditor key={index} value={item} onChange={setItem} />}
     </ComplexListField>
   </div>
 }

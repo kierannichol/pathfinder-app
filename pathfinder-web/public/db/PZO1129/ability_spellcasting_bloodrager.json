@@ -8,6 +8,11 @@
   "stacks": {
     "repeatingStack": {
       "effects": [{
+        "addAction": {
+          "targetKey": "caster_level",
+          "formula": "max(0, @class:bloodrager-3)"
+        }
+      }, {
         "setAction": {
           "targetKey": "trait:level_1_spells_per_day#bloodrager",
           "formula": "if(@class:bloodrager\u003e\u003d4,1+if(@class:bloodrager\u003e8,1,0)+if(@class:bloodrager\u003e12,1,0)+if(@class:bloodrager\u003e16,1,0),null)"

@@ -7,5 +7,59 @@
   "weight": 2.0,
   "description": {
     "text": "This +1 dancing short sword automatically rises up to defend a fallen or sleeping wielder. To activate the sword, the wielder must fall unconscious or die while wielding the weapon or holding it in her hand. Thereafter, should any creature other than an ally of the wielder attempt to touch or strike him with a melee attack, the sword attacks that creature for up to 4 rounds. After 4 rounds, the weapon drops in the wielder\u0027s square. Unless the guarding blade is an intelligent item, it lacks the wits to make decisions about which is the best opponent to attack, and when confronted by multiple opponents attacking the wielder, it tends to select a random target each round."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "type:light": 1,
+    "crit_multiplier": 2,
+    "crit_range": 19,
+    "dice_count": 1,
+    "dice_sides": 6
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }]
 }

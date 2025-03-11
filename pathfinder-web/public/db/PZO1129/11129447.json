@@ -7,5 +7,59 @@
   "weight": 2.0,
   "description": {
     "text": "This +2 rapier has elegant lines and a stylish basket hilt. The wielder of this weapon gains a +5 competence bonus on Acrobatics checks made to move through an enemy\u0027s threatened area or through its space. As a swift action after hitting with a melee attack using this weapon, the wielder can spend 1 panache point to move 10 feet without provoking attacks of opportunity."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "crit_multiplier": 2,
+    "crit_range": 18,
+    "dice_count": 1,
+    "dice_sides": 6,
+    "type:one-handed": 1
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }]
 }

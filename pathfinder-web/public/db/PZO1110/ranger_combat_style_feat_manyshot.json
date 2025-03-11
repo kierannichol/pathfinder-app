@@ -1,0 +1,24 @@
+{
+  "id": "ranger_combat_style_feat:manyshot",
+  "name": "Manyshot",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You can fire multiple arrows at a single target.",
+    "sections": {
+      "Benefit": "When making a full-attack action with a bow, your first attack fires two arrows. If the attack hits, both arrows hit. Apply precision-based damage (such as sneak attack) and critical hit damage only once for this attack. Damage bonuses from using a composite bow with a high Strength bonus apply to each arrow, as do other damage bonuses, such as a ranger\u0027s favored enemy bonus. Damage reduction and resistances apply separately to each arrow."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:manyshot",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

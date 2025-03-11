@@ -1,12 +1,11 @@
 import useAsyncMemo from "../../../utils/useAsyncMemo.tsx";
 import {useEffect, useMemo, useState} from "react";
 import styles from "./CharacterList.module.css";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import LoadingBlock from "@/components/LoadingBlock.tsx";
 import DeleteIcon from "@/components/base/icons/DeleteIcon.tsx";
 import CharacterSummary from "@/data/CharacterSummary.ts";
 import DuplicateIcon from "@/components/base/icons/CopyIcon.tsx";
-import Button from "@/components/base/form/Button.tsx";
 import NewCharacterDialog from "@/view/character/list/NewCharacterDialog.tsx";
 import {classNames} from "@pathfinder-lib/utils/classNames";
 import {useCharacterStore, useDatabase} from "@/data/context.ts";
@@ -27,7 +26,8 @@ export default function CharacterListView() {
   const handleCreate = async (characterName: string, favoredClassId: string) => {
     const data: {[key:string]:string} = {
       'character_name': characterName,
-      'favored_class': favoredClassId
+      'favored_class': favoredClassId,
+      'current_level': '1',
     };
     const characterClassId = favoredClassId.replace("favored_class", "class");
     for (let level = 1; level <= 20; level++) {
@@ -64,16 +64,16 @@ export default function CharacterListView() {
   return <main>
     <header>Characters</header>
     <section>
-      {isLoading ? <LoadingBlock/> : <div className={styles.characters}>
+      {isLoading ? <LoadingBlock/> : <ul className={styles.characters}>
         {characters?.map(character => <CharacterListEntry
             key={character.id}
             character={character}
             onDelete={handleDelete}
-            onDuplicate={handleDuplicate} />)}
-      </div>}
-      <div className={styles.controls}>
-        <AddCharacterButton disabled={isLoading} onCreate={handleCreate} />
-      </div>
+            onDuplicate={handleDuplicate}/>)}
+      </ul>}
+      <footer>
+        <AddCharacterButton disabled={isLoading} onCreate={handleCreate}/>
+      </footer>
     </section>
   </main>
 }
@@ -92,26 +92,39 @@ function CharacterListEntry({ character, onDelete, onDuplicate }: CharacterListE
       () => db.name(character.favored_class),
       [character, db]);
 
-  return <div
-      className={styles.character}>
+  return (
+      <li>
+        <Link to={`/character/edit/${character.id}`}>
+          <dt>{character.name}</dt>
+          <dd>{favoredClassName}</dd>
+        </Link>
+        <DuplicateCharacterButton characterToCopy={character} onDuplicate={onDuplicate}/>
+        <a onClick={() => onDelete?.(character.id)}>
+          <DeleteIcon/>
+        </a>
+      </li>
+  )
 
-    <div className={classNames([styles.nameContainer, 'clickable'])} onClick={() => {
-      navigate(`/character/edit/${character.id}`)
-    }}>
-      <div className={styles.nameLabel}>
-        {character.name}
-        <div className={styles.favoredClassLabel}>
-          ({favoredClassName})
-        </div>
-      </div>
-    </div>
-    <DuplicateCharacterButton characterToCopy={character} onDuplicate={onDuplicate} />
-    <div className={classNames([styles.deleteButtonContainer, 'clickable'])} onClick={() => {
-      onDelete(character.id);
-    }}>
-      <DeleteIcon/>
-    </div>
-  </div>
+  // return <div
+  //     className={styles.character}>
+  //
+  //   <div className={classNames([styles.nameContainer, 'clickable'])} onClick={() => {
+  //     navigate(`/character/edit/${character.id}`)
+  //   }}>
+  //     <div className={styles.nameLabel}>
+  //       {character.name}
+  //       <div className={styles.favoredClassLabel}>
+  //         ({favoredClassName})
+  //       </div>
+  //     </div>
+  //   </div>
+  //   <DuplicateCharacterButton characterToCopy={character} onDuplicate={onDuplicate} />
+  //   <div className={classNames([styles.deleteButtonContainer, 'clickable'])} onClick={() => {
+  //     onDelete(character.id);
+  //   }}>
+  //     <DeleteIcon/>
+  //   </div>
+  // </div>
 }
 
 interface AddCharacterButtonProps {
@@ -132,7 +145,7 @@ function AddCharacterButton({onCreate, disabled = false }: AddCharacterButtonPro
   }
 
   return (<>
-    <Button disabled={disabled} onClick={_ => setShow(true)}>+ Character</Button>
+    <button disabled={disabled} onClick={_ => setShow(true)}>+ Character</button>
     <NewCharacterDialog show={show}
                         onCreate={handleCreate}
                         onCancel={handleCancel} />

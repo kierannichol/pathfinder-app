@@ -11,6 +11,26 @@
       "stacks": [{
         "effects": [{
           "addAction": {
+            "targetKey": "trait:level_0_spells_per_day#cleric",
+            "numberDelta": 3
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_1_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trait:divine_spellcaster",
+            "numberValue": 1
+          }
+        }, {
+          "addAction": {
             "targetKey": "fort:base",
             "numberDelta": 2
           }
@@ -21,7 +41,8 @@
           }
         }, {
           "addAction": {
-            "targetKey": "ref:base"
+            "targetKey": "ref:base",
+            "numberDelta": 0
           }
         }, {
           "setAction": {
@@ -76,6 +97,17 @@
         }],
         "links": ["trait:armor_proficiency#cleric", "trait:weapon_proficiency#cleric", "ability:aura#cleric", "ability:channel_energy#cleric", "ability:domains#cleric", "ability:orisons#cleric", "ability:spontaneous_casting#cleric", "ability:spellcasting#cleric"],
         "choices": [{
+          "choiceId": "domain_spell_1",
+          "label": "Level 1 Domain Spell",
+          "tags": ["domain_spell"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric1"]
+          }
+        }, {
           "choiceId": "archetype",
           "label": "Archetype",
           "tags": ["archetype"],
@@ -211,6 +243,21 @@
       }, {
         "effects": [{
           "addAction": {
+            "targetKey": "trait:level_0_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_1_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
             "targetKey": "bab",
             "numberDelta": 1
           }
@@ -227,6 +274,16 @@
         }]
       }, {
         "effects": [{
+          "addAction": {
+            "targetKey": "trait:level_2_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
           "addAction": {
             "targetKey": "bab",
             "numberDelta": 1
@@ -237,9 +294,36 @@
             "numberDelta": 1
           }
         }],
-        "links": ["ability:channel_energy#cleric"]
+        "links": ["ability:channel_energy#cleric"],
+        "choices": [{
+          "choiceId": "domain_spell_2",
+          "label": "Level 2 Domain Spell",
+          "tags": ["domain_spell"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric2"]
+          }
+        }]
       }, {
         "effects": [{
+          "addAction": {
+            "targetKey": "trait:level_1_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_2_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
           "addAction": {
             "targetKey": "bab",
             "numberDelta": 1
@@ -256,162 +340,47 @@
           }
         }]
       }, {
-        "links": ["ability:channel_energy#cleric"]
-      }, {
         "effects": [{
           "addAction": {
-            "targetKey": "bab",
+            "targetKey": "trait:level_3_spells_per_day#cleric",
             "numberDelta": 1
           }
         }, {
           "addAction": {
-            "targetKey": "fort:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "will:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "ref:base",
-            "numberDelta": 1
-          }
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
+            "targetKey": "caster_level",
             "numberDelta": 1
           }
         }],
-        "links": ["ability:channel_energy#cleric"]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "fort:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "will:base",
-            "numberDelta": 1
+        "links": ["ability:channel_energy#cleric"],
+        "choices": [{
+          "choiceId": "domain_spell_3",
+          "label": "Level 3 Domain Spell",
+          "tags": ["domain_spell"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric3"]
           }
         }]
       }, {
         "effects": [{
           "addAction": {
-            "targetKey": "ref:base",
-            "numberDelta": 1
-          }
-        }],
-        "links": ["ability:channel_energy#cleric"]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
+            "targetKey": "trait:level_2_spells_per_day#cleric",
             "numberDelta": 1
           }
         }, {
           "addAction": {
-            "targetKey": "fort:base",
+            "targetKey": "trait:level_3_spells_per_day#cleric",
             "numberDelta": 1
           }
         }, {
           "addAction": {
-            "targetKey": "will:base",
-            "numberDelta": 1
-          }
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }],
-        "links": ["ability:channel_energy#cleric"]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
+            "targetKey": "caster_level",
             "numberDelta": 1
           }
         }, {
-          "addAction": {
-            "targetKey": "fort:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "will:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "ref:base",
-            "numberDelta": 1
-          }
-        }]
-      }, {
-        "links": ["ability:channel_energy#cleric"]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "fort:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "will:base",
-            "numberDelta": 1
-          }
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "ref:base",
-            "numberDelta": 1
-          }
-        }],
-        "links": ["ability:channel_energy#cleric"]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "fort:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "will:base",
-            "numberDelta": 1
-          }
-        }]
-      }, {
-        "links": ["ability:channel_energy#cleric"]
-      }, {
-        "effects": [{
           "addAction": {
             "targetKey": "bab",
             "numberDelta": 1
@@ -435,6 +404,428 @@
       }, {
         "effects": [{
           "addAction": {
+            "targetKey": "trait:level_1_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_4_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"],
+        "choices": [{
+          "choiceId": "domain_spell_4",
+          "label": "Level 4 Domain Spell",
+          "tags": ["domain_spell"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric4"]
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "trait:level_3_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_4_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "trait:level_2_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_5_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"],
+        "choices": [{
+          "choiceId": "domain_spell_5",
+          "label": "Level 5 Domain Spell",
+          "tags": ["domain_spell"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric5"]
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "trait:level_4_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_5_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "trait:level_3_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_6_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"],
+        "choices": [{
+          "choiceId": "domain_spell_6",
+          "label": "Level 6 Domain Spell",
+          "tags": ["domain_spell"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric6"]
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "trait:level_5_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_6_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "trait:level_4_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_7_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"],
+        "choices": [{
+          "choiceId": "domain_spell_7",
+          "label": "Level 7 Domain Spell",
+          "tags": ["domain_spell"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric7"]
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "trait:level_6_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_7_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "trait:level_5_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_8_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"],
+        "choices": [{
+          "choiceId": "domain_spell_8",
+          "label": "Level 8 Domain Spell",
+          "tags": ["domain_spell"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric8"]
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "trait:level_7_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_8_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "trait:level_6_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_9_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"],
+        "choices": [{
+          "choiceId": "domain_spell_9",
+          "label": "Level 9 Domain Spell",
+          "tags": ["domain_spell"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["spell+cleric9"]
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "trait:level_8_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_9_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "trait:level_7_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_9_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
             "targetKey": "bab",
             "numberDelta": 1
           }
@@ -442,6 +833,21 @@
         "links": ["ability:channel_energy#cleric"]
       }, {
         "effects": [{
+          "addAction": {
+            "targetKey": "trait:level_8_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "trait:level_9_spells_per_day#cleric",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
           "addAction": {
             "targetKey": "bab",
             "numberDelta": 1

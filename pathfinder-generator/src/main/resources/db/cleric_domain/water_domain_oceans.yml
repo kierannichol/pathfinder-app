@@ -1,0 +1,40 @@
+id: "cleric_domain:water_domain#oceans"
+parent_id: "cleric_domain:water_domain"
+name: "Oceans Subdomain"
+description: "You can manipulate water and mist and ice, conjure creatures of water,\
+  \ and resist cold."
+granted_powers:
+- id: "ability:cold_resistance"
+  name: "Cold Resistance"
+  description: "At 6th level, you gain resist cold 10. This resistance increases to\
+    \ 20 at 12th level. At 20th level, you gain immunity to cold."
+  type: "Ex"
+- id: "ability:surge"
+  name: "Surge"
+  description: "As a standard action, you can cause a mighty wave to appear that pushes\
+    \ or pulls a single creature. Make a combat maneuver check against the target,\
+    \ using your cleric level + your Wisdom modifier as your CMB. If successful, you\
+    \ may pull or push the creature as if using the bull rush or drag combat maneuver.\
+    \ You can use this ability a number of times per day equal to 3 + your Wisdom\
+    \ modifier."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:obscuring_mist"
+- spell_level: 2
+  spell_id: "spell:slipstream"
+- spell_level: 3
+  spell_id: "spell:water_walk"
+- spell_level: 4
+  spell_id: "spell:control_water"
+- spell_level: 5
+  spell_id: "spell:ice_storm"
+- spell_level: 6
+  spell_id: "spell:cone_of_cold"
+- spell_level: 7
+  spell_id: "spell:elemental_body_iv"
+- spell_level: 8
+  spell_id: "spell:horrid_wilting"
+- spell_level: 9
+  spell_id: "spell:tsunami"
+source: "Advanced Player's Guide"

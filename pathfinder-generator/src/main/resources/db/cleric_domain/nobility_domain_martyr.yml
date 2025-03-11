@@ -1,0 +1,42 @@
+id: "cleric_domain:nobility_domain#martyr"
+parent_id: "cleric_domain:nobility_domain"
+name: "Martyr Subdomain"
+description: "You are a great leader, an inspiration to all who follow the teachings\
+  \ of your faith."
+granted_powers:
+- id: "ability:inspiring_word"
+  name: "Inspiring Word"
+  description: "As a standard action, you can speak an inspiring word to a creature\
+    \ within 30 feet. That creature receives a +2 morale bonus on attack rolls, skill\
+    \ checks, ability checks, and saving throws for a number of rounds equal to 1/2\
+    \ your cleric level (minimum 1). You can use this power a number of times per\
+    \ day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:sacrificial_bond"
+  name: "Sacrificial Bond"
+  description: "At 8th level, when an ally within 30 feet takes damage from an attack,\
+    \ you can, as an immediate action, transfer this damage to yourself. This power\
+    \ also transfers any effects that accompany the damage. The damage done to you\
+    \ cannot be reduced in any way. You can use this ability once per day at 8th level,\
+    \ plus on additional time per day at 14th level and 20th level."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:divine_favor"
+- spell_level: 2
+  spell_id: "spell:shield_other"
+- spell_level: 3
+  spell_id: "spell:magic_vestment"
+- spell_level: 4
+  spell_id: "spell:discern_lies"
+- spell_level: 5
+  spell_id: "spell:command"
+- spell_level: 6
+  spell_id: "spell:sacrificial_oath"
+- spell_level: 7
+  spell_id: "spell:repulsion"
+- spell_level: 8
+  spell_id: "spell:demand"
+- spell_level: 9
+  spell_id: "spell:storm_of_vengeance"
+source: "Advanced Player's Guide"

@@ -1,0 +1,43 @@
+id: "cleric_domain:glory_domain#heroism"
+parent_id: "cleric_domain:glory_domain"
+name: "Heroism Subdomain"
+description: "You are infused with the glory of the divine, and are a true foe of\
+  \ the undead. In addition, when you channel positive energy to harm undead creatures,\
+  \ the save DC to halve the damage is increased by 2."
+granted_powers:
+- id: "ability:touch_of_glory"
+  name: "Touch of Glory"
+  description: "You can cause your hand to shimmer with divine radiance, allowing\
+    \ you to touch a creature as a standard action and give it a bonus equal to your\
+    \ cleric level on a single Charisma-based skill check or Charisma ability check.\
+    \ This ability lasts for 1 hour or until the creature touched elects to apply\
+    \ the bonus to a roll. You can use this ability to grant the bonus a number of\
+    \ times per day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:aura_of_heroism"
+  name: "Aura of Heroism"
+  description: "At 8th level, you can emit a 30-foot aura of heroism for a number\
+    \ of rounds per day equal to your cleric level. Using this ability is a swift\
+    \ action. Allies in the area are treated as if they were under the effects of\
+    \ heroism. These rounds do not need to be consecutive."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:shield_of_faith"
+- spell_level: 2
+  spell_id: "spell:bless_weapon"
+- spell_level: 3
+  spell_id: "spell:heroism"
+- spell_level: 4
+  spell_id: "spell:holy_smite"
+- spell_level: 5
+  spell_id: "spell:righteous_might"
+- spell_level: 6
+  spell_id: "spell:heroism"
+- spell_level: 7
+  spell_id: "spell:holy_sword"
+- spell_level: 8
+  spell_id: "spell:holy_aura"
+- spell_level: 9
+  spell_id: "spell:gate"
+source: "Advanced Player's Guide"

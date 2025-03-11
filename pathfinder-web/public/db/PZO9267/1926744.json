@@ -7,5 +7,59 @@
   "weight": 10.0,
   "description": {
     "text": "This +1 scythe has five onyx gems set into its blade. A creature with the ability to channel negative energy can expend one use of that ability to charge the weapon with power, causing one onyx gem per 1d6 points of channeled energy to glow (multiple channels do not stack; the wielder must be able to channel 5d6 points of negative energy to activate all five gems). Anytime the wielder deals damage to a creature with the scythe, he can activate one charged gem as a swift action, releasing its energy and dealing 1d6 points of channeled negative energy damage to the target. Alternatively, as a standard action the wielder can touch the scythe to a willing creature healed by negative energy (such as undead) and release any number of stored charges, each of which heals the target for 1d6 points of damage."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "type:two-handed": 1,
+    "crit_multiplier": 4,
+    "crit_range": 20,
+    "dice_count": 2,
+    "dice_sides": 4
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d4",
+    "missDamage": "0"
+  }]
 }

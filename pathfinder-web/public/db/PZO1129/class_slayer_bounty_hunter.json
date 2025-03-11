@@ -2,7 +2,7 @@
   "id": "class:slayer#bounty_hunter",
   "name": "Bounty Hunter",
   "tags": ["archetype", "slayer"],
-  "enabledFormula": "!@modifies:trait:armor_proficiency#slayer AND !@modifies:trait:weapon_proficiency#slayer AND !@modifies:ability:advanced_slayer_talent#slayer AND !@modifies:ability:slayer_talent#slayer",
+  "enabledFormula": "!@modifies:trait:armor_proficiency#slayer AND !@modifies:trait:weapon_proficiency#slayer AND !@modifies:ability:slayer_talent#slayer",
   "maxStacks": 1,
   "description": {
   },
@@ -21,11 +21,6 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:advanced_slayer_talent#slayer",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:slayer_talent#slayer",
             "numberValue": 1
           }
@@ -35,7 +30,7 @@
           "stackModifications": [{
             "targetStackCount": 1,
             "linksToAdd": ["ability:weapon_and_armor_proficiency#slayer_bounty_hunter", "ability:weapon_and_armor_proficiency#slayer_bounty_hunter"],
-            "linksToRemove": ["trait:armor_proficiency#slayer", "trait:weapon_proficiency#slayer"]
+            "linksToRemove": ["trait:weapon_proficiency#slayer", "trait:armor_proficiency#slayer"]
           }, {
             "targetStackCount": 2,
             "linksToAdd": ["ability:dirty_trick#slayer_bounty_hunter"],
@@ -47,7 +42,7 @@
           }, {
             "targetStackCount": 10,
             "linksToAdd": ["ability:incapacitate#slayer_bounty_hunter"],
-            "linksToRemove": ["ability:advanced_slayer_talent#slayer"]
+            "linksToRemove": ["ability:slayer_talent#slayer"]
           }]
         }]
       }]

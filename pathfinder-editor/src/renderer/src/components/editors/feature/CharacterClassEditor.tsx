@@ -19,7 +19,7 @@ interface CharacterClassEditorProps {
 }
 
 export default function CharacterClassEditor({ feature, onSave }: CharacterClassEditorProps) {
-  function useLevelsState() {
+  function useLevelsState(): [string[][], (l: number, updated: string[]) => void] {
     const [ state, setState ] = useState(() => {
       const initialState: string[][] = [];
       (feature.levels ?? []).forEach(level => {
@@ -83,7 +83,7 @@ export default function CharacterClassEditor({ feature, onSave }: CharacterClass
       <HitDieField value={hitDie} onChange={setHitDie} />
 
       {levels.map((levelClassFeatures, levelNumber) =>
-          <DataSection label={`Level ${levelNumber}`}>
+          <DataSection key={levelNumber} label={`Level ${levelNumber}`}>
             <SimpleTextListField elementNoun={"Class Feature"}
                                  value={levelClassFeatures}
                                  onChange={v => setLevel(levelNumber, v)} />

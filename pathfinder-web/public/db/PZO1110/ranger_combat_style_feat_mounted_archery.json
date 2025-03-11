@@ -1,0 +1,23 @@
+{
+  "id": "ranger_combat_style_feat:mounted_archery",
+  "name": "Mounted Archery",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "The penalty you take when using a ranged weapon while mounted is halved: –2 instead of –4 if your mount is taking a double move, and –4 instead of –8 if your mount is running."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:mounted_archery",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

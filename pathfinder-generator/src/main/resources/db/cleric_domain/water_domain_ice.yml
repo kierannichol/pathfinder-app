@@ -1,0 +1,43 @@
+id: "cleric_domain:water_domain#ice"
+parent_id: "cleric_domain:water_domain"
+name: "Ice Subdomain"
+description: "You can manipulate water and mist and ice, conjure creatures of water,\
+  \ and resist cold."
+granted_powers:
+- id: "ability:icicle"
+  name: "Icicle"
+  description: "As a standard action, you can fire an icicle from your finger, targeting\
+    \ any foe within 30 feet as a ranged touch attack. The icicle deals 1d6 points\
+    \ of cold damage + 1 point for every two cleric levels you possess. You can use\
+    \ this ability a number of times per day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:body_of_ice"
+  name: "Body of Ice"
+  description: "At 8th level, you can transmute your body and equipment to ice for\
+    \ a period of time. It takes a standard action to take on the form of ice, and\
+    \ you can end the transmutation with a free action on your turn. When you take\
+    \ on the form of ice, you are immune to cold and have DR 5/—, but you take twice\
+    \ the normal amount of damage from fire. You can take on the form of ice for a\
+    \ number of rounds per day equal to your cleric level. The rounds need not be\
+    \ consecutive."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:obscuring_mist"
+- spell_level: 2
+  spell_id: "spell:fog_cloud"
+- spell_level: 3
+  spell_id: "spell:water_breathing"
+- spell_level: 4
+  spell_id: "spell:control_water"
+- spell_level: 5
+  spell_id: "spell:ice_storm"
+- spell_level: 6
+  spell_id: "spell:cone_of_cold"
+- spell_level: 7
+  spell_id: "spell:freezing_sphere"
+- spell_level: 8
+  spell_id: "spell:horrid_wilting"
+- spell_level: 9
+  spell_id: "spell:polar_ray"
+source: "Advanced Player's Guide"

@@ -1,6 +1,7 @@
 
 ability:spellcasting#paladinSpell Casting (Paladin)abilityclass_featurepaladin¢Ä
-ÁBeginning at 4th level, a paladin gains the ability to cast a small number of divine spells which are drawn from the paladin spell list. A paladin must choose and prepare her spells in advance.ªìéªÂ¿
+ÁBeginning at 4th level, a paladin gains the ability to cast a small number of divine spells which are drawn from the paladin spell list. A paladin must choose and prepare her spells in advance.ª™–ª*(
+caster_levelmax(0, @class:paladin-3)ªÂ¿
 $trait:level_1_spells_per_day#paladin–if(@class:paladin>=4,0+if(@class:paladin>4,1,0)+if(@class:paladin>8,1,0)+if(@class:paladin>12,1,0)+if(@class:paladin>16,1,0)+@cha_bonus_spells_1,null)ªÃÀ
 $trait:level_2_spells_per_day#paladin—if(@class:paladin>=7,0+if(@class:paladin>7,1,0)+if(@class:paladin>11,1,0)+if(@class:paladin>15,1,0)+if(@class:paladin>19,1,0)+@cha_bonus_spells_2,null)ªª§
 $trait:level_3_spells_per_day#paladinif(@class:paladin>=10,0+if(@class:paladin>10,1,0)+if(@class:paladin>14,1,0)+if(@class:paladin>18,1,0)+@cha_bonus_spells_3,null)ªª§

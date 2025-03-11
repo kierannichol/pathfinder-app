@@ -1,0 +1,8 @@
+
+%ranger_combat_style_feat:double_sliceDouble Sliceranger_combat_style_feat(¢—
+DYour off-hand weapon while dual-wielding strikes with greater power.R
+BenefitGAdd your Strength bonus to damage rolls made with your off-hand weapon.{
+NormalqYou normally add only half of your Strength modifier to damage rolls made with a weapon wielded in your off-hand.ª
+
+ª
+feat:double_sliceÂDBif(@arg:is_off_hand, if(@str_mod>0,floor(@str_mod/2),@str_mod), 0)

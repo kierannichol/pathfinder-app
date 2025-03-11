@@ -5,7 +5,8 @@ import {ChoiceRef} from "./Choice.ts";
 import {BaseDataContext, DataContext, Resolvable, ResolvedValue} from "@kierannichol/formula-js";
 import {array} from "@/app/pfutils.ts";
 import {hasTag} from "@pathfinder-lib/utils/tags";
-import Expression from "@pathfinder-lib/utils/logic/Expression"
+import {AttackModification} from "@/data/AttackModification.ts";
+import {EquipmentSet} from "@/data/Equipment.ts";
 
 export default class CharacterAtLevel extends BaseDataContext {
 
@@ -17,7 +18,7 @@ export default class CharacterAtLevel extends BaseDataContext {
     super();
   }
 
-  selected(choice: ChoiceRef|string, index?: number): string|string[] {
+  selected(choice: ChoiceRef | string, index?: number): string | string[] {
     if (!(typeof choice === 'string')) {
       choice = choice.path;
     }
@@ -28,47 +29,46 @@ export default class CharacterAtLevel extends BaseDataContext {
     return (array(value)[index] as string) ?? '';
   }
 
-  hasSelection(choice: ChoiceRef|string): boolean {
+  hasSelection(choice: ChoiceRef | string): boolean {
     return this.selected(choice) !== '';
   }
 
-  public choice(id: string): ChoiceRef|undefined {
+  public choice(id: string): ChoiceRef | undefined {
     return this.choices
-      .find(choice => choice.path === id);
+    .find(choice => choice.path === id);
   }
 
   public choicesOfType(...tags: string[]): ChoiceRef[] {
     return this.choices
-        .filter(choice => tags.some(tag => hasTag(choice.tags, tag)));
+    .filter(choice => tags.some(tag => hasTag(choice.tags, tag)));
+  }
+
+  public attackMods(): AttackModification[] {
+    return this.features
+    .map(feature => feature.attackMod)
+    .filter((mod): mod is AttackModification => mod !== undefined);
   }
 
   public modify(modifyFn: (state: EntityState) => void): CharacterAtLevel {
-    const copy = { ...this.state }
+    const copy = {...this.state}
     modifyFn(copy);
     return new CharacterAtLevel(this.level, this.character, this.features, copy, this.choices);
   }
 
-  public get(key: string): Resolvable|undefined {
-    if (key.includes('{')) {
-      return Expression.parse(key);
-    }
+  public get(key: string): ResolvedValue | undefined {
+    let result = this.state[key];
 
-    let result: string|number|boolean|Resolvable|ResolvedValue|Expression|undefined = this.state[key];
-    if (result === undefined) {
-      return Resolvable.None;
+    if (Array.isArray(result)) {
+      return ResolvedValue.of(result.map(element => this.resolveValue(element)));
     }
-    if (typeof result === 'string') {
-      if (result.includes('{')) {
-        return Expression.parse(result);
-      }
+    return this.resolveValue(result);
+  }
+
+  private resolveValue(value: string | number | boolean | Resolvable): ResolvedValue {
+    if (value instanceof Resolvable) {
+      return value.resolve(this) ?? ResolvedValue.None;
     }
-    if (result instanceof Resolvable) {
-      return result;
-    }
-    if (result === "") {
-      return Resolvable.None;
-    }
-    return Resolvable.just(result);
+    return ResolvedValue.of(value);
   }
 
   public has(key: string): boolean {
@@ -80,16 +80,17 @@ export default class CharacterAtLevel extends BaseDataContext {
   }
 
   diff(otherLevel: CharacterAtLevel): CharacterAtLevel {
-    const intersectedState = { ...this.state };
+    const intersectedState = {...this.state};
     for (const key of otherLevel.keys()) {
       try {
-        const newer = this.resolve(key)?.asNumber() ?? 0;
-        const older = otherLevel.resolve(key)?.asNumber() ?? 0;
+        const newer = this.get(key)?.asNumber() ?? 0;
+        const older = otherLevel.get(key)?.asNumber() ?? 0;
         if (newer - older > 0) {
           continue;
         }
         delete intersectedState[key];
-      } catch (ResolvableError) {}
+      } catch (ResolvableError) {
+      }
     }
 
     const intersectedFeatures: ResolvedFeature[] = this.features.filter(feature => {
@@ -105,9 +106,9 @@ export default class CharacterAtLevel extends BaseDataContext {
   }
 
   without(key: string): CharacterAtLevel {
-    const modifiedState = { ...this.state };
+    const modifiedState = {...this.state};
     const dataContext = DataContext.of(modifiedState);
-    const resolved = dataContext.resolve(key);
+    const resolved = dataContext.get(key);
     const numberValueOfKey = resolved?.asNumber() ?? 0;
     if (numberValueOfKey === 0 || numberValueOfKey === 1) {
       dataContext.remove(key);
@@ -119,5 +120,20 @@ export default class CharacterAtLevel extends BaseDataContext {
 
   withoutChoice(path: string): CharacterAtLevel {
     return this.character.atLevel(this.level, path);
+  }
+
+  withEquipment(equipmentSet: EquipmentSet): CharacterAtLevel {
+    const modifiedState = {...this.state};
+    const dataContext = DataContext.of(modifiedState);
+
+    for (let equipment of equipmentSet.equipment) {
+      if (!equipment.included) continue;
+
+      for (let effect of equipment.item.effects) {
+        effect.applyToDataContext(dataContext);
+      }
+    }
+
+    return new CharacterAtLevel(this.level, this.character, this.features, modifiedState, this.choices);
   }
 }

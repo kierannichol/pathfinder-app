@@ -1,0 +1,42 @@
+id: "cleric_domain:artifice_domain#alchemy"
+parent_id: "cleric_domain:artifice_domain"
+name: "Alchemy Subdomain"
+description: "You can repair damage to objects, animate objects with life, and create\
+  \ objects from nothing."
+granted_powers:
+- id: "ability:artificers_touch"
+  name: "Artificer’s Touch"
+  description: "You can cast mending at will, using your cleric level as the caster\
+    \ level to repair damaged objects. In addition, you can cause damage to objects\
+    \ and construct creatures by striking them with a melee touch attack. Objects\
+    \ and constructs take 1d6 points of damage +1 for every two cleric levels you\
+    \ possess. This attack bypasses an amount of damage reduction and hardness equal\
+    \ to your cleric level. You can use this ability a number of times per day equal\
+    \ to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:dancing_weapons"
+  name: "Dancing Weapons"
+  description: "At 8th level, you can give a weapon touched the dancing special weapon\
+    \ quality for 4 rounds. You can use this ability once per day at 8th level, and\
+    \ an additional time per day for every four levels beyond 8th."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:animate_rope"
+- spell_level: 2
+  spell_id: "spell:touch_injection"
+- spell_level: 3
+  spell_id: "spell:stone_shape"
+- spell_level: 4
+  spell_id: "spell:amplify_elixir"
+- spell_level: 5
+  spell_id: "spell:fabricate"
+- spell_level: 6
+  spell_id: "spell:delayed_consumption"
+- spell_level: 7
+  spell_id: "spell:wall_of_iron"
+- spell_level: 8
+  spell_id: "spell:statue*"
+- spell_level: 9
+  spell_id: "spell:prismatic_sphere"
+source: "Pathfinder Player Companion: Divine Anthology"

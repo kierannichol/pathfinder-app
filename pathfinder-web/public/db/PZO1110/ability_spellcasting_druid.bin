@@ -1,8 +1,9 @@
 
 ability:spellcasting#druidSpell Casting (Druid)abilityclass_featuredruid¢
-Druid can cast spells.ª«
-¨
-ª@>
+Druid can cast spells.ªÌ
+É
+ª
+caster_level@class:druidª@>
 "trait:level_0_spells_per_day#druid3+if(@class:druid>1,1,0)ªnl
 "trait:level_1_spells_per_day#druidF1+if(@class:druid>1,1,0)+if(@class:druid>3,1,0)+if(@class:druid>6,1,0)ªˆ…
 "trait:level_2_spells_per_day#druid_if(@class:druid>=3,1+if(@class:druid>3,1,0)+if(@class:druid>5,1,0)+if(@class:druid>8,1,0),null)ª‰†

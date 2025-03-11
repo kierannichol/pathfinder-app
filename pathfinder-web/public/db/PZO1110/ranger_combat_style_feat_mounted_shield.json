@@ -1,0 +1,23 @@
+{
+  "id": "ranger_combat_style_feat:mounted_shield",
+  "name": "Mounted Shield",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "You may add your base shield bonus (including the bonus from Shield Focus but not including enhancement bonuses) to your mount\u0027s AC. In addition, you may add this bonus when making a Ride check to negate a hit against your mount using the Mounted Combat feat."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:mounted_shield",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

@@ -7,5 +7,59 @@
   "weight": 10.0,
   "description": {
     "text": "This +2 lance is made out of white spruce wood with a handle carved from mammoth tusk ivory. Its shaft is decorated with images of charging mammoths or running wolves. Traditionally, the owner of a mammoth lance adorns the weapon with small trophies attached via short leather strips or carves notches in the shaft to represent triumphs. When wielded while mounted on a creature with the animal type, a mammoth lance uses the mount\u0027s Strength modifier on damage rolls rather than the wielder\u0027s Strength modifier.\nWhen its wielder is not mounted, or is mounted on a creature without the animal type, a mammoth lance functions as a normal +2 lance."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "type:two-handed": 1,
+    "crit_multiplier": 3,
+    "crit_range": 20,
+    "dice_count": 1,
+    "dice_sides": 8
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }]
 }

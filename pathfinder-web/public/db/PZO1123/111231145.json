@@ -7,5 +7,59 @@
   "weight": 6.0,
   "description": {
     "text": "The blade of this +2 holy bastard sword always appears lustrous and polished, with a hilt wrapped in alternating colors of deep black and royal purple. Effective on its own, a valor\u0027s minion is even more potent in the hands of those who dedicate their efforts to vanquishing a single foe. Whenever a wielder uses either the challenge or smite evil class feature, she can sacrifice one additional use of that class feature to treat the smite or challenge as if she were three class levels higher."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "crit_multiplier": 2,
+    "crit_range": 19,
+    "dice_count": 1,
+    "dice_sides": 10,
+    "type:one-handed": 1
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d10",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d10",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d10",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d10",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d10",
+    "missDamage": "0"
+  }]
 }

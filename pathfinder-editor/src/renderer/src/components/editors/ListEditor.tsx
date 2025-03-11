@@ -11,7 +11,7 @@ export interface ListEditorProps<T> {
   onAddItem: (index: number) => T;
   onRemoveItem?: (item: T, index: number) => void;
   addButtonLabel?: ReactNode;
-  children: (item: T, index?: number, setItem?: Dispatch<SetStateAction<T>>, actions?: ListEditorItemActions) => ReactNode;
+  children: (item: T, index: number, setItem: Dispatch<SetStateAction<T>>, actions: ListEditorItemActions) => ReactNode;
 }
 
 export default function ListEditor<T>({ values, onListChanged, onAddItem, onRemoveItem, addButtonLabel = '+ Add', children}: ListEditorProps<T>) {
@@ -26,9 +26,8 @@ export default function ListEditor<T>({ values, onListChanged, onAddItem, onRemo
     notifyUpdated(copy);
   }
 
-  function handleRemove(value: T|null, index: number) {
-    const copy = [...values];
-    copy[index] = undefined;
+  function handleRemove(value: T, index: number) {
+    const copy = values.splice(index, 1);
     onRemoveItem?.(value, index);
     notifyUpdated(copy);
   }

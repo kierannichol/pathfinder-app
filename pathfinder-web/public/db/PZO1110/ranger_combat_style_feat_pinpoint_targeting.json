@@ -1,0 +1,24 @@
+{
+  "id": "ranger_combat_style_feat:pinpoint_targeting",
+  "name": "Pinpoint Targeting",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You can target the weak points in your opponent\u0027s armor.",
+    "sections": {
+      "Benefit": "As a standard action, make a single ranged attack. The target does not gain any armor, natural armor, or shield bonuses to its Armor Class. You do not gain the benefit of this feat if you move this round."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:pinpoint_targeting",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

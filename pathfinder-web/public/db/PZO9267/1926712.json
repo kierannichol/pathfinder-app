@@ -7,5 +7,59 @@
   "weight": 4.0,
   "description": {
     "text": "This +1 scimitar has a twisted hilt that evokes a stylized version of Sarenrae\u0027s holy symbol. The blade is etched with a prayer to the goddess to redeem the repentant and consume the unremorseful. Once per day, the wielder can use spell combat (as a magus) to make a full attack with the scimitar in one hand (with a –2 penalty on all attacks) and project a 15-foot cone of flame from the other hand that deals 3d4 points of fire damage to creatures in the area. This cone of fire does not provoke attacks of opportunity, and is otherwise identical to burning hands, except the flames are yellow-white and undead creatures in the area take 3 additional points of damage from the fire. The hand projecting the fire must be free—not wielding a weapon or holding an object—for the wielder to use this ability."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "crit_multiplier": 2,
+    "crit_range": 18,
+    "dice_count": 1,
+    "dice_sides": 6,
+    "type:one-handed": 1
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }]
 }

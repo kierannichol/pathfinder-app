@@ -8,7 +8,10 @@ export interface FeatureKey {
 }
 
 export interface ChoiceData {
-
+  choice_id: string;
+  label: string;
+  type: string;
+  option_tags: string[];
 }
 
 export interface StackModificationData {
@@ -29,6 +32,8 @@ export interface ClassFeatureData {
   description: DescriptionDbo|string;
   effects: string[];
   links: string[];
+  fixed_stacks: StackData[];
+  repeating_stack: StackData|undefined;
 }
 
 export interface ClassLevelData {

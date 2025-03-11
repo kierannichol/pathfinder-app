@@ -1,6 +1,7 @@
 .tabs {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .tabList {
@@ -9,27 +10,29 @@
   font-size: 14pt;
 
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
   justify-content: space-evenly;
   gap: 0.4em;
 
-  background-color: var(--pf-primary-rgb);
+  background-color: #0D6EFDFF;
   color: white;
 }
 
 .tab {
-  padding: 0.5em 1em;
+  padding: 5px 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  flex: 1;
+  /*flex: 1;*/
 }
 
 .tab.active {
-  background-color: var(--pf-primary-hover-rgb);
+  background-color: white;
+  color: initial;
 }
 
 .content {

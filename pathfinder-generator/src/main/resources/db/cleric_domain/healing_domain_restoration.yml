@@ -1,0 +1,41 @@
+id: "cleric_domain:healing_domain#restoration"
+parent_id: "cleric_domain:healing_domain"
+name: "Restoration Subdomain"
+description: "Your touch staves off pain and death, and your healing magic is particularly\
+  \ vital and potent."
+granted_powers:
+- id: "ability:healers_blessing"
+  name: "Healer’s Blessing"
+  description: "At 6th level, all of your cure spells are treated as if they were\
+    \ empowered, increasing the amount of damage healed by half (+50%). This does\
+    \ not apply to damage dealt to undead with a cure spell. This does not stack with\
+    \ the Empower Spell metamagic feat."
+  type: "Su"
+- id: "ability:restorative_touch"
+  name: "Restorative Touch"
+  description: "You can touch a creature, letting the healing power of your deity\
+    \ flow through you to relieve the creature of a minor condition. Your touch can\
+    \ remove the dazed, fatigued, shaken, sickened, or staggered condition. You choose\
+    \ which condition is removed. You can use this ability a number of times per day\
+    \ equal to 3 + your Wisdom modifier."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:cure_light_wounds"
+- spell_level: 2
+  spell_id: "spell:remove_disease"
+- spell_level: 3
+  spell_id: "spell:cure_serious_wounds"
+- spell_level: 4
+  spell_id: "spell:neutralize_poison"
+- spell_level: 5
+  spell_id: "spell:break_enchantment"
+- spell_level: 6
+  spell_id: "spell:heal"
+- spell_level: 7
+  spell_id: "spell:regenerate"
+- spell_level: 8
+  spell_id: "spell:cure_critical_wounds"
+- spell_level: 9
+  spell_id: "spell:heal"
+source: "Advanced Player's Guide"

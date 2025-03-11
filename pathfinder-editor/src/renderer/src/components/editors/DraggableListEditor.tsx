@@ -10,7 +10,7 @@ export default function DraggableListEditor<T extends { id: string|number }>({ v
   const [ draggingElement, setDraggingElement ] = useState<T|null>(null);
 
   function handleDragStart(event: DragStartEvent) {
-    setDraggingElement(values.find(val => val.id === event.active.id));
+    setDraggingElement(values.find(val => val.id === event.active.id) ?? null);
   }
 
   function handleDragEnd(result: DragEndEvent) {
@@ -22,7 +22,7 @@ export default function DraggableListEditor<T extends { id: string|number }>({ v
         const oldIndex = values.findIndex(item => item.id === active.id)
         const newIndex = values.findIndex(item => item.id === over?.id)
         const copy = arrayMove(values, oldIndex, newIndex);
-        onListChanged(copy);
+        onListChanged?.(copy);
     }
   }
 
@@ -39,7 +39,7 @@ export default function DraggableListEditor<T extends { id: string|number }>({ v
     </SortableContext>
 
     <DragOverlay>
-      {draggingElement && children?.(draggingElement)}
+      {draggingElement && children?.(draggingElement, 0, () => {}, { remove: () => {} })}
     </DragOverlay>
   </Droppable>
 }

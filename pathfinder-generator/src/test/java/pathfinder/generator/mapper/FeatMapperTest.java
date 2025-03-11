@@ -9,6 +9,7 @@ import pathfinder.db.PathfinderDatabase;
 import pathfinder.generator.PrerequisiteParser;
 import pathfinder.model.Id;
 import pathfinder.model.RepeatingStack;
+import pathfinder.model.pathfinder.ClassFeature;
 
 class FeatMapperTest {
     private static PathfinderDatabase database;
@@ -19,6 +20,14 @@ class FeatMapperTest {
         database = new LocalPathfinderDatabaseLoader().load();
         PrerequisiteParser prerequisiteParser = new PrerequisiteParser(database);
         mapper = new FeatMapper(database, prerequisiteParser);
+    }
+
+    @Test
+    void choice() {
+        var fm = new ClassFeatureMapper(new PrerequisiteParser(database));
+        var domainFeature = database.getClassById(Id.of("class:cleric"));
+        var cf = ClassFeature.fromFeature(domainFeature.get().class_features().stream().filter(f -> f.id().key.equals("domains")).findFirst().get(), Id.of("class:cleric"));
+        fm.map(cf);
     }
 
     @Test

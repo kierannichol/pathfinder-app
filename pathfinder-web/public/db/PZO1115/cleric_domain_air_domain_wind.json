@@ -1,0 +1,22 @@
+{
+  "id": "cleric_domain:air_domain#wind",
+  "name": "Wind Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You can manipulate lightning, mist, and wind, traffic with air creatures, and are resistant to electricity damage."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:electricity_resistance", "ability:wind_blast"]
+          }]
+        }]
+      }]
+    }
+  }
+}

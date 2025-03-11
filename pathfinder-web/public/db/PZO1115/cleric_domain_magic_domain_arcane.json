@@ -1,0 +1,22 @@
+{
+  "id": "cleric_domain:magic_domain#arcane",
+  "name": "Arcane Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You are a true student of all things mystical, and see divinity in the purity of magic."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:dispelling_touch", "ability:arcane_beacon"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -7,6 +7,7 @@ name: "Measured Response"
 type: "COMBAT"
 description: "You believe that a conservative but consistent response guarantees success."
 prerequisites: "Base attack bonus +1, worshiper of the associated deity."
+enabled_formula: "all(@bab >= 1, @deity:name=='Abadar')"
 benefit: "When you hit an opponent with a melee or ranged weapon attack, you may choose\
   \ to deal average damage (rounded down), as if you had rolled exactly the average\
   \ amount on the damage die or dice. You add your damage bonuses and penalties as\

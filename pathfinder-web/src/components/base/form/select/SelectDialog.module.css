@@ -5,9 +5,19 @@
 }
 
 .body {
-  width: 100%;
-  flex: 1;
+  flex-grow: 1;
+  box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 1);
   /*max-width: 50vw;*/
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.footer {
+  background-color: #0D6EFDFF;
 }
 
 .categories {
@@ -27,7 +37,9 @@
   padding: 0.5em;
 }
 .category.active {
-  background-color: var(--pf-primary-hover-rgb);
+  background-color: white;
+  color: #0D6EFDFF;
+  border-radius: 12px;
 }
 
 .searchbar {

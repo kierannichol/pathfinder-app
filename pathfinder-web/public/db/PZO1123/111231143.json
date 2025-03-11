@@ -7,5 +7,59 @@
   "weight": 5.0,
   "description": {
     "text": "This special +3 bane warhammer seeks only to crush the enemy of its wielder in battle. The hammer can speak Common, constantly mutters, curses when it is not engaged in battle, and sings deeply of its love of carnage when it is being used in a fight. The hammer of enemies is always eager to point out potential enemies within its vision. Because of its bloodlust it does not bestow negative levels on creatures that do not share its alignment—it is willing to fight for anyone. Additionally, three times per day, the hammer of enemies can change the creature type of its bane ability. A creature type remains until a new one is chosen."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "crit_multiplier": 3,
+    "crit_range": 20,
+    "dice_count": 1,
+    "dice_sides": 8,
+    "type:one-handed": 1
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }]
 }

@@ -122,6 +122,7 @@ public class CoreCharacterFeatureProvider implements FeatureProvider {
                         .setName(weapon.name())
                         .setLabel("Proficiency: " + weapon.name())
                         .setMaxStacks(1)
+                        .addTag("weapon_proficiency")
                         .addFixedStack(new StackBuilder()
                                 .addEffect(Effect.setNumber(Id.of("proficiency", weapon.id()), 1))
                                 .build()))

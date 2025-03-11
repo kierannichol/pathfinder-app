@@ -4,4 +4,28 @@
 Damage TypeB
 Critical19-20/x2
 Damage1d3
-Weapon GroupExotic
+Weapon GroupExoticªAttack²
+
+type:light²
+crit_multiplier²
+
+crit_range²
+
+dice_count²
+
+dice_sidesÊS
+	Attack #1@bab > 04
+&1d20 + (@bab-0) + @str_mod + @size_mod
+@target:ac"1d3*0ÊS
+	Attack #2@bab > 54
+&1d20 + (@bab-5) + @str_mod + @size_mod
+@target:ac"1d3*0ÊU
+	Attack #3	@bab > 105
+'1d20 + (@bab-10) + @str_mod + @size_mod
+@target:ac"1d3*0ÊU
+	Attack #4	@bab > 155
+'1d20 + (@bab-15) + @str_mod + @size_mod
+@target:ac"1d3*0ÊU
+	Attack #5	@bab > 205
+'1d20 + (@bab-20) + @str_mod + @size_mod
+@target:ac"1d3*0

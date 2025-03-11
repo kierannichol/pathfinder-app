@@ -1,0 +1,23 @@
+{
+  "id": "ranger_combat_style_feat:greater_two_weapon_fighting",
+  "name": "Greater Two-Weapon Fighting",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "You get a third attack with your off-hand weapon, albeit at a –10 penalty."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:greater_two_weapon_fighting",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

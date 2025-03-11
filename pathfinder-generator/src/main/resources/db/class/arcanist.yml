@@ -185,6 +185,7 @@ class_features:
   type: null
   description: "Arcanist can cast spells."
   effects:
+  - "INCR caster_level @class:arcanist"
   - "SET trait:level_1_spells_per_day#arcanist 2+if(@class:arcanist>1,1,0)+if(@class:arcanist>2,1,0)"
   - "SET trait:level_2_spells_per_day#arcanist if(@class:arcanist>=4,2+if(@class:arcanist>4,1,0)+if(@class:arcanist>5,1,0),null)"
   - "SET trait:level_3_spells_per_day#arcanist if(@class:arcanist>=6,2+if(@class:arcanist>6,1,0)+if(@class:arcanist>7,1,0),null)"

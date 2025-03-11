@@ -44,7 +44,7 @@ import pathfinder.util.StringUtils;
 @RequiredArgsConstructor
 public class PrerequisiteParser {
     private static final Pattern IS_INT_PATTERN = Pattern.compile("-?\\d+");
-    private static final String RACE_GROUP = "(human|dwarf|drow|orc|hobgoblin|gnome|halfling|elf|half-elf|half-orc|naga|serpentfolk|tiefling|goblin|catfolk|creature that has the constrict special attack)";
+    private static final String RACE_GROUP = "(ifrit|dhampir|undine|aasimar|human|dwarf|drow|orc|hobgoblin|gnome|halfling|elf|half-elf|half-orc|naga|serpentfolk|tiefling|goblin|kobold|catfolk|creature that has the constrict special attack)";
     private static final String CLASS_GROUP = "(barbarian|bard|cleric|druid|fighter|monk|paladin|ranger|rogue|sorcerer|wizard|alchemist|cavalier|gunslinger|inquisitor|magus|omdura|oracle|shifter|summoner|witch|vampire hunter|vigilante|arcanist|bloodrager|brawler|hunter|investigator|shaman|skald|slayer|swashbuckler|warpriest|witch|savage|summoner \\(unchained\\)|occultist|kineticist|mesmerist)";
     private static final String SKILL_GROUP = "(" + Skills.ALL.stream().map(Skill::name).map(Pattern::quote).collect(Collectors.joining("|")) + ")";
     private static final String ABILITY_SCORE_GROUP = "(str|strength|dex|dexterity|con|constitution|wis|wisdom|int|intelligence|cha|charisma)";
@@ -82,7 +82,10 @@ public class PrerequisiteParser {
             .addImmediateReplacement("the ability to cast animate dead or command undead", "(@spell:animate_dead OR @spell:command_undead)")
             .addImmediateReplacement("ability to acquire an animal companion, eidolon, familiar, or special mount", "(@trait:animal_companion OR @feature:eidolon OR @feature:familiar OR @feature:special_mount)")
             .addImmediateReplacement("Channel energy class feature", "@ability:channel_energy[Channel Energy]")
-            .addImmediateReplacement("halfling sling staff", "halfling_sling_staff")
+//            .addImmediateReplacement("halfling sling staff", "halfling_sling_staff")
+
+//            .addImmediateReplacement("proficient with sling or halfling sling staff", "any(@proficiency:sling,@proficiency:halfling_sling_staff)")
+//            .addImmediateReplacement("proficient with sling or half ling sling staff", "any(@proficiency:sling,@proficiency:halfling_sling_staff)")
 
             .addReplacement("augmented summoning", "@feat:augment_summoning")
 //            .addReplacement("base attack bonus +{NUMBER} or monk level {LEVEL}", "any(@bab>={0},@class:monk>={1})")
@@ -100,6 +103,19 @@ public class PrerequisiteParser {
             .addReplacement("goblin", "@race:goblin")
             .addReplacement("drow", "@race:drow")
             .addReplacement("tiefling", "@race:tiefling")
+            .addReplacement("aasimar", "@race:aasimar")
+            .addReplacement("undine", "@race:undine")
+            .addReplacement("dhampir", "@race:dhampir")
+            .addReplacement("ifrit", "@race:ifrit")
+            .addReplacement("changeling", "@race:changeling")
+            .addReplacement("ratfolk", "@race:ratfolk")
+            .addReplacement("kobold", "@race:kobold")
+            .addReplacement("strix", "@race:strix")
+            .addReplacement("tengu", "@race:tengu")
+            .addReplacement("suli", "@race:suli")
+            .addReplacement("duergar", "@race:duergar")
+            .addReplacement("kitsune", "@race:kitsune")
+            .addReplacement("fetchling", "@race:fetchling")
 
             .addReplacement("use psychic spell-like abilities", "\"Use psychic spell-like abilities\"")
             .addReplacement("ability to awaken the heart chakra", "\"Ability to awaken the heart chakra\"")
@@ -130,7 +146,7 @@ public class PrerequisiteParser {
 
             .addReplacement("Spell-like ability at CL 10th or higher", "\"Spell-like ability at CL 10th or higher\"")
 
-            .addReplacement("Channel energy {NUMBER}d{NUMBER} (positive energy)", "sum(@ability:channel_positive_energy#*) >= {0}")
+            .addReplacement("Channel energy {NUMBER}d{NUMBER} (positive energy)", "@ability:channel_positive_energy >= {0}")
 
             .addReplacement("Strength {NUMBER}", "@str_score >= {0}")
             .addReplacement("Dexterity {NUMBER}", "@dex_score >= {0}")
@@ -156,8 +172,10 @@ public class PrerequisiteParser {
             .addReplacement("worshiper of an evil deity", "any(@deity:alignment_le,@deity:alignment_ne,@deity:alignment_ce)")
             .addReplacement("worshiper of a good deity", "any(@deity:alignment_lg,@deity:alignment_ng,@deity:alignment_cg)")
             .addReplacement("worshiper of a chaotic neutral deity", "@deity:alignment_cn")
-            .addReplacement("follower of the green faith", "@deity=='Green Faith'")
-            .addReplacement("cannot have a patron deity", "@deity==''")
+            .addReplacement("follower of the green faith", "@deity:name=='Green Faith'")
+            .addReplacement("worshiper of the god of {NAME}", "@deity:domain_{0}")
+            .addReplacement("must worship a deity", "sum(@deity:domain_*)")
+            .addReplacement("cannot have a patron deity", "sum(@deity:domain_*)<=0")
             .addImmediateReplacement("worshiper of a deity of trickery, lust, and revenge", "all(@deity:domain_trickery,@deity:domain_lust,@deity:domain_revenge)")
             .addImmediateReplacement("worshiper of a deity of trickery, lust, revenge", "all(@deity:domain_trickery,@deity:domain_lust,@deity:domain_revenge)")
 
@@ -301,8 +319,8 @@ public class PrerequisiteParser {
             .addReplacement("must be lawful good", "@alignment:lg")
             .addReplacement("alignment must be within one step of your deity's", "\"alignment must be within one step of your deity's\"")
             .addReplacement("nonlawful", "(@alignment:ng OR @alignment:cg OR @alignment:n OR @alignment:cn OR @alignment:ne OR @alignment:ce)[Non-lawful alignment]")
-            .addReplacement("Channel negative energy", "sum(@ability:channel_negative_energy#*)")
-            .addReplacement("Channel energy {NUMBER}d{NUMBER}#positive energy", "sum(@ability:channel_positive_energy#*) >= {0}")
+            .addReplacement("Channel negative energy", "@ability:channel_negative_energy")
+            .addReplacement("Channel energy {NUMBER}d{NUMBER}#positive energy", "@ability:channel_positive_energy >= {0}")
             .addReplacement("Cold resistance racial trait", "@trait:cold_resistance")
             .addReplacement("{NAME} archetype", "true")
             .addReplacement("darkvision {NUMBER} ft", "@trait:darkvision >= {0}")
@@ -367,7 +385,6 @@ public class PrerequisiteParser {
             .addReplacement("Surprise Follow Through", "@ability:surprise_follow_through")
             .addReplacement("Rapid Reload", "@ability:rapid_reload")
             .addReplacement("Snake Sidewind", "@feat:snake_sidewind")
-            .addImmediateReplacement("half ling", "halfling")
 
             // TODO: remove once paladin oath abilities have been added
             .addReplacement("Anchoring aura", "@ability:anchoring_aura")

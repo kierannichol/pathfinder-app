@@ -1,0 +1,41 @@
+id: "cleric_domain:darkness_domain#night"
+parent_id: "cleric_domain:darkness_domain"
+name: "Night Subdomain"
+description: "You manipulate shadows and darkness."
+granted_powers:
+- id: "ability:eyes_of_darkness"
+  name: "Eyes of Darkness"
+  description: "At 8th level, your vision is not impaired by lighting conditions,\
+    \ even in absolute darkness and magic darkness. You can use this ability for a\
+    \ number of rounds per day equal to 1/2 your cleric level. These rounds do not\
+    \ need to be consecutive."
+  type: "Su"
+- id: "ability:night_hunter"
+  name: "Night Hunter"
+  description: "As a standard action, you can blend into the shadows of the night,\
+    \ becoming nearly invisible. As long as you are in an area of dim light or darkness,\
+    \ you are invisible (as per invisibility) to creatures without darkvision. This\
+    \ ability lasts for a number of rounds equal to 1/2 your cleric level (minimum\
+    \ 1). You can use this ability for a number of times per day equal to 3 + your\
+    \ Wisdom modifier."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:sleep"
+- spell_level: 2
+  spell_id: "spell:blindness_deafness"
+- spell_level: 3
+  spell_id: "spell:deeper_darkness"
+- spell_level: 4
+  spell_id: "spell:shadow_conjuration"
+- spell_level: 5
+  spell_id: "spell:summon_monster_v"
+- spell_level: 6
+  spell_id: "spell:nightmare"
+- spell_level: 7
+  spell_id: "spell:power_word_blind"
+- spell_level: 8
+  spell_id: "spell:shadow_evocation"
+- spell_level: 9
+  spell_id: "spell:shades"
+source: "Advanced Player's Guide"

@@ -7,6 +7,7 @@ import SelectDialog from "@/components/base/form/select/SelectDialog.tsx";
 import choiceSelectButtonStyles from "@/components/choice/ChoiceSelectButton.module.css";
 import {useDatabase} from "@/data/context.ts";
 import {SelectListEntry} from "@/components/base/form/select/SelectList.tsx";
+import DescriptionBlock from "@/components/DescriptionBlock.tsx";
 
 interface NewCharacterDialogProps {
   show: boolean;
@@ -31,6 +32,7 @@ function NewCharacterDialog({ show, onCreate, onCancel, defaultCharacterName = '
   const classOptions = useMemo(() => {
     return database.query(['favored_class']).map(summary => {
       return SelectListEntry.builder(summary.key, summary.name)
+        .description(async () => <DescriptionBlock description={await database.description(summary.key)} />)
         .build();
     });
   }, [database]);
@@ -39,18 +41,27 @@ function NewCharacterDialog({ show, onCreate, onCancel, defaultCharacterName = '
     onCreate(characterName, characterClass ?? '');
   }
 
-  // function handleClassSelected(selected: Option[]) {
-  //   const first = selected[0];
-  //   const id = typeof first === 'string' ? first : first.id;
-  //   setCharacterClass(id);
-  // }
+  const canCreate = characterName !== '' && characterClass !== undefined;
+
+  function handleShowClassSelect() {
+    setShowSelectClassDialog(true);
+  }
+
+  function handleConfirmClassSelect(value: string) {
+    setCharacterClass(value);
+    setShowSelectClassDialog(false);
+  }
+
+  function handleCancelClassSelect() {
+    setShowSelectClassDialog(false);
+  }
 
   return (<DialogBox
       show={show}
       onClose={onCancel}
       className={styles.newCharacterDialog}>
     <DialogBox.Title>
-      <div>Create New Character</div>
+      Create New Character
     </DialogBox.Title>
     <DialogBox.Body>
       <label>Character Name</label>
@@ -60,16 +71,20 @@ function NewCharacterDialog({ show, onCreate, onCancel, defaultCharacterName = '
           onEnter={handleCreate}
           autoFocus={true}/>
       <label>Class</label>
-      <Button className={choiceSelectButtonStyles.button} onClick={() => setShowSelectClassDialog(true)}>{characterClassName ?? <i>Select Class</i>}</Button>
-      <SelectDialog show={showSelectClassDialog}
-                    title="Select Class"
-                    onSelect={(value) => {
-        setCharacterClass(value);
-        setShowSelectClassDialog(false);
-      }} onClose={() => setShowSelectClassDialog(false)} value={characterClass} optionsFn={() => classOptions} />
+      <Button className={choiceSelectButtonStyles.button} onClick={handleShowClassSelect}>{characterClassName ?? <i>Select Class</i>}</Button>
+      {showSelectClassDialog &&
+          <SelectDialog show={showSelectClassDialog}
+                        title="Select Class"
+                        onSelect={handleConfirmClassSelect}
+                        onClose={handleCancelClassSelect}
+                        value={characterClass}
+                        optionsFn={() => classOptions} />
+      }
     </DialogBox.Body>
     <DialogBox.Footer>
-      <Button className={styles.confirmButton} onClick={handleCreate}>Create</Button>
+      <button className={styles.confirmButton}
+              disabled={!canCreate}
+              onClick={handleCreate}>Create</button>
     </DialogBox.Footer>
   </DialogBox>);
 }

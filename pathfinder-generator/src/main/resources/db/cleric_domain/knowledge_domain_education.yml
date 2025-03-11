@@ -1,0 +1,40 @@
+id: "cleric_domain:knowledge_domain#education"
+parent_id: "cleric_domain:knowledge_domain"
+name: "Education Subdomain"
+description: "You are a scholar and a sage of legends. In addition, you treat all\
+  \ Knowledge skills as class skills."
+granted_powers:
+- id: "ability:lore_keeper"
+  name: "Lore Keeper"
+  description: "You can touch a creature to learn about its abilities and weaknesses.\
+    \ With a successful touch attack, you gain information as if you made the appropriate\
+    \ Knowledge skill check with a result equal to 15 + your cleric level + your Wisdom\
+    \ modifier."
+  type: "Sp"
+- id: "ability:remote_viewing"
+  name: "Remote Viewing"
+  description: "Starting at 6th level, you can use clairvoyance/clairaudience at will\
+    \ as a spell-like ability using your cleric level as the caster level. You can\
+    \ use this ability for a number of rounds per day equal to your cleric level.\
+    \ These rounds do not need to be consecutive."
+  type: "Sp"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:know_the_enemy"
+- spell_level: 2
+  spell_id: "spell:foxs_cunning"
+- spell_level: 3
+  spell_id: "spell:speak_with_dead"
+- spell_level: 4
+  spell_id: "spell:divination"
+- spell_level: 5
+  spell_id: "spell:true_seeing"
+- spell_level: 6
+  spell_id: "spell:battlemind_link"
+- spell_level: 7
+  spell_id: "spell:legend_lore"
+- spell_level: 8
+  spell_id: "spell:circle_of_clarity"
+- spell_level: 9
+  spell_id: "spell:foresight"
+source: "Pathfinder Player Companion: Heroes of the Street"

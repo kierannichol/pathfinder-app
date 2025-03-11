@@ -4,7 +4,9 @@ import static pathfinder.util.ListUtils.mapList;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import pathfinder.data.ItemOptionDbo;
 import pathfinder.data.ItemOptionSummaryDbo;
 import pathfinder.model.pathfinder.FromSourceBook;
@@ -27,6 +29,8 @@ public record ItemOption(String code,
                          @JsonProperty("currency_cost_base") double currencyCostBase,
                          @JsonProperty("currency_cost_by_weight") double currencyCostByWeight,
                          List<String> tags,
+                         @JsonProperty("attack_mod") AttackModification attackMod,
+                         Map<String, Integer> stats,
                          @JsonProperty("source_id") SourceId sourceId) implements FromSourceBook {
 
     public static ItemOption.Builder builder(String code, SourceId sourceId) {
@@ -34,7 +38,7 @@ public record ItemOption(String code,
     }
 
     public ItemOptionDbo toDbo() {
-        return ItemOptionDbo.newBuilder()
+        var builder = ItemOptionDbo.newBuilder()
                 .setId(sourceId.generate(code).number())
                 .setName(name)
                 .setBaseNamePrefix(baseNamePrefix)
@@ -43,8 +47,17 @@ public record ItemOption(String code,
                 .setCurrencyCost(currencyCostBase)
                 .setCurrencyCostByWeight(currencyCostByWeight)
                 .addAllTags(mapList(tags, t -> Sources.CORE.generate("tag:" + t).number()))
-                .setDescription(description.toDbo())
-                .build();
+                .setDescription(description.toDbo());
+
+        if (stats != null) {
+            builder.putAllStats(stats);
+        }
+
+        if (attackMod != null) {
+            builder.setAttackModifier(attackMod.toDbo());
+        }
+
+        return builder.build();
     }
 
     public ItemOptionSummaryDbo toSummaryDbo() {
@@ -79,6 +92,8 @@ public record ItemOption(String code,
         private double currencyCostBase = 0;
         private double currencyCostByWeight = 0;
         private final List<String> tags = new ArrayList<>();
+        private AttackModification attackMod;
+        private final Map<String, Integer> stats = new HashMap<>();
 
         public String getCode() {
             return code;
@@ -124,6 +139,16 @@ public record ItemOption(String code,
             return this;
         }
 
+        public Builder setAttackMod(AttackModification attackMod) {
+            this.attackMod = attackMod;
+            return this;
+        }
+
+        public Builder addStat(String stat, int value) {
+            this.stats.put(stat, value);
+            return this;
+        }
+
         public ItemOption build() {
             return new ItemOption(code,
                     name,
@@ -134,6 +159,8 @@ public record ItemOption(String code,
                     currencyCostBase,
                     currencyCostByWeight,
                     tags,
+                    attackMod,
+                    stats,
                     sourceId);
         }
 

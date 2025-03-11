@@ -1,0 +1,18 @@
+{
+  "id": "feat:blood_beak",
+  "name": "Blood Beak",
+  "tags": ["feat", "racial"],
+  "enabledFormula": "all(@bab\u003e\u003d5,any(@ability:bite,@ability:claw,@ability:gore)[Natural weapon],@race:tengu)",
+  "maxStacks": 1,
+  "description": {
+    "text": "Your bleed attack is bloody and dangerous.",
+    "sections": {
+      "Benefit": "Increase the damage of your beak attack to 1d6. Furthermore, when you confirm a critical hit with your beak attack, you also deal 1 point of bleed damage.",
+      "Special": "The bleed effect from this feat stacks with that of the Bleeding Critical feat and similar effects, adding 1 point to your bleed damage."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

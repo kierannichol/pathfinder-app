@@ -1,0 +1,22 @@
+{
+  "id": "cleric_domain:travel_domain#exploration",
+  "name": "Exploration Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You are an explorer and find enlightenment in the simple joy of travel, be it by foot or conveyance or magic. Increase your base speed by 10 feet."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:dimensional_hop", "ability:door_sight"]
+          }]
+        }]
+      }]
+    }
+  }
+}

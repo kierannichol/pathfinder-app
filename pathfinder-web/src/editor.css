@@ -1,0 +1,157 @@
+:root {
+  --pf-primary-rgb: #0D6EFDFF;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+button {
+  background-color: var(--pf-primary-rgb);
+  color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+button:disabled {
+  background-color: dimgray;
+  color: white;
+  cursor: not-allowed;
+}
+button.light {
+  background-color: white;
+  color: var(--pf-primary-rgb);
+}
+button.light:disabled {
+  background-color: lightgrey;
+  color: slategray;
+}
+button.field {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-shadow: none;
+  width: 100%;
+  text-align: left;
+  height: 3rem;
+}
+/*button:not(:disabled):hover {*/
+/*  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);*/
+/*}*/
+
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+details {
+  border: 2px solid black;
+  border-bottom-style: none;
+
+  overflow: hidden;
+  transition: height 1s ease;
+}
+details summary::-webkit-details-marker {
+  display:none;
+}
+details summary {
+  list-style: none;
+  position: relative;
+  padding-left: 2em;
+  cursor: pointer;
+  user-select: none;
+}
+details[open] > summary:before {
+  transform: rotate(90deg);
+}
+details summary::before {
+  content: '';
+  border-width: .4rem;
+  border-style: solid;
+  border-color: transparent transparent transparent currentColor;
+  position: absolute;
+  top: 1.3rem;
+  left: 1rem;
+  transform: rotate(0);
+  transform-origin: .2rem 50%;
+  transition: .25s transform ease;
+}
+details[open] summary {
+  border-bottom: 2px solid black;
+}
+details:last-child {
+  border-bottom: solid;
+}
+summary {
+  padding: 1em;
+}
+
+header {
+  background-color: var(--pf-primary-rgb);
+  color: white;
+  padding: 16px 1rem;
+  font-weight: bold;
+}
+
+input {
+  display: inline-block;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 4px;
+  --webkit-box-sizing: border-box;
+  --moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  font-size: inherit;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+main {
+  background-color: white;
+  padding: 0;
+}
+
+section {
+  padding: 1rem;
+}
+
+select {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 4px;
+  width: 100%;
+  text-align: left;
+  padding: 12px 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 3px solid dimgray;
+}
+
+table > thead {
+  background-color: dimgray;
+  color: white;
+  text-align: center;
+}
+
+table > tbody {
+  color: dimgray;
+  font-weight: bolder;
+  text-align: center;
+}
+
+table > tbody > tr > td {
+  border: 3px solid dimgray;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}

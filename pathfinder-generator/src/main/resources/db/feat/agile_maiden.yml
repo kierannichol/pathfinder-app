@@ -8,6 +8,7 @@ type: "COMBAT"
 description: "Your armor hinders you less than others."
 prerequisites: "Str 13; Dex 13; Endurance or armor training class feature; proficiency\
   \ with heavy armor."
+enabled_formula: "all(@str_score >= 13, @dex_score >= 13, all((@feat:endurance OR sum(@ability:armor_training#*)[Armor Training]), @proficiency:heavy_armor))"
 benefit: "For the purpose of class features (such as a ranger's combat style, a barbarian's\
   \ fast movement, or a magus's spellcasting), you treat Gray Maiden plate as medium\
   \ armor or heavy armor, whichever is more beneficial to a given ability. This does\

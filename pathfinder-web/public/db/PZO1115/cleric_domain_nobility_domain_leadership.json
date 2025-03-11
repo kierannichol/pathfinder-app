@@ -1,0 +1,22 @@
+{
+  "id": "cleric_domain:nobility_domain#leadership",
+  "name": "Leadership Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You are a great leader, an inspiration to all who follow the teachings of your faith."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:leadership", "ability:inspiring_command"]
+          }]
+        }]
+      }]
+    }
+  }
+}

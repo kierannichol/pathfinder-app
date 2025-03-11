@@ -1,0 +1,25 @@
+{
+  "id": "cleric_domain:repose_domain#ancestors",
+  "name": "Ancestors Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You see death not as something to be feared, but as a final rest and reward for a life well spent. The taint of undeath is a mockery of what you hold dear."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:gentle_rest"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:speak_with_dead"]
+          }]
+        }]
+      }]
+    }
+  }
+}

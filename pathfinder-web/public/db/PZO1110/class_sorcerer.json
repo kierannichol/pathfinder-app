@@ -11,7 +11,8 @@
       "stacks": [{
         "effects": [{
           "addAction": {
-            "targetKey": "fort:base"
+            "targetKey": "fort:base",
+            "numberDelta": 0
           }
         }, {
           "addAction": {
@@ -20,7 +21,8 @@
           }
         }, {
           "addAction": {
-            "targetKey": "ref:base"
+            "targetKey": "ref:base",
+            "numberDelta": 0
           }
         }, {
           "setAction": {
@@ -73,7 +75,7 @@
             "numberValue": 1
           }
         }],
-        "links": ["trait:armor_proficiency#sorcerer", "trait:weapon_proficiency#sorcerer", "ability:bloodline_power#sorcerer", "ability:cantrips#sorcerer", "ability:eschew_materials#sorcerer", "ability:spellcasting#sorcerer"],
+        "links": ["trait:armor_proficiency#sorcerer", "trait:weapon_proficiency#sorcerer", "ability:bloodline_power#sorcerer", "ability:cantrips#sorcerer", "ability:eschew_materials#sorcerer", "ability:spellcasting#sorcerer", "trait:bloodline"],
         "choices": [{
           "choiceId": "archetype",
           "label": "Archetype",
@@ -205,18 +207,6 @@
           },
           "featureSelect": {
             "optionTags": ["spell+sorcerer9"]
-          }
-        }, {
-          "choiceId": "sorcerer1:bloodline",
-          "label": "Sorcerer Bloodline",
-          "tags": ["sorcerer_bloodline"],
-          "repeating": {
-            "none": {
-            }
-          },
-          "featureSelect": {
-            "optionTags": ["sorcerer_bloodline"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
           }
         }]
       }, {

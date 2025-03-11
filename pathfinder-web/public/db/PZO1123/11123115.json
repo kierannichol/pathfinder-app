@@ -7,5 +7,59 @@
   "weight": 4.0,
   "description": {
     "text": "This finely crafted +2 nine-ring broadsword has an extra gap at the base of the blade\u0027s unsharpened edge, closest to the hilt, seemingly to fit an extra ring. The wielder of a ten-ring sword can use a full-round action to place a magic ring into the empty slot, where the ring then rests until removed (another full-round action). Once a ring is fitted to the tenth slot, the sword\u0027s wielder can employ that ring as if he were wearing it, even if he is currently wearing two magic rings.\nAlternatively, the sword\u0027s wielder can fit a ring made of a specific metal like adamantine or cold iron into the tenth slot. Doing so allows the sword to penetrate damage reduction as if it were made of the same metal as the ring. Using this property does not grant the weapon any additional properties of that metal (such as bypassing hardness, etc.). Typically, such metal rings cost one-tenth the cost of a ninering broadsword made from that material. In the event that a magic ring made from a specific metal, like silver, is affixed to the sword\u0027s tenth slot, the sword\u0027s wielder decides which of the weapon\u0027s two properties will be in effect when the ring is placed. However, the sword\u0027s wielder can use a move action to switch between properties."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "crit_multiplier": 3,
+    "crit_range": 20,
+    "dice_count": 1,
+    "dice_sides": 8,
+    "type:one-handed": 1
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }]
 }

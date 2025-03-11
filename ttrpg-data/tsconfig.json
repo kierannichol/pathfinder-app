@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "esnext",
+    "outDir": "./dist",
+    "lib": ["es6"],
+    "moduleResolution": "Bundler",
+    "sourceMap": false,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "strict": false,
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "paths": {
+      "@ttrpg-data/*": ["src/main/ts/*"],
+      "@ttrpg-db/*": ["build/generated/source/proto/main/ts/*"]
+    }
+  },
+  "include": [
+    "src/main/ts/**/*",
+    "build/generated/source/proto/main/ts/**/*"
+  ],
+  "exclude": [
+  ]
+}

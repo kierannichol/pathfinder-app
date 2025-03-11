@@ -1,0 +1,40 @@
+id: "cleric_domain:luck_domain#fate"
+parent_id: "cleric_domain:luck_domain"
+name: "Fate Subdomain"
+description: "You are infused with luck, and your mere presence can spread good fortune."
+granted_powers:
+- id: "ability:bit_of_luck"
+  name: "Bit of Luck"
+  description: "You can touch a willing creature as a standard action, giving it a\
+    \ bit of luck. For the next round, any time the target rolls a d20, he may roll\
+    \ twice and take the more favorable result. You can use this ability a number\
+    \ of times per day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:tugging_strands"
+  name: "Tugging Strands"
+  description: "At 8th level, you can force a creature within line of sight to reroll\
+    \ any one roll that it has just made before the result of the roll is revealed.\
+    \ The result of the reroll must be taken, even if it is worse than the original\
+    \ roll. You can use this ability once per day at 8th level, and one additional\
+    \ time per day for every 6 levels beyond 8th."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:true_strike"
+- spell_level: 2
+  spell_id: "spell:augury"
+- spell_level: 3
+  spell_id: "spell:borrow_fortune"
+- spell_level: 4
+  spell_id: "spell:freedom_of_movement"
+- spell_level: 5
+  spell_id: "spell:break_enchantment"
+- spell_level: 6
+  spell_id: "spell:mislead"
+- spell_level: 7
+  spell_id: "spell:spell_turning"
+- spell_level: 8
+  spell_id: "spell:moment_of_prescience"
+- spell_level: 9
+  spell_id: "spell:miracle"
+source: "Advanced Player's Guide"

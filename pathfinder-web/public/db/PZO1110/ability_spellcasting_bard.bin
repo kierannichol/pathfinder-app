@@ -1,6 +1,7 @@
 
 ability:spellcasting#bardSpell Casting (Bard)abilitybardclass_feature¢
-Bard can cast spells.ª¨¥ª•’
+Bard can cast spells.ªÈÅª
+caster_level@class:bardª•’
 !trait:level_1_spells_per_day#bardm1+if(@class:bard>1,1,0)+if(@class:bard>2,1,0)+if(@class:bard>4,1,0)+if(@class:bard>8,1,0)+@cha_bonus_spells_1ª¯¬
 !trait:level_2_spells_per_day#bard†if(@class:bard>=4,1+if(@class:bard>4,1,0)+if(@class:bard>5,1,0)+if(@class:bard>7,1,0)+if(@class:bard>11,1,0),null)+@cha_bonus_spells_2ª°­
 !trait:level_3_spells_per_day#bard‡if(@class:bard>=7,1+if(@class:bard>7,1,0)+if(@class:bard>8,1,0)+if(@class:bard>10,1,0)+if(@class:bard>14,1,0),null)+@cha_bonus_spells_3ª³°

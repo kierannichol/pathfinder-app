@@ -196,6 +196,7 @@
     "id": "feat:blinded_master",
     "name": "Blinded Master",
     "tags": ["combat", "feat"],
+    "enabledFormula": "all(@feat:blind_fight, @feat:blinded_competence, @feat:blinded_blade_style, @feat:greater_blind_fight, @feat:improved_blind_fight, @skill:perception \u003e\u003d 15)",
     "maxStacks": 1
   }, {
     "id": "feat:cloak_and_dagger_style",
@@ -224,6 +225,7 @@
     "id": "feat:flexible_shadow_jump",
     "name": "Flexible Shadow Jump",
     "tags": ["feat", "general"],
+    "enabledFormula": "@ability:shadow_jump#shadowdancer",
     "maxStacks": 1
   }, {
     "id": "feat:snuffing_spell",

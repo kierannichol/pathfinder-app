@@ -1,0 +1,40 @@
+id: "cleric_domain:fire_domain#smoke"
+parent_id: "cleric_domain:fire_domain"
+name: "Smoke Subdomain"
+description: "You can call forth fire, command creatures of the inferno, and your\
+  \ flesh does not burn."
+granted_powers:
+- id: "ability:fire_resistance"
+  name: "Fire Resistance"
+  description: "At 6th level, you gain resist fire 10. This resistance increases to\
+    \ 20 at 12th level. At 20th level, you gain immunity to fire."
+  type: "Ex"
+- id: "ability:cloud_of_smoke"
+  name: "Cloud of Smoke"
+  description: "As a standard action, you can create a 5-foot-radius cloud of smoke.\
+    \ This power has a range of 30 feet. Creatures inside the cloud take a –2 penalty\
+    \ on attack rolls and Perception skill checks for as long as they remain inside\
+    \ and for 1 round after exiting the cloud. Creatures inside the cloud gain concealment\
+    \ from attacks made by opponents that are not adjacent to them. You can use this\
+    \ ability a number of times per day equal to 3 + your Wisdom modifier."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:burning_hands"
+- spell_level: 2
+  spell_id: "spell:pyrotechnics"
+- spell_level: 3
+  spell_id: "spell:stinking_cloud"
+- spell_level: 4
+  spell_id: "spell:wall_of_fire"
+- spell_level: 5
+  spell_id: "spell:fire_shield"
+- spell_level: 6
+  spell_id: "spell:fire_seeds"
+- spell_level: 7
+  spell_id: "spell:elemental_body_iv"
+- spell_level: 8
+  spell_id: "spell:incendiary_cloud"
+- spell_level: 9
+  spell_id: "spell:elemental_swarm"
+source: "Advanced Player's Guide"

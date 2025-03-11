@@ -16,7 +16,10 @@ message EffectDbo {
 
   message AddActionDbo {
     string target_key = 1;
-    int32 number_delta = 2;
+    oneof value {
+      int32 number_delta = 2;
+      string formula = 3;
+    }
   }
 
   optional string condition_formula = 1;

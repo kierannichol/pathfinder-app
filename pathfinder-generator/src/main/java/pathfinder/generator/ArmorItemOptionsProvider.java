@@ -95,6 +95,7 @@ public class ArmorItemOptionsProvider implements ItemOptionsProvider {
                     .setBaseNamePostfix("+" + i)
                     .addTag("armor_enhancement")
                     .setPointCost(i)
+                    .addStat("armor:enhancement", i)
                     .build();
             options.add(option);
         }

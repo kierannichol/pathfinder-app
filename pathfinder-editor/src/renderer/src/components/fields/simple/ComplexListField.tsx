@@ -5,7 +5,7 @@ import {DataSection} from "../../DataSection";
 
 interface ComplexListField<T> extends SimpleFieldProps<T[]> {
   elementNoun: string;
-  children: (item: T, setItem: (i: T) => void) => ReactNode;
+  children: (item: T, setItem: (i: T) => void, index: number) => ReactNode;
 }
 
 export function ComplexListField<T>({ label, elementNoun, value, onChange, children }: ComplexListField<T>) {
@@ -14,7 +14,7 @@ export function ComplexListField<T>({ label, elementNoun, value, onChange, child
       <ListEditor<T> values={value ?? []} onAddItem={() => ''} onListChanged={onChange} addButtonLabel={'+ ' + elementNoun}>
         {(item, index, setItem, actions) =>
             <DataSection label={elementNoun} onRemove={actions.remove}>
-              {children(item, setItem)}
+              {children(item, setItem, index)}
             </DataSection>}
       </ListEditor>
     </DataSection>

@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "ttrpg.data";
+
+message ChoiceData {
+    message TextInput {
+        string target_key = 1;
+    }
+
+    message SelectInput {
+        message Category {
+            string label = 1;
+            string tag = 2;
+        }
+
+        enum SortBy {
+            NONE = 0;
+            NAME = 1;
+        }
+
+        repeated string option_tags = 1;
+        repeated string feature_ids = 2;
+        repeated Category categories = 3;
+        SortBy sort_by = 4;
+    }
+
+
+    string id = 1;
+
+    oneof input {
+        TextInput text = 100;
+        SelectInput select = 101;
+    }
+}

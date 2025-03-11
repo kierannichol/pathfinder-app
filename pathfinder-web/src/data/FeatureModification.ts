@@ -5,8 +5,7 @@ import {FeatureRef} from "./Feature.ts";
 
 export class FeatureModification implements Trait {
 
-  constructor(private readonly targetFeatureId: string,
-              public readonly stackModifications: StackModification[]) {
+  constructor(public readonly stackModifications: StackModification[]) {
   }
 
   async resolve(parent: FeatureRef, context: ResolvedEntityContext): Promise<ResolvedTrait> {

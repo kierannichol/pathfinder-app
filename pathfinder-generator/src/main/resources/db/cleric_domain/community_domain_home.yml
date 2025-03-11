@@ -1,0 +1,46 @@
+id: "cleric_domain:community_domain#home"
+parent_id: "cleric_domain:community_domain"
+name: "Home Subdomain"
+description: "Your touch can heal wounds, and your presence instills unity and strengthens\
+  \ emotional bonds."
+granted_powers:
+- id: "ability:calming_touch"
+  name: "Calming Touch"
+  description: "You can touch a creature as a standard action to heal it of 1d6 points\
+    \ of nonlethal damage + 1 point per cleric level. This touch also removes the\
+    \ fatigued, shaken, and sickened conditions (but has no effect on more severe\
+    \ conditions). You can use this ability a number of times per day equal to 3 +\
+    \ your Wisdom modifier."
+  type: "Sp"
+- id: "ability:guarded_hearth"
+  name: "Guarded Hearth"
+  description: "At 8th level, you can create a ward that protects a specified area.\
+    \ Creating this ward takes 10 minutes of uninterrupted work. This ward has a maximum\
+    \ radius of 5 feet per 2 cleric levels you possess. When the ward is completed,\
+    \ you designate any number of creatures inside its area. Should any other creature\
+    \ enter the warded area, all of the selected creatures are immediately alerted\
+    \ (and awoken if they were asleep). The designated creatures also receive a sacred\
+    \ bonus equal to your Wisdom modifier on all saving throws and attack rolls while\
+    \ inside the warded area. This ward immediately ends if you leave the area. The\
+    \ ward lasts for 1 hour per cleric level. You can use this ability once per day."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:alarm"
+- spell_level: 2
+  spell_id: "spell:shield_other"
+- spell_level: 3
+  spell_id: "spell:glyph_of_warding"
+- spell_level: 4
+  spell_id: "spell:imbue_with_spell_ability"
+- spell_level: 5
+  spell_id: "spell:telepathic_bond"
+- spell_level: 6
+  spell_id: "spell:heroes_feast"
+- spell_level: 7
+  spell_id: "spell:guards_and_wards"
+- spell_level: 8
+  spell_id: "spell:cure_critical_wounds"
+- spell_level: 9
+  spell_id: "spell:miracle"
+source: "Advanced Player's Guide"

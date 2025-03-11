@@ -6,7 +6,6 @@ import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import pathfinder.db.PathfinderDatabase;
 import pathfinder.model.Feature;
 import pathfinder.model.Feature.FeatureBuilder;
 import pathfinder.model.FixedStacks;
@@ -19,7 +18,6 @@ import pathfinder.util.StreamUtils;
 @Slf4j
 public class ComplexFeatureMapper {
     private final FeatureMapper featureMapper;
-    private final PathfinderDatabase database;
 
     public Stream<Feature> flatMap(ComplexFeature complexFeature) {
         return StreamUtils.concat(List.of(

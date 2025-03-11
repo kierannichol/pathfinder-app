@@ -12,36 +12,45 @@
         "featureModifications": [{
           "targetFeatureId": "class:sorcerer",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["spell:summon_monster_8"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:elemental_ray#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 19,
-            "linksToAdd": ["ability:bloodline_feat#elemental_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#elemental_bloodline", "spell:elemental_swarm"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 3,
-            "linksToAdd": ["ability:elemental_resistance#sorcerer"],
+            "linksToAdd": ["ability:elemental_resistance#sorcerer", "spell:burning_hands"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:elemental_body#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["spell:scorching_ray"]
+          }, {
             "targetStackCount": 7,
-            "linksToAdd": ["ability:bloodline_feat#elemental_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#elemental_bloodline", "spell:protection_from_energy"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToAdd": ["ability:elemental_blast#sorcerer"],
+            "linksToAdd": ["ability:elemental_blast#sorcerer", "spell:elemental_body_i"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["spell:elemental_body_ii"]
+          }, {
             "targetStackCount": 13,
-            "linksToAdd": ["ability:bloodline_feat#elemental_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#elemental_bloodline", "spell:elemental_body_iii"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToAdd": ["ability:elemental_movement#sorcerer"],
+            "linksToAdd": ["ability:elemental_movement#sorcerer", "spell:elemental_body_iv"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }]
         }]

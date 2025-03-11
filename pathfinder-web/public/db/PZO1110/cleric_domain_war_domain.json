@@ -1,0 +1,25 @@
+{
+  "id": "cleric_domain:war_domain",
+  "name": "War Domain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You are a crusader for your god, always ready and willing to fight to defend your faith."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:battle_rage"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:weapon_master"]
+          }]
+        }]
+      }]
+    }
+  }
+}

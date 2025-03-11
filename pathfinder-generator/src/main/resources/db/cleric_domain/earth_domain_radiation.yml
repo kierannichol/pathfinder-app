@@ -1,0 +1,38 @@
+id: "cleric_domain:earth_domain#radiation"
+parent_id: "cleric_domain:earth_domain"
+name: "Radiation Subdomain"
+description: "You have mastery over earth, metal, and stone, can fire darts of acid,\
+  \ and command earth creatures."
+granted_powers:
+- id: "ability:acid_dart"
+  name: "Acid Dart"
+  description: "As a standard action, you can unleash an acid dart targeting any foe\
+    \ within 30 feet as a ranged touch attack. This acid dart deals 1d6 points of\
+    \ acid damage + 1 point for every two cleric levels you possess. You can use this\
+    \ ability a number of times per day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:acid_resistance"
+  name: "Acid Resistance"
+  description: "At 6th level, you gain resist acid 10. This resistance increases to\
+    \ 20 at 12th level. At 20th level, you gain immunity to acid."
+  type: "Ex"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:magic_stone"
+- spell_level: 2
+  spell_id: "spell:defoliate"
+- spell_level: 3
+  spell_id: "spell:stone_shape"
+- spell_level: 4
+  spell_id: "spell:blight"
+- spell_level: 5
+  spell_id: "spell:wall_of_stone"
+- spell_level: 6
+  spell_id: "spell:stoneskin"
+- spell_level: 7
+  spell_id: "spell:elemental_body_iv"
+- spell_level: 8
+  spell_id: "spell:horrid_wilting"
+- spell_level: 9
+  spell_id: "spell:elemental_swarm"
+source: "Pathfinder Player Companion: Kobolds of Golarion"

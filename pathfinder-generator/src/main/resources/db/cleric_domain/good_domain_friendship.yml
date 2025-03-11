@@ -1,0 +1,39 @@
+id: "cleric_domain:good_domain#friendship"
+parent_id: "cleric_domain:good_domain"
+name: "Friendship Subdomain"
+description: "You have pledged your life and soul to goodness and purity."
+granted_powers:
+- id: "ability:touch_of_good"
+  name: "Touch of Good"
+  description: "You can touch a creature as a standard action, granting a sacred bonus\
+    \ on attack rolls, skill checks, ability checks, and saving throws equal to half\
+    \ your cleric level (minimum 1) for 1 round. You can use this ability a number\
+    \ of times per day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:holy_lance"
+  name: "Holy Lance"
+  description: "At 8th level, you can give a weapon you touch the holy special weapon\
+    \ quality for a number of rounds equal to 1/2 your cleric level. You can use this\
+    \ ability once per day at 8th level, and an additional time per day for every\
+    \ four levels beyond 8th."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:protection_from_evil"
+- spell_level: 2
+  spell_id: "spell:shield_other"
+- spell_level: 3
+  spell_id: "spell:magic_circle_against_evil"
+- spell_level: 4
+  spell_id: "spell:holy_smite"
+- spell_level: 5
+  spell_id: "spell:telepathic_bond"
+- spell_level: 6
+  spell_id: "spell:blade_barrier"
+- spell_level: 7
+  spell_id: "spell:holy_word"
+- spell_level: 8
+  spell_id: "spell:holy_aura"
+- spell_level: 9
+  spell_id: "spell:summon_monster_ix"
+source: "Pathfinder Campaign Setting: Inner Sea Gods"

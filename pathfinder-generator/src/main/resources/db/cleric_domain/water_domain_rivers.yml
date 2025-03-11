@@ -1,0 +1,38 @@
+id: "cleric_domain:water_domain#rivers"
+parent_id: "cleric_domain:water_domain"
+name: "Rivers Subdomain"
+description: "You can manipulate water and mist and ice, conjure creatures of water,\
+  \ and resist cold."
+granted_powers:
+- id: "ability:icicle"
+  name: "Icicle"
+  description: "As a standard action, you can fire an icicle from your finger, targeting\
+    \ any foe within 30 feet as a ranged touch attack. The icicle deals 1d6 points\
+    \ of cold damage + 1 point for every two cleric levels you possess. You can use\
+    \ this ability a number of times per day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:cold_resistance"
+  name: "Cold Resistance"
+  description: "At 6th level, you gain resist cold 10. This resistance increases to\
+    \ 20 at 12th level. At 20th level, you gain immunity to cold."
+  type: "Ex"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:hydraulic_push"
+- spell_level: 2
+  spell_id: "spell:slipstream"
+- spell_level: 3
+  spell_id: "spell:water_breathing"
+- spell_level: 4
+  spell_id: "spell:control_water"
+- spell_level: 5
+  spell_id: "spell:elemental_body_ii"
+- spell_level: 6
+  spell_id: "spell:fluid_form"
+- spell_level: 7
+  spell_id: "spell:elemental_body_iv"
+- spell_level: 8
+  spell_id: "spell:horrid_wilting"
+- spell_level: 9
+  spell_id: "spell:elemental_swarm"
+source: "Pathfinder Campaign Setting: Inner Sea Gods"

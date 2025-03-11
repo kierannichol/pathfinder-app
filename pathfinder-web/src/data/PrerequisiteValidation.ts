@@ -11,7 +11,7 @@ export class PrerequisiteValidation {
   }
 
   add(description: string, valid: boolean): PrerequisiteValidation {
-    this.entries.unshift(new PrerequisiteValidationEntry(description, valid));
+    this.entries.push(new PrerequisiteValidationEntry(description, valid));
     this.valid = this.valid && valid;
     return this;
   }

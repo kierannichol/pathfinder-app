@@ -1,6 +1,8 @@
 syntax = "proto3";
 
 import "Description.proto";
+import "Feature.proto";
+import "Effect.proto";
 
 option java_multiple_files = true;
 option java_package = "pathfinder.data";
@@ -25,6 +27,11 @@ message ItemDbo {
     double weight = 6;
 
     DescriptionDbo description = 100;
+    repeated string actions = 101;
+    map<string,int32> stats = 102;
+    AttackModificationDbo attack_modifier = 103;
+    repeated EffectDbo effects = 104;
+    repeated AttackDbo attacks = 105;
 }
 
 message ItemOptionSetDbo {
@@ -65,4 +72,6 @@ message ItemOptionDbo {
     double currency_cost_by_weight = 8;
 
     DescriptionDbo description = 100;
+    map<string,int32> stats = 102;
+    AttackModificationDbo attack_modifier = 103;
 }

@@ -1,0 +1,22 @@
+{
+  "id": "cleric_domain:healing_domain#restoration",
+  "name": "Restoration Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Your touch staves off pain and death, and your healing magic is particularly vital and potent."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:healers_blessing", "ability:restorative_touch"]
+          }]
+        }]
+      }]
+    }
+  }
+}

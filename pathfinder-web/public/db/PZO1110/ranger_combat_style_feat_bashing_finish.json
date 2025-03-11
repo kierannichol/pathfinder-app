@@ -1,0 +1,23 @@
+{
+  "id": "ranger_combat_style_feat:bashing_finish",
+  "name": "Bashing Finish",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "Whenever you score a critical hit with a melee weapon, you can make a shield bash attack against the same target using the same bonus as a free action."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:bashing_finish",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "cleric_domain:charm_domain",
+  "name": "Charm Domain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You can baffle and befuddle foes with a touch or a smile, and your beauty and grace are divine."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:dazing_touch"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:charming_smile"]
+          }]
+        }]
+      }]
+    }
+  }
+}

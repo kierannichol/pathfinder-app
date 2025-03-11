@@ -5,4 +5,27 @@ A sling fires sling bullets. You can hurl ordinary stones with a sling, but ston
 Damage TypeB
 Criticalx2
 Damage1d4
-Weapon GroupSimple
+Weapon GroupSimpleªAttack²
+crit_multiplier²
+
+crit_range²
+
+dice_count²
+
+dice_sides²
+type:rangedÊS
+	Attack #1@bab > 04
+&1d20 + (@bab-0) + @str_mod + @size_mod
+@target:ac"1d4*0ÊS
+	Attack #2@bab > 54
+&1d20 + (@bab-5) + @str_mod + @size_mod
+@target:ac"1d4*0ÊU
+	Attack #3	@bab > 105
+'1d20 + (@bab-10) + @str_mod + @size_mod
+@target:ac"1d4*0ÊU
+	Attack #4	@bab > 155
+'1d20 + (@bab-15) + @str_mod + @size_mod
+@target:ac"1d4*0ÊU
+	Attack #5	@bab > 205
+'1d20 + (@bab-20) + @str_mod + @size_mod
+@target:ac"1d4*0

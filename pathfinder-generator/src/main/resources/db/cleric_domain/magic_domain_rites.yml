@@ -1,0 +1,42 @@
+id: "cleric_domain:magic_domain#rites"
+parent_id: "cleric_domain:magic_domain"
+name: "Rites Subdomain"
+description: "You are a true student of all things mystical, and see divinity in the\
+  \ purity of magic."
+granted_powers:
+- id: "ability:hand_of_the_acolyte"
+  name: "Hand of the Acolyte"
+  description: "You can cause your melee weapon to fly from your grasp and strike\
+    \ a foe before instantly returning. As a standard action, you can make a single\
+    \ attack using a melee weapon at a range of 30 feet. This attack is treated as\
+    \ a ranged attack with a thrown weapon, except that you add your Wisdom modifier\
+    \ to the attack roll instead of your Dexterity modifier (damage still relies on\
+    \ Strength). This ability cannot be used to perform a combat maneuver. You can\
+    \ use this ability a number of times per day equal to 3 + your Wisdom modifier."
+  type: "Su"
+- id: "ability:dispelling_touch"
+  name: "Dispelling Touch"
+  description: "At 8th level, you can use a targeted dispel magic effect as a melee\
+    \ touch attack. You can use this ability once per day at 8th level and one additional\
+    \ time per day for every four cleric levels beyond 8th."
+  type: "Sp"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:sanctify_corpse"
+- spell_level: 2
+  spell_id: "spell:magic_mouth"
+- spell_level: 3
+  spell_id: "spell:dispel_magic"
+- spell_level: 4
+  spell_id: "spell:imbue_with_spell_ability"
+- spell_level: 5
+  spell_id: "spell:permanency"
+- spell_level: 6
+  spell_id: "spell:antimagic_field"
+- spell_level: 7
+  spell_id: "spell:spell_turning"
+- spell_level: 8
+  spell_id: "spell:binding"
+- spell_level: 9
+  spell_id: "spell:mages_disjunction"
+source: "Pathfinder Player Companion: Divine Anthology"

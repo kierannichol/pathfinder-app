@@ -1,0 +1,39 @@
+id: "cleric_domain:air_domain#lightning"
+parent_id: "cleric_domain:air_domain"
+name: "Lightning Subdomain"
+description: "You can manipulate lightning, mist, and wind, traffic with air creatures,\
+  \ and are resistant to electricity damage."
+granted_powers:
+- id: "ability:lightning_arc"
+  name: "Lightning Arc"
+  description: "As a standard action, you can unleash an arc of electricity targeting\
+    \ any foe within 30 feet as a ranged touch attack. This arc of electricity deals\
+    \ 1d6 points of electricity damage + 1 point for every two cleric levels you possess.\
+    \ You can use this ability a number of times per day equal to 3 + your Wisdom\
+    \ modifier."
+  type: "Sp"
+- id: "ability:electricity_resistance"
+  name: "Electricity Resistance"
+  description: "At 6th level, you gain resist electricity 10. This resistance increases\
+    \ to 20 at 12th level. At 20th level, you gain immunity to electricity."
+  type: "Ex"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:shocking_grasp"
+- spell_level: 2
+  spell_id: "spell:flame_blade"
+- spell_level: 3
+  spell_id: "spell:lightning_bolt"
+- spell_level: 4
+  spell_id: "spell:air_walk"
+- spell_level: 5
+  spell_id: "spell:control_winds"
+- spell_level: 6
+  spell_id: "spell:chain_lightning"
+- spell_level: 7
+  spell_id: "spell:elemental_body_iv"
+- spell_level: 8
+  spell_id: "spell:whirlwind"
+- spell_level: 9
+  spell_id: "spell:elemental_swarm"
+source: "Pathfinder Player Companion: Divine Anthology"

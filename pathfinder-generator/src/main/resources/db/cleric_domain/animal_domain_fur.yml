@@ -1,0 +1,42 @@
+id: "cleric_domain:animal_domain#fur"
+parent_id: "cleric_domain:animal_domain"
+name: "Fur Subdomain"
+description: "You can speak with and befriend animals with ease. In addition, you\
+  \ treat Knowledge (nature) as a class skill."
+granted_powers:
+- id: "ability:animal_companion"
+  name: "Animal Companion"
+  description: "At 4th level, you gain the service of an animal companion. Your effective\
+    \ druid level for this animal companion is equal to your cleric level – 3. (Druids\
+    \ who take this ability through their nature bond class feature use their druid\
+    \ level – 3 to determine the abilities of their animal companions)."
+  type: "Ex"
+- id: "ability:predators_grace"
+  name: "Predator’s Grace"
+  description: "You can, as a swift action, grant yourself a +10-foot bonus to your\
+    \ base speed for 1 round. This bonus increases by 5 feet for every 5 cleric levels\
+    \ you possess. In addition, you gain low-light vision for 1 round. If you already\
+    \ possess low-light vision, the range of your sight becomes three times that of\
+    \ a human in dim light for 1 round. You can use this ability a number of times\
+    \ per day equal to 3 + your Wisdom modifier."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:magic_fang"
+- spell_level: 2
+  spell_id: "spell:hold_animal"
+- spell_level: 3
+  spell_id: "spell:beast_shape_i"
+- spell_level: 4
+  spell_id: "spell:summon_natures_ally_iv"
+- spell_level: 5
+  spell_id: "spell:beast_shape_iii"
+- spell_level: 6
+  spell_id: "spell:antilife_shell"
+- spell_level: 7
+  spell_id: "spell:animal_shapes"
+- spell_level: 8
+  spell_id: "spell:summon_natures_ally_viii"
+- spell_level: 9
+  spell_id: "spell:shapechange"
+source: "Advanced Player's Guide"

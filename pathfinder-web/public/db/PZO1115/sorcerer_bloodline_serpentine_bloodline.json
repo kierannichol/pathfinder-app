@@ -12,16 +12,19 @@
         "featureModifications": [{
           "targetFeatureId": "class:sorcerer",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["spell:irresistible_dance"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:serpents_fang#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 19,
-            "linksToAdd": ["ability:bloodline_feat#serpentine_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#serpentine_bloodline", "spell:dominate_monster"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 3,
-            "linksToAdd": ["ability:serpentfriend#sorcerer"],
+            "linksToAdd": ["ability:serpentfriend#sorcerer", "spell:hypnotism"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 20,
@@ -29,23 +32,26 @@
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 5,
-            "linksToAdd": ["ability:cure#sorcerer"],
+            "linksToAdd": ["ability:cure#sorcerer", "spell:delay_poison"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 7,
-            "linksToAdd": ["ability:bloodline_feat#serpentine_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#serpentine_bloodline", "spell:summon_monster_3"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToAdd": ["ability:snakeskin#sorcerer"],
+            "linksToAdd": ["ability:snakeskin#sorcerer", "spell:poison"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["spell:hold_monster"]
+          }, {
             "targetStackCount": 13,
-            "linksToAdd": ["ability:bloodline_feat#serpentine_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#serpentine_bloodline", "spell:mass_suggestion"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToAdd": ["ability:den_of_vipers#sorcerer"],
+            "linksToAdd": ["ability:den_of_vipers#sorcerer", "spell:summon_monster_7"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }]
         }]

@@ -7,5 +7,59 @@
   "weight": 2.0,
   "description": {
     "text": "With a blade crafted entirely out of black metal, this +2 speed sawtooth sabre has only one hint of color: a red hilt. Once per day as a standard action, the wielder of the blade can utter a prayer to the god Achaekek to create 1d4+3 illusory Red Mantis assassins that last for 1 hour. These illusions confound the wielder\u0027s enemies, allowing the wielder to flank an enemy with an appropriately positioned figment. The wielder can direct the movement of all figments as a single swift action, moving each of them up to 30 feet. Any creature interacting with (or being flanked by) an illusion can attempt a DC 16 Will save to disbelieve the effect. If an illusory assassin is hit by an attack, it disappears. (Use the wielder\u0027s touch AC as an illusion\u0027s AC.)\nThree times per day as an immediate action, when the wielder of a crimson bluff is the target of an enemy\u0027s melee attack, she can swap places with an illusory assassin that is adjacent to her."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "type:light": 1,
+    "crit_multiplier": 2,
+    "crit_range": 19,
+    "dice_count": 1,
+    "dice_sides": 8
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }]
 }

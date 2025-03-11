@@ -1,13 +1,17 @@
 package pathfinder.model.json;
 
 import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.ObjectCodec;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.io.IOException;
 import java.util.Optional;
+import java.util.function.Consumer;
 import lombok.extern.slf4j.Slf4j;
+import pathfinder.model.Attack;
+import pathfinder.model.AttackModification;
 import pathfinder.model.Description;
 import pathfinder.model.Id;
 import pathfinder.model.Stack;
@@ -59,10 +63,14 @@ public class FeatureJsonDeserializer extends StdDeserializer<Feature> {
             }
         }
 
-        JsonNode repeatingStackNode = node.get("repeating_stack");
-        if (repeatingStackNode != null) {
-            Stack stack = p.getCodec().treeToValue(repeatingStackNode, Stack.class);
-            builder.setRepeatingStack(stack);
+        trySet(codec, node, "repeating_stack", Stack.class, builder::setRepeatingStack);
+        trySet(codec, node, "attack_mod", AttackModification.class, builder::setAttackModifier);
+
+        JsonNode attacksNode = node.get("attacks");
+        if (attacksNode != null) {
+            for (JsonNode attackNode : attacksNode) {
+                builder.addAttack(codec.treeToValue(attackNode, Attack.class));
+            }
         }
 
         Optional.ofNullable(node.get("source")).filter(this::isValidNode).ifPresent(n -> builder.source(n.asText()));
@@ -72,5 +80,14 @@ public class FeatureJsonDeserializer extends StdDeserializer<Feature> {
 
     private boolean isValidNode(JsonNode node) {
         return !node.isNull();
+    }
+
+    private <T> void trySet(ObjectCodec codec, JsonNode node, String fieldName, Class<T> fieldType, Consumer<T> setter)
+            throws JsonProcessingException {
+        JsonNode fieldNode = node.get(fieldName);
+        if (fieldNode != null) {
+            T fieldDeserialized = codec.treeToValue(fieldNode, fieldType);
+            setter.accept(fieldDeserialized);
+        }
     }
 }

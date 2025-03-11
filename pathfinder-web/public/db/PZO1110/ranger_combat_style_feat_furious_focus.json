@@ -1,0 +1,26 @@
+{
+  "id": "ranger_combat_style_feat:furious_focus",
+  "name": "Furious Focus",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "When you are wielding a two-handed weapon or a one-handed weapon with two hands, and using the Power Attack feat, you do not suffer Power Attack\u0027s penalty on melee attack rolls on the first attack you make each turn. You still suffer the penalty on any additional attacks, including attacks of opportunity."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:furious_focus",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  },
+  "attackModifier": {
+    "attackBonus": "if(@arg:include_power_attack AND @arg:grip_multiplier\u003e1 AND @arg:attack_index \u003d\u003d 1, 1+floor(@bab/4), 0)"
+  }
+}

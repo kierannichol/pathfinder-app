@@ -1,0 +1,43 @@
+id: "cleric_domain:protection_domain#purity"
+parent_id: "cleric_domain:protection_domain"
+name: "Purity Subdomain"
+description: "Your faith is your greatest source of protection, and you can use that\
+  \ faith to defend others. In addition, you receive a +1 resistance bonus on saving\
+  \ throws. This bonus increases by 1 for every 5 levels you possess."
+granted_powers:
+- id: "ability:resistant_touch"
+  name: "Resistant Touch"
+  description: "As a standard action, you can touch an ally to grant him your resistance\
+    \ bonus for 1 minute. When you use this ability, you lose your resistance bonus\
+    \ granted by the Protection domain for 1 minute. You can use this ability a number\
+    \ of times per day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:purifying_touch"
+  name: "Purifying Touch"
+  description: "At 8th level, you can touch a willing creature with divine power,\
+    \ giving it a saving throw against each effect currently affecting it, using the\
+    \ original saving throw DC of the effect. Each successful saving throw ends the\
+    \ related effect. The creature can choose not to make a save against an effect.\
+    \ You can use this ability once per day at 8th level, plus one additional time\
+    \ per day at 14th and 20th level."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:protection_from_chaos_evil_good_law"
+- spell_level: 2
+  spell_id: "spell:shield_other"
+- spell_level: 3
+  spell_id: "spell:remove_blindness_deafness"
+- spell_level: 4
+  spell_id: "spell:spell_immunity"
+- spell_level: 5
+  spell_id: "spell:atonement"
+- spell_level: 6
+  spell_id: "spell:antimagic_field"
+- spell_level: 7
+  spell_id: "spell:repulsion"
+- spell_level: 8
+  spell_id: "spell:mind_blank"
+- spell_level: 9
+  spell_id: "spell:prismatic_sphere"
+source: "Advanced Player's Guide"

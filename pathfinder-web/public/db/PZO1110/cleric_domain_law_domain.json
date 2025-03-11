@@ -1,0 +1,25 @@
+{
+  "id": "cleric_domain:law_domain",
+  "name": "Law Domain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You follow a strict and ordered code of laws, and in so doing, achieve enlightenment."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:touch_of_law"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:staff_of_order"]
+          }]
+        }]
+      }]
+    }
+  }
+}

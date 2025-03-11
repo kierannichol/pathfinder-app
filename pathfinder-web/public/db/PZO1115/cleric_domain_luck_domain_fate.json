@@ -1,0 +1,25 @@
+{
+  "id": "cleric_domain:luck_domain#fate",
+  "name": "Fate Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You are infused with luck, and your mere presence can spread good fortune."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:bit_of_luck"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:tugging_strands"]
+          }]
+        }]
+      }]
+    }
+  }
+}

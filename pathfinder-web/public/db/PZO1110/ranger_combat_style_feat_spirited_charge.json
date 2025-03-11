@@ -1,0 +1,24 @@
+{
+  "id": "ranger_combat_style_feat:spirited_charge",
+  "name": "Spirited Charge",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Your mounted charge attacks deal a tremendous amount of damage.",
+    "sections": {
+      "Benefit": "When mounted and using the charge action, you deal double damage with a melee weapon (or triple damage with a lance)."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:spirited_charge",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

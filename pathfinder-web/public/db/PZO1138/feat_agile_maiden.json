@@ -2,6 +2,7 @@
   "id": "feat:agile_maiden",
   "name": "Agile Maiden",
   "tags": ["combat", "feat"],
+  "enabledFormula": "all(@str_score \u003e\u003d 13, @dex_score \u003e\u003d 13, all((@feat:endurance OR sum(@ability:armor_training#*)[Armor Training]), @proficiency:heavy_armor))",
   "maxStacks": 1,
   "description": {
     "text": "Your armor hinders you less than others.",

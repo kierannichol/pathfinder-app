@@ -8,6 +8,8 @@ import Database from "./Database.ts";
 import Description from "@/data/Description.ts";
 import {Path} from "@pathfinder-lib/utils/Path";
 import Id from "@pathfinder-lib/utils/Id";
+import {AttackModification} from "@/data/AttackModification.ts";
+import {Attack} from "@/data/Attack.ts";
 
 export class FeatureRef {
   constructor(public readonly path: string,
@@ -15,6 +17,11 @@ export class FeatureRef {
               public readonly name: string,
               public readonly level: number,
               public readonly parent: FeatureRef | undefined) {
+  }
+
+  ofType(type: string): FeatureRef|null {
+    if (this.type === type) return this;
+    return this.parent?.ofType(type) ?? null;
   }
 }
 
@@ -29,7 +36,9 @@ export class Feature extends FeatureSummary implements Trait {
               maxStacks: number|null,
               optionsQuery: FeatureOptionsQuery|undefined,
               public readonly description: Description,
-              public readonly traits: Trait[]) {
+              public readonly traits: Trait[],
+              public readonly attackMod: AttackModification|undefined,
+              public readonly attacks: Attack[]) {
     super(key, name, label, tags, enabledFormula, maxStacks, optionsQuery);
   }
 
@@ -38,7 +47,11 @@ export class Feature extends FeatureSummary implements Trait {
     const ref = new FeatureRef(path, 'feature', this.name, parent.level, parent);
     const resolvedTraits = await Promise.all(
         this.traits.map(trait => trait.resolve(ref, context)))
-    return new ResolvedFeature(this, parent, resolvedTraits);
+    return new ResolvedFeature(this,
+        parent,
+        this.attackMod,
+        this.attacks,
+        resolvedTraits);
   }
 
   option(optionKey: string, database: Database): Feature | undefined {
@@ -65,7 +78,9 @@ export class Feature extends FeatureSummary implements Trait {
         this.maxStacks,
         undefined,
         this.description,
-        this.traits);
+        this.traits,
+        this.attackMod,
+        this.attacks);
     feature.source = this.source;
     return feature;
   }
@@ -75,6 +90,8 @@ export class ResolvedFeature implements ResolvedTrait {
 
   constructor(public readonly origin: Feature,
               public readonly parent: FeatureRef,
+              public readonly attackMod: AttackModification|undefined,
+              public readonly attacks: Attack[],
               public readonly children: ResolvedTrait[]) {
   }
 

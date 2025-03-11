@@ -1,0 +1,22 @@
+{
+  "id": "cleric_domain:madness_domain#insanity",
+  "name": "Insanity Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You embrace the madness that lurks deep in your heart, and can unleash it to drive your foes insane or to sacrifice certain abilities to hone others."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:aura_of_madness", "ability:insane_focus"]
+          }]
+        }]
+      }]
+    }
+  }
+}

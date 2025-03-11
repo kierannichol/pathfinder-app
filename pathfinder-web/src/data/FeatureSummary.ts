@@ -24,7 +24,7 @@ export class FeatureSummary {
     let resolvable = Formula.parse(this.enabledFormula);
 
     const notAtMaxStacks = this.maxStacks !== null
-        ? (characterAtLevel.resolve(this.key)?.asNumber() ?? 0) < this.maxStacks
+        ? (characterAtLevel.get(this.key)?.asNumber() ?? 0) < this.maxStacks
         : true;
 
     if (!notAtMaxStacks) {
@@ -63,7 +63,7 @@ export class FeatureSummary {
     }
 
     const notAtMaxStacks = this.maxStacks !== null
-        ? (context.resolve(this.key)?.asNumber() ?? 0) < this.maxStacks
+        ? (context.get(this.key)?.asNumber() ?? 0) < this.maxStacks
         : true;
 
     const resolvedEnableFormula = Formula.parse(this.enabledFormula).resolve(context)?.asBoolean() ?? true;

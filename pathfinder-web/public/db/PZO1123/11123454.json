@@ -7,5 +7,59 @@
   "weight": 1.0,
   "description": {
     "text": "The blade of this +2 wounding dagger is brightly polished. Even when drenched in a victim\u0027s blood, it appears clean and dry moments later, as though it has been newly cleaned.\nA bloodthirst dagger rewards its wielder most when used relentlessly against a single target. When attacking a creature that is still bleeding from the bloodthirst dagger\u0027s wounding property, the dagger deals an additional +1 point of damage against the target for each bleeding wound the creature possesses (maximum +10). Whenever the wielder of bloodthirst confirms a critical hit with the weapon, she can choose to deal 1d6 points of additional damage for each still-bleeding wound the target possesses (maximum +5d6 damage). This additional damage is not multiplied by the critical hit, but is in addition to the damage normally added for bleeding wounds. Dealing this damage immediately heals all bleeding wounds possessed by the wielder."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "type:light": 1,
+    "crit_multiplier": 2,
+    "crit_range": 19,
+    "dice_count": 1,
+    "dice_sides": 4
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d4",
+    "missDamage": "0"
+  }]
 }

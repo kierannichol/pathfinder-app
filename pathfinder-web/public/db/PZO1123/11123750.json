@@ -7,5 +7,59 @@
   "weight": 4.0,
   "description": {
     "text": "This +1/+1 quarterstaff is hollow, drilled through with numerous tiny holes, and whistles when swung and spun. Once per day as a standard action, the wielder may spin the hurricane quarterstaff and create a gust of wind (DC 13 Fortitude negates). A monk or ninja wielding a hurricane quarterstaff can also spend 1 ki point to activate the staff\u0027s gust of wind power; the save DC when activating this power with ki is equal to 12 + the wielder\u0027s Wisdom modifier."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "type:two-handed": 1,
+    "crit_multiplier": 2,
+    "crit_range": 20,
+    "dice_count": 1,
+    "dice_sides": 6
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d6",
+    "missDamage": "0"
+  }]
 }

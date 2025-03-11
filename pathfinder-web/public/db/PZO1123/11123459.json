@@ -6,5 +6,59 @@
   "weight": 4.0,
   "description": {
     "text": "This hefty +1 flaming pistol is elaborately carved with its barrel in the semblance of a roaring dragon and its grip wrapped in polished red dragonhide. When firing ordinary ammunition, the wielder may choose to have the firedrake pistol deal all of its damage as fire damage instead of normal damage. In addition, as a standard action the wielder may expend 1 unit of ammunition and create a cone of fire equivalent to burning hands rather than resolving that shot as a normal attack."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "crit_multiplier": 4,
+    "crit_range": 20,
+    "dice_count": 1,
+    "dice_sides": 8,
+    "type:ranged": 1
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }]
 }

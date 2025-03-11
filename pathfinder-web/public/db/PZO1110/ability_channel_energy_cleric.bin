@@ -6,4 +6,6 @@ Channeling energy causes a burst that affects all creatures of one type (either 
 A cleric must be able to present her holy symbol to use this ability.ªqoª
 ability:channel_energyª%#
 ability:channel_positive_energyª%#
-ability:channel_negative_energy
+ability:channel_negative_energyÊ¢
+Channel Energy=
+&10 + floor(@class:cleric/2) + @cha_mod1d20 + @target:will""(@ability:channel_energy#cleric)d6*-floor((@ability:channel_energy#cleric)d6 / 2)

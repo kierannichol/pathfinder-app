@@ -1,0 +1,45 @@
+id: "cleric_domain:liberation_domain#freedom"
+parent_id: "cleric_domain:liberation_domain"
+name: "Freedom Subdomain"
+description: "You are a spirit of freedom and a staunch foe against all who would\
+  \ enslave and oppress."
+granted_powers:
+- id: "ability:freedoms_call"
+  name: "Freedom’s Call"
+  description: "At 8th level, you can emit a 30-foot aura of freedom for a number\
+    \ of rounds per day equal to your cleric level. Allies within this aura are not\
+    \ affected by the confused, grappled, frightened, panicked, paralyzed, pinned,\
+    \ or shaken conditions. This aura only suppresses these effects, and they return\
+    \ once a creature leaves the aura or when the aura ends, if applicable. These\
+    \ rounds do not need to be consecutive."
+  type: "Su"
+- id: "ability:libertys_blessing"
+  name: "Liberty’s Blessing"
+  description: "You touch a willing creature as a standard action, granting it a boon.\
+    \ A creature with this boon can, as a swift action, make a saving throw against\
+    \ a single spell or effect it is suffering from that grants a save. The DC of\
+    \ the saving throw is equal to the original DC of the spell or effect. If the\
+    \ saving throw is successful, the effect ends. This boon lasts for 1 minute or\
+    \ until successfully used to remove a spell or effect, whichever duration is shorter.\
+    \ You can use this ability for a number of times equal to 3 + your Wisdom modifier."
+  type: "Sp"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:sanctuary"
+- spell_level: 2
+  spell_id: "spell:remove_paralysis"
+- spell_level: 3
+  spell_id: "spell:remove_curse"
+- spell_level: 4
+  spell_id: "spell:freedom_of_movement"
+- spell_level: 5
+  spell_id: "spell:plane_shift"
+- spell_level: 6
+  spell_id: "spell:dispel_magic"
+- spell_level: 7
+  spell_id: "spell:refuge"
+- spell_level: 8
+  spell_id: "spell:mind_blank"
+- spell_level: 9
+  spell_id: "spell:freedom"
+source: "Advanced Player's Guide"

@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import pathfinder.model.Choice;
+import pathfinder.model.ChoiceModification;
 import pathfinder.model.ConditionalStack;
 import pathfinder.model.Effect;
 import pathfinder.model.FeatureModification;
@@ -28,6 +29,7 @@ public class ConditionalStackJsonDeserializer extends StdDeserializer<Conditiona
         List<Link> links = new ArrayList<>();
         List<Choice> choices = new ArrayList<>();
         List<FeatureModification> featureModifications = new ArrayList<>();
+        List<ChoiceModification> choiceModifications = new ArrayList<>();
         String when = "";
 
         if (node.has("when")) {
@@ -62,7 +64,14 @@ public class ConditionalStackJsonDeserializer extends StdDeserializer<Conditiona
             }
         }
 
+        if (node.get("choice_modifications") != null) {
+            for (JsonNode child : node.get("choice_modifications")) {
+                ChoiceModification choiceModification = p.getCodec().treeToValue(child, ChoiceModification.class);
+                choiceModifications.add(choiceModification);
+            }
+        }
+
         return new ConditionalStack(when,
-                new Stack(effects, links, choices, featureModifications));
+                new Stack(effects, links, choices, featureModifications, choiceModifications));
     }
 }

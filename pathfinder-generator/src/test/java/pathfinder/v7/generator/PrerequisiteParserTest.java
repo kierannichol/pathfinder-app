@@ -40,6 +40,8 @@ class PrerequisiteParserTest {
 
     private static Stream<Arguments> featProvider() {
         return database.query(Query.feats())
+                .filter(feat -> Sources.findSourceByNameOrCode(feat.source()) != null)
+                .filter(feat -> Sources.findSourceByNameOrCode(feat.source()).enabled())
                 .map(feat -> Arguments.of(feat.name(), feat));
     }
 

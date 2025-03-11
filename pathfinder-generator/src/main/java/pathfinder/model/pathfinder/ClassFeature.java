@@ -1,15 +1,18 @@
 package pathfinder.model.pathfinder;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 import java.util.regex.Pattern;
 import lombok.Builder;
+import pathfinder.model.Attack;
+import pathfinder.model.AttackModification;
 import pathfinder.model.Description;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
 import pathfinder.model.Stacks;
 
 @Builder
-public record ClassFeature(Id id, String name, String label, String type, Id classId, Description description, String prerequisites, String enabled_formula, List<String> effects, List<Id> links, Stacks stacks, String source) implements NamedEntity, FromSourceBook, ClassSpecific {
+public record ClassFeature(Id id, String name, String label, String type, Id classId, Description description, String prerequisites, String enabled_formula, List<String> effects, List<Id> links, Stacks stacks, @JsonProperty("attack_mod") AttackModification attackModifier, List<Attack> attacks, String source) implements NamedEntity, FromSourceBook, ClassSpecific {
 
     @Override
     public List<String> sources() {
@@ -29,6 +32,8 @@ public record ClassFeature(Id id, String name, String label, String type, Id cla
                 feature.effects(),
                 feature.links(),
                 feature.stacks(),
+                feature.attackModifier(),
+                feature.attacks(),
                 feature.source());
     }
 

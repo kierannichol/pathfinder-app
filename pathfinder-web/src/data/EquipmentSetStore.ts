@@ -70,7 +70,8 @@ export class FirebaseEquipmentSetStore extends EquipmentSetStore {
       name: data.name,
       budget: data.budget,
       priceLimit: data.priceLimit,
-      equipment: data.equipment
+      equipment: data.equipment,
+      attackSettings: data.attackSettings
     };
   }
 
@@ -90,7 +91,8 @@ export class FirebaseEquipmentSetStore extends EquipmentSetStore {
         name: data.name,
         budget: data.budget,
         priceLimit: data.priceLimit,
-        equipment: data.equipment
+        equipment: data.equipment,
+        attackSettings: data.attackSettings
       }
     });
   }

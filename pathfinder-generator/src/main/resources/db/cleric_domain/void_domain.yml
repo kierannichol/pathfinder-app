@@ -1,0 +1,44 @@
+id: "cleric_domain:void_domain"
+parent_id: null
+name: "Void Domain"
+description: "You can call upon the cold darkness between the stars to gain flight,\
+  \ travel to other worlds, or summon monsters from beyond to do your bidding."
+granted_powers:
+- id: "ability:guarded_mind"
+  name: "Guarded Mind"
+  description: "You gain a +2 insight bonus on saving throws against all mind-affecting\
+    \ effects."
+  type: "Ex"
+- id: "ability:part_the_veil"
+  name: "Part the Veil"
+  description: "At 8th level, you can lace spells you cast with the raw madness that\
+    \ waits in the outer darkness. Activating this ability is a swift action that\
+    \ you must use as you cast a spell that targets a single creature and that allows\
+    \ a Will saving throw to negate or reduce the spell’s primary effect. If the target\
+    \ fails to resist the spell, the target is also confused for a number of rounds\
+    \ equal to the spell’s level as visions of the void cause temporary insanity.\
+    \ The victim must succeed at a new saving throw each round to end the effect—\
+    these additional saving throws apply only to the additional confusion effect and\
+    \ not to the original spell effect. Part the veil is a mind-affecting effect.\
+    \ You can use this ability a number of times per day equal to 1/2 your class level."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:feather_fall"
+- spell_level: 2
+  spell_id: "spell:levitate"
+- spell_level: 3
+  spell_id: "spell:fly"
+- spell_level: 4
+  spell_id: "spell:planar_binding"
+- spell_level: 5
+  spell_id: "spell:overland_flight"
+- spell_level: 6
+  spell_id: "spell:planar_binding"
+- spell_level: 7
+  spell_id: "spell:reverse_gravity"
+- spell_level: 8
+  spell_id: "spell:planar_binding"
+- spell_level: 9
+  spell_id: "spell:interplanetary_teleport"
+source: "Pathfinder Roleplaying Game Bestiary 4"

@@ -4,7 +4,6 @@ import SelectList, {
   SelectListOptionGroup,
   SelectListProps
 } from "@/components/base/form/select/SelectList.tsx";
-import Button from "@/components/base/form/Button.tsx";
 import {ReactNode, useCallback, useState} from "react";
 import styles from "./SelectDialog.module.css";
 import TextInput from "@/components/base/form/TextInput.tsx";
@@ -66,44 +65,48 @@ function SelectDialog({
     setWorkingQuery('');
   }
 
-  return <DialogBox className={styles.dialog} show={show} onClose={onClose}>
+  function handleClose() {
+    onClose?.();
+  }
+
+  return <>
+    <DialogBox className={styles.dialog} show={show} onClose={handleClose}>
     <DialogBox.Title>
       {title}
     </DialogBox.Title>
-    {categories && <DialogBox.Header>
-      <div className={styles.categories}>
-        {categories.map(category => <div key={category.name}
-                                         className={classNames([styles.category, category === activeCategory ? styles.active : undefined])}
-                                         onClick={() => handleClickCategory(category)}>
-          {category.name}
-        </div>)}
-      </div>
-    </DialogBox.Header>}
-    <DialogBox.Header>
-      <div className={styles.searchbar}>
-        <FaMagnifyingGlass /> <TextInput value={workingQuery} onChange={setWorkingQuery} onEnter={handleQuery} />
-      </div>
+    <DialogBox.Header className={styles.header}>
+      <search className={styles.searchbar}>
+        <FaMagnifyingGlass />
+        <TextInput value={workingQuery} onChange={setWorkingQuery} onEnter={handleQuery} />
+      </search>
+      {categories &&
+          <div className={styles.categories}>
+            {categories.map(category => <div key={category.name}
+                                             className={classNames([styles.category, category === activeCategory ? styles.active : undefined])}
+                                             onClick={() => handleClickCategory(category)}>
+              {category.name}
+            </div>)}
+          </div>}
     </DialogBox.Header>
-    <DialogBox.Body>
-      <div className={styles.body}>
+    <DialogBox.Body className={styles.body}>
         <SelectList value={selected}
                     onChange={handleChange}
                     optionsFn={queryOptionsFn}
                     {...selectListProps} />
-      </div>
-      {showGroup && (<SelectDialog show={true}
-                                   title={'Select...'}
-                                   onSelect={onSelect}
-                                   onClose={() => setShowGroup(undefined)}
-                                   optionsFn={(_1, _2) => showGroup.optionsFn()} />)}
     </DialogBox.Body>
-    <DialogBox.Footer>
-      <Button className={styles.button}
-              theme='light'
+    <DialogBox.Footer className={styles.footer}>
+      <button className="light"
               disabled={selected === undefined}
-              onClick={handleConfirm}>Confirm</Button>
+              onClick={handleConfirm}>Confirm</button>
     </DialogBox.Footer>
   </DialogBox>
+    {showGroup && (<SelectDialog show={true}
+                                 title={'Select...'}
+                                 onSelect={onSelect}
+                                 onClose={() => setShowGroup(undefined)}
+                                 optionsFn={(query, _2) => showGroup.optionsFn(query)}
+                                 {...selectListProps} />)}
+  </>;
 }
 
 export default SelectDialog;

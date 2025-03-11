@@ -12,36 +12,45 @@
         "featureModifications": [{
           "targetFeatureId": "class:sorcerer",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["spell:power_word_stun"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:corrupting_touch#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 19,
-            "linksToAdd": ["ability:bloodline_feat#infernal_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#infernal_bloodline", "spell:meteor_swarm"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 3,
-            "linksToAdd": ["ability:infernal_resistances#sorcerer"],
+            "linksToAdd": ["ability:infernal_resistances#sorcerer", "spell:protection_from_good"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:power_of_the_pit#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["spell:scorching_ray"]
+          }, {
             "targetStackCount": 7,
-            "linksToAdd": ["ability:bloodline_feat#infernal_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#infernal_bloodline", "spell:suggestion"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToAdd": ["ability:hellfire#sorcerer"],
+            "linksToAdd": ["ability:hellfire#sorcerer", "spell:charm_monster"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["spell:dominate_person"]
+          }, {
             "targetStackCount": 13,
-            "linksToAdd": ["ability:bloodline_feat#infernal_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#infernal_bloodline", "spell:planar_binding"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToAdd": ["ability:on_dark_wings#sorcerer"],
+            "linksToAdd": ["ability:on_dark_wings#sorcerer", "spell:greater_teleport"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }]
         }]

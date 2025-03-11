@@ -1,4 +1,5 @@
-import Description from "../Description.ts";
+import Description from "@/data/Description.ts";
+import {AttackModification} from "@/data/AttackModification.ts";
 
 export class ItemOptionSummary {
   constructor(public readonly id: number,
@@ -21,7 +22,9 @@ export class ItemOption extends ItemOptionSummary {
               currencyCost: number,
               currencyCostByWeight: number,
               tags: number[],
-              public readonly description: Description) {
-    super(id, name, baseNamePostfix, baseNamePostfix, pointCost, currencyCost, currencyCostByWeight, tags);
+              public readonly description: Description,
+              public readonly attackMod: AttackModification|undefined,
+              public readonly stats: {[key:string]: number}) {
+    super(id, name, baseNamePrefix, baseNamePostfix, pointCost, currencyCost, currencyCostByWeight, tags);
   }
 }

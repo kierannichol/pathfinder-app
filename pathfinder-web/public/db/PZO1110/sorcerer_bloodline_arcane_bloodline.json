@@ -12,36 +12,45 @@
         "featureModifications": [{
           "targetFeatureId": "class:sorcerer",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["spell:power_word_stun"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:arcane_bond#arcane_bloodline"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 19,
-            "linksToAdd": ["ability:bloodline_feat#arcane_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#arcane_bloodline", "spell:wish"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 3,
-            "linksToAdd": ["ability:metamagic_adept#arcane_bloodline"],
+            "linksToAdd": ["ability:metamagic_adept#arcane_bloodline", "spell:identify"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:arcane_apotheosis#arcane_bloodline"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["spell:invisibility"]
+          }, {
             "targetStackCount": 7,
-            "linksToAdd": ["ability:bloodline_feat#arcane_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#arcane_bloodline", "spell:dispel_magic"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToAdd": ["ability:new_arcana#arcane_bloodline"],
+            "linksToAdd": ["ability:new_arcana#arcane_bloodline", "spell:dimension_door"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["spell:overland_flight"]
+          }, {
             "targetStackCount": 13,
-            "linksToAdd": ["ability:bloodline_feat#arcane_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#arcane_bloodline", "spell:true_seeing"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToAdd": ["ability:school_power#arcane_bloodline"],
+            "linksToAdd": ["ability:school_power#arcane_bloodline", "spell:greater_teleport"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }]
         }]

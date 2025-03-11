@@ -8,6 +8,11 @@
   "stacks": {
     "repeatingStack": {
       "effects": [{
+        "addAction": {
+          "targetKey": "caster_level",
+          "formula": "max(0, @class:paladin-3)"
+        }
+      }, {
         "setAction": {
           "targetKey": "trait:level_1_spells_per_day#paladin",
           "formula": "if(@class:paladin\u003e\u003d4,0+if(@class:paladin\u003e4,1,0)+if(@class:paladin\u003e8,1,0)+if(@class:paladin\u003e12,1,0)+if(@class:paladin\u003e16,1,0)+@cha_bonus_spells_1,null)"

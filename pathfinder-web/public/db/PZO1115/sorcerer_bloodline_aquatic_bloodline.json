@@ -12,16 +12,19 @@
         "featureModifications": [{
           "targetFeatureId": "class:sorcerer",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["spell:seamantle"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:dehydrating_touch#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 19,
-            "linksToAdd": ["ability:bloodline_feat#aquatic_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#aquatic_bloodline", "spell:world_wave"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 3,
-            "linksToAdd": ["ability:aquatic_adaptation#sorcerer"],
+            "linksToAdd": ["ability:aquatic_adaptation#sorcerer", "spell:hydraulic_push"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 20,
@@ -29,19 +32,22 @@
             "linksToRemove": ["ability:bloodline_power#sorcerer", "ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 7,
-            "linksToAdd": ["ability:bloodline_feat#aquatic_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#aquatic_bloodline", "spell:aqueous_orb"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToAdd": ["ability:aquatic_telepathy#sorcerer"],
+            "linksToAdd": ["ability:aquatic_telepathy#sorcerer", "spell:geyser"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["spell:control_water"]
+          }, {
             "targetStackCount": 13,
-            "linksToAdd": ["ability:bloodline_feat#aquatic_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#aquatic_bloodline", "spell:beast_shape_iv"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToAdd": ["ability:suggestion#sorcerer", "ability:raise_the_deep#sorcerer"],
+            "linksToAdd": ["ability:suggestion#sorcerer", "ability:raise_the_deep#sorcerer", "spell:summon_monster_7"],
             "linksToRemove": ["ability:bloodline_power#sorcerer", "ability:bloodline_power#sorcerer"]
           }]
         }]

@@ -289,7 +289,7 @@ $ability:weapon_and_armor_proficiencyWeapon and Armor Proficiency({
 class:bard#argent_voiceArgent Voice	archetypebard"ý!@modifies:ability:frightening_tune#bard AND !@modifies:ability:versatile_performance#bard AND !@modifies:ability:fascinate#bard AND !@modifies:ability:suggestion#bard AND !@modifies:ability:dirge_of_doom#bard AND !@modifies:ability:mass_suggestion#bard(í
 class:bard#brazen_deceiverBrazen Deceiver	archetypebard"ª!@modifies:ability:lore_master#bard AND !@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:versatile_performance#bard AND !@modifies:ability:well_versed#bard(Ü
 /class:bloodrager#enlightened_bloodrager_pzo1138 Enlightened Bloodrager (PZO1138)	archetype
-bloodrager"í!@modifies:ability:bloodrage#bloodrager AND !@modifies:ability:bloodline_power#bloodrager AND !@modifies:ability:bloodline_spell#bloodrager AND !@modifies:ability:spellcasting#bloodrager AND !@modifies:ability:damage_reduction#bloodrager(¨
+bloodrager"í!@modifies:ability:bloodrage#bloodrager AND !@modifies:ability:bloodline_spell#bloodrager AND !@modifies:ability:bloodline_power#bloodrager AND !@modifies:ability:spellcasting#bloodrager AND !@modifies:ability:damage_reduction#bloodrager(¨
 #class:brawler#winding_path_renegadeWinding Path Renegade	archetypebrawler"T!@modifies:ability:bonus_combat_feat#brawler AND !@modifies:ability:ac_bonus#brawler(„
 class:cavalier#horselord	Horselord	archetypecavalier"Å!@modifies:ability:bonus_feat#cavalier AND !@modifies:ability:tactician#cavalier AND !@modifies:ability:cavaliers_charge#cavalier AND !@modifies:trait:weapon_proficiency#cavalier AND !@modifies:ability:master_tactician#cavalier AND !@modifies:trait:armor_proficiency#cavalier AND !@modifies:ability:greater_tactician#cavalier(÷
 class:cavalier#sister_in_armsSister-In-Arms	archetypecavalier"®!@modifies:ability:mount#cavalier AND !@modifies:ability:mighty_charge#cavalier AND !@modifies:ability:order#cavalier AND !@modifies:ability:cavaliers_charge#cavalier AND !@modifies:ability:expert_trainer#cavalier AND !@modifies:ability:supreme_charge#cavalier AND !@modifies:ability:challenge#cavalier(ž
@@ -313,8 +313,8 @@ bloodrager"í!@modifies:ability:bloodrage#bloodrager AND !@modifies:ability:bloo
 class:swashbuckler#bravoBravo	archetypeswashbuckler"/!@modifies:trait:armor_proficiency#swashbuckler(u
  class:swashbuckler#dashing_thiefDashing Thief	archetypeswashbuckler"'!@modifies:ability:panache#swashbuckler(³
 class:warpriest#mantis_zealotMantis Zealot	archetype	warpriest"ê!@modifies:trait:weapon_proficiency#warpriest AND !@modifies:ability:aspect_of_war#warpriest AND !@modifies:ability:sacred_weapon#warpriest AND !@modifies:ability:sacred_armor#warpriest AND !@modifies:trait:armor_proficiency#warpriest(‰
-class:wizard#runesageRunesage	archetypewizard"Q!@modifies:ability:arcane_school#wizard AND !@modifies:ability:arcane_bond#wizard(1
-feat:agile_maidenAgile Maidencombatfeat(z
+class:wizard#runesageRunesage	archetypewizard"Q!@modifies:ability:arcane_school#wizard AND !@modifies:ability:arcane_bond#wizard(¿
+feat:agile_maidenAgile Maidencombatfeat"‹all(@str_score >= 13, @dex_score >= 13, all((@feat:endurance OR sum(@ability:armor_training#*)[Armor Training]), @proficiency:heavy_armor))(z
 feat:artistryArtistrycombatfeat"Oall(@feat:exotic_weapon_proficiency#dueling_sword,@feat:weapon_finesse,@bab>=2)([
 feat:cypher_magicCypher Magicfeatgeneral"'all(@int_score>=15,@feat:scribe_scroll)(“
 feat:cypher_scriptCypher Scriptfeatgeneral"]all(@skill:knowledge_arcana>=1,@skill:linguistics>=1,@skill:spellcraft>=1,@ability:spellbook)(²

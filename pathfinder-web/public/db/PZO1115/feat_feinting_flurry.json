@@ -1,0 +1,17 @@
+{
+  "id": "feat:feinting_flurry",
+  "name": "Feinting Flurry",
+  "tags": ["combat", "feat"],
+  "enabledFormula": "all(@dex_score\u003e\u003d15,sum(@ability:flurry_of_blows#*)[Flurry Of Blows],@feat:combat_expertise)",
+  "maxStacks": 1,
+  "description": {
+    "text": "Your subtle flourishes mislead your enemy, tricking it into changing its footing.",
+    "sections": {
+      "Benefit": "While using flurry of blows to make melee attacks, you can forgo your first attack to make a Bluff check to feint."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

@@ -10,6 +10,7 @@ public class AbstractComponentBuilder<SELF extends AbstractComponentBuilder<SELF
     protected final List<Effect> effects = new ArrayList<>();
     protected final List<Choice> choices = new ArrayList<>();
     protected final List<FeatureModification> featureModifications = new ArrayList<>();
+    protected final List<ChoiceModification> choiceModifications = new ArrayList<>();
     
     public SELF addLink(Id featureId) {
         return addLink(featureId.string());
@@ -68,6 +69,16 @@ public class AbstractComponentBuilder<SELF extends AbstractComponentBuilder<SELF
 
     public SELF addFeatureModifications(Collection<FeatureModification> featureModifications) {
         this.featureModifications.addAll(featureModifications);
+        return self();
+    }
+
+    public SELF addChoiceModification(ChoiceModification choiceModification) {
+        this.choiceModifications.add(choiceModification);
+        return self();
+    }
+
+    public SELF addChoiceModifications(List<ChoiceModification> choiceModifications) {
+        this.choiceModifications.addAll(choiceModifications);
         return self();
     }
 

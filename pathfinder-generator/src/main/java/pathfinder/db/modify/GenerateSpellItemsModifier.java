@@ -1,6 +1,7 @@
 package pathfinder.db.modify;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -124,7 +125,10 @@ public class GenerateSpellItemsModifier extends AbstractLocalPathfinderDatabaseM
                 null,
                 null,
                 null,
-                null
+                null,
+                List.of(),
+                null,
+                Map.of()
         );
     }
 

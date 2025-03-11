@@ -7,5 +7,59 @@
   "weight": 1.0,
   "description": {
     "text": "A wielder with a free hand can split this +1 dagger into two identical +1 daggers as a swift action, or a free action if she has the Quick Draw feat. The doubled daggers can\u0027t be split again. If either dagger is thrown while doubled, the hurled dagger vanishes after resolving the attack and the remaining dagger can be split again. If the wielder drops a doubled dagger or it otherwise leaves her person, it vanishes. If both daggers leave the wielder\u0027s hands at the same time, determine randomly which dagger vanishes.\nSpells or effects placed on a dagger of doubling don\u0027t duplicate when the dagger is split. Any active effects on a dagger end when it vanishes. Destroying one of the doubled daggers just causes the duplicate to disappear, but any damage to a single dagger of doubling remains on both daggers when it doubles."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "type:light": 1,
+    "crit_multiplier": 2,
+    "crit_range": 19,
+    "dice_count": 1,
+    "dice_sides": 4
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d4",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d4",
+    "missDamage": "0"
+  }]
 }

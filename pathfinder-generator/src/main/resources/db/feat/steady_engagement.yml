@@ -8,6 +8,7 @@ type: "COMBAT"
 description: "You can draw on your excellent balance to trip or disarm opponents when\
   \ they try to disengage."
 prerequisites: "Combat Reflexes, Stand Still, worshiper of the associated deity."
+enabled_formula: "all(@feat:combat_reflexes, @feat:stand_still, @deity:name=='Irori')"
 benefit: "If you use Stand Still to prevent an opponent from moving, you may make\
   \ a disarm or trip combat maneuver against your target as an immediate action."
 normal: ""

@@ -1,13 +1,13 @@
 import {classNames} from "../../../../pathfinder-lib/utils/src/classNames.ts";
 import styles from "./DialogBox.module.css";
-import React, {createContext, MutableRefObject, ReactElement, ReactNode, useContext, useEffect, useRef} from "react";
+import React, {createContext, ReactElement, ReactNode, RefObject, use, useEffect, useRef} from "react";
 import {GrClose} from "react-icons/gr";
 
 export interface DialogBoxProps {
   show: boolean;
   className?: string;
-  onClose?: () => void;
-  children?: (ReactElement<DialogBoxComponent>|undefined)[];
+  onClose?: (event: React.SyntheticEvent<HTMLDialogElement>) => void;
+  children?: ReactElement<DialogBoxComponent>|(ReactElement<DialogBoxComponent>|undefined)[];
 }
 
 interface DialogBoxComponent {
@@ -16,17 +16,20 @@ interface DialogBoxComponent {
 
 interface DialogBoxHeaderProps extends DialogBoxComponent {
   children?: ReactNode;
+  className?: string;
 }
 
 interface DialogBoxBodyProps extends DialogBoxComponent {
   children?: ReactNode;
+  className?: string;
 }
 
 interface DialogBoxFooterProps extends DialogBoxComponent {
   children?: ReactNode;
+  className?: string;
 }
 
-const DialogContext = createContext<MutableRefObject<HTMLDialogElement | null> | undefined>(undefined);
+const DialogContext = createContext<RefObject<HTMLDialogElement | null> | undefined>(undefined);
 
 function DialogBox({ show, className, onClose, children }: DialogBoxProps) {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
@@ -39,9 +42,16 @@ function DialogBox({ show, className, onClose, children }: DialogBoxProps) {
     dialogRef.current?.close();
   }, [show]);
 
+  function handleClickDialog(event: React.MouseEvent<HTMLDialogElement>) {
+    // if (event.target === event.currentTarget) {
+    //   dialogRef.current?.close();
+    // }
+  }
+
   return <dialog ref={dialogRef}
                  onClose={onClose}
-                 className={classNames([styles.dialog, show ? styles.show : styles.hide])}>
+                 onClick={handleClickDialog}
+                 className={classNames([styles.dialog])}>
     <div className={classNames([styles.container, className])}>
       <DialogContext.Provider value={dialogRef}>
         {children}
@@ -50,32 +60,32 @@ function DialogBox({ show, className, onClose, children }: DialogBoxProps) {
   </dialog>
 }
 
-function Title({ children }: DialogBoxHeaderProps) {
-  const dialogRef = useContext(DialogContext);
+function Title({ children, className }: DialogBoxHeaderProps) {
+  const dialogRef = use(DialogContext);
 
-  function handleClickClose() {
+  function handleClickClose(event: React.MouseEvent<HTMLDivElement>) {
+    event.stopPropagation();
     dialogRef?.current?.close();
   }
 
-  return <div className={styles.header}>
-    <div>{children}</div>
-    <div onClick={handleClickClose}><GrClose/></div>
-  </div>
+  return <header className={styles.title}>
+    <div className={className}>{children}</div>
+    <div className={styles.close} onClick={handleClickClose}><GrClose/></div>
+  </header>
 }
 
-function Header({ children }: DialogBoxHeaderProps) {
-
-  return <div className={styles.header}>
+function Header({ children, className }: DialogBoxHeaderProps) {
+  return <header className={className}>
     {children}
-  </div>
+  </header>
 }
 
-function Body({ children }: DialogBoxBodyProps) {
-  return <section className={styles.body}>{children}</section>
+function Body({ children, className }: DialogBoxBodyProps) {
+  return <section className={[styles.body, className].join(' ')}>{children}</section>
 }
 
-function Footer({ children }: DialogBoxFooterProps) {
-  return <div className={styles.footer}>{children}</div>
+function Footer({ children, className }: DialogBoxFooterProps) {
+  return <div className={[styles.footer, className].join(' ')}>{children}</div>
 }
 
 DialogBox.Title = Title;

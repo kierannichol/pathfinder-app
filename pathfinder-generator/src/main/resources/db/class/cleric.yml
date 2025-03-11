@@ -1,265 +1,390 @@
 id: "class:cleric"
 name: "Cleric"
 category: "CORE"
-description: "Role: More than capable of upholding the honor of their deities in battle,\
-  \ clerics often prove stalwart and capable combatants. Their true strength lies\
-  \ in their capability to draw upon the power of their deities, whether to increase\
-  \ their own and their allies' prowess in battle, to vex their foes with divine magic,\
-  \ or to lend healing to companions in need. As their powers are influenced by their\
-  \ faith, all clerics must focus their worship upon a divine source. While the vast\
-  \ majority of clerics revere a specific deity, a small number dedicate themselves\
-  \ to a divine concept worthy of devotion--such as battle, death, justice, or knowledge--free\
-  \ of a deific abstraction. (Work with your GM if you prefer this path to selecting\
-  \ a specific deity.) Alignment: A cleric's alignment must be within one step of\
-  \ her deity's, along either the law/chaos axis or the good/evil axis. Hit Die: d8\
-  \ Starting Wealth: 4d6 × 10 gp (average 140 gp.) In addition, each character begins\
-  \ play with an outfit worth 10 gp or less."
+description: "Role: More than capable of upholding the honor of their deities in
+  battle, clerics often prove stalwart and capable combatants. Their true
+  strength lies in their capability to draw upon the power of their deities,
+  whether to increase their own and their allies' prowess in battle, to vex
+  their foes with divine magic, or to lend healing to companions in need. As
+  their powers are influenced by their faith, all clerics must focus their
+  worship upon a divine source. While the vast majority of clerics revere a
+  specific deity, a small number dedicate themselves to a divine concept worthy
+  of devotion--such as battle, death, justice, or knowledge--free of a deific
+  abstraction. (Work with your GM if you prefer this path to selecting a
+  specific deity.) Alignment: A cleric's alignment must be within one step of
+  her deity's, along either the law/chaos axis or the good/evil axis. Hit Die:
+  d8 Starting Wealth: 4d6 × 10 gp (average 140 gp.) In addition, each character
+  begins play with an outfit worth 10 gp or less."
+stacks:
+  - choices:
+      - choice_id: "domain_spell_1"
+        label: "Level 1 Domain Spell"
+        type: "domain_spell"
+        option_tags:
+          - "spell+cleric1"
+    effects:
+      - "ADD trait:level_0_spells_per_day#cleric 3"
+      - "ADD trait:level_1_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+      - "SET trait:divine_spellcaster 1"
+  - effects:
+      - "ADD trait:level_0_spells_per_day#cleric 1"
+      - "ADD trait:level_1_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - choices:
+    - choice_id: "domain_spell_2"
+      label: "Level 2 Domain Spell"
+      type: "domain_spell"
+      option_tags:
+        - "spell+cleric2"
+    effects:
+      - "ADD trait:level_2_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - effects:
+      - "ADD trait:level_1_spells_per_day#cleric 1"
+      - "ADD trait:level_2_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - choices:
+      - choice_id: "domain_spell_3"
+        label: "Level 3 Domain Spell"
+        type: "domain_spell"
+        option_tags:
+          - "spell+cleric3"
+    effects:
+      - "ADD trait:level_3_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - effects:
+      - "ADD trait:level_2_spells_per_day#cleric 1"
+      - "ADD trait:level_3_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - choices:
+      - choice_id: "domain_spell_4"
+        label: "Level 4 Domain Spell"
+        type: "domain_spell"
+        option_tags:
+          - "spell+cleric4"
+    effects:
+      - "ADD trait:level_1_spells_per_day#cleric 1"
+      - "ADD trait:level_4_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - effects:
+      - "ADD trait:level_3_spells_per_day#cleric 1"
+      - "ADD trait:level_4_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - choices:
+      - choice_id: "domain_spell_5"
+        label: "Level 5 Domain Spell"
+        type: "domain_spell"
+        option_tags:
+          - "spell+cleric5"
+    effects:
+      - "ADD trait:level_2_spells_per_day#cleric 1"
+      - "ADD trait:level_5_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - effects:
+      - "ADD trait:level_4_spells_per_day#cleric 1"
+      - "ADD trait:level_5_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - choices:
+      - choice_id: "domain_spell_6"
+        label: "Level 6 Domain Spell"
+        type: "domain_spell"
+        option_tags:
+          - "spell+cleric6"
+    effects:
+      - "ADD trait:level_3_spells_per_day#cleric 1"
+      - "ADD trait:level_6_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - effects:
+      - "ADD trait:level_5_spells_per_day#cleric 1"
+      - "ADD trait:level_6_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - choices:
+      - choice_id: "domain_spell_7"
+        label: "Level 7 Domain Spell"
+        type: "domain_spell"
+        option_tags:
+          - "spell+cleric7"
+    effects:
+      - "ADD trait:level_4_spells_per_day#cleric 1"
+      - "ADD trait:level_7_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - effects:
+      - "ADD trait:level_6_spells_per_day#cleric 1"
+      - "ADD trait:level_7_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - choices:
+      - choice_id: "domain_spell_8"
+        label: "Level 8 Domain Spell"
+        type: "domain_spell"
+        option_tags:
+          - "spell+cleric8"
+    effects:
+      - "ADD trait:level_5_spells_per_day#cleric 1"
+      - "ADD trait:level_8_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - effects:
+      - "ADD trait:level_7_spells_per_day#cleric 1"
+      - "ADD trait:level_8_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - choices:
+      - choice_id: "domain_spell_9"
+        label: "Level 9 Domain Spell"
+        type: "domain_spell"
+        option_tags:
+          - "spell+cleric9"
+    effects:
+      - "ADD trait:level_6_spells_per_day#cleric 1"
+      - "ADD trait:level_9_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - effects:
+      - "ADD trait:level_8_spells_per_day#cleric 1"
+      - "ADD trait:level_9_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - effects:
+      - "ADD trait:level_7_spells_per_day#cleric 1"
+      - "ADD trait:level_9_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
+  - effects:
+      - "ADD trait:level_8_spells_per_day#cleric 1"
+      - "ADD trait:level_9_spells_per_day#cleric 1"
+      - "ADD caster_level 1"
 source: " Pathfinder RPG Core Rulebook"
 hit_die: "D8"
-alignment: "A cleric's alignment must be within one step of her deity's, along either\
-  \ the law/chaos axis or the good/evil axis"
+alignment: "A cleric's alignment must be within one step of her deity's, along
+  either the law/chaos axis or the good/evil axis"
 class_skills:
-- "skill:appraise"
-- "skill:craft"
-- "skill:diplomacy"
-- "skill:heal"
-- "skill:knowledge"
-- "skill:linguistics"
-- "skill:profession"
-- "skill:sense_motive"
-- "skill:spellcraft"
+  - "skill:appraise"
+  - "skill:craft"
+  - "skill:diplomacy"
+  - "skill:heal"
+  - "skill:knowledge"
+  - "skill:linguistics"
+  - "skill:profession"
+  - "skill:sense_motive"
+  - "skill:spellcraft"
 skill_ranks_per_level: "2"
 bab: "B"
 fort: "A"
 ref: "B"
 will: "A"
 levels:
-- class_feature_names:
-  - "trait:armor_proficiency#cleric"
-  - "trait:weapon_proficiency#cleric"
-  - "ability:aura#cleric"
-  - "ability:channel_energy#cleric"
-  - "ability:domains#cleric"
-  - "ability:orisons#cleric"
-  - "ability:spontaneous_casting#cleric"
-  - "ability:spellcasting#cleric"
-  level: 1
-- class_feature_names: []
-  level: 2
-- class_feature_names:
-  - "ability:channel_energy#cleric"
-  level: 3
-- class_feature_names: []
-  level: 4
-- class_feature_names:
-  - "ability:channel_energy#cleric"
-  level: 5
-- class_feature_names: []
-  level: 6
-- class_feature_names:
-  - "ability:channel_energy#cleric"
-  level: 7
-- class_feature_names: []
-  level: 8
-- class_feature_names:
-  - "ability:channel_energy#cleric"
-  level: 9
-- class_feature_names: []
-  level: 10
-- class_feature_names:
-  - "ability:channel_energy#cleric"
-  level: 11
-- class_feature_names: []
-  level: 12
-- class_feature_names:
-  - "ability:channel_energy#cleric"
-  level: 13
-- class_feature_names: []
-  level: 14
-- class_feature_names:
-  - "ability:channel_energy#cleric"
-  level: 15
-- class_feature_names: []
-  level: 16
-- class_feature_names:
-  - "ability:channel_energy#cleric"
-  level: 17
-- class_feature_names: []
-  level: 18
-- class_feature_names:
-  - "ability:channel_energy#cleric"
-  level: 19
-- class_feature_names: []
-  level: 20
+  - class_feature_names:
+      - "trait:armor_proficiency#cleric"
+      - "trait:weapon_proficiency#cleric"
+      - "ability:aura#cleric"
+      - "ability:channel_energy#cleric"
+      - "ability:domains#cleric"
+      - "ability:orisons#cleric"
+      - "ability:spontaneous_casting#cleric"
+      - "ability:spellcasting#cleric"
+    level: 1
+  - level: 2
+  - class_feature_names:
+      - "ability:channel_energy#cleric"
+    level: 3
+  - level: 4
+  - class_feature_names:
+      - "ability:channel_energy#cleric"
+    level: 5
+  - level: 6
+  - class_feature_names:
+      - "ability:channel_energy#cleric"
+    level: 7
+  - level: 8
+  - class_feature_names:
+      - "ability:channel_energy#cleric"
+    level: 9
+  - level: 10
+  - class_feature_names:
+      - "ability:channel_energy#cleric"
+    level: 11
+  - level: 12
+  - class_feature_names:
+      - "ability:channel_energy#cleric"
+    level: 13
+  - level: 14
+  - class_feature_names:
+      - "ability:channel_energy#cleric"
+    level: 15
+  - level: 16
+  - class_feature_names:
+      - "ability:channel_energy#cleric"
+    level: 17
+  - level: 18
+  - class_feature_names:
+      - "ability:channel_energy#cleric"
+    level: 19
+  - level: 20
 class_features:
-- id: "ability:aura#cleric"
-  name: "Aura"
-  label: null
-  type: "Ex"
-  description: "A cleric of a chaotic, evil, good, or lawful deity has a particularly\
-    \ powerful aura corresponding to the deity's alignment (see detect evil for details)."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:channel_energy#cleric"
-  name: "Channel Energy"
-  label: "Channel Energy ({@ability:channel_energy#cleric}d6)"
-  type: "Su"
-  description: "Regardless of alignment, any cleric can release a wave of energy by\
-    \ channeling the power of her faith through her holy (or unholy) symbol. This\
-    \ energy can be used to cause or heal damage, depending on the type of energy\
-    \ channeled and the creatures targeted.\nA good cleric (or a neutral cleric who\
-    \ worships a good deity) channels positive energy and can choose to deal damage\
-    \ to undead creatures or to heal living creatures. An evil cleric (or a neutral\
-    \ cleric who worships an evil deity) channels negative energy and can choose to\
-    \ deal damage to living creatures or to heal undead creatures. A neutral cleric\
-    \ of a neutral deity (or one who is not devoted to a particular deity) must choose\
-    \ whether she channels positive or negative energy. Once this choice is made,\
-    \ it cannot be reversed. This decision also determines whether the cleric can\
-    \ cast spontaneous cure or inflict spells (see spontaneous casting).\nChanneling\
-    \ energy causes a burst that affects all creatures of one type (either undead\
-    \ or living) in a 30-foot radius centered on the cleric. The amount of damage\
-    \ dealt or healed is equal to 1d6 points of damage plus 1d6 points of damage for\
-    \ every two cleric levels beyond 1st (2d6 at 3rd, 3d6 at 5th, and so on). Creatures\
-    \ that take damage from channeled energy receive a Will save to halve the damage.\
-    \ The DC of this save is equal to 10 + 1/2 the cleric’s level + the cleric’s Charisma\
-    \ modifier. Creatures healed by channel energy cannot exceed their maximum hit\
-    \ point total—all excess healing is lost. A cleric may channel energy a number\
-    \ of times per day equal to 3 + her Charisma modifier. This is a standard action\
-    \ that does not provoke an attack of opportunity. A cleric can choose whether\
-    \ or not to include herself in this effect.\nA cleric must be able to present\
-    \ her holy symbol to use this ability."
-  effects:
-    - "INCR ability:channel_energy 1"
-    - "INCR ability:channel_positive_energy 1"
-    - "INCR ability:channel_negative_energy 1"
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:domains#cleric"
-  name: "Domains"
-  label: null
-  type: ""
-  description: "A cleric's deity influences her alignment, what magic she can perform,\
-    \ her values, and how others see her. A cleric chooses two domains from among\
-    \ those belonging to her deity. A cleric can select an alignment domain (Chaos,\
-    \ Evil, Good, or Law) only if her alignment matches that domain. If a cleric is\
-    \ not devoted to a particular deity, she still selects two domains to represent\
-    \ her spiritual inclinations and abilities (subject to GM approval). The restriction\
-    \ on alignment domains still applies.Each domain grants a number of domain powers,\
-    \ dependent upon the level of the cleric, as well as a number of bonus spells.\
-    \ A cleric gains one domain spell slot for each level of cleric spell she can\
-    \ cast, from 1st on up. Each day, a cleric can prepare one of the spells from\
-    \ her two domains in that slot. If a domain spell is not on the cleric spell list,\
-    \ a cleric can prepare it only in her domain spell slot. Domain spells cannot\
-    \ be used to cast spells spontaneously.In addition, a cleric gains the listed\
-    \ powers from both of her domains, if she is of a high enough level. Unless otherwise\
-    \ noted, activating a domain power is a standard action."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:orisons#cleric"
-  name: "Orisons"
-  label: null
-  type: ""
-  description: "Clerics can prepare a number of orisons, or 0-level spells, each day,\
-    \ as noted on Table: Cleric under “Spells per day.\" These spells are treated\
-    \ like any other spell, but they are not expended when cast and may be used again."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:spellcasting#cleric"
-  name: "Spell Casting (Cleric)"
-  label: null
-  type: null
-  description: "Cleric can cast spells."
-  effects:
-  - "SET trait:level_0_spells_per_day#cleric 3+if(@class:cleric>1,1,0)"
-  - "SET trait:level_1_spells_per_day#cleric 1+if(@class:cleric>1,1,0)+if(@class:cleric>3,1,0)+if(@class:cleric>6,1,0)"
-  - "SET trait:level_2_spells_per_day#cleric if(@class:cleric>=3,1+if(@class:cleric>3,1,0)+if(@class:cleric>5,1,0)+if(@class:cleric>8,1,0),null)"
-  - "SET trait:level_3_spells_per_day#cleric if(@class:cleric>=5,1+if(@class:cleric>5,1,0)+if(@class:cleric>7,1,0)+if(@class:cleric>10,1,0),null)"
-  - "SET trait:level_4_spells_per_day#cleric if(@class:cleric>=7,1+if(@class:cleric>7,1,0)+if(@class:cleric>9,1,0)+if(@class:cleric>12,1,0),null)"
-  - "SET trait:level_5_spells_per_day#cleric if(@class:cleric>=9,1+if(@class:cleric>9,1,0)+if(@class:cleric>11,1,0)+if(@class:cleric>14,1,0),null)"
-  - "SET trait:level_6_spells_per_day#cleric if(@class:cleric>=11,1+if(@class:cleric>11,1,0)+if(@class:cleric>13,1,0)+if(@class:cleric>16,1,0),null)"
-  - "SET trait:level_7_spells_per_day#cleric if(@class:cleric>=13,1+if(@class:cleric>13,1,0)+if(@class:cleric>15,1,0)+if(@class:cleric>18,1,0),null)"
-  - "SET trait:level_8_spells_per_day#cleric if(@class:cleric>=15,1+if(@class:cleric>15,1,0)+if(@class:cleric>17,1,0)+if(@class:cleric>19,1,0),null)"
-  - "SET trait:level_9_spells_per_day#cleric if(@class:cleric>=17,1+if(@class:cleric>17,1,0)+if(@class:cleric>18,1,0)+if(@class:cleric>19,1,0),null)"
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:spontaneous_casting#cleric"
-  name: "Spontaneous Casting"
-  label: null
-  type: ""
-  description: "A good cleric (or a neutral cleric of a good deity) can channel stored\
-    \ spell energy into healing spells that she did not prepare ahead of time. The\
-    \ cleric can “lose\" any prepared spell that is not an orison or domain spell\
-    \ in order to cast any cure spell of the same spell level or lower (a cure spell\
-    \ is any spell with “cure\" in its name).An evil cleric (or a neutral cleric of\
-    \ an evil deity) can't convert prepared spells to cure spells but can convert\
-    \ them to inflict spells (an inflict spell is one with “inflict\" in its name).A\
-    \ cleric who is neither good nor evil and whose deity is neither good nor evil\
-    \ can convert spells to either cure spells or inflict spells (player's choice).\
-    \ Once the player makes this choice, it cannot be reversed. This choice also determines\
-    \ whether the cleric channels positive or negative energy (see channel energy)."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "trait:armor_proficiency#cleric"
-  name: "Armor Proficiency (Cleric)"
-  label: null
-  type: null
-  description: "A Cleric is proficient with light and medium armor, plus all shields\
-    \ (except tower shields)."
-  effects:
-  - "SET proficiency:light_shield 1"
-  - "SET proficiency:light_armor 1"
-  - "SET proficiency:buckler 1"
-  - "SET proficiency:medium_armor 1"
-  - "SET proficiency:heavy_shield 1"
-  prerequisites: null
-  source: " Pathfinder RPG Core Rulebook"
-- id: "trait:weapon_proficiency#cleric"
-  name: "Weapon Proficiency (Cleric)"
-  label: null
-  type: null
-  description: "A Cleric is proficient with all simple weapons."
-  effects:
-  - "SET proficiency:brass_knife 1"
-  - "SET proficiency:hook_hand 1"
-  - "SET proficiency:dart 1"
-  - "SET proficiency:mere_club 1"
-  - "SET proficiency:stingchuck 1"
-  - "SET proficiency:handwraps 1"
-  - "SET proficiency:light_crossbow 1"
-  - "SET proficiency:spear 1"
-  - "SET proficiency:blowgun 1"
-  - "SET proficiency:spiked_gauntlet 1"
-  - "SET proficiency:heavy_crossbow 1"
-  - "SET proficiency:unarmed 1"
-  - "SET proficiency:bayonet 1"
-  - "SET proficiency:javelin 1"
-  - "SET proficiency:brass_knuckles 1"
-  - "SET proficiency:battle_aspergillum 1"
-  - "SET proficiency:heavy_mace 1"
-  - "SET proficiency:dagger 1"
-  - "SET proficiency:gauntlet 1"
-  - "SET proficiency:boarding_pike 1"
-  - "SET proficiency:cestus 1"
-  - "SET proficiency:kumade 1"
-  - "SET proficiency:shortspear 1"
-  - "SET proficiency:kunai 1"
-  - "SET proficiency:collapsible_kumade 1"
-  - "SET proficiency:lantern_staff 1"
-  - "SET proficiency:sling 1"
-  - "SET proficiency:wooden_stake 1"
-  - "SET proficiency:spring_blade 1"
-  - "SET proficiency:quarterstaff 1"
-  - "SET proficiency:light_mace 1"
-  - "SET proficiency:club 1"
-  - "SET proficiency:punching_dagger 1"
-  - "SET proficiency:sickle 1"
-  - "SET proficiency:morningstar 1"
-  - "SET proficiency:traveling_kettle 1"
-  - "SET proficiency:stonebow 1"
-  - "SET proficiency:longspear 1"
-  prerequisites: null
-  source: " Pathfinder RPG Core Rulebook"
+  - id: "ability:aura#cleric"
+    name: "Aura"
+    type: "Ex"
+    description: "A cleric of a chaotic, evil, good, or lawful deity has a
+      particularly powerful aura corresponding to the deity's alignment (see
+      detect evil for details)."
+    source: " Pathfinder RPG Core Rulebook"
+  - id: "ability:channel_energy#cleric"
+    name: "Channel Energy"
+    label: "Channel Energy ({@ability:channel_energy#cleric}d6)"
+    type: "Su"
+    description: "Regardless of alignment, any cleric can release a wave of energy
+      by channeling the power of her faith through her holy (or unholy) symbol.
+      This energy can be used to cause or heal damage, depending on the type of
+      energy channeled and the creatures targeted.
+
+      A good cleric (or a neutral cleric who worships a good deity) channels
+      positive energy and can choose to deal damage to undead creatures or to
+      heal living creatures. An evil cleric (or a neutral cleric who worships an
+      evil deity) channels negative energy and can choose to deal damage to
+      living creatures or to heal undead creatures. A neutral cleric of a
+      neutral deity (or one who is not devoted to a particular deity) must
+      choose whether she channels positive or negative energy. Once this choice
+      is made, it cannot be reversed. This decision also determines whether the
+      cleric can cast spontaneous cure or inflict spells (see spontaneous
+      casting).
+
+      Channeling energy causes a burst that affects all creatures of one type
+      (either undead or living) in a 30-foot radius centered on the cleric. The
+      amount of damage dealt or healed is equal to 1d6 points of damage plus 1d6
+      points of damage for every two cleric levels beyond 1st (2d6 at 3rd, 3d6
+      at 5th, and so on). Creatures that take damage from channeled energy
+      receive a Will save to halve the damage. The DC of this save is equal to
+      10 + 1/2 the cleric’s level + the cleric’s Charisma modifier. Creatures
+      healed by channel energy cannot exceed their maximum hit point total—all
+      excess healing is lost. A cleric may channel energy a number of times per
+      day equal to 3 + her Charisma modifier. This is a standard action that
+      does not provoke an attack of opportunity. A cleric can choose whether or
+      not to include herself in this effect.
+
+      A cleric must be able to present her holy symbol to use this ability."
+    effects:
+      - "INCR ability:channel_energy 1"
+      - "INCR ability:channel_positive_energy 1"
+      - "INCR ability:channel_negative_energy 1"
+    attacks:
+      - name: "Channel Energy"
+        chance_to_hit:
+          value: "10 + floor(@class:cleric/2) + @cha_mod"
+          to_beat: "1d20 + @target:will"
+        hit_damage: "(@ability:channel_energy#cleric)d6"
+        miss_damage: "floor((@ability:channel_energy#cleric)d6 / 2)"
+    source: " Pathfinder RPG Core Rulebook"
+  - id: "ability:domains#cleric"
+    name: "Domains"
+    description: "A cleric's deity influences her alignment, what magic she can
+      perform, her values, and how others see her. A cleric chooses two domains
+      from among those belonging to her deity. A cleric can select an alignment
+      domain (Chaos, Evil, Good, or Law) only if her alignment matches that
+      domain. If a cleric is not devoted to a particular deity, she still
+      selects two domains to represent her spiritual inclinations and abilities
+      (subject to GM approval). The restriction on alignment domains still
+      applies.Each domain grants a number of domain powers, dependent upon the
+      level of the cleric, as well as a number of bonus spells. A cleric gains
+      one domain spell slot for each level of cleric spell she can cast, from
+      1st on up. Each day, a cleric can prepare one of the spells from her two
+      domains in that slot. If a domain spell is not on the cleric spell list, a
+      cleric can prepare it only in her domain spell slot. Domain spells cannot
+      be used to cast spells spontaneously.In addition, a cleric gains the
+      listed powers from both of her domains, if she is of a high enough level.
+      Unless otherwise noted, activating a domain power is a standard action."
+    source: " Pathfinder RPG Core Rulebook"
+    fixed_stacks:
+      - choices:
+          - choice_id: "cleric_domain_1"
+            label: "Domain"
+            type: "class_feature"
+            option_tags:
+              - "cleric_domain"
+          - choice_id: "cleric_domain_2"
+            label: "Domain"
+            type: "class_feature"
+            option_tags:
+              - "cleric_domain"
+  - id: "ability:orisons#cleric"
+    name: "Orisons"
+    description: "Clerics can prepare a number of orisons, or 0-level spells, each
+      day, as noted on Table: Cleric under “Spells per day.\" These spells are
+      treated like any other spell, but they are not expended when cast and may
+      be used again."
+    source: " Pathfinder RPG Core Rulebook"
+  - id: "ability:spellcasting#cleric"
+    name: "Spell Casting (Cleric)"
+    description: "Cleric can cast spells."
+    source: " Pathfinder RPG Core Rulebook"
+  - id: "ability:spontaneous_casting#cleric"
+    name: "Spontaneous Casting"
+    description: "A good cleric (or a neutral cleric of a good deity) can channel
+      stored spell energy into healing spells that she did not prepare ahead of
+      time. The cleric can “lose\" any prepared spell that is not an orison or
+      domain spell in order to cast any cure spell of the same spell level or
+      lower (a cure spell is any spell with “cure\" in its name).An evil cleric
+      (or a neutral cleric of an evil deity) can't convert prepared spells to
+      cure spells but can convert them to inflict spells (an inflict spell is
+      one with “inflict\" in its name).A cleric who is neither good nor evil and
+      whose deity is neither good nor evil can convert spells to either cure
+      spells or inflict spells (player's choice). Once the player makes this
+      choice, it cannot be reversed. This choice also determines whether the
+      cleric channels positive or negative energy (see channel energy)."
+    source: " Pathfinder RPG Core Rulebook"
+  - id: "trait:armor_proficiency#cleric"
+    name: "Armor Proficiency (Cleric)"
+    description: "A Cleric is proficient with light and medium armor, plus all
+      shields (except tower shields)."
+    effects:
+      - "SET proficiency:light_shield 1"
+      - "SET proficiency:light_armor 1"
+      - "SET proficiency:buckler 1"
+      - "SET proficiency:medium_armor 1"
+      - "SET proficiency:heavy_shield 1"
+    source: " Pathfinder RPG Core Rulebook"
+  - id: "trait:weapon_proficiency#cleric"
+    name: "Weapon Proficiency (Cleric)"
+    description: "A Cleric is proficient with all simple weapons."
+    fixed_stacks:
+      - choices:
+          - choice_id: "deity_favored_weapon"
+            label: "Deity's Favored Weapon"
+            type: "class_feature"
+            option_tags:
+              - "weapon_proficiency"
+        effects:
+          - "SET proficiency:brass_knife 1"
+          - "SET proficiency:hook_hand 1"
+          - "SET proficiency:dart 1"
+          - "SET proficiency:mere_club 1"
+          - "SET proficiency:stingchuck 1"
+          - "SET proficiency:handwraps 1"
+          - "SET proficiency:light_crossbow 1"
+          - "SET proficiency:spear 1"
+          - "SET proficiency:blowgun 1"
+          - "SET proficiency:spiked_gauntlet 1"
+          - "SET proficiency:heavy_crossbow 1"
+          - "SET proficiency:unarmed 1"
+          - "SET proficiency:bayonet 1"
+          - "SET proficiency:javelin 1"
+          - "SET proficiency:brass_knuckles 1"
+          - "SET proficiency:battle_aspergillum 1"
+          - "SET proficiency:heavy_mace 1"
+          - "SET proficiency:dagger 1"
+          - "SET proficiency:gauntlet 1"
+          - "SET proficiency:boarding_pike 1"
+          - "SET proficiency:cestus 1"
+          - "SET proficiency:kumade 1"
+          - "SET proficiency:shortspear 1"
+          - "SET proficiency:kunai 1"
+          - "SET proficiency:collapsible_kumade 1"
+          - "SET proficiency:lantern_staff 1"
+          - "SET proficiency:sling 1"
+          - "SET proficiency:wooden_stake 1"
+          - "SET proficiency:spring_blade 1"
+          - "SET proficiency:quarterstaff 1"
+          - "SET proficiency:light_mace 1"
+          - "SET proficiency:club 1"
+          - "SET proficiency:punching_dagger 1"
+          - "SET proficiency:sickle 1"
+          - "SET proficiency:morningstar 1"
+          - "SET proficiency:traveling_kettle 1"
+          - "SET proficiency:stonebow 1"
+          - "SET proficiency:longspear 1"
+    source: " Pathfinder RPG Core Rulebook"

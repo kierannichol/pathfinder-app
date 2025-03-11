@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 import org.springframework.stereotype.Component;
+import pathfinder.model.AttackModification;
 import pathfinder.model.ItemOption;
 import pathfinder.model.ItemOptionGroup;
 import pathfinder.model.ItemOptionSet;
@@ -108,6 +109,8 @@ public class WeaponItemOptionsProvider implements ItemOptionsProvider {
                     .setBaseNamePostfix("+" + i)
                     .addTag("weapon_enhancement")
                     .setPointCost(i)
+                    .setAttackMod(new AttackModification("" + i, "" + i))
+                    .addStat("weapon:enhancement", i)
                     .build();
             options.add(option);
         }

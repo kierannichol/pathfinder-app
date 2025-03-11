@@ -1,0 +1,82 @@
+import * as React from 'react';
+import {useMemo} from 'react';
+import MultiSelectChoiceList from "@/components/choice/MultiSelectChoiceList.tsx";
+import {useCharacterAtLevel} from "@/view/character/edit/CharacterAtLevelContext.tsx";
+import {useCharacterUpdate} from "@/view/character/edit/CharacterUpdateContext.tsx";
+import {ChoiceSelectionHandler} from "@/components/choice/ChoiceSelectionHandler.tsx";
+import styles from "./SpellsTab.module.css";
+import {SelectChoiceRef} from "@/data/Choice.ts"
+import CharacterAtLevel from "@/data/CharacterAtLevel.ts";
+import ChoiceSelectButton from "@/components/choice/ChoiceSelectButton.tsx";
+
+function SpellsTab() {
+  const characterAtLevel = useCharacterAtLevel();
+  const onChange = useCharacterUpdate();
+  const spellChoices = useMemo(() => {
+    return characterAtLevel.choicesOfType('spell');
+  }, [characterAtLevel]);
+
+  const domainSpellChoices = useMemo(() => {
+    return characterAtLevel.choicesOfType('domain_spell');
+  }, [characterAtLevel]);
+
+  return (
+      <section className={styles.spells}>
+        {
+          spellChoices.map(choice => choice as SelectChoiceRef)
+          .map((choice, index) => <SpellLevel key={choice.path}
+                                              domainChoiceRef={domainSpellChoices[index - 1] as SelectChoiceRef}
+                                              choiceRef={choice}
+                                              onChange={onChange}
+                                              characterAtLevel={characterAtLevel}/>)
+        }
+      </section>
+  );
+}
+
+interface SpellLevelProps {
+  choiceRef: SelectChoiceRef;
+  domainChoiceRef: SelectChoiceRef | undefined;
+  onChange: ChoiceSelectionHandler;
+  characterAtLevel: CharacterAtLevel;
+}
+
+function SpellLevel({choiceRef, domainChoiceRef, onChange, characterAtLevel}: SpellLevelProps) {
+  const maxSpellCount = useMemo(() => {
+    return choiceRef.maxLimit(characterAtLevel) ?? '∞';
+  }, [choiceRef, characterAtLevel]);
+
+  const usedSpellCount = useMemo(() => {
+    return (characterAtLevel.selected(choiceRef) as string[] ?? []).length;
+  }, [choiceRef, characterAtLevel])
+
+  const fixedSpells = useMemo(() => {
+    return characterAtLevel.features
+    .filter(feature => feature.tags.includes('spell'))
+    .filter(feature => feature.parent.type === 'feature')
+    // .filter(feature => feature.tags.includes(choiceRef))
+  }, [characterAtLevel]);
+
+  if (maxSpellCount === 0) return undefined;
+
+  return (
+      <div className={styles.spellLevel}>
+        <h1>{choiceRef.label} ({usedSpellCount}/{maxSpellCount}{domainChoiceRef ? "+1" : ""})</h1>
+        <div className={styles.spellLevelContent}>
+          {fixedSpells.length > 0 && <div>
+            {fixedSpells.map(spell =>
+                <div key={spell.key}>{spell.name} ({JSON.stringify(choiceRef.path)})</div>)}
+          </div>}
+          {domainChoiceRef && <ChoiceSelectButton choiceRef={domainChoiceRef}
+                                                  labelClassName={styles.domainSpell}
+                                                  onChange={onChange}/>}
+          <MultiSelectChoiceList choiceRef={choiceRef}
+                                 onChange={onChange}
+                                 characterAtLevel={characterAtLevel}
+                                 noun={`Spell`}/>
+        </div>
+      </div>
+  )
+}
+
+export default SpellsTab;

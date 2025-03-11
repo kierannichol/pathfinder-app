@@ -1,0 +1,39 @@
+id: "cleric_domain:war_domain#blood"
+parent_id: "cleric_domain:war_domain"
+name: "Blood Subdomain"
+description: "You are a crusader for your god, always ready and willing to fight to\
+  \ defend your faith."
+granted_powers:
+- id: "ability:battle_rage"
+  name: "Battle Rage"
+  description: "You can touch a creature as a standard action to give it a bonus on\
+    \ melee damage rolls equal to 1/2 your cleric level for 1 round (minimum +1).\
+    \ You can do so a number of times per day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:wounding_blade"
+  name: "Wounding Blade"
+  description: "At 8th level, you can give a weapon that you touch the wounding special\
+    \ weapon quality for a number of rounds equal to 1/2 your cleric level. You can\
+    \ use this ability once per day at 8th level, and an additional time per day for\
+    \ every four levels beyond 8th."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:magic_weapon"
+- spell_level: 2
+  spell_id: "spell:spiritual_weapon"
+- spell_level: 3
+  spell_id: "spell:vampiric_touch"
+- spell_level: 4
+  spell_id: "spell:divine_power"
+- spell_level: 5
+  spell_id: "spell:wall_of_thorns"
+- spell_level: 6
+  spell_id: "spell:blade_barrier"
+- spell_level: 7
+  spell_id: "spell:inflict_serious_wounds"
+- spell_level: 8
+  spell_id: "spell:power_word_stun"
+- spell_level: 9
+  spell_id: "spell:power_word_kill"
+source: "Advanced Player's Guide"

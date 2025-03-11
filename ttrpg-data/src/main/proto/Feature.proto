@@ -1,0 +1,11 @@
+syntax = "proto3";
+import "Stack.proto";
+
+option java_multiple_files = true;
+option java_package = "ttrpg.data";
+
+message FeatureData {
+    string id = 1;
+    string name = 2;
+    repeated StackData stacks = 3;
+}

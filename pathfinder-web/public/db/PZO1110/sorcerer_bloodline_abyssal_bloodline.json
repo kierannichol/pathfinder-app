@@ -12,36 +12,45 @@
         "featureModifications": [{
           "targetFeatureId": "class:sorcerer",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["spell:unholy_aura"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:claws#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 19,
-            "linksToAdd": ["ability:bloodline_feat#abyssal_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#abyssal_bloodline", "spell:summon_monster_9"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 3,
-            "linksToAdd": ["ability:demon_resistances#sorcerer"],
+            "linksToAdd": ["ability:demon_resistances#sorcerer", "spell:cause_fear"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:demonic_might#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["spell:bulls_strength"]
+          }, {
             "targetStackCount": 7,
-            "linksToAdd": ["ability:bloodline_feat#abyssal_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#abyssal_bloodline", "spell:rage"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToAdd": ["ability:strength_of_the_abyss#sorcerer"],
+            "linksToAdd": ["ability:strength_of_the_abyss#sorcerer", "spell:stoneskin"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["spell:dismissal"]
+          }, {
             "targetStackCount": 13,
-            "linksToAdd": ["ability:bloodline_feat#abyssal_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#abyssal_bloodline", "spell:transformation"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToAdd": ["ability:added_summonings#sorcerer"],
+            "linksToAdd": ["ability:added_summonings#sorcerer", "spell:greater_teleport"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }]
         }]

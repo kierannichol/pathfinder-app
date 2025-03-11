@@ -2,6 +2,10 @@ import React from "react";
 import {FieldProps} from "./FieldProps";
 import {SimpleTextField} from "./simple/SimpleTextField";
 
-export function LabelField(props: FieldProps<string>) {
-  return <SimpleTextField label="Label" {...props} />
+interface LabelFieldProps extends FieldProps<string> {
+  label?: string;
+}
+
+export function LabelField({ label, ...props }: LabelFieldProps) {
+  return <SimpleTextField label={label ?? "Label"} {...props} />
 }

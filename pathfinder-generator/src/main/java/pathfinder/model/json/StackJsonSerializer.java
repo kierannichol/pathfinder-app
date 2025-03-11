@@ -5,7 +5,9 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import java.io.IOException;
 import pathfinder.model.Choice;
+import pathfinder.model.ChoiceModification;
 import pathfinder.model.Effect;
+import pathfinder.model.FeatureModification;
 import pathfinder.model.Link;
 import pathfinder.model.Stack;
 
@@ -41,6 +43,24 @@ public class StackJsonSerializer extends StdSerializer<Stack> {
             gen.writeStartArray();
             for (Choice choice : value.choices()) {
                 provider.findValueSerializer(Choice.class).serialize(choice, gen, provider);
+            }
+            gen.writeEndArray();
+        }
+
+        if (!value.featureModifications().isEmpty()) {
+            gen.writeFieldName("feature_modifications");
+            gen.writeStartArray();
+            for (FeatureModification featureModification : value.featureModifications()) {
+                provider.findValueSerializer(FeatureModification.class).serialize(featureModification, gen, provider);
+            }
+            gen.writeEndArray();
+        }
+
+        if (!value.choiceModifications().isEmpty()) {
+            gen.writeFieldName("choice_modifications");
+            gen.writeStartArray();
+            for (ChoiceModification choiceModification : value.choiceModifications()) {
+                provider.findValueSerializer(ChoiceModification.class).serialize(choiceModification, gen, provider);
             }
             gen.writeEndArray();
         }

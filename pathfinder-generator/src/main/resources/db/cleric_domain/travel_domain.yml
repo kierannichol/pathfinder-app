@@ -1,0 +1,42 @@
+id: "cleric_domain:travel_domain"
+parent_id: null
+name: "Travel Domain"
+description: "You are an explorer and find enlightenment in the simple joy of travel,\
+  \ be it by foot or conveyance or magic. Increase your base speed by 10 feet."
+granted_powers:
+- id: "ability:agile_feet"
+  name: "Agile Feet"
+  description: "As a free action, you can gain increased mobility for 1 round. For\
+    \ the next round, you ignore all difficult terrain and do not take any penalties\
+    \ for moving through it. You can use this ability a number of times per day equal\
+    \ to 3 + your Wisdom modifier."
+  type: "Su"
+- id: "ability:dimensional_hop"
+  name: "Dimensional Hop"
+  description: "At 8th level, you can teleport up to 10 feet per cleric level per\
+    \ day as a move action. This teleportation must be used in 5-foot increments and\
+    \ such movement does not provoke attacks of opportunity. You must have line of\
+    \ sight to your destination to use this ability. You can bring other willing creatures\
+    \ with you, but you must expend an equal amount of distance for each creature\
+    \ brought."
+  type: "Sp"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:longstrider"
+- spell_level: 2
+  spell_id: "spell:locate_object"
+- spell_level: 3
+  spell_id: "spell:fly"
+- spell_level: 4
+  spell_id: "spell:dimension_door"
+- spell_level: 5
+  spell_id: "spell:teleport"
+- spell_level: 6
+  spell_id: "spell:find_the_path"
+- spell_level: 7
+  spell_id: "spell:teleport"
+- spell_level: 8
+  spell_id: "spell:phase_door"
+- spell_level: 9
+  spell_id: "spell:astral_projection"
+source: "Pathfinder RPG Core Rulebook"

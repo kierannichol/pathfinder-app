@@ -1,0 +1,40 @@
+id: "cleric_domain:nobility_domain#aristocracy"
+parent_id: "cleric_domain:nobility_domain"
+name: "Aristocracy Subdomain"
+description: "You are a great leader, an inspiration to all who follow the teachings\
+  \ of your faith."
+granted_powers:
+- id: "ability:inspiring_word"
+  name: "Inspiring Word"
+  description: "As a standard action, you can speak an inspiring word to a creature\
+    \ within 30 feet. That creature receives a +2 morale bonus on attack rolls, skill\
+    \ checks, ability checks, and saving throws for a number of rounds equal to 1/2\
+    \ your cleric level (minimum 1). You can use this power a number of times per\
+    \ day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:leadership"
+  name: "Leadership"
+  description: "At 8th level, you receive Leadership as a bonus feat. In addition,\
+    \ you gain a +2 bonus on your leadership score as long as you uphold the tenets\
+    \ of your deity (or divine concept if you do not venerate a deity)."
+  type: "Ex"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:divine_favor"
+- spell_level: 2
+  spell_id: "spell:enthrall"
+- spell_level: 3
+  spell_id: "spell:enter_image"
+- spell_level: 4
+  spell_id: "spell:discern_lies"
+- spell_level: 5
+  spell_id: "spell:command"
+- spell_level: 6
+  spell_id: "spell:geas_quest"
+- spell_level: 7
+  spell_id: "spell:repulsion"
+- spell_level: 8
+  spell_id: "spell:demand"
+- spell_level: 9
+  spell_id: "spell:_overwhelming_presence"
+source: "Pathfinder Player Companion: Champions of Balance"

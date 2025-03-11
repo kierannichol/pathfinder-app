@@ -9,5 +9,8 @@
   "stacks": {
     "fixedStack": {
     }
+  },
+  "attackModifier": {
+    "damageBonus": "if(@arg:include_sneak_attack AND !@arg:is_critical_confirm, (@ability:sneak_attack#slayer * 6) + 0.5, 0)"
   }
 }

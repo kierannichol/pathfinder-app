@@ -1,0 +1,40 @@
+id: "cleric_domain:death_domain#psychopomp"
+parent_id: "cleric_domain:death_domain"
+name: "Psychopomp Subdomain"
+description: "You can cause the living to bleed at a touch, and find comfort in the\
+  \ presence of the dead."
+granted_powers:
+- id: "ability:bleeding_touch"
+  name: "Bleeding Touch"
+  description: "As a melee touch attack, you can cause a living creature to take 1d6\
+    \ points of damage per round. This effect persists for a number of rounds equal\
+    \ to 1/2 your cleric level (minimum 1) or until stopped with a DC 15 Heal check\
+    \ or any spell or effect that heals damage. You can use this ability a number\
+    \ of times per day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:deaths_embrace"
+  name: "Death’s Embrace"
+  description: "At 8th level, you heal damage instead of taking damage from channeled\
+    \ negative energy. If the channeled negative energy targets undead, you heal hit\
+    \ points just like undead in the area."
+  type: "Ex"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:cause_fear"
+- spell_level: 2
+  spell_id: "spell:death_knell"
+- spell_level: 3
+  spell_id: "spell:chain_of_perdition"
+- spell_level: 4
+  spell_id: "spell:death_ward"
+- spell_level: 5
+  spell_id: "spell:slay_living"
+- spell_level: 6
+  spell_id: "spell:planar_ally"
+- spell_level: 7
+  spell_id: "spell:destruction"
+- spell_level: 8
+  spell_id: "spell:trap_the_soul"
+- spell_level: 9
+  spell_id: "spell:wail_of_the_banshee"
+source: "Pathfinder Player Companion: Champions of Balance"

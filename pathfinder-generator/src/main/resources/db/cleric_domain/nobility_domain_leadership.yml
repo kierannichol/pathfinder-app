@@ -1,0 +1,40 @@
+id: "cleric_domain:nobility_domain#leadership"
+parent_id: "cleric_domain:nobility_domain"
+name: "Leadership Subdomain"
+description: "You are a great leader, an inspiration to all who follow the teachings\
+  \ of your faith."
+granted_powers:
+- id: "ability:leadership"
+  name: "Leadership"
+  description: "At 8th level, you receive Leadership as a bonus feat. In addition,\
+    \ you gain a +2 bonus on your leadership score as long as you uphold the tenets\
+    \ of your deity (or divine concept if you do not venerate a deity)."
+  type: "Ex"
+- id: "ability:inspiring_command"
+  name: "Inspiring Command"
+  description: "As a standard action, you can issue an inspiring command to your allies.\
+    \ The inspiring command affects one ally plus one additional ally for every three\
+    \ cleric levels you possess, who must all be within 30 feet of you. Affected allies\
+    \ gain a +2 insight bonus on attack rolls, AC, combat maneuver defense, and skill\
+    \ checks for 1 round. This is a language-dependent mind-affecting effect."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:bless"
+- spell_level: 2
+  spell_id: "spell:enthrall"
+- spell_level: 3
+  spell_id: "spell:prayer"
+- spell_level: 4
+  spell_id: "spell:discern_lies"
+- spell_level: 5
+  spell_id: "spell:command"
+- spell_level: 6
+  spell_id: "spell:brilliant_inspiration"
+- spell_level: 7
+  spell_id: "spell:repulsion"
+- spell_level: 8
+  spell_id: "spell:demand"
+- spell_level: 9
+  spell_id: "spell:storm_of_vengeance"
+source: "Advanced Player's Guide"

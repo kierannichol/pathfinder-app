@@ -1,0 +1,25 @@
+{
+  "id": "cleric_domain:destruction_domain#torture",
+  "name": "Torture Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You revel in ruin and devastation, and can deliver particularly destructive attacks."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:destructive_smite"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:destructive_aura"]
+          }]
+        }]
+      }]
+    }
+  }
+}

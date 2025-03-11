@@ -1,0 +1,60 @@
+.feature-feat {
+  background-color: gold;
+  color: #3d3d1a;
+}
+
+.feature-class_feature {
+  background-color: lightblue;
+  color: #113156;
+}
+
+.feature-rogue_talent {
+  background-color: #90ef90;
+  color: #1e2e1e;
+}
+
+.feature-slayer_talent {
+  background-color: lightcoral;
+  color: #2e1e1e;
+}
+
+.featureText {
+  margin: auto;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.wall {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  /*justify-content: space-between;*/
+}
+
+details.brick {
+  display: block;
+  border: 2px solid black;
+}
+
+details.brick:is([open]) {
+  width: 100%;
+}
+
+details.brick > summary {
+  display: flex;
+  padding: 4px;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+details.brick > summary:before {
+  border: 0;
+}
+
+.description {
+  background-color: rgba(255, 255, 255, 60%);
+}

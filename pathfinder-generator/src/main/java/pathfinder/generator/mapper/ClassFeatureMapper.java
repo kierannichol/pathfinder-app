@@ -35,6 +35,13 @@ public class ClassFeatureMapper {
                 .addTag(feature.classId().key)
                 .addTag(feature.id().type);
 
+        if (feature.attackModifier() != null) {
+            builder.setAttackModifier(feature.attackModifier());
+        }
+        if (feature.attacks() != null) {
+            builder.addAllAttacks(feature.attacks());
+        }
+
         String enabledFormula = tryParsePrerequisites(feature);
         builder.setEnabledCondition(enabledFormula);
 

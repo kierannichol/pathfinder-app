@@ -25,8 +25,6 @@ export class FeatureStack implements Trait {
   }
 
   async resolve(parent: FeatureRef, context: ResolvedEntityContext): Promise<ResolvedStack> {
-    context.registerStackRef(this.featureId, this.stackNumber, parent);
-
     const modifications = context.modifications(this.featureId, this.stackNumber);
 
     const resolvedTraits = await Promise.all([

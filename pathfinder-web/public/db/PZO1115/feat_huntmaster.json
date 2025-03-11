@@ -1,0 +1,17 @@
+{
+  "id": "feat:huntmaster",
+  "name": "Huntmaster",
+  "tags": ["feat", "racial"],
+  "enabledFormula": "all(@skill:handle_animal\u003e\u003d1,any(@ability:animal_companion#ranger_beastmaster,sum(@trait:mount_bond#*),sum(@ability:mount#*)[Mount]),@race:human)",
+  "maxStacks": 1,
+  "description": {
+    "text": "You are an expert trainer of horses, hounds, falcons, or hunting cats.",
+    "sections": {
+      "Benefit": "If you have the animal companion class feature, pick one of the following types of animal companions that this feat affects: bird, dog, small cat, or horse. If you have the divine bond (mount) or mount class feature, this feat always affects horses. You gain a +2 bonus on Handle Animal and Knowledge (nature) checks with creatures of that type of animal. Furthermore, you are treated as one level higher when determining the abilities of your animal companion or mount, as long as it is of the chosen type."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

@@ -8,7 +8,7 @@
     "select": {
       "optionTag": "weapon",
       "idTemplate": "feat:weapon_specialization#{option.key}",
-      "prerequisitesTemplate": "@proficiency:{option.key} AND @feat:weapon_focus#{option.key}"
+      "prerequisitesTemplate": "@proficiency:{option.key} AND @feat:weapon_focus#{option.key} AND @class:fighter\u003e\u003d4"
     }
   },
   "description": {
@@ -20,5 +20,8 @@
   "stacks": {
     "fixedStack": {
     }
+  },
+  "attackModifier": {
+    "damageBonus": "2"
   }
 }

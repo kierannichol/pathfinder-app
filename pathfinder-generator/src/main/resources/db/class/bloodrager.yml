@@ -362,6 +362,7 @@ class_features:
   type: null
   description: "Bloodrager can cast spells."
   effects:
+  - "INCR caster_level max(0, @class:bloodrager-3)"
   - "SET trait:level_1_spells_per_day#bloodrager if(@class:bloodrager>=4,1+if(@class:bloodrager>8,1,0)+if(@class:bloodrager>12,1,0)+if(@class:bloodrager>16,1,0),null)"
   - "SET trait:level_2_spells_per_day#bloodrager if(@class:bloodrager>=7,1+if(@class:bloodrager>11,1,0)+if(@class:bloodrager>15,1,0)+if(@class:bloodrager>19,1,0),null)"
   - "SET trait:level_3_spells_per_day#bloodrager if(@class:bloodrager>=10,1+if(@class:bloodrager>14,1,0)+if(@class:bloodrager>18,1,0),null)"

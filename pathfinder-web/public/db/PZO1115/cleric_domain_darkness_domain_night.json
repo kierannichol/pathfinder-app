@@ -1,0 +1,22 @@
+{
+  "id": "cleric_domain:darkness_domain#night",
+  "name": "Night Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You manipulate shadows and darkness."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:eyes_of_darkness", "ability:night_hunter"]
+          }]
+        }]
+      }]
+    }
+  }
+}

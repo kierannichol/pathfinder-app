@@ -15,6 +15,10 @@ interface TabProps {
   children?: ReactNode;
 }
 
+type WithEventKey = {
+  eventKey: string;
+}
+
 function Tabs({ activeKey, onSelect, children }: TabsProps) {
   function handleTabClicked(eventKey: string) {
     onSelect?.(eventKey);
@@ -33,7 +37,7 @@ function Tabs({ activeKey, onSelect, children }: TabsProps) {
     <div className={styles.tabList}>
       {React.Children.map(children, (child: ReactNode, index: number) => {
         if (child && typeof child === 'object' && 'props' in child) {
-          return <div className={classNames([styles.tab, (activeKey ? child.props.eventKey === activeKey : index === 0) ? styles.active : undefined])} onClick={() => handleTabClicked(child.props.eventKey)}>{child?.props.header}</div>
+          return <div className={classNames([styles.tab, (activeKey ? (child.props as WithEventKey).eventKey === activeKey : index === 0) ? styles.active : undefined])} onClick={() => handleTabClicked((child.props as WithEventKey).eventKey)}>{(child?.props as TabProps).header}</div>
         }
         return <></>
       })}
@@ -50,7 +54,7 @@ function isActiveTab(child: ReactNode, activeKey: string|undefined): boolean | u
   if (!activeKey) return undefined;
   if (!child) return false;
   if (!(typeof child === 'object' && 'props' in child)) return false;
-  return child.props.eventKey === activeKey;
+  return (child.props as WithEventKey).eventKey === activeKey;
 }
 
 function isFirstTab(index: number): boolean {

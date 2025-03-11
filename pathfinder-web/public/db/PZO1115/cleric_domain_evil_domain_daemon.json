@@ -1,0 +1,22 @@
+{
+  "id": "cleric_domain:evil_domain#daemon",
+  "name": "Daemon Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You are sinister and cruel, and have wholly pledged your soul to the cause of evil."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:whispering_evil"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -27,6 +27,7 @@ import pathfinder.util.NameUtils;
 @RequiredArgsConstructor
 @Slf4j
 public class BloodlineMapper {
+    private static final Pattern SPELL_NAME_AND_LEVEL = Pattern.compile("^(.*?) \\((\\d+)(?:st|nd|rd|th)\\)$");
     private static final Pattern LEVEL_PATTERN = Pattern.compile(".*?(\\d+)(?:st|nd|rd|th) level.*");
     private final ClassFeatureMapper featureMapper;
     private final PathfinderDatabase database;
@@ -60,11 +61,31 @@ public class BloodlineMapper {
                 featureList,
                 bloodlineModification);
 
+        addBloodlineSpells(bloodlineModel,
+                bloodlineModification);
+
         bloodlineStack.addFeatureModification(bloodlineModification.build());
         bloodline.addFixedStack(bloodlineStack.build());
         featureList.add(bloodline.build());
 
         return featureList.stream();
+    }
+
+    private void addBloodlineSpells(Bloodline bloodlineModel,
+            FeatureModificationBuilder bloodlineModification) {
+        bloodlineModel.bonusSpells().forEach(spellNameAndLevel -> {
+            var matcher = SPELL_NAME_AND_LEVEL.matcher(spellNameAndLevel);
+            if (!matcher.find()) {
+                throw new IllegalArgumentException("Spell not parsable: " + spellNameAndLevel);
+            }
+
+            String name = normalizeSpellName(matcher.group(1));
+            int level = Integer.parseInt(matcher.group(2));
+
+            database.query(Query.spell(name)).findFirst()
+                            .ifPresent(targetSpell -> bloodlineModification.stack(level)
+                                    .addsFeature(targetSpell.id()));
+        });
     }
 
     private Optional<Integer> parseLevelFromDescription(String description) {
@@ -117,6 +138,24 @@ public class BloodlineMapper {
 //                    .build();
 //            feature.addConditionalStack(new ConditionalStack(conditionFormula, stack));
         }
+    }
+
+    private String normalizeSpellName(String rawName) {
+        String justName = NameUtils.nameAndParentheses(rawName).name().trim()
+                .toLowerCase();
+
+        return switch (justName) {
+            case "summon monster i" -> "summon monster 1";
+            case "summon monster ii" -> "summon monster 2";
+            case "summon monster iii" -> "summon monster 3";
+            case "summon monster iv" -> "summon monster 4";
+            case "summon monster v" -> "summon monster 5";
+            case "summon monster vi" -> "summon monster 6";
+            case "summon monster vii" -> "summon monster 7";
+            case "summon monster viii" -> "summon monster 8";
+            case "summon monster ix" -> "summon monster 9";
+            default -> justName;
+        };
     }
 
     private Id findFeatId(String featName) {

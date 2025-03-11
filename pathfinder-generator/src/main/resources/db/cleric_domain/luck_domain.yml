@@ -1,0 +1,40 @@
+id: "cleric_domain:luck_domain"
+parent_id: null
+name: "Luck Domain"
+description: "You are infused with luck, and your mere presence can spread good fortune."
+granted_powers:
+- id: "ability:bit_of_luck"
+  name: "Bit of Luck"
+  description: "You can touch a willing creature as a standard action, giving it a\
+    \ bit of luck. For the next round, any time the target rolls a d20, he may roll\
+    \ twice and take the more favorable result. You can use this ability a number\
+    \ of times per day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:good_fortune"
+  name: "Good Fortune"
+  description: "At 6th level, as an immediate action, you can reroll any one d20 roll\
+    \ you have just made before the results of the roll are revealed. You must take\
+    \ the result of the reroll, even if it’s worse than the original roll. You can\
+    \ use this ability once per day at 6th level, and one additional time per day\
+    \ for every six cleric levels beyond 6th."
+  type: "Ex"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:true_strike"
+- spell_level: 2
+  spell_id: "spell:aid"
+- spell_level: 3
+  spell_id: "spell:protection_from_energy"
+- spell_level: 4
+  spell_id: "spell:freedom_of_movement"
+- spell_level: 5
+  spell_id: "spell:break_enchantment"
+- spell_level: 6
+  spell_id: "spell:mislead"
+- spell_level: 7
+  spell_id: "spell:spell_turning"
+- spell_level: 8
+  spell_id: "spell:moment_of_prescience"
+- spell_level: 9
+  spell_id: "spell:miracle"
+source: "Pathfinder RPG Core Rulebook"

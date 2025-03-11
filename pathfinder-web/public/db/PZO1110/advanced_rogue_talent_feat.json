@@ -1,0 +1,40 @@
+{
+  "id": "advanced_rogue_talent:feat",
+  "name": "Feat",
+  "tags": ["advanced_rogue_talent", "class_feature", "rogue"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Gain a feat"
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "advanced_rogue_talent_feat",
+          "label": "Feat",
+          "tags": ["class_feature"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "optionTags": ["feat"],
+            "categories": [{
+              "label": "Combat",
+              "tag": "combat"
+            }, {
+              "label": "General",
+              "tag": "general"
+            }, {
+              "label": "Item Creation",
+              "tag": "item_creation"
+            }, {
+              "label": "Metamagic",
+              "tag": "metamagic"
+            }]
+          }
+        }]
+      }]
+    }
+  }
+}

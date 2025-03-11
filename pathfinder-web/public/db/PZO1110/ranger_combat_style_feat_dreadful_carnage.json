@@ -1,0 +1,23 @@
+{
+  "id": "ranger_combat_style_feat:dreadful_carnage",
+  "name": "Dreadful Carnage",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "Whenever you reduce an enemy to 0 or fewer hit points, you can make an Intimidate check to demoralize all enemies within 30 feet as a free action. Enemies that cannot see both you and the enemy you reduced to 0 or fewer hit points are unaffected."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:dreadful_carnage",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

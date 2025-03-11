@@ -1,4 +1,4 @@
-import {AddEffect, SetFormulaEffect, SetNumberEffect} from "./Effect.ts";
+import {AddFormulaEffect, AddNumberEffect, Effect, SetFormulaEffect, SetNumberEffect} from "./Effect.ts";
 import {Trait} from "./Trait.ts";
 import {data} from "@/compiled";
 import Description from "./Description.ts";
@@ -16,6 +16,10 @@ import {ItemOption, ItemOptionSummary} from "./ItemOption.ts";
 import {ItemOptionSet} from "./ItemOptionSet.ts";
 import {ItemOptionGroup} from "./ItemOptionGroup.ts";
 import {FeatureOptionsQuery} from "./FeatureOptionsQuery.ts";
+import {ChoiceModification} from "@/data/ChoiceModification.ts";
+import {AttackModification} from "@/data/AttackModification.ts";
+import {Attack} from "@/data/Attack.ts";
+import {Chance} from "@/data/Chance.ts";
 import FeatureSummaryDbo = data.FeatureSummaryDbo;
 import FeatureDbo = data.FeatureDbo;
 import StacksDbo = data.StacksDbo;
@@ -36,6 +40,10 @@ import ItemOptionDbo = data.ItemOptionDbo;
 import DescriptionDbo = data.DescriptionDbo;
 import ItemOptionGroupDbo = data.ItemOptionGroupDbo;
 import RepeatingChoiceTypeDbo = data.RepeatingChoiceTypeDbo;
+import ChoiceModificationDbo = data.ChoiceModificationDbo;
+import AttackModificationDbo = data.AttackModificationDbo;
+import AttackDbo = data.AttackDbo;
+import ChanceDbo = data.ChanceDbo;
 
 export function decodeDescription(dbo: DescriptionDbo|null|undefined): Description {
   return new Description(dbo?.text ?? "", dbo?.sections ?? {});
@@ -74,7 +82,23 @@ export function decodeFeature(dbo: FeatureDbo): Feature {
       [
           decodeStacks(dbo.id, dbo.stacks ?? new StacksDbo()),
           ...dbo.conditionalStacks.map(csd => decodeConditionStack(dbo.id, csd))
-      ]);
+      ],
+      decodeAttackModification(dbo.name, dbo.attackModifier),
+      dbo.attacks.map(decodeAttack));
+}
+
+function decodeAttack(dbo: AttackDbo): Attack {
+  return new Attack(
+      dbo.name,
+      dbo.condition,
+      decodeChance(dbo.chanceToHit),
+      dbo.hitDamage,
+      dbo.missDamage);
+}
+
+function decodeChance(dbo: ChanceDbo|null|undefined): Chance|null {
+  if (!dbo) return null;
+  return new Chance(dbo.value, dbo.toBeat);
 }
 
 export function decodeItemSummary(dbo: ItemSummaryDbo, sourceId: number): ItemSummary {
@@ -97,7 +121,12 @@ export function decodeItem(dbo: ItemDbo, sourceId: number): Item {
       dbo.weight,
       dbo.tags ?? [],
       dbo.optionSets ?? [],
-      decodeDescription(dbo.description));
+      decodeDescription(dbo.description),
+      dbo.actions ?? [],
+      dbo.stats ?? {},
+      dbo.effects.map(decodeEffect),
+      decodeAttackModification(dbo.name, dbo.attackModifier),
+      dbo.attacks.map(decodeAttack));
 }
 
 export function decodeItemOptionSummary(dbo: ItemOptionSummaryDbo): ItemOptionSummary {
@@ -120,7 +149,9 @@ export function decodeItemOption(dbo: ItemOptionDbo): ItemOption {
       dbo.currencyCost,
       dbo.currencyCostByWeight,
       dbo.tags,
-      decodeDescription(dbo.description));
+      decodeDescription(dbo.description),
+      decodeAttackModification(dbo.name, dbo.attackModifier),
+      dbo.stats ?? {});
 }
 
 export function decodeItemOptionGroup(dbo: ItemOptionGroupDbo): ItemOptionGroup {
@@ -148,11 +179,14 @@ export function decodeItemOptionSet(dbo: ItemOptionSetDbo): ItemOptionSet {
 //   return new FeatureOptionsTemplate(dbo.optionTag, dbo.idTemplate, dbo.prerequisitesTemplate);
 // }
 
-function decodeEffect(dbo: EffectDbo): Trait {
-  let effect: Trait|undefined = undefined;
+function decodeEffect(dbo: EffectDbo): Effect {
+  let effect: Effect|undefined = undefined;
 
-  if (dbo.addAction) {
-    effect = new AddEffect(dbo.addAction.targetKey, dbo.addAction.numberDelta);
+  if (dbo.addAction && dbo.addAction.formula !== undefined && dbo.addAction.formula !== null) {
+    effect = new AddFormulaEffect(dbo.addAction.targetKey, dbo.addAction.formula);
+  }
+  else if (dbo.addAction && dbo.addAction.numberDelta !== undefined && dbo.addAction.numberDelta !== null) {
+    effect = new AddNumberEffect(dbo.addAction.targetKey, dbo.addAction.numberDelta);
   }
   else if (dbo.setAction && dbo.setAction.formula !== undefined && dbo.setAction.formula !== null) {
     effect = new SetFormulaEffect(dbo.setAction.targetKey, dbo.setAction.formula);
@@ -247,8 +281,7 @@ function decodeConditionStack(featureId: string, dbo: data.ConditionalStackDbo):
 }
 
 function decodeFeatureModification(dbo: FeatureModificationDbo): Trait {
-  return new FeatureModification(dbo.targetFeatureId,
-      dbo.stackModifications.map(smDbo => decodeStackModification(dbo.targetFeatureId, smDbo)));
+  return new FeatureModification(dbo.stackModifications.map(smDbo => decodeStackModification(dbo.targetFeatureId, smDbo)));
 }
 
 function decodeStackModification(targetFeatureId: string, dbo: StackModificationDbo): StackModification {
@@ -257,6 +290,14 @@ function decodeStackModification(targetFeatureId: string, dbo: StackModification
       dbo.targetStackCount,
       dbo.linksToAdd.map(linkId => new Link(linkId)),
       dbo.linksToRemove);
+}
+
+function decodeChoiceModification(dbo: ChoiceModificationDbo): Trait {
+  return new ChoiceModification(dbo.targetChoiceId,
+      dbo.tagsToAdd,
+      dbo.tagsToRemove,
+      dbo.featuresToAdd,
+      dbo.featuresToRemove);
 }
 
 export function decodeCharacterTemplate(dbo: CharacterTemplateDbo): CharacterTemplate {
@@ -269,4 +310,11 @@ export function decodeCharacterLevelTemplate(dbo: CharacterLevelTemplateDbo): Ch
       ...dbo.links.map(decodeLink),
       ...dbo.choices.map(decodeChoice)
   ]);
+}
+
+function decodeAttackModification(name: string, dbo: AttackModificationDbo|null|undefined): AttackModification|undefined {
+  if (!dbo) return undefined;
+  return new AttackModification(name,
+      dbo.attackBonus,
+      dbo.damageBonus);
 }

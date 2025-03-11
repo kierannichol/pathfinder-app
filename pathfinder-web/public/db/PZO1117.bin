@@ -333,7 +333,7 @@ Theologian	archetypecleric(<
 class:magus#bladebound
 Bladebound	archetypemagus(½
 class:magus#hexcrafter
-Hexcrafter	archetypemagus"‚!@modifies:ability:magus_arcana#magus AND !@modifies:ability:spell_recall#magus AND !@modifies:ability:improved_spell_recall#magus(^
+Hexcrafter	archetypemagus"‚!@modifies:ability:spell_recall#magus AND !@modifies:ability:magus_arcana#magus AND !@modifies:ability:improved_spell_recall#magus(^
 class:magus#spellblade
 Spellblade	archetypemagus"$!@modifies:ability:spellstrike#magus(Á
 class:magus#staff_magusStaff Magus	archetypemagus"„!@modifies:ability:fighter_training#magus AND !@modifies:trait:armor_proficiency#magus AND !@modifies:trait:weapon_proficiency#magus(4
@@ -466,8 +466,8 @@ Sense Linkfeatgeneral"(sum(@ability:bond_senses#*)[Bond Senses](|
 feat:uncanny_concentrationUncanny Concentrationfeatgeneral"@feat:combat_casting(†
 feat:undead_masterUndead Masterfeatgeneral"Pall(@feat:spell_focus#necromancy,any(@spell:animate_dead,@spell:command_undead))(p
 feat:unsanctioned_detectionUnsanctioned Detectionfeatgeneral"(sum(@ability:detect_evil#*)[Detect Evil](u
-feat:unsanctioned_knowledgeUnsanctioned Knowledgefeatgeneral"-all(@int_score>=13,@spells_per_day:paladin#1)(Ö
-feat:versatile_channelerVersatile Channelerfeatgeneral"“any(@ability:channel_energy[Channel Energy],@class:necromancer,all(@class:cleric,any(@alignment:ng,@alignment:n,@alignment:ne)[Neutral alignment]))(\
+feat:unsanctioned_knowledgeUnsanctioned Knowledgefeatgeneral"-all(@int_score>=13,@spells_per_day:paladin#1)(Ø
+feat:versatile_channelerVersatile Channelerfeatgeneral"•@ability:channel_energy AND (@magic_school:necromancy OR (any(@alignment:n,@alignment:ng,@alignment:ne) AND @class:cleric)[Neutrally Aligned Cleric])(\
 feat:vigilant_eidolonVigilant Eidolonfeatgeneral" sum(@ability:eidolon#*)[Eidolon](N
 feat:voice_of_the_sibylVoice of the Sibylfeatgeneral"@cha_score>=15(œ
 feat:warrior_priestWarrior Priestfeatgeneral"dany(@trait:divine_spellcaster[Divine spellcaster],@ability:domains,sum(@ability:mystery#*)[Mystery])(m

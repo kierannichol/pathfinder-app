@@ -37,7 +37,8 @@ public enum AttributeType {
     WILD_TALENT("wild_talent"),
     SPELL("spell"),
     ITEM("item"),
-    ;
+    CLERIC_DOMAIN("cleric_domain"),
+    RANGER_COMBAT_STYLE("ranger_combat_style");
 
     private final String key;
 

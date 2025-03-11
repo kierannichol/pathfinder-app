@@ -4,6 +4,7 @@ import {EffectsField} from "../../fields/EffectsField";
 import {LinksField} from "../../fields/LinksField";
 import {ComplexListField} from "../../fields/simple/ComplexListField";
 import {FeatureModificationEditor} from "./FeatureModificationEditor";
+import ChoicesField from "../../fields/ChoicesField";
 
 export function StackEditor({ value, onChange }: EditorProps<StackData>) {
   function update(data: Partial<StackData>) {
@@ -16,6 +17,7 @@ export function StackEditor({ value, onChange }: EditorProps<StackData>) {
   return <div className={"field"}>
     <EffectsField value={value.effects ?? []} onChange={updated => update({ effects: updated })} />
     <LinksField value={value.links ?? []} onChange={updated => update({ links: updated })} />
+    <ChoicesField value={value.choices ?? []} onChange={updated => update({ choices: updated })} />
     <ComplexListField<FeatureModificationData> label={"Feature Modifications"}
                                                elementNoun={"Feature Modification"}
                                                value={value.featureModifications ?? []}

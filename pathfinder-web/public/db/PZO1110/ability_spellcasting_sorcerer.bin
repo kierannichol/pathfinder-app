@@ -1,14 +1,13 @@
 
 ability:spellcasting#sorcererSpell Casting (Sorcerer)abilityclass_featuresorcerer¢
-Sorcerer can cast spells.ªí
-ê
-ªzx
-%trait:level_1_spells_per_day#sorcererO3+if(@class:sorcerer>1,1,0)+if(@class:sorcerer>2,1,0)+if(@class:sorcerer>3,1,0)ª—”
-%trait:level_2_spells_per_day#sorcererkif(@class:sorcerer>=4,3+if(@class:sorcerer>4,1,0)+if(@class:sorcerer>5,1,0)+if(@class:sorcerer>6,1,0),null)ª—”
-%trait:level_3_spells_per_day#sorcererkif(@class:sorcerer>=6,3+if(@class:sorcerer>6,1,0)+if(@class:sorcerer>7,1,0)+if(@class:sorcerer>8,1,0),null)ª˜•
-%trait:level_4_spells_per_day#sorcererlif(@class:sorcerer>=8,3+if(@class:sorcerer>8,1,0)+if(@class:sorcerer>9,1,0)+if(@class:sorcerer>10,1,0),null)ª›˜
-%trait:level_5_spells_per_day#sorcereroif(@class:sorcerer>=10,3+if(@class:sorcerer>10,1,0)+if(@class:sorcerer>11,1,0)+if(@class:sorcerer>12,1,0),null)ª›˜
-%trait:level_6_spells_per_day#sorcereroif(@class:sorcerer>=12,3+if(@class:sorcerer>12,1,0)+if(@class:sorcerer>13,1,0)+if(@class:sorcerer>14,1,0),null)ª›˜
-%trait:level_7_spells_per_day#sorcereroif(@class:sorcerer>=14,3+if(@class:sorcerer>14,1,0)+if(@class:sorcerer>15,1,0)+if(@class:sorcerer>16,1,0),null)ª›˜
-%trait:level_8_spells_per_day#sorcereroif(@class:sorcerer>=16,3+if(@class:sorcerer>16,1,0)+if(@class:sorcerer>17,1,0)+if(@class:sorcerer>18,1,0),null)ª›˜
-%trait:level_9_spells_per_day#sorcereroif(@class:sorcerer>=18,3+if(@class:sorcerer>18,1,0)+if(@class:sorcerer>19,1,0)+if(@class:sorcerer>19,1,0),null)
+Sorcerer can cast spells.ª¯	¬	ª‘Ž
+%trait:level_0_spells_per_day#sorcerere4+(@class:sorcerer>0)+(@class:sorcerer>3)+(@class:sorcerer>5)+(@class:sorcerer>7)+(@class:sorcerer>9)ªhf
+%trait:level_1_spells_per_day#sorcerer=2+(@class:sorcerer>2)+(@class:sorcerer>4)+(@class:sorcerer>6)ª
+%trait:level_2_spells_per_day#sorcererd(@class:sorcerer>3)+(@class:sorcerer>4)+(@class:sorcerer>6)+(@class:sorcerer>8)+(@class:sorcerer>10)ª{y
+%trait:level_3_spells_per_day#sorcererP(@class:sorcerer>5)+(@class:sorcerer>6)+(@class:sorcerer>8)+(@class:sorcerer>10)ª|z
+%trait:level_4_spells_per_day#sorcererQ(@class:sorcerer>7)+(@class:sorcerer>8)+(@class:sorcerer>10)+(@class:sorcerer>12)ªhf
+%trait:level_5_spells_per_day#sorcerer=(@class:sorcerer>9)+(@class:sorcerer>10)+(@class:sorcerer>12)ªig
+%trait:level_6_spells_per_day#sorcerer>(@class:sorcerer>11)+(@class:sorcerer>12)+(@class:sorcerer>14)ªig
+%trait:level_7_spells_per_day#sorcerer>(@class:sorcerer>13)+(@class:sorcerer>14)+(@class:sorcerer>16)ªig
+%trait:level_8_spells_per_day#sorcerer>(@class:sorcerer>15)+(@class:sorcerer>16)+(@class:sorcerer>18)ªig
+%trait:level_9_spells_per_day#sorcerer>(@class:sorcerer>17)+(@class:sorcerer>18)+(@class:sorcerer>19)

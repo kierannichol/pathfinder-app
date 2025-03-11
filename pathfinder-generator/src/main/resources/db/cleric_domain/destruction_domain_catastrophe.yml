@@ -1,0 +1,47 @@
+id: "cleric_domain:destruction_domain#catastrophe"
+parent_id: "cleric_domain:destruction_domain"
+name: "Catastrophe Subdomain"
+description: "You revel in ruin and devastation, and can deliver particularly destructive\
+  \ attacks."
+granted_powers:
+- id: "ability:destructive_smite"
+  name: "Destructive Smite"
+  description: "You gain the destructive smite power: the supernatural ability to\
+    \ make a single melee attack with a morale bonus on damage rolls equal to 1/2\
+    \ your cleric level (minimum 1). You must declare the destructive smite before\
+    \ making the attack. You can use this ability a number of times per day equal\
+    \ to 3 + your Wisdom modifier."
+  type: "Su"
+- id: "ability:deadly_weather"
+  name: "Deadly Weather"
+  description: "At 8th level, you can unleash a furious call to the heavens, summoning\
+    \ forth an everchanging storm of destruction for a number of rounds per day equal\
+    \ to your cleric level. This storm has a radius of 5 feet per cleric level. Each\
+    \ round, the storm has one of the following effects: driving rain (–4 on all Perception\
+    \ checks and ranged attack rolls), howling winds (–8 on Fly skill checks and ranged\
+    \ attack rolls), heavy snow (all terrain is considered difficult), or lightning\
+    \ bolt (as call lightning). Other effects depending on the weather might also\
+    \ apply (at the GM’s discretion). You choose which effect takes place each round,\
+    \ but no effect may be repeated on the following round. These rounds do not need\
+    \ to be consecutive."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:true_strike"
+- spell_level: 2
+  spell_id: "spell:gust_of_wind"
+- spell_level: 3
+  spell_id: "spell:call_lightning"
+- spell_level: 4
+  spell_id: "spell:inflict_critical_wounds"
+- spell_level: 5
+  spell_id: "spell:shout"
+- spell_level: 6
+  spell_id: "spell:harm"
+- spell_level: 7
+  spell_id: "spell:control_weather"
+- spell_level: 8
+  spell_id: "spell:earthquake"
+- spell_level: 9
+  spell_id: "spell:implosion"
+source: "Advanced Player's Guide"

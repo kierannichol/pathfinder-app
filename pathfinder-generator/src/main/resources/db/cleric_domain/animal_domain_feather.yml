@@ -1,0 +1,39 @@
+id: "cleric_domain:animal_domain#feather"
+parent_id: "cleric_domain:animal_domain"
+name: "Feather Subdomain"
+description: "You can speak with and befriend animals with ease. In addition, you\
+  \ treat Knowledge (nature) as a class skill."
+granted_powers:
+- id: "ability:animal_companion"
+  name: "Animal Companion"
+  description: "At 4th level, you gain the service of an animal companion. Your effective\
+    \ druid level for this animal companion is equal to your cleric level – 3. (Druids\
+    \ who take this ability through their nature bond class feature use their druid\
+    \ level – 3 to determine the abilities of their animal companions)."
+  type: "Ex"
+- id: "ability:eyes_of_the_hawk"
+  name: "Eyes of the Hawk"
+  description: "You gain a racial bonus on Perception checks equal to 1/2 your cleric\
+    \ level (minimum +1). In addition, if you can act during a surprise round, you\
+    \ receive a +2 racial bonus on your Initiative check."
+  type: "Ex"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:calm_animals"
+- spell_level: 2
+  spell_id: "spell:feather_fall"
+- spell_level: 3
+  spell_id: "spell:fly"
+- spell_level: 4
+  spell_id: "spell:summon_natures_ally_iv"
+- spell_level: 5
+  spell_id: "spell:beast_shape_iii"
+- spell_level: 6
+  spell_id: "spell:mass_fly"
+- spell_level: 7
+  spell_id: "spell:animal_shapes"
+- spell_level: 8
+  spell_id: "spell:summon_natures_ally_viii"
+- spell_level: 9
+  spell_id: "spell:shapechange"
+source: "Advanced Player's Guide"

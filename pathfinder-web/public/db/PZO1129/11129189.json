@@ -7,5 +7,59 @@
   "weight": 8.0,
   "description": {
     "text": "This scalpel-sharp greatsword has a simple black handle and crosspiece, and is made of unusually dark steel etched with an organic wave pattern. Once per day, the wielder of this +1 keen greatsword can attempt to assassinate a target, per the slayer advanced talent of the same name. If the wielder is not a slayer, he must spend a full-round action studying the target before attempting the assassination, and the target\u0027s DC to avoid death is 15. In the hands of a slayer, the sword\u0027s enhancement bonus on attack rolls is 2 better against a studied target, and the DC to avoid death from an assassination attempt increases by 2. Additionally, if the assassination attempt is successful, the target is decapitated instead of merely slain."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "type:light": 1,
+    "crit_multiplier": 2,
+    "crit_range": 19,
+    "dice_count": 2,
+    "dice_sides": 6
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d6",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "2d6",
+    "missDamage": "0"
+  }]
 }

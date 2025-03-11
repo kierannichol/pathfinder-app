@@ -1,0 +1,25 @@
+{
+  "id": "cleric_domain:healing_domain",
+  "name": "Healing Domain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Your touch staves off pain and death, and your healing magic is particularly vital and potent."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:rebuke_death"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:healers_blessing"]
+          }]
+        }]
+      }]
+    }
+  }
+}

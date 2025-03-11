@@ -7,5 +7,59 @@
   "weight": 10.0,
   "description": {
     "text": "This +1/+1 meteor hammer is always made of ferrous metals, and has weighted spheres on either end of its sturdy dark chain. A wielder can use the magic within a polarity hammer to attract or repel metal objects. In meteor mode, a wielder gains a +2 bonus on all drag and reposition combat maneuvers against any opponent wearing metal armor, carrying a metal shield, or made of metal (like an iron golem). In addition, if the wielder makes a successful trip attempt against such an opponent, she can push her enemy 5 feet away rather than pulling it forward.\nIn fortress mode, the wielder can use a move action to pick up any unattended metal object within her reach and deposit the item in any other square within her reach. Items so affected cannot exceed the size of a one-handed weapon equal to the wielder\u0027s size category. In this mode, the +1 shield bonus to Armor Class normally granted from wielding a meteor hammer increases to +3, but only against opponents wearing metal armor, carrying metal shields, or made of metal (as above)."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "type:two-handed": 1,
+    "crit_multiplier": 2,
+    "crit_range": 20,
+    "dice_count": 1,
+    "dice_sides": 8
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }]
 }

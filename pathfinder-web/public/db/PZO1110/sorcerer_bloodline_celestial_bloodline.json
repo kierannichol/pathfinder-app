@@ -12,36 +12,45 @@
         "featureModifications": [{
           "targetFeatureId": "class:sorcerer",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["spell:sunburst"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:heavenly_fire#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 19,
-            "linksToAdd": ["ability:bloodline_feat#celestial_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#celestial_bloodline", "spell:gate"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 3,
-            "linksToAdd": ["ability:celestial_resistances#sorcerer"],
+            "linksToAdd": ["ability:celestial_resistances#sorcerer", "spell:bless"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:ascension#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["spell:resist_energy"]
+          }, {
             "targetStackCount": 7,
-            "linksToAdd": ["ability:bloodline_feat#celestial_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#celestial_bloodline", "spell:magic_circle_against_evil"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToAdd": ["ability:wings_of_heaven#sorcerer"],
+            "linksToAdd": ["ability:wings_of_heaven#sorcerer", "spell:remove_curse"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["spell:flame_strike"]
+          }, {
             "targetStackCount": 13,
-            "linksToAdd": ["ability:bloodline_feat#celestial_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#celestial_bloodline", "spell:greater_dispel_magic"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToAdd": ["ability:conviction#sorcerer"],
+            "linksToAdd": ["ability:conviction#sorcerer", "spell:banishment"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }]
         }]

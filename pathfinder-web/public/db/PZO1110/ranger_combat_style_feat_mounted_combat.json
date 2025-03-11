@@ -1,0 +1,23 @@
+{
+  "id": "ranger_combat_style_feat:mounted_combat",
+  "name": "Mounted Combat",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "Once per round when your mount is hit in combat, you may attempt a Ride check (as an immediate action) to negate the hit. The hit is negated if your Ride check result is greater than the opponent\u0027s attack roll."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:mounted_combat",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

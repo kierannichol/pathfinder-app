@@ -35,11 +35,13 @@ import pathfinder.model.pathfinder.BloodlineWithoutClassId;
 import pathfinder.model.pathfinder.CharacterClass;
 import pathfinder.model.pathfinder.ClassFeature;
 import pathfinder.model.pathfinder.ClassModificationFeature;
+import pathfinder.model.pathfinder.ClericDomain;
 import pathfinder.model.pathfinder.ComplexFeature;
 import pathfinder.model.pathfinder.Feat;
 import pathfinder.model.pathfinder.Feature;
 import pathfinder.model.pathfinder.FromSourceBook;
 import pathfinder.model.pathfinder.ItemData;
+import pathfinder.model.pathfinder.RangerCombatStyle;
 import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.SourceJson;
 import pathfinder.model.pathfinder.Sources;
@@ -60,14 +62,16 @@ public class LocalPathfinderDatabaseLoader {
         Map<SourceId, List<ComplexFeature>> complexFeaturesBySource = new HashMap<>();
         Map<SourceId, List<ItemData>> itemsBySource = new HashMap<>();
         Map<SourceId, List<ItemOption>> itemOptionsBySource = new HashMap<>();
+        Map<SourceId, List<ClericDomain>> clericDomainsBySource = new HashMap<>();
+        Map<SourceId, List<RangerCombatStyle>> rangerCombatStylesBySource = new HashMap<>();
 
         loadFeats().forEach(featData -> {
-                    SourceId sourceId = Sources.findSourceByNameOrCode(featData.source());
-                    if (sourceId != null) {
-                        sourceSet.add(sourceId);
-                        featsBySource.computeIfAbsent(sourceId, key -> new ArrayList<>()).add(featData);
-                    }
-                });
+            SourceId sourceId = Sources.findSourceByNameOrCode(featData.source());
+            if (sourceId != null) {
+                sourceSet.add(sourceId);
+                featsBySource.computeIfAbsent(sourceId, key -> new ArrayList<>()).add(featData);
+            }
+        });
 
         loadClasses().forEach(classData -> {
             SourceId sourceId = Sources.findSourceByNameOrCode(classData.source().trim());
@@ -88,6 +92,8 @@ public class LocalPathfinderDatabaseLoader {
         loadAllBySource("db/witch_hex", Spell.class, spellsBySource);
         loadAllBySource("db/wild_talent", Spell.class, spellsBySource);
         loadAllBySource("db/race", ComplexFeature.class, racesBySource);
+        loadAllBySource("db/cleric_domain", ClericDomain.class, clericDomainsBySource);
+        loadAllBySource("db/ranger_combat_style", RangerCombatStyle.class, rangerCombatStylesBySource);
         loadAllBySourceThenMap("db/item", ItemData.class, itemsBySource, (sourceId, i) ->
                 new ItemData(i.id(),
                         i.name(),
@@ -116,18 +122,28 @@ public class LocalPathfinderDatabaseLoader {
                         i.destruction(),
                         i.weapon_special(),
                         i.armor_special_material(),
-                        i.weapon_special_material()));
+                        i.weapon_special_material(),
+                        i.effects(),
+                        i.attack_mod(),
+                        i.stats()
+                ));
 
         loadAllBySource("db/item_option/weapon_special", ItemOption.class, itemOptionsBySource);
         loadAllBySource("db/item_option/armor_special", ItemOption.class, itemOptionsBySource);
 
-        loadAllClassFeaturesBySource("db/discovery", Id.of("class:alchemist"), classFeaturesBySource, Sources.ADVANCED_PLAYERS_GUIDE);
-        loadAllClassFeaturesBySource("db/arcanist_exploit", Id.of("class:arcanist"), classFeaturesBySource, Sources.ADVANCED_PLAYERS_GUIDE);
-        loadAllClassFeaturesBySource("db/magus_arcana", Id.of("class:magus"), classFeaturesBySource, Sources.ULTIMATE_MAGIC);
+        loadAllClassFeaturesBySource("db/discovery", Id.of("class:alchemist"), classFeaturesBySource,
+                Sources.ADVANCED_PLAYERS_GUIDE);
+        loadAllClassFeaturesBySource("db/arcanist_exploit", Id.of("class:arcanist"), classFeaturesBySource,
+                Sources.ADVANCED_PLAYERS_GUIDE);
+        loadAllClassFeaturesBySource("db/magus_arcana", Id.of("class:magus"), classFeaturesBySource,
+                Sources.ULTIMATE_MAGIC);
         loadAllClassFeaturesBySource("db/mercy", Id.of("class:paladin"), classFeaturesBySource, Sources.CORE);
         loadAllClassFeaturesBySource("db/rage_power", Id.of("class:barbarian"), classFeaturesBySource, Sources.CORE);
         loadAllClassFeaturesBySource("db/rogue_talent", Id.of("class:rogue"), classFeaturesBySource, Sources.CORE);
-        loadAllClassFeaturesBySource("db/slayer_talent", Id.of("class:slayer"), classFeaturesBySource, Sources.ADVANCED_CLASS_GUIDE);
+        loadAllClassFeaturesBySource("db/ninja_tricks", Id.of("class:ninja"), classFeaturesBySource,
+                Sources.ULTIMATE_COMBAT);
+        loadAllClassFeaturesBySource("db/slayer_talent", Id.of("class:slayer"), classFeaturesBySource,
+                Sources.ADVANCED_CLASS_GUIDE);
 
         loadAllBySourceThenMap("db/sorcerer_bloodline", BloodlineWithoutClassId.class, bloodlinesBySource,
                 (sid, bloodline) -> bloodline.withClassId(Id.of("class:sorcerer")));
@@ -155,7 +171,9 @@ public class LocalPathfinderDatabaseLoader {
                 itemsBySource.getOrDefault(sourceId, List.of()),
                 itemOptionsBySource.getOrDefault(sourceId, List.of()),
                 classModificationFeaturesBySource.getOrDefault(sourceId, List.of()),
-                complexFeaturesBySource.getOrDefault(sourceId, List.of())
+                complexFeaturesBySource.getOrDefault(sourceId, List.of()),
+                clericDomainsBySource.getOrDefault(sourceId, List.of()),
+                rangerCombatStylesBySource.getOrDefault(sourceId, List.of())
         )));
 
         return new PathfinderDatabase(sources);
@@ -185,7 +203,8 @@ public class LocalPathfinderDatabaseLoader {
                 .registerModule(new PathfinderJsonModule());
     }
 
-    private void loadAllClassFeaturesBySource(String path, Id classId, Map<SourceId, List<ClassFeature>> bySource, SourceId sourceId) {
+    private void loadAllClassFeaturesBySource(String path, Id classId, Map<SourceId, List<ClassFeature>> bySource,
+            SourceId sourceId) {
         loadAll(path, Feature.class).forEach(data -> {
             SourceId actualSourceId = sourceId;
 
@@ -205,6 +224,8 @@ public class LocalPathfinderDatabaseLoader {
                         data.effects(),
                         data.links(),
                         data.stacks(),
+                        data.attackModifier(),
+                        data.attacks(),
                         actualSourceId.code()
                 );
                 bySource.computeIfAbsent(actualSourceId, key -> new ArrayList<>()).add(classFeature);
@@ -212,7 +233,8 @@ public class LocalPathfinderDatabaseLoader {
         });
     }
 
-    private void loadClassFeaturesBySource(String path, Id classId, Map<SourceId, List<ClassFeature>> bySource, SourceId sourceId) {
+    private void loadClassFeaturesBySource(String path, Id classId, Map<SourceId, List<ClassFeature>> bySource,
+            SourceId sourceId) {
         load(path, Feature[].class).forEach(data -> {
             SourceId actualSourceId = sourceId;
 
@@ -232,6 +254,8 @@ public class LocalPathfinderDatabaseLoader {
                         data.effects(),
                         data.links(),
                         data.stacks(),
+                        data.attackModifier(),
+                        data.attacks(),
                         actualSourceId.code()
                 );
                 bySource.computeIfAbsent(actualSourceId, key -> new ArrayList<>()).add(classFeature);
@@ -239,7 +263,8 @@ public class LocalPathfinderDatabaseLoader {
         });
     }
 
-    private <T extends FromSourceBook> void loadBySource(String path, Class<T[]> type, Map<SourceId, List<T>> bySource) {
+    private <T extends FromSourceBook> void loadBySource(String path, Class<T[]> type,
+            Map<SourceId, List<T>> bySource) {
         load(path, type).forEach(classData -> {
             for (String source : classData.sources()) {
                 SourceId sourceId = Sources.findSourceByNameOrCode(source);
@@ -250,7 +275,8 @@ public class LocalPathfinderDatabaseLoader {
         });
     }
 
-    private <T extends FromSourceBook> void loadAllBySource(String path, Class<T> type, Map<SourceId, List<T>> bySource) {
+    private <T extends FromSourceBook> void loadAllBySource(String path, Class<T> type,
+            Map<SourceId, List<T>> bySource) {
         loadAll(path, type).forEach(classData -> {
             for (String source : classData.sources()) {
                 SourceId sourceId = Sources.findSourceByNameOrCode(source);
@@ -261,7 +287,8 @@ public class LocalPathfinderDatabaseLoader {
         });
     }
 
-    private <T extends FromSourceBook, U> void loadBySourceThenMap(String path, Class<T[]> type, Map<SourceId, List<U>> bySource, BiFunction<SourceId, T,U> mapper) {
+    private <T extends FromSourceBook, U> void loadBySourceThenMap(String path, Class<T[]> type,
+            Map<SourceId, List<U>> bySource, BiFunction<SourceId, T, U> mapper) {
         load(path, type).forEach(classData -> {
             for (String source : classData.sources()) {
                 SourceId sourceId = Sources.findSourceByNameOrCode(source);
@@ -272,7 +299,8 @@ public class LocalPathfinderDatabaseLoader {
         });
     }
 
-    private <T extends FromSourceBook, U> void loadAllBySourceThenMap(String path, Class<T> type, Map<SourceId, List<U>> bySource, BiFunction<SourceId,T,U> mapper) {
+    private <T extends FromSourceBook, U> void loadAllBySourceThenMap(String path, Class<T> type,
+            Map<SourceId, List<U>> bySource, BiFunction<SourceId, T, U> mapper) {
         loadAll(path, type).forEach(classData -> {
             for (String source : classData.sources()) {
                 SourceId sourceId = Sources.findSourceByNameOrCode(source);

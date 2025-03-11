@@ -1,0 +1,27 @@
+{
+  "id": "ranger_combat_style:weapon_and_shield_2",
+  "name": "Weapon and Shield",
+  "tags": ["ranger_combat_style_2"],
+  "enabledFormula": "@ranger_combat_style:weapon_and_shield_1",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "ranger_combat_style_2",
+          "label": "Ranger Combat Style Feat",
+          "tags": ["class_feature"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["ranger_combat_style_feat:improved_shield_bash", "ranger_combat_style_feat:shield_focus", "ranger_combat_style_feat:shield_slam", "ranger_combat_style_feat:two_weapon_fighting", "ranger_combat_style_feat:saving_shield", "ranger_combat_style_feat:shield_master"]
+          }
+        }]
+      }]
+    }
+  }
+}

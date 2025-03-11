@@ -1,0 +1,42 @@
+id: "cleric_domain:death_domain#murder"
+parent_id: "cleric_domain:death_domain"
+name: "Murder Subdomain"
+description: "You can cause the living to bleed at a touch, and find comfort in the\
+  \ presence of the dead."
+granted_powers:
+- id: "ability:bleeding_touch"
+  name: "Bleeding Touch"
+  description: "As a melee touch attack, you can cause a living creature to take 1d6\
+    \ points of damage per round. This effect persists for a number of rounds equal\
+    \ to 1/2 your cleric level (minimum 1) or until stopped with a DC 15 Heal check\
+    \ or any spell or effect that heals damage. You can use this ability a number\
+    \ of times per day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:killing_blow"
+  name: "Killing Blow"
+  description: "At 8th level, weapons you use become infused with the power of death.\
+    \ Whenever you confirm a critical hit with a melee or ranged weapon, your attack\
+    \ deals an additional amount of bleed damage equal to half your cleric level.\
+    \ You can use this ability once per day at 8th level, plus one additional time\
+    \ per day for every four levels beyond 8th."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:cause_fear"
+- spell_level: 2
+  spell_id: "spell:death_knell"
+- spell_level: 3
+  spell_id: "spell:keen_edge"
+- spell_level: 4
+  spell_id: "spell:death_ward"
+- spell_level: 5
+  spell_id: "spell:suffocation"
+- spell_level: 6
+  spell_id: "spell:create_undead"
+- spell_level: 7
+  spell_id: "spell:destruction"
+- spell_level: 8
+  spell_id: "spell:create_greater_undead"
+- spell_level: 9
+  spell_id: "spell:suffocation"
+source: "Advanced Player's Guide"

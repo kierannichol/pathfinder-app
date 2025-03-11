@@ -1,0 +1,24 @@
+{
+  "id": "ranger_combat_style_feat:far_shot",
+  "name": "Far Shot",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "You only suffer a –1 penalty per full range increment between you and your target when using a ranged weapon.",
+      "Normal": "You suffer a –2 penalty per full range increment between you and your target."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:far_shot",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

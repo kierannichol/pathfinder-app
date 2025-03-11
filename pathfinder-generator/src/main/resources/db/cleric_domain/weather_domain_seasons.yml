@@ -1,0 +1,40 @@
+id: "cleric_domain:weather_domain#seasons"
+parent_id: "cleric_domain:weather_domain"
+name: "Seasons Subdomain"
+description: ""
+granted_powers:
+- id: "ability:storm_burst"
+  name: "Storm Burst"
+  description: "As a standard action, you can create a storm burst targeting any foe within\
+  \ 30 feet as a ranged touch attack. The storm burst deals 1d6 points of nonlethal\
+  \ damage + 1 point for every two cleric levels you possess. In addition, the target\
+  \ is buffeted by winds and rain, causing it to take a –2 penalty on attack rolls\
+  \ for 1 round. You can use this ability a number of times per day equal to 3 +\
+  \ your Wisdom modifier."
+  type: "Sp"
+- id: "ability:untouched_by_the_seasons"
+  name: "Untouched by the Seasons"
+  description: "By touching a creature, you can grant it the benefits of endure elements,\
+    \ which last for 1 hour per cleric level. You can use this ability a number of\
+    \ times per day equal to 3 + your Wisdom modifier."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:goodberry"
+- spell_level: 2
+  spell_id: "spell:fog_cloud"
+- spell_level: 3
+  spell_id: "spell:call_lightning"
+- spell_level: 4
+  spell_id: "spell:blight"
+- spell_level: 5
+  spell_id: "spell:ice_storm"
+- spell_level: 6
+  spell_id: "spell:control_winds"
+- spell_level: 7
+  spell_id: "spell:control_weather"
+- spell_level: 8
+  spell_id: "spell:sunburst"
+- spell_level: 9
+  spell_id: "spell:storm_of_vengeance"
+source: "Advanced Player's Guide"

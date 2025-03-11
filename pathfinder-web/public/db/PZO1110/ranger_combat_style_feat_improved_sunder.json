@@ -1,0 +1,24 @@
+{
+  "id": "ranger_combat_style_feat:improved_sunder",
+  "name": "Improved Sunder",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "You do not provoke an attack of opportunity when performing a sunder combat maneuver. In addition, you receive a +2 bonus on checks made to sunder an item. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to sunder your gear.",
+      "Normal": "You provoke an attack of opportunity when performing a sunder combat maneuver."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:improved_sunder",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

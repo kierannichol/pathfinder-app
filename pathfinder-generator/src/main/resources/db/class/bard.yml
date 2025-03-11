@@ -386,6 +386,7 @@ class_features:
     name: "Spell Casting (Bard)"
     description: "Bard can cast spells."
     effects:
+      - "INCR caster_level @class:bard"
       - "SET trait:level_1_spells_per_day#bard
         1+if(@class:bard>1,1,0)+if(@class:bard>2,1,0)+if(@class:bard>4,1,0)+if(\
         @class:bard>8,1,0)+@cha_bonus_spells_1"

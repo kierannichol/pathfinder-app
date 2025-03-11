@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -75,7 +76,10 @@ public abstract class AbstractSpellItemDataGenerator extends AbstractScraper {
                 null,
                 null,
                 null,
-                null));
+                null,
+                List.of(),
+                null,
+                Map.of()));
     }
 
     private int casterLevel(List<Spell.Level> spellLevels) {

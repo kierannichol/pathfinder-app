@@ -13,39 +13,67 @@ option java_package = "pathfinder.data";
 package data;
 
 message FeatureSummaryDbo {
-  string id = 1;
-  string name = 2;
-  repeated string tags = 3;
-  string enabled_formula = 4;
-  optional uint32 max_stacks = 5;
-  optional string label = 6;
-  FeatureOptionsDbo options = 7;
-  string type_alias = 8;
+    string id = 1;
+    string name = 2;
+    repeated string tags = 3;
+    string enabled_formula = 4;
+    optional uint32 max_stacks = 5;
+    optional string label = 6;
+    FeatureOptionsDbo options = 7;
+    string type_alias = 8;
 }
 
 message FeatureDbo {
-  string id = 1;
-  string name = 2;
-  repeated string tags = 3;
-  string enabled_formula = 4;
-  optional uint32 max_stacks = 5;
-  optional string label = 6;
-  FeatureOptionsDbo options = 7;
-  string type_alias = 8;
+    string id = 1;
+    string name = 2;
+    repeated string tags = 3;
+    string enabled_formula = 4;
+    optional uint32 max_stacks = 5;
+    optional string label = 6;
+    FeatureOptionsDbo options = 7;
+    string type_alias = 8;
 
-  DescriptionDbo description = 100;
-  StacksDbo stacks = 101;
-  repeated ConditionalStackDbo conditional_stacks = 103;
+    DescriptionDbo description = 100;
+    StacksDbo stacks = 101;
+    repeated ConditionalStackDbo conditional_stacks = 103;
+    AttackModificationDbo attack_modifier = 104;
+    repeated AttackDbo attacks = 105;
 }
 
 message FeatureOptionsDbo {
-  message Select {
-    string option_tag = 1;
-    string id_template = 2;
-    string prerequisites_template = 3;
-  }
+    message Select {
+        string option_tag = 1;
+        string id_template = 2;
+        string prerequisites_template = 3;
+    }
 
-  oneof option {
-    Select select = 1;
-  }
+    oneof option {
+        Select select = 1;
+    }
+}
+
+message AttackDbo {
+    string name = 1;
+    string condition = 2;
+    ChanceDbo chance_to_hit = 3;
+    string hit_damage = 4;
+    string miss_damage = 5;
+}
+
+message ChanceDbo {
+    string value = 1;
+    string to_beat = 2;
+}
+
+message AttackModificationDbo {
+    // Assume the following variables exist:
+    //  - [all character state]
+    //  - attack_bab
+    //  - attack_index
+    //  - is_critical_confirm
+    //  - is_main_hand
+    //  - is_off_hand
+    //  - include_sneak_attack
+    string attack_bonus = 1;
+    string damage_bonus = 2;
 }

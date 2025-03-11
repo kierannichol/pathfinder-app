@@ -1,0 +1,42 @@
+id: "cleric_domain:protection_domain#defense"
+parent_id: "cleric_domain:protection_domain"
+name: "Defense Subdomain"
+description: "Your faith is your greatest source of protection, and you can use that\
+  \ faith to defend others. In addition, you receive a +1 resistance bonus on saving\
+  \ throws. This bonus increases by 1 for every 5 levels you possess."
+granted_powers:
+- id: "ability:aura_of_protection"
+  name: "Aura of Protection"
+  description: "At 8th level, you can emit a 30-foot aura of protection for a number\
+    \ of rounds per day equal to your cleric level. You and your allies within this\
+    \ aura gain a +1 deflection bonus to AC and resistance 5 against all elements\
+    \ (acid, cold, electricity, fire, and sonic). The deflection bonus increases by\
+    \ +1 for every four cleric levels you possess beyond 8th. At 14th level, the resistance\
+    \ against all elements increases to 10. These rounds do not need to be consecutive."
+  type: "Su"
+- id: "ability:deflection_aura"
+  name: "Deflection Aura"
+  description: "Once each day, you can emit a 20- foot aura for a number of rounds\
+    \ equal to your cleric level. Allies within the aura gain a +2 deflection bonus\
+    \ to AC and combat maneuver defense."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:shield"
+- spell_level: 2
+  spell_id: "spell:barkskin"
+- spell_level: 3
+  spell_id: "spell:protection_from_energy"
+- spell_level: 4
+  spell_id: "spell:spell_immunity"
+- spell_level: 5
+  spell_id: "spell:spell_resistance"
+- spell_level: 6
+  spell_id: "spell:antimagic_field"
+- spell_level: 7
+  spell_id: "spell:deflection"
+- spell_level: 8
+  spell_id: "spell:mind_blank"
+- spell_level: 9
+  spell_id: "spell:prismatic_sphere"
+source: "Advanced Player's Guide"

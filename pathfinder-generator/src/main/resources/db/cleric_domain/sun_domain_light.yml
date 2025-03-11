@@ -1,0 +1,45 @@
+id: "cleric_domain:sun_domain#light"
+parent_id: "cleric_domain:sun_domain"
+name: "Light Subdomain"
+description: "You see truth in the pure and burning light of the sun, and can call\
+  \ upon its blessing or wrath to work great deeds."
+granted_powers:
+- id: "ability:nimbus_of_light"
+  name: "Nimbus of Light"
+  description: "At 8th level, you can emit a 30-foot nimbus of light for a number\
+    \ of rounds per day equal to your cleric level. This acts as a daylight spell.\
+    \ In addition, undead within this radius take an amount of damage equal to your\
+    \ cleric level each round that they remain inside the nimbus. Spells and spell-like\
+    \ abilities with the darkness descriptor are automatically dispelled if brought\
+    \ inside this nimbus. These rounds do not need to be consecutive."
+  type: "Su"
+- id: "ability:blinding_flash"
+  name: "Blinding Flash"
+  description: "As a standard action, you can emit a flash of light from your holy\
+    \ symbol or divine focus. The most powerful light emanates out 20 feet from you.\
+    \ Creatures with fewer Hit Dice than your cleric level within this area are blinded\
+    \ for 1d4 rounds unless they succeed at a Fortitude save. All creatures in this\
+    \ area are dazzled for a number of rounds equal to 1/2 your cleric level (minimum\
+    \ 1). You can use this ability a number of times per day equal to 3 + your Wisdom\
+    \ modifier"
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:faerie_fire"
+- spell_level: 2
+  spell_id: "spell:heat_metal"
+- spell_level: 3
+  spell_id: "spell:daylight"
+- spell_level: 4
+  spell_id: "spell:fire_shield"
+- spell_level: 5
+  spell_id: "spell:flame_strike"
+- spell_level: 6
+  spell_id: "spell:fire_seeds"
+- spell_level: 7
+  spell_id: "spell:sunbeam"
+- spell_level: 8
+  spell_id: "spell:sunburst"
+- spell_level: 9
+  spell_id: "spell:prismatic_sphere"
+source: "Advanced Player's Guide"

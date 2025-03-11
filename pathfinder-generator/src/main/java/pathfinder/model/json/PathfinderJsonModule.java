@@ -1,6 +1,7 @@
 package pathfinder.model.json;
 
 import com.fasterxml.jackson.databind.module.SimpleModule;
+import pathfinder.model.Attack;
 import pathfinder.model.Choice;
 import pathfinder.model.ConditionalStack;
 import pathfinder.model.Description;
@@ -42,5 +43,9 @@ public class PathfinderJsonModule extends SimpleModule {
         addDeserializer(ConditionalStack.class, new ConditionalStackJsonDeserializer());
         addSerializer(ComplexFeature.class, new ComplexFeatureJsonSerializer());
         addDeserializer(ComplexFeature.class, new ComplexFeatureJsonDeserializer());
+//        addSerializer(ChoiceModification.class, new ChoiceModificationJsonSerializer());
+
+        addSerializer(Attack.class, new AttackJsonSerializer());
+        addDeserializer(Attack.class, new AttackJsonDeserializer());
     }
 }

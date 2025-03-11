@@ -12,36 +12,45 @@
         "featureModifications": [{
           "targetFeatureId": "class:sorcerer",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["spell:mind_blank"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:silver_tongue#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 19,
-            "linksToAdd": ["ability:bloodline_feat#rakshasa_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#rakshasa_bloodline", "spell:dominate_monster"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 3,
-            "linksToAdd": ["ability:mind_reader#sorcerer", "ability:detect_thoughts#sorcerer"],
+            "linksToAdd": ["ability:mind_reader#sorcerer", "ability:detect_thoughts#sorcerer", "spell:charm_person"],
             "linksToRemove": ["ability:bloodline_power#sorcerer", "ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:outsider#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["spell:invisibility"]
+          }, {
             "targetStackCount": 7,
-            "linksToAdd": ["ability:bloodline_feat#rakshasa_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#rakshasa_bloodline", "spell:suggestion"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToAdd": ["ability:hide_aura#sorcerer"],
+            "linksToAdd": ["ability:hide_aura#sorcerer", "spell:detect_scrying"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["spell:prying_eyes"]
+          }, {
             "targetStackCount": 13,
-            "linksToAdd": ["ability:bloodline_feat#rakshasa_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#rakshasa_bloodline", "spell:mass_suggestion"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToAdd": ["ability:alter_self#sorcerer"],
+            "linksToAdd": ["ability:alter_self#sorcerer", "spell:greater_polymorph"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }]
         }]

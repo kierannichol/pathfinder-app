@@ -1,0 +1,22 @@
+{
+  "id": "cleric_domain:water_domain#oceans",
+  "name": "Oceans Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You can manipulate water and mist and ice, conjure creatures of water, and resist cold."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:cold_resistance", "ability:surge"]
+          }]
+        }]
+      }]
+    }
+  }
+}

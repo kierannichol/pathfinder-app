@@ -28,7 +28,6 @@ export default class Character {
   }
 
   atLevel(level: number, withoutChoicePath: string | undefined = undefined): CharacterAtLevel {
-
     const state: AppliedState = new AppliedState(withoutChoicePath);
     state.set('character_level', level);
 

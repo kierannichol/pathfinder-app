@@ -7,11 +7,16 @@ import CharacterAtLevelDebugView from "@/view/character/debug/CharacterAtLevelDe
 import SpellsTab from "@/view/character/edit/tabs/SpellsTab.tsx";
 import {Formula} from "@kierannichol/formula-js";
 import {useCharacterAtLevel} from "@/view/character/edit/CharacterAtLevelContext.tsx";
+import EquipmentTab from "@/view/character/edit/tabs/EquipmentTab.tsx";
+import {AttackSimulatorTab} from "@/view/character/edit/tabs/AttackSimulatorTab.tsx";
+import {SkillsTab} from "@/view/character/edit/tabs/SkillsTab.tsx";
 
 
 function CharacterEditView() {
   const [currentTab, setCurrentTab] = useState<string|undefined>();
   const characterAtLevel = useCharacterAtLevel();
+
+  console.log(characterAtLevel)
 
   const hasSpells = useMemo(() => {
     return Formula.parse("sum(@ability:spellcasting#*)")
@@ -33,6 +38,15 @@ function CharacterEditView() {
       {hasSpells && <Tabs.Tab eventKey='spells' header="Spells">
         <SpellsTab />
       </Tabs.Tab>}
+      <Tabs.Tab eventKey='skills' header="Skills">
+        <SkillsTab />
+      </Tabs.Tab>
+      <Tabs.Tab eventKey='equipment' header="Equipment">
+        <EquipmentTab />
+      </Tabs.Tab>
+      <Tabs.Tab eventKey='attack' header="Attack Simulator">
+        <AttackSimulatorTab />
+      </Tabs.Tab>
       <Tabs.Tab eventKey='debug' header="Debug">
         <CharacterAtLevelDebugView characterAtLevel={characterAtLevel} />
       </Tabs.Tab>

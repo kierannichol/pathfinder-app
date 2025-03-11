@@ -2,7 +2,7 @@ import {RequiresAuth} from "@/app/auth.tsx";
 import {useLoaderData} from "react-router-dom";
 import CharacterEditView from "@/view/character/edit/CharacterEditView.tsx";
 import Character from "@/data/Character.ts";
-import {useMemo, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import {ChoiceRef} from "@/data/Choice.ts";
 import {CharacterEditLoaderData} from "@/view/character/edit/characterEditLoader.tsx";
 import {CharacterAtLevelProvider} from "@/view/character/edit/CharacterAtLevelContext.tsx";
@@ -14,12 +14,20 @@ export default function CharacterEditRoute() {
   const { character, characterStore, database } = useLoaderData() as CharacterEditLoaderData;
   const [ workingCharacter, setWorkingCharacter ] = useState<Character>(character);
 
-  function handleChange(choice: ChoiceRef, value: string|string[]) {
+  const characterAtLevel = useMemo(() => {
+    return workingCharacter.atLevel(parseInt(workingCharacter.selected('current_level') as string));
+  }, [workingCharacter]);
+
+  useEffect(() => {
+    document.title = workingCharacter.name;
+  }, [workingCharacter]);
+
+  function handleChange(choice: ChoiceRef, value: string|string[]|undefined) {
     if ((typeof value === 'string') && workingCharacter.selected(choice.path) === value) {
       return;
     }
 
-    workingCharacter.selectAll({ [choice.path]: value })
+    workingCharacter.selectAll({ [choice.path]: value ?? '' })
       .then(result => {
         setWorkingCharacter(result);
         characterStore.save(result)
@@ -28,19 +36,12 @@ export default function CharacterEditRoute() {
       .catch(error => console.error(error));
   }
 
-  const characterEditContext = useMemo(() => {
-    return {
-      character: workingCharacter,
-      update: handleChange,
-    }
-  }, [character, workingCharacter]);
-
   return <RequiresAuth>
     <DatabaseContext.Provider value={database}>
       <CharacterStoreContext.Provider value={characterStore}>
-        <CharacterProvider character={characterEditContext.character}>
-          <CharacterUpdateProvider updateFn={characterEditContext.update}>
-            <CharacterAtLevelProvider level={'current'}>
+        <CharacterProvider character={workingCharacter}>
+          <CharacterUpdateProvider updateFn={handleChange}>
+            <CharacterAtLevelProvider characterAtLevel={characterAtLevel}>
               <CharacterEditView />
               <div className='spacer'/>
             </CharacterAtLevelProvider>

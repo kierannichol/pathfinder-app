@@ -67,7 +67,6 @@ levels:
     level: 8
   - class_feature_names:
       - "ability:weapon_training#fighter"
-      - "ability:advanced_weapon_training#fighter"
     level: 9
   - class_feature_names:
       - "ability:bonus_feat#fighter"
@@ -107,10 +106,58 @@ levels:
       - "ability:weapon_mastery#fighter"
     level: 20
 class_features:
-  - id: "ability:advanced_weapon_training#fighter"
+  - id: "advanced_weapon_training:abundant_tactics#fighter"
+    name: "Abundant Tactics"
+    type: "Ex"
+    description: "The fighter adds his weapon training bonus to the number of times per day he can use a combat feat he has that allows a limited number of daily uses, such as the Stunning Fist feat."
+  - id: "advanced_weapon_training:effortless_dual_wielding#fighter"
+    name: "Effortless Dual-Wielding"
+    type: "Ex"
+    description: "The fighter treats all one-handed weapons that belong to the associated weapon group as though they were light weapons when determining his penalties on attack rolls for fighting with two weapons."
+  - id: "weapon_training:advanced_weapon_training#fighter"
     name: "Advanced Weapon Training"
-    effects: []
-    source: " Pathfinder RPG Core Rulebook"
+    type: "class_feature"
+    repeating_stack:
+      choices:
+        - choice_id: "advanced_weapon_training"
+          label: "Advanced Weapon Training"
+          type: "class_feature"
+          option_tags:
+            - "advanced_weapon_training"
+  - id: "weapon_training:axes#fighter"
+    name: "Axes"
+  - id: "weapon_training:heavy_blades#fighter"
+    name: "Heavy Blades"
+  - id: "weapon_training:light_blades#fighter"
+    name: "Light Blades"
+  - id: "weapon_training:bows#fighter"
+    name: "Bows"
+  - id: "weapon_training:close#fighter"
+    name: "Close"
+  - id: "weapon_training:crossbows#fighter"
+    name: "Crossbows"
+  - id: "weapon_training:double#fighter"
+    name: "Double"
+  - id: "weapon_training:firearms#fighter"
+    name: "Firearms"
+  - id: "weapon_training:flails#fighter"
+    name: "Flails"
+  - id: "weapon_training:hammers#fighter"
+    name: "Hammers"
+  - id: "weapon_training:monk#fighter"
+    name: "Monk"
+  - id: "weapon_training:natural#fighter"
+    name: "Natural"
+  - id: "weapon_training:polearms#fighter"
+    name: "Polearms"
+  - id: "weapon_training:siege_engines#fighter"
+    name: "Siege Engines"
+  - id: "weapon_training:spears#fighter"
+    name: "Spears"
+  - id: "weapon_training:thrown#fighter"
+    name: "Thrown"
+  - id: "weapon_training:tibal#fighter"
+    name: "Tribal"
   - id: "ability:armor_mastery#fighter"
     name: "Armor Mastery"
     type: "Ex"
@@ -197,7 +244,16 @@ class_features:
       with the weapon training class feature. Source: Pathfinder Player
       Companion: Weapon Master's HandbookWeapon groups are defined as follows
       (GMs may add other weapons to these groups, or add entirely new groups):"
-    effects: []
+    attack_mod:
+      attack_bonus: "@ability:weapon_training#fighter"
+      damage_bonus: "@ability:weapon_training#fighter"
+    repeating_stack:
+      choices:
+        - choice_id: "weapon_training"
+          label: "Weapon Training"
+          type: "class_feature"
+          option_tags:
+            - "weapon_training"
     source: " Pathfinder RPG Core Rulebook"
   - id: "trait:armor_proficiency#fighter"
     name: "Armor Proficiency (Fighter)"

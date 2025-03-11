@@ -2,11 +2,14 @@ package pathfinder.model.pathfinder;
 
 import static pathfinder.util.ListUtils.mapList;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
+import pathfinder.model.Attack;
+import pathfinder.model.AttackModification;
 import pathfinder.model.Description;
 import pathfinder.model.FixedStacks;
 import pathfinder.model.Id;
@@ -16,7 +19,10 @@ import pathfinder.model.Stack;
 import pathfinder.model.StackBuilder;
 import pathfinder.model.Stacks;
 
-public record Feature(Id id, String name, String label, String type, Description description, List<String> effects, List<Id> links, Stacks stacks, String prerequisites, String enabled_formula, String source) implements NamedEntity, FromSourceBook {
+public record Feature(Id id, String name, String label, String type, Description description, List<String> effects,
+                      List<Id> links, Stacks stacks, String prerequisites, String enabled_formula,
+                      @JsonProperty("attack_mod") AttackModification attackModifier, List<Attack> attacks, String source) implements NamedEntity,
+        FromSourceBook {
 
     public static FeatureBuilder builder() {
         return new FeatureBuilder();
@@ -32,6 +38,7 @@ public record Feature(Id id, String name, String label, String type, Description
     }
 
     public static class FeatureBuilder {
+
         private Id id;
         private String name;
         private String label;
@@ -45,6 +52,8 @@ public record Feature(Id id, String name, String label, String type, Description
         private String prerequisites = "";
         private String enabled_formula = "";
         private String source;
+        private AttackModification attackModifier;
+        private final List<Attack> attacks = new ArrayList<>();
 
         public FeatureBuilder id(Id id) {
             this.id = id;
@@ -149,11 +158,30 @@ public record Feature(Id id, String name, String label, String type, Description
             return this;
         }
 
+        public FeatureBuilder setAttackModifier(AttackModification attackMod) {
+            this.attackModifier = attackMod;
+            return this;
+        }
+
+        public FeatureBuilder addAllAttacks(List<Attack> attacks) {
+            this.attacks.addAll(attacks);
+            return this;
+        }
+
+        public FeatureBuilder addAttack(Attack attack) {
+            this.attacks.add(attack);
+            return this;
+        }
+
         public Feature build() {
             Stacks stacks = useRepeatingStack
                             ? new RepeatingStack(repeatingStack.build())
                             : new FixedStacks(mapList(fixedStacks, StackBuilder::build));
-            return new Feature(id, name, label, type, description, effects, links, stacks, prerequisites, enabled_formula, source);
+            return new Feature(id, name, label, type, description, effects, links, stacks, prerequisites,
+                    enabled_formula,
+                    attackModifier,
+                    attacks,
+                    source);
         }
 
         private FeatureBuilder() {
@@ -168,6 +196,8 @@ public record Feature(Id id, String name, String label, String type, Description
             this.effects.addAll(copy.effects);
             this.links.addAll(copy.links);
             this.prerequisites = copy.prerequisites;
+            this.attackModifier = copy.attackModifier;
+            this.attacks.addAll(copy.attacks);
             this.source = copy.source;
         }
 
@@ -177,7 +207,9 @@ public record Feature(Id id, String name, String label, String type, Description
     }
 
     public static class Type {
-        private static final Pattern FEATURE_NAME_PATTERN = Pattern.compile("^(?<name>.*?)(?: \\((?<type>Su|Sp|Ex(?: or Su|Sp|Ex)?)\\))?$");
+
+        private static final Pattern FEATURE_NAME_PATTERN = Pattern.compile(
+                "^(?<name>.*?)(?: \\((?<type>Su|Sp|Ex(?: or Su|Sp|Ex)?)\\))?$");
 
         public static String fromFeatureName(String featureName) {
             var matcher = FEATURE_NAME_PATTERN.matcher(featureName);

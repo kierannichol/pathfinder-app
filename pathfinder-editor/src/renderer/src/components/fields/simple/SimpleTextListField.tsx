@@ -13,7 +13,7 @@ export function SimpleTextListField({ label, elementNoun, value, onChange }: Sim
     {label && <label>{label}</label>}
     <ListEditor<string> values={value ?? []} onAddItem={() => ''} onListChanged={onChange} addButtonLabel={'+ ' + elementNoun}>
       {(item, index, setItem, actions) =>
-        <RemovableBlock onRemove={actions.remove}>
+        <RemovableBlock key={item} onRemove={actions.remove}>
           <Form.Control value={item}
                         onChange={event => setItem(event.target.value)} />
         </RemovableBlock>}

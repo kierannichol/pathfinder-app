@@ -12,36 +12,45 @@
         "featureModifications": [{
           "targetFeatureId": "class:sorcerer",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["spell:create_demiplane"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:entangling_ectoplasm#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 19,
-            "linksToAdd": ["ability:bloodline_feat#ectoplasm_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#ectoplasm_bloodline", "spell:etherealness"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 3,
-            "linksToAdd": ["ability:ectoplasmic_reach#sorcerer"],
+            "linksToAdd": ["ability:ectoplasmic_reach#sorcerer", "spell:obscuring_mist"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:ectoplasmic_body#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["spell:ghost_whip"]
+          }, {
             "targetStackCount": 7,
-            "linksToAdd": ["ability:bloodline_feat#ectoplasm_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#ectoplasm_bloodline", "spell:ectoplasmic_snare"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToAdd": ["ability:ectoplasmic_form#sorcerer"],
+            "linksToAdd": ["ability:ectoplasmic_form#sorcerer", "spell:spirit_bound_blade"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["spell:wall_of_ectoplasm"]
+          }, {
             "targetStackCount": 13,
-            "linksToAdd": ["ability:bloodline_feat#ectoplasm_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#ectoplasm_bloodline", "spell:ethereal_jaunt"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToAdd": ["ability:malevolent_ectoplasm#sorcerer"],
+            "linksToAdd": ["ability:malevolent_ectoplasm#sorcerer", "spell:ectoplasmic_eruption"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }]
         }]

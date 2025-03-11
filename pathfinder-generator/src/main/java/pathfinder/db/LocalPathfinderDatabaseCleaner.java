@@ -73,7 +73,8 @@ public class LocalPathfinderDatabaseCleaner {
                 original.ref(),
                 original.will(),
                 original.levels(),
-                cleanedFeatures
+                cleanedFeatures,
+                original.stacks()
         );
     }
 

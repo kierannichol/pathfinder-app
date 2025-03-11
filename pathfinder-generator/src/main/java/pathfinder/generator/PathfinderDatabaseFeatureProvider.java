@@ -12,17 +12,21 @@ import pathfinder.generator.mapper.BloodlineMapper;
 import pathfinder.generator.mapper.ClassFeatureMapper;
 import pathfinder.generator.mapper.ClassMapper;
 import pathfinder.generator.mapper.ClassModificationFeatureMapper;
+import pathfinder.generator.mapper.ClericDomainMapper;
 import pathfinder.generator.mapper.ComplexFeatureMapper;
 import pathfinder.generator.mapper.FavoredClassMapper;
 import pathfinder.generator.mapper.FeatMapper;
 import pathfinder.generator.mapper.ItemMapper;
 import pathfinder.generator.mapper.RaceMapper;
+import pathfinder.generator.mapper.RangerCombatStyleMapper;
 import pathfinder.generator.mapper.SpellMapper;
 import pathfinder.model.Feature;
 import pathfinder.model.pathfinder.Archetype;
 import pathfinder.model.pathfinder.ClassFeature;
 import pathfinder.model.pathfinder.ClassModificationFeature;
+import pathfinder.model.pathfinder.ClericDomain;
 import pathfinder.model.pathfinder.ComplexFeature;
+import pathfinder.model.pathfinder.RangerCombatStyle;
 import pathfinder.model.pathfinder.SourceId;
 import pathfinder.util.StreamUtils;
 
@@ -39,6 +43,8 @@ public class PathfinderDatabaseFeatureProvider implements FeatureProvider {
     private final FeatMapper feat;
     private final SpellMapper spell;
     private final RaceMapper race;
+    private final ClericDomainMapper clericDomain;
+    private final RangerCombatStyleMapper rangerCombatStyle;
     private final ItemMapper item;
     private final ClassModificationFeatureMapper classModificationFeature;
     private final ComplexFeatureMapper complexFeature;
@@ -58,7 +64,9 @@ public class PathfinderDatabaseFeatureProvider implements FeatureProvider {
                 database.query(Query.bloodlines().source(sourceId)).flatMap(bloodline::flatMap),
                 database.query(Query.namedEntities(Archetype.class).source(sourceId)).flatMap(archetype::flatMap),
                 database.query(Query.namedEntities(ClassModificationFeature.class).source(sourceId)).flatMap(classModificationFeature::flatMap),
-                database.query(Query.namedEntities(ComplexFeature.class).source(sourceId)).flatMap(complexFeature::flatMap)
+                database.query(Query.namedEntities(ComplexFeature.class).source(sourceId)).flatMap(complexFeature::flatMap),
+                database.query(Query.namedEntities(ClericDomain.class).source(sourceId)).flatMap(clericDomain::flatMap),
+                database.query(Query.namedEntities(RangerCombatStyle.class).source(sourceId)).flatMap(rangerCombatStyle::flatMap)
         ));
     }
 

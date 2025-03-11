@@ -8,6 +8,7 @@ type: "GENERAL"
 description: "You can choose to channel positive and negative energy."
 prerequisites: "Channel energy class feature, necromancer or neutrally aligned cleric\
   \ (see below)."
+enabled_formula: "@ability:channel_energy AND (@magic_school:necromancy OR (any(@alignment:n,@alignment:ng,@alignment:ne) AND @class:cleric)[Neutrally Aligned Cleric])"
 benefit: "You may make a choice whenever you use your channel energy class feature."
 normal: ""
 special: ""

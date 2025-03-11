@@ -12,36 +12,45 @@
         "featureModifications": [{
           "targetFeatureId": "class:sorcerer",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["spell:irresistible_dance"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:laughing_touch#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 19,
-            "linksToAdd": ["ability:bloodline_feat#fey_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#fey_bloodline", "spell:shapechange"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 3,
-            "linksToAdd": ["ability:woodland_stride#sorcerer"],
+            "linksToAdd": ["ability:woodland_stride#sorcerer", "spell:entangle"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:soul_of_the_fey#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["spell:hideous_laughter"]
+          }, {
             "targetStackCount": 7,
-            "linksToAdd": ["ability:bloodline_feat#fey_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#fey_bloodline", "spell:deep_slumber"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToAdd": ["ability:fleeting_glance#sorcerer"],
+            "linksToAdd": ["ability:fleeting_glance#sorcerer", "spell:poison"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["spell:tree_stride"]
+          }, {
             "targetStackCount": 13,
-            "linksToAdd": ["ability:bloodline_feat#fey_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#fey_bloodline", "spell:mislead"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToAdd": ["ability:fey_magic#sorcerer"],
+            "linksToAdd": ["ability:fey_magic#sorcerer", "spell:phase_door"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }]
         }]

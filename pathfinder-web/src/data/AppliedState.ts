@@ -27,7 +27,7 @@ export default class AppliedState {
   }
 
   public getAsNumber(key: string): number {
-    return this.dataContext.resolve(key)?.asNumber() ?? 0;
+    return this.dataContext.get(key)?.asNumber() ?? 0;
   }
 
   asDataContext(): DataContext {

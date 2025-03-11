@@ -1,0 +1,27 @@
+{
+  "id": "ranger_combat_style:thrown_weapon_3",
+  "name": "Thrown Weapon",
+  "tags": ["ranger_combat_style_3"],
+  "enabledFormula": "@ranger_combat_style:thrown_weapon_2",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "ranger_combat_style_3",
+          "label": "Ranger Combat Style Feat",
+          "tags": ["class_feature"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["ranger_combat_style_feat:distance_thrower", "ranger_combat_style_feat:precise_shot", "ranger_combat_style_feat:quick_draw", "ranger_combat_style_feat:two_weapon_fighting", "ranger_combat_style_feat:close_quarters_thrower", "ranger_combat_style_feat:false_opening", "ranger_combat_style_feat:pinpoint_targeting", "ranger_combat_style_feat:shot_on_the_run"]
+          }
+        }]
+      }]
+    }
+  }
+}

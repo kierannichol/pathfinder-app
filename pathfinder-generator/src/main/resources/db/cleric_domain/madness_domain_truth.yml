@@ -1,0 +1,45 @@
+id: "cleric_domain:madness_domain#truth"
+parent_id: "cleric_domain:madness_domain"
+name: "Truth Subdomain"
+description: "You embrace the madness that lurks deep in your heart, and can unleash\
+  \ it to drive your foes insane or to sacrifice certain abilities to hone others."
+granted_powers:
+- id: "ability:vision_of_madness"
+  name: "Vision of Madness"
+  description: "You can give a creature a vision of madness as a melee touch attack.\
+    \ Choose one of the following: attack rolls, saving throws, or skill checks. The\
+    \ target receives a bonus to the chosen rolls equal to ½ your cleric level (minimum\
+    \ +1) and a penalty to the other two types of rolls equal to ½ your cleric level\
+    \ (minimum –1). This effect fades after 3 rounds. You can use this ability a number\
+    \ of times per day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:aura_of_madness"
+  name: "Aura of Madness"
+  description: "At 8th level, you can emit a 30-foot aura of madness for a number\
+    \ of rounds per day equal to your cleric level. Enemies within this aura are affected\
+    \ by confusion unless they make a Will save with a DC equal to 10 + ½ your Cleric\
+    \ level + your Wisdom modifier. The confusion effect ends immediately when the\
+    \ creature leaves the area or the aura expires. Creatures that succeed on their\
+    \ saving throw are immune to this aura for 24 hours. These rounds do not need\
+    \ to be consecutive."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:confusion"
+- spell_level: 2
+  spell_id: "spell:touch_of_idiocy"
+- spell_level: 3
+  spell_id: "spell:wall_of_nausea"
+- spell_level: 4
+  spell_id: "spell:confusion"
+- spell_level: 5
+  spell_id: "spell:contact_other_plane"
+- spell_level: 6
+  spell_id: "spell:litany_of_madness"
+- spell_level: 7
+  spell_id: "spell:insanity"
+- spell_level: 8
+  spell_id: "spell:scintillating_pattern"
+- spell_level: 9
+  spell_id: "spell:weird"
+source: "Pathfinder Player Companion: Divine Anthology"

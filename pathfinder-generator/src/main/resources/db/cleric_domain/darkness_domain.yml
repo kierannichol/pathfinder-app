@@ -1,0 +1,41 @@
+id: "cleric_domain:darkness_domain"
+parent_id: null
+name: "Darkness Domain"
+description: "You manipulate shadows and darkness."
+granted_powers:
+- id: "ability:touch_of_darkness"
+  name: "Touch of Darkness"
+  description: "As a melee touch attack, you can cause a creature’s vision to be fraught\
+    \ with shadows and darkness. The creature touched treats all other creatures as\
+    \ if they had concealment, suffering a 20% miss chance on all attack rolls. This\
+    \ effect lasts for a number of rounds equal to 1/2 your cleric level (minimum\
+    \ 1). You can use this ability a number of times per day equal to 3 + your Wisdom\
+    \ modifier."
+  type: "Sp"
+- id: "ability:eyes_of_darkness"
+  name: "Eyes of Darkness"
+  description: "At 8th level, your vision is not impaired by lighting conditions,\
+    \ even in absolute darkness and magic darkness. You can use this ability for a\
+    \ number of rounds per day equal to 1/2 your cleric level. These rounds do not\
+    \ need to be consecutive."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:obscuring_mist"
+- spell_level: 2
+  spell_id: "spell:blindness_deafness"
+- spell_level: 3
+  spell_id: "spell:deeper_darkness"
+- spell_level: 4
+  spell_id: "spell:shadow_conjuration"
+- spell_level: 5
+  spell_id: "spell:summon_monster_v"
+- spell_level: 6
+  spell_id: "spell:shadow_walk"
+- spell_level: 7
+  spell_id: "spell:power_word_blind"
+- spell_level: 8
+  spell_id: "spell:shadow_evocation"
+- spell_level: 9
+  spell_id: "spell:shades"
+source: "Pathfinder RPG Core Rulebook"

@@ -33,11 +33,12 @@ export class TreeNodeValue extends FormattedValue {
             return child instanceof FormattedValue
                 ? child.asFormatted()
                 : child.asText();
-        }).reverse();
-        const operatorText = operator === TreeNodeOperator.ALL ? '; and ' : ', or ';
-        const separatorText = operator === TreeNodeOperator.ANY ? ', ' : '; ';
-        let formatted = parts.length > 1 ? (parts.slice(0, -1).join(separatorText) + operatorText) : '';
-        formatted = formatted + parts[parts.length - 1];
+        });
+        const operatorText = operator === TreeNodeOperator.ALL ? ' and ' : ' or ';
+        // const separatorText = operator === TreeNodeOperator.ANY ? ', ' : '; ';
+        // let formatted = parts.length > 1 ? (parts.slice(0, -1).join(separatorText) + operatorText) : '';
+        // formatted = formatted + parts[parts.length-1];
+        let formatted = parts.join(operatorText);
         super(actual, formatted);
         this.operator = operator;
         this.children = children;
@@ -107,7 +108,7 @@ export default class FormulaFormatter {
             .varargsFunction('any', (args) => createTreeNode(TreeNodeOperator.ANY, ...args))
             .varargsFunction('all', (args) => createTreeNode(TreeNodeOperator.ALL, ...args))
             .variable('@', '', (state, key) => {
-            let actual = state.resolve(key) ?? ResolvedValue.None;
+            let actual = state.get(key) ?? ResolvedValue.None;
             let name = this.lookup(key);
             if (name) {
                 return new FormattedValue(actual, name);

@@ -36,6 +36,10 @@ public abstract class Effect {
         return new AddNumberEffect(targetKey, delta);
     }
 
+    public static Effect addFormula(String targetKey, String formula) {
+        return new AddFormulaEffect(targetKey, formula);
+    }
+
     public abstract EffectDbo toDbo();
 
     @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
@@ -81,6 +85,22 @@ public abstract class Effect {
                     .setAddAction(AddActionDbo.newBuilder()
                             .setTargetKey(targetKey)
                             .setNumberDelta(delta)
+                            .build())
+                    .build();
+        }
+    }
+
+    @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
+    private static class AddFormulaEffect extends Effect {
+        private final String targetKey;
+        private final String formula;
+
+        @Override
+        public EffectDbo toDbo() {
+            return EffectDbo.newBuilder()
+                    .setAddAction(AddActionDbo.newBuilder()
+                            .setTargetKey(targetKey)
+                            .setFormula(formula)
                             .build())
                     .build();
         }

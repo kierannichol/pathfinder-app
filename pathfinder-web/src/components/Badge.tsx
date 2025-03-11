@@ -1,6 +1,6 @@
 import {HTMLAttributes} from "react";
 import styles from "./Badge.module.css";
-import {classNames} from "../../../pathfinder-lib/utils/classNames.ts";
+import {classNames} from "../../../pathfinder-lib/utils/src/classNames.ts";
 
 interface BadgeProps extends HTMLAttributes<HTMLDivElement> {
 

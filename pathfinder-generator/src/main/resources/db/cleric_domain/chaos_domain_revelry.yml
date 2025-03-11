@@ -1,0 +1,40 @@
+id: "cleric_domain:chaos_domain#revelry"
+parent_id: "cleric_domain:chaos_domain"
+name: "Revelry Subdomain"
+description: "Your touch infuses life and weapons with chaos, and you revel in all\
+  \ things anarchic."
+granted_powers:
+- id: "ability:touch_of_chaos"
+  name: "Touch of Chaos"
+  description: "You can imbue a target with chaos as a melee touch attack. For the\
+    \ next round, anytime the target rolls a d20, he must roll twice and take the\
+    \ less favorable result. You can use this ability a number of times per day equal\
+    \ to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:chaos_blade"
+  name: "Chaos Blade"
+  description: "At 8th level, you can give a weapon touched the anarchic special weapon\
+    \ quality for a number of rounds equal to 1/2 your cleric level. You can use this\
+    \ ability once per day at 8th level, and an additional time per day for every\
+    \ four levels beyond 8th."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:protection_from_law"
+- spell_level: 2
+  spell_id: "spell:hideous_laughter"
+- spell_level: 3
+  spell_id: "spell:_good_hope"
+- spell_level: 4
+  spell_id: "spell:chaos_hammer"
+- spell_level: 5
+  spell_id: "spell:dispel_law"
+- spell_level: 6
+  spell_id: "spell:heroes_feast"
+- spell_level: 7
+  spell_id: "spell:word_of_chaos"
+- spell_level: 8
+  spell_id: "spell:irresistible_dance"
+- spell_level: 9
+  spell_id: "spell:summon_monster_ix"
+source: "Pathfinder Campaign Setting: Inner Sea Gods"

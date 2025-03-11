@@ -7,5 +7,59 @@
   "weight": 5.0,
   "description": {
     "text": "This hefty +1 warhammer is crafted to resemble a dwarven face and is decorated with lavish gems. By speaking a command word, the wielder can transform the Forgefather\u0027s sledge into a blacksmithing hammer of any size suitable for the wielder\u0027s size and strength or back into its weapon form. The weapon grants the wielder fire resistance 1. If the wielder places the Forgefather\u0027s sledge in a Small or larger fire (such as a campfire, forge, or woodburning stove) for at least 1 minute, the hammer\u0027s head glows bright red from the heat for 1d4 minutes, though the handle remains cool to the touch. If used in combat during this time, the hammer deals 1 point of fire damage to creatures struck in addition to the regular damage dealt."
-  }
+  },
+  "actions": ["Attack"],
+  "stats": {
+    "crit_multiplier": 3,
+    "crit_range": 20,
+    "dice_count": 1,
+    "dice_sides": 8,
+    "type:one-handed": 1
+  },
+  "attacks": [{
+    "name": "Attack #1",
+    "condition": "@bab \u003e 0",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-0) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #2",
+    "condition": "@bab \u003e 5",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-5) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #3",
+    "condition": "@bab \u003e 10",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-10) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #4",
+    "condition": "@bab \u003e 15",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-15) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }, {
+    "name": "Attack #5",
+    "condition": "@bab \u003e 20",
+    "chanceToHit": {
+      "value": "1d20 + (@bab-20) + @str_mod + @size_mod",
+      "toBeat": "@target:ac"
+    },
+    "hitDamage": "1d8",
+    "missDamage": "0"
+  }]
 }

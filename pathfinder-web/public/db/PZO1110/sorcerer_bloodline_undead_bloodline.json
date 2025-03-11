@@ -12,36 +12,45 @@
         "featureModifications": [{
           "targetFeatureId": "class:sorcerer",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["spell:horrid_wilting"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:grave_touch#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 19,
-            "linksToAdd": ["ability:bloodline_feat#undead_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#undead_bloodline", "spell:energy_drain"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 3,
-            "linksToAdd": ["ability:deaths_gift#sorcerer"],
+            "linksToAdd": ["ability:deaths_gift#sorcerer", "spell:chill_touch"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:one_of_us#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["spell:false_life"]
+          }, {
             "targetStackCount": 7,
-            "linksToAdd": ["ability:bloodline_feat#undead_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#undead_bloodline", "spell:vampiric_touch"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToAdd": ["ability:grasp_of_the_dead#sorcerer"],
+            "linksToAdd": ["ability:grasp_of_the_dead#sorcerer", "spell:animate_dead"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["spell:waves_of_fatigue"]
+          }, {
             "targetStackCount": 13,
-            "linksToAdd": ["ability:bloodline_feat#undead_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#undead_bloodline", "spell:undeath_to_death"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToAdd": ["ability:incorporeal_form#sorcerer"],
+            "linksToAdd": ["ability:incorporeal_form#sorcerer", "spell:finger_of_death"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }]
         }]

@@ -1,0 +1,40 @@
+id: "cleric_domain:strength_domain#ferocity"
+parent_id: "cleric_domain:strength_domain"
+name: "Ferocity Subdomain"
+description: "In strength and brawn there is truth—your faith gives you incredible\
+  \ might and power."
+granted_powers:
+- id: "ability:might_of_the_gods"
+  name: "Might of the Gods"
+  description: "At 8th level, you can add your cleric level as an enhancement bonus\
+    \ to your Strength score for a number of rounds per day equal to your cleric level.\
+    \ This bonus only applies on Strength checks and Strength-based skill checks.\
+    \ These rounds do not need to be consecutive."
+  type: "Su"
+- id: "ability:ferocious_strike"
+  name: "Ferocious Strike"
+  description: "Whenever you make a melee attack, you can designate that attack as\
+    \ a ferocious strike. If the attack hits, it deals additional damage equal to\
+    \ 1/2 your cleric level (minimum +1). You can use this ability a number of times\
+    \ per day equal to 3 + your Wisdom modifier."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:enlarge_person"
+- spell_level: 2
+  spell_id: "spell:bulls_strength"
+- spell_level: 3
+  spell_id: "spell:rage"
+- spell_level: 4
+  spell_id: "spell:spell_immunity"
+- spell_level: 5
+  spell_id: "spell:righteous_might"
+- spell_level: 6
+  spell_id: "spell:bulls_strength"
+- spell_level: 7
+  spell_id: "spell:grasping_hand"
+- spell_level: 8
+  spell_id: "spell:clenched_fist"
+- spell_level: 9
+  spell_id: "spell:crushing_hand"
+source: "Advanced Player's Guide"

@@ -1,0 +1,41 @@
+id: "cleric_domain:evil_domain#corruption"
+parent_id: "cleric_domain:evil_domain"
+name: "Corruption Subdomain"
+description: "You are sinister and cruel, and have wholly pledged your soul to the\
+  \ cause of evil."
+granted_powers:
+- id: "ability:touch_of_evil"
+  name: "Touch of Evil"
+  description: "You can cause a creature to become sickened as a melee touch attack.\
+    \ Creatures sickened by your touch count as good for the purposes of spells with\
+    \ the evil descriptor. This ability lasts for a number of rounds equal to 1/2\
+    \ your cleric level (minimum 1). You can use this ability a number of times per\
+    \ day equal to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:scythe_of_evil"
+  name: "Scythe of Evil"
+  description: "At 8th level, you can give a weapon touched the unholy special weapon\
+    \ quality for a number of rounds equal to 1/2 your cleric level. You can use this\
+    \ ability once per day at 8th level, and an additional time per day for every\
+    \ four levels beyond 8th."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:protection_from_good"
+- spell_level: 2
+  spell_id: "spell:suggestion"
+- spell_level: 3
+  spell_id: "spell:magic_circle_against_good"
+- spell_level: 4
+  spell_id: "spell:unholy_blight"
+- spell_level: 5
+  spell_id: "spell:dispel_good"
+- spell_level: 6
+  spell_id: "spell:bestow_curse"
+- spell_level: 7
+  spell_id: "spell:blasphemy"
+- spell_level: 8
+  spell_id: "spell:unholy_aura"
+- spell_level: 9
+  spell_id: "spell:summon_monster_ix"
+source: "Pathfinder Player Companion: Champions of Corruption"

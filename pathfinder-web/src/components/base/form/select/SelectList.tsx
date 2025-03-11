@@ -1,7 +1,5 @@
-import {ReactNode, useEffect, useMemo, useState} from "react";
+import {ReactNode, SyntheticEvent, useEffect, useMemo, useState} from "react";
 import styles from "./SelectList.module.css";
-import Collapse from "@/components/base/Collapse.tsx";
-import {classNames} from "../../../../../../pathfinder-lib/utils/src/classNames.ts";
 
 export interface SelectListEntry {
   value: string;
@@ -31,7 +29,7 @@ export class SelectListOptionGroup implements SelectListEntry {
       public readonly name: string,
       public readonly label: ReactNode,
       public readonly enabled: boolean,
-      public readonly optionsFn: () => SelectListEntry[],
+      public readonly optionsFn: (query: string|undefined) => SelectListEntry[],
       public readonly descriptionFn?: () => Promise<ReactNode>) {
   }
 }
@@ -42,7 +40,7 @@ export class SelectListEntryBuilder {
   private _label: ReactNode;
   private _enabled: boolean;
   private _descriptionFn: (() => Promise<ReactNode>) | undefined;
-  private _optionsFn: (() => SelectListEntry[]) | undefined;
+  private _optionsFn: ((query:string|undefined) => SelectListEntry[]) | undefined;
 
   public constructor(value: string, name: string) {
     this._value = value;
@@ -78,7 +76,7 @@ export class SelectListEntryBuilder {
     return this;
   }
 
-  options(optionsFn: () => SelectListEntry[]) {
+  options(optionsFn: (query:string|undefined) => SelectListEntry[]) {
     this._optionsFn = optionsFn;
     return this;
   }
@@ -122,20 +120,18 @@ function SelectList({value, onChange, optionsFn}: SelectListProps) {
     setSelected(value)
   }, [value]);
 
-  function handleClick(entry: SelectListEntry, itemValue: string) {
-    const _selected = value !== itemValue ? itemValue : undefined;
-    setSelected(_selected);
-    onChange?.(entry, _selected);
+  function handleClick(entry: SelectListEntry, itemValue: string | undefined) {
+    setSelected(itemValue);
+    onChange?.(entry, itemValue);
   }
 
   const options = useMemo(() => optionsFn(), [optionsFn]);
 
   return (<div>
-    {options.map((option, index) =>
+    {options.map(option =>
         <SelectListOptionItem key={option.value}
                               selected={option.value === selected}
                               option={option as SelectListOption}
-                              last={index === options.length - 1}
                               onSelect={value => handleClick(option, value)}/>)}
   </div>);
 }
@@ -143,43 +139,40 @@ function SelectList({value, onChange, optionsFn}: SelectListProps) {
 interface SelectListOptionItemProps {
   option: SelectListOption;
   selected?: boolean;
-  last: boolean;
-  onSelect: (value: string) => void;
+  onSelect: (value: string | undefined) => void;
 }
 
-function SelectListOptionItem({option, onSelect, last, selected = false}: SelectListOptionItemProps) {
-  const [open, setOpen] = useState<boolean>(false);
+function SelectListOptionItem({option, onSelect, selected = false}: SelectListOptionItemProps) {
   const [description, setDescription] = useState<ReactNode | null>();
 
-  function handleCollapsed() {
-    setOpen(false);
+  const classNames = [styles.option];
+  if (!option.enabled) {
+    classNames.push(styles.disabled);
+  }
+
+  function toggleOpen() {
+    setDescription("...");
+    option.descriptionFn?.()
+    .then(result => setDescription(result));
+  }
+
+  function toggleClose() {
     setDescription(null);
   }
 
-  useEffect(() => {
-    if (!selected) return;
-    setDescription("...");
-    setOpen(true);
-    option.descriptionFn?.()
-    .then(result => setDescription(result));
-  }, [selected]);
+  function handleDetailsToggle(event: SyntheticEvent<HTMLDetailsElement>) {
+    if (event.currentTarget.open) {
+      toggleOpen();
+      onSelect?.(option.value);
+    } else {
+      toggleClose();
+    }
+  }
 
-  return <>
-    <div className={classNames([styles.option,
-      !option.enabled ? styles.disabled : undefined,
-      selected ? styles.selected : undefined,
-      last ? styles.last : undefined,
-      open ? styles.open : styles.closed])}
-         onClick={() => onSelect(option.value)}>
-      {option.label ?? option.name}
-    </div>
-    {open && <Collapse open={selected}
-                       onCollapsed={handleCollapsed}>
-      <div className={classNames([styles.description, last ? styles.last : undefined])}>
-        {description}
-      </div>
-    </Collapse>}
-  </>
+  return <details className={classNames.join(' ')} name={'option'} onToggle={handleDetailsToggle} open={selected}>
+    <summary>{option.label ?? option.name}</summary>
+    <section className={styles.description}>{description}</section>
+  </details>
 }
 
 export default SelectList;

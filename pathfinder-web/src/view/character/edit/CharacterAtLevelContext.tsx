@@ -17,23 +17,15 @@ export function useCharacterAtLevel(level?: number, withoutChoicePath?: string):
       return context;
     }
     return character.atLevel(level, withoutChoicePath);
-  }, [character, level, context]);
+  }, [character, level, context, withoutChoicePath]);
 }
 
 interface CharacterAtLevelProviderProps {
-  level: number | 'current';
+  characterAtLevel: CharacterAtLevel;
   children?: ReactNode;
 }
 
-export function CharacterAtLevelProvider({ level, children }: CharacterAtLevelProviderProps) {
-  const character = useCharacter();
-  const characterAtLevel = useMemo(() => {
-    if (level === 'current') {
-      level = parseInt(character.selected('current_level') as string);
-    }
-    return character.atLevel(level);
-  }, [character, level]);
-
+export function CharacterAtLevelProvider({ characterAtLevel, children }: CharacterAtLevelProviderProps) {
   return (
       <CharacterAtLevelContext.Provider value={characterAtLevel}>
         {children}

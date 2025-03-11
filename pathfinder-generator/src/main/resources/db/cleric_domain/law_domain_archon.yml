@@ -1,0 +1,42 @@
+id: "cleric_domain:law_domain#archon"
+parent_id: "cleric_domain:law_domain"
+name: "Archon Subdomain"
+description: "You follow a strict and ordered code of laws, and in so doing, achieve\
+  \ enlightenment."
+granted_powers:
+- id: "ability:touch_of_law"
+  name: "Touch of Law"
+  description: "You can touch a willing creature as a standard action, infusing it\
+    \ with the power of divine order and allowing it to treat all attack rolls, skill\
+    \ checks, ability checks, and saving throws for 1 round as if the natural d20\
+    \ roll resulted in an 11. You can use this ability a number of times per day equal\
+    \ to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:aura_of_menace"
+  name: "Aura of Menace"
+  description: "At 8th level, you can emit a 30-foot aura of menace as a standard\
+    \ action. Enemies in this aura take a –2 penalty to AC and on attacks and saves\
+    \ as long as they remain inside the aura. You can use this ability for a number\
+    \ of rounds per day equal to your cleric level. These rounds do not need to be\
+    \ consecutive."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:divine_favor"
+- spell_level: 2
+  spell_id: "spell:align_weapon"
+- spell_level: 3
+  spell_id: "spell:prayer"
+- spell_level: 4
+  spell_id: "spell:orders_wrath"
+- spell_level: 5
+  spell_id: "spell:dispel_chaos"
+- spell_level: 6
+  spell_id: "spell:planar_ally"
+- spell_level: 7
+  spell_id: "spell:dictum"
+- spell_level: 8
+  spell_id: "spell:shield_of_law"
+- spell_level: 9
+  spell_id: "spell:summon_monster_ix"
+source: "Advanced Player's Guide"

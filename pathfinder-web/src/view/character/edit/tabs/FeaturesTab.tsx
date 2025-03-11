@@ -1,11 +1,11 @@
 import {useMemo} from "react";
 import {ChoiceSelectionHandler} from "@/components/choice/ChoiceSelectionHandler.tsx";
 import ChoiceInputRow from "@/view/character/edit/ChoiceInputRow.tsx";
-import ChoicePathLabel from "@/components/choice/ChoicePathLabel.tsx";
 import {ChoiceRef} from "@/data/Choice.ts";
 import {useCharacterAtLevel} from "@/view/character/edit/CharacterAtLevelContext.tsx";
 import {useCharacterUpdate} from "@/view/character/edit/CharacterUpdateContext.tsx";
 import {range} from "@pathfinder-lib/utils/range"
+import styles from "./FeaturesTab.module.css";
 
 
 function FeaturesTab() {
@@ -25,7 +25,7 @@ function FeaturesTab() {
   }, [characterAtLevel, choices, handleChange]);
 
   return <>
-    <section>
+    <section className={styles.featuresByLevel}>
       {rows}
     </section>
   </>
@@ -40,15 +40,29 @@ interface CharacterFeaturesAtLevelProps {
 function CharacterFeaturesAtLevel({ level, choices, onChange }: CharacterFeaturesAtLevelProps) {
   const characterAtLevel = useCharacterAtLevel(level);
 
-  return <div>
-    {choices
-      .filter(choice => choice.parent.level === level)
+  const choicesAtLevel = choices.filter(choice => choice.parent.level === level);
+  const header = level === 0 ? 'Base' : `Level ${level}`;
+
+  if (choicesAtLevel.length === 0) {
+    return <></>
+  }
+
+  function handleDelete(choiceRef: ChoiceRef) {
+    onChange(choiceRef, undefined);
+  }
+
+  return <div className={styles.level}>
+    <h1>{header}</h1>
+    <div className={styles.content}>
+    {choicesAtLevel
       .map(choice =>
         <ChoiceInputRow key={choice.path}
                         choice={choice}
                         onChange={onChange}
-                        label={<ChoicePathLabel choiceRef={choice}/>}
+                        onDelete={handleDelete}
+                        label={choice.label}
                         characterAtLevel={characterAtLevel} />)}
+    </div>
   </div>
 }
 

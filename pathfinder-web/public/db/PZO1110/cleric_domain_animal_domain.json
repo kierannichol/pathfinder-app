@@ -1,0 +1,25 @@
+{
+  "id": "cleric_domain:animal_domain",
+  "name": "Animal Domain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You can speak with and befriend animals with ease. In addition, you treat Knowledge (nature) as a class skill."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:speak_with_animals"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:animal_companion"]
+          }]
+        }]
+      }]
+    }
+  }
+}

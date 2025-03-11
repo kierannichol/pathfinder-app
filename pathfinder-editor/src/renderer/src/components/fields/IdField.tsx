@@ -5,9 +5,10 @@ interface IdFieldProps {
   value: string;
   onChange: (value: string) => void;
   generateFn?: () => string;
+  label?: string;
 }
 
-export function IdField({ value, onChange, generateFn = undefined }: IdFieldProps) {
+export function IdField({ value, onChange, label, generateFn = undefined }: IdFieldProps) {
   const fieldId = useId();
 
   function handleGenerate() {
@@ -17,11 +18,11 @@ export function IdField({ value, onChange, generateFn = undefined }: IdFieldProp
   }
 
   return <div className="inline-field">
-    <label htmlFor={fieldId}>ID</label>
+    <label htmlFor={fieldId}>{label ?? "ID"}</label>
     <InputGroup>
       <Form.Control id={fieldId}
                     spellCheck={false}
-                    value={value}
+                    value={value ?? ''}
                     onChange={event => onChange(event.target.value)} />
       {generateFn &&
       <Button variant="primary" id="button-addon2" onClick={handleGenerate}>

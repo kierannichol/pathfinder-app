@@ -285,6 +285,7 @@ class_features:
   type: null
   description: "Alchemist can cast spells."
   effects:
+  - "INCR caster_level @class:alchemist"
   - "SET trait:level_0_spells_per_day#alchemist 3+if(@class:alchemist>1,1,0)+if(@class:alchemist>5,1,0)"
   - "SET trait:level_1_spells_per_day#alchemist 1+if(@class:alchemist>1,1,0)+if(@class:alchemist>2,1,0)+if(@class:alchemist>4,1,0)+if(@class:alchemist>8,1,0)"
   - "SET trait:level_2_spells_per_day#alchemist if(@class:alchemist>=4,1+if(@class:alchemist>4,1,0)+if(@class:alchemist>5,1,0)+if(@class:alchemist>7,1,0)+if(@class:alchemist>11,1,0),null)"

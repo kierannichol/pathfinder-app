@@ -1,0 +1,26 @@
+{
+  "id": "ranger_combat_style:archery_1",
+  "name": "Archery",
+  "tags": ["ranger_combat_style_1"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "choices": [{
+          "choiceId": "ranger_combat_style_1",
+          "label": "Ranger Combat Style Feat",
+          "tags": ["class_feature"],
+          "repeating": {
+            "none": {
+            }
+          },
+          "featureSelect": {
+            "featureIds": ["ranger_combat_style_feat:far_shot", "ranger_combat_style_feat:focused_shot", "ranger_combat_style_feat:point_blank_shot", "ranger_combat_style_feat:precise_shot", "ranger_combat_style_feat:rapid_shot"]
+          }
+        }]
+      }]
+    }
+  }
+}

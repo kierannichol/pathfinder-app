@@ -1,0 +1,41 @@
+id: "cleric_domain:law_domain#tyranny"
+parent_id: "cleric_domain:law_domain"
+name: "Tyranny Subdomain"
+description: "You follow a strict and ordered code of laws, and in so doing, achieve\
+  \ enlightenment."
+granted_powers:
+- id: "ability:touch_of_law"
+  name: "Touch of Law"
+  description: "You can touch a willing creature as a standard action, infusing it\
+    \ with the power of divine order and allowing it to treat all attack rolls, skill\
+    \ checks, ability checks, and saving throws for 1 round as if the natural d20\
+    \ roll resulted in an 11. You can use this ability a number of times per day equal\
+    \ to 3 + your Wisdom modifier."
+  type: "Sp"
+- id: "ability:staff_of_order"
+  name: "Staff of Order"
+  description: "At 8th level, you can give a weapon touched the axiomatic special\
+    \ weapon quality for a number of rounds equal to 1/2 your cleric level. You can\
+    \ use this ability once per day at 8th level, and an additional time per day for\
+    \ every four levels beyond 8th."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:command"
+- spell_level: 2
+  spell_id: "spell:align_weapon"
+- spell_level: 3
+  spell_id: "spell:bestow_curse"
+- spell_level: 4
+  spell_id: "spell:orders_wrath"
+- spell_level: 5
+  spell_id: "spell:dispel_chaos"
+- spell_level: 6
+  spell_id: "spell:hold_monster"
+- spell_level: 7
+  spell_id: "spell:symbol_of_persuasion"
+- spell_level: 8
+  spell_id: "spell:shield_of_law"
+- spell_level: 9
+  spell_id: "spell:summon_monster_ix"
+source: "Pathfinder Campaign Setting: Inner Sea Gods"

@@ -3,6 +3,127 @@ import Long = require("long");
 /** Namespace data. */
 export namespace data {
 
+    /** Properties of a ChoiceModificationDbo. */
+    interface IChoiceModificationDbo {
+
+        /** ChoiceModificationDbo targetChoiceId */
+        targetChoiceId?: (string|null);
+
+        /** ChoiceModificationDbo tagsToAdd */
+        tagsToAdd?: (string[]|null);
+
+        /** ChoiceModificationDbo tagsToRemove */
+        tagsToRemove?: (string[]|null);
+
+        /** ChoiceModificationDbo featuresToAdd */
+        featuresToAdd?: (string[]|null);
+
+        /** ChoiceModificationDbo featuresToRemove */
+        featuresToRemove?: (string[]|null);
+    }
+
+    /** Represents a ChoiceModificationDbo. */
+    class ChoiceModificationDbo implements IChoiceModificationDbo {
+
+        /**
+         * Constructs a new ChoiceModificationDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.IChoiceModificationDbo);
+
+        /** ChoiceModificationDbo targetChoiceId. */
+        public targetChoiceId: string;
+
+        /** ChoiceModificationDbo tagsToAdd. */
+        public tagsToAdd: string[];
+
+        /** ChoiceModificationDbo tagsToRemove. */
+        public tagsToRemove: string[];
+
+        /** ChoiceModificationDbo featuresToAdd. */
+        public featuresToAdd: string[];
+
+        /** ChoiceModificationDbo featuresToRemove. */
+        public featuresToRemove: string[];
+
+        /**
+         * Creates a new ChoiceModificationDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ChoiceModificationDbo instance
+         */
+        public static create(properties?: data.IChoiceModificationDbo): data.ChoiceModificationDbo;
+
+        /**
+         * Encodes the specified ChoiceModificationDbo message. Does not implicitly {@link data.ChoiceModificationDbo.verify|verify} messages.
+         * @param message ChoiceModificationDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.ChoiceModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ChoiceModificationDbo message, length delimited. Does not implicitly {@link data.ChoiceModificationDbo.verify|verify} messages.
+         * @param message ChoiceModificationDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.ChoiceModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a ChoiceModificationDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ChoiceModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.ChoiceModificationDbo;
+
+        /**
+         * Decodes a ChoiceModificationDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ChoiceModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.ChoiceModificationDbo;
+
+        /**
+         * Verifies a ChoiceModificationDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a ChoiceModificationDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ChoiceModificationDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.ChoiceModificationDbo;
+
+        /**
+         * Creates a plain object from a ChoiceModificationDbo message. Also converts values to other types if specified.
+         * @param message ChoiceModificationDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.ChoiceModificationDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ChoiceModificationDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ChoiceModificationDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     /** Properties of a SourceBookIndexDbo. */
     interface ISourceBookIndexDbo {
 
@@ -274,6 +395,12 @@ export namespace data {
 
         /** FeatureDbo conditionalStacks */
         conditionalStacks?: (data.ConditionalStackDbo[]|null);
+
+        /** FeatureDbo attackModifier */
+        attackModifier?: (data.AttackModificationDbo|null);
+
+        /** FeatureDbo attacks */
+        attacks?: (data.AttackDbo[]|null);
     }
 
     /** Represents a FeatureDbo. */
@@ -317,6 +444,12 @@ export namespace data {
 
         /** FeatureDbo conditionalStacks. */
         public conditionalStacks: data.ConditionalStackDbo[];
+
+        /** FeatureDbo attackModifier. */
+        public attackModifier?: (data.AttackModificationDbo|null);
+
+        /** FeatureDbo attacks. */
+        public attacks: data.AttackDbo[];
 
         /**
          * Creates a new FeatureDbo instance using the specified properties.
@@ -606,6 +739,333 @@ export namespace data {
              */
             public static getTypeUrl(typeUrlPrefix?: string): string;
         }
+    }
+
+    /** Properties of an AttackDbo. */
+    interface IAttackDbo {
+
+        /** AttackDbo name */
+        name?: (string|null);
+
+        /** AttackDbo condition */
+        condition?: (string|null);
+
+        /** AttackDbo chanceToHit */
+        chanceToHit?: (data.ChanceDbo|null);
+
+        /** AttackDbo hitDamage */
+        hitDamage?: (string|null);
+
+        /** AttackDbo missDamage */
+        missDamage?: (string|null);
+    }
+
+    /** Represents an AttackDbo. */
+    class AttackDbo implements IAttackDbo {
+
+        /**
+         * Constructs a new AttackDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.IAttackDbo);
+
+        /** AttackDbo name. */
+        public name: string;
+
+        /** AttackDbo condition. */
+        public condition: string;
+
+        /** AttackDbo chanceToHit. */
+        public chanceToHit?: (data.ChanceDbo|null);
+
+        /** AttackDbo hitDamage. */
+        public hitDamage: string;
+
+        /** AttackDbo missDamage. */
+        public missDamage: string;
+
+        /**
+         * Creates a new AttackDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns AttackDbo instance
+         */
+        public static create(properties?: data.IAttackDbo): data.AttackDbo;
+
+        /**
+         * Encodes the specified AttackDbo message. Does not implicitly {@link data.AttackDbo.verify|verify} messages.
+         * @param message AttackDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.AttackDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified AttackDbo message, length delimited. Does not implicitly {@link data.AttackDbo.verify|verify} messages.
+         * @param message AttackDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.AttackDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes an AttackDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns AttackDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.AttackDbo;
+
+        /**
+         * Decodes an AttackDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns AttackDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.AttackDbo;
+
+        /**
+         * Verifies an AttackDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates an AttackDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AttackDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.AttackDbo;
+
+        /**
+         * Creates a plain object from an AttackDbo message. Also converts values to other types if specified.
+         * @param message AttackDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.AttackDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AttackDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for AttackDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a ChanceDbo. */
+    interface IChanceDbo {
+
+        /** ChanceDbo value */
+        value?: (string|null);
+
+        /** ChanceDbo toBeat */
+        toBeat?: (string|null);
+    }
+
+    /** Represents a ChanceDbo. */
+    class ChanceDbo implements IChanceDbo {
+
+        /**
+         * Constructs a new ChanceDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.IChanceDbo);
+
+        /** ChanceDbo value. */
+        public value: string;
+
+        /** ChanceDbo toBeat. */
+        public toBeat: string;
+
+        /**
+         * Creates a new ChanceDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ChanceDbo instance
+         */
+        public static create(properties?: data.IChanceDbo): data.ChanceDbo;
+
+        /**
+         * Encodes the specified ChanceDbo message. Does not implicitly {@link data.ChanceDbo.verify|verify} messages.
+         * @param message ChanceDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.ChanceDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ChanceDbo message, length delimited. Does not implicitly {@link data.ChanceDbo.verify|verify} messages.
+         * @param message ChanceDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.ChanceDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a ChanceDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ChanceDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.ChanceDbo;
+
+        /**
+         * Decodes a ChanceDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ChanceDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.ChanceDbo;
+
+        /**
+         * Verifies a ChanceDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a ChanceDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ChanceDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.ChanceDbo;
+
+        /**
+         * Creates a plain object from a ChanceDbo message. Also converts values to other types if specified.
+         * @param message ChanceDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.ChanceDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ChanceDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ChanceDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of an AttackModificationDbo. */
+    interface IAttackModificationDbo {
+
+        /** AttackModificationDbo attackBonus */
+        attackBonus?: (string|null);
+
+        /** AttackModificationDbo damageBonus */
+        damageBonus?: (string|null);
+    }
+
+    /** Represents an AttackModificationDbo. */
+    class AttackModificationDbo implements IAttackModificationDbo {
+
+        /**
+         * Constructs a new AttackModificationDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.IAttackModificationDbo);
+
+        /** AttackModificationDbo attackBonus. */
+        public attackBonus: string;
+
+        /** AttackModificationDbo damageBonus. */
+        public damageBonus: string;
+
+        /**
+         * Creates a new AttackModificationDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns AttackModificationDbo instance
+         */
+        public static create(properties?: data.IAttackModificationDbo): data.AttackModificationDbo;
+
+        /**
+         * Encodes the specified AttackModificationDbo message. Does not implicitly {@link data.AttackModificationDbo.verify|verify} messages.
+         * @param message AttackModificationDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.AttackModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified AttackModificationDbo message, length delimited. Does not implicitly {@link data.AttackModificationDbo.verify|verify} messages.
+         * @param message AttackModificationDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.AttackModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes an AttackModificationDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns AttackModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.AttackModificationDbo;
+
+        /**
+         * Decodes an AttackModificationDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns AttackModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.AttackModificationDbo;
+
+        /**
+         * Verifies an AttackModificationDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates an AttackModificationDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AttackModificationDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.AttackModificationDbo;
+
+        /**
+         * Creates a plain object from an AttackModificationDbo message. Also converts values to other types if specified.
+         * @param message AttackModificationDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.AttackModificationDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AttackModificationDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for AttackModificationDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
     /** Properties of a DescriptionDbo. */
@@ -945,6 +1405,9 @@ export namespace data {
 
             /** AddActionDbo numberDelta */
             numberDelta?: (number|null);
+
+            /** AddActionDbo formula */
+            formula?: (string|null);
         }
 
         /** Represents an AddActionDbo. */
@@ -960,7 +1423,13 @@ export namespace data {
             public targetKey: string;
 
             /** AddActionDbo numberDelta. */
-            public numberDelta: number;
+            public numberDelta?: (number|null);
+
+            /** AddActionDbo formula. */
+            public formula?: (string|null);
+
+            /** AddActionDbo value. */
+            public value?: ("numberDelta"|"formula");
 
             /**
              * Creates a new AddActionDbo instance using the specified properties.
@@ -1997,6 +2466,9 @@ export namespace data {
 
         /** StackDbo featureModifications */
         featureModifications?: (data.FeatureModificationDbo[]|null);
+
+        /** StackDbo choiceModifications */
+        choiceModifications?: (data.ChoiceModificationDbo[]|null);
     }
 
     /** Represents a StackDbo. */
@@ -2019,6 +2491,9 @@ export namespace data {
 
         /** StackDbo featureModifications. */
         public featureModifications: data.FeatureModificationDbo[];
+
+        /** StackDbo choiceModifications. */
+        public choiceModifications: data.ChoiceModificationDbo[];
 
         /**
          * Creates a new StackDbo instance using the specified properties.
@@ -2115,6 +2590,9 @@ export namespace data {
 
         /** ConditionalStackDbo featureModifications */
         featureModifications?: (data.FeatureModificationDbo[]|null);
+
+        /** ConditionalStackDbo choiceModifications */
+        choiceModifications?: (data.ChoiceModificationDbo[]|null);
     }
 
     /** Represents a ConditionalStackDbo. */
@@ -2140,6 +2618,9 @@ export namespace data {
 
         /** ConditionalStackDbo featureModifications. */
         public featureModifications: data.FeatureModificationDbo[];
+
+        /** ConditionalStackDbo choiceModifications. */
+        public choiceModifications: data.ChoiceModificationDbo[];
 
         /**
          * Creates a new ConditionalStackDbo instance using the specified properties.
@@ -2784,6 +3265,21 @@ export namespace data {
 
         /** ItemDbo description */
         description?: (data.DescriptionDbo|null);
+
+        /** ItemDbo actions */
+        actions?: (string[]|null);
+
+        /** ItemDbo stats */
+        stats?: ({ [k: string]: number }|null);
+
+        /** ItemDbo attackModifier */
+        attackModifier?: (data.AttackModificationDbo|null);
+
+        /** ItemDbo effects */
+        effects?: (data.EffectDbo[]|null);
+
+        /** ItemDbo attacks */
+        attacks?: (data.AttackDbo[]|null);
     }
 
     /** Represents an ItemDbo. */
@@ -2815,6 +3311,21 @@ export namespace data {
 
         /** ItemDbo description. */
         public description?: (data.DescriptionDbo|null);
+
+        /** ItemDbo actions. */
+        public actions: string[];
+
+        /** ItemDbo stats. */
+        public stats: { [k: string]: number };
+
+        /** ItemDbo attackModifier. */
+        public attackModifier?: (data.AttackModificationDbo|null);
+
+        /** ItemDbo effects. */
+        public effects: data.EffectDbo[];
+
+        /** ItemDbo attacks. */
+        public attacks: data.AttackDbo[];
 
         /**
          * Creates a new ItemDbo instance using the specified properties.
@@ -3304,6 +3815,12 @@ export namespace data {
 
         /** ItemOptionDbo description */
         description?: (data.DescriptionDbo|null);
+
+        /** ItemOptionDbo stats */
+        stats?: ({ [k: string]: number }|null);
+
+        /** ItemOptionDbo attackModifier */
+        attackModifier?: (data.AttackModificationDbo|null);
     }
 
     /** Represents an ItemOptionDbo. */
@@ -3341,6 +3858,12 @@ export namespace data {
 
         /** ItemOptionDbo description. */
         public description?: (data.DescriptionDbo|null);
+
+        /** ItemOptionDbo stats. */
+        public stats: { [k: string]: number };
+
+        /** ItemOptionDbo attackModifier. */
+        public attackModifier?: (data.AttackModificationDbo|null);
 
         /**
          * Creates a new ItemOptionDbo instance using the specified properties.

@@ -1,0 +1,25 @@
+{
+  "id": "cleric_domain:glory_domain#heroism",
+  "name": "Heroism Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You are infused with the glory of the divine, and are a true foe of the undead. In addition, when you channel positive energy to harm undead creatures, the save DC to halve the damage is increased by 2."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:touch_of_glory"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:aura_of_heroism"]
+          }]
+        }]
+      }]
+    }
+  }
+}

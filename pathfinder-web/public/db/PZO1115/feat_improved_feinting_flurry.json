@@ -1,0 +1,18 @@
+{
+  "id": "feat:improved_feinting_flurry",
+  "name": "Improved Feinting Flurry",
+  "tags": ["combat", "feat"],
+  "enabledFormula": "all(@dex_score\u003e\u003d17,sum(@ability:flurry_of_blows#*)[Flurry Of Blows],@feat:combat_expertise,@feat:feinting_flurry,@bab\u003e\u003d6)",
+  "maxStacks": 1,
+  "description": {
+    "text": "Your first melee attack throws your opponent completely off guard.",
+    "sections": {
+      "Benefit": "While using Feinting Flurry, if you successfully feint, your opponent is denied its Dexterity bonus to AC until the end of your turn.",
+      "Normal": "A successful feint causes your opponent to be denied its Dexterity bonus to AC against your next attack."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

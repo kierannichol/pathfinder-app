@@ -1,5 +1,7 @@
 package pathfinder.model.pathfinder;
 
+import static pathfinder.util.ListUtils.mapList;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -13,6 +15,8 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
+import pathfinder.model.Stack;
+import pathfinder.model.StackBuilder;
 import pathfinder.model.pathfinder.ClassLevel.ClassLevelBuilder;
 import pathfinder.model.pathfinder.Feature.FeatureBuilder;
 
@@ -31,7 +35,8 @@ public record CharacterClass(
         String ref,
         String will,
         List<ClassLevel> levels,
-        Set<Feature> class_features) implements NamedEntity {
+        Set<Feature> class_features,
+        List<Stack> stacks) implements NamedEntity {
 
     public static CharacterClassBuilder builder() {
         return new CharacterClassBuilder();
@@ -100,6 +105,7 @@ public record CharacterClass(
         private final Map<Integer, ClassLevelBuilder> levels = new TreeMap<>(Comparator.comparing(Function.identity()));
         private final List<String> spellCasterTypes = new ArrayList<>();
         private final Set<Feature> classFeatures = new TreeSet<>(Comparator.comparing(Feature::id));
+        private final List<StackBuilder> stacks = new ArrayList<>();
 
         public CharacterClassBuilder id(Id id) {
             this.id = id;
@@ -147,6 +153,15 @@ public record CharacterClass(
         public CharacterClassBuilder addClassSkill(Id skillId) {
             this.class_skills.add(skillId);
             return this;
+        }
+
+        public StackBuilder stack(int count) {
+            if (stacks.isEmpty()) {
+                for (int i = 0; i < 20; i++) {
+                    stacks.add(new StackBuilder());
+                }
+            }
+            return stacks.get(count - 1);
         }
 
         public CharacterClassBuilder addClassSkill(String skillId) {
@@ -272,7 +287,8 @@ public record CharacterClass(
                     ref,
                     will,
                     levels.values().stream().map(ClassLevelBuilder::build).toList(),
-                    classFeatures);
+                    classFeatures,
+                    mapList(stacks, StackBuilder::build));
         }
 
         public void forEachLevel(Consumer<ClassLevelBuilder> actionFn) {

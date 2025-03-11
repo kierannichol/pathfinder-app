@@ -12,5 +12,8 @@
   "stacks": {
     "fixedStack": {
     }
+  },
+  "attackModifier": {
+    "attackBonus": "if(@arg:include_power_attack AND @arg:grip_multiplier\u003e1 AND @arg:attack_index \u003d\u003d 1, 1+floor(@bab/4), 0)"
   }
 }

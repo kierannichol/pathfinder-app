@@ -8,6 +8,11 @@
   "stacks": {
     "repeatingStack": {
       "effects": [{
+        "addAction": {
+          "targetKey": "caster_level",
+          "formula": "@class:druid"
+        }
+      }, {
         "setAction": {
           "targetKey": "trait:level_0_spells_per_day#druid",
           "formula": "3+if(@class:druid\u003e1,1,0)"

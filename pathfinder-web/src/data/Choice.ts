@@ -12,6 +12,7 @@ import {Path} from "@pathfinder-lib/utils/Path";
 export interface ChoiceRef {
   inputType: ChoiceInputType;
   path: string;
+  key: string;
   tags: string[];
   label: string;
   parent: FeatureRef;
@@ -36,6 +37,7 @@ export enum ChoiceInputType {
 export abstract class ResolvedChoice implements ChoiceRef, ResolvedTrait {
   abstract parent: FeatureRef;
   abstract path: string;
+  abstract key: string;
   abstract tags: string[];
   abstract label: string;
   abstract children: ResolvedTrait[];

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
 import pathfinder.data.FeatureDbo;
 import pathfinder.data.FeatureSummaryDbo;
 import pathfinder.util.SortedArrayList;
@@ -20,7 +21,9 @@ public record Feature(Id id,
                       FeatureOptions options,
                       Integer maxStacks,
                       Stacks stacks,
-                      List<ConditionalStack> conditionalStacks) implements NamedEntity {
+                      List<ConditionalStack> conditionalStacks,
+                      AttackModification attackMod,
+                      List<Attack> attacks) implements NamedEntity {
 
     public static Feature simple(NamedEntity namedEntity) {
         return builder(namedEntity.id())
@@ -64,6 +67,8 @@ public record Feature(Id id,
         if (feature.options != null) {
             builder.addOptions(feature.options);
         }
+
+        builder.setAttackModifier(feature.attackMod);
 
         return builder;
     }
@@ -121,6 +126,12 @@ public record Feature(Id id,
         if (options != null) {
             feature.setOptions(options.toDbo());
         }
+        if (attackMod != null) {
+            feature.setAttackModifier(attackMod.toDbo());
+        }
+        if (attacks != null) {
+            feature.addAllAttacks(mapList(attacks, Attack::toDbo));
+        }
         return feature.build();
     }
 
@@ -134,10 +145,12 @@ public record Feature(Id id,
         private Condition enabledCondition = new Condition("");
         private final List<String> tags = new SortedArrayList<>(Comparator.comparing(key -> key));
         private FeatureOptions options = null;
-        private final List<Stack> fixedStack = new ArrayList<>();
+        private final List<StackBuilder> fixedStack = new ArrayList<>();
         private Stack repeatingStack = null;
         private Integer maxStacks = null;
         private final List<ConditionalStack> conditionalStacks = new ArrayList<>();
+        private AttackModification attackMod = null;
+        private final List<Attack> attacks = new ArrayList<>();
 
         public FeatureBuilder(Id id) {
             this.id = id;
@@ -196,9 +209,22 @@ public record Feature(Id id,
             return this;
         }
 
+        public FeatureBuilder clearTags() {
+            this.tags.clear();
+            return this;
+        }
+
         public FeatureBuilder addFixedStack(Stack stack) {
             this.repeatingStack = null;
-            this.fixedStack.add(stack);
+            this.fixedStack.add(StackBuilder.copy(stack));
+            return this;
+        }
+
+        public FeatureBuilder modifyStack(int count, Consumer<StackBuilder> modifyFn) {
+            for (int i = fixedStack.size(); i < count; i++) {
+                this.fixedStack.add(new StackBuilder());
+            }
+            modifyFn.accept(fixedStack.get(count - 1));
             return this;
         }
 
@@ -235,10 +261,25 @@ public record Feature(Id id,
             return this;
         }
 
+        public FeatureBuilder setAttackModifier(AttackModification attackMod) {
+            this.attackMod = attackMod;
+            return this;
+        }
+
+        public FeatureBuilder addAttack(Attack attack) {
+            this.attacks.add(attack);
+            return this;
+        }
+
+        public FeatureBuilder addAllAttacks(List<Attack> attacks) {
+            this.attacks.addAll(attacks);
+            return this;
+        }
+
         public Feature build() {
             Stacks stacks = repeatingStack != null
                     ? new RepeatingStack(repeatingStack)
-                    : new FixedStacks(fixedStack);
+                    : new FixedStacks(mapList(fixedStack, StackBuilder::build));
 
             Integer calcMaxStacks = repeatingStack != null
                     ? null
@@ -257,7 +298,9 @@ public record Feature(Id id,
                     options,
                     calcMaxStacks,
                     stacks,
-                    conditionalStacks);
+                    conditionalStacks,
+                    attackMod,
+                    attacks);
         }
     }
 

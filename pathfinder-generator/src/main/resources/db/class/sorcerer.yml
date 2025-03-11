@@ -47,6 +47,7 @@ levels:
   - "ability:cantrips#sorcerer"
   - "ability:eschew_materials#sorcerer"
   - "ability:spellcasting#sorcerer"
+  - "trait:bloodline"
   level: 1
 - class_feature_names: []
   level: 2
@@ -103,6 +104,16 @@ levels:
   - "ability:bloodline_power#sorcerer"
   level: 20
 class_features:
+- id: "trait:bloodline"
+  name: "Bloodline"
+  description: "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
+  repeating_stack:
+    choices:
+    - choice_id: "sorcerer_bloodline"
+      label: "Bloodline"
+      type: "class_feature"
+      option_tags:
+      - "sorcerer_bloodline"
 - id: "ability:bloodline_feat#sorcerer"
   name: "Bloodline Feat"
   label: null
@@ -172,15 +183,16 @@ class_features:
   type: null
   description: "Sorcerer can cast spells."
   effects:
-  - "SET trait:level_1_spells_per_day#sorcerer 3+if(@class:sorcerer>1,1,0)+if(@class:sorcerer>2,1,0)+if(@class:sorcerer>3,1,0)"
-  - "SET trait:level_2_spells_per_day#sorcerer if(@class:sorcerer>=4,3+if(@class:sorcerer>4,1,0)+if(@class:sorcerer>5,1,0)+if(@class:sorcerer>6,1,0),null)"
-  - "SET trait:level_3_spells_per_day#sorcerer if(@class:sorcerer>=6,3+if(@class:sorcerer>6,1,0)+if(@class:sorcerer>7,1,0)+if(@class:sorcerer>8,1,0),null)"
-  - "SET trait:level_4_spells_per_day#sorcerer if(@class:sorcerer>=8,3+if(@class:sorcerer>8,1,0)+if(@class:sorcerer>9,1,0)+if(@class:sorcerer>10,1,0),null)"
-  - "SET trait:level_5_spells_per_day#sorcerer if(@class:sorcerer>=10,3+if(@class:sorcerer>10,1,0)+if(@class:sorcerer>11,1,0)+if(@class:sorcerer>12,1,0),null)"
-  - "SET trait:level_6_spells_per_day#sorcerer if(@class:sorcerer>=12,3+if(@class:sorcerer>12,1,0)+if(@class:sorcerer>13,1,0)+if(@class:sorcerer>14,1,0),null)"
-  - "SET trait:level_7_spells_per_day#sorcerer if(@class:sorcerer>=14,3+if(@class:sorcerer>14,1,0)+if(@class:sorcerer>15,1,0)+if(@class:sorcerer>16,1,0),null)"
-  - "SET trait:level_8_spells_per_day#sorcerer if(@class:sorcerer>=16,3+if(@class:sorcerer>16,1,0)+if(@class:sorcerer>17,1,0)+if(@class:sorcerer>18,1,0),null)"
-  - "SET trait:level_9_spells_per_day#sorcerer if(@class:sorcerer>=18,3+if(@class:sorcerer>18,1,0)+if(@class:sorcerer>19,1,0)+if(@class:sorcerer>19,1,0),null)"
+  - "SET trait:level_0_spells_per_day#sorcerer 4+(@class:sorcerer>0)+(@class:sorcerer>3)+(@class:sorcerer>5)+(@class:sorcerer>7)+(@class:sorcerer>9)"
+  - "SET trait:level_1_spells_per_day#sorcerer 2+(@class:sorcerer>2)+(@class:sorcerer>4)+(@class:sorcerer>6)"
+  - "SET trait:level_2_spells_per_day#sorcerer (@class:sorcerer>3)+(@class:sorcerer>4)+(@class:sorcerer>6)+(@class:sorcerer>8)+(@class:sorcerer>10)"
+  - "SET trait:level_3_spells_per_day#sorcerer (@class:sorcerer>5)+(@class:sorcerer>6)+(@class:sorcerer>8)+(@class:sorcerer>10)"
+  - "SET trait:level_4_spells_per_day#sorcerer (@class:sorcerer>7)+(@class:sorcerer>8)+(@class:sorcerer>10)+(@class:sorcerer>12)"
+  - "SET trait:level_5_spells_per_day#sorcerer (@class:sorcerer>9)+(@class:sorcerer>10)+(@class:sorcerer>12)"
+  - "SET trait:level_6_spells_per_day#sorcerer (@class:sorcerer>11)+(@class:sorcerer>12)+(@class:sorcerer>14)"
+  - "SET trait:level_7_spells_per_day#sorcerer (@class:sorcerer>13)+(@class:sorcerer>14)+(@class:sorcerer>16)"
+  - "SET trait:level_8_spells_per_day#sorcerer (@class:sorcerer>15)+(@class:sorcerer>16)+(@class:sorcerer>18)"
+  - "SET trait:level_9_spells_per_day#sorcerer (@class:sorcerer>17)+(@class:sorcerer>18)+(@class:sorcerer>19)"
   prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
 - id: "trait:armor_proficiency#sorcerer"

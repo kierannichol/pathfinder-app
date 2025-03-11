@@ -1,0 +1,46 @@
+id: "cleric_domain:madness_domain#nightmare"
+parent_id: "cleric_domain:madness_domain"
+name: "Nightmare Subdomain"
+description: "You embrace the madness that lurks deep in your heart, and can unleash\
+  \ it to drive your foes insane or to sacrifice certain abilities to hone others."
+granted_powers:
+- id: "ability:aura_of_madness"
+  name: "Aura of Madness"
+  description: "At 8th level, you can emit a 30-foot aura of madness for a number\
+    \ of rounds per day equal to your cleric level. Enemies within this aura are affected\
+    \ by confusion unless they make a Will save with a DC equal to 10 + ½ your Cleric\
+    \ level + your Wisdom modifier. The confusion effect ends immediately when the\
+    \ creature leaves the area or the aura expires. Creatures that succeed on their\
+    \ saving throw are immune to this aura for 24 hours. These rounds do not need\
+    \ to be consecutive."
+  type: "Su"
+- id: "ability:fearful_touch"
+  name: "Fearful Touch"
+  description: "As a standard action, you can make a melee touch attack against a\
+    \ creature, causing it to experience terrible hallucinations for 1 round. During\
+    \ this time, the creature loses any immunity to fear effects it might possess\
+    \ and takes a –2 penalty on attack rolls made against you. In addition, the creature\
+    \ takes a penalty on Will saves made against fear effects equal to 1/2 your cleric\
+    \ level (minimum –1). This power is a mind-affecting effect. You can use this\
+    \ ability for a number of times per day equal to 3 + your Wisdom modifier."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:confusion"
+- spell_level: 2
+  spell_id: "spell:touch_of_idiocy"
+- spell_level: 3
+  spell_id: "spell:rage"
+- spell_level: 4
+  spell_id: "spell:phantasmal_killer"
+- spell_level: 5
+  spell_id: "spell:nightmare"
+- spell_level: 6
+  spell_id: "spell:cloak_of_dreams"
+- spell_level: 7
+  spell_id: "spell:insanity"
+- spell_level: 8
+  spell_id: "spell:scintillating_pattern"
+- spell_level: 9
+  spell_id: "spell:weird"
+source: "Advanced Player's Guide"

@@ -23,12 +23,20 @@ export class CharacterTemplate {
         if (i > 100) {
           throw Error("Failed to resolve template");
         }
-        const resolved = await Promise.all(this.levelTemplates.map(levelTemplate => levelTemplate.resolve(context)))
-        return new ResolvedCharacterTemplate(resolved);
+
+        const resolved = await Promise.allSettled(this.levelTemplates.map(levelTemplate => levelTemplate.resolve(context)))
+
+        return new ResolvedCharacterTemplate(resolved.map(promise => {
+          if (promise.status === 'rejected') {
+            throw promise.reason;
+          }
+          return promise.value;
+        }));
       } catch (e) {
         if (e !== RestartApplyState) {
           throw e;
         }
+        context.reset();
       }
     }
   }

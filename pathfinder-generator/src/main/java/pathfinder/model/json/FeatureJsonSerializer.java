@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import java.io.IOException;
 import java.util.List;
+import pathfinder.model.Attack;
+import pathfinder.model.AttackModification;
 import pathfinder.model.Description;
 import pathfinder.model.FixedStacks;
 import pathfinder.model.Id;
@@ -73,6 +75,18 @@ public class FeatureJsonSerializer extends StdSerializer<Feature> {
                 gen.writeFieldName("repeating_stack");
                 provider.findValueSerializer(Stack.class).serialize(repeatingStack.stack(), gen, provider);
             }
+        }
+        if (value.attackModifier() != null) {
+            gen.writeFieldName("attack_mod");
+            provider.findValueSerializer(AttackModification.class).serialize(value.attackModifier(), gen, provider);
+        }
+        if (value.attacks() != null) {
+            gen.writeFieldName("attacks");
+            gen.writeStartArray();
+            for (Attack attack : value.attacks()) {
+                provider.findValueSerializer(Attack.class).serialize(attack, gen, provider);
+            }
+            gen.writeEndArray();
         }
         if (notNullOrBlank(value.source())) {
             gen.writeStringField("source", value.source());

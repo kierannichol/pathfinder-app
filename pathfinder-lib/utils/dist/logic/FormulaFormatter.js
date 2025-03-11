@@ -71,7 +71,7 @@ export default class FormulaFormatter {
             .function('if', 3, (a, b, c) => a.asBoolean() ? b : c)
             .function('concat', 2, (a, b) => ResolvedValue.of(a.asText() + b.asText()))
             .variable('@', '', (state, key) => {
-            const actual = state.resolve(key);
+            const actual = state.get(key);
             return actual ? new FormattedValue(actual, lookup(key), true) : ResolvedValue.None;
         })
             .variable('min(@', ')', (state, key) => ResolvedValue.of("minimum of " + lookup(key)))

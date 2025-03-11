@@ -24,3 +24,5 @@ companion: false
 note: ""
 goal: ""
 multiples: false
+attack_mod:
+  attack_bonus: "if(@arg:include_power_attack AND @arg:grip_multiplier>1 AND @arg:attack_index == 1, 1+floor(@bab/4), 0)"

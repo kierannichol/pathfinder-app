@@ -42,7 +42,8 @@ public class EffectParser {
 
     private static Effect createIncrementEffect(String targetKey, String value) {
         if (!NUMERIC_VALUE.matcher(value).matches()) {
-            throw new IllegalArgumentException("Unable to create increment by non-number: " + value);
+            return Effect.addFormula(targetKey, value);
+//            throw new IllegalArgumentException("Unable to create increment by non-number: " + value);
         }
         return Effect.addNumber(targetKey, Integer.parseInt(value));
     }

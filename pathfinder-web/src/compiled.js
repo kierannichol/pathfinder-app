@@ -16,6 +16,367 @@ export const data = $root.data = (() => {
      */
     const data = {};
 
+    data.ChoiceModificationDbo = (function() {
+
+        /**
+         * Properties of a ChoiceModificationDbo.
+         * @memberof data
+         * @interface IChoiceModificationDbo
+         * @property {string|null} [targetChoiceId] ChoiceModificationDbo targetChoiceId
+         * @property {Array.<string>|null} [tagsToAdd] ChoiceModificationDbo tagsToAdd
+         * @property {Array.<string>|null} [tagsToRemove] ChoiceModificationDbo tagsToRemove
+         * @property {Array.<string>|null} [featuresToAdd] ChoiceModificationDbo featuresToAdd
+         * @property {Array.<string>|null} [featuresToRemove] ChoiceModificationDbo featuresToRemove
+         */
+
+        /**
+         * Constructs a new ChoiceModificationDbo.
+         * @memberof data
+         * @classdesc Represents a ChoiceModificationDbo.
+         * @implements IChoiceModificationDbo
+         * @constructor
+         * @param {data.IChoiceModificationDbo=} [properties] Properties to set
+         */
+        function ChoiceModificationDbo(properties) {
+            this.tagsToAdd = [];
+            this.tagsToRemove = [];
+            this.featuresToAdd = [];
+            this.featuresToRemove = [];
+            if (properties)
+                for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * ChoiceModificationDbo targetChoiceId.
+         * @member {string} targetChoiceId
+         * @memberof data.ChoiceModificationDbo
+         * @instance
+         */
+        ChoiceModificationDbo.prototype.targetChoiceId = "";
+
+        /**
+         * ChoiceModificationDbo tagsToAdd.
+         * @member {Array.<string>} tagsToAdd
+         * @memberof data.ChoiceModificationDbo
+         * @instance
+         */
+        ChoiceModificationDbo.prototype.tagsToAdd = $util.emptyArray;
+
+        /**
+         * ChoiceModificationDbo tagsToRemove.
+         * @member {Array.<string>} tagsToRemove
+         * @memberof data.ChoiceModificationDbo
+         * @instance
+         */
+        ChoiceModificationDbo.prototype.tagsToRemove = $util.emptyArray;
+
+        /**
+         * ChoiceModificationDbo featuresToAdd.
+         * @member {Array.<string>} featuresToAdd
+         * @memberof data.ChoiceModificationDbo
+         * @instance
+         */
+        ChoiceModificationDbo.prototype.featuresToAdd = $util.emptyArray;
+
+        /**
+         * ChoiceModificationDbo featuresToRemove.
+         * @member {Array.<string>} featuresToRemove
+         * @memberof data.ChoiceModificationDbo
+         * @instance
+         */
+        ChoiceModificationDbo.prototype.featuresToRemove = $util.emptyArray;
+
+        /**
+         * Creates a new ChoiceModificationDbo instance using the specified properties.
+         * @function create
+         * @memberof data.ChoiceModificationDbo
+         * @static
+         * @param {data.IChoiceModificationDbo=} [properties] Properties to set
+         * @returns {data.ChoiceModificationDbo} ChoiceModificationDbo instance
+         */
+        ChoiceModificationDbo.create = function create(properties) {
+            return new ChoiceModificationDbo(properties);
+        };
+
+        /**
+         * Encodes the specified ChoiceModificationDbo message. Does not implicitly {@link data.ChoiceModificationDbo.verify|verify} messages.
+         * @function encode
+         * @memberof data.ChoiceModificationDbo
+         * @static
+         * @param {data.ChoiceModificationDbo} message ChoiceModificationDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ChoiceModificationDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.targetChoiceId != null && Object.hasOwnProperty.call(message, "targetChoiceId"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.targetChoiceId);
+            if (message.tagsToAdd != null && message.tagsToAdd.length)
+                for (let i = 0; i < message.tagsToAdd.length; ++i)
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.tagsToAdd[i]);
+            if (message.tagsToRemove != null && message.tagsToRemove.length)
+                for (let i = 0; i < message.tagsToRemove.length; ++i)
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.tagsToRemove[i]);
+            if (message.featuresToAdd != null && message.featuresToAdd.length)
+                for (let i = 0; i < message.featuresToAdd.length; ++i)
+                    writer.uint32(/* id 4, wireType 2 =*/34).string(message.featuresToAdd[i]);
+            if (message.featuresToRemove != null && message.featuresToRemove.length)
+                for (let i = 0; i < message.featuresToRemove.length; ++i)
+                    writer.uint32(/* id 5, wireType 2 =*/42).string(message.featuresToRemove[i]);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified ChoiceModificationDbo message, length delimited. Does not implicitly {@link data.ChoiceModificationDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof data.ChoiceModificationDbo
+         * @static
+         * @param {data.ChoiceModificationDbo} message ChoiceModificationDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ChoiceModificationDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a ChoiceModificationDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof data.ChoiceModificationDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {data.ChoiceModificationDbo} ChoiceModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ChoiceModificationDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.ChoiceModificationDbo();
+            while (reader.pos < end) {
+                let tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.targetChoiceId = reader.string();
+                        break;
+                    }
+                case 2: {
+                        if (!(message.tagsToAdd && message.tagsToAdd.length))
+                            message.tagsToAdd = [];
+                        message.tagsToAdd.push(reader.string());
+                        break;
+                    }
+                case 3: {
+                        if (!(message.tagsToRemove && message.tagsToRemove.length))
+                            message.tagsToRemove = [];
+                        message.tagsToRemove.push(reader.string());
+                        break;
+                    }
+                case 4: {
+                        if (!(message.featuresToAdd && message.featuresToAdd.length))
+                            message.featuresToAdd = [];
+                        message.featuresToAdd.push(reader.string());
+                        break;
+                    }
+                case 5: {
+                        if (!(message.featuresToRemove && message.featuresToRemove.length))
+                            message.featuresToRemove = [];
+                        message.featuresToRemove.push(reader.string());
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a ChoiceModificationDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof data.ChoiceModificationDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {data.ChoiceModificationDbo} ChoiceModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ChoiceModificationDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a ChoiceModificationDbo message.
+         * @function verify
+         * @memberof data.ChoiceModificationDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        ChoiceModificationDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.targetChoiceId != null && message.hasOwnProperty("targetChoiceId"))
+                if (!$util.isString(message.targetChoiceId))
+                    return "targetChoiceId: string expected";
+            if (message.tagsToAdd != null && message.hasOwnProperty("tagsToAdd")) {
+                if (!Array.isArray(message.tagsToAdd))
+                    return "tagsToAdd: array expected";
+                for (let i = 0; i < message.tagsToAdd.length; ++i)
+                    if (!$util.isString(message.tagsToAdd[i]))
+                        return "tagsToAdd: string[] expected";
+            }
+            if (message.tagsToRemove != null && message.hasOwnProperty("tagsToRemove")) {
+                if (!Array.isArray(message.tagsToRemove))
+                    return "tagsToRemove: array expected";
+                for (let i = 0; i < message.tagsToRemove.length; ++i)
+                    if (!$util.isString(message.tagsToRemove[i]))
+                        return "tagsToRemove: string[] expected";
+            }
+            if (message.featuresToAdd != null && message.hasOwnProperty("featuresToAdd")) {
+                if (!Array.isArray(message.featuresToAdd))
+                    return "featuresToAdd: array expected";
+                for (let i = 0; i < message.featuresToAdd.length; ++i)
+                    if (!$util.isString(message.featuresToAdd[i]))
+                        return "featuresToAdd: string[] expected";
+            }
+            if (message.featuresToRemove != null && message.hasOwnProperty("featuresToRemove")) {
+                if (!Array.isArray(message.featuresToRemove))
+                    return "featuresToRemove: array expected";
+                for (let i = 0; i < message.featuresToRemove.length; ++i)
+                    if (!$util.isString(message.featuresToRemove[i]))
+                        return "featuresToRemove: string[] expected";
+            }
+            return null;
+        };
+
+        /**
+         * Creates a ChoiceModificationDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof data.ChoiceModificationDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {data.ChoiceModificationDbo} ChoiceModificationDbo
+         */
+        ChoiceModificationDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.data.ChoiceModificationDbo)
+                return object;
+            let message = new $root.data.ChoiceModificationDbo();
+            if (object.targetChoiceId != null)
+                message.targetChoiceId = String(object.targetChoiceId);
+            if (object.tagsToAdd) {
+                if (!Array.isArray(object.tagsToAdd))
+                    throw TypeError(".data.ChoiceModificationDbo.tagsToAdd: array expected");
+                message.tagsToAdd = [];
+                for (let i = 0; i < object.tagsToAdd.length; ++i)
+                    message.tagsToAdd[i] = String(object.tagsToAdd[i]);
+            }
+            if (object.tagsToRemove) {
+                if (!Array.isArray(object.tagsToRemove))
+                    throw TypeError(".data.ChoiceModificationDbo.tagsToRemove: array expected");
+                message.tagsToRemove = [];
+                for (let i = 0; i < object.tagsToRemove.length; ++i)
+                    message.tagsToRemove[i] = String(object.tagsToRemove[i]);
+            }
+            if (object.featuresToAdd) {
+                if (!Array.isArray(object.featuresToAdd))
+                    throw TypeError(".data.ChoiceModificationDbo.featuresToAdd: array expected");
+                message.featuresToAdd = [];
+                for (let i = 0; i < object.featuresToAdd.length; ++i)
+                    message.featuresToAdd[i] = String(object.featuresToAdd[i]);
+            }
+            if (object.featuresToRemove) {
+                if (!Array.isArray(object.featuresToRemove))
+                    throw TypeError(".data.ChoiceModificationDbo.featuresToRemove: array expected");
+                message.featuresToRemove = [];
+                for (let i = 0; i < object.featuresToRemove.length; ++i)
+                    message.featuresToRemove[i] = String(object.featuresToRemove[i]);
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a ChoiceModificationDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof data.ChoiceModificationDbo
+         * @static
+         * @param {data.ChoiceModificationDbo} message ChoiceModificationDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        ChoiceModificationDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            let object = {};
+            if (options.arrays || options.defaults) {
+                object.tagsToAdd = [];
+                object.tagsToRemove = [];
+                object.featuresToAdd = [];
+                object.featuresToRemove = [];
+            }
+            if (options.defaults)
+                object.targetChoiceId = "";
+            if (message.targetChoiceId != null && message.hasOwnProperty("targetChoiceId"))
+                object.targetChoiceId = message.targetChoiceId;
+            if (message.tagsToAdd && message.tagsToAdd.length) {
+                object.tagsToAdd = [];
+                for (let j = 0; j < message.tagsToAdd.length; ++j)
+                    object.tagsToAdd[j] = message.tagsToAdd[j];
+            }
+            if (message.tagsToRemove && message.tagsToRemove.length) {
+                object.tagsToRemove = [];
+                for (let j = 0; j < message.tagsToRemove.length; ++j)
+                    object.tagsToRemove[j] = message.tagsToRemove[j];
+            }
+            if (message.featuresToAdd && message.featuresToAdd.length) {
+                object.featuresToAdd = [];
+                for (let j = 0; j < message.featuresToAdd.length; ++j)
+                    object.featuresToAdd[j] = message.featuresToAdd[j];
+            }
+            if (message.featuresToRemove && message.featuresToRemove.length) {
+                object.featuresToRemove = [];
+                for (let j = 0; j < message.featuresToRemove.length; ++j)
+                    object.featuresToRemove[j] = message.featuresToRemove[j];
+            }
+            return object;
+        };
+
+        /**
+         * Converts this ChoiceModificationDbo to JSON.
+         * @function toJSON
+         * @memberof data.ChoiceModificationDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        ChoiceModificationDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for ChoiceModificationDbo
+         * @function getTypeUrl
+         * @memberof data.ChoiceModificationDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        ChoiceModificationDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/data.ChoiceModificationDbo";
+        };
+
+        return ChoiceModificationDbo;
+    })();
+
     data.SourceBookIndexDbo = (function() {
 
         /**
@@ -663,6 +1024,8 @@ export const data = $root.data = (() => {
          * @property {data.DescriptionDbo|null} [description] FeatureDbo description
          * @property {data.StacksDbo|null} [stacks] FeatureDbo stacks
          * @property {Array.<data.ConditionalStackDbo>|null} [conditionalStacks] FeatureDbo conditionalStacks
+         * @property {data.AttackModificationDbo|null} [attackModifier] FeatureDbo attackModifier
+         * @property {Array.<data.AttackDbo>|null} [attacks] FeatureDbo attacks
          */
 
         /**
@@ -676,6 +1039,7 @@ export const data = $root.data = (() => {
         function FeatureDbo(properties) {
             this.tags = [];
             this.conditionalStacks = [];
+            this.attacks = [];
             if (properties)
                 for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -770,6 +1134,22 @@ export const data = $root.data = (() => {
          */
         FeatureDbo.prototype.conditionalStacks = $util.emptyArray;
 
+        /**
+         * FeatureDbo attackModifier.
+         * @member {data.AttackModificationDbo|null|undefined} attackModifier
+         * @memberof data.FeatureDbo
+         * @instance
+         */
+        FeatureDbo.prototype.attackModifier = null;
+
+        /**
+         * FeatureDbo attacks.
+         * @member {Array.<data.AttackDbo>} attacks
+         * @memberof data.FeatureDbo
+         * @instance
+         */
+        FeatureDbo.prototype.attacks = $util.emptyArray;
+
         // OneOf field names bound to virtual getters and setters
         let $oneOfFields;
 
@@ -833,6 +1213,11 @@ export const data = $root.data = (() => {
             if (message.conditionalStacks != null && message.conditionalStacks.length)
                 for (let i = 0; i < message.conditionalStacks.length; ++i)
                     $root.data.ConditionalStackDbo.encode(message.conditionalStacks[i], writer.uint32(/* id 103, wireType 2 =*/826).fork()).ldelim();
+            if (message.attackModifier != null && Object.hasOwnProperty.call(message, "attackModifier"))
+                $root.data.AttackModificationDbo.encode(message.attackModifier, writer.uint32(/* id 104, wireType 2 =*/834).fork()).ldelim();
+            if (message.attacks != null && message.attacks.length)
+                for (let i = 0; i < message.attacks.length; ++i)
+                    $root.data.AttackDbo.encode(message.attacks[i], writer.uint32(/* id 105, wireType 2 =*/842).fork()).ldelim();
             return writer;
         };
 
@@ -913,6 +1298,16 @@ export const data = $root.data = (() => {
                         if (!(message.conditionalStacks && message.conditionalStacks.length))
                             message.conditionalStacks = [];
                         message.conditionalStacks.push($root.data.ConditionalStackDbo.decode(reader, reader.uint32()));
+                        break;
+                    }
+                case 104: {
+                        message.attackModifier = $root.data.AttackModificationDbo.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 105: {
+                        if (!(message.attacks && message.attacks.length))
+                            message.attacks = [];
+                        message.attacks.push($root.data.AttackDbo.decode(reader, reader.uint32()));
                         break;
                     }
                 default:
@@ -1004,6 +1399,20 @@ export const data = $root.data = (() => {
                         return "conditionalStacks." + error;
                 }
             }
+            if (message.attackModifier != null && message.hasOwnProperty("attackModifier")) {
+                let error = $root.data.AttackModificationDbo.verify(message.attackModifier);
+                if (error)
+                    return "attackModifier." + error;
+            }
+            if (message.attacks != null && message.hasOwnProperty("attacks")) {
+                if (!Array.isArray(message.attacks))
+                    return "attacks: array expected";
+                for (let i = 0; i < message.attacks.length; ++i) {
+                    let error = $root.data.AttackDbo.verify(message.attacks[i]);
+                    if (error)
+                        return "attacks." + error;
+                }
+            }
             return null;
         };
 
@@ -1063,6 +1472,21 @@ export const data = $root.data = (() => {
                     message.conditionalStacks[i] = $root.data.ConditionalStackDbo.fromObject(object.conditionalStacks[i]);
                 }
             }
+            if (object.attackModifier != null) {
+                if (typeof object.attackModifier !== "object")
+                    throw TypeError(".data.FeatureDbo.attackModifier: object expected");
+                message.attackModifier = $root.data.AttackModificationDbo.fromObject(object.attackModifier);
+            }
+            if (object.attacks) {
+                if (!Array.isArray(object.attacks))
+                    throw TypeError(".data.FeatureDbo.attacks: array expected");
+                message.attacks = [];
+                for (let i = 0; i < object.attacks.length; ++i) {
+                    if (typeof object.attacks[i] !== "object")
+                        throw TypeError(".data.FeatureDbo.attacks: object expected");
+                    message.attacks[i] = $root.data.AttackDbo.fromObject(object.attacks[i]);
+                }
+            }
             return message;
         };
 
@@ -1082,6 +1506,7 @@ export const data = $root.data = (() => {
             if (options.arrays || options.defaults) {
                 object.tags = [];
                 object.conditionalStacks = [];
+                object.attacks = [];
             }
             if (options.defaults) {
                 object.id = "";
@@ -1091,6 +1516,7 @@ export const data = $root.data = (() => {
                 object.typeAlias = "";
                 object.description = null;
                 object.stacks = null;
+                object.attackModifier = null;
             }
             if (message.id != null && message.hasOwnProperty("id"))
                 object.id = message.id;
@@ -1125,6 +1551,13 @@ export const data = $root.data = (() => {
                 object.conditionalStacks = [];
                 for (let j = 0; j < message.conditionalStacks.length; ++j)
                     object.conditionalStacks[j] = $root.data.ConditionalStackDbo.toObject(message.conditionalStacks[j], options);
+            }
+            if (message.attackModifier != null && message.hasOwnProperty("attackModifier"))
+                object.attackModifier = $root.data.AttackModificationDbo.toObject(message.attackModifier, options);
+            if (message.attacks && message.attacks.length) {
+                object.attacks = [];
+                for (let j = 0; j < message.attacks.length; ++j)
+                    object.attacks[j] = $root.data.AttackDbo.toObject(message.attacks[j], options);
             }
             return object;
         };
@@ -1633,6 +2066,761 @@ export const data = $root.data = (() => {
         })();
 
         return FeatureOptionsDbo;
+    })();
+
+    data.AttackDbo = (function() {
+
+        /**
+         * Properties of an AttackDbo.
+         * @memberof data
+         * @interface IAttackDbo
+         * @property {string|null} [name] AttackDbo name
+         * @property {string|null} [condition] AttackDbo condition
+         * @property {data.ChanceDbo|null} [chanceToHit] AttackDbo chanceToHit
+         * @property {string|null} [hitDamage] AttackDbo hitDamage
+         * @property {string|null} [missDamage] AttackDbo missDamage
+         */
+
+        /**
+         * Constructs a new AttackDbo.
+         * @memberof data
+         * @classdesc Represents an AttackDbo.
+         * @implements IAttackDbo
+         * @constructor
+         * @param {data.IAttackDbo=} [properties] Properties to set
+         */
+        function AttackDbo(properties) {
+            if (properties)
+                for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * AttackDbo name.
+         * @member {string} name
+         * @memberof data.AttackDbo
+         * @instance
+         */
+        AttackDbo.prototype.name = "";
+
+        /**
+         * AttackDbo condition.
+         * @member {string} condition
+         * @memberof data.AttackDbo
+         * @instance
+         */
+        AttackDbo.prototype.condition = "";
+
+        /**
+         * AttackDbo chanceToHit.
+         * @member {data.ChanceDbo|null|undefined} chanceToHit
+         * @memberof data.AttackDbo
+         * @instance
+         */
+        AttackDbo.prototype.chanceToHit = null;
+
+        /**
+         * AttackDbo hitDamage.
+         * @member {string} hitDamage
+         * @memberof data.AttackDbo
+         * @instance
+         */
+        AttackDbo.prototype.hitDamage = "";
+
+        /**
+         * AttackDbo missDamage.
+         * @member {string} missDamage
+         * @memberof data.AttackDbo
+         * @instance
+         */
+        AttackDbo.prototype.missDamage = "";
+
+        /**
+         * Creates a new AttackDbo instance using the specified properties.
+         * @function create
+         * @memberof data.AttackDbo
+         * @static
+         * @param {data.IAttackDbo=} [properties] Properties to set
+         * @returns {data.AttackDbo} AttackDbo instance
+         */
+        AttackDbo.create = function create(properties) {
+            return new AttackDbo(properties);
+        };
+
+        /**
+         * Encodes the specified AttackDbo message. Does not implicitly {@link data.AttackDbo.verify|verify} messages.
+         * @function encode
+         * @memberof data.AttackDbo
+         * @static
+         * @param {data.AttackDbo} message AttackDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        AttackDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
+            if (message.condition != null && Object.hasOwnProperty.call(message, "condition"))
+                writer.uint32(/* id 2, wireType 2 =*/18).string(message.condition);
+            if (message.chanceToHit != null && Object.hasOwnProperty.call(message, "chanceToHit"))
+                $root.data.ChanceDbo.encode(message.chanceToHit, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+            if (message.hitDamage != null && Object.hasOwnProperty.call(message, "hitDamage"))
+                writer.uint32(/* id 4, wireType 2 =*/34).string(message.hitDamage);
+            if (message.missDamage != null && Object.hasOwnProperty.call(message, "missDamage"))
+                writer.uint32(/* id 5, wireType 2 =*/42).string(message.missDamage);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified AttackDbo message, length delimited. Does not implicitly {@link data.AttackDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof data.AttackDbo
+         * @static
+         * @param {data.AttackDbo} message AttackDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        AttackDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes an AttackDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof data.AttackDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {data.AttackDbo} AttackDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        AttackDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.AttackDbo();
+            while (reader.pos < end) {
+                let tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.name = reader.string();
+                        break;
+                    }
+                case 2: {
+                        message.condition = reader.string();
+                        break;
+                    }
+                case 3: {
+                        message.chanceToHit = $root.data.ChanceDbo.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 4: {
+                        message.hitDamage = reader.string();
+                        break;
+                    }
+                case 5: {
+                        message.missDamage = reader.string();
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes an AttackDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof data.AttackDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {data.AttackDbo} AttackDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        AttackDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies an AttackDbo message.
+         * @function verify
+         * @memberof data.AttackDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        AttackDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.name != null && message.hasOwnProperty("name"))
+                if (!$util.isString(message.name))
+                    return "name: string expected";
+            if (message.condition != null && message.hasOwnProperty("condition"))
+                if (!$util.isString(message.condition))
+                    return "condition: string expected";
+            if (message.chanceToHit != null && message.hasOwnProperty("chanceToHit")) {
+                let error = $root.data.ChanceDbo.verify(message.chanceToHit);
+                if (error)
+                    return "chanceToHit." + error;
+            }
+            if (message.hitDamage != null && message.hasOwnProperty("hitDamage"))
+                if (!$util.isString(message.hitDamage))
+                    return "hitDamage: string expected";
+            if (message.missDamage != null && message.hasOwnProperty("missDamage"))
+                if (!$util.isString(message.missDamage))
+                    return "missDamage: string expected";
+            return null;
+        };
+
+        /**
+         * Creates an AttackDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof data.AttackDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {data.AttackDbo} AttackDbo
+         */
+        AttackDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.data.AttackDbo)
+                return object;
+            let message = new $root.data.AttackDbo();
+            if (object.name != null)
+                message.name = String(object.name);
+            if (object.condition != null)
+                message.condition = String(object.condition);
+            if (object.chanceToHit != null) {
+                if (typeof object.chanceToHit !== "object")
+                    throw TypeError(".data.AttackDbo.chanceToHit: object expected");
+                message.chanceToHit = $root.data.ChanceDbo.fromObject(object.chanceToHit);
+            }
+            if (object.hitDamage != null)
+                message.hitDamage = String(object.hitDamage);
+            if (object.missDamage != null)
+                message.missDamage = String(object.missDamage);
+            return message;
+        };
+
+        /**
+         * Creates a plain object from an AttackDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof data.AttackDbo
+         * @static
+         * @param {data.AttackDbo} message AttackDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        AttackDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            let object = {};
+            if (options.defaults) {
+                object.name = "";
+                object.condition = "";
+                object.chanceToHit = null;
+                object.hitDamage = "";
+                object.missDamage = "";
+            }
+            if (message.name != null && message.hasOwnProperty("name"))
+                object.name = message.name;
+            if (message.condition != null && message.hasOwnProperty("condition"))
+                object.condition = message.condition;
+            if (message.chanceToHit != null && message.hasOwnProperty("chanceToHit"))
+                object.chanceToHit = $root.data.ChanceDbo.toObject(message.chanceToHit, options);
+            if (message.hitDamage != null && message.hasOwnProperty("hitDamage"))
+                object.hitDamage = message.hitDamage;
+            if (message.missDamage != null && message.hasOwnProperty("missDamage"))
+                object.missDamage = message.missDamage;
+            return object;
+        };
+
+        /**
+         * Converts this AttackDbo to JSON.
+         * @function toJSON
+         * @memberof data.AttackDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        AttackDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for AttackDbo
+         * @function getTypeUrl
+         * @memberof data.AttackDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        AttackDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/data.AttackDbo";
+        };
+
+        return AttackDbo;
+    })();
+
+    data.ChanceDbo = (function() {
+
+        /**
+         * Properties of a ChanceDbo.
+         * @memberof data
+         * @interface IChanceDbo
+         * @property {string|null} [value] ChanceDbo value
+         * @property {string|null} [toBeat] ChanceDbo toBeat
+         */
+
+        /**
+         * Constructs a new ChanceDbo.
+         * @memberof data
+         * @classdesc Represents a ChanceDbo.
+         * @implements IChanceDbo
+         * @constructor
+         * @param {data.IChanceDbo=} [properties] Properties to set
+         */
+        function ChanceDbo(properties) {
+            if (properties)
+                for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * ChanceDbo value.
+         * @member {string} value
+         * @memberof data.ChanceDbo
+         * @instance
+         */
+        ChanceDbo.prototype.value = "";
+
+        /**
+         * ChanceDbo toBeat.
+         * @member {string} toBeat
+         * @memberof data.ChanceDbo
+         * @instance
+         */
+        ChanceDbo.prototype.toBeat = "";
+
+        /**
+         * Creates a new ChanceDbo instance using the specified properties.
+         * @function create
+         * @memberof data.ChanceDbo
+         * @static
+         * @param {data.IChanceDbo=} [properties] Properties to set
+         * @returns {data.ChanceDbo} ChanceDbo instance
+         */
+        ChanceDbo.create = function create(properties) {
+            return new ChanceDbo(properties);
+        };
+
+        /**
+         * Encodes the specified ChanceDbo message. Does not implicitly {@link data.ChanceDbo.verify|verify} messages.
+         * @function encode
+         * @memberof data.ChanceDbo
+         * @static
+         * @param {data.ChanceDbo} message ChanceDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ChanceDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.value != null && Object.hasOwnProperty.call(message, "value"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.value);
+            if (message.toBeat != null && Object.hasOwnProperty.call(message, "toBeat"))
+                writer.uint32(/* id 2, wireType 2 =*/18).string(message.toBeat);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified ChanceDbo message, length delimited. Does not implicitly {@link data.ChanceDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof data.ChanceDbo
+         * @static
+         * @param {data.ChanceDbo} message ChanceDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ChanceDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a ChanceDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof data.ChanceDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {data.ChanceDbo} ChanceDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ChanceDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.ChanceDbo();
+            while (reader.pos < end) {
+                let tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.value = reader.string();
+                        break;
+                    }
+                case 2: {
+                        message.toBeat = reader.string();
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a ChanceDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof data.ChanceDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {data.ChanceDbo} ChanceDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ChanceDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a ChanceDbo message.
+         * @function verify
+         * @memberof data.ChanceDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        ChanceDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.value != null && message.hasOwnProperty("value"))
+                if (!$util.isString(message.value))
+                    return "value: string expected";
+            if (message.toBeat != null && message.hasOwnProperty("toBeat"))
+                if (!$util.isString(message.toBeat))
+                    return "toBeat: string expected";
+            return null;
+        };
+
+        /**
+         * Creates a ChanceDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof data.ChanceDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {data.ChanceDbo} ChanceDbo
+         */
+        ChanceDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.data.ChanceDbo)
+                return object;
+            let message = new $root.data.ChanceDbo();
+            if (object.value != null)
+                message.value = String(object.value);
+            if (object.toBeat != null)
+                message.toBeat = String(object.toBeat);
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a ChanceDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof data.ChanceDbo
+         * @static
+         * @param {data.ChanceDbo} message ChanceDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        ChanceDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            let object = {};
+            if (options.defaults) {
+                object.value = "";
+                object.toBeat = "";
+            }
+            if (message.value != null && message.hasOwnProperty("value"))
+                object.value = message.value;
+            if (message.toBeat != null && message.hasOwnProperty("toBeat"))
+                object.toBeat = message.toBeat;
+            return object;
+        };
+
+        /**
+         * Converts this ChanceDbo to JSON.
+         * @function toJSON
+         * @memberof data.ChanceDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        ChanceDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for ChanceDbo
+         * @function getTypeUrl
+         * @memberof data.ChanceDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        ChanceDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/data.ChanceDbo";
+        };
+
+        return ChanceDbo;
+    })();
+
+    data.AttackModificationDbo = (function() {
+
+        /**
+         * Properties of an AttackModificationDbo.
+         * @memberof data
+         * @interface IAttackModificationDbo
+         * @property {string|null} [attackBonus] AttackModificationDbo attackBonus
+         * @property {string|null} [damageBonus] AttackModificationDbo damageBonus
+         */
+
+        /**
+         * Constructs a new AttackModificationDbo.
+         * @memberof data
+         * @classdesc Represents an AttackModificationDbo.
+         * @implements IAttackModificationDbo
+         * @constructor
+         * @param {data.IAttackModificationDbo=} [properties] Properties to set
+         */
+        function AttackModificationDbo(properties) {
+            if (properties)
+                for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * AttackModificationDbo attackBonus.
+         * @member {string} attackBonus
+         * @memberof data.AttackModificationDbo
+         * @instance
+         */
+        AttackModificationDbo.prototype.attackBonus = "";
+
+        /**
+         * AttackModificationDbo damageBonus.
+         * @member {string} damageBonus
+         * @memberof data.AttackModificationDbo
+         * @instance
+         */
+        AttackModificationDbo.prototype.damageBonus = "";
+
+        /**
+         * Creates a new AttackModificationDbo instance using the specified properties.
+         * @function create
+         * @memberof data.AttackModificationDbo
+         * @static
+         * @param {data.IAttackModificationDbo=} [properties] Properties to set
+         * @returns {data.AttackModificationDbo} AttackModificationDbo instance
+         */
+        AttackModificationDbo.create = function create(properties) {
+            return new AttackModificationDbo(properties);
+        };
+
+        /**
+         * Encodes the specified AttackModificationDbo message. Does not implicitly {@link data.AttackModificationDbo.verify|verify} messages.
+         * @function encode
+         * @memberof data.AttackModificationDbo
+         * @static
+         * @param {data.AttackModificationDbo} message AttackModificationDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        AttackModificationDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.attackBonus != null && Object.hasOwnProperty.call(message, "attackBonus"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.attackBonus);
+            if (message.damageBonus != null && Object.hasOwnProperty.call(message, "damageBonus"))
+                writer.uint32(/* id 2, wireType 2 =*/18).string(message.damageBonus);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified AttackModificationDbo message, length delimited. Does not implicitly {@link data.AttackModificationDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof data.AttackModificationDbo
+         * @static
+         * @param {data.AttackModificationDbo} message AttackModificationDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        AttackModificationDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes an AttackModificationDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof data.AttackModificationDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {data.AttackModificationDbo} AttackModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        AttackModificationDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.AttackModificationDbo();
+            while (reader.pos < end) {
+                let tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.attackBonus = reader.string();
+                        break;
+                    }
+                case 2: {
+                        message.damageBonus = reader.string();
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes an AttackModificationDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof data.AttackModificationDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {data.AttackModificationDbo} AttackModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        AttackModificationDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies an AttackModificationDbo message.
+         * @function verify
+         * @memberof data.AttackModificationDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        AttackModificationDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.attackBonus != null && message.hasOwnProperty("attackBonus"))
+                if (!$util.isString(message.attackBonus))
+                    return "attackBonus: string expected";
+            if (message.damageBonus != null && message.hasOwnProperty("damageBonus"))
+                if (!$util.isString(message.damageBonus))
+                    return "damageBonus: string expected";
+            return null;
+        };
+
+        /**
+         * Creates an AttackModificationDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof data.AttackModificationDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {data.AttackModificationDbo} AttackModificationDbo
+         */
+        AttackModificationDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.data.AttackModificationDbo)
+                return object;
+            let message = new $root.data.AttackModificationDbo();
+            if (object.attackBonus != null)
+                message.attackBonus = String(object.attackBonus);
+            if (object.damageBonus != null)
+                message.damageBonus = String(object.damageBonus);
+            return message;
+        };
+
+        /**
+         * Creates a plain object from an AttackModificationDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof data.AttackModificationDbo
+         * @static
+         * @param {data.AttackModificationDbo} message AttackModificationDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        AttackModificationDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            let object = {};
+            if (options.defaults) {
+                object.attackBonus = "";
+                object.damageBonus = "";
+            }
+            if (message.attackBonus != null && message.hasOwnProperty("attackBonus"))
+                object.attackBonus = message.attackBonus;
+            if (message.damageBonus != null && message.hasOwnProperty("damageBonus"))
+                object.damageBonus = message.damageBonus;
+            return object;
+        };
+
+        /**
+         * Converts this AttackModificationDbo to JSON.
+         * @function toJSON
+         * @memberof data.AttackModificationDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        AttackModificationDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for AttackModificationDbo
+         * @function getTypeUrl
+         * @memberof data.AttackModificationDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        AttackModificationDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/data.AttackModificationDbo";
+        };
+
+        return AttackModificationDbo;
     })();
 
     data.DescriptionDbo = (function() {
@@ -2471,6 +3659,7 @@ export const data = $root.data = (() => {
              * @interface IAddActionDbo
              * @property {string|null} [targetKey] AddActionDbo targetKey
              * @property {number|null} [numberDelta] AddActionDbo numberDelta
+             * @property {string|null} [formula] AddActionDbo formula
              */
 
             /**
@@ -2498,11 +3687,33 @@ export const data = $root.data = (() => {
 
             /**
              * AddActionDbo numberDelta.
-             * @member {number} numberDelta
+             * @member {number|null|undefined} numberDelta
              * @memberof data.EffectDbo.AddActionDbo
              * @instance
              */
-            AddActionDbo.prototype.numberDelta = 0;
+            AddActionDbo.prototype.numberDelta = null;
+
+            /**
+             * AddActionDbo formula.
+             * @member {string|null|undefined} formula
+             * @memberof data.EffectDbo.AddActionDbo
+             * @instance
+             */
+            AddActionDbo.prototype.formula = null;
+
+            // OneOf field names bound to virtual getters and setters
+            let $oneOfFields;
+
+            /**
+             * AddActionDbo value.
+             * @member {"numberDelta"|"formula"|undefined} value
+             * @memberof data.EffectDbo.AddActionDbo
+             * @instance
+             */
+            Object.defineProperty(AddActionDbo.prototype, "value", {
+                get: $util.oneOfGetter($oneOfFields = ["numberDelta", "formula"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new AddActionDbo instance using the specified properties.
@@ -2532,6 +3743,8 @@ export const data = $root.data = (() => {
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.targetKey);
                 if (message.numberDelta != null && Object.hasOwnProperty.call(message, "numberDelta"))
                     writer.uint32(/* id 2, wireType 0 =*/16).int32(message.numberDelta);
+                if (message.formula != null && Object.hasOwnProperty.call(message, "formula"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.formula);
                 return writer;
             };
 
@@ -2574,6 +3787,10 @@ export const data = $root.data = (() => {
                             message.numberDelta = reader.int32();
                             break;
                         }
+                    case 3: {
+                            message.formula = reader.string();
+                            break;
+                        }
                     default:
                         reader.skipType(tag & 7);
                         break;
@@ -2609,12 +3826,22 @@ export const data = $root.data = (() => {
             AddActionDbo.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
+                let properties = {};
                 if (message.targetKey != null && message.hasOwnProperty("targetKey"))
                     if (!$util.isString(message.targetKey))
                         return "targetKey: string expected";
-                if (message.numberDelta != null && message.hasOwnProperty("numberDelta"))
+                if (message.numberDelta != null && message.hasOwnProperty("numberDelta")) {
+                    properties.value = 1;
                     if (!$util.isInteger(message.numberDelta))
                         return "numberDelta: integer expected";
+                }
+                if (message.formula != null && message.hasOwnProperty("formula")) {
+                    if (properties.value === 1)
+                        return "value: multiple values";
+                    properties.value = 1;
+                    if (!$util.isString(message.formula))
+                        return "formula: string expected";
+                }
                 return null;
             };
 
@@ -2634,6 +3861,8 @@ export const data = $root.data = (() => {
                     message.targetKey = String(object.targetKey);
                 if (object.numberDelta != null)
                     message.numberDelta = object.numberDelta | 0;
+                if (object.formula != null)
+                    message.formula = String(object.formula);
                 return message;
             };
 
@@ -2650,14 +3879,20 @@ export const data = $root.data = (() => {
                 if (!options)
                     options = {};
                 let object = {};
-                if (options.defaults) {
+                if (options.defaults)
                     object.targetKey = "";
-                    object.numberDelta = 0;
-                }
                 if (message.targetKey != null && message.hasOwnProperty("targetKey"))
                     object.targetKey = message.targetKey;
-                if (message.numberDelta != null && message.hasOwnProperty("numberDelta"))
+                if (message.numberDelta != null && message.hasOwnProperty("numberDelta")) {
                     object.numberDelta = message.numberDelta;
+                    if (options.oneofs)
+                        object.value = "numberDelta";
+                }
+                if (message.formula != null && message.hasOwnProperty("formula")) {
+                    object.formula = message.formula;
+                    if (options.oneofs)
+                        object.value = "formula";
+                }
                 return object;
             };
 
@@ -4931,6 +6166,7 @@ export const data = $root.data = (() => {
          * @property {Array.<string>|null} [links] StackDbo links
          * @property {Array.<data.ChoiceDbo>|null} [choices] StackDbo choices
          * @property {Array.<data.FeatureModificationDbo>|null} [featureModifications] StackDbo featureModifications
+         * @property {Array.<data.ChoiceModificationDbo>|null} [choiceModifications] StackDbo choiceModifications
          */
 
         /**
@@ -4946,6 +6182,7 @@ export const data = $root.data = (() => {
             this.links = [];
             this.choices = [];
             this.featureModifications = [];
+            this.choiceModifications = [];
             if (properties)
                 for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -4985,6 +6222,14 @@ export const data = $root.data = (() => {
         StackDbo.prototype.featureModifications = $util.emptyArray;
 
         /**
+         * StackDbo choiceModifications.
+         * @member {Array.<data.ChoiceModificationDbo>} choiceModifications
+         * @memberof data.StackDbo
+         * @instance
+         */
+        StackDbo.prototype.choiceModifications = $util.emptyArray;
+
+        /**
          * Creates a new StackDbo instance using the specified properties.
          * @function create
          * @memberof data.StackDbo
@@ -5020,6 +6265,9 @@ export const data = $root.data = (() => {
             if (message.featureModifications != null && message.featureModifications.length)
                 for (let i = 0; i < message.featureModifications.length; ++i)
                     $root.data.FeatureModificationDbo.encode(message.featureModifications[i], writer.uint32(/* id 104, wireType 2 =*/834).fork()).ldelim();
+            if (message.choiceModifications != null && message.choiceModifications.length)
+                for (let i = 0; i < message.choiceModifications.length; ++i)
+                    $root.data.ChoiceModificationDbo.encode(message.choiceModifications[i], writer.uint32(/* id 105, wireType 2 =*/842).fork()).ldelim();
             return writer;
         };
 
@@ -5076,6 +6324,12 @@ export const data = $root.data = (() => {
                         if (!(message.featureModifications && message.featureModifications.length))
                             message.featureModifications = [];
                         message.featureModifications.push($root.data.FeatureModificationDbo.decode(reader, reader.uint32()));
+                        break;
+                    }
+                case 105: {
+                        if (!(message.choiceModifications && message.choiceModifications.length))
+                            message.choiceModifications = [];
+                        message.choiceModifications.push($root.data.ChoiceModificationDbo.decode(reader, reader.uint32()));
                         break;
                     }
                 default:
@@ -5147,6 +6401,15 @@ export const data = $root.data = (() => {
                         return "featureModifications." + error;
                 }
             }
+            if (message.choiceModifications != null && message.hasOwnProperty("choiceModifications")) {
+                if (!Array.isArray(message.choiceModifications))
+                    return "choiceModifications: array expected";
+                for (let i = 0; i < message.choiceModifications.length; ++i) {
+                    let error = $root.data.ChoiceModificationDbo.verify(message.choiceModifications[i]);
+                    if (error)
+                        return "choiceModifications." + error;
+                }
+            }
             return null;
         };
 
@@ -5199,6 +6462,16 @@ export const data = $root.data = (() => {
                     message.featureModifications[i] = $root.data.FeatureModificationDbo.fromObject(object.featureModifications[i]);
                 }
             }
+            if (object.choiceModifications) {
+                if (!Array.isArray(object.choiceModifications))
+                    throw TypeError(".data.StackDbo.choiceModifications: array expected");
+                message.choiceModifications = [];
+                for (let i = 0; i < object.choiceModifications.length; ++i) {
+                    if (typeof object.choiceModifications[i] !== "object")
+                        throw TypeError(".data.StackDbo.choiceModifications: object expected");
+                    message.choiceModifications[i] = $root.data.ChoiceModificationDbo.fromObject(object.choiceModifications[i]);
+                }
+            }
             return message;
         };
 
@@ -5220,6 +6493,7 @@ export const data = $root.data = (() => {
                 object.links = [];
                 object.choices = [];
                 object.featureModifications = [];
+                object.choiceModifications = [];
             }
             if (message.effects && message.effects.length) {
                 object.effects = [];
@@ -5240,6 +6514,11 @@ export const data = $root.data = (() => {
                 object.featureModifications = [];
                 for (let j = 0; j < message.featureModifications.length; ++j)
                     object.featureModifications[j] = $root.data.FeatureModificationDbo.toObject(message.featureModifications[j], options);
+            }
+            if (message.choiceModifications && message.choiceModifications.length) {
+                object.choiceModifications = [];
+                for (let j = 0; j < message.choiceModifications.length; ++j)
+                    object.choiceModifications[j] = $root.data.ChoiceModificationDbo.toObject(message.choiceModifications[j], options);
             }
             return object;
         };
@@ -5284,6 +6563,7 @@ export const data = $root.data = (() => {
          * @property {Array.<string>|null} [links] ConditionalStackDbo links
          * @property {Array.<data.ChoiceDbo>|null} [choices] ConditionalStackDbo choices
          * @property {Array.<data.FeatureModificationDbo>|null} [featureModifications] ConditionalStackDbo featureModifications
+         * @property {Array.<data.ChoiceModificationDbo>|null} [choiceModifications] ConditionalStackDbo choiceModifications
          */
 
         /**
@@ -5299,6 +6579,7 @@ export const data = $root.data = (() => {
             this.links = [];
             this.choices = [];
             this.featureModifications = [];
+            this.choiceModifications = [];
             if (properties)
                 for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -5346,6 +6627,14 @@ export const data = $root.data = (() => {
         ConditionalStackDbo.prototype.featureModifications = $util.emptyArray;
 
         /**
+         * ConditionalStackDbo choiceModifications.
+         * @member {Array.<data.ChoiceModificationDbo>} choiceModifications
+         * @memberof data.ConditionalStackDbo
+         * @instance
+         */
+        ConditionalStackDbo.prototype.choiceModifications = $util.emptyArray;
+
+        /**
          * Creates a new ConditionalStackDbo instance using the specified properties.
          * @function create
          * @memberof data.ConditionalStackDbo
@@ -5383,6 +6672,9 @@ export const data = $root.data = (() => {
             if (message.featureModifications != null && message.featureModifications.length)
                 for (let i = 0; i < message.featureModifications.length; ++i)
                     $root.data.FeatureModificationDbo.encode(message.featureModifications[i], writer.uint32(/* id 104, wireType 2 =*/834).fork()).ldelim();
+            if (message.choiceModifications != null && message.choiceModifications.length)
+                for (let i = 0; i < message.choiceModifications.length; ++i)
+                    $root.data.ChoiceModificationDbo.encode(message.choiceModifications[i], writer.uint32(/* id 105, wireType 2 =*/842).fork()).ldelim();
             return writer;
         };
 
@@ -5443,6 +6735,12 @@ export const data = $root.data = (() => {
                         if (!(message.featureModifications && message.featureModifications.length))
                             message.featureModifications = [];
                         message.featureModifications.push($root.data.FeatureModificationDbo.decode(reader, reader.uint32()));
+                        break;
+                    }
+                case 105: {
+                        if (!(message.choiceModifications && message.choiceModifications.length))
+                            message.choiceModifications = [];
+                        message.choiceModifications.push($root.data.ChoiceModificationDbo.decode(reader, reader.uint32()));
                         break;
                     }
                 default:
@@ -5517,6 +6815,15 @@ export const data = $root.data = (() => {
                         return "featureModifications." + error;
                 }
             }
+            if (message.choiceModifications != null && message.hasOwnProperty("choiceModifications")) {
+                if (!Array.isArray(message.choiceModifications))
+                    return "choiceModifications: array expected";
+                for (let i = 0; i < message.choiceModifications.length; ++i) {
+                    let error = $root.data.ChoiceModificationDbo.verify(message.choiceModifications[i]);
+                    if (error)
+                        return "choiceModifications." + error;
+                }
+            }
             return null;
         };
 
@@ -5571,6 +6878,16 @@ export const data = $root.data = (() => {
                     message.featureModifications[i] = $root.data.FeatureModificationDbo.fromObject(object.featureModifications[i]);
                 }
             }
+            if (object.choiceModifications) {
+                if (!Array.isArray(object.choiceModifications))
+                    throw TypeError(".data.ConditionalStackDbo.choiceModifications: array expected");
+                message.choiceModifications = [];
+                for (let i = 0; i < object.choiceModifications.length; ++i) {
+                    if (typeof object.choiceModifications[i] !== "object")
+                        throw TypeError(".data.ConditionalStackDbo.choiceModifications: object expected");
+                    message.choiceModifications[i] = $root.data.ChoiceModificationDbo.fromObject(object.choiceModifications[i]);
+                }
+            }
             return message;
         };
 
@@ -5592,6 +6909,7 @@ export const data = $root.data = (() => {
                 object.links = [];
                 object.choices = [];
                 object.featureModifications = [];
+                object.choiceModifications = [];
             }
             if (options.defaults)
                 object.conditionFormula = "";
@@ -5616,6 +6934,11 @@ export const data = $root.data = (() => {
                 object.featureModifications = [];
                 for (let j = 0; j < message.featureModifications.length; ++j)
                     object.featureModifications[j] = $root.data.FeatureModificationDbo.toObject(message.featureModifications[j], options);
+            }
+            if (message.choiceModifications && message.choiceModifications.length) {
+                object.choiceModifications = [];
+                for (let j = 0; j < message.choiceModifications.length; ++j)
+                    object.choiceModifications[j] = $root.data.ChoiceModificationDbo.toObject(message.choiceModifications[j], options);
             }
             return object;
         };
@@ -7040,6 +8363,11 @@ export const data = $root.data = (() => {
          * @property {Array.<number>|null} [optionSets] ItemDbo optionSets
          * @property {number|null} [weight] ItemDbo weight
          * @property {data.DescriptionDbo|null} [description] ItemDbo description
+         * @property {Array.<string>|null} [actions] ItemDbo actions
+         * @property {Object.<string,number>|null} [stats] ItemDbo stats
+         * @property {data.AttackModificationDbo|null} [attackModifier] ItemDbo attackModifier
+         * @property {Array.<data.EffectDbo>|null} [effects] ItemDbo effects
+         * @property {Array.<data.AttackDbo>|null} [attacks] ItemDbo attacks
          */
 
         /**
@@ -7053,6 +8381,10 @@ export const data = $root.data = (() => {
         function ItemDbo(properties) {
             this.tags = [];
             this.optionSets = [];
+            this.actions = [];
+            this.stats = {};
+            this.effects = [];
+            this.attacks = [];
             if (properties)
                 for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -7116,6 +8448,46 @@ export const data = $root.data = (() => {
         ItemDbo.prototype.description = null;
 
         /**
+         * ItemDbo actions.
+         * @member {Array.<string>} actions
+         * @memberof data.ItemDbo
+         * @instance
+         */
+        ItemDbo.prototype.actions = $util.emptyArray;
+
+        /**
+         * ItemDbo stats.
+         * @member {Object.<string,number>} stats
+         * @memberof data.ItemDbo
+         * @instance
+         */
+        ItemDbo.prototype.stats = $util.emptyObject;
+
+        /**
+         * ItemDbo attackModifier.
+         * @member {data.AttackModificationDbo|null|undefined} attackModifier
+         * @memberof data.ItemDbo
+         * @instance
+         */
+        ItemDbo.prototype.attackModifier = null;
+
+        /**
+         * ItemDbo effects.
+         * @member {Array.<data.EffectDbo>} effects
+         * @memberof data.ItemDbo
+         * @instance
+         */
+        ItemDbo.prototype.effects = $util.emptyArray;
+
+        /**
+         * ItemDbo attacks.
+         * @member {Array.<data.AttackDbo>} attacks
+         * @memberof data.ItemDbo
+         * @instance
+         */
+        ItemDbo.prototype.attacks = $util.emptyArray;
+
+        /**
          * Creates a new ItemDbo instance using the specified properties.
          * @function create
          * @memberof data.ItemDbo
@@ -7158,6 +8530,20 @@ export const data = $root.data = (() => {
                 writer.uint32(/* id 6, wireType 1 =*/49).double(message.weight);
             if (message.description != null && Object.hasOwnProperty.call(message, "description"))
                 $root.data.DescriptionDbo.encode(message.description, writer.uint32(/* id 100, wireType 2 =*/802).fork()).ldelim();
+            if (message.actions != null && message.actions.length)
+                for (let i = 0; i < message.actions.length; ++i)
+                    writer.uint32(/* id 101, wireType 2 =*/810).string(message.actions[i]);
+            if (message.stats != null && Object.hasOwnProperty.call(message, "stats"))
+                for (let keys = Object.keys(message.stats), i = 0; i < keys.length; ++i)
+                    writer.uint32(/* id 102, wireType 2 =*/818).fork().uint32(/* id 1, wireType 2 =*/10).string(keys[i]).uint32(/* id 2, wireType 0 =*/16).int32(message.stats[keys[i]]).ldelim();
+            if (message.attackModifier != null && Object.hasOwnProperty.call(message, "attackModifier"))
+                $root.data.AttackModificationDbo.encode(message.attackModifier, writer.uint32(/* id 103, wireType 2 =*/826).fork()).ldelim();
+            if (message.effects != null && message.effects.length)
+                for (let i = 0; i < message.effects.length; ++i)
+                    $root.data.EffectDbo.encode(message.effects[i], writer.uint32(/* id 104, wireType 2 =*/834).fork()).ldelim();
+            if (message.attacks != null && message.attacks.length)
+                for (let i = 0; i < message.attacks.length; ++i)
+                    $root.data.AttackDbo.encode(message.attacks[i], writer.uint32(/* id 105, wireType 2 =*/842).fork()).ldelim();
             return writer;
         };
 
@@ -7188,7 +8574,7 @@ export const data = $root.data = (() => {
         ItemDbo.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.ItemDbo();
+            let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.ItemDbo(), key, value;
             while (reader.pos < end) {
                 let tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -7227,6 +8613,51 @@ export const data = $root.data = (() => {
                     }
                 case 100: {
                         message.description = $root.data.DescriptionDbo.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 101: {
+                        if (!(message.actions && message.actions.length))
+                            message.actions = [];
+                        message.actions.push(reader.string());
+                        break;
+                    }
+                case 102: {
+                        if (message.stats === $util.emptyObject)
+                            message.stats = {};
+                        let end2 = reader.uint32() + reader.pos;
+                        key = "";
+                        value = 0;
+                        while (reader.pos < end2) {
+                            let tag2 = reader.uint32();
+                            switch (tag2 >>> 3) {
+                            case 1:
+                                key = reader.string();
+                                break;
+                            case 2:
+                                value = reader.int32();
+                                break;
+                            default:
+                                reader.skipType(tag2 & 7);
+                                break;
+                            }
+                        }
+                        message.stats[key] = value;
+                        break;
+                    }
+                case 103: {
+                        message.attackModifier = $root.data.AttackModificationDbo.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 104: {
+                        if (!(message.effects && message.effects.length))
+                            message.effects = [];
+                        message.effects.push($root.data.EffectDbo.decode(reader, reader.uint32()));
+                        break;
+                    }
+                case 105: {
+                        if (!(message.attacks && message.attacks.length))
+                            message.attacks = [];
+                        message.attacks.push($root.data.AttackDbo.decode(reader, reader.uint32()));
                         break;
                     }
                 default:
@@ -7295,6 +8726,44 @@ export const data = $root.data = (() => {
                 if (error)
                     return "description." + error;
             }
+            if (message.actions != null && message.hasOwnProperty("actions")) {
+                if (!Array.isArray(message.actions))
+                    return "actions: array expected";
+                for (let i = 0; i < message.actions.length; ++i)
+                    if (!$util.isString(message.actions[i]))
+                        return "actions: string[] expected";
+            }
+            if (message.stats != null && message.hasOwnProperty("stats")) {
+                if (!$util.isObject(message.stats))
+                    return "stats: object expected";
+                let key = Object.keys(message.stats);
+                for (let i = 0; i < key.length; ++i)
+                    if (!$util.isInteger(message.stats[key[i]]))
+                        return "stats: integer{k:string} expected";
+            }
+            if (message.attackModifier != null && message.hasOwnProperty("attackModifier")) {
+                let error = $root.data.AttackModificationDbo.verify(message.attackModifier);
+                if (error)
+                    return "attackModifier." + error;
+            }
+            if (message.effects != null && message.hasOwnProperty("effects")) {
+                if (!Array.isArray(message.effects))
+                    return "effects: array expected";
+                for (let i = 0; i < message.effects.length; ++i) {
+                    let error = $root.data.EffectDbo.verify(message.effects[i]);
+                    if (error)
+                        return "effects." + error;
+                }
+            }
+            if (message.attacks != null && message.hasOwnProperty("attacks")) {
+                if (!Array.isArray(message.attacks))
+                    return "attacks: array expected";
+                for (let i = 0; i < message.attacks.length; ++i) {
+                    let error = $root.data.AttackDbo.verify(message.attacks[i]);
+                    if (error)
+                        return "attacks." + error;
+                }
+            }
             return null;
         };
 
@@ -7337,6 +8806,45 @@ export const data = $root.data = (() => {
                     throw TypeError(".data.ItemDbo.description: object expected");
                 message.description = $root.data.DescriptionDbo.fromObject(object.description);
             }
+            if (object.actions) {
+                if (!Array.isArray(object.actions))
+                    throw TypeError(".data.ItemDbo.actions: array expected");
+                message.actions = [];
+                for (let i = 0; i < object.actions.length; ++i)
+                    message.actions[i] = String(object.actions[i]);
+            }
+            if (object.stats) {
+                if (typeof object.stats !== "object")
+                    throw TypeError(".data.ItemDbo.stats: object expected");
+                message.stats = {};
+                for (let keys = Object.keys(object.stats), i = 0; i < keys.length; ++i)
+                    message.stats[keys[i]] = object.stats[keys[i]] | 0;
+            }
+            if (object.attackModifier != null) {
+                if (typeof object.attackModifier !== "object")
+                    throw TypeError(".data.ItemDbo.attackModifier: object expected");
+                message.attackModifier = $root.data.AttackModificationDbo.fromObject(object.attackModifier);
+            }
+            if (object.effects) {
+                if (!Array.isArray(object.effects))
+                    throw TypeError(".data.ItemDbo.effects: array expected");
+                message.effects = [];
+                for (let i = 0; i < object.effects.length; ++i) {
+                    if (typeof object.effects[i] !== "object")
+                        throw TypeError(".data.ItemDbo.effects: object expected");
+                    message.effects[i] = $root.data.EffectDbo.fromObject(object.effects[i]);
+                }
+            }
+            if (object.attacks) {
+                if (!Array.isArray(object.attacks))
+                    throw TypeError(".data.ItemDbo.attacks: array expected");
+                message.attacks = [];
+                for (let i = 0; i < object.attacks.length; ++i) {
+                    if (typeof object.attacks[i] !== "object")
+                        throw TypeError(".data.ItemDbo.attacks: object expected");
+                    message.attacks[i] = $root.data.AttackDbo.fromObject(object.attacks[i]);
+                }
+            }
             return message;
         };
 
@@ -7356,13 +8864,19 @@ export const data = $root.data = (() => {
             if (options.arrays || options.defaults) {
                 object.tags = [];
                 object.optionSets = [];
+                object.actions = [];
+                object.effects = [];
+                object.attacks = [];
             }
+            if (options.objects || options.defaults)
+                object.stats = {};
             if (options.defaults) {
                 object.id = 0;
                 object.name = "";
                 object.cost = 0;
                 object.weight = 0;
                 object.description = null;
+                object.attackModifier = null;
             }
             if (message.id != null && message.hasOwnProperty("id"))
                 object.id = message.id;
@@ -7384,6 +8898,29 @@ export const data = $root.data = (() => {
                 object.weight = options.json && !isFinite(message.weight) ? String(message.weight) : message.weight;
             if (message.description != null && message.hasOwnProperty("description"))
                 object.description = $root.data.DescriptionDbo.toObject(message.description, options);
+            if (message.actions && message.actions.length) {
+                object.actions = [];
+                for (let j = 0; j < message.actions.length; ++j)
+                    object.actions[j] = message.actions[j];
+            }
+            let keys2;
+            if (message.stats && (keys2 = Object.keys(message.stats)).length) {
+                object.stats = {};
+                for (let j = 0; j < keys2.length; ++j)
+                    object.stats[keys2[j]] = message.stats[keys2[j]];
+            }
+            if (message.attackModifier != null && message.hasOwnProperty("attackModifier"))
+                object.attackModifier = $root.data.AttackModificationDbo.toObject(message.attackModifier, options);
+            if (message.effects && message.effects.length) {
+                object.effects = [];
+                for (let j = 0; j < message.effects.length; ++j)
+                    object.effects[j] = $root.data.EffectDbo.toObject(message.effects[j], options);
+            }
+            if (message.attacks && message.attacks.length) {
+                object.attacks = [];
+                for (let j = 0; j < message.attacks.length; ++j)
+                    object.attacks[j] = $root.data.AttackDbo.toObject(message.attacks[j], options);
+            }
             return object;
         };
 
@@ -8499,6 +10036,8 @@ export const data = $root.data = (() => {
          * @property {Array.<number>|null} [tags] ItemOptionDbo tags
          * @property {number|null} [currencyCostByWeight] ItemOptionDbo currencyCostByWeight
          * @property {data.DescriptionDbo|null} [description] ItemOptionDbo description
+         * @property {Object.<string,number>|null} [stats] ItemOptionDbo stats
+         * @property {data.AttackModificationDbo|null} [attackModifier] ItemOptionDbo attackModifier
          */
 
         /**
@@ -8511,6 +10050,7 @@ export const data = $root.data = (() => {
          */
         function ItemOptionDbo(properties) {
             this.tags = [];
+            this.stats = {};
             if (properties)
                 for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -8590,6 +10130,22 @@ export const data = $root.data = (() => {
         ItemOptionDbo.prototype.description = null;
 
         /**
+         * ItemOptionDbo stats.
+         * @member {Object.<string,number>} stats
+         * @memberof data.ItemOptionDbo
+         * @instance
+         */
+        ItemOptionDbo.prototype.stats = $util.emptyObject;
+
+        /**
+         * ItemOptionDbo attackModifier.
+         * @member {data.AttackModificationDbo|null|undefined} attackModifier
+         * @memberof data.ItemOptionDbo
+         * @instance
+         */
+        ItemOptionDbo.prototype.attackModifier = null;
+
+        /**
          * Creates a new ItemOptionDbo instance using the specified properties.
          * @function create
          * @memberof data.ItemOptionDbo
@@ -8635,6 +10191,11 @@ export const data = $root.data = (() => {
                 writer.uint32(/* id 8, wireType 1 =*/65).double(message.currencyCostByWeight);
             if (message.description != null && Object.hasOwnProperty.call(message, "description"))
                 $root.data.DescriptionDbo.encode(message.description, writer.uint32(/* id 100, wireType 2 =*/802).fork()).ldelim();
+            if (message.stats != null && Object.hasOwnProperty.call(message, "stats"))
+                for (let keys = Object.keys(message.stats), i = 0; i < keys.length; ++i)
+                    writer.uint32(/* id 102, wireType 2 =*/818).fork().uint32(/* id 1, wireType 2 =*/10).string(keys[i]).uint32(/* id 2, wireType 0 =*/16).int32(message.stats[keys[i]]).ldelim();
+            if (message.attackModifier != null && Object.hasOwnProperty.call(message, "attackModifier"))
+                $root.data.AttackModificationDbo.encode(message.attackModifier, writer.uint32(/* id 103, wireType 2 =*/826).fork()).ldelim();
             return writer;
         };
 
@@ -8665,7 +10226,7 @@ export const data = $root.data = (() => {
         ItemOptionDbo.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.ItemOptionDbo();
+            let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.ItemOptionDbo(), key, value;
             while (reader.pos < end) {
                 let tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -8710,6 +10271,33 @@ export const data = $root.data = (() => {
                     }
                 case 100: {
                         message.description = $root.data.DescriptionDbo.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 102: {
+                        if (message.stats === $util.emptyObject)
+                            message.stats = {};
+                        let end2 = reader.uint32() + reader.pos;
+                        key = "";
+                        value = 0;
+                        while (reader.pos < end2) {
+                            let tag2 = reader.uint32();
+                            switch (tag2 >>> 3) {
+                            case 1:
+                                key = reader.string();
+                                break;
+                            case 2:
+                                value = reader.int32();
+                                break;
+                            default:
+                                reader.skipType(tag2 & 7);
+                                break;
+                            }
+                        }
+                        message.stats[key] = value;
+                        break;
+                    }
+                case 103: {
+                        message.attackModifier = $root.data.AttackModificationDbo.decode(reader, reader.uint32());
                         break;
                     }
                 default:
@@ -8780,6 +10368,19 @@ export const data = $root.data = (() => {
                 if (error)
                     return "description." + error;
             }
+            if (message.stats != null && message.hasOwnProperty("stats")) {
+                if (!$util.isObject(message.stats))
+                    return "stats: object expected";
+                let key = Object.keys(message.stats);
+                for (let i = 0; i < key.length; ++i)
+                    if (!$util.isInteger(message.stats[key[i]]))
+                        return "stats: integer{k:string} expected";
+            }
+            if (message.attackModifier != null && message.hasOwnProperty("attackModifier")) {
+                let error = $root.data.AttackModificationDbo.verify(message.attackModifier);
+                if (error)
+                    return "attackModifier." + error;
+            }
             return null;
         };
 
@@ -8821,6 +10422,18 @@ export const data = $root.data = (() => {
                     throw TypeError(".data.ItemOptionDbo.description: object expected");
                 message.description = $root.data.DescriptionDbo.fromObject(object.description);
             }
+            if (object.stats) {
+                if (typeof object.stats !== "object")
+                    throw TypeError(".data.ItemOptionDbo.stats: object expected");
+                message.stats = {};
+                for (let keys = Object.keys(object.stats), i = 0; i < keys.length; ++i)
+                    message.stats[keys[i]] = object.stats[keys[i]] | 0;
+            }
+            if (object.attackModifier != null) {
+                if (typeof object.attackModifier !== "object")
+                    throw TypeError(".data.ItemOptionDbo.attackModifier: object expected");
+                message.attackModifier = $root.data.AttackModificationDbo.fromObject(object.attackModifier);
+            }
             return message;
         };
 
@@ -8839,6 +10452,8 @@ export const data = $root.data = (() => {
             let object = {};
             if (options.arrays || options.defaults)
                 object.tags = [];
+            if (options.objects || options.defaults)
+                object.stats = {};
             if (options.defaults) {
                 object.id = 0;
                 object.name = "";
@@ -8848,6 +10463,7 @@ export const data = $root.data = (() => {
                 object.currencyCost = 0;
                 object.currencyCostByWeight = 0;
                 object.description = null;
+                object.attackModifier = null;
             }
             if (message.id != null && message.hasOwnProperty("id"))
                 object.id = message.id;
@@ -8870,6 +10486,14 @@ export const data = $root.data = (() => {
                 object.currencyCostByWeight = options.json && !isFinite(message.currencyCostByWeight) ? String(message.currencyCostByWeight) : message.currencyCostByWeight;
             if (message.description != null && message.hasOwnProperty("description"))
                 object.description = $root.data.DescriptionDbo.toObject(message.description, options);
+            let keys2;
+            if (message.stats && (keys2 = Object.keys(message.stats)).length) {
+                object.stats = {};
+                for (let j = 0; j < keys2.length; ++j)
+                    object.stats[keys2[j]] = message.stats[keys2[j]];
+            }
+            if (message.attackModifier != null && message.hasOwnProperty("attackModifier"))
+                object.attackModifier = $root.data.AttackModificationDbo.toObject(message.attackModifier, options);
             return object;
         };
 

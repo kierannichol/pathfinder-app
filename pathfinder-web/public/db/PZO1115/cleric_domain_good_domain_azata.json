@@ -1,0 +1,22 @@
+{
+  "id": "cleric_domain:good_domain#azata",
+  "name": "Azata Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You have pledged your life and soul to goodness and purity."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:holy_lance", "ability:elysiums_call"]
+          }]
+        }]
+      }]
+    }
+  }
+}

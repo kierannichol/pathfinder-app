@@ -1,0 +1,41 @@
+id: "cleric_domain:liberation_domain#revolution"
+parent_id: "cleric_domain:liberation_domain"
+name: "Revolution Subdomain"
+description: "You are a spirit of freedom and a staunch foe against all who would\
+  \ enslave and oppress."
+granted_powers:
+- id: "ability:liberation"
+  name: "Liberation"
+  description: "You have the ability to ignore impediments to your mobility. For a\
+    \ number of rounds per day equal to your cleric level, you can move normally regardless\
+    \ of magical effects that impede movement, as if you were affected by freedom\
+    \ of movement. This effect occurs automatically as soon as it applies. These rounds\
+    \ do not need to be consecutive."
+  type: "Su"
+- id: "ability:powerful_persuader"
+  name: "Powerful Persuader"
+  description: "At 8th level, when you make a Diplomacy or Intimidate check, you can\
+    \ roll twice and take the higher result. Using this ability is a free action.\
+    \ You can use this ability once per day at 8th level, plus one additional time\
+    \ per day for every 2 levels beyond 8th."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:remove_fear"
+- spell_level: 2
+  spell_id: "spell:enthrall"
+- spell_level: 3
+  spell_id: "spell:remove_curse"
+- spell_level: 4
+  spell_id: "spell:freedom_of_movement"
+- spell_level: 5
+  spell_id: "spell:break_enchantment"
+- spell_level: 6
+  spell_id: "spell:symbol_of_persuasion"
+- spell_level: 7
+  spell_id: "spell:refuge"
+- spell_level: 8
+  spell_id: "spell:mind_blank"
+- spell_level: 9
+  spell_id: "spell:freedom"
+source: "Advanced Player's Guide"

@@ -204,7 +204,10 @@ public class FixPricesModifier extends AbstractLocalPathfinderDatabaseModifier {
                 item.destruction(),
                 item.weapon_special(),
                 item.armor_special_material(),
-                item.weapon_special_material()
+                item.weapon_special_material(),
+                item.effects(),
+                item.attack_mod(),
+                item.stats()
         );
     }
 }

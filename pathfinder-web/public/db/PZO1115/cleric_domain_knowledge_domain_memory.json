@@ -1,0 +1,22 @@
+{
+  "id": "cleric_domain:knowledge_domain#memory",
+  "name": "Memory Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You are a scholar and a sage of legends. In addition, you treat all Knowledge skills as class skills."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:remote_viewing", "ability:recall"]
+          }]
+        }]
+      }]
+    }
+  }
+}

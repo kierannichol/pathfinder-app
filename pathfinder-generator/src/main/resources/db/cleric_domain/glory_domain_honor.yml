@@ -1,0 +1,49 @@
+id: "cleric_domain:glory_domain#honor"
+parent_id: "cleric_domain:glory_domain"
+name: "Honor Subdomain"
+description: "You are infused with the glory of the divine, and are a true foe of\
+  \ the undead. In addition, when you channel positive energy to harm undead creatures,\
+  \ the save DC to halve the damage is increased by 2."
+granted_powers:
+- id: "ability:divine_presence"
+  name: "Divine Presence"
+  description: "At 8th level, you can emit a 30-foot aura of divine presence for a\
+    \ number of rounds per day equal to your cleric level. All allies within this\
+    \ aura are treated as if under the effects of a sanctuary spell with a DC equal\
+    \ to 10 + 1/2 your cleric level + your Wisdom modifier. These rounds do not need\
+    \ to be consecutive. Activating this ability is a standard action. If an ally\
+    \ leaves the area or makes an attack, the effect ends for that ally. If you make\
+    \ an attack, the effect ends for you and your allies."
+  type: "Su"
+- id: "ability:honor_bound"
+  name: "Honor Bound"
+  description: "With a touch, you can remind a creature of its duties and responsibilities,\
+    \ granting it a new saving throw against each enchantment (charm) or enchantment\
+    \ (compulsion) effect that currently affects it. If the saving throw is successful,\
+    \ the enchantment effect is ended. This power only affects effects that allow\
+    \ a save. If you fail a save against such an effect, you can use this ability\
+    \ as an immediate action to grant yourself an additional save. Once the target\
+    \ (either you or a touched creature) has made one additional save per effect,\
+    \ this ability has no further effect on that particular enchantment effect. You\
+    \ can use this ability a number of times per day equal to 3 + your Wisdom modifier."
+  type: "Su"
+domain_spells:
+- spell_level: 1
+  spell_id: "spell:shield_of_faith"
+- spell_level: 2
+  spell_id: "spell:zone_of_truth"
+- spell_level: 3
+  spell_id: "spell:searing_light"
+- spell_level: 4
+  spell_id: "spell:holy_smite"
+- spell_level: 5
+  spell_id: "spell:righteous_might"
+- spell_level: 6
+  spell_id: "spell:geas_quest"
+- spell_level: 7
+  spell_id: "spell:holy_sword"
+- spell_level: 8
+  spell_id: "spell:holy_aura"
+- spell_level: 9
+  spell_id: "spell:gate"
+source: "Advanced Player's Guide"

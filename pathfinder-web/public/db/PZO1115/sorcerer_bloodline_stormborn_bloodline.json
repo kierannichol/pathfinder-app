@@ -12,36 +12,45 @@
         "featureModifications": [{
           "targetFeatureId": "class:sorcerer",
           "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["spell:whirlwind"]
+          }, {
             "targetStackCount": 1,
             "linksToAdd": ["ability:thunderstaff#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 19,
-            "linksToAdd": ["ability:bloodline_feat#stormborn_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#stormborn_bloodline", "spell:storm_of_vengeance"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 3,
-            "linksToAdd": ["ability:stormchild#sorcerer"],
+            "linksToAdd": ["ability:stormchild#sorcerer", "spell:shocking_grasp"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 20,
             "linksToAdd": ["ability:storm_lord#sorcerer"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["spell:gust_of_wind"]
+          }, {
             "targetStackCount": 7,
-            "linksToAdd": ["ability:bloodline_feat#stormborn_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#stormborn_bloodline", "spell:lightning_bolt"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToAdd": ["ability:shock#sorcerer", "ability:thunderbolt#sorcerer"],
+            "linksToAdd": ["ability:shock#sorcerer", "ability:thunderbolt#sorcerer", "spell:shout"],
             "linksToRemove": ["ability:bloodline_power#sorcerer", "ability:bloodline_power#sorcerer"]
           }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["spell:overland_flight"]
+          }, {
             "targetStackCount": 13,
-            "linksToAdd": ["ability:bloodline_feat#stormborn_bloodline"],
+            "linksToAdd": ["ability:bloodline_feat#stormborn_bloodline", "spell:chain_lightning"],
             "linksToRemove": ["ability:bloodline_feat#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToAdd": ["ability:ride_the_lightning#sorcerer"],
+            "linksToAdd": ["ability:ride_the_lightning#sorcerer", "spell:control_weather"],
             "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }]
         }]

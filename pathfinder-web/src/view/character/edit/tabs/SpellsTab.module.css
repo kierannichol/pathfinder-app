@@ -1,5 +1,23 @@
+.spells {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 .spellLevel {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  border: 2px solid var(--pf-primary-rgb);
+}
+
+.spellLevelContent {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.25rem;
+}
+
+.domainSpell {
+  box-shadow: inset 0 0 10px gold;
 }

@@ -1,0 +1,22 @@
+{
+  "id": "cleric_domain:sun_domain#light",
+  "name": "Light Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You see truth in the pure and burning light of the sun, and can call upon its blessing or wrath to work great deeds."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:nimbus_of_light", "ability:blinding_flash"]
+          }]
+        }]
+      }]
+    }
+  }
+}

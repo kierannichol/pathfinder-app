@@ -1,0 +1,22 @@
+{
+  "id": "cleric_domain:strength_domain#ferocity",
+  "name": "Ferocity Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "In strength and brawn there is truth—your faith gives you incredible might and power."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:might_of_the_gods", "ability:ferocious_strike"]
+          }]
+        }]
+      }]
+    }
+  }
+}

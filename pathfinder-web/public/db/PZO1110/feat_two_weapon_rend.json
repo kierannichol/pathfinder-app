@@ -13,5 +13,8 @@
   "stacks": {
     "fixedStack": {
     }
+  },
+  "attackModifier": {
+    "damageBonus": "if(@arg:is_off_hand AND (@arg:attack_index\u003d\u003d0), 5.5+floor(@str_mod*1.5), 0)"
   }
 }

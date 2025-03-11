@@ -1,0 +1,16 @@
+{
+  "id": "feat:spider_summoner",
+  "name": "Spider Summoner",
+  "tags": ["feat", "racial"],
+  "enabledFormula": "all(any(any(@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8)[Able to cast Summon Monster],any(@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9)[Able to cast Summon Nature\u0027s Ally]),@race:drow)",
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "When casting either a summon monster spell or a summon nature\u0027s ally spell, your options increase."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

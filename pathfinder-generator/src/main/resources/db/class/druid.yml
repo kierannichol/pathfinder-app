@@ -137,6 +137,7 @@ class_features:
     name: "Spell Casting (Druid)"
     description: "Druid can cast spells."
     effects:
+      - "INCR caster_level @class:druid"
       - "SET trait:level_0_spells_per_day#druid 3+if(@class:druid>1,1,0)"
       - "SET trait:level_1_spells_per_day#druid
         1+if(@class:druid>1,1,0)+if(@class:druid>3,1,0)+if(@class:druid>6,1,0)"

@@ -1,0 +1,25 @@
+{
+  "id": "cleric_domain:plant_domain#decay",
+  "name": "Decay Subdomain",
+  "tags": ["class_feature", "cleric_domain"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You find solace in the green, can grow defensive thorns, and can communicate with plants."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:wooden_fist"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:aura_of_decay"]
+          }]
+        }]
+      }]
+    }
+  }
+}

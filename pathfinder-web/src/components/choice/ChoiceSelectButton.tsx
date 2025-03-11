@@ -1,5 +1,5 @@
 import {SelectChoiceRef} from "@/data/Choice.ts";
-import {ReactNode, useMemo} from "react";
+import React, {ReactNode, useMemo} from "react";
 import styles from "@/components/choice/ChoiceInput.module.css";
 import SelectListCategory from "@/components/base/form/select/SelectListCategory.ts";
 import {SelectListEntry} from "@/components/base/form/select/SelectList.tsx";
@@ -13,18 +13,21 @@ import Database from "@/data/Database.ts";
 import {useCharacterAtLevel} from "@/view/character/edit/CharacterAtLevelContext.tsx";
 import {classNames} from "@pathfinder-lib/utils/classNames";
 import {useDatabase} from "@/data/context.ts";
+import {GrClose} from "react-icons/gr";
 
 interface ChoiceSelectInputProps {
   choiceRef: SelectChoiceRef;
   onChange: ChoiceSelectionHandler;
+  onDelete?: () => void;
   index?: number;
   characterAtLevel?: CharacterAtLevel;
   className?: string;
+  labelClassName?: string;
   children?: ReactNode;
   validation?: boolean;
 }
 
-function ChoiceSelectButton({choiceRef, onChange, index, characterAtLevel, className, children, validation = true}: ChoiceSelectInputProps) {
+function ChoiceSelectButton({choiceRef, onChange, onDelete, index, characterAtLevel, className, labelClassName, children, validation = true}: ChoiceSelectInputProps) {
   const database = useDatabase();
   const _characterAtLevel = characterAtLevel
       ? characterAtLevel
@@ -70,14 +73,22 @@ function ChoiceSelectButton({choiceRef, onChange, index, characterAtLevel, class
     onChange?.(choiceRef, value);
   }
 
+  function handleDelete(event: React.MouseEvent) {
+    event.stopPropagation();
+    onDelete?.();
+  }
+
   return <SelectButton value={selected}
                        title={`Select ${choiceRef.label}`}
                        className={buttonClassName}
                        onChange={handleChange}
                        optionsFn={optionsFn}
                        categories={categories}>
-    {validation && <div className={classNames([styles.badge, styles[validationState]])}></div>}
-    <div className={styles.text}>{buttonLabel}</div>
+    {validation && <div className={classNames([styles.badge, styles[validationState]])}>
+      <div className={[styles.text, labelClassName].join(' ')}>{buttonLabel}</div>
+    </div>}
+    {!validation && <div className={[styles.text, labelClassName].join(' ')}>{buttonLabel}</div>}
+    {onDelete && <div className={styles.close}><GrClose onClick={handleDelete}/></div>}
   </SelectButton>
 }
 
@@ -92,9 +103,16 @@ function featureSummaryToSelectListEntry(feature: FeatureSummary,
                                              characterAtLevel={characterAtLevel}/>);
 
   if (feature.hasOptions()) {
-    entry.options(() => feature
+    entry.options(query => feature
     .options(database)
-    .map(child => featureSummaryToSelectListEntry(child, characterAtLevel, database)));
+    .filter(child => !query || child.name.toLowerCase().includes(query.toLowerCase()))
+    .map(child => featureSummaryToSelectListEntry(child, characterAtLevel, database))
+    .sort((a, b) => {
+      if (a.enabled === b.enabled) {
+        return a.name.localeCompare(b.name);
+      }
+      return a.enabled ? -1 : 1;
+    }));
   }
 
   return entry.build();

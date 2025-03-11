@@ -1380,7 +1380,7 @@
     "id": "class:magus#hexcrafter",
     "name": "Hexcrafter",
     "tags": ["archetype", "magus"],
-    "enabledFormula": "!@modifies:ability:magus_arcana#magus AND !@modifies:ability:spell_recall#magus AND !@modifies:ability:improved_spell_recall#magus",
+    "enabledFormula": "!@modifies:ability:spell_recall#magus AND !@modifies:ability:magus_arcana#magus AND !@modifies:ability:improved_spell_recall#magus",
     "maxStacks": 1
   }, {
     "id": "class:magus#spellblade",
@@ -2118,7 +2118,7 @@
     "id": "feat:versatile_channeler",
     "name": "Versatile Channeler",
     "tags": ["feat", "general"],
-    "enabledFormula": "any(@ability:channel_energy[Channel Energy],@class:necromancer,all(@class:cleric,any(@alignment:ng,@alignment:n,@alignment:ne)[Neutral alignment]))",
+    "enabledFormula": "@ability:channel_energy AND (@magic_school:necromancy OR (any(@alignment:n,@alignment:ng,@alignment:ne) AND @class:cleric)[Neutrally Aligned Cleric])",
     "maxStacks": 1
   }, {
     "id": "feat:vigilant_eidolon",

@@ -24,6 +24,7 @@ function AbilityScoresTab() {
       </div>
       <ChoiceInputList className={styles.asiList}
                        labelFn={choiceRef => <ChoicePathLabel choiceRef={choiceRef}/>}
+                       characterAtLevel={characterAtLevel}
                        choices={[
                          ...characterAtLevel.choicesOfType('asi'),
                        ]}/>

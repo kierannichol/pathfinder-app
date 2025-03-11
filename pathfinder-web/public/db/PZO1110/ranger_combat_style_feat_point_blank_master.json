@@ -1,0 +1,32 @@
+{
+  "id": "ranger_combat_style_feat:point_blank_master",
+  "name": "Point Blank Master",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "options": {
+    "select": {
+      "optionTag": "weapon+ranged",
+      "idTemplate": "feat:point_blank_master#{option.key}",
+      "prerequisitesTemplate": "@feat:weapon_specialization#{option.key}"
+    }
+  },
+  "description": {
+    "sections": {
+      "Benefit": "Choose one type of ranged weapon. You do not provoke attacks of opportunity when firing the selected weapon while threatened.",
+      "Special": "Starting at 6th level, a ranger with the archery combat style may select Point Blank Master as a combat style feat, but he must have Weapon Focus instead of Weapon Specialization in the selected weapon.",
+      "Normal": "Using a ranged weapon while you are threatened provokes attacks of opportunity."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:point_blank_master",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

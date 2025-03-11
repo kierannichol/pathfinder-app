@@ -8,8 +8,8 @@ import ListEditor from "../editors/ListEditor";
 export interface StacksFieldProps {
   fixedStacks: StackData[]|undefined;
   repeatingStack: StackData|undefined;
-  onChangeFixedStack: (value: StackData[]) => void;
-  onChangeRepeatingStack: (value: StackData) => void;
+  onChangeFixedStack: (value: StackData[]|undefined) => void;
+  onChangeRepeatingStack: (value: StackData|undefined) => void;
 }
 
 export function StacksField({ fixedStacks, repeatingStack, onChangeFixedStack, onChangeRepeatingStack }: StacksFieldProps) {
@@ -28,7 +28,7 @@ export function StacksField({ fixedStacks, repeatingStack, onChangeFixedStack, o
           onChangeFixedStack?.(updated);
         }}>
           {(item, index, setItem, actions) =>
-              <DataSection label={'Stack'} onRemove={actions.remove}>
+              <DataSection key={index} label={'Stack'} onRemove={actions.remove}>
                 <StackEditor value={item} onChange={setItem}/>
               </DataSection>}
         </ListEditor>

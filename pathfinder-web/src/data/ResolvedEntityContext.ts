@@ -1,7 +1,6 @@
 import {EntityChoiceSelections} from "./Entity.ts";
 import {Trait} from "./Trait.ts";
 import {BaseDataContext, Resolvable} from "@kierannichol/formula-js";
-import {FeatureRef} from "./Feature.ts";
 import {StackModification} from "./FeatureModification.ts";
 import {RestartApplyState} from "./RestartApplyState.ts";
 
@@ -10,7 +9,6 @@ export type FeatureLoader = (key: string) => Promise<Trait | undefined>;
 export class ResolvedEntityContext extends BaseDataContext {
   private readonly cache: { [key: string]: Trait } = {};
   private counts: { [key: string]: number } = {};
-  private stackRefs: { [key: string]: FeatureRef } = {};
   private readonly stackModifications: { [key: string]: StackModification } = {};
 
   get(key: string): Resolvable | undefined {
@@ -63,14 +61,6 @@ export class ResolvedEntityContext extends BaseDataContext {
     return this.counts[id] ?? 0;
   }
 
-  registerStackRef(featureId: string, stackCount: number, ref: FeatureRef) {
-    this.stackRefs[featureId + ":" + stackCount] = ref;
-  }
-
-  getStackRef(featureId: string, stackCount: number): FeatureRef {
-    return this.stackRefs[featureId + ":" + stackCount];
-  }
-
   hasModification(modificationKey: string): boolean {
     return modificationKey in this.stackModifications;
   }
@@ -85,7 +75,6 @@ export class ResolvedEntityContext extends BaseDataContext {
 
   restartResolve() {
     this.counts = {};
-    this.stackRefs = {};
     throw RestartApplyState;
   }
 
@@ -98,5 +87,9 @@ export class ResolvedEntityContext extends BaseDataContext {
     return Object.values(this.stackModifications).filter(mod =>
         mod.targetFeatureId === featureId
         && mod.targetStackCount === stackNumber);
+  }
+
+  reset() {
+    this.counts = {};
   }
 }

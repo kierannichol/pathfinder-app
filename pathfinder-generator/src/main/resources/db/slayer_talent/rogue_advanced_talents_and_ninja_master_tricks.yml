@@ -1,8 +1,25 @@
 id: "slayer_talent:rogue_advanced_talents_and_ninja_master_tricks"
-name: "Rogue Advanced Talents and Ninja Master Tricks"
+name: "Rogue Advanced Slayer Talent and Ninja Master Tricks"
 label: null
 type: ""
 description: ""
 effects: null
-prerequisites: "Advanced talents"
-source: "EG:EUUC"
+prerequisites: "Advanced Slayer Talent"
+repeating_stack:
+  choices:
+    - choice_id: "rogue_advanced_talents_or_ninja_master_tricks"
+      label: "Rogue Advanced Slayer Talent or Ninja Master Tricks"
+      description:
+        sections:
+          - Benefit: "A slayer can select one of the following rogue advanced talents or ninja master tricks in place of a slayer advanced talent. Any talent effects based on rogue or ninja level use the slayer’s class level. This talent can be selected multiple times; each time, it grants the slayer a new rogue advanced talent or ninja master trick, but a slayer can’t select the same one more than once. Talents marked with an asterisk (*) add effects to a slayer’s sneak attack. Only one of these talents can be applied to an individual attack, and the decision of which to use must be made before the attack roll is made."
+      type: "class_feature"
+      feature_ids:
+        - "advanced_rogue_talent:deadly_sneak"
+        - "ninja_master_trick:evasion"
+        - "advanced_rogue_talent:feat"
+        - "advanced_rogue_talent:hunters_surprise"
+        - "advanced_rogue_talent:knock_out_blow"
+        - "advanced_rogue_talent:master_of_disguise"
+        - "advanced_rogue_talent:opportunist"
+        - "advanced_rogue_talent:stealthy_sniper"
+source: "PZO1129"

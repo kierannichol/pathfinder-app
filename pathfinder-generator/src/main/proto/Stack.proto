@@ -3,6 +3,7 @@ syntax = "proto3";
 import "Effect.proto";
 import "Choice.proto";
 import "FeatureModification.proto";
+import "ChoiceModification.proto";
 
 option java_multiple_files = true;
 option java_package = "pathfinder.data";
@@ -14,6 +15,7 @@ message StackDbo {
   repeated string links = 102;
   repeated ChoiceDbo choices = 103;
   repeated FeatureModificationDbo feature_modifications = 104;
+  repeated ChoiceModificationDbo choice_modifications = 105;
 }
 
 message ConditionalStackDbo {
@@ -23,4 +25,5 @@ message ConditionalStackDbo {
   repeated string links = 102;
   repeated ChoiceDbo choices = 103;
   repeated FeatureModificationDbo feature_modifications = 104;
+  repeated ChoiceModificationDbo choice_modifications = 105;
 }

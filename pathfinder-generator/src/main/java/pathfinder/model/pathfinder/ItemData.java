@@ -1,6 +1,9 @@
 package pathfinder.model.pathfinder;
 
 import java.util.List;
+import java.util.Map;
+import pathfinder.model.AttackModification;
+import pathfinder.model.Effect;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
 
@@ -31,5 +34,8 @@ public record ItemData(Id id,
                        String destruction,
                        String weapon_special,
                        String armor_special_material,
-                       String weapon_special_material) implements NamedEntity, FromSourceBook {
+                       String weapon_special_material,
+                       List<Effect> effects,
+                       AttackModification attack_mod,
+                       Map<String, Integer> stats) implements NamedEntity, FromSourceBook {
 }

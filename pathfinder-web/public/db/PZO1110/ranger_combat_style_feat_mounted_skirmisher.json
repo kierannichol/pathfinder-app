@@ -1,0 +1,24 @@
+{
+  "id": "ranger_combat_style_feat:mounted_skirmisher",
+  "name": "Mounted Skirmisher",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "If your mount moves its speed or less, you can still take a full-attack action.",
+      "Normal": "If your mount moves more than 5 feet, you can only take an attack action."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:mounted_skirmisher",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}

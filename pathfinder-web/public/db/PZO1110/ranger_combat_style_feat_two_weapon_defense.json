@@ -1,0 +1,23 @@
+{
+  "id": "ranger_combat_style_feat:two_weapon_defense",
+  "name": "Two-Weapon Defense",
+  "tags": ["ranger_combat_style_feat"],
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "When wielding a double weapon or two weapons (not including natural weapons or unarmed strikes), you gain a +1 shield bonus to your AC."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "feat:two_weapon_defense",
+            "numberDelta": 1
+          }
+        }]
+      }]
+    }
+  }
+}
